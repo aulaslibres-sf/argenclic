@@ -1,0 +1,1261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="concepav" version="0.1.3">
+ <settings>
+  <title>El mundo de las plantas</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="6/25/01" />
+  <revision description="Conversión de Clic3 a JClic" date="2/28/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Miguel Ángel Modrego González" mail="mamodrego@educa.aragob.es" />
+  <organization name="Centro de Profesores y Recursos de Alcañiz" mail="cpralcan@adigital.pntic.mec.es" url="http://www.educa.aragob.es/cpralcan/" city="Alcañiz" state="Aragón" />
+  <language>es</language>
+  <description>
+   <p>Aplicación sobre el mundo de las plantas, destinada a alumnado de primer ciclo de ESO y programas de Diversificación Curricular.&lt;P&gt;</p>
+   <p>Incluye cuatro paquetes de actividades, dos de ellos trabajan conceptos básicos sobre partes de la flor, tipos de hojas, clasificación de las plantas, fotosíntesis, reproducción vegetal, etc.</p>
+   <p>&lt;P&gt;Otro de los paquetes facilita el reconocimiento de distintas especies de árboles, flores y arbustos comunes. El último de ellos se refiere a las plantas y la salud.</p>
+  </description>
+  <descriptors area-codes="exp" level="Secundaria">botánica, plantas</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Aplicación sobre el mundo de las plantas, destinada a alumnado de primer ciclo de ESO y programas de Diversificación Curricular.&lt;P&gt;</p>
+    <p>Incluye cuatro paquetes de actividades, dos de ellos trabajan conceptos básicos sobre partes de la flor, tipos de hojas, clasificación de las plantas, fotosíntesis, reproducción vegetal, etc.</p>
+    <p>&lt;P&gt;Otro de los paquetes facilita el reconocimiento de distintas especies de árboles, flores y arbustos comunes. El último de ellos se refiere a las plantas y la salud.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="concepav.pac" name="tallo.ass">
+   <description>
+    <p>Conceptos avanzados del mundo de las plantas. Nivel 2º de ESO, aproximadamente</p>
+   </description>
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="tallo.txa" />
+  <item name="hoja.ass" />
+  <item name="hoja.txa" />
+  <item name="raiz1.ass" />
+  <item name="raiz1.txa" />
+  <item name="pclasif1.txa" />
+  <item name="pclasif2.txa" />
+  <item name="fotosin.ass" />
+  <item name="fotosint.txa" />
+  <item name="reproduc.txa" />
+  <item name="nuevapla.txa">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="fotosin.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" />
+      <color foreground="0x400000" background="0xFFFF80" />
+     </style>
+     <p>Primero, lee atentamente</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" />
+      <color foreground="0x400000" background="0xFFFF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondo1.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+   </settings>
+   <cells rows="4" columns="3" border="false" image="fotosin.jpg">
+    <style>
+     <font family="Arial" size="25" />
+     <color foreground="0x400000" background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@text.FillInBlanks" name="fotosint.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF80" />
+     </style>
+     <p>Completa los huecos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF80" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="clap.wav" />
+     <p>PERFECTO</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="flor15.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <size width="680" height="400" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" bold="false" background="0xFFFF80" family="Arial" size="13" foreground="0x000000" italic="false" tabWidth="16" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text>La fotosíntesis es el resultado de un gran número de reacciones complejas que hacen que, a partir del agua, el dióxido de carbono, la </text>
+      <target>
+       <answer>clorofila</answer>
+       <optionList>
+        <option>clorofila</option>
+        <option>albúmina</option>
+        <option>sal</option>
+       </optionList>
+       <text>clorofila</text>
+      </target>
+      <text> y la energía solar, se produzcan </text>
+      <target>
+       <answer>glucosa</answer>
+       <optionList>
+        <option>sal</option>
+        <option>harina</option>
+        <option>glucosa</option>
+       </optionList>
+       <text>glucosa</text>
+      </target>
+      <text> y oxígeno.</text>
+     </p>
+     <p />
+     <p>
+      <text>La glucosa obtenida en la fotosíntesis, junto con el agua, forma la savia </text>
+      <target>
+       <answer>elaborada</answer>
+       <optionList>
+        <option>elaborada</option>
+        <option>bruta</option>
+       </optionList>
+       <text>elaborada</text>
+      </target>
+      <text>, que es conducida a través de los vasos </text>
+      <target>
+       <answer>liberianos</answer>
+       <optionList>
+        <option>siberianos</option>
+        <option>lechosos</option>
+        <option>leñosos</option>
+        <option>liberianos</option>
+       </optionList>
+       <text>liberianos</text>
+      </target>
+      <text> y transportada a todas las células de la planta.</text>
+     </p>
+     <p />
+     <p>
+      <text>En la respiración de las plantas, la glucosa y el </text>
+      <target>
+       <answer>oxígeno</answer>
+       <optionList>
+        <option>oxígeno</option>
+        <option>nitrógeno</option>
+        <option>glucógeno</option>
+       </optionList>
+       <text>oxígeno</text>
+      </target>
+      <text> se combinan para dar lugar a agua, </text>
+      <target>
+       <answer>dióxido</answer>
+       <optionList>
+        <option>monóxido</option>
+        <option>dióxido</option>
+        <option>peóxido</option>
+        <option>tetraóxido</option>
+       </optionList>
+       <text>dióxido</text>
+      </target>
+      <text> de carbono  y energía.</text>
+     </p>
+     <p />
+     <p>
+      <text>La respiración no necesita </text>
+      <target>
+       <answer>luz</answer>
+       <optionList>
+        <option>calor</option>
+        <option>luz</option>
+        <option>humedad</option>
+       </optionList>
+       <text>luz</text>
+      </target>
+      <text> y se produce en las </text>
+      <target>
+       <answer>mitocondrias</answer>
+       <optionList>
+        <option>mitocondrias</option>
+        <option>esporas</option>
+        <option>estomas</option>
+        <option>corolas</option>
+       </optionList>
+       <text>mitocondrias</text>
+      </target>
+      <text>, unos orgánulos existentes en todas las células vivas, excepto en las bacterias.</text>
+     </p>
+     <p />
+     <p>
+      <text>Las grasas y proteínas que las plantas necesitan, se fabrican a partir de la </text>
+      <target>
+       <answer>energía</answer>
+       <optionList>
+        <option>materia</option>
+        <option>energía</option>
+        <option>savia</option>
+       </optionList>
+       <text>energía</text>
+      </target>
+      <text> obtenida en la respiración y los compuestos de carbono obtenidos en la </text>
+      <target>
+       <answer>fotosíntesis</answer>
+       <optionList>
+        <option>transpiración</option>
+        <option>fotosíntesis</option>
+        <option>polinización</option>
+       </optionList>
+       <text>fotosíntesis</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <text>La transpiración es el desprendimiento de vapor de agua a través de los </text>
+      <target>
+       <answer>estomas</answer>
+       <optionList>
+        <option>verticilos</option>
+        <option>estomas</option>
+        <option>estigmas</option>
+       </optionList>
+       <text>estomas</text>
+      </target>
+      <text> de las hojas y sirve para regular la cantidad de agua de la planta.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="hoja.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" />
+      <color foreground="0x004040" background="0xFFFF80" />
+     </style>
+     <p>Fíjate bien para luego contestar correctamente</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" />
+      <color foreground="0x004040" background="0xFFFF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondo4.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+   </settings>
+   <cells rows="4" columns="3" border="false" image="hoja.jpg">
+    <style>
+     <font family="Arial" size="25" />
+     <color foreground="0x004040" background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@text.FillInBlanks" name="hoja.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" />
+      <color background="0xFFFF80" />
+     </style>
+     <p>Completa las palabras que faltan</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" />
+      <color background="0xFFFF80" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="filedone.wav" />
+     <p>MUY BIEN </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="flor18.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="640" height="445" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" bold="false" background="0xFFFF80" family="Arial" size="15" foreground="0x000000" italic="false" tabWidth="16" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text>                                LAS HOJAS</text>
+     </p>
+     <p>
+      <text>Las hojas son expansiones planas, casi siempre </text>
+      <target>
+       <answer>verdes</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text>verdes</text>
+      </target>
+      <text>, que nacen en el tallo y de sus ramificaciones. Su función primordial es realizar la </text>
+      <target>
+       <answer>fotosíntesis</answer>
+       <answer>fotosintesis</answer>
+       <response fill="_" length="12" maxLength="12" />
+       <text>fotosíntesis</text>
+      </target>
+      <text> para fabricar sustancias orgánicas.</text>
+     </p>
+     <p />
+     <p>
+      <text>Hay tres partes en la hoja:</text>
+     </p>
+     <p />
+     <p>
+      <text>- Limbo. Es la parte plana. Su cara superior se llama </text>
+      <target>
+       <answer>haz</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>haz</text>
+      </target>
+      <text> y la inferior, </text>
+      <target>
+       <answer>envés</answer>
+       <answer>enves</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>envés</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p>
+      <text>- Peciolo o rabito, que une el limbo al tallo o rama.</text>
+     </p>
+     <p>
+      <text>- Vaina o parte final del peciolo que se ensancha en la zona de conexión con el tallo.</text>
+     </p>
+     <p />
+     <p>
+      <text>En el limbo de la hoja hay unos pequeños orificios, llamados </text>
+      <target>
+       <answer>estomas</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>estomas</text>
+      </target>
+      <text>, más numerosos en el envés, que permiten la entrada y salida de los </text>
+      <target>
+       <answer>gase</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>gase</text>
+      </target>
+      <text>s.</text>
+     </p>
+     <p />
+     <p>
+      <text>También en las hojas hay </text>
+      <target>
+       <answer>vasos</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>vasos</text>
+      </target>
+      <text> liberianos y leñosos, que forman los </text>
+      <target>
+       <answer>nervios</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>nervios</text>
+      </target>
+      <text>. Los leñosos se encuentran próximos al envés y los liberianos en la parte del nervio próxima al haz.</text>
+     </p>
+     <p />
+     <p>
+      <text>Las células de las hojas contienen más </text>
+      <target>
+       <answer>cloroplastos</answer>
+       <response fill="_" length="12" maxLength="12" />
+       <text>cloroplastos</text>
+      </target>
+      <text> que las del resto de la planta. Contienen la </text>
+      <target>
+       <answer>clorofila</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <text>clorofila</text>
+      </target>
+      <text>. Para poder realizar la función clorofílica, se necesitan cuatro factores: clorofila, </text>
+      <target>
+       <answer>luz</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>luz</text>
+      </target>
+      <text>, agua y dióxido de carbono. El agua llega a las hojas en la savia </text>
+      <target>
+       <answer>bruta</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>bruta</text>
+      </target>
+      <text> y el dióxido de carbono por los </text>
+      <target>
+       <answer>estomas</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>estomas</text>
+      </target>
+      <text>.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.Identify" name="menu.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="25" />
+      <color foreground="0x004000" background="0xFFFF80" />
+     </style>
+     <media type="PLAY_MIDI" level="2" file="polviento.mid" />
+     <p>¿QUÉ PARTE QUIERES TRABAJAR?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="25" />
+      <color foreground="0x004000" background="0xFFFF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="ojon.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" columns="2" cellWidth="250.0" cellHeight="125.0" border="true" id="primary">
+    <style>
+     <color foreground="0x004000" background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell id="0" image="concepba.jpg">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="concepba.pac" />
+    </cell>
+    <cell id="1" image="conoceno.jpg">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="conoce.pac" />
+    </cell>
+    <cell id="0" image="concepav.jpg">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="concepav.pac" />
+    </cell>
+    <cell id="0" image="botica.jpg">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="botica.pac" />
+    </cell>
+   </cells>
+   <cells rows="2" columns="2" cellWidth="250.0" cellHeight="125.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>concepto.pac</p>
+    </cell>
+    <cell>
+     <p>clasific.pac</p>
+    </cell>
+    <cell>
+     <p>conoceno.pac</p>
+    </cell>
+    <cell>
+     <p>recuerda.pac</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@text.Order" name="nuevapla.txa" type="orderParagraphs">
+   <messages>
+    <cell type="previous">
+     <style>
+      <color background="0xFF80C0" inactive="0x008000" alternative="0x008000" />
+     </style>
+     <p>Fíjate en el orden de los párrafos</p>
+    </cell>
+    <cell type="initial">
+     <style>
+      <color background="0xFF80C0" inactive="0x008000" alternative="0x008000" />
+     </style>
+     <p>Ordena las fases de formación de una nueva planta</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFF80C0" inactive="0x008000" alternative="0x008000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="flor13.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x008000" border="true">
+     <size width="620" height="380" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <prevScreen maxTime="10" />
+   <document>
+    <style name="default" bold="false" background="0xFFFFFF" family="Arial" size="11" foreground="0x000000" italic="false" tabWidth="16" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <target>POLINIZACIÓN: Los granos de polen pasan de la antera al estigma de la misma o de otra flor.</target>
+     </p>
+     <p>
+      <target />
+     </p>
+     <p>
+      <target>FECUNDACIÓN: El grano de polen se fija al estigma mediante una sustancia pegajosa y emite una prolongación llamada tubo polínico, por el que se desplaza el gameto masculino hasta el ovario.</target>
+     </p>
+     <p>
+      <target />
+     </p>
+     <p>
+      <target>Formación de la SEMILLA: Los gametos unidos dan lugar a una célula huevo o cigoto, una especie de planta en miniatura con hojas o cotiledones, una zona de crecimiento  o yema, un tallo y una raicilla. </target>
+     </p>
+     <p>
+      <target />
+     </p>
+     <p>
+      <target>Formación del FRUTO: El gineceo se transforma dando lugar al fruto, formado por el pericarpio y las semillas. </target>
+     </p>
+     <p>
+      <target />
+     </p>
+     <p>
+      <target>DISEMINACIÓN: Una vez desprendidas de la planta, las semillas se desplazan a otros lugares por la acción del viento o los animales que las ingieren o arrastran con el pelo.</target>
+     </p>
+     <p>
+      <target />
+     </p>
+     <p>
+      <target>GERMINACIÓN: Cuando la semilla cae a un suelo adecuado y encuentra buenas condiciones de humedad y temperatura, dará lugar a una nueva planta</target>
+     </p>
+     <p />
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="pclasif1.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" />
+      <color background="0x80FFFF" inactive="0x0080C0" alternative="0x0080C0" />
+     </style>
+     <p>Completa los huecos eligiendo las opciones</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" />
+      <color background="0x80FFFF" inactive="0x0080C0" alternative="0x0080C0" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="gfx2.wav" />
+     <p>CORRECTO </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="flower19.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <size width="660" height="385" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" bold="false" background="0x00FFFF" family="Arial" size="17" foreground="0x000000" italic="false" tabWidth="16" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text>Los botánicos establecen </text>
+      <target>
+       <answer>tres</answer>
+       <optionList>
+        <option>dos</option>
+        <option>tres</option>
+        <option>cuatro</option>
+       </optionList>
+       <text>tres</text>
+      </target>
+      <text> grandes divisiones o tipos de plantas:</text>
+     </p>
+     <p />
+     <p>
+      <text>Las BRIOFITAS son plantas que no tienen </text>
+      <target>
+       <answer>flores</answer>
+       <optionList>
+        <option>olor</option>
+        <option>flores</option>
+        <option>clorofila</option>
+       </optionList>
+       <text>flores</text>
+      </target>
+      <text> ni verdaderas raíces y se ahhieren al suelo mediante rizoides. Tampoco tienen verdadero tallo, ya que no tienen xilema y floema. Viven en ambientes muy </text>
+      <target>
+       <answer>húmedos</answer>
+       <optionList>
+        <option>agrestes</option>
+        <option>secos</option>
+        <option>húmedos</option>
+        <option>altos</option>
+       </optionList>
+       <text>húmedos</text>
+      </target>
+      <text>. Hay dos clases: musgos y hepáticas.</text>
+     </p>
+     <p />
+     <p>
+      <text>Las PTERIDOFITAS también son plantas </text>
+      <target>
+       <answer>sin flores</answer>
+       <optionList>
+        <option>olorosas</option>
+        <option>sin flores</option>
+        <option>sin raíz</option>
+       </optionList>
+       <text>sin flores</text>
+      </target>
+      <text>, pero que sí tienen raíz, tallo y hojas verdaderas. También viven en zonas húmedas y con sombra, pero no dependen tanto del agua como las briofitas. Hay dos clases: filicales (helechos) y equisetales.</text>
+     </p>
+     <p />
+     <p>
+      <text>Las ESPERMAFITAS son plantas con raíz , tallo y hojas y que se reproducen por medio de </text>
+      <target>
+       <answer>flores</answer>
+       <optionList>
+        <option>esporas</option>
+        <option>flores</option>
+        <option>rizomas</option>
+       </optionList>
+       <text>flores</text>
+      </target>
+      <text>. Se clasifican según tengan, o no, protegido el óvulo. Hay dos grandes clases: las gimnospermas y las </text>
+      <target>
+       <answer>angiospermas</answer>
+       <optionList>
+        <option>filicales</option>
+        <option>angiospermas</option>
+        <option>caducifolias</option>
+        <option>hermafroditas</option>
+       </optionList>
+       <text>angiospermas</text>
+      </target>
+      <text>.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="pclasif2.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFF80C0" inactive="0xFF00FF" alternative="0xFF00FF" />
+     </style>
+     <p>Completa los huecos del texto</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFF80C0" inactive="0xFF00FF" alternative="0xFF00FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="flash4.wav" />
+     <p>¡ MUY BIEN !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="flor3.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="650" height="440" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" bold="false" background="0xFFFF80" family="Arial" size="13" foreground="0x000000" italic="false" tabWidth="16" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text>Las </text>
+      <target>
+       <answer>ESPERMAFITAS</answer>
+       <response fill="_" length="12" maxLength="12" />
+       <text>ESPERMAFITAS</text>
+      </target>
+      <text> son plantas con raíz , tallo y hojas y que se reproducen por medio de flores. Se clasifican según tengan, o no, protegido el óvulo. Hay dos grandes clases: las gimnospermas y las angiospermas.</text>
+     </p>
+     <p />
+     <p>
+      <text>Las plantas </text>
+      <target>
+       <answer>gimnospermas</answer>
+       <response fill="_" length="12" maxLength="12" />
+       <text>gimnospermas</text>
+      </target>
+      <text> tienen los óvulos desnudos, no tienen ovarios. Sus hojas son aciculares (en forma de </text>
+      <target>
+       <answer>aguja</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>aguja</text>
+      </target>
+      <text>) o escamosas. Son plantas gimnospermas el </text>
+      <target>
+       <answer>pino</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <info>
+        <cell hAlign="left" width="200" height="200" image="pino.jpg">
+         <style>
+          <color background="0xFFFFFF" />
+         </style>
+        </cell>
+       </info>
+       <text>pino</text>
+      </target>
+      <text>, el abeto, el </text>
+      <target>
+       <answer>ciprés</answer>
+       <answer>cipres</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <info>
+        <cell hAlign="left" width="200" height="200" image="cipres.jpg">
+         <style>
+          <color background="0xFFFFFF" />
+         </style>
+        </cell>
+       </info>
+       <text>ciprés</text>
+      </target>
+      <text>, la sabina y el enebro.</text>
+     </p>
+     <p />
+     <p>
+      <text>Las plantas </text>
+      <target>
+       <answer>angiospermas</answer>
+       <response fill="_" length="12" maxLength="12" />
+       <text>angiospermas</text>
+      </target>
+      <text> son aquellas que tienen ovarios que protegen los óvulos. Se dividen en dos grandes órdenes, monocotiledóneas y </text>
+      <target>
+       <answer>dicotiledóneas</answer>
+       <response fill="_" length="14" maxLength="14" />
+       <text>dicotiledóneas</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <text>Las semillas de las plantas </text>
+      <target>
+       <answer>monocotiledóneas</answer>
+       <answer>monocotiledoneas</answer>
+       <response fill="_" length="16" maxLength="16" />
+       <text>monocotiledóneas</text>
+      </target>
+      <text> sólo tienen un cotiledón. Se distinguen fácilmente porque su raíz es fasciculada y sus hojas tienen los nervios </text>
+      <target>
+       <answer>paralelos</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <info>
+        <cell hAlign="left" width="140" height="100">
+         <style>
+          <color background="0xFFFFFF" />
+         </style>
+         <p>que no se cruzan</p>
+        </cell>
+       </info>
+       <text>paralelos</text>
+      </target>
+      <text>. A esta clase pertenecen la cebada, el trigo, el maíz, los </text>
+      <target>
+       <answer>lirios</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <info>
+        <cell hAlign="left" width="200" height="200" image="lirio.jpg">
+         <style>
+          <color background="0xFFFFFF" />
+         </style>
+        </cell>
+       </info>
+       <text>lirios</text>
+      </target>
+      <text>, las orquídeas y las cebollas.</text>
+     </p>
+     <p />
+     <p>
+      <text>Las semillas de las plantas del orden de las </text>
+      <target>
+       <answer>dicotiledóneas</answer>
+       <answer>dicotiledoneas</answer>
+       <response fill="_" length="14" maxLength="14" />
+       <text>dicotiledóneas</text>
+      </target>
+      <text> tienen más de un cotiledón, generalmente dos. Sus hojas nunca tienen los nervios paralelos y la raíz fasciculada. En este orden están la mayoría de las plantas conocidas, todos los árboles que nos son gimnospermas (roble, </text>
+      <target>
+       <answer>haya</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <info>
+        <cell hAlign="left" width="140" height="100" image="hayedo.jpg">
+         <style>
+          <color background="0xFFFFFF" />
+         </style>
+        </cell>
+       </info>
+       <text>haya</text>
+      </target>
+      <text>, abeto, abedul, álamo, </text>
+      <target>
+       <answer>almendro</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <info>
+        <cell hAlign="left" width="200" height="200" image="almendro.jpg">
+         <style>
+          <color background="0xFFFFFF" />
+         </style>
+        </cell>
+       </info>
+       <text>almendro</text>
+      </target>
+      <text>, ciruelo... y la mayoría de las plantas herbáceas: rosas, </text>
+      <target>
+       <answer>amapolas</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <info>
+        <cell hAlign="left" width="200" height="200" image="amapola.jpg">
+         <style>
+          <color background="0xFFFFFF" />
+         </style>
+        </cell>
+       </info>
+       <text>amapolas</text>
+      </target>
+      <text>, tréboles, geranios, claveles...</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" checkAccents="false" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="raiz1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF80" />
+     </style>
+     <p>Lee atentamente</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondo3.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+   </settings>
+   <cells rows="4" columns="3" border="false" image="raiz1.jpg">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@text.Order" name="raiz1.txa" type="orderWords" amongParagraphs="true">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF80" />
+     </style>
+     <p>Ordena las palabras que se han movido de su sitio</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF80" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="gfx2.wav" />
+     <p>¡ MUY BIEN !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="violeta.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="700" height="480" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" bold="false" background="0xFFFF80" family="Arial" size="13" foreground="0x000000" italic="false" tabWidth="16" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text>La raiz es la parte </text>
+      <target>subterránea</target>
+      <text> de la planta, su misión es absorber, a través de los pelos absorbente,  </text>
+      <target>agua</target>
+      <text> del suelo y las sales minerales que lleva disueltas.</text>
+     </p>
+     <p />
+     <p>
+      <text>El agua y las sales minerales forma un líquido denominado savia </text>
+      <target>bruta</target>
+      <text>,que circula hacia </text>
+      <target>arriba</target>
+      <text> por unos tubos llamados vasos </text>
+      <target>leñosos</target>
+      <text>. El conjunto de los vasos leñosos recibe el nombre de </text>
+      <target>xilema</target>
+      <text>, que es tan duro que sirve para dar rigidez a la planta.</text>
+     </p>
+     <p />
+     <p>
+      <text>También en la raíz se encuentran los vasos </text>
+      <target>liberianos</target>
+      <text> que forman el </text>
+      <target>floema</target>
+      <text>, por el que circula la savia </text>
+      <target>elaborada</target>
+      <text>, líquido cargado de sustancias orgánicas que sirven de </text>
+      <target>alimento</target>
+      <text> a todas las células de la planta.</text>
+     </p>
+     <p />
+     <p>
+      <text>La estructura de la raíz varía con la </text>
+      <target>edad</target>
+      <text> de la planta. Cuando la raíz tienen menos de un año, la raíz tiene estructura </text>
+      <target>primaria</target>
+      <text> y cuando tiene más edasd tiene una estructura </text>
+      <target>secundaria</target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <text>A lo largo de la raíz encontramos cuatro partes: zona de ramificación, zona pilífera, zona de crecimiento y zona </text>
+      <target>terminal</target>
+      <text>. </text>
+     </p>
+     <p />
+     <p>
+      <text>El crecimiento de la raíz en longitud se produce debido a la existencia de un </text>
+      <target>meristemo</target>
+      <text> situado en la zona de crecimiento o ápice.</text>
+     </p>
+     <p />
+     <p>
+      <text>En la zona terminal hay una </text>
+      <target>cofia</target>
+      <text> o pilorriza que protege la parte de la raíz que se introduce en la tierra.</text>
+     </p>
+     <p />
+     <p>
+      <text>La zona pilífera es la que alberga a los pelos </text>
+      <target>absorbentes</target>
+      <text> y la zona de </text>
+      <target>ramificación</target>
+      <text> es donde se desarrollan las raíces secundarias.</text>
+     </p>
+     <p />
+     <p>
+      <text>Hay raíces que se encuentran muy engrosadas por contener almacenadas sustancias de reserva, como la raíz tuberosa y la raíz napiforme </text>
+      <target>(zanahoria</target>
+      <text>, nabo, etc).</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@text.Order" name="reproduc.txa" type="orderWords" amongParagraphs="true">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x004040" background="0xFFFF80" />
+     </style>
+     <p>Ordena las palabras que ha revuelto el viento</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x004040" background="0xFFFF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="fondo2.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="560" height="475" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" bold="false" background="0xFFFFFF" family="Arial" size="13" foreground="0x000000" italic="false" tabWidth="16" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text>            REPRODUCCIÓN DE LAS PLANTAS</text>
+     </p>
+     <p />
+     <p>
+      <text>Casi todas las plantas tienen un alto poder regenerativo. Es decir, de un trozo cortado se desarrollará una nueva planta. Este es el medio de reproducción más frecuente en los </text>
+      <target>geranios</target>
+      <text> cultivados, por ejemplo.</text>
+     </p>
+     <p />
+     <p>
+      <text>Los vegetales tienen órganos, tejido y células especializadas en la reproducción </text>
+      <target>sexual</target>
+      <text>. Estos de órganos sirven, precisamente, para distinguir dos grandes grupos: las plantas con flores y sin flores.</text>
+     </p>
+     <p />
+     <p>
+      <text>Las plantas sin flores pertenecen a la división de las </text>
+      <target>briofitas</target>
+      <text> (los musgos) y </text>
+      <target>pteridofitas</target>
+      <text> (los helechos). Sus órganos reproductores femeninos se denominan arquegonios, y los masculinos, </text>
+      <target>anteridios</target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <text>El </text>
+      <target>arquegonio</target>
+      <text> es una estructura simple, de forma alargada donde se origina la célula reproductora femenina, llamada </text>
+      <target>oosfera</target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <text>El anteridio es el órgano donde se originan los </text>
+      <target>anterozoides</target>
+      <text>, células reproductoras masculinas. Los anterozoides tienen </text>
+      <target>flagelos</target>
+      <text> para desplazarse dentro del agua y alcanzar la oosfera.</text>
+     </p>
+     <p>
+      <text>El ciclo reproductor de estas plantas es complicado porque tienen una fase de reproducción asexual mediante </text>
+      <target>esporas</target>
+      <text>.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="tallo.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF80" />
+     </style>
+     <p>Lee atentamente</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondo5.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+   </settings>
+   <cells rows="4" columns="3" border="false" image="tallo.jpg">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@text.FillInBlanks" name="tallo.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF80" />
+     </style>
+     <p>Completa los huecos del texto</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="flor10.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="560" height="350" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" bold="false" background="0xFFFF80" family="Arial" size="14" foreground="0x000000" italic="false" tabWidth="10" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text>El TALLO es el órgano que sostiene las partes aéreas de la planta. Al igual que la raíz, también su estructura varía en función de la </text>
+      <target>
+       <answer>edad</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>edad</text>
+      </target>
+      <text> de la planta.</text>
+     </p>
+     <p />
+     <p>
+      <text>Los tallos pueden ser de muy diversos tipos. Hay tallos herbáceos, que tienen consistencia </text>
+      <target>
+       <answer>blanda</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text>blanda</text>
+      </target>
+      <text> y vida corta. Otros tallos son leñosos y tienen consistencia </text>
+      <target>
+       <answer>dura</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>dura</text>
+      </target>
+      <text> (madera) y más de un año de vida.</text>
+     </p>
+     <p />
+     <p>
+      <text>Hay tres tipos de tallo típicos:</text>
+     </p>
+     <p />
+     <p>
+      <text>-</text>
+      <target>
+       <answer>troncos</answer>
+       <answer>Troncos</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>Troncos</text>
+      </target>
+      <text>: con numerosas ramas.</text>
+     </p>
+     <p>
+      <text>- </text>
+      <target>
+       <answer>Estipes</answer>
+       <answer>estipes</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>Estipes</text>
+      </target>
+      <text>: troncos rectos sin ramificaciones, como  las palmeras</text>
+     </p>
+     <p>
+      <text>- </text>
+      <target>
+       <answer>Cañas</answer>
+       <answer>cañas</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>Cañas</text>
+      </target>
+      <text>: tallos huecos y con tabiques transversales.</text>
+     </p>
+     <p />
+     <p>
+      <text>Existen también tallos subterráneos. La patata es un ejemplo de tallo subterráneo, de tipo </text>
+      <target>
+       <answer>tubérculo</answer>
+       <answer>tuberculo</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <text>tubérculo</text>
+      </target>
+      <text>. Otro tipo de tallo subterráneo es el </text>
+      <target>
+       <answer>bulbo</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>bulbo</text>
+      </target>
+      <text>, como la cebolla.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="almendro.jpg" file="almendro.jpg" />
+  <media name="amapola.jpg" file="amapola.jpg" />
+  <media name="botica.jpg" file="botica.jpg" />
+  <media name="cipres.jpg" file="cipres.jpg" />
+  <media name="concepav.jpg" file="concepav.jpg" />
+  <media name="concepba.jpg" file="concepba.jpg" />
+  <media name="conoceno.jpg" file="conoceno.jpg" />
+  <media name="flor10.jpg" file="flor10.jpg" />
+  <media name="flor13.jpg" file="flor13.jpg" />
+  <media name="flor15.jpg" file="flor15.jpg" />
+  <media name="flor18.jpg" file="flor18.jpg" />
+  <media name="flor3.jpg" file="flor3.jpg" />
+  <media name="flower19.jpg" file="flower19.jpg" />
+  <media name="fondo1.jpg" file="fondo1.jpg" />
+  <media name="fondo2.jpg" file="fondo2.jpg" />
+  <media name="fondo3.jpg" file="fondo3.jpg" />
+  <media name="fondo4.jpg" file="fondo4.jpg" />
+  <media name="fondo5.jpg" file="fondo5.jpg" />
+  <media name="fotosin.jpg" file="fotosin.jpg" />
+  <media name="hayedo.jpg" file="hayedo.jpg" />
+  <media name="hoja.jpg" file="hoja.jpg" />
+  <media name="lirio.jpg" file="lirio.jpg" />
+  <media name="ojon.jpg" file="ojon.jpg" />
+  <media name="pino.jpg" file="pino.jpg" />
+  <media name="raiz1.jpg" file="raiz1.jpg" />
+  <media name="tallo.jpg" file="tallo.jpg" />
+  <media name="violeta.jpg" file="violeta.jpg" />
+  <media name="polviento.mid" file="polviento.mid" />
+  <media name="clap.wav" file="clap.wav" />
+  <media name="filedone.wav" file="filedone.wav" />
+  <media name="flash4.wav" file="flash4.wav" />
+  <media name="gfx2.wav" file="gfx2.wav" />
+ </mediaBag>
+</JClicProject>
+

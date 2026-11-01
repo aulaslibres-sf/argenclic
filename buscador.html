@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Actividades JClic</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .search-box {
+            background: white;
+            border-radius: 50px;
+            padding: 15px 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        .search-icon {
+            width: 24px;
+            height: 24px;
+            color: #667eea;
+        }
+
+        .filters-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .filter-group {
+            margin-bottom: 20px;
+        }
+
+        .filter-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .filter-title {
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .filter-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .filters {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+            font-weight: 600;
+            backdrop-filter: blur(5px);
+        }
+
+        .filter-btn:hover {
+            background: white;
+            color: #667eea;
+            border-color: white;
+        }
+
+        .filter-btn.active {
+            background: white;
+            color: #667eea;
+            border-color: white;
+        }
+
+        .clear-filters {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .clear-filters button {
+            padding: 8px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.3s;
+        }
+
+        .clear-filters button:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .results-info {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .active-filters {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .active-filter-tag {
+            background: rgba(255, 255, 255, 0.9);
+            color: #667eea;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .active-filter-tag .remove {
+            cursor: pointer;
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .project-badges {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .project-category,
+        .project-ciclo {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .project-category {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .project-ciclo {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .project-title {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .project-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .project-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .keyword-tag {
+            padding: 4px 10px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .project-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: opacity 0.3s;
+            font-weight: 600;
+        }
+
+        .project-link:hover {
+            opacity: 0.9;
+        }
+
+        .no-results {
+            text-align: center;
+            color: white;
+            font-size: 1.5em;
+            padding: 60px 20px;
+        }
+
+        .loading {
+            text-align: center;
+            color: white;
+            font-size: 1.5em;
+            padding: 60px 20px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .search-box {
+                padding: 12px 20px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filters-section {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎮 Buscador de Actividades JClic</h1>
+            <p>Encuentra actividades educativas interactivas</p>
+        </div>
+
+        <div class="search-box">
+            <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Buscar por título, descripción o palabras clave..."
+                autocomplete="off"
+            >
+        </div>
+
+        <div class="filters-section">
+            <div class="filter-group">
+                <div class="filter-title">
+                    <svg class="filter-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                    Nivel Educativo
+                </div>
+                <div class="filters" id="filtrosCiclo"></div>
+            </div>
+
+            <div class="filter-group">
+                <div class="filter-title">
+                    <svg class="filter-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                    </svg>
+                    Área Temática
+                </div>
+                <div class="filters" id="filtrosCategoria"></div>
+            </div>
+
+            <div class="clear-filters">
+                <button onclick="limpiarFiltros()">✕ Limpiar filtros</button>
+            </div>
+        </div>
+
+        <div class="active-filters" id="activeFliters"></div>
+
+        <div class="results-info" id="resultsInfo"></div>
+
+        <div id="loadingMessage" class="loading">Cargando proyectos...</div>
+        <div id="noResults" class="no-results" style="display: none;">
+            No se encontraron proyectos que coincidan con tu búsqueda 😕
+        </div>
+
+        <div class="projects-grid" id="projectsGrid"></div>
+    </div>
+
+    <script>
+        let proyectosData = [];
+        let filtroCiclo = 'TODOS';
+        let filtroCategoria = 'TODOS';
+
+        // Cargar datos desde el archivo JSON
+        async function cargarProyectos() {
+            try {
+                const response = await fetch('proyectos-data.json');
+                proyectosData = await response.json();
+                
+                document.getElementById('loadingMessage').style.display = 'none';
+                
+                crearFiltros();
+                mostrarProyectos(proyectosData);
+                
+                console.log(`✓ ${proyectosData.length} proyectos cargados`);
+            } catch (error) {
+                console.error('Error cargando proyectos:', error);
+                document.getElementById('loadingMessage').innerHTML = 
+                    '❌ Error al cargar los proyectos. Verifica que proyectos-data.json esté en la misma carpeta.';
+            }
+        }
+
+        // Crear botones de filtro
+        function crearFiltros() {
+            // Filtros de ciclo
+            const ciclos = ['TODOS', ...new Set(proyectosData.map(p => p.ciclo).filter(c => c))];
+            const containerCiclo = document.getElementById('filtrosCiclo');
+            
+            ciclos.forEach(ciclo => {
+                const btn = document.createElement('button');
+                btn.className = 'filter-btn' + (ciclo === 'TODOS' ? ' active' : '');
+                btn.textContent = ciclo;
+                btn.onclick = () => filtrarPorCiclo(ciclo, btn);
+                containerCiclo.appendChild(btn);
+            });
+
+            // Filtros de categoría
+            const categorias = ['TODOS', ...new Set(proyectosData.map(p => p.categoria).filter(c => c))];
+            const containerCategoria = document.getElementById('filtrosCategoria');
+            
+            categorias.forEach(cat => {
+                const btn = document.createElement('button');
+                btn.className = 'filter-btn' + (cat === 'TODOS' ? ' active' : '');
+                btn.textContent = cat;
+                btn.onclick = () => filtrarPorCategoria(cat, btn);
+                containerCategoria.appendChild(btn);
+            });
+        }
+
+        // Filtrar por ciclo
+        function filtrarPorCiclo(ciclo, btnElement) {
+            filtroCiclo = ciclo;
+            
+            // Actualizar botones activos
+            document.querySelectorAll('#filtrosCiclo .filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            btnElement.classList.add('active');
+            
+            actualizarFiltrosActivos();
+            buscarProyectos();
+        }
+
+        // Filtrar por categoría
+        function filtrarPorCategoria(categoria, btnElement) {
+            filtroCategoria = categoria;
+            
+            // Actualizar botones activos
+            document.querySelectorAll('#filtrosCategoria .filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            btnElement.classList.add('active');
+            
+            actualizarFiltrosActivos();
+            buscarProyectos();
+        }
+
+        // Limpiar todos los filtros
+        function limpiarFiltros() {
+            filtroCiclo = 'TODOS';
+            filtroCategoria = 'TODOS';
+            
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent === 'TODOS') {
+                    btn.classList.add('active');
+                }
+            });
+            
+            document.getElementById('searchInput').value = '';
+            actualizarFiltrosActivos();
+            buscarProyectos();
+        }
+
+        // Actualizar visualización de filtros activos
+        function actualizarFiltrosActivos() {
+            const container = document.getElementById('activeFliters');
+            container.innerHTML = '';
+            
+            if (filtroCiclo !== 'TODOS') {
+                const tag = document.createElement('div');
+                tag.className = 'active-filter-tag';
+                tag.innerHTML = `
+                    📚 ${filtroCiclo}
+                    <span class="remove" onclick="removerFiltroCiclo()">×</span>
+                `;
+                container.appendChild(tag);
+            }
+            
+            if (filtroCategoria !== 'TODOS') {
+                const tag = document.createElement('div');
+                tag.className = 'active-filter-tag';
+                tag.innerHTML = `
+                    🏷️ ${filtroCategoria}
+                    <span class="remove" onclick="removerFiltroCategoria()">×</span>
+                `;
+                container.appendChild(tag);
+            }
+        }
+
+        // Remover filtros individuales
+        function removerFiltroCiclo() {
+            const btnTodos = Array.from(document.querySelectorAll('#filtrosCiclo .filter-btn'))
+                .find(btn => btn.textContent === 'TODOS');
+            filtrarPorCiclo('TODOS', btnTodos);
+        }
+
+        function removerFiltroCategoria() {
+            const btnTodos = Array.from(document.querySelectorAll('#filtrosCategoria .filter-btn'))
+                .find(btn => btn.textContent === 'TODOS');
+            filtrarPorCategoria('TODOS', btnTodos);
+        }
+
+        // Función de búsqueda
+        function buscarProyectos() {
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+            
+            let resultados = proyectosData;
+            
+            // Filtrar por ciclo
+            if (filtroCiclo !== 'TODOS') {
+                resultados = resultados.filter(p => p.ciclo === filtroCiclo);
+            }
+            
+            // Filtrar por categoría
+            if (filtroCategoria !== 'TODOS') {
+                resultados = resultados.filter(p => p.categoria === filtroCategoria);
+            }
+            
+            // Filtrar por búsqueda de texto
+            if (query) {
+                resultados = resultados.filter(proyecto => {
+                    const titulo = proyecto.titulo.toLowerCase();
+                    const descripcion = proyecto.descripcion.toLowerCase();
+                    const keywords = proyecto.keywords.join(' ').toLowerCase();
+                    
+                    return titulo.includes(query) || 
+                           descripcion.includes(query) || 
+                           keywords.includes(query);
+                });
+            }
+            
+            mostrarProyectos(resultados);
+        }
+
+        // Mostrar proyectos en el grid
+        function mostrarProyectos(proyectos) {
+            const grid = document.getElementById('projectsGrid');
+            const noResults = document.getElementById('noResults');
+            const resultsInfo = document.getElementById('resultsInfo');
+            
+            grid.innerHTML = '';
+            
+            if (proyectos.length === 0) {
+                noResults.style.display = 'block';
+                resultsInfo.textContent = '';
+                return;
+            }
+            
+            noResults.style.display = 'none';
+            resultsInfo.textContent = `${proyectos.length} actividad${proyectos.length !== 1 ? 'es' : ''} encontrada${proyectos.length !== 1 ? 's' : ''}`;
+            
+            proyectos.forEach(proyecto => {
+                const card = document.createElement('div');
+                card.className = 'project-card';
+                card.onclick = () => window.location.href = proyecto.url;
+                
+                let keywordsHTML = '';
+                if (proyecto.keywords && proyecto.keywords.length > 0) {
+                    keywordsHTML = '<div class="project-keywords">' +
+                        proyecto.keywords.map(kw => `<span class="keyword-tag">${kw}</span>`).join('') +
+                        '</div>';
+                }
+                
+                card.innerHTML = `
+                    <div class="project-badges">
+                        ${proyecto.categoria ? `<span class="project-category">${proyecto.categoria}</span>` : ''}
+                        ${proyecto.ciclo ? `<span class="project-ciclo">${proyecto.ciclo}</span>` : ''}
+                    </div>
+                    <h3 class="project-title">${proyecto.titulo}</h3>
+                    ${proyecto.descripcion ? `<p class="project-description">${proyecto.descripcion}</p>` : ''}
+                    ${keywordsHTML}
+                    <a href="${proyecto.url}" class="project-link" onclick="event.stopPropagation()">
+                        Abrir Actividad →
+                    </a>
+                `;
+                
+                grid.appendChild(card);
+            });
+        }
+
+        // Event listeners
+        document.getElementById('searchInput').addEventListener('input', buscarProyectos);
+
+        // Cargar proyectos al iniciar
+        cargarProyectos();
+    </script>
+</body>
+</html>

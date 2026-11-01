@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="pinvaria" version="0.1.3">
+ <settings>
+  <title>Partes invariables de la oración</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="6/13/03" />
+  <revision description="Conversión de Clic3 a JClic" date="5/12/03">
+   <author name="Equip Clic" mail="clic@xtec.cat" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Míriam Castillo Castillo" mail="jmcaro@ctcinternet.cl" />
+  <organization name="Escuela Cardenal José María Caro" url="http://www.ctio.noao.edu/AURA/redlaser/jmcaro/jmcaro.html" city="Coquimbo" country="Chile" />
+  <language>español</language>
+  <description>
+   <p>Paquetes de actividades sobre las partes invariables de la oración gramatical. La aplicación se estructura en cuatro partes:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Conjunciones</p>
+   <p>&lt;LI&gt;Adverbios</p>
+   <p>&lt;LI&gt;Preposiciones</p>
+   <p>&lt;LI&gt;Interjecciones</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area="Lenguas" level="Primaria">aprendizaje de la lengua, lengua castellana</descriptors>
+ </settings>
+ <sequence>
+  <item id="pinvaria.pac" name="iniciar.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="prova.ass">
+   <jump action="STOP" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="iniciar.ass">
+   <description>
+    <p>Pantalla de información</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="550.0" cellHeight="400.0" border="true">
+    <style>
+     <font family="Times New Roman" size="30" />
+     <color foreground="0xFFFFFF" background="0x008080" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>PARTES INVARIABLES DE LA ORACION GRAMATICAL:PREPOSICIONES, CONJUNCIONES,INTERJECCIONES Y ADVERBIOS.                              PROFESORA: MIRIAM CASTILLO C.  ESCUELA: CARDENAL JOSE MARIA CARO                                                 PAIS: CHILE CIUDAD: COQUIMBO AÑO: 2002  </p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="prova.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Times New Roman" size="27" bold="true" />
+      <color foreground="0xFFFFFF" background="0x008040" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Elige la actividad con la cual quieres empezar.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Times New Roman" size="27" bold="true" />
+      <color foreground="0xFFFFFF" background="0x008040" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFCA">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="150.0" cellHeight="90.0" border="true">
+    <style>
+     <font family="Times New Roman" size="27" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="preposic.pac" params="preposic/preposic.jclic" />
+     <p>PREPOSICIONES</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="conjunc.pac" params="conjunc/conjunc.jclic" />
+     <p>CONJUNCIONES</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="interjec.pac" params="interjec/interjec.jclic" />
+     <p>INTERJECCIONES</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="adverbio.pac" params="adverbio/adverbio.jclic" />
+     <p>ADVERBIOS</p>
+    </cell>
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag />
+</JClicProject>
+

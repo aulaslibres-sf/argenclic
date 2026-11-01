@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="paqueteo" version="0.1.3">
+ <settings>
+  <title>Trabajar en el laboratorio de química</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="6/16/03" />
+  <revision description="Conversión de Clic3 a JClic" date="6/18/03">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Olga Valiente Francés" mail="ovaliente@educa.aragon.es" />
+  <organization name="Centro de Profesores y Recursos de Andorra" mail="cprandorra@educa.aragon.es" url="http://www.educa.aragob.es/cprandor/" city="Andorra" state="Aragón" />
+  <language>es</language>
+  <description>
+   <p>Las actividades de esta aplicación están orientadas a que los alumnos conozcan el material básico que se utiliza en un laboratorio de química para realizar las diferentes prácticas. Sus objetivos son:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Conocer y cumplir las normas de seguridad para trabajar en un laboratorio escolar de química.</p>
+   <p>&lt;LI&gt;Descubrir el significado de los pictogramas que aparecen en las etiquetas de los productos químicos.</p>
+   <p>&lt;LI&gt;Familiarizarse con el modo de trabajar en el laboratorio.</p>
+   <p>&lt;LI&gt;Aprender que llevar a cabo experiencias químicas puede resultar peligroso si no se toman una serie de medidas de seguridad.</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area-codes="exp" level-codes="PRI, SEC">experimentación, química</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Las actividades de esta aplicación están orientadas a que los alumnos conozcan el material básico que se utiliza en un laboratorio de química para realizar las diferentes prácticas. Sus objetivos son:</p>
+    <p>&lt;UL&gt;</p>
+    <p>&lt;LI&gt;Conocer y cumplir las normas de seguridad para trabajar en un laboratorio escolar de química.</p>
+    <p>&lt;LI&gt;Descubrir el significado de los pictogramas que aparecen en las etiquetas de los productos químicos.</p>
+    <p>&lt;LI&gt;Familiarizarse con el modo de trabajar en el laboratorio.</p>
+    <p>&lt;LI&gt;Aprender que llevar a cabo experiencias químicas puede resultar peligroso si no se toman una serie de medidas de seguridad.</p>
+    <p>&lt;/UL&gt;</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="paqueteo.pac" name="portadao.txa">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="esque.ass">
+   <jump action="STOP" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="esque.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="53" />
+      <color foreground="0x800080" background="0xFFFF80" />
+     </style>
+     <p>Haz clic sobre el tema que desees conocer</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="53" />
+      <color foreground="0x800080" background="0xFFFF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x800080" border="true">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="2" cols="3" cellWidth="603.0" cellHeight="336.0" border="true">
+    <style shadow="true">
+     <font family="Arial" size="41" bold="true" />
+     <color foreground="0xFFFFFF" background="0x800080" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="paqueteo.pac" />
+     <p>INICIO </p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="paquete1.pac" params="paquete1/paquete1.jclic" />
+     <p>MATERIAL </p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="paquete2.pac" params="paquete2/paquete2.jclic" />
+     <p>JUEGOS </p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="paquete4.pac" params="paquete4/paquete4.jclic" />
+     <p>NORMAS DE SEGURIDAD </p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="paquete3.pac" params="paquete3/paquete3.jclic" />
+     <p>PRODUCTOS PELIGROSOS </p>
+    </cell>
+    <cell />
+   </cells>
+  </activity>
+  <activity class="@text.FillInBlanks" name="portadao.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="parat.wav" />
+     <p> </p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="tubos.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="350" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" size="19" background="0x800040" family="Arial" bold="false" foreground="0xFFFFFF" italic="false" tabWidth="14" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text>                                                                                                                                                        </text>
+      <cell width="385" height="165" border="true">
+       <style>
+        <font family="Arial" size="53" bold="true" />
+        <color foreground="0x800040" background="0xFFFFFF" />
+       </style>
+       <p>PARA TRABAJAR</p>
+       <p>EN EL</p>
+       <p>LABORATORIO </p>
+       <p>DE QUÍMICA</p>
+      </cell>
+     </p>
+     <p />
+     <p />
+     <p />
+     <p>
+      <text>             AUTORA: Olga Valiente Francés</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="tubos.gif" file="tubos.gif" animated="false" />
+  <media name="parat.wav" file="parat.wav" />
+ </mediaBag>
+</JClicProject>
+

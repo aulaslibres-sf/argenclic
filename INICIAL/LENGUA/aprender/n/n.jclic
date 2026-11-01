@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="n" version="0.1.3">
+ <settings>
+  <title>Aprender a leer</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="5/31/01" />
+  <revision description="Conversión de Clic3 a JClic" date="5/2/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Andrea Carolina González Muñoz" mail="acgonzal@vtr.net" />
+  <author name="Mónica Patricia Genet Guerrero" mail="nimoca@hotmail.com" />
+  <language>Español</language>
+  <description>
+   <p>Actividades realizadas en base al libro "lenguaje y Comunicación 1" año 2000, de la Editorial Universitaria, distribuido por el Ministerio de Educación de la República de Chile.&lt;BR&gt;</p>
+   <p>El objetivo de esta aplicación es el aprendizaje de la lectura en lengua española. A lo largo del paquete trabajamos diversas consonantes: &lt;B&gt;L, M, S, T, P y N&lt;/B&gt; de las cuales encontramos actividades de identificación, puzzles, asociaciones, de texto y de respuesta escrita.</p>
+  </description>
+  <descriptors level="Infantil, Primaria">lengua castellana, lectura</descriptors>
+ </settings>
+ <sequence>
+  <item id="n.pac" name="n_0.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="n_1.ass" />
+  <item name="n_2.ass" />
+  <item name="n_3.puz">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.Explore" name="n_0.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF8040" background="0xFFFFC4" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Escucha !</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF8040" background="0xFFFFC4" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFF0000">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+   </settings>
+   <cells rows="1" cols="5" border="false" image="naranja.gif" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0xFF8040" background="0xFFFFC4" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <ids>0 1 2 3 4</ids>
+   </cells>
+   <cells rows="1" cols="5" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0xFF8040" background="0xFFFFC4" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="na.wav" />
+     <p>na </p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="ne.wav" />
+     <p>ne </p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="ni.wav" />
+     <p>ni </p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="no.wav" />
+     <p>no </p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="nu.wav" />
+     <p>nu </p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="n_1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFF80" inactive="0xFF8040" alternative="0xFF8040" />
+     </style>
+     <p>Asocia !</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFF80" inactive="0xFF8040" alternative="0xFF8040" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muy_bien.wav" />
+     <p>Muy bien !!  </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF0080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF8040" border="true" />
+   </settings>
+   <cells rows="1" cols="5" border="false" image="naranja.gif" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0xFF0000" background="0xFFFF80" inactive="0xFF8040" alternative="0xFF8040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <ids>0 1 2 3 4</ids>
+   </cells>
+   <cells rows="1" cols="5" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0xFF0000" background="0xFFFF80" inactive="0xFF8040" alternative="0xFF8040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>na</p>
+    </cell>
+    <cell>
+     <p>ne</p>
+    </cell>
+    <cell>
+     <p>ni</p>
+    </cell>
+    <cell>
+     <p>no</p>
+    </cell>
+    <cell>
+     <p>nu</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="5" cellWidth="140.0" cellHeight="100.0" border="false" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="na.wav" />
+     <p>na </p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="ne.wav" />
+     <p>ne </p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="ni.wav" />
+     <p>ni </p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="no.wav" />
+     <p>no </p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="nu.wav" />
+     <p>nu </p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="n_2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="46" />
+      <color foreground="0x0000FF" background="0xFFFF00" />
+     </style>
+     <p>Relaciona ...</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="46" />
+      <color foreground="0x0000FF" background="0xFFFF00" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="genial.wav" />
+     <p>Genial !  </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF0000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+   </settings>
+   <cells rows="5" cols="1" border="true" image="cosas_n.gif" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="46" />
+     <color foreground="0x0000FF" background="0xFFFF00" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <ids>0 1 2 3 4</ids>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="46" />
+     <color foreground="0x0000FF" background="0xFFFF00" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="nadar.wav" />
+     <p>Nadar </p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="nene.wav" />
+     <p>Nene  </p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="nido.wav" />
+     <p>Nido </p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="notas.wav" />
+     <p>Notas </p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="nube.wav" />
+     <p>Nube  </p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="n_3.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0x004080" background="0xFFFFCA" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0x004080" background="0xFFFFCA" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x80FF80">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="1" border="true" image="cosas_n.gif" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x004080" background="0xFFFFCA" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="cosas_n.gif" file="cosas_n.gif" />
+  <media name="naranja.gif" file="naranja.gif" />
+  <media name="genial.wav" file="genial.wav" />
+  <media name="muy_bien.wav" file="muy_bien.wav" />
+  <media name="na.wav" file="na.wav" />
+  <media name="nadar.wav" file="nadar.wav" />
+  <media name="ne.wav" file="ne.wav" />
+  <media name="nene.wav" file="nene.wav" />
+  <media name="ni.wav" file="ni.wav" />
+  <media name="nido.wav" file="nido.wav" />
+  <media name="no.wav" file="no.wav" />
+  <media name="notas.wav" file="notas.wav" />
+  <media name="nu.wav" file="nu.wav" />
+  <media name="nube.wav" file="nube.wav" />
+ </mediaBag>
+</JClicProject>
+

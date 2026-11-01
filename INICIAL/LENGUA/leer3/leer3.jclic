@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="vamosa~1" version="0.1.3">
+ <settings>
+  <title>Vamos a leer</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="6/1/01" />
+  <revision description="Conversión de Clic3 a JClic" date="7/22/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="José Pedro Roda Martínez" mail="03010247@centres.cult.gva.es" />
+  <organization name="CP Santo Negro" city="Elda" state="País Valencià" />
+  <language>Español</language>
+  <description>
+   <p>Paquete de actividades para el aprendizaje de la lectura. El paquete está dividido en 14 partes con 14 consonantes diferentes: &lt;I&gt;&lt;B&gt;p, s, l, m, t, n, d, ll, b/v, ñ, c/q, f, r/rr, ch&lt;/B&gt;&lt;/I&gt;. Para cada consonante hay una lista de palabras que los niños/as deben asociar, a veces con el sonido, otras con la imagen.</p>
+  </description>
+  <descriptors level="Infantil, Primaria">lengua castellana, lectura</descriptors>
+ </settings>
+ <sequence>
+  <item id="vamosa~1.pac" name="presenta.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="menu1.ass">
+   <jump action="STOP" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="menu1.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Si es la primera vez, comienza con la letra p</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x0080FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="7" columns="2" cellWidth="140.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="Arial" size="47" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="7" rows="2" />
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="letrap.pac" params="letrap/letrap.jclic" />
+     <p>p</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="letras.pac" params="letras/letras.jclic" />
+     <p>s</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="letral.pac" params="letral/letral.jclic" />
+     <p>l</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="letram.pac" params="letram/letram.jclic" />
+     <p>m</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="t.pac" params="t/t.jclic" />
+     <p>t</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="letran.pac" params="letran/letran.jclic" />
+     <p>n</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="d.pac" params="d/d.jclic" />
+     <p>d</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="ll.pac" params="ll/ll.jclic" />
+     <p>ll</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="b.pac" params="b/b.jclic" />
+     <p>b,v</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="_.pac" params="_/_.jclic" />
+     <p>ñ</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="c.pac" params="c/c.jclic" />
+     <p>c,qu</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="f.pac" params="f/f.jclic" />
+     <p>f</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="r.pac" params="r/r.jclic" />
+     <p>r,rr</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="ch.pac" params="ch/ch.jclic" />
+     <p>ch</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="presenta.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="3" border="false" image="presen~1.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="presen~1.gif" file="presen_1.gif" />
+ </mediaBag>
+</JClicProject>
+

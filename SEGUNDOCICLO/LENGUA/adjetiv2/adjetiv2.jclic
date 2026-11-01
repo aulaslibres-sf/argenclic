@@ -1,0 +1,2970 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="adjetiv2" version="0.1.3">
+ <settings>
+  <title>Clases de adjetivos</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="6/15/09" />
+  <revision description="Conversión de Clic3 a JClic" date="6/18/09">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Miriam Castillo Castillo" mail="jmcaro@ctcinternet.cl" />
+  <organization name="Escuela Cardenal José María Caro" url="http://www.educacioncoquimbo.cl/establecimientos/EB_Jose_Maria_Caro/" city="Coquimbo" country="Xile" />
+  <language>es</language>
+  <description>
+   <p>Proyecto de actividades sobre los adjetivos en lengua castellana:</p>
+   <p>&lt;ul&gt;</p>
+   <p>&lt;li&gt;adjetivos calificativos</p>
+   <p>&lt;li&gt;adjetivos demostrativos</p>
+   <p>&lt;li&gt;adjetivos posesivos</p>
+   <p>&lt;li&gt;adjetivos numerales</p>
+   <p>&lt;li&gt;adjetivos indefinidos</p>
+   <p>&lt;/ul&gt;</p>
+  </description>
+  <descriptors area-codes="lleng" level-codes="PRI">lengua castellana, gramática</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Proyecto de actividades sobre los adjetivos en lengua castellana:</p>
+    <p>&lt;ul&gt;</p>
+    <p>&lt;li&gt;adjetivos calificativos</p>
+    <p>&lt;li&gt;adjetivos demostrativos</p>
+    <p>&lt;li&gt;adjetivos posesivos</p>
+    <p>&lt;li&gt;adjetivos numerales</p>
+    <p>&lt;li&gt;adjetivos indefinidos</p>
+    <p>&lt;/ul&gt;</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="adjetivo.pac" name="inicio.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="paquetes.puz">
+   <jump action="STOP" id="forward" />
+  </item>
+  <item id="repaso.pac" name="tipadj.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="masadj.ass" />
+  <item name="clasadj.txa" />
+  <item name="clasadj1.txa" />
+  <item name="clasadj2.txa">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="adjposes.pac" name="adjposes.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="posesiv.ass" />
+  <item name="posesiv.puz" />
+  <item name="posesivo.puz" />
+  <item name="apose.ass" />
+  <item name="txadjpos.txa" />
+  <item name="madpos.txa">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="adjnum.pac" name="adjnum.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="adjnum.puz" />
+  <item name="cardord.ass" />
+  <item name="numar.txa">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="adjdemos.pac" name="adjdemos.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="addemos.puz" />
+  <item name="addemos2.puz" />
+  <item name="adjdem.ass" />
+  <item name="demostra.ass" />
+  <item name="demolej.ass" />
+  <item name="txadjdem.txa" />
+  <item name="demord.txa" />
+  <item name="escadem.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="adjcalif.pac" name="inicio.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="adjetiv.ass" />
+  <item name="adjcali.puz" />
+  <item name="adjcali2.puz" />
+  <item name="adjcol.ass" />
+  <item name="adjcont.ass" />
+  <item name="txadj.txa" />
+  <item name="adjcalif.txa">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="adjindef.pac" name="adjind.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="aindef.puz" />
+  <item name="adjindef.txa" />
+  <item name="adjin.txa">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@puzzles.ExchangePuzzle" name="addemos.puz" code="">
+   <description>
+    <p>Puzzle con un texto</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x000040" background="0xFFFFFF" />
+     </style>
+     <p>Ordena y lee</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x000040" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" cellWidth="150.0" cellHeight="90.0" border="true">
+    <style>
+     <font family="Dialog" size="31" />
+     <color foreground="0xFFFFFF" background="0x000040" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>Los</p>
+    </cell>
+    <cell>
+     <p>adjetivos </p>
+    </cell>
+    <cell>
+     <p>demostrativos</p>
+    </cell>
+    <cell>
+     <p> se emplean </p>
+    </cell>
+    <cell>
+     <p>para </p>
+    </cell>
+    <cell>
+     <p>indicar </p>
+    </cell>
+    <cell>
+     <p>la distancia </p>
+    </cell>
+    <cell>
+     <p>relativa </p>
+    </cell>
+    <cell>
+     <p>entre </p>
+    </cell>
+    <cell>
+     <p>dos </p>
+    </cell>
+    <cell>
+     <p>o más </p>
+    </cell>
+    <cell>
+     <p>personas </p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="addemos2.puz">
+   <description>
+    <p>Puzzle con un texto</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial Black" size="33" bold="true" />
+      <color foreground="0x0000FF" background="0xFFFFFF" />
+     </style>
+     <p>Ordena y lee</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial Black" size="33" bold="true" />
+      <color foreground="0x0000FF" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" cellWidth="210.0" cellHeight="130.0" border="true">
+    <style>
+     <font family="Times New Roman" size="27" bold="true" />
+     <color foreground="0xFFFFFF" background="0x0000FF" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>Los</p>
+    </cell>
+    <cell>
+     <p>adjetivos </p>
+    </cell>
+    <cell>
+     <p>demostrativos</p>
+    </cell>
+    <cell>
+     <p>según </p>
+    </cell>
+    <cell>
+     <p>su género </p>
+    </cell>
+    <cell>
+     <p>y número son:</p>
+    </cell>
+    <cell>
+     <p>Cercanía: </p>
+    </cell>
+    <cell>
+     <p>este- esta- estos-estas.                                   </p>
+    </cell>
+    <cell>
+     <p>Proximidad Media: </p>
+    </cell>
+    <cell>
+     <p>ese-esa-esos-esas                              </p>
+    </cell>
+    <cell>
+     <p>Lejanía:</p>
+    </cell>
+    <cell>
+     <p>aquel-aquella-aquellos-aquellas.</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="adjcali.puz">
+   <description>
+    <p>Puzzle con un texto</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x800080" background="0xFFFFFF" />
+     </style>
+     <p>Ordena este puzzle.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x800080" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="perfec.wav" />
+     <p>¡Perfecto!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="150.0" cellHeight="90.0" border="true">
+    <style>
+     <font family="Times New Roman" size="31" />
+     <color foreground="0xFFFFFF" background="0x800080" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>Los</p>
+    </cell>
+    <cell>
+     <p>adjetivos</p>
+    </cell>
+    <cell>
+     <p>calificativos</p>
+    </cell>
+    <cell>
+     <p>indican</p>
+    </cell>
+    <cell>
+     <p>cualidad</p>
+    </cell>
+    <cell>
+     <p>en</p>
+    </cell>
+    <cell>
+     <p>personas</p>
+    </cell>
+    <cell>
+     <p>animales</p>
+    </cell>
+    <cell>
+     <p>y objetos</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="adjcali2.puz">
+   <description>
+    <p>Puzzle con un texto</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x800080" background="0xFFFFFF" />
+     </style>
+     <p>Ordena este puzzle.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x800080" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="genial.wav" />
+     <p>¡Genial!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="150.0" cellHeight="90.0" border="true">
+    <style>
+     <font family="Times New Roman" size="31" />
+     <color foreground="0xFFFFFF" background="0x800080" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>Los </p>
+    </cell>
+    <cell>
+     <p>adjetivos </p>
+    </cell>
+    <cell>
+     <p>calificativos</p>
+    </cell>
+    <cell>
+     <p>los </p>
+    </cell>
+    <cell>
+     <p>reconocemos</p>
+    </cell>
+    <cell>
+     <p>haciendo</p>
+    </cell>
+    <cell>
+     <p>la pregunta</p>
+    </cell>
+    <cell>
+     <p>¿Cómo es?</p>
+    </cell>
+    <cell>
+     <p>y</p>
+    </cell>
+    <cell>
+     <p>¿Cómo son?</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="adjcalif.txa" code="" autoJump="true" forceOkToAdvance="true">
+   <description>
+    <p>Actividad con progresión limitada a aciertos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Selecciona el adjetivo calificativo adecuado, para completar la oración.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="tepasas.wav" />
+     <p>¡Te pasaste!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC1FFE0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x008080" border="true">
+     <size width="667" height="430" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="15" foreground="0x000000" italic="false" tabWidth="12" bold="false" background="0xFFFFFF" />
+    <style name="target" base="default" background="0xFFFFFF" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">  •  Aquel jóven va vestido muy : </text>
+      <target>
+       <answer>elegante</answer>
+       <optionList>
+        <option>apurado</option>
+        <option>elegante</option>
+        <option>rabioso</option>
+       </optionList>
+       <text>elegante</text>
+      </target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> </text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">  •  La torta de piña te quedó: </text>
+      <target>
+       <answer>deliciosa</answer>
+       <optionList>
+        <option>deliciosa</option>
+        <option>amarilla</option>
+        <option>llena</option>
+       </optionList>
+       <text>deliciosa</text>
+      </target>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">  •  Debido al temporal el mar está: </text>
+      <target>
+       <answer>embravecido</answer>
+       <optionList>
+        <option>quieto</option>
+        <option>nostálgico</option>
+        <option>embravecido</option>
+       </optionList>
+       <text>embravecido</text>
+      </target>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">  • Las flores de mi jardín tienen un aroma: </text>
+      <target>
+       <answer>fragante</answer>
+       <optionList>
+        <option>fragante</option>
+        <option>delicado</option>
+        <option>pesado</option>
+       </optionList>
+       <text>fragante</text>
+      </target>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">  •  El tigre y el león son animales: </text>
+      <target>
+       <answer>salvajes</answer>
+       <optionList>
+        <option>pequeños</option>
+        <option>salvajes</option>
+        <option>amigables</option>
+       </optionList>
+       <text>salvajes</text>
+      </target>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">  •  Un enano es un hombre: </text>
+      <target>
+       <answer>pequeño</answer>
+       <optionList>
+        <option>pequeño</option>
+        <option>audaz</option>
+        <option>valeroso</option>
+       </optionList>
+       <text>pequeño</text>
+      </target>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">  </text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="adjcol.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Según el color, este ó estos adjetivos son</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bién!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x0000A0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Courier New" size="18" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell id="0" image="alcachof.gif" />
+    <cell id="1" image="auto.gif" />
+    <cell id="2" image="banana.gif" />
+    <cell id="3" image="burro.gif" />
+    <cell id="4" image="coche.gif" />
+    <cell id="5" image="fantasma.gif" />
+   </cells>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <font family="Courier New" size="18" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>verdes</p>
+    </cell>
+    <cell>
+     <p>rojo</p>
+    </cell>
+    <cell>
+     <p>amarillos</p>
+    </cell>
+    <cell>
+     <p>café</p>
+    </cell>
+    <cell>
+     <p>negro</p>
+    </cell>
+    <cell>
+     <p>blanco</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>verdes</p>
+    </cell>
+    <cell>
+     <p>rojo</p>
+    </cell>
+    <cell>
+     <p>amarillos</p>
+    </cell>
+    <cell>
+     <p>café</p>
+    </cell>
+    <cell>
+     <p>negro</p>
+    </cell>
+    <cell>
+     <p>blanco</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="adjcont.ass">
+   <description>
+    <p>Actividad de respuesta escrita</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Según su contextura este ó estos adjetivos son</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="perfec.wav" />
+     <p>¡Perfecto!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x8000FF" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="120.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Dialog" size="33" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0" image="lirica.gif" />
+    <cell id="1" image="amigos.gif" />
+    <cell id="2" image="bastona.gif" />
+    <cell id="3" image="bastonan.gif" />
+    <cell id="4" image="botonp.gif" />
+    <cell id="5" image="botong.gif" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="120.0" cellHeight="120.0" border="true" id="answers">
+    <style>
+     <font family="Dialog" size="33" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>gorda</p>
+    </cell>
+    <cell>
+     <p>flacos</p>
+    </cell>
+    <cell>
+     <p>ancho</p>
+    </cell>
+    <cell>
+     <p>angosto</p>
+    </cell>
+    <cell>
+     <p>pequeño</p>
+    </cell>
+    <cell>
+     <p>grande</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="120.0" cellHeight="120.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>gorda</p>
+    </cell>
+    <cell>
+     <p>flacos</p>
+    </cell>
+    <cell>
+     <p>ancho</p>
+    </cell>
+    <cell>
+     <p>angosto</p>
+    </cell>
+    <cell>
+     <p>pequeño</p>
+    </cell>
+    <cell>
+     <p>grande</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="adjdem.ass">
+   <description>
+    <p>Actividad de respuesta escrita</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004040" background="0xFFFFFF" />
+     </style>
+     <p>Escribe un adjetivo demostrativo que indique cercanía.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004040" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bién!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x008080" border="true" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="120.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Times New Roman" size="29" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell id="0" image="hamburg.gif" />
+    <cell id="1" image="pollito.gif" />
+    <cell id="2" image="uslero.gif" />
+    <cell id="3" image="amigos.gif" />
+   </cells>
+   <cells rows="1" cols="4" cellWidth="120.0" cellHeight="120.0" border="true" id="answers">
+    <style>
+     <font family="Times New Roman" size="29" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>esta</p>
+    </cell>
+    <cell>
+     <p>este</p>
+    </cell>
+    <cell>
+     <p>este</p>
+    </cell>
+    <cell>
+     <p>estos</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="4" cellWidth="120.0" cellHeight="120.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>esta</p>
+    </cell>
+    <cell>
+     <p>este</p>
+    </cell>
+    <cell>
+     <p>este</p>
+    </cell>
+    <cell>
+     <p>estos</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="adjdemos.ass" code="">
+   <description>
+    <p>Pantalla de información</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x8000FF" background="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x8000FF" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x8000FF" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="505.0" cellHeight="307.0" border="true">
+    <style>
+     <font family="Dialog" size="29" bold="true" />
+     <color foreground="0xFFFFFF" background="0x8000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>El Adjetivo Demostrativo: Los adjetivos demostrativos se emplean para indicar la distancia relativa entre dos o más personas u objetos. Según su género y número, ellos son: 1.- Cercanía: este- esta- estos-estas.                                               2.- Proximidad Media: ese-esa-esos-esas                                                    3.- Lejanía:aquel-aquella-aquellos-aquellas.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="adjetiv.ass">
+   <description>
+    <p>Pantalla de información</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="676.0" cellHeight="378.0" border="true">
+    <style>
+     <font family="Arial" size="21" />
+     <color foreground="0xFFFFFF" background="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>ADJETIVO CALIFICATIVO: ES AQUEL QUE INDICA UNA CUALIDAD EN PERSONAS, ANIMALES Y OBJETOS. EJEMPLO: CASA HERMOSA, NIÑO PEQUEÑO, PERRO BRAVO. RECONOCEMOS ESTE ADJETIVO HACIENDO LA PREGUNTA ¿CÓMO ES? ¿CÓMO SON?</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.FillInBlanks" name="adjin.txa" code="" autoJump="true">
+   <description>
+    <p>Identificar letras</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Identifica los adjetivos indefinidos. (Ayuda la inicial de la letra)</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="grande.wav" />
+     <p>¡Grandioso!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFE6F2">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x800040" border="true">
+     <size width="464" height="280" />
+    </window>
+   </settings>
+   <checkButton>Corregir el ejercicio</checkButton>
+   <document>
+    <style name="default" family="Arial" size="17" foreground="0x000000" italic="false" tabWidth="12" bold="false" background="0xFFFFFF" />
+    <style name="target" base="default" background="0xFFFFFF" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF"> Quedan  </text>
+      <target>
+       <answer>algunos</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>algunos</text>
+      </target>
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF"> (a) duraznos  en la frutera.</text>
+     </p>
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF"> </text>
+     </p>
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF">En esa bandeja hay </text>
+      <target>
+       <answer>muchos</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text>muchos</text>
+      </target>
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF"> (m)dulces.</text>
+     </p>
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF">Tenemos </text>
+      <target>
+       <answer>demasiados</answer>
+       <response fill="_" length="10" maxLength="10" />
+       <text>demasiados</text>
+      </target>
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF"> (d) niños resfriados.</text>
+     </p>
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF">Llegaron </text>
+      <target>
+       <answer>pocos</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>pocos</text>
+      </target>
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF"> (p) turistas.</text>
+     </p>
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <target>
+       <answer>Bastantes</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <text>Bastantes</text>
+      </target>
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF"> (b) libros hay en la biblioteca.</text>
+     </p>
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" checkSteps="4" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="adjind.ass">
+   <description>
+    <p>Pantalla de información</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC7E2E2">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x408080" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="560.0" cellHeight="432.0" border="true">
+    <style>
+     <font family="Arial" size="21" />
+     <color foreground="0xFFFFFF" background="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>ADJETIVO INDEFINIDO: ES AQUEL QUE NO ENTREGA UNA CANTIDAD EXACTA, SON PALABRAS VAGAS.                                           EJEMPLO: ALGÚN, DEMASIADO, MUCHOS, POCOS, ALGUNOS, ETC.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.Identify" name="adjindef.txa" code="" type="identifyWords">
+   <description>
+    <p>Identificar letras</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Identifica los adjetivos indefinidos.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="grande.wav" />
+     <p>¡Grandioso!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFE6F2">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x800040" border="true">
+     <size width="464" height="280" />
+    </window>
+   </settings>
+   <checkButton>Corregir el ejercicio</checkButton>
+   <document>
+    <style name="default" family="Arial" size="17" foreground="0x000000" italic="false" tabWidth="12" bold="false" background="0xFFFFFF" />
+    <style name="target" base="default" background="0xFFFFFF" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF"> Habían </text>
+      <target>pocos</target>
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF"> alumnos  hoy en clases.</text>
+     </p>
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <target>Bastantes</target>
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF"> gaviotas se ven a la orilla de la playa.</text>
+     </p>
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF">En el estante hay </text>
+      <target>muchos</target>
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF"> libros.</text>
+     </p>
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF"> </text>
+     </p>
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF">Entregaron </text>
+      <target>hartos</target>
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF"> libros, para la biblioteca.</text>
+     </p>
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <target>Algunos</target>
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF"> comerciantes cerraron hoy sus negocios.</text>
+     </p>
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF" />
+    </section>
+   </document>
+  </activity>
+  <activity class="@panels.InformationScreen" name="adjnum.ass">
+   <description>
+    <p>Pantalla de información</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xBBDDFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="adjnum.gif">
+    <style>
+     <font family="Arial" size="21" />
+     <color foreground="0xFFFFFF" background="0x008040" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="adjnum.puz">
+   <description>
+    <p>Puzzle con un texto</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x800080" background="0xFFFFFF" />
+     </style>
+     <p>Ordena y lee</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x800080" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="perfec.wav" />
+     <p>¡Perfecto!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" cellWidth="150.0" cellHeight="90.0" border="true">
+    <style>
+     <font family="Times New Roman" size="31" />
+     <color foreground="0xFFFFFF" background="0x800080" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>El</p>
+    </cell>
+    <cell>
+     <p>adjetivo</p>
+    </cell>
+    <cell>
+     <p>numeral</p>
+    </cell>
+    <cell>
+     <p>indica</p>
+    </cell>
+    <cell>
+     <p>un</p>
+    </cell>
+    <cell>
+     <p>número.</p>
+    </cell>
+    <cell>
+     <p>Este</p>
+    </cell>
+    <cell>
+     <p>puede</p>
+    </cell>
+    <cell>
+     <p>ser</p>
+    </cell>
+    <cell>
+     <p>cardinal</p>
+    </cell>
+    <cell>
+     <p>u</p>
+    </cell>
+    <cell>
+     <p>ordinal.</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="adjposes.ass">
+   <description>
+    <p>Pantalla de información</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xEFDFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x8000FF" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="700.0" cellHeight="300.0" border="true">
+    <style>
+     <font family="Times New Roman" size="27" bold="true" />
+     <color foreground="0xFFFFFF" background="0x8000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>ADJETIVOS POSESIVOS: SON AQUELLOS QUE INDICAN PERTENENCIA, VARÍAN EN GÉNERO Y NÚMERO. LOS RECONOCEMOS HACIENDO LA PREGUNTA ¿DE QUIÉN ES? ¿DE QUIÉNES SON? </p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="aindef.puz">
+   <description>
+    <p>Puzzle con un texto</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x800080" background="0xFFFFFF" />
+     </style>
+     <p>Ordena y luego lee.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x800080" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="genial.wav" />
+     <p>¡Genial!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="4" cellWidth="150.0" cellHeight="90.0" border="true">
+    <style>
+     <font family="Times New Roman" size="31" />
+     <color foreground="0xFFFFFF" background="0x800040" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell>
+     <p>Los</p>
+    </cell>
+    <cell>
+     <p>adjetivos</p>
+    </cell>
+    <cell>
+     <p>indefinidos</p>
+    </cell>
+    <cell>
+     <p>no</p>
+    </cell>
+    <cell>
+     <p>entregan </p>
+    </cell>
+    <cell>
+     <p>una</p>
+    </cell>
+    <cell>
+     <p>cantidad</p>
+    </cell>
+    <cell>
+     <p>exacta,</p>
+    </cell>
+    <cell>
+     <p>sino,</p>
+    </cell>
+    <cell>
+     <p>palabras </p>
+    </cell>
+    <cell>
+     <p>vagas.</p>
+    </cell>
+    <cell>
+     <p>Ejemplo:</p>
+    </cell>
+    <cell>
+     <p>algunos,</p>
+    </cell>
+    <cell>
+     <p>bastantes</p>
+    </cell>
+    <cell>
+     <p>muchos,</p>
+    </cell>
+    <cell>
+     <p>pocos, etc.</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="apose.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color background="0xFF80C0" />
+     </style>
+     <p>Completa las oraciones con el adjetivo posesivo que corresponde.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color background="0xFF80C0" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bién!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFC6E2">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF2B95" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Courier New" size="18" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>.....   hija es responsable</p>
+    </cell>
+    <cell>
+     <p>..... gatito angora</p>
+    </cell>
+    <cell>
+     <p>Esas llaves son .......</p>
+    </cell>
+    <cell>
+     <p>...... alumnos son educados</p>
+    </cell>
+    <cell>
+     <p>.......  compañeros van de paseo</p>
+    </cell>
+    <cell>
+     <p>..... amiga y la ..... son generosas</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Courier New" size="18" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>Nuestra</p>
+    </cell>
+    <cell>
+     <p>Tu</p>
+    </cell>
+    <cell>
+     <p>mías</p>
+    </cell>
+    <cell>
+     <p>Sus</p>
+    </cell>
+    <cell>
+     <p>Nuestros</p>
+    </cell>
+    <cell>
+     <p>Mi  tuya</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>Nuestra hija es responsable</p>
+    </cell>
+    <cell>
+     <p>Tu gatito angora</p>
+    </cell>
+    <cell>
+     <p>Esas llaves son mías</p>
+    </cell>
+    <cell>
+     <p>Sus alumnos son educados</p>
+    </cell>
+    <cell>
+     <p>Nuestros  compañeros van de paseo</p>
+    </cell>
+    <cell>
+     <p>Mi amiga y la tuya son generosas</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="cardord.ass">
+   <description>
+    <p>Actividad de respuesta escrita</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Escribe cardinal u ordinal según corresponda</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bién!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF80FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x800040" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="120.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Times New Roman" size="27" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0">
+     <p>Ella compró 1 kilo de azúcar</p>
+    </cell>
+    <cell id="1">
+     <p>Nosotros llegaremos primero a las competencias</p>
+    </cell>
+    <cell id="2">
+     <p>Mi amiga está en 5º Año</p>
+    </cell>
+    <cell id="3">
+     <p>Me regalaron $2000, para mi cumpleaños</p>
+    </cell>
+    <cell id="4">
+     <p>Estamos en el siglo 21</p>
+    </cell>
+    <cell id="5">
+     <p>Los alumnos de 8º año, saldrán este año</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="120.0" cellHeight="120.0" border="true" id="answers">
+    <style>
+     <font family="Times New Roman" size="27" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>cardinal</p>
+    </cell>
+    <cell>
+     <p>ordinal</p>
+    </cell>
+    <cell>
+     <p>ordinal</p>
+    </cell>
+    <cell>
+     <p>cardinal</p>
+    </cell>
+    <cell>
+     <p>cardinal</p>
+    </cell>
+    <cell>
+     <p>ordinal</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="120.0" cellHeight="120.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>cardinal/1 kilo</p>
+    </cell>
+    <cell>
+     <p>ordinal/ primero</p>
+    </cell>
+    <cell>
+     <p>ordinal/5º</p>
+    </cell>
+    <cell>
+     <p>cardinal/2000</p>
+    </cell>
+    <cell>
+     <p>cardinal/21</p>
+    </cell>
+    <cell>
+     <p>ordinal/8º</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="clasadj.txa" code="" autoJump="true" forceOkToAdvance="true">
+   <description>
+    <p>Actividad con progresión limitada a aciertos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Observa la palabra escrita con mayúscula y escribe el nombre del adjetivo que corresponde.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="grande.wav" />
+     <p>¡Grandioso!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF8040">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x400080" border="true">
+     <size width="410" height="350" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="15" foreground="0x000000" italic="false" tabWidth="12" bold="false" background="0xFFFFFF" />
+    <style name="target" base="default" background="0xFFFFFF" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> ESTA niña juega con sus juguetes. Adj. demostrativo de </text>
+      <target>
+       <answer>cercanía</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>cercanía</text>
+      </target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">.</text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">AQUELLOS  maestros de cocina. Adj. demostrativo de </text>
+      <target>
+       <answer>lejanía</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>lejanía</text>
+      </target>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">ESAS alumnas van al cine. Adj. demostrativo de </text>
+      <target>
+       <answer>proximidad</answer>
+       <response fill="_" length="10" maxLength="10" />
+       <text>proximidad</text>
+      </target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> </text>
+      <target>
+       <answer>media</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>media</text>
+      </target>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">El CUARTO año de medicina. Adj numeral: </text>
+      <target>
+       <answer>ordinal</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>ordinal</text>
+      </target>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">Los SETENTA Y SIETE soldados . Adj. numeral: </text>
+      <target>
+       <answer>cardinal</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>cardinal</text>
+      </target>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="clasadj1.txa" code="" autoJump="true" forceOkToAdvance="true">
+   <description>
+    <p>Actividad con progresión limitada a aciertos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Identifica las clases de adjetivos, seleccionando la alternativa correcta</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="grande.wav" />
+     <p>¡Grandioso!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF8040">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x400080" border="true">
+     <size width="410" height="350" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="15" foreground="0x000000" italic="false" tabWidth="12" bold="false" background="0xFFFFFF" />
+    <style name="target" base="default" background="0xFFFFFF" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> </text>
+      <target>
+       <answer>Aquella</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>Aquella</text>
+      </target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> (demost, fem, sing, lejanía) muñeca y este piano. </text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <target>
+       <answer>Sus</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>Sus</text>
+      </target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> (poses, masc, plural) juguetes están desarmados.</text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">El </text>
+      <target>
+       <answer>tercer</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text>tercer</text>
+      </target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> (3,numeral, ordinal) piso de aquel edificio es amplio.</text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <target>
+       <answer>Esta</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>Esta</text>
+      </target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> (demost, fem, sing, cercanía) niñita está llorando.</text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">Vivimos en el siglo </text>
+      <target>
+       <answer>21</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>21</text>
+      </target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> (numeral cardinal)</text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">El perrito </text>
+      <target>
+       <answer>pequeño</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>pequeño</text>
+      </target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> (Calificativo, sinónimo de chico) juega con su amo</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="clasadj2.txa" code="" autoJump="true" forceOkToAdvance="true">
+   <description>
+    <p>Actividad con progresión limitada a aciertos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Identifica las clases de adjetivos, seleccionando la alternativa correcta</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="tepasas.wav" />
+     <p>¡Te pasaste!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF80C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x400080" border="true">
+     <size width="410" height="350" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="15" foreground="0x000000" italic="false" tabWidth="12" bold="false" background="0xFFFFFF" />
+    <style name="target" base="default" background="0xFFFFFF" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> Las primeras lecciones son fáciles. </text>
+      <target>
+       <answer>adj.numeral, adj calific</answer>
+       <optionList>
+        <option>adj.numeral, adj calific</option>
+        <option>adj. numeral, adj. poses</option>
+        <option>adj. numeral, adj demost</option>
+       </optionList>
+       <text>adj.numeral, adj calific</text>
+      </target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">.</text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">Algunos alumnos del 1º año fueron premiados. </text>
+      <target>
+       <answer>adj. indef, adj. numeral</answer>
+       <optionList>
+        <option>adj. indef, adj. calific</option>
+        <option>adj. indef, adj. numeral</option>
+        <option>adj. indef, adj. poses</option>
+       </optionList>
+       <text>adj. indef, adj. numeral</text>
+      </target>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">Hay muchos cereales exquisitos. </text>
+      <target>
+       <answer>adj. indef, adj. calific</answer>
+       <optionList>
+        <option>adj. indef, adj. numeral</option>
+        <option>adj. indef, adj. demost</option>
+        <option>adj. indef, adj. calific</option>
+       </optionList>
+       <text>adj. indef, adj. calific</text>
+      </target>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">Esos alumnos fueron destacados, por su conducta. </text>
+      <target>
+       <answer>adj. demost, adj. calific</answer>
+       <optionList>
+        <option>adj. demost, adj. calific</option>
+        <option>adj. demost, adj. poses</option>
+        <option>adj. numeral, adj. calific</option>
+       </optionList>
+       <text>adj. demost, adj. calific</text>
+      </target>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">Quiero mucho a nuestros excelentes padres. </text>
+      <target>
+       <answer>adj. poses, adj. calific</answer>
+       <optionList>
+        <option>adj. poses, adj. numeral</option>
+        <option>adj. poses, adj. calific</option>
+        <option>adj. calific, adj. demost</option>
+       </optionList>
+       <text>adj. poses, adj. calific</text>
+      </target>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="demolej.ass">
+   <description>
+    <p>Actividad de respuesta escrita</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004040" background="0xFFFFFF" />
+     </style>
+     <p>Escribe un adjetivo demostrativo que indique lejanía</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004040" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="tepasas.wav" />
+     <p>¡Te pasaste!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x008080" border="true" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="120.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Times New Roman" size="29" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell id="0" image="edifici.gif" />
+    <cell id="1" image="monedas.gif" />
+    <cell id="2" image="llave.gif" />
+    <cell id="3" image="martillo.gif" />
+   </cells>
+   <cells rows="1" cols="4" cellWidth="120.0" cellHeight="120.0" border="true" id="answers">
+    <style>
+     <font family="Times New Roman" size="29" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>aquellos</p>
+    </cell>
+    <cell>
+     <p>aquellas</p>
+    </cell>
+    <cell>
+     <p>aquella</p>
+    </cell>
+    <cell>
+     <p>aquel</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="4" cellWidth="120.0" cellHeight="120.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>aquellos</p>
+    </cell>
+    <cell>
+     <p>aquellas</p>
+    </cell>
+    <cell>
+     <p>aquella</p>
+    </cell>
+    <cell>
+     <p>aquel</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.Order" name="demord.txa" code="" type="orderWords">
+   <description>
+    <p>Ordenar palabras</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Ordena las palabras de las oraciones, luego léelas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="tepasas.wav" />
+     <p>¡Te pasaste!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFD2E9">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF00FF" border="true">
+     <size width="500" height="346" />
+    </window>
+   </settings>
+   <checkButton>Corregir el ejercicio</checkButton>
+   <document>
+    <style name="default" family="Arial" size="15" foreground="0x000000" italic="false" tabWidth="12" bold="false" background="0xFFFFFF" />
+    <style name="target" base="default" background="0xFFFFFF" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> </text>
+      <target>Los</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> </text>
+      <target>adjetivos</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> </text>
+      <target>demostrativos</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> son en total 12, ellos </text>
+      <target>varían</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> en género y </text>
+      <target>número</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">.</text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <target>Adjetivos</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> </text>
+      <target>demostrativos</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> de </text>
+      <target>cercanía</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">: </text>
+      <target>Este</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">, </text>
+      <target>esta</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">, estos, </text>
+      <target>estas</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">.</text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">Adjetivos </text>
+      <target>demostrativos</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> de </text>
+      <target>proximidad</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> </text>
+      <target>media</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">:</text>
+      <target>Ese</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">, esa </text>
+      <target>esos</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">, </text>
+      <target>esas</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">.</text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">Adjetivos </text>
+      <target>demostrativos</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> de </text>
+      <target>lejanía</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">: </text>
+      <target>Aquel</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">, aquella, </text>
+      <target>aquellos</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">, aquellas.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="demostra.ass">
+   <description>
+    <p>Actividad de respuesta escrita</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004040" background="0xFFFFFF" />
+     </style>
+     <p>Escribe un adjetivo demostrativo que indique proximidad media.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004040" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="genial.wav" />
+     <p>¡Genial!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x008080" border="true" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="120.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Times New Roman" size="29" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell id="0" image="senores.gif" />
+    <cell id="1" image="rosa.gif" />
+    <cell id="2" image="letrero.gif" />
+    <cell id="3" image="manos.gif" />
+   </cells>
+   <cells rows="1" cols="4" cellWidth="120.0" cellHeight="120.0" border="true" id="answers">
+    <style>
+     <font family="Times New Roman" size="29" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>esos</p>
+    </cell>
+    <cell>
+     <p>esa</p>
+    </cell>
+    <cell>
+     <p>ese</p>
+    </cell>
+    <cell>
+     <p>esas</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="4" cellWidth="120.0" cellHeight="120.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>esos</p>
+    </cell>
+    <cell>
+     <p>esa</p>
+    </cell>
+    <cell>
+     <p>ese</p>
+    </cell>
+    <cell>
+     <p>esas</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="escadem.ass">
+   <description>
+    <p>Actividad de respuesta escrita</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Escribe los Adjetivos Demostrativos, según género y número.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="grande.wav" />
+     <p>¡Grandioso!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFD7C4">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x800040" border="true" />
+   </settings>
+   <cells rows="4" cols="3" cellWidth="120.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Times New Roman" size="29" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="4" />
+    <cell id="0">
+     <p>Lejanía, género masculino, nº singular</p>
+    </cell>
+    <cell id="1">
+     <p>Cercanía, género femenino, nº plural</p>
+    </cell>
+    <cell id="2">
+     <p>Proximidad media, género femenino, nº plural</p>
+    </cell>
+    <cell id="3">
+     <p>Lejanía, género femenino, nº plural</p>
+    </cell>
+    <cell id="4">
+     <p>Cercanía, género masculino, nº singular</p>
+    </cell>
+    <cell id="5">
+     <p>Proximidad media, género masculino, nº singular</p>
+    </cell>
+    <cell id="6">
+     <p>Lejanía, género masculino, nº plural</p>
+    </cell>
+    <cell id="7">
+     <p>Cercanía. género femenino, nº singular</p>
+    </cell>
+    <cell id="8">
+     <p>Proximidad media, género femenino, nº singular</p>
+    </cell>
+    <cell id="9">
+     <p>Lejanía, género femenino, nº singular</p>
+    </cell>
+    <cell id="10">
+     <p>Cercanía, género masculino, nº plural</p>
+    </cell>
+    <cell id="11">
+     <p>Proximidad media, género masculino, nº plural</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="3" cellWidth="120.0" cellHeight="120.0" border="true" id="answers">
+    <style>
+     <font family="Times New Roman" size="29" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="4" />
+    <cell>
+     <p>aquel</p>
+    </cell>
+    <cell>
+     <p>estas</p>
+    </cell>
+    <cell>
+     <p>esas</p>
+    </cell>
+    <cell>
+     <p>aquellas</p>
+    </cell>
+    <cell>
+     <p>este</p>
+    </cell>
+    <cell>
+     <p>ese</p>
+    </cell>
+    <cell>
+     <p>aquellos</p>
+    </cell>
+    <cell>
+     <p>esta</p>
+    </cell>
+    <cell>
+     <p>esa</p>
+    </cell>
+    <cell>
+     <p>aquella</p>
+    </cell>
+    <cell>
+     <p>estos</p>
+    </cell>
+    <cell>
+     <p>esos</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="3" cellWidth="120.0" cellHeight="120.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="4" />
+    <cell>
+     <p>aquel/ gén. masc. nº sing.</p>
+    </cell>
+    <cell>
+     <p>estas/ gén. fem. nº plur.</p>
+    </cell>
+    <cell>
+     <p>esas/ gén. fem. nº plur.</p>
+    </cell>
+    <cell>
+     <p>aquellos/ gén. fem. nº plur.</p>
+    </cell>
+    <cell>
+     <p>este/ gén. masc. nº sing.</p>
+    </cell>
+    <cell>
+     <p>ese/ gén. masc. nº sing.</p>
+    </cell>
+    <cell>
+     <p>aquellos/ gén. masc. nº plur.</p>
+    </cell>
+    <cell>
+     <p>esta/ gén. fem. nº sing.</p>
+    </cell>
+    <cell>
+     <p>esa/ gén. fem. nº sing.</p>
+    </cell>
+    <cell>
+     <p>aquella/gén. fem. nº sing.</p>
+    </cell>
+    <cell>
+     <p>estos/gén. masc. nº plur.</p>
+    </cell>
+    <cell>
+     <p>esos/ gén. masc. nº plur.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="inicio.ass" code="">
+   <description>
+    <p>Pantalla de información</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Esto que estás viendo es la actividad más simple de todas: una pantalla de información</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="522.0" cellHeight="309.0" border="true">
+    <style>
+     <font family="Arial" size="21" />
+     <color foreground="0xFFFFFF" background="0x800040" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>CLASES DE ADJETIVOS                          PROFESORA:MIRIAM CASTILLO CASTILLO ESCUELA:CARDENAL JOSÉ MARÍA CARO DE COQUIMBO. AÑO:2008   miriamacc@gmail.com </p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.FillInBlanks" name="madpos.txa" code="" autoJump="true" forceOkToAdvance="true">
+   <description>
+    <p>Actividad con progresión limitada a aciertos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x008080" />
+     </style>
+     <p>Completa el texto con las palabras que faltan. ¡Cuidado hay dos palabras que llevan tilde!</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x008080" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="perfec.wav" />
+     <p>¡Perfecto!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00C4C4">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x008080" border="true">
+     <size width="690" height="350" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="15" foreground="0x000000" italic="false" tabWidth="12" bold="false" background="0xFFFFFF" />
+    <style name="target" base="default" background="0xFFFFFF" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">     </text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">La profesora y </text>
+      <target>
+       <answer>sus</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>sus</text>
+      </target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> alumnos van de paseo.</text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <target>
+       <answer>Tu</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>Tu</text>
+      </target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> gatito es parecido al </text>
+      <target>
+       <answer>mío</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>mío</text>
+      </target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">.</text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <target>
+       <answer>Nuestros</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>Nuestros</text>
+      </target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> compañeros del curso ganaron las competencias.</text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <target>
+       <answer>Tu</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>Tu</text>
+      </target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> amiga y la </text>
+      <target>
+       <answer>mía</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>mía</text>
+      </target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> son muy generosas.</text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">Ama a </text>
+      <target>
+       <answer>tu</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>tu</text>
+      </target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> prójimo, como a tí mismo.</text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <target>
+       <answer>Tus</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>Tus</text>
+      </target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> compañeros de curso trajeron </text>
+      <target>
+       <answer>sus</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>sus</text>
+      </target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> guitarras.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="masadj.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Observas las palabras encerradas con rojo y escribe las 2 clases de adjetivos que aparecen.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="genial.wav" />
+     <p>¡Genial!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF8080">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF1A1A" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="288.0" cellHeight="109.0" border="true" id="primary">
+    <style>
+     <font family="Courier New" size="18" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell id="0" image="mgtang.gif" />
+    <cell id="1" image="ehbond.gif" />
+    <cell id="2" image="namgent.gif" />
+    <cell id="3" image="aqchbl.gif" />
+    <cell id="4" image="esmele.gif" />
+    <cell id="5" image="spanta.gif" />
+   </cells>
+   <cells rows="3" cols="2" cellWidth="320.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <font family="Courier New" size="18" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>Posesivo calificativo</p>
+    </cell>
+    <cell>
+     <p>demostrativo calificativo</p>
+    </cell>
+    <cell>
+     <p>Posesivo calificativo</p>
+    </cell>
+    <cell>
+     <p>demostrativo calificativo</p>
+    </cell>
+    <cell>
+     <p>demostrativo calificativo</p>
+    </cell>
+    <cell>
+     <p>Posesivo calificativo</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="288.0" cellHeight="109.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>Posesivo calificativo/mi angora</p>
+    </cell>
+    <cell>
+     <p>demostrativo calificativo/ese bondadoso</p>
+    </cell>
+    <cell>
+     <p>Posesivo calificativo/nuestros gentiles</p>
+    </cell>
+    <cell>
+     <p>demostrativo calificativo/aquellas blancas</p>
+    </cell>
+    <cell>
+     <p>demostrativo calificativo/este elegante</p>
+    </cell>
+    <cell>
+     <p>Posesivo calificativo/su azul</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.Identify" name="numar.txa" code="" type="identifyWords">
+   <description>
+    <p>Actividad con progresión limitada a aciertos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Identifica adjetivos numerales.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="tepasas.wav" />
+     <p>¡Te pasaste!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF8080">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xCC0000" border="true">
+     <size width="600" height="350" />
+    </window>
+   </settings>
+   <checkButton>Avaluació</checkButton>
+   <document>
+    <style name="default" family="Arial" size="15" foreground="0x000000" italic="false" tabWidth="12" bold="false" background="0xFFFFFF" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">María, compró </text>
+      <target>2</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> lechugas, </text>
+      <target>$500</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> de aceitunas, </text>
+      <target>$1000</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> de papas.</text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">Los alumnos de </text>
+      <target>Séptimo</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> año, irán al zoológico.</text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">Reynaldo es el </text>
+      <target>primer</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> alumno de su curso</text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">La tía fue a la librería y gastó </text>
+      <target>$5680</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> en útiles escolares.</text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">Estamos en el  siglo es </text>
+      <target>vigésimo</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> </text>
+      <target>primero</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">.</text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">En el </text>
+      <target>cuarto</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> piso de aquel edificio viven </text>
+      <target>7</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> personas.</text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+    </section>
+   </document>
+  </activity>
+  <activity class="@panels.InformationScreen" name="paquetes.puz" code="">
+   <description>
+    <p>Puzzle con un texto</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell image="pirata.bmp" type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="220.0" cellHeight="90.0" border="true">
+    <style>
+     <font family="Dialog" size="30" bold="true" />
+     <color foreground="0xFFFFFF" background="0x000040" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="adjcalif.pac" />
+     <p>ADJETIVO CALIFICATIVO</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="adjdemos.pac" />
+     <p>ADJETIVO DEMOSTRATIVO</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="adjposes.pac" />
+     <p>ADJETIVO POSESIVO</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="adjnum.pac" />
+     <p>ADJETIVO NUMERAL</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="adjindef.pac" />
+     <p>ADJETIVO INDEFINIDO</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="repaso.pac" />
+     <p>REPASO</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="posesiv.ass">
+   <description>
+    <p>Pantalla de información</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xEFDFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x8000FF" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="700.0" cellHeight="400.0" border="true">
+    <style>
+     <font family="Times New Roman" size="27" bold="true" />
+     <color foreground="0xFFFFFF" background="0x8000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>LOS ADJETIVOS POSESIVOS SON: MI, MÍO, MÍA, MÍOS, MÍAS,TU, TUYO, TUYA,TUYOS, TUYAS, SU, SUYO, SUYA, SUYOS, SUYAS, NUESTRO, NUESTRA, NUESTROS, NUESTRAS, VUESTRO, VUESTRA, VUESTROS , VUESTRAS.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="posesiv.puz">
+   <description>
+    <p>Puzzle con un texto</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Ordena este texto.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="perfec.wav" />
+     <p>¡Perfectol!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" cellWidth="195.0" cellHeight="140.0" border="true">
+    <style>
+     <font family="Times New Roman" size="31" />
+     <color foreground="0xFFFFFF" background="0x0000FF" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>Los adjetivos</p>
+    </cell>
+    <cell>
+     <p>posesivos son:</p>
+    </cell>
+    <cell>
+     <p>mi, mío, mía</p>
+    </cell>
+    <cell>
+     <p>míos, mías,</p>
+    </cell>
+    <cell>
+     <p>tu, tuyo, tuya,</p>
+    </cell>
+    <cell>
+     <p>tuyos, tuyas,</p>
+    </cell>
+    <cell>
+     <p>su, suyo, suya,</p>
+    </cell>
+    <cell>
+     <p>suyos, suyas,</p>
+    </cell>
+    <cell>
+     <p>nuestro, nuestra,</p>
+    </cell>
+    <cell>
+     <p>nuestros, nuestras,</p>
+    </cell>
+    <cell>
+     <p>vuestro, vuestra,</p>
+    </cell>
+    <cell>
+     <p>vuestros y vuestras.</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="posesivo.puz">
+   <description>
+    <p>Puzzle con un texto</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Ordena este texto.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="genial.wav" />
+     <p>¡Genial!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="150.0" cellHeight="90.0" border="true">
+    <style>
+     <font family="Times New Roman" size="31" />
+     <color foreground="0xFFFFFF" background="0x0000FF" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>Los adjetivos</p>
+    </cell>
+    <cell>
+     <p>posesivos</p>
+    </cell>
+    <cell>
+     <p>indican</p>
+    </cell>
+    <cell>
+     <p>pertenencia.</p>
+    </cell>
+    <cell>
+     <p>Los reconocemos</p>
+    </cell>
+    <cell>
+     <p>haciendo</p>
+    </cell>
+    <cell>
+     <p>la pregunta</p>
+    </cell>
+    <cell>
+     <p>¿De quién es?</p>
+    </cell>
+    <cell>
+     <p>¿De quiénes son?</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="tipadj.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Observa la palabra encerrada con rojo y escribe a qué clase de adjetivo pertenece.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bién!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00FFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x0000FF" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="207.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Courier New" size="18" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell id="0" image="estperr.gif" />
+    <cell id="1" image="lcsmia.gif" />
+    <cell id="2" image="bastcom.gif" />
+    <cell id="3" image="milverd.gif" />
+    <cell id="4" image="arbfr.gif" />
+    <cell id="5" image="estlap.gif" />
+   </cells>
+   <cells rows="3" cols="2" cellWidth="240.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <font family="Courier New" size="18" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>demostrativo</p>
+    </cell>
+    <cell>
+     <p>posesivo</p>
+    </cell>
+    <cell>
+     <p>indefinido</p>
+    </cell>
+    <cell>
+     <p> numeral</p>
+    </cell>
+    <cell>
+     <p> calificativo</p>
+    </cell>
+    <cell>
+     <p> demostrativo</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="207.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>Adjetivo demostrativo/este</p>
+    </cell>
+    <cell>
+     <p>Adjetivo posesivo/mía</p>
+    </cell>
+    <cell>
+     <p>Adjetivo indefinido/bastante</p>
+    </cell>
+    <cell>
+     <p>Adjetivo numeral/1500</p>
+    </cell>
+    <cell>
+     <p>Adjetivo calificativo/frondoso</p>
+    </cell>
+    <cell>
+     <p>adjetivo demostrativo/este</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.Identify" name="txadj.txa" code="" type="identifyWords">
+   <description>
+    <p>Identificar letras</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Identifica los adjetivos calificativos.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="grande.wav" />
+     <p>¡Grandioso!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="nuvols.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="464" height="280" />
+    </window>
+   </settings>
+   <checkButton>Corregir el ejercicio</checkButton>
+   <document>
+    <style name="default" family="Arial" size="17" foreground="0x000000" italic="false" tabWidth="12" bold="false" background="0xFFFFFF" />
+    <style name="target" base="default" background="0xFFFFFF" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <cell width="450" height="60" border="true">
+       <style>
+        <color foreground="0xFFFFFF" background="0x008080" inactive="0x000000" alternative="0x000000" />
+       </style>
+       <p>Señala los adjetivos calificativos que aparecen en este texto.</p>
+      </cell>
+     </p>
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF">Dios creó la </text>
+      <target>maravillosa</target>
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF"> naturaleza, con sus </text>
+      <target>hermosos</target>
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF"> paisajes, </text>
+      <target>imnenso</target>
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF"> mar </text>
+      <target>azul</target>
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF">, su </text>
+      <target>blanca</target>
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF"> y </text>
+      <target>nevada</target>
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF"> cordillera, sus </text>
+      <target>alegres</target>
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF"> y </text>
+      <target>juguetones</target>
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF"> animalitos, sus hombres y mujeres </text>
+      <target>orgullosos</target>
+      <text family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF"> de todo lo que poseen.</text>
+     </p>
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="17" foreground="0x000000" bold="false" background="0xFFFFFF" />
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.Identify" name="txadjdem.txa" code="" type="identifyWords">
+   <description>
+    <p>Identificar palabras</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Identifica los adjetivos demostrativos que hay en las oraciones.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bién!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xD9D9FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x8000FF" border="true">
+     <size width="500" height="310" />
+    </window>
+   </settings>
+   <checkButton>Corregir el ejercicio</checkButton>
+   <document>
+    <style name="default" family="Arial" size="15" foreground="0x000000" italic="false" tabWidth="12" bold="false" background="0xFFFFFF" />
+    <style name="target" base="default" background="0xFFFFFF" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <target>Aquel</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> pajarito está en </text>
+      <target>ese</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> nido</text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <target>Esos</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> hombres llevan </text>
+      <target>aquellas</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> herramientas</text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <target>Este</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> alumno de </text>
+      <target>esa</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> escuela es muy respetuoso</text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <target>Aquella</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> mujer confeccionó </text>
+      <target>esas</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> hermosas chalecas</text>
+     </p>
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF" />
+     <p family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF">
+      <target>Esta</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> niñita dibujó </text>
+      <target>ese</target>
+      <text family="Arial" italic="false" size="15" foreground="0x000000" bold="false" background="0xFFFFFF"> lindo paisaje</text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.Identify" name="txadjpos.txa" type="identifyWords">
+   <description>
+    <p>Identificar palabras</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Identifica los adjetivos posesivos que hay en las oraciones.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bién!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xD8EBEB">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x8000FF" border="true">
+     <size width="500" height="310" />
+    </window>
+   </settings>
+   <checkButton>Corregir el ejercicio</checkButton>
+   <document>
+    <style name="target" base="default" target="true" background="0xFFFFFF" foreground="0x0000FF" />
+    <style name="default" family="Arial" tabWidth="12" background="0xFFFFFF" italic="false" size="15" foreground="0x000000" bold="false" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p family="Arial" name="default" background="0xFFFFFF" italic="false" size="15" foreground="0x000000" bold="false">
+      <target>Nuestra</target>
+      <text> madre me regaló para </text>
+      <target>mi</target>
+      <text> cumpleaños una muñeca.</text>
+     </p>
+     <p family="Arial" name="default" background="0xFFFFFF" italic="false" size="15" foreground="0x000000" bold="false" />
+     <p family="Arial" name="default" background="0xFFFFFF" italic="false" size="15" foreground="0x000000" bold="false">
+      <target>Su</target>
+      <text> pantalón está guardado en </text>
+      <target>mi</target>
+      <text> closet.</text>
+     </p>
+     <p family="Arial" name="default" background="0xFFFFFF" italic="false" size="15" foreground="0x000000" bold="false" />
+     <p family="Arial" name="default" background="0xFFFFFF" italic="false" size="15" foreground="0x000000" bold="false">
+      <target>Nuestras</target>
+      <text> compañeras de curso tienen </text>
+      <target>tus</target>
+      <text> diccionarios.</text>
+     </p>
+     <p family="Arial" name="default" background="0xFFFFFF" italic="false" size="15" foreground="0x000000" bold="false" />
+     <p family="Arial" name="default" background="0xFFFFFF" italic="false" size="15" foreground="0x000000" bold="false">
+      <text>La blusa </text>
+      <target>mía</target>
+      <text> se parece a la </text>
+      <target>tuya</target>
+      <text>.</text>
+     </p>
+     <p family="Arial" name="default" background="0xFFFFFF" italic="false" size="15" foreground="0x000000" bold="false" />
+     <p family="Arial" name="default" background="0xFFFFFF" italic="false" size="15" foreground="0x000000" bold="false">
+      <target>Mis</target>
+      <text> pantalones los compré en </text>
+      <target>su</target>
+      <text> tienda.</text>
+     </p>
+     <p family="Arial" name="default" background="0xFFFFFF" italic="false" size="15" foreground="0x000000" bold="false" />
+     <p family="Arial" name="default" background="0xFFFFFF" italic="false" size="15" foreground="0x000000" bold="false">
+      <target>Tu</target>
+      <text> perro regalón, juega con el </text>
+      <target>mío</target>
+      <text>. </text>
+     </p>
+     <p family="Arial" name="default" background="0xFFFFFF" italic="false" size="15" foreground="0x000000" bold="false" />
+    </section>
+   </document>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="pirata.bmp" file="pirata.bmp" />
+  <media name="adjnum.gif" file="adjnum.gif" animated="false" />
+  <media name="alcachof.gif" file="alcachof.gif" animated="false" />
+  <media name="amigos.gif" file="amigos.gif" animated="false" />
+  <media name="aqchbl.gif" file="aqchbl.gif" animated="false" />
+  <media name="arbfr.gif" file="arbfr.gif" animated="false" />
+  <media name="auto.gif" file="auto.gif" animated="false" />
+  <media name="banana.gif" file="banana.gif" animated="false" />
+  <media name="bastcom.gif" file="bastcom.gif" animated="false" />
+  <media name="bastona.gif" file="bastona.gif" animated="false" />
+  <media name="bastonan.gif" file="bastonan.gif" animated="false" />
+  <media name="botong.gif" file="botong.gif" animated="false" />
+  <media name="botonp.gif" file="botonp.gif" animated="false" />
+  <media name="burro.gif" file="burro.gif" animated="false" />
+  <media name="coche.gif" file="coche.gif" animated="false" />
+  <media name="edifici.gif" file="edifici.gif" animated="false" />
+  <media name="ehbond.gif" file="ehbond.gif" animated="false" />
+  <media name="esmele.gif" file="esmele.gif" animated="false" />
+  <media name="estlap.gif" file="estlap.gif" animated="false" />
+  <media name="estperr.gif" file="estperr.gif" animated="false" />
+  <media name="fantasma.gif" file="fantasma.gif" animated="false" />
+  <media name="hamburg.gif" file="hamburg.gif" animated="false" />
+  <media name="lcsmia.gif" file="lcsmia.gif" animated="false" />
+  <media name="letrero.gif" file="letrero.gif" animated="false" />
+  <media name="lirica.gif" file="lirica.gif" animated="false" />
+  <media name="llave.gif" file="llave.gif" animated="false" />
+  <media name="manos.gif" file="manos.gif" animated="false" />
+  <media name="martillo.gif" file="martillo.gif" animated="false" />
+  <media name="mgtang.gif" file="mgtang.gif" animated="false" />
+  <media name="milverd.gif" file="milverd.gif" animated="false" />
+  <media name="monedas.gif" file="monedas.gif" animated="false" />
+  <media name="namgent.gif" file="namgent.gif" animated="false" />
+  <media name="nuvols.gif" file="nuvols.gif" animated="false" />
+  <media name="pollito.gif" file="pollito.gif" animated="false" />
+  <media name="rosa.gif" file="rosa.gif" animated="false" />
+  <media name="senores.gif" file="senores.gif" animated="false" />
+  <media name="spanta.gif" file="spanta.gif" animated="false" />
+  <media name="uslero.gif" file="uslero.gif" animated="false" />
+  <media name="genial.wav" file="genial.wav" />
+  <media name="grande.wav" file="grande.wav" />
+  <media name="muybien.wav" file="muybien.wav" />
+  <media name="perfec.wav" file="perfec.wav" />
+  <media name="tepasas.wav" file="tepasas.wav" />
+ </mediaBag>
+</JClicProject>
+

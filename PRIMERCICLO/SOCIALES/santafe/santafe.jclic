@@ -1,0 +1,1628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="santafe" version="0.1.3">
+ <settings>
+  <title>Sin nombre</title>
+  <revision description="created" date="7/15/09" />
+  <descriptors />
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es" />
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="santafe.pac" name="sfep.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="sfe1.puz" />
+  <item name="sfp1.txa" />
+  <item name="data1.ass" />
+  <item name="provl.ass" />
+  <item name="sfe2.puz" />
+  <item name="fotos8.ass" />
+  <item name="sfsop.sop" />
+  <item name="depto1.puz" />
+  <item name="depto2.puz" />
+  <item name="dept2.ass" />
+  <item name="sfsop2.sop" />
+  <item name="sfe3.puz" />
+  <item name="escu1.ass" />
+  <item name="foto11.ass" />
+  <item name="rel1.txa" />
+  <item name="rel2.txa" />
+  <item name="rel3.txa" />
+  <item name="foto12.ass" />
+  <item name="rel4.txa" />
+  <item name="hidro1.txa" />
+  <item name="hidro2.txa" />
+  <item name="hidro.puz" />
+  <item name="sfe4.puz" />
+  <item name="vac2.txa" />
+  <item name="vac2.puz" />
+  <item name="camp.txa" />
+  <item name="cam2.sop">
+   <jump action="STOP" id="forward" />
+  </item>
+  <item name="ayu1.ass" />
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="ayu1.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" infoCmd="dept2.ass" report="false">
+    <container bgColor="0xF7CE8C">
+     <image name="madep.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xF7CE8C" transparent="true" border="false">
+     <position x="0" y="0" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="100.0" cellHeight="100.0" border="false">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>Para volver aprieta el botón de Información</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@textGrid.WordSearch" name="cam2.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Busca los cultivos que se realizan en Santa Fe</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <image name="campf.gif" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false">
+     <position x="250" y="80" />
+    </window>
+   </settings>
+   <textGrid rows="10" columns="7" cellWidth="52.0" cellHeight="52.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>SOJA*SORGO</row>
+     <row>***LINO*I*</row>
+     <row>TRIGO***R*</row>
+     <row>***O*M**A*</row>
+     <row>***D*A**S*</row>
+     <row>***O*I**O*</row>
+     <row>***N*Z**L*</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">SOJA</clue>
+    <clue id="1">TRIGO</clue>
+    <clue id="2">MAIZ</clue>
+    <clue id="3">ALGODON</clue>
+    <clue id="4">LINO</clue>
+    <clue id="5">GIRASOL</clue>
+    <clue id="6">SORGO</clue>
+   </clues>
+  </activity>
+  <activity class="@text.FillInBlanks" name="camp.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Actividad agropecuaria</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <image name="sfargfc2.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false">
+     <position x="360" y="0" />
+     <size width="400" height="500" />
+    </window>
+   </settings>
+   <document>
+    <style name="target" base="default" foreground="0x0000FF" target="true" background="0xC0C0C0" />
+    <style name="default" italic="false" foreground="0x000000" tabWidth="16" size="17" background="0xFFFFFF" family="Arial" bold="false" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="17" family="Arial" bold="false">
+      <text>	La agricultura inició su expansión cuando el país ingresó en el mercado mundial de cereales a fines del siglo XIX. Además de cereales (trigo, maíz, sorgo) y oleaginosas (lino, girasol, soja), se practica la horticultura y la fruticultura.</text>
+     </p>
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="17" family="Arial" bold="false">
+      <text>	En el norte, más cálido, se cultiva algodón. No obstante, el cultivo que ha tenido la mayor expansión en los últimos años ha sido la soja o soya, debido al auge exportador que ha llevado a la construcción de puertos privados especializados al norte de Rosario. </text>
+     </p>
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="17" family="Arial" bold="false">
+      <text>	La explotación forestal se practica tanto en los bosques de madera dura del norte (los quebrachales), como en los de maderas blandas del sur, utilizados para muebles y envases. También hay áreas con especies de maderas blandas, producto de la repoblación. </text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="data1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Conozcamos algunos datos de Santa Fe</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Muy Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <image name="sff.gif" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false">
+     <position x="280" y="59" />
+    </window>
+   </settings>
+   <cells rows="5" cols="1" cellWidth="250.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>Superficie</p>
+    </cell>
+    <cell>
+     <p>Población</p>
+    </cell>
+    <cell>
+     <p>Densidad</p>
+    </cell>
+    <cell>
+     <p>División Política</p>
+    </cell>
+    <cell>
+     <p>Capital</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="250.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>133.007 km2</p>
+    </cell>
+    <cell>
+     <p>3.000.701millones</p>
+    </cell>
+    <cell>
+     <p>22,60 hab / km2</p>
+    </cell>
+    <cell>
+     <p>19 Departamentos </p>
+    </cell>
+    <cell>
+     <p>Ciudad de Santa Fe</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="dept2.ass" inverse="true">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Como se llama cada departamento  de nuestra provincia</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>¡Son 19!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="8" cols="7" border="false" image="sfdep2.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="7" rows="8" scaleX="7.0" scaleY="8.0">
+     <enclosing>
+      <shape>rectangle:0,0,7,8</shape>
+     </enclosing>
+     <shape>rectangle:2,1,1,1</shape>
+     <shape>rectangle:4,1,1,1</shape>
+     <shape>rectangle:5,1,1,1</shape>
+     <shape>rectangle:3,2,1,1</shape>
+     <shape>rectangle:4,2,1,1</shape>
+     <shape>rectangle:5,2,1,1</shape>
+     <shape>M:2,3|L:2,4|L:2,5|L:3,5|L:3,4|L:3,3|X</shape>
+     <shape>rectangle:3,3,1,1</shape>
+     <shape>rectangle:4,3,1,1</shape>
+     <shape>rectangle:1,4,1,1</shape>
+     <shape>rectangle:3,4,1,1</shape>
+     <shape>rectangle:4,4,1,1</shape>
+     <shape>rectangle:1,5,1,1</shape>
+     <shape>rectangle:2,5,1,1</shape>
+     <shape>rectangle:3,5,1,1</shape>
+     <shape>rectangle:2,6,1,1</shape>
+     <shape>rectangle:3,6,1,1</shape>
+     <shape>rectangle:4,6,1,1</shape>
+     <shape>rectangle:2,7,1,1</shape>
+    </shaper>
+    <ids>15 7 5 17 3 8 9 12 13 16 2 1 18 11 4 6 0 10 14</ids>
+   </cells>
+   <cells rows="19" cols="1" cellWidth="300.0" cellHeight="30.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="19" />
+    <cell>
+     <p>Rosario</p>
+    </cell>
+    <cell>
+     <p>La Capital</p>
+    </cell>
+    <cell>
+     <p>San Jerónimo</p>
+    </cell>
+    <cell>
+     <p>San Justo</p>
+    </cell>
+    <cell>
+     <p>San Lorenzo</p>
+    </cell>
+    <cell>
+     <p>Obligado</p>
+    </cell>
+    <cell>
+     <p>Caseros</p>
+    </cell>
+    <cell>
+     <p>Vera</p>
+    </cell>
+    <cell>
+     <p>San Javier</p>
+    </cell>
+    <cell>
+     <p>Castellanos</p>
+    </cell>
+    <cell>
+     <p>Constitución</p>
+    </cell>
+    <cell>
+     <p>Iriondo</p>
+    </cell>
+    <cell>
+     <p>Las Colonias</p>
+    </cell>
+    <cell>
+     <p>Garay</p>
+    </cell>
+    <cell>
+     <p>General Lopez</p>
+    </cell>
+    <cell>
+     <p>9 de Julio</p>
+    </cell>
+    <cell>
+     <p>San Martín</p>
+    </cell>
+    <cell>
+     <p>San Cristobal</p>
+    </cell>
+    <cell>
+     <p>Belgrano</p>
+    </cell>
+   </cells>
+   <cells rows="8" cols="7" border="false" image="sandep2.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="7" rows="8" scaleX="7.0" scaleY="8.0">
+     <enclosing>
+      <shape>rectangle:0,0,7,8</shape>
+     </enclosing>
+     <shape>rectangle:2,1,1,1</shape>
+     <shape>rectangle:4,1,1,1</shape>
+     <shape>rectangle:5,1,1,1</shape>
+     <shape>rectangle:3,2,1,1</shape>
+     <shape>rectangle:4,2,1,1</shape>
+     <shape>rectangle:5,2,1,1</shape>
+     <shape>M:2,3|L:2,4|L:2,5|L:3,5|L:3,4|L:3,3|X</shape>
+     <shape>rectangle:3,3,1,1</shape>
+     <shape>rectangle:4,3,1,1</shape>
+     <shape>rectangle:1,4,1,1</shape>
+     <shape>rectangle:3,4,1,1</shape>
+     <shape>rectangle:4,4,1,1</shape>
+     <shape>rectangle:1,5,1,1</shape>
+     <shape>rectangle:2,5,1,1</shape>
+     <shape>rectangle:3,5,1,1</shape>
+     <shape>rectangle:2,6,1,1</shape>
+     <shape>rectangle:3,6,1,1</shape>
+     <shape>rectangle:4,6,1,1</shape>
+     <shape>rectangle:2,7,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="depto1.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Arma el rompecabeza y observa la división política de la Provincia</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Santa Fe se divide en 19 departamentos</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="madep.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="depto2.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Ordena los departamentos alfabeticamente</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <image name="madep.gif" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false">
+     <position x="550" y="0" />
+    </window>
+   </settings>
+   <cells rows="19" cols="1" cellWidth="250.0" cellHeight="26.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="19" />
+    <cell>
+     <p>Belgrano</p>
+    </cell>
+    <cell>
+     <p>Caseros</p>
+    </cell>
+    <cell>
+     <p>Castellanos</p>
+    </cell>
+    <cell>
+     <p>Constitución</p>
+    </cell>
+    <cell>
+     <p>Garay</p>
+    </cell>
+    <cell>
+     <p>General Lopez</p>
+    </cell>
+    <cell>
+     <p>Iriondo</p>
+    </cell>
+    <cell>
+     <p>La Capital</p>
+    </cell>
+    <cell>
+     <p>Las Colonias</p>
+    </cell>
+    <cell>
+     <p>Nueve  de Julio</p>
+    </cell>
+    <cell>
+     <p>Obligado</p>
+    </cell>
+    <cell>
+     <p>Rosario</p>
+    </cell>
+    <cell>
+     <p>San Cristobal</p>
+    </cell>
+    <cell>
+     <p>San Javier</p>
+    </cell>
+    <cell>
+     <p>San Jerónimo</p>
+    </cell>
+    <cell>
+     <p>San Justo</p>
+    </cell>
+    <cell>
+     <p>San Lorenzo</p>
+    </cell>
+    <cell>
+     <p>San Martín</p>
+    </cell>
+    <cell>
+     <p>Vera</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="escu1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Conoce las partes del escudo de Santa Fe</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Qué interesante!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="7" cols="1" border="false" image="escudo.gif" id="primary">
+    <style>
+     <font family="Arial" size="12" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <ids>0 1 2 3 4 5 6</ids>
+   </cells>
+   <cells rows="7" cols="1" cellWidth="350.0" cellHeight="71.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell>
+     <p>Lanza</p>
+    </cell>
+    <cell>
+     <p>Flechas</p>
+    </cell>
+    <cell>
+     <p>Moño rojo</p>
+    </cell>
+    <cell>
+     <p>Óvalo</p>
+    </cell>
+    <cell>
+     <p>Estrellas</p>
+    </cell>
+    <cell>
+     <p>Corona de laureles</p>
+    </cell>
+    <cell>
+     <p>Moño celeste y blanco</p>
+    </cell>
+   </cells>
+   <cells rows="7" cols="1" cellWidth="350.0" cellHeight="250.0" border="false" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell>
+     <p>Santa Fe nunca fue derrotada</p>
+    </cell>
+    <cell>
+     <p>Triunfo blanco contra los indios</p>
+    </cell>
+    <cell>
+     <p>Insignia federal</p>
+    </cell>
+    <cell>
+     <p>Azul y blanco</p>
+    </cell>
+    <cell>
+     <p>Una estrella por cada uno de sus 19 departamentos</p>
+    </cell>
+    <cell>
+     <p>Gloria de la provincia en sus luchas</p>
+    </cell>
+    <cell>
+     <p>Glorias de la Patria</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="foto11.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Lee atentamente este texto sobre el relieve de Santa Fe</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="relf.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false">
+     <position x="350" y="0" />
+    </window>
+   </settings>
+   <cells rows="3" cols="1" cellWidth="450.0" cellHeight="166.0" border="false">
+    <style>
+     <font family="Arial" size="14" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>El relieve santafesino es una extensa llanura inclinada en dirección noroeste-sudeste. Se diferencia en sus zonas norte y sur, las que integran las regiones chaqueña y pampeana respectivamente, presentando diversos aspectos: las subregiones del Chaco Oriental y de la Diagonal Fluvial de la Región Chaqueña, y las subregiones de la Pampa del Norte o de la Colonia y de la Pampa Ondulada en la mitad sur y sudeste.</p>
+    </cell>
+    <cell>
+     <p>El Chaco Oriental, conocido también como los Bajos Submeridionales, está caracterizado por la uniformidad de los suelos, en donde la falta de drenaje causa la formación de cañadas, lagunas y zonas anegadizas, en coincidencia con los períodos de mayores lluvias. </p>
+    </cell>
+    <cell>
+     <p>En la diagonal fluvial, en el noroeste provincial, existe un relieve plano con una suave inclinación hacia el sur y el este lo cual condiciona el sentido del escurrimiento de los numerosos arrroyos, cañadas y lagunas que los surcan. Allí se genera una formación arbórea conocida como cuña boscosa.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="foto12.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Lee con atención</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="relf.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false">
+     <position x="350" y="0" />
+    </window>
+   </settings>
+   <cells rows="2" cols="1" cellWidth="450.0" cellHeight="250.0" border="false">
+    <style>
+     <font family="Arial" size="15" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>El relieve de transición en el centro provincial, suavemente ondulado a plano o deprimido en las cercanías de los arroyos y los ríos como el Salado, y en donde se presentan desde bosques bajos hasta amplias sabanas de pastizales y pajonales, marca el nexo con la zona pampeana del sur. La Pampa norte que se abre a partir de aquí es caracterizada por la monótona llanura sólo interrumpida por los ríos, arroyos y suaves lomadas</p>
+    </cell>
+    <cell>
+     <p>Por último la Pampa Ondulada, situada al sudeste del Río Carcarañá, es una franja litoral que se caracteriza por estar a menos de 100 m sobre el nivel del mar; presentando ondulaciones suaves con desniveles inferiores a 5 metros y valles fluviales con barrancas, terrazas y de cursos muy sinuosos. </p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="fotos8.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Principales ciudades de Santa Fe</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="citisf.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="hidro.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Ríos que surcan la provincia</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Este es el río Paraná que baña la costa de Rosario</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="parana.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="hidro1.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Lee atentamente este texto sobre Hidrología (los ríos) de Santa Fe</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <image name="hidrof.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false">
+     <position x="350" y="0" />
+     <size width="535" height="500" />
+    </window>
+   </settings>
+   <document>
+    <style name="target" base="default" foreground="0x0000FF" target="true" background="0xC0C0C0" />
+    <style name="default" italic="false" foreground="0x000000" tabWidth="16" size="14" background="0xFFFFFF" family="Arial" bold="false" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="14" family="Arial" bold="false">
+      <text>	Los ríos que surcan la geografía santafesina pertenecen a la cuenca del Plata y desaguan de manera directa o indirecta en su principal cauce: el Paraná. Este río recorre de norte a sur todo el territorio sirviéndole de límite oriental. Los principales afluentes del Paraná los constituyen el río Salado y el Caracarañá.</text>
+     </p>
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="14" family="Arial" bold="false">
+      <text>    	El Río Salado, luego de recorrer las provincias de Salta, Catamarca, Tucumán y Santiago del Estero, al entrar en Santa Fe recibe numerosos canales y cursos de agua originados en lagunas y cañadas: ríos Calchaquí, arroyos Las Conchas, San Antonio y Bululú, desembocando finalmente en el Río Coronda, brazo del Paraná al sur de la ciudad de Santa Fe. Presenta una creciente estival y una bajante que abarca el resto del año. </text>
+     </p>
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="14" family="Arial" bold="false">
+      <text>   	La cuenca del Río Carcarañá, se extiende parcialmente en una delgada franja transversal del sur santafesino, y sus dos principales afluentes son los ríos Tercero y Cuarto, con el mismo régimen de alimentación pluvial. El canal San Antonio, el arroyo de las Tortugas y la Cañada de Santa Lucía, luego de establecer por más de 150 km., el límite entre Córdoba y Santa Fe, escurren sus aguas en el Río Carcarañá. Este recibe por márgen izquierdo la Cañada de Gómez, recorre caudales y saltos, afloramientos de tosca, se vuelve abarrancando y desagua en el Río Coronda, al sur de Gaboto.</text>
+     </p>
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="14" family="Arial" bold="false">
+      <text>	Además de los dos ríos mencionados, vuelcan sus aguas al Paraná otros cursos hídricos como el río San Javier y los arroyos Saladillo Dulce, Saladillo Amargo, San Lorenzo, Ludueña, Saladillo, Frías, Seco, Pavón y del Medio.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.Order" name="hidro2.txa" type="orderParagraphs">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Ordena este Texto</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <image name="hidrof.gif" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false">
+     <position x="350" y="0" />
+     <size width="550" height="500" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="target" base="default" foreground="0x0000FF" target="true" background="0xC0C0C0" />
+    <style name="default" italic="false" foreground="0x000000" tabWidth="16" size="14" background="0xFFFFFF" family="Arial" bold="false" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="14" family="Arial" bold="false">
+      <target>	Los ríos que surcan la geografía santafesina pertenecen a la cuenca del Plata y desaguan de manera directa o indirecta en su principal cauce: el Paraná. Este río recorre de norte a sur todo el territorio sirviéndole de límite oriental. Los principales afluentes del Paraná los constituyen el río Salado y el Caracarañá.</target>
+     </p>
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="14" family="Arial" bold="false" />
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="14" family="Arial" bold="false">
+      <target>    	El Río Salado, luego de recorrer las provincias de Salta, Catamarca, Tucumán y Santiago del Estero, al entrar en Santa Fe recibe numerosos canales y cursos de agua originados en lagunas y cañadas: ríos Calchaquí, arroyos Las Conchas, San Antonio y Bululú, desembocando finalmente en el Río Coronda, brazo del Paraná al sur de la ciudad de Santa Fe. Presenta una creciente estival y una bajante que abarca el resto del año. </target>
+     </p>
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="14" family="Arial" bold="false" />
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="14" family="Arial" bold="false">
+      <target>   	La cuenca del Río Carcarañá, se extiende parcialmente en una delgada franja transversal del sur santafesino, y sus dos principales afluentes son los ríos Tercero y Cuarto, con el mismo régimen de alimentación pluvial.</target>
+     </p>
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="14" family="Arial" bold="false" />
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="14" family="Arial" bold="false">
+      <target>	El canal San Antonio, el arroyo de las Tortugas y la Cañada de Santa Lucía, luego de establecer por más de 150 km., el límite entre Córdoba y Santa Fe, escurren sus aguas en el Río Carcarañá. Este recibe por márgen izquierdo la Cañada de Gómez, recorre caudales y saltos, afloramientos de tosca, se vuelve abarrancando y desagua en el Río Coronda, al sur de Gaboto</target>
+     </p>
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="14" family="Arial" bold="false" />
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="14" family="Arial" bold="false">
+      <target>	Además de los dos ríos mencionados, vuelcan sus aguas al Paraná otros cursos hídricos como el río San Javier y los arroyos Saladillo Dulce, Saladillo Amargo, San Lorenzo, Ludueña, Saladillo, Frías, Seco, Pavón y del Medio.</target>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="provl.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Como se llama cada provincia limítrofe de Santa Fe</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Son seis</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="8" cols="7" border="false" image="sfarg1a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="7" rows="8" scaleX="7.0" scaleY="8.0">
+     <enclosing>
+      <shape>rectangle:0,0,7,8</shape>
+     </enclosing>
+     <shape>rectangle:4,0,1,1</shape>
+     <shape>rectangle:3,1,1,1</shape>
+     <shape>rectangle:5,1,1,1</shape>
+     <shape>rectangle:1,2,1,1</shape>
+     <shape>rectangle:3,2,1,1</shape>
+     <shape>rectangle:4,2,1,1</shape>
+     <shape>rectangle:5,2,1,1</shape>
+    </shaper>
+    <ids>3 5 2 0 1 0 4</ids>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="83.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Buenos Aires</p>
+    </cell>
+    <cell>
+     <p>Córdoba</p>
+    </cell>
+    <cell>
+     <p>Corrientes</p>
+    </cell>
+    <cell>
+     <p>Chaco</p>
+    </cell>
+    <cell>
+     <p>Entre Ríos</p>
+    </cell>
+    <cell>
+     <p>Santiago del Estero</p>
+    </cell>
+   </cells>
+   <cells rows="8" cols="7" border="false" image="sfarg1b.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="7" rows="8" scaleX="7.0" scaleY="8.0">
+     <enclosing>
+      <shape>rectangle:0,0,7,8</shape>
+     </enclosing>
+     <shape>rectangle:4,0,1,1</shape>
+     <shape>rectangle:3,1,1,1</shape>
+     <shape>rectangle:5,1,1,1</shape>
+     <shape>rectangle:1,2,1,1</shape>
+     <shape>rectangle:3,2,1,1</shape>
+     <shape>rectangle:4,2,1,1</shape>
+     <shape>rectangle:5,2,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="rel1.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Lee y completa</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <image name="relf.gif" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false">
+     <position x="350" y="0" />
+     <size width="500" height="350" />
+    </window>
+   </settings>
+   <document>
+    <style name="target" base="default" foreground="0x0000FF" target="true" background="0xC0C0C0" />
+    <style name="default" italic="false" foreground="0x000000" tabWidth="16" size="17" background="0xFFFFFF" family="Arial" bold="false" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="17" family="Arial" bold="false">
+      <text>El relieve </text>
+      <target>
+       <answer>santafesino</answer>
+       <optionList>
+        <option>de Marte</option>
+        <option>cordobés</option>
+        <option>santafesino</option>
+       </optionList>
+       <text>santafesino</text>
+      </target>
+      <text> es una extensa </text>
+      <target>
+       <answer>llanura</answer>
+       <optionList>
+        <option>valle</option>
+        <option>meseta</option>
+        <option>llanura</option>
+       </optionList>
+       <text>llanura</text>
+      </target>
+      <text> inclinada en dirección noroeste-sudeste. Se diferencia en sus zonas norte y sur, las que integran las regiones </text>
+      <target>
+       <answer>chaqueña</answer>
+       <optionList>
+        <option>misionera</option>
+        <option>chaqueña</option>
+        <option>pampeana</option>
+       </optionList>
+       <text>chaqueña</text>
+      </target>
+      <text> y </text>
+      <target>
+       <answer>pampeana</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>pampeana</text>
+      </target>
+      <text> respectivamente, presentando diversos aspectos: las subregiones del Chaco Oriental y de la Diagonal Fluvial de la Región Chaqueña, y las subregiones de la Pampa del Norte o de la Colonia y de la Pampa Ondulada en la mitad sur y sudeste. </text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.Order" name="rel2.txa" type="orderWords" amongParagraphs="true">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Algunas palabras están desordenadas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <image name="relf.gif" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false">
+     <position x="350" y="0" />
+     <size width="500" height="350" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="target" base="default" foreground="0x0000FF" target="true" background="0xC0C0C0" />
+    <style name="default" italic="false" foreground="0x000000" tabWidth="16" size="17" background="0xFFFFFF" family="Arial" bold="false" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="17" family="Arial" bold="false">
+      <text>El </text>
+      <target>relieve</target>
+      <text> santafesino es una extensa </text>
+      <target>llanura</target>
+      <text> inclinada en dirección noroeste-sudeste. Se diferencia en sus </text>
+      <target>zonas</target>
+      <text> norte y sur, las que integran las regiones </text>
+      <target>chaqueña</target>
+      <text> y pampeana respectivamente, presentando diversos aspectos: las </text>
+      <target>subregiones</target>
+      <text> del Chaco Oriental y de la Diagonal Fluvial de la Región Chaqueña, y las subregiones de la Pampa del Norte o de la Colonia y de la Pampa Ondulada en la mitad sur y sudeste. </text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="rel3.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Faltan algunas palabras </p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <image name="relf.gif" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false">
+     <position x="350" y="0" />
+     <size width="500" height="350" />
+    </window>
+   </settings>
+   <document>
+    <style name="target" base="default" foreground="0x0000FF" target="true" background="0xC0C0C0" />
+    <style name="default" italic="false" foreground="0x000000" tabWidth="16" size="17" background="0xFFFFFF" family="Arial" bold="false" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="17" family="Arial" bold="false">
+      <text>El </text>
+      <target>
+       <answer>Chaco Oriental</answer>
+       <response fill="_" length="14" maxLength="14" />
+       <text>Chaco Oriental</text>
+      </target>
+      <text>, conocido también como los Bajos Submeridionales, está caracterizado por la </text>
+      <target>
+       <answer>uniformidad</answer>
+       <optionList>
+        <option>desigualdad</option>
+        <option>uniformidad</option>
+        <option>fertilidad</option>
+       </optionList>
+       <text>uniformidad</text>
+      </target>
+      <text> de los suelos, en donde la falta de </text>
+      <target>
+       <answer>drenaje</answer>
+       <optionList>
+        <option>drenaje</option>
+        <option>regado</option>
+        <option>paisaje</option>
+       </optionList>
+       <text>drenaje</text>
+      </target>
+      <text> causa la formación de cañadas, lagunas y zonas anegadizas, en coincidencia con los períodos de mayores </text>
+      <target>
+       <answer>precipitaciones</answer>
+       <optionList>
+        <option>sequias</option>
+        <option>inundaciones</option>
+        <option>precipitaciones</option>
+       </optionList>
+       <text>precipitaciones</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="17" family="Arial" bold="false">
+      <text>En la diagonal fluvial, en el noroeste </text>
+      <target>
+       <answer>provincial</answer>
+       <optionList>
+        <option>nacional</option>
+        <option>provincial</option>
+        <option>municipal</option>
+       </optionList>
+       <text>provincial</text>
+      </target>
+      <text>, existe un </text>
+      <target>
+       <answer>relieve</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>relieve</text>
+      </target>
+      <text> plano con una suave inclinación hacia el sur y el este lo cual condiciona el sentido del escurrimiento de los numerosos arrroyos, cañadas y lagunas que los </text>
+      <target>
+       <answer>surcan</answer>
+       <optionList>
+        <option>cansan</option>
+        <option>surcan</option>
+        <option>bañan</option>
+       </optionList>
+       <text>surcan</text>
+      </target>
+      <text>. Allí se genera una formación </text>
+      <target>
+       <answer>arbórea</answer>
+       <optionList>
+        <option>vegetal</option>
+        <option>arbórea</option>
+       </optionList>
+       <text>arbórea</text>
+      </target>
+      <text> conocida como cuña boscosa. </text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.Order" name="rel4.txa" type="orderParagraphs">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Ordena los párrafos del texto</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Muy Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <image name="relf.gif" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false">
+     <position x="350" y="0" />
+     <size width="500" height="500" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="target" base="default" foreground="0x0000FF" target="true" background="0xC0C0C0" />
+    <style name="default" italic="false" foreground="0x000000" tabWidth="16" size="17" background="0xFFFFFF" family="Arial" bold="false" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="17" family="Arial" bold="false">
+      <target>	El relieve de transición en el centro provincial, suavemente ondulado a plano o deprimido en las cercanías de los arroyos y los ríos como el Salado, y en donde se presentan desde bosques bajos hasta amplias sábanas de pastizales y pajonales, marca el nexo con la zona pampeana del sur. </target>
+     </p>
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="17" family="Arial" bold="false" />
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="17" family="Arial" bold="false">
+      <target>	La Pampa norte que se abre a partir de aquí es caracterizada por la monótona llanura sólo interrumpida por los ríos, arroyos y suaves lomadas.</target>
+     </p>
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="17" family="Arial" bold="false" />
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="17" family="Arial" bold="false">
+      <target>	Por último la Pampa Ondulada, situada al sudeste del Río Carcarañá, es una franja litoral que topográficamente se caracteriza por estar a menos de 100 m sobre el nivel del mar.</target>
+     </p>
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="17" family="Arial" bold="false" />
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="17" family="Arial" bold="false">
+      <target>	Presentando ondulaciones suaves con desniveles inferiores a 5 metros y valles fluviales con barrancas, terrazas y de cursos muy sinuosos. </target>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="sfe1.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Arma el mapa y observa</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Santa Fe es una Provincia de Argentina</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="3" cols="3" border="true" image="sfarg1b.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="sfe2.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Ordena el nombre de las provincias alfabeticamente </p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <image name="sfarg1b.gif" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="140.0" cellHeight="100.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>Buenos Aires</p>
+    </cell>
+    <cell>
+     <p>Córdoba</p>
+    </cell>
+    <cell>
+     <p>Corrientes</p>
+    </cell>
+    <cell>
+     <p>Chaco</p>
+    </cell>
+    <cell>
+     <p>Entre Ríos</p>
+    </cell>
+    <cell>
+     <p>Santiago del Estero</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="sfe3.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Arma el rompecabeza</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Es el escudo de Santa FE</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="3" cols="3" border="true" image="escudo.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="sfe4.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>En Santa Fe se cria ganado vacuno</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Cuántas vacas, no.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="3" cols="3" border="true" image="vacas.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="sfep.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0x3333FF" background="0xFFFFFF" shadow="0xCCFFFF" />
+     </style>
+     <p>www.argenclic.org.ar</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="sfearg2.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="10.0" cellHeight="10.0" border="false">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+   </cells>
+  </activity>
+  <activity class="@text.FillInBlanks" name="sfp1.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Vamos a aprender más cosas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <image name="sfargf2.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false">
+     <position x="500" y="150" />
+     <size width="300" height="300" />
+    </window>
+   </settings>
+   <document>
+    <style name="target" base="default" foreground="0x0000FF" target="true" background="0xC0C0C0" />
+    <style name="default" italic="false" foreground="0x000000" tabWidth="16" size="18" background="0xFFFFFF" family="Arial" bold="false" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="18" family="Arial" bold="false">
+      <text>Santa Fe, provincia de la República Argentina que limita con las provincias de Corrientes y Entre Ríos por el este, de las cuales está separada por el río Paraná, con la provincia del Chaco por el norte, las de Santiago del Estero y Córdoba por el oeste, y la de Buenos Aires por el sur. </text>
+     </p>
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="18" family="Arial" bold="false" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="sfsop.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Encuentra el nombre de 8 ciudades de la Provincia</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <textGrid rows="12" columns="7" cellWidth="52.0" cellHeight="52.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>RECONQUISTA*</row>
+     <row>O*A********R</row>
+     <row>SESPERANZA*U</row>
+     <row>A*I********F</row>
+     <row>R*L*RAFAELAI</row>
+     <row>I*D**VERA**N</row>
+     <row>O*ADNOROC**O</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">ROSARIO</clue>
+    <clue id="1">RAFAELA</clue>
+    <clue id="2">CASILDA</clue>
+    <clue id="3">CORONDA</clue>
+    <clue id="4">RECONQUISTA</clue>
+    <clue id="5">VERA</clue>
+    <clue id="6">RUFINO</clue>
+    <clue id="7">ESPERANZA</clue>
+   </clues>
+   <cells rows="2" cols="4" border="true" image="colgan1.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="sfsop2.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Encuentra los 19 departamentos de la Provincia</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <textGrid rows="21" columns="10" cellWidth="35.0" cellHeight="35.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>R*LACAPITAL*SANMARTÍN</row>
+     <row>OBLIGADO***GARAY****C</row>
+     <row>SANLORENZO**N*******A</row>
+     <row>A*LOPEZ**9DEJULIO***S</row>
+     <row>RSANJERÓNIMOU*******E</row>
+     <row>IRIONDO*****SANJAVIER</row>
+     <row>O****SANCRISTOBAL***O</row>
+     <row>**CONSTITUCION******S</row>
+     <row>CASTELLANOS*BELGRANO*</row>
+     <row>VERA**LASCOLONIAS****</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">ROSARIO</clue>
+    <clue id="1">LACAPITAL</clue>
+    <clue id="2">SANJERÓNIMO</clue>
+    <clue id="3">SANJUSTO</clue>
+    <clue id="4">SANLORENZO</clue>
+    <clue id="5">OBLIGADO</clue>
+    <clue id="6">CASEROS</clue>
+    <clue id="7">VERA</clue>
+    <clue id="8">SANJAVIER</clue>
+    <clue id="9">CASTELLANOS</clue>
+    <clue id="10">CONSTITUCION</clue>
+    <clue id="11">IRIONDO</clue>
+    <clue id="12">LASCOLONIAS</clue>
+    <clue id="13">GARAY</clue>
+    <clue id="14">LOPEZ</clue>
+    <clue id="15">9DEJULIO</clue>
+    <clue id="16">SANMARTÍN</clue>
+    <clue id="17">SANCRISTOBAL</clue>
+    <clue id="18">BELGRANO</clue>
+   </clues>
+   <cells rows="6" cols="3" border="false" image="madep.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="6" />
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="vac2.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Arma la frase</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Muy Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <image name="vacas.gif" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false">
+     <position x="0" y="600" />
+    </window>
+   </settings>
+   <cells rows="1" cols="9" cellWidth="272.0" cellHeight="150.0" border="true">
+    <style>
+     <font family="Arial" size="18" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell>
+     <p>En</p>
+    </cell>
+    <cell>
+     <p>la</p>
+    </cell>
+    <cell>
+     <p>provincia</p>
+    </cell>
+    <cell>
+     <p>de</p>
+    </cell>
+    <cell>
+     <p>Santa Fe</p>
+    </cell>
+    <cell>
+     <p>se</p>
+    </cell>
+    <cell>
+     <p>cria</p>
+    </cell>
+    <cell>
+     <p>ganado</p>
+    </cell>
+    <cell>
+     <p>vacuno.</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="vac2.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <image name="sfargfv2.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false">
+     <position x="490" y="0" />
+     <size width="350" height="300" />
+    </window>
+   </settings>
+   <document>
+    <style name="target" base="default" foreground="0x0000FF" target="true" background="0xC0C0C0" />
+    <style name="default" italic="false" foreground="0x000000" tabWidth="16" size="18" background="0xFFFFFF" family="Arial" bold="false" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p italic="false" name="default" foreground="0x000000" background="0xFFFFFF" size="18" family="Arial" bold="false">
+      <text>La provincia de Santa Fe ocupa, junto con la de Buenos Aires y Córdoba, los tres primeros lugares en el conjunto de la actividad ganadera nacional. La explotación de ganado vacuno es el rubro más importante, sobre todo la de tipo mixto (cría y engorde), destinada a la producción de carne y leche; de hecho, esta región forma parte de la cuenca lechera más importante del país.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="campf.gif" file="campf.gif" animated="false" />
+  <media name="citisf.gif" file="citisf.gif" animated="false" />
+  <media name="colgan1.gif" file="colgan1.gif" animated="false" />
+  <media name="escudo.gif" file="escudo.gif" animated="false" />
+  <media name="hidrof.gif" file="hidrof.gif" animated="false" />
+  <media name="madep.gif" file="madep.gif" animated="false" />
+  <media name="parana.gif" file="parana.gif" animated="false" />
+  <media name="relf.gif" file="relf.gif" animated="false" />
+  <media name="sandep2.gif" file="sandep2.gif" animated="false" />
+  <media name="sfarg1a.gif" file="sfarg1a.gif" animated="false" />
+  <media name="sfarg1b.gif" file="sfarg1b.gif" animated="false" />
+  <media name="sfargf2.gif" file="sfargf2.gif" animated="false" />
+  <media name="sfargfc2.gif" file="sfargfc2.gif" animated="false" />
+  <media name="sfargfv2.gif" file="sfargfv2.gif" animated="false" />
+  <media name="sfdep2.gif" file="sfdep2.gif" animated="false" />
+  <media name="sfearg2.gif" file="sfearg2.gif" animated="false" />
+  <media name="sff.gif" file="sff.gif" animated="false" />
+  <media name="vacas.gif" file="vacas.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

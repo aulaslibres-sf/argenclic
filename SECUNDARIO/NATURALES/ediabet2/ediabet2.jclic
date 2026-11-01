@@ -1,0 +1,1606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="diabets2" version="0.1.3">
+ <settings>
+  <title>La diabetes tipo I: Complicaciones agudas, Insulina, Ejercicio Físico</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="1/7/02" />
+  <revision description="Conversión de Clic3 a JClic" date="5/28/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Eugènia Abadal" mail="eabadal@campus.uoc.es" />
+  <author name="Inmaculada Estela Prat" mail="iestela@pie.xtec.es" />
+  <author name="Antònia M. Gorgas Bargay" mail="agorgas@pie.xtec.es" />
+  <organization name="UEH Hospital S. Joan de Déu del Hosp. Gral. de Manresa" mail="a8020280@centres.xtec.es" url="http://www.xtec.es/centres/a8020280" city="Manresa" state="Catalunya" />
+  <language>es</language>
+  <description>
+   <p>En este segundo paquete de actividades sobre la Diabetes se dan pautas para conocer las complicaciones agudas de esta enfermedad y saber actuar ante ellas, los diferentes tipos de insulina, y valorar la importancia del ejercicio físico como control de la glucemia.&lt;P&gt;</p>
+   <p>Va dirigido a niños y jóvenes que sufren diabetes.</p>
+  </description>
+  <descriptors area-codes="exp" level="Primaria, Secundaria">salud</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>En este segundo paquete de actividades sobre la Diabetes se dan pautas para conocer las complicaciones agudas de esta enfermedad y saber actuar ante ellas, los diferentes tipos de insulina, y valorar la importancia del ejercicio físico como control de la glucemia.&lt;P&gt;</p>
+    <p>Va dirigido a niños y jóvenes que sufren diabetes.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="diabets2.pac" name="portada.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="tipusdia.ass" />
+  <item name="difdiabt.ass" />
+  <item name="paraules.txa" />
+  <item name="paraules.ass" />
+  <item name="complica.ass" />
+  <item name="hiposopa.sop" />
+  <item name="hipoglu.ass" />
+  <item name="alihipog.ass" />
+  <item name="alihipo2.ass" />
+  <item name="glucago.ass" />
+  <item name="glucago2.puz" />
+  <item name="puzzlegl.puz" />
+  <item name="hiperglc.ass" />
+  <item name="altbaix.ass" />
+  <item name="cetosi.ass" />
+  <item name="autoctrl.txa" />
+  <item name="ordena.txa" />
+  <item name="zonespun.ass" />
+  <item name="puzzones.puz" />
+  <item name="tipusins.ass" />
+  <item name="factorsg.ass" />
+  <item name="consells.ass" />
+  <item name="benefici.txa" />
+  <item name="glucemia.ass" />
+  <item name="esport.txa">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.ComplexAssociation" name="alihipo2.ass">
+   <description>
+    <p>Veure quins aliments s'han de prendre, en una segona fase, per a no repetir una hipoglucèmia.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Una vez recuperado de una HIPOGLUCEMIA, ¿ qué tomarías - a los 10 o 15 minutos - para que no se repita ?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡ Muy bien, así lo asegurarás !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFCA23F">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFBD604" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="220.0" cellHeight="187.0" border="true" id="primary">
+    <style>
+     <color background="0x00B058" inactive="0xFCA23F" alternative="0xFCA23F" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0" image="pa3.jpg" />
+    <cell id="0" image="gotllet2.jpg" />
+    <cell id="0" image="torrades.jpg" />
+    <cell id="1" image="suctaron.jpg" />
+    <cell id="1" image="caramels.jpg" />
+    <cell id="1" image="poma.jpg" />
+   </cells>
+   <cells rows="2" cols="1" cellWidth="135.0" cellHeight="135.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFC082" inactive="0xFDB757" alternative="0xFDB757" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>SI</p>
+    </cell>
+    <cell>
+     <p>NO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="alihipog.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¿Cuáles de estos alimentos tomarías para corregir, de forma inmediata, una HIPOGLUCEMIA ?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡ Muy bien !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x9FFF9F">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00C600" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="250.0" cellHeight="250.0" border="true" id="primary">
+    <style>
+     <color foreground="0xFFFFFF" background="0x0098D9" inactive="0x0080C0" alternative="0x0080C0" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="1" image="suctaron.jpg" />
+    <cell id="1" image="platafru.jpg" />
+    <cell id="1" image="sugus4.jpg" />
+    <cell id="1" image="sucres3.jpg" />
+    <cell id="0" image="gotllet2.jpg" />
+    <cell id="0" image="entrepa2.jpg" />
+    <cell id="0" image="embotits.jpg" />
+    <cell id="0" image="croissan.jpg" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="altbaix.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Relaciona los síntomas de la primera fila con el nivell - alto o bajo - de azúcar.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡ Qué bien lo sabes !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x8EE4F0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00A2A2" border="true" />
+   </settings>
+   <cells rows="1" cols="7" cellWidth="400.0" cellHeight="400.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="40" bold="true" />
+     <color foreground="0x008080" background="0xFFFFCA" inactive="0xFFFFC4" alternative="0xFFFFC4" />
+    </style>
+    <shaper class="@Rectangular" cols="7" rows="1" />
+    <cell>
+     <p>POLIDIPSIA</p>
+    </cell>
+    <cell>
+     <p>POLIURIA</p>
+    </cell>
+    <cell>
+     <p>SUDOR</p>
+    </cell>
+    <cell>
+     <p>IRRITABILIDAD</p>
+    </cell>
+    <cell>
+     <p>GLUCOSURIA Y CETONURIA</p>
+    </cell>
+    <cell>
+     <p>PALPITACIONES</p>
+    </cell>
+    <cell>
+     <p>TEMBLOR</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="7" cellWidth="400.0" cellHeight="400.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" inactive="0x87EFFE" alternative="0x87EFFE" />
+    </style>
+    <shaper class="@Rectangular" cols="7" rows="1" />
+    <cell>
+     <p>ALTO</p>
+    </cell>
+    <cell>
+     <p>ALTO</p>
+    </cell>
+    <cell>
+     <p>BAJO</p>
+    </cell>
+    <cell>
+     <p>BAJO</p>
+    </cell>
+    <cell>
+     <p>ALTO</p>
+    </cell>
+    <cell>
+     <p>BAJO</p>
+    </cell>
+    <cell>
+     <p>BAJO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="autoctrl.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Llena de contenido los diferentes espacios.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡ Lo has hecho muy bien !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x45C0B1">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" italic="false" bold="false" family="Arial" foreground="0x000000" background="0xF4DF88" size="17" tabWidth="16" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <text>Para mirar </text>
+      <target>
+       <answer>la acetona</answer>
+       <optionList>
+        <option>la acetona</option>
+        <option>la glucemia</option>
+        <option>la insulina</option>
+       </optionList>
+       <text>la acetona</text>
+      </target>
+      <text> en la orina se utilizan tiras reactivas.</text>
+     </p>
+     <p />
+     <p>
+      <text>Es necesario controlar la acetona cuando </text>
+      <target>
+       <answer>la glucemia</answer>
+       <optionList>
+        <option>la acetona</option>
+        <option>la glucemia</option>
+        <option>el reflectómetro</option>
+       </optionList>
+       <text>la glucemia</text>
+      </target>
+      <text> es superior a 300 mg/dl.</text>
+     </p>
+     <p>
+      <text />
+     </p>
+     <p>
+      <text>Para mirar los niveles de glucosa en la sangre se utiliza un aparato lamado </text>
+      <target>
+       <answer>reflectómetro</answer>
+       <optionList>
+        <option>reflectómetro</option>
+        <option>termómetro</option>
+        <option>tira reactiva</option>
+       </optionList>
+       <text>reflectómetro</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <target>
+       <answer>El autoanálisis</answer>
+       <optionList>
+        <option>La televisión</option>
+        <option>El autoanálisis</option>
+        <option>La temperatura</option>
+       </optionList>
+       <text>El autoanálisis</text>
+      </target>
+      <text> nos dará la información necesaria para modificar las dosis de insulina.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="benefici.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>¡ Fíjate bien !  el EJERCICIO FÍSICO es MUY NECESARIO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>¡ Cuídate mucho, te lo mereces !</p>
+    </cell>
+   </messages>
+   <settings margin="8" infoCmd="write.exe compte.txt" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xB7E8FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="550" height="410" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" italic="false" bold="false" family="Arial" foreground="0x000000" background="0xFFFF80" size="17" tabWidth="16" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xFFFF80" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <cell hAlign="left" width="450" height="75" border="true">
+       <style shadow="true">
+        <font family="Arial" size="30" bold="true" />
+        <color foreground="0xFFFFFF" background="0x3939FF" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+       </style>
+       <p>Llena los espacios con estas palabras:</p>
+       <p>forma física - peso - corazón - insulina - diabetes .</p>
+      </cell>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>- Mejora el control de la </text>
+      <target>
+       <answer>diabetes</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>diabetes</text>
+      </target>
+      <text> . </text>
+     </p>
+     <p />
+     <p>
+      <text>- Si se practica de forma regular, provoca una disminución de la dosis de  </text>
+      <target>
+       <answer>insulina</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>insulina</text>
+      </target>
+      <text> .</text>
+     </p>
+     <p />
+     <p>
+      <text>- Favorece la pérdida de </text>
+      <target>
+       <answer>peso</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>peso</text>
+      </target>
+      <text> .</text>
+     </p>
+     <p />
+     <p>
+      <text>- Reduce la aparición de enfermedades del </text>
+      <target>
+       <answer>corazón</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>corazón</text>
+      </target>
+      <text> y de la circulación .</text>
+     </p>
+     <p />
+     <p>
+      <text>- Mejora la </text>
+      <target>
+       <answer>forma física</answer>
+       <response fill="_" length="12" maxLength="12" />
+       <text>forma física</text>
+      </target>
+      <text> .</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="cetosi.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="ecetosis.wav" />
+     <p>¿ Qué es la CETOSIS ?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x11B1FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="600.0" cellHeight="300.0" border="true">
+    <style shadow="true">
+     <font family="Comic Sans MS" size="36" />
+     <color background="0xAAE3FF" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>La CETOSIS se puede producir cuando el nivel de glucosa en la sangre es superior a 300 y aparece acetona en la orina. Esto produce mareo, vómitos y dolor abdominal. El aliento huele a manzanas maduras.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="complica.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Fíjate bien qué complicaciones agudas puede tener la Diabetes Tipo I </p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡ Muy bien !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x00B3B3">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x006F6F" border="true" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="170.0" cellHeight="170.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="24" bold="true" />
+     <color background="0xFDCC91" inactive="0x408080" alternative="0x408080" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>HIPERGLUCEMIA</p>
+    </cell>
+    <cell>
+     <p>HIPOGLUCEMIA</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="170.0" cellHeight="170.0" border="true" id="secondary">
+    <style>
+     <color background="0xFAE89E" inactive="0x008080" alternative="0x008080" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>Aumento de la glucosa en la sangre superior a 300.</p>
+    </cell>
+    <cell>
+     <p>Disminución de la glucosa en la sangre inferior a 60.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="consells.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡ Es necesario que siempre recuerdes  estos consejos !</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡ Los has de tener presentes !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="fons2.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x02D57B" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="225.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color foreground="0x000080" background="0xD0FFD0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>Antes, durante y después del ejercicio ...</p>
+    </cell>
+    <cell>
+     <p>Cuando la glucemia es inferior a 100 ...</p>
+    </cell>
+    <cell>
+     <p>Cuando una región muscular ha de ser expuesta a una actividad física importante ...</p>
+    </cell>
+    <cell>
+     <p>Cuando hay hiperglucemia y acetona ...</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color foreground="0xFFFFFF" background="0x400080" inactive="0x02D57B" alternative="0x02D57B" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>Hacer controles de glucemia capilares</p>
+    </cell>
+    <cell>
+     <p>Es necesario comer antes de hacer ejercicio</p>
+    </cell>
+    <cell>
+     <p>Inyectar la insulina en otra zona</p>
+    </cell>
+    <cell>
+     <p>No realizar ejercicio físico</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="225.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>Antes, durante y después del ejercicio es conveniente hacer controles de glucemia capilares.</p>
+    </cell>
+    <cell>
+     <p>Cuando la glucemia es inferior a 100 es necesario comer antes de hacer ejercicio.</p>
+    </cell>
+    <cell>
+     <p>No inyectarse la insulina en una región muscular que será expuesta a una actividad física importante.</p>
+    </cell>
+    <cell>
+     <p>No realizar ejercicio físico cuando hay hiperglucemia + acetona.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="difdiabt.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Relaciona cada hecho con el Tipo de Diabetes correspondiente</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡ Muy bien !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x2EF5D8">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x008080" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="175.0" cellHeight="150.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0x400040" background="0xFFFFCA" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="0">
+     <p>Edad &lt; 30 años</p>
+    </cell>
+    <cell id="0">
+     <p>Insulino-Dependiente</p>
+    </cell>
+    <cell id="0">
+     <p>Tener mucha sed (Polidipsia)</p>
+    </cell>
+    <cell id="0">
+     <p>Orinar mucho (Poliuria)</p>
+    </cell>
+    <cell id="0">
+     <p>Pérdida de peso</p>
+    </cell>
+    <cell id="1">
+     <p>Edad &gt; 30 años</p>
+    </cell>
+    <cell id="1">
+     <p>No Insulino-Dependiente</p>
+    </cell>
+    <cell id="1">
+     <p>Obesidad</p>
+    </cell>
+    <cell id="1">
+     <p>A veces sin molestias</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0x9EFEF0" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>DIABETES TIPO I</p>
+    </cell>
+    <cell>
+     <p>DIABETES TIPO II</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" cellWidth="175.0" cellHeight="150.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>Edad &lt; de 30 años:  Diabetes I</p>
+    </cell>
+    <cell>
+     <p>Insulino-dependiente:  Diabetes I</p>
+    </cell>
+    <cell>
+     <p>Sed (polidipsia):  Diabetes I</p>
+    </cell>
+    <cell>
+     <p>Orinar mucho (poliuria):  Diabetes I</p>
+    </cell>
+    <cell>
+     <p>Pérdida de peso:  Diabetes I</p>
+    </cell>
+    <cell>
+     <p>Edad &gt; de 30 años  Diabetes II</p>
+    </cell>
+    <cell>
+     <p>No insulino-dependiente:  Diabetes II</p>
+    </cell>
+    <cell>
+     <p>Obesidad:  Diabetes II</p>
+    </cell>
+    <cell>
+     <p>Sin molestias:  Diabetes II</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="esport.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="eesport.wav" />
+     <p>¡ Fíjate bien y recuérdalo ! </p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xA60240">
+     <image name="esport.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <position x="100" y="275" />
+     <size width="550" height="255" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" italic="false" bold="true" family="Arial" foreground="0x400080" background="0x98FCD7" size="17" tabWidth="21" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xC0C0C0" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <text>RECUERDA :</text>
+     </p>
+     <p>
+      <text>La DIETA adecuada, la INSULINA, el AUTOCONTROL y el EJERCICIO FÍSICO </text>
+     </p>
+     <p>
+      <text>son indispensables para regular la diabetes.</text>
+     </p>
+     <p />
+     <p>
+      <text>Las MEDIDAS DE PREVENCIÓN que tendrá</text>
+     </p>
+     <p>
+      <text>que tomar la persona diabética para evitar la hipoglucemia, al hacer ejercicio, se INDIVIDUALIZARAN en cada caso.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="factorsg.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Escoge 3 factores que regulen la GLUCEMIA.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡ Lo tienes claro !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x48A4FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x006CD9" border="true" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="200.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xB0D8FF" inactive="0x006CD9" alternative="0x006CD9" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <p>la dieta</p>
+    </cell>
+    <cell id="0">
+     <p>la insulina</p>
+    </cell>
+    <cell id="0">
+     <p>el ejercicio físico</p>
+    </cell>
+    <cell id="1">
+     <p>el descanso</p>
+    </cell>
+    <cell id="1">
+     <p>el agua</p>
+    </cell>
+    <cell id="1">
+     <p>las manualidades</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>verdadero</p>
+    </cell>
+    <cell>
+     <p>falso</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="glucago.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡ Lo debes tener presente !</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFF00">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="2" cellWidth="300.0" cellHeight="275.0" border="true">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color background="0x4AC5FF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="glucago.jpg" />
+    <cell>
+     <p>En caso de HIPOGLUCEMIA, cuando no se puede tomar nada por la boca y hay PÉRDIDA DE CONCIENCIA, es necesario inyectar GLUCAGÓN </p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="glucago2.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Ordena las letras de esta palabra.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡ Muy bien !</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x4AA5FF">
+     <image name="glucago.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0080C0" border="true" />
+   </settings>
+   <cells rows="1" cols="8" cellWidth="140.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color background="0xFFFF9D" />
+    </style>
+    <shaper class="@Rectangular" cols="8" rows="1" />
+    <cell>
+     <p>G</p>
+    </cell>
+    <cell>
+     <p>L</p>
+    </cell>
+    <cell>
+     <p>U</p>
+    </cell>
+    <cell>
+     <p>C</p>
+    </cell>
+    <cell>
+     <p>A</p>
+    </cell>
+    <cell>
+     <p>G</p>
+    </cell>
+    <cell>
+     <p>O</p>
+    </cell>
+    <cell>
+     <p>N</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="glucemia.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="eglucemi.wav" />
+     <p>Mira el nivel de GLUCEMIA para ver si puedes hacer EJERCICIO </p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡ Recuerda controlar siempre tu nivel de Glucemia antes de hacer ejercicio !</p>
+    </cell>
+   </messages>
+   <settings margin="8" infoCmd="write.exe glucemi1.txt" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="fons3.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x02057D" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFA4" inactive="0xFFFFA4" alternative="0xFFFFA4" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell id="1">
+     <p>GLUCEMIA &lt; (inferior a) 60</p>
+    </cell>
+    <cell id="0">
+     <p>GLUCEMIA entre 100 y 125</p>
+    </cell>
+    <cell id="0">
+     <p>GLUCEMIA &gt; (superior a) 250 (sin acetona)</p>
+    </cell>
+    <cell id="1">
+     <p>GLUCEMIA &gt; (superior a) 250 (+ acetona)</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xBBDDFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>SI</p>
+    </cell>
+    <cell>
+     <p>NO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="hiperglc.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Busca 4 causas que puedan provocar una HIPERGLUCEMIA.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡ Perfecto !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xA8FFD3">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00BF60" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="150.0" cellHeight="180.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x400080" inactive="0xFFFF80" alternative="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0">
+     <p>POCA INSULINA </p>
+    </cell>
+    <cell id="1">
+     <p>DEMASIADA INSULINA </p>
+    </cell>
+    <cell id="0">
+     <p>COMER DULCES</p>
+    </cell>
+    <cell id="1">
+     <p>EL CALOR</p>
+    </cell>
+    <cell id="0">
+     <p>LA FIEBRE</p>
+    </cell>
+    <cell id="1">
+     <p>EJERCICIO FÍSICO</p>
+    </cell>
+    <cell id="0">
+     <p>ESTAR ENFERMO</p>
+    </cell>
+    <cell id="1">
+     <p>ESTAR CONECTADO A INTERNET MUCHO RATO</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="200.0" cellHeight="100.0" border="true" id="secondary">
+    <style shadow="true">
+     <font family="Arial" size="29" bold="true" />
+     <color foreground="0xFFFFFF" background="0xA8A8FF" shadow="0x400080" inactive="0x400080" alternative="0x400080" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>HIPERGLUCEMIA     SI</p>
+    </cell>
+    <cell>
+     <p>HIPERGLUCEMIA     NO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="hipoglu.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Encuentra 3 cosas que pueden producir una HIPOGLUCEMIA.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡ Lo tienes claro !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x80FFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0080FF" border="true" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="160.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xD2E9FF" inactive="0x75BAFF" alternative="0x75BAFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <p>EJERCICIO FÍSICO INTENSO</p>
+    </cell>
+    <cell id="0">
+     <p>SALTARSE UNA COMIDA</p>
+    </cell>
+    <cell id="0">
+     <p>DEMASIADA INSULINA</p>
+    </cell>
+    <cell id="1">
+     <p>VER MUCHA TV</p>
+    </cell>
+    <cell id="1">
+     <p>FRÍO</p>
+    </cell>
+    <cell id="1">
+     <p>POCA INSULINA </p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="160.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>HIPOGLUCEMIA     SI</p>
+    </cell>
+    <cell>
+     <p>HIPOGLUCEMIA     NO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="hiposopa.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Encuentra los síntomas de la HIPOGLUCEMIA en esta sopa de letras</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡ Perfecto !</p>
+    </cell>
+   </messages>
+   <settings margin="8" infoCmd="write.exe confusio.txt" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF8AC5">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="16" columns="10" cellWidth="35.0" cellHeight="35.0" border="true">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>*NOISUFNOC******</row>
+     <row>*PALPITACIONES**</row>
+     <row>*DADILIBATIRRI*H</row>
+     <row>*******T******A*</row>
+     <row>S******E*****M**</row>
+     <row>*U*****M****B***</row>
+     <row>**D****B***R****</row>
+     <row>***O***L**E*****</row>
+     <row>****R**O********</row>
+     <row>*******R********</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">CONFUSION</clue>
+    <clue id="1">HAMBRE</clue>
+    <clue id="2">PALPITACIONES</clue>
+    <clue id="3">IRRITABILIDAD</clue>
+    <clue id="4">TEMBLOR</clue>
+    <clue id="5">SUDOR</clue>
+   </clues>
+  </activity>
+  <activity class="@text.Order" name="ordena.txa" type="orderWords" amongParagraphs="true">
+   <messages>
+    <cell type="previous">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Lee el texto con atención  para solucionar el ejercicio correctamente.</p>
+    </cell>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Pon cada palabra en el lugar correspondiente </p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡ Muy bien !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x00B3B3">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00FFFF" border="true">
+     <size width="600" height="450" />
+    </window>
+   </settings>
+   <checkButton>Avaluació</checkButton>
+   <prevScreen maxTime="30" />
+   <document>
+    <style name="default" italic="false" bold="true" family="Arial" foreground="0x000000" background="0x00E6E6" size="17" tabWidth="16" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <cell width="500" height="60" border="true">
+       <style>
+        <font family="Comic Sans MS" size="15" bold="true" />
+        <color background="0xFFFF62" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+       </style>
+       <p>RECOMENDACIONES EN LA ADMINISTRACION Y CONSERVACION DE LAS INSULINAS</p>
+      </cell>
+     </p>
+     <p />
+     <p>
+      <text>*Es conveniente cambiar diariamente el lugar de </text>
+      <target>punción</target>
+      <text> de la insulina.</text>
+     </p>
+     <p />
+     <p>
+      <text>* La absorción de la </text>
+      <target>insulina</target>
+      <text> será diferente si se inyecta en las nalgas, los brazos, o el abdomen.</text>
+     </p>
+     <p />
+     <p>
+      <text>* En el abdomen, la insulina actúa de forma más </text>
+      <target>rápida</target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <text>* El tipo de ejercicio físico que se realice después de la punción también afectará la </text>
+      <target>absorción</target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <text>* La insulina que se utiliza a diario se puede </text>
+      <target>guardar</target>
+      <text> en un lugar seco  y fresco, y que no le dé la luz directa.</text>
+     </p>
+     <p />
+     <p>
+      <text>* La insulina de reserva siempre se guardará en la </text>
+      <target>nevera</target>
+      <text>, a unos 8 grados, evitando su congelación.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="paraules.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Forma parejas: Palabras + significado</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡ Lo has entendido muy bien !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF99CC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFA8D3" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFF73B9" alternative="0xFF73B9" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>POLIDIPSIA</p>
+    </cell>
+    <cell>
+     <p>POLIURIA</p>
+    </cell>
+    <cell>
+     <p>ASTENIA</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFF80C0" alternative="0xFF80C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>Mucha sed</p>
+    </cell>
+    <cell>
+     <p>Orinar con frecuencia</p>
+    </cell>
+    <cell>
+     <p>Cansancio</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="paraules.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Busca la palabra adecuada para completar el significado</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡ Caramba, sí que sabes !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x008080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x008080" border="true">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" italic="false" bold="false" family="Arial" foreground="0x000000" background="0xFFFFBB" size="17" tabWidth="16" />
+    <style name="target" base="default" target="true" foreground="0x008000" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <text>ES NECESARIO QUE EMPIECES A CONOCER ESTAS PALABRAS </text>
+     </p>
+     <p />
+     <p>
+      <text>Poliuria es cuando se ha </text>
+      <target>
+       <answer>de orinar</answer>
+       <optionList>
+        <option>de cantar</option>
+        <option>de pasear</option>
+        <option>de orinar</option>
+        <option>de dormir</option>
+        <option>de comer</option>
+       </optionList>
+       <text>de orinar</text>
+      </target>
+      <text> mucho.</text>
+     </p>
+     <p />
+     <p />
+     <p />
+     <p>
+      <text>Polidipsia quiere decir que se tiene más </text>
+      <target>
+       <answer>sed</answer>
+       <optionList>
+        <option>hambre</option>
+        <option>calor</option>
+        <option>sueño</option>
+        <option>tos</option>
+        <option>sed</option>
+       </optionList>
+       <text>sed</text>
+      </target>
+      <text> de la normal.</text>
+     </p>
+     <p />
+     <p />
+     <p />
+     <p>
+      <text>Astenia es cuando se tiene ... </text>
+      <target>
+       <answer>un cansancio</answer>
+       <optionList>
+        <option>una cabeza</option>
+        <option>un temblor</option>
+        <option>un cansancio</option>
+        <option>una agitación</option>
+        <option>un susto</option>
+       </optionList>
+       <text>un cansancio</text>
+      </target>
+      <text> muy grande.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" detail="false" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="portada.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x57ABFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x00FFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="eportda2.jpg">
+    <style>
+     <font family="Arial" size="28" bold="true" />
+     <color background="0x80FFFF" inactive="0x2D96FF" alternative="0x2D96FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="puzzlegl.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Forma el puzzle</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡ Perfecto !</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFF00">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF8000" border="true" />
+   </settings>
+   <cells rows="4" cols="4" border="true" image="glucago1.jpg">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFF8040" alternative="0xFF8040" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puzzones.puz">
+   <description>
+    <p>Puzzle de les zones de punció d'insulina</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡ Fíjate bien, otra vez. Es muy importante !</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡ Muy bien !</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFF00">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xF788F7" border="true" />
+   </settings>
+   <cells rows="5" cols="5" border="true" image="davdarre.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="5" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="tipusdia.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Relaciona cada dibujo con el Tipo de Diabetes correspondiente</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡ Muy bien !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x24B8FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x004080" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="125.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFF80" inactive="0x8080C0" alternative="0x8080C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell image="nens.jpg" />
+    <cell image="avis1.jpg" />
+    <cell image="embaras.jpg" />
+    <cell image="medicam.jpg" />
+   </cells>
+   <cells rows="4" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0x80FFFF" inactive="0x8080C0" alternative="0x8080C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>Diabetes Tipo I</p>
+    </cell>
+    <cell>
+     <p>Diabetes Tipo II</p>
+    </cell>
+    <cell>
+     <p>Diabetes gestacional</p>
+    </cell>
+    <cell>
+     <p>Diabetes por medicamentos</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="tipusins.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Relaciona los tipos de insulina con sus respectivas duraciones.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡ De acuerdo !</p>
+    </cell>
+   </messages>
+   <settings margin="8" infoCmd="write.exe insuli~1.txt" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFEE2B4">
+     <image name="boligraf.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF8000" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xF3EA72" inactive="0xFF8000" alternative="0xFF8000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>LISPRO</p>
+    </cell>
+    <cell>
+     <p>RÁPIDA</p>
+    </cell>
+    <cell>
+     <p>NPH o INTERMEDIA</p>
+    </cell>
+    <cell>
+     <p>LENTA</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFB468" inactive="0xFF8000" alternative="0xFF8000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>4 HORAS</p>
+    </cell>
+    <cell>
+     <p>6 HORAS</p>
+    </cell>
+    <cell>
+     <p>12-16 HORAS</p>
+    </cell>
+    <cell>
+     <p>24 HORAS</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="zonespun.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡ Fíjate bien ! Estas son las zonas de punción de insulina.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFF8E">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="false" image="davdarre.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="davdarre.gif" file="davdarre.gif" animated="false" />
+  <media name="fons2.gif" file="fons2.gif" animated="false" />
+  <media name="fons3.gif" file="fons3.gif" animated="false" />
+  <media name="avis1.jpg" file="avis1.jpg" />
+  <media name="boligraf.jpg" file="boligraf.jpg" />
+  <media name="caramels.jpg" file="caramels.jpg" />
+  <media name="croissan.jpg" file="croissan.jpg" />
+  <media name="embaras.jpg" file="embaras.jpg" />
+  <media name="embotits.jpg" file="embotits.jpg" />
+  <media name="entrepa2.jpg" file="entrepa2.jpg" />
+  <media name="eportda2.jpg" file="eportda2.jpg" />
+  <media name="esport.jpg" file="esport.jpg" />
+  <media name="glucago.jpg" file="glucago.jpg" />
+  <media name="glucago1.jpg" file="glucago1.jpg" />
+  <media name="gotllet2.jpg" file="gotllet2.jpg" />
+  <media name="medicam.jpg" file="medicam.jpg" />
+  <media name="nens.jpg" file="nens.jpg" />
+  <media name="pa3.jpg" file="pa3.jpg" />
+  <media name="platafru.jpg" file="platafru.jpg" />
+  <media name="poma.jpg" file="poma.jpg" />
+  <media name="sucres3.jpg" file="sucres3.jpg" />
+  <media name="suctaron.jpg" file="suctaron.jpg" />
+  <media name="sugus4.jpg" file="sugus4.jpg" />
+  <media name="torrades.jpg" file="torrades.jpg" />
+  <media name="ecetosis.wav" file="ecetosis.wav" />
+  <media name="eesport.wav" file="eesport.wav" />
+  <media name="eglucemi.wav" file="eglucemi.wav" />
+ </mediaBag>
+</JClicProject>
+

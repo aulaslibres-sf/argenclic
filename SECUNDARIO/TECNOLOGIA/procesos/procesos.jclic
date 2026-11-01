@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="procesos" version="0.1.3">
+ <settings>
+  <title>El proceso tecnológico en el aula-taller</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="1/16/07" />
+  <revision description="Conversión de Clic3 a JClic" date="1/16/07">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Concha Giovanetti Fdez de Henestrosa" mail="cgiova1@gmail.com" />
+  <organization name="IES Tamujal" mail="ies.arroyoservan@edu.juntaextremadura.net" url="http://www.iestamujal.org/" city="Arroyo de San Serván" state="Andalucía" />
+  <language>es</language>
+  <description>
+   <p>Proyecto de actividades para iniciar a los alumnos de 1º de ESO en las fases de un proceso tecnológico.</p>
+  </description>
+  <descriptors area-codes="tec" level-codes="SEC">aprendizaje de la tecnología</descriptors>
+  <skin file="@blue.xml" />
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Proyecto de actividades para iniciar a los alumnos de 1º de ESO en las fases de un proceso tecnológico.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="start" name="El proceso tecnológico">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item id="start" name="Puzle de texto" delay="4" navButtons="back" />
+  <item name="asociarantesodespues" delay="4" navButtons="back" />
+  <item name="Partesinforme" />
+  <item name="Asociarpartesinforme" delay="4" navButtons="back" />
+  <item name="completarpartes" delay="4" navButtons="back" />
+  <item name="Sopa fases">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.ComplexAssociation" name="Asociarpartesinforme" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x006633" />
+     </style>
+     <p>RELACIONA CADA DOCUMENTO CON LA PARTE DEL INFORME TÉCNICO DONDE LO DEBES INCLUIR</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="5" cols="3" cellWidth="199.0" cellHeight="47.0" border="true" id="primary">
+    <style borderStroke="3.5" markerStroke="2.7">
+     <font family="Comic Sans MS" size="18" />
+     <color foreground="0x006633" background="0xFFFFFF" border="0x006633" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="5" />
+    <cell id="3">
+     <p>DESCRIPCIÓN DEL PROBLEMA</p>
+    </cell>
+    <cell id="3">
+     <p>DESCRIPCIÓN DE LA SOLUCIÓN</p>
+    </cell>
+    <cell id="3">
+     <p>DIARIO DE CLASE </p>
+    </cell>
+    <cell id="3">
+     <p>PLANES DE TRABAJO</p>
+    </cell>
+    <cell id="3">
+     <p>RELACION DE MATERIALES Y HERRAMIENTAS</p>
+    </cell>
+    <cell id="3">
+     <p>PRESUPUESTO</p>
+    </cell>
+    <cell id="3">
+     <p>HOJA DE OPERACIONES</p>
+    </cell>
+    <cell id="3">
+     <p>ESQUEMAS ELÉCTRICOS O MECÁNICOS</p>
+    </cell>
+    <cell id="4">
+     <p>EVALUAR EL TRABAJO DEL GRUPO</p>
+    </cell>
+    <cell id="4">
+     <p>VALORAR CÓMO NOS HA QUEDADO EL OBJETO</p>
+    </cell>
+    <cell id="2">
+     <p>DIBUJO DEL OBJETO CONSTRUIDO</p>
+    </cell>
+    <cell id="0">
+     <p>COMPONENTES DEL GRUPO Y RESPONSABILIDADES</p>
+    </cell>
+    <cell id="0">
+     <p>TÍTULO DEL TRABAJO</p>
+    </cell>
+    <cell id="1">
+     <p>RELACIÓN DE LOS DOCUMENTOS QUE VAMOS A ENTREGAR</p>
+    </cell>
+    <cell id="2">
+     <p>DIBUJO DE LAS PARTES DEL OBJETO CON MEDIDAS</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="273.0" cellHeight="35.0" border="true" id="secondary">
+    <style borderStroke="3.6" markerStroke="2.7">
+     <color foreground="0xFFFFFF" background="0x006633" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>PORTADA</p>
+    </cell>
+    <cell>
+     <p>ÍNDICE</p>
+    </cell>
+    <cell>
+     <p>PLANOS DE CONSTRUCCIÓN</p>
+    </cell>
+    <cell>
+     <p>MEMORIA DE FABRICACIÓN</p>
+    </cell>
+    <cell>
+     <p>EVALUACIÓN</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="El proceso tecnológico" code="">
+   <description />
+   <messages />
+   <settings margin="8" report="false">
+    <container bgColor="0x6666FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF99" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="564.0" cellHeight="384.0" border="true">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Comic Sans MS" size="26" />
+     <color foreground="0x666666" background="0xFFCC00" border="0xFFCC00" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>A continuación realizarás un ejercicio con el que afianzarás tus conocimientos sobre el proceso Tecnológico y su aplicación en el aula-taller. </p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.Explore" name="Partesinforme" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color foreground="0x0066CC" background="0xFFFFFF" />
+     </style>
+     <p>Lee con atención qué es cada documento del informe técnico. Luego lo tendrás que recordar.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x0066CC">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="162.0" cellHeight="47.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Comic Sans MS" size="18" />
+     <color foreground="0x0066CC" background="0xFFFFFF" border="0x0066CC" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell id="0">
+     <p>PORTADA</p>
+    </cell>
+    <cell id="1">
+     <p>ÍNDICE</p>
+    </cell>
+    <cell id="2">
+     <p>MEMORIA DEL TRABAJO</p>
+    </cell>
+    <cell id="3">
+     <p>PLANOS DE CONSTRUCCIÓN</p>
+    </cell>
+    <cell id="4">
+     <p>EVALUACIÓN</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="464.0" cellHeight="78.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Comic Sans MS" size="18" />
+     <color foreground="0xFFFFFF" background="0x0066CC" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>Es el documento donde aparece el nombre del trabajo y los componentes del grupo.</p>
+    </cell>
+    <cell>
+     <p>Es el documento donde aparece una lista con todos los documentos que se van a entregar.</p>
+    </cell>
+    <cell>
+     <p>Es el documento más extenso, aquí debemos incluir todos los documentos que hemos ido relizando antes y durante la construcción.</p>
+    </cell>
+    <cell>
+     <p>Son los dibujos del objeto construido. Son variados y en ellos deben aparecer las medidas.</p>
+    </cell>
+    <cell>
+     <p>Es el documento donde debemos valorar si el objeto ha salido bien, si hemos trabajado en equipo y qué nos ha parecido la actividad.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="Puzle de texto" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="3.3" markerStroke="2.7">
+      <font family="Comic Sans MS" size="17" />
+      <color foreground="0xFF0066" background="0xFFFFCC" border="0xFF3366" />
+     </style>
+     <p>ORDENA EL SIGUIENTE PUZLE PARA QUE APAREZCA EL ORDEN EN QUE SE REALIZAN LAS OPERACIONES EN EL PROCESO TECNOLÓGICO</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="3.7" markerStroke="2.7">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6633FF" background="0xFFFFCC" border="0x6633FF" />
+     </style>
+     <p>ESTE ORDEN NO LO DEBES OLVIDAR</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFCCCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="124.0" cellHeight="139.0" border="true">
+    <style borderStroke="4.3" markerStroke="5.0">
+     <font family="Comic Sans MS" size="24" bold="true" />
+     <color foreground="0xFF3366" background="0xFFFFCC" border="0xFF3366" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>NECESIDAD</p>
+    </cell>
+    <cell>
+     <p>IDEA</p>
+    </cell>
+    <cell>
+     <p>DESARROLLO DE LA IDEA</p>
+    </cell>
+    <cell>
+     <p>CONSTRUCCIÓN</p>
+    </cell>
+    <cell>
+     <p>VERIFICACIÓN</p>
+    </cell>
+    <cell>
+     <p>ESCRIBIR UN INFORME TÉCNICO</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="Sopa fases" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="2.6" markerStroke="5.0">
+      <font family="Courier New" size="17" bold="true" />
+      <color foreground="0x0066CC" background="0xFFFFCC" border="0x0066CC" />
+     </style>
+     <p>ENCUENTRA LOS DOCUMENTOS QUE HAY QUE ENTREGAR EN UN INFORME TÉCNICO.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="3.8" markerStroke="2.7">
+      <font family="Courier New" size="17" bold="true" />
+      <color foreground="0x0066CC" background="0xFFFFCC" border="0x0066CC" />
+     </style>
+     <p>NO LAS OLVIDES</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <textGrid rows="9" columns="10" cellWidth="37.0" cellHeight="29.0" border="true">
+    <style borderStroke="2.3" markerStroke="5.0">
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0x0066CC" background="0xFFFFCC" border="0x0066CC" />
+    </style>
+    <text>
+     <row>E*PORTADA</row>
+     <row>V*L******</row>
+     <row>A*A***M**</row>
+     <row>LINDICE**</row>
+     <row>U*O***M**</row>
+     <row>A*S***O**</row>
+     <row>C*****R**</row>
+     <row>I*****I**</row>
+     <row>O*****A**</row>
+     <row>N********</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">PORTADA</clue>
+    <clue id="1">INDICE</clue>
+    <clue id="2">EVALUACION</clue>
+    <clue id="3">PLANOS</clue>
+    <clue id="4">MEMORIA</clue>
+   </clues>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="asociarantesodespues" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Courier New" size="20" />
+      <color foreground="0x000099" background="0xFFFFFF" />
+     </style>
+     <p> ¿Cuándo debes relizar las operaciones que se te indican?</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color foreground="0x6666FF" background="0xFFFFFF" />
+     </style>
+     <p>NO LO OLVIDES</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x006699">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="139.0" cellHeight="110.0" border="true" id="primary">
+    <style borderStroke="2.2" markerStroke="5.0">
+     <font family="Arial" size="12" />
+     <color foreground="0x6633FF" background="0xFFFFFF" border="0x6633FF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="0">
+     <p>DIBUJAR LOS PLANOS</p>
+    </cell>
+    <cell id="0">
+     <p>HACER UNA LISTA CON LOS MATERIALES Y LAS HERRAMIENTAS QUE NECESITO</p>
+    </cell>
+    <cell id="1">
+     <p>DIARIO DE CLASE</p>
+    </cell>
+    <cell id="2">
+     <p>VALORAR MI TRABAJO Y EL DE MIS COMPAÑEROS</p>
+    </cell>
+    <cell id="0">
+     <p>DESCRIBIR LA SOLUCIÓN QUE PROPONGO PARA SOLUCIONAR EL PROBLEMA</p>
+    </cell>
+    <cell id="2">
+     <p>COMPROBAR COMO HA QUEDADO</p>
+    </cell>
+    <cell id="0">
+     <p>PLANEAR LO QUE VOY A HACER CUANDO ENTRE EN EL TALLER</p>
+    </cell>
+    <cell id="0">
+     <p>HACER EL PRESUPUESTO DE LO QUE VA A COSTAR CONSTRUIR LA SOLUCIÓN</p>
+    </cell>
+    <cell id="2">
+     <p>PASAR A LIMPIO TODOS LOS DOCUMENTOS QUE HE IDO ELABORANDO PARA REALIZAR EL INFORME TÉCNICO</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="149.0" cellHeight="84.0" border="true" id="secondary">
+    <style borderStroke="2.2" markerStroke="2.7">
+     <font family="Arial" size="16" />
+     <color foreground="0xFF3366" background="0xFFFFFF" border="0xFF3366" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>ANTES DE EMPEZAR A CONSTRUIR</p>
+    </cell>
+    <cell>
+     <p>DURANTE LA CONSTRUCCIÓN</p>
+    </cell>
+    <cell>
+     <p>DESPUÉS DE CONSTRUIR</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.Complete" name="completarpartes" code="">
+   <description />
+   <messages>
+    <cell type="previous">
+     <style>
+      <color foreground="0x009933" background="0xFFFFFF" />
+     </style>
+     <p>Vuelve a leer con atención y cuando lo hayas leido haz clic con el ratón.</p>
+    </cell>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color foreground="0x009933" background="0xFFFFFF" />
+     </style>
+     <p>Completa las palabras que faltan en en siguiente texto.Después de cada palabra en negrita hay una incognita.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true">
+     <size width="577" height="305" />
+    </window>
+   </settings>
+   <checkButton>Cuando  termines pulsa éste botón.</checkButton>
+   <prevScreen>
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Comic Sans MS" size="17" />
+     <color foreground="0xFFFFFF" background="0x009933" />
+    </style>
+    <p>PORTADA: Es el documento donde aparece el nombre del trabajo y los componentes del grupo.
+</p>
+    <p>ÍNDICE: Es el documento donde aparece una lista con todos los documentos que se van a entregar.
+</p>
+    <p>MEMORIA: Es el documento más extenso, aqui debemos incluir todos los documentos que hemos ido relizando antes y durante la construcción.
+</p>
+    <p>PLANOS DE CONSTRUCCIÓN: Son los dibujos del objeto construido. Son variados y en ellos deben aparecer las medidas.
+</p>
+    <p>EVALUACIÓN: Es el documento donde debemos valorar si el objeto ha salido bien, si hemos trabajado en equipo y qué nos ha parecido la actividad.</p>
+   </prevScreen>
+   <document>
+    <style name="default" family="Comic Sans MS" size="16" tabWidth="12" bold="false" background="0xFFFFFF" italic="false" />
+    <style name="target" base="default" target="true" foreground="0x0099FF" />
+    <style name="targetError" base="target" foreground="0xFF0066" />
+    <section>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" bold="true" foreground="0x009933" background="0xFFFFFF">PORTADA</text>
+      <text family="Arial" foreground="0x009933" background="0xFFFFFF">: Es el documento donde aparece el nombre del trabajo y los componentes </text>
+      <text family="Arial" bold="true" foreground="0x009933" background="0xFFFFFF">del </text>
+      <target>grupo</target>
+      <text family="Arial" foreground="0x009933" background="0xFFFFFF">.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" bold="true" foreground="0x009933" background="0xFFFFFF">ÍNDICE:</text>
+      <text family="Arial" foreground="0x009933" background="0xFFFFFF"> Es el documento donde aparece una lista con todos </text>
+      <text size="16" family="Comic Sans MS" bold="false" foreground="0x009933" background="0xFFFFFF" italic="false">los</text>
+      <text family="Arial" background="0xFFFFFF"> </text>
+      <target>documentos</target>
+      <text family="Arial" foreground="0x009933" background="0xFFFFFF"> que se van a entregar.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" bold="true" foreground="0x009933" background="0xFFFFFF">MEMORIA</text>
+      <text family="Arial" foreground="0x009933" background="0xFFFFFF">: Es el documento más extenso, aqui debemos incluir todos </text>
+      <text family="Arial" bold="true" foreground="0x009933" background="0xFFFFFF">los</text>
+      <text family="Arial" foreground="0x009933" background="0xFFFFFF"> </text>
+      <target>documentos</target>
+      <text family="Arial" foreground="0x009933" background="0xFFFFFF"> que hemos ido </text>
+      <text family="Arial" bold="true" foreground="0x009933" background="0xFFFFFF">relizando</text>
+      <text family="Arial" foreground="0x009933" background="0xFFFFFF"> </text>
+      <target>antes y durante</target>
+      <text family="Arial" foreground="0x009933" background="0xFFFFFF"> la construcción.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" bold="true" foreground="0x009933" background="0xFFFFFF">PLANOS DE CONSTRUCCIÓN</text>
+      <text family="Arial" foreground="0x009933" background="0xFFFFFF">: Son </text>
+      <text size="16" family="Comic Sans MS" bold="false" foreground="0x009933" background="0xFFFFFF" italic="false">los</text>
+      <text family="Arial" background="0xFFFFFF"> </text>
+      <target>dibujos</target>
+      <text family="Arial" foreground="0x009933" background="0xFFFFFF"> del objeto construido. Son variados y en ellos deben aparecer </text>
+      <text family="Arial" bold="true" foreground="0x009933" background="0xFFFFFF">las</text>
+      <text family="Arial" foreground="0x009933" background="0xFFFFFF"> </text>
+      <target>medidas</target>
+      <text family="Arial" foreground="0x009933" background="0xFFFFFF">.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" bold="true" foreground="0x009933" background="0xFFFFFF">EVALUACIÓN</text>
+      <text family="Arial" foreground="0x009933" background="0xFFFFFF">: Es el documento donde debemos valorar si el objeto ha </text>
+      <text family="Arial" bold="true" foreground="0x009933" background="0xFFFFFF">salido</text>
+      <text family="Arial" foreground="0x009933" background="0xFFFFFF"> </text>
+      <target>bien</target>
+      <text family="Arial" foreground="0x009933" background="0xFFFFFF">, si </text>
+      <text family="Arial" bold="true" foreground="0x009933" background="0xFFFFFF">hemos</text>
+      <text family="Arial" foreground="0x009933" background="0xFFFFFF"> </text>
+      <target>trabajado</target>
+      <text family="Arial" foreground="0x009933" background="0xFFFFFF"> en equipo y qué nos ha parecido </text>
+      <text family="Arial" bold="true" foreground="0x009933" background="0xFFFFFF">la</text>
+      <text family="Arial" foreground="0x009933" background="0xFFFFFF"> </text>
+      <target>actividad</target>
+      <text family="Arial" foreground="0x009933" background="0xFFFFFF">.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" checkAccents="false" checkPunctuation="false" />
+  </activity>
+ </activities>
+ <mediaBag />
+</JClicProject>
+

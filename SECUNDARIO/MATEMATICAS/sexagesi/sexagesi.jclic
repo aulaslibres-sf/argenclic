@@ -1,0 +1,1045 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="sexagesi" version="0.1.3">
+ <settings>
+  <title>Sistema sexagesimal</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="10/15/08" />
+  <revision description="Conversión de Clic3 a JClic" date="10/17/08">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="J. Amador Bernardo Vázquez" mail="amadorbernardo@edu.xunta.es" />
+  <organization name="IES Rosais 2" mail="ies.rosais.2@edu.xunta.es" url="http://centros.edu.xunta.es/iesrosais2/" city="Teis (San Salvador) - Pontevedra" state="Galiza" />
+  <language>es</language>
+  <description>
+   <p>Proyecto de actividades dirigido a 2º de educación secundaria sobre el sistema sexagesimal y las operaciones con números complejos. El proyecto está dividido en tres partes:</p>
+   <p>&lt;ul&gt;</p>
+   <p>&lt;li&gt;De complejo a incomplejo</p>
+   <p>&lt;li&gt;De incomplejo a complejo</p>
+   <p>&lt;li&gt;Suma de complejos</p>
+   <p>&lt;/ul&gt;</p>
+  </description>
+  <descriptors area-codes="mat" level-codes="SEC">sistemas de numeración</descriptors>
+  <skin file="@simple.xml" />
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Proyecto de actividades dirigido a 2º de educación secundaria sobre el sistema sexagesimal y las operaciones con números complejos. El proyecto está dividido en tres partes:</p>
+    <p>&lt;ul&gt;</p>
+    <p>&lt;li&gt;De complejo a incomplejo</p>
+    <p>&lt;li&gt;De incomplejo a complejo</p>
+    <p>&lt;li&gt;Suma de complejos</p>
+    <p>&lt;/ul&gt;</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="Start" name="1portada">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="Inicio" />
+  <item name="Portada" navButtons="fwd">
+   <jump action="STOP" id="forward" />
+  </item>
+  <item id="Información" name="Información">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="Actividad de identificación" />
+  <item name="Actividad de exploración" />
+  <item name="Asociación simple" />
+  <item name="2ª pantalla de información" />
+  <item name="Repuesta escrita">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="3ª pantalla" name="3 pantalla de información">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="Asociació simple" />
+  <item name="4ª pantalla de información" />
+  <item name="6ª pantalla de información" />
+  <item name="Respuesta escrita" />
+  <item name="Sopa de letras">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="Asociación compleja" name="Asociación compleja">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="5ª pantalla de información" />
+  <item id="Fin" name="Fin" navButtons="back">
+   <jump action="RETURN" id="forward" />
+   <jump action="RETURN" id="back" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="1portada">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x003333" dest="0xFFFFFF" angle="50" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="496.0" cellHeight="136.0" border="false">
+    <style transparent="true" borderStroke="0.7" markerStroke="2.7">
+     <font family="Arial" size="48" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>Sistema sexagesimal</p>
+    </cell>
+    <cell>
+     <style transparent="true" borderStroke="0.0" markerStroke="2.7">
+      <font family="Arial" size="28" />
+     </style>
+     <p>J.Amador Bernardo Vázquez</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="2ª pantalla de información">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="30" countDownTime="false" maxActions="8" countDownActions="false" report="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x003333" dest="0xFFFFFF" angle="50" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x728787" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="565.0" cellHeight="107.0" border="false">
+    <style>
+     <font family="Arial" size="28" />
+     <color background="0x9CB8B8" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>Ahora vamos a pasar de horas, minutos y segundos a segundos. </p>
+    </cell>
+    <cell>
+     <p>Le llamamos, en mates, pasar de complejo a incomplejo, acuérdate para cuando te lo pregunten. </p>
+    </cell>
+    <cell>
+     <p>Tienes que poner la respuesta escrita y escribir "segundos".</p>
+     <p>Ánimo, es muy sencillo.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="3 pantalla de información">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="31" countDownTime="false" maxActions="6" countDownActions="false" report="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x003333" dest="0xFFFFFF" angle="50" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x728787" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="610.0" cellHeight="155.0" border="false">
+    <style>
+     <font family="Arial" size="26" />
+     <color background="0x9CB8B8" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>Ahora vamos a hacer lo mismo, pero lo contrario, pasar de incomplejo a complejo. El enunciado nos dirá: pasa a horas, minutos y segundos 8658 segundos.</p>
+     <p>Primero divides la cantidad dada entre 60, el cociente será 144 minutos y el resto 18 segundos.</p>
+    </cell>
+    <cell>
+     <p>Por último divides el cociente, 144 minutos, entre 60 y te da 2 horas y el cociente 24 minutos.</p>
+     <p>El resultado será 2 horas, 24  minutos, 18 segundos.</p>
+    </cell>
+    <cell>
+     <p>Ahora vas a realizar unos ejercicios, resuélvelos en papel. </p>
+     <p>Pon el resultado en horas, minutos y segundos</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="4ª pantalla de información">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="30" countDownTime="false" maxActions="5" countDownActions="false" report="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x003333" dest="0xFFFFFF" angle="50" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x728787" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="549.0" cellHeight="147.0" border="false">
+    <style>
+     <font family="Arial" size="28" />
+     <color background="0x9CB8B8" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>Ahora lo vemos mejor...</p>
+     <p>Pasar 8658 seg a horas, minutos y segundos.</p>
+    </cell>
+    <cell>
+     <p>8658 : 60=144 min -- Resto 18 seg</p>
+     <p>Ahora dividimos 144 min : 60= 2 horas   </p>
+     <p>Resto 24 minutos.</p>
+    </cell>
+    <cell>
+     <p>Resultado: 2 horas 24 minutos 18 segundos</p>
+     <p>Hacemos unos ejemplos.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="5ª pantalla de información">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Si tuviste dudas aquí te damos gráficamente la solución.</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="20" countDownTime="false" report="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x003333" dest="0xFFFFFF" angle="50" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x728787" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="719.0" cellHeight="390.0" border="false">
+    <style>
+     <font family="Arial" size="28" />
+     <color background="0x9CB8B8" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell image="suma sexagesimal.JPG" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="6ª pantalla de información">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x003333" dest="0xFFFFFF" angle="50" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x728787" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="incomplejo a complejo.JPG">
+    <style>
+     <font family="Arial" size="28" />
+     <color background="0x9CB8B8" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.Explore" name="Actividad de exploración">
+   <description>
+    <p>Exploración</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Pulsa encima de la casilla</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="120" countDownTime="false" maxActions="12" countDownActions="false" report="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x003333" dest="0xFFFFFF" angle="50" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x728787" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="167.0" cellHeight="179.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="18" />
+     <color background="0x9CB8B8" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="Seductora.mp3" />
+     <p>El sistema basado en sesenta unidades se llama...</p>
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="Seductora.mp3" />
+     <p>Lo habitual para medir magnitudes es el....</p>
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="Seductora.mp3" />
+     <p>Las cantidades en el Sistema Sexagesimal se expresan en...</p>
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="Seductora.mp3" />
+     <p>También las cantidades en el Sistema Sexagesimal se expresan en...</p>
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="Seductora.mp3" />
+     <p>En el sistema sexagesimal el valor de una cifra depende....</p>
+    </cell>
+    <cell id="5">
+     <media type="PLAY_AUDIO" level="1" file="Seductora.mp3" />
+     <p>El sistema sexagesimal se usa desde...</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="463.0" cellHeight="77.0" border="true" id="secondary">
+    <style>
+     <color background="0xE7E6E6" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Sistema sexagesimal</p>
+    </cell>
+    <cell>
+     <p>Sistema de Numeración Decimal</p>
+    </cell>
+    <cell>
+     <p>Se expresan en horas, minutos y segundos</p>
+    </cell>
+    <cell>
+     <p>Se expresan en grados, minutos y segundos</p>
+    </cell>
+    <cell>
+     <p>Del lugar que ocupa</p>
+    </cell>
+    <cell>
+     <p>La antigüedad</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="Actividad de identificación">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Explora</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="120" countDownTime="false" maxActions="12" countDownActions="false" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x003333" dest="0xFFFFFF" angle="50" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x728787" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="269.0" cellHeight="184.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="18" />
+     <color background="0x9CB8B8" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="máquina2rec.mp3" />
+     <p>El sistema de numeración aplicado a la medida de ciertas magnitudes en el que cada unidad se divide en sesenta unidades de orden inferior.</p>
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="máquina2rec.mp3" />
+     <p>El sistema sexagesimal tiene su origen en una forma de contar basada en la combinación de los cindo dedos de una mano con las doce falanges de los cuatro dedos índice, corazón, anular y meñique de la otra.</p>
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="máquina2rec.mp3" />
+     <p>Permite expresar en grados, minutos y segundos y...</p>
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="máquina2rec.mp3" />
+     <p>Hay otros sistemas como el binario, decimal</p>
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="máquina2rec.mp3" />
+     <p>Se utiliza habitualmente para medir el tiempo y la amplitud de los ángulos.</p>
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="máquina2rec.mp3" />
+     <p>El sistema binario está basado en</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style>
+     <color background="0xE7E6E6" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>Sistema sexagesimal</p>
+    </cell>
+    <cell>
+     <p>Sí, su origen viene de 5 dedos por 12 falanges</p>
+    </cell>
+    <cell>
+     <p>El sistema sexagesimal permite expresar en horas, minutos o segundos</p>
+    </cell>
+    <cell>
+     <p>Si y se utilizan habitualmente</p>
+    </cell>
+    <cell>
+     <p>A veces medimos y operamos con el tiempo y con los ángulos</p>
+    </cell>
+    <cell>
+     <p>En 1 y 0, se usa en la informática</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Asociació simple" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Pasa de segundos a horas, minutos y segundos. Relaciona</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Muy bien, seguimos adelante</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="120" countDownTime="false" maxActions="7" countDownActions="false" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x003333" dest="0xFFFFFF" angle="50" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x728787" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="229.0" cellHeight="183.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="18" />
+     <color background="0x9CB8B8" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="Seductora.mp3" />
+     <p>8658 segundos</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="Seductora.mp3" />
+     <p>4405 segundos</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="Seductora.mp3" />
+     <p>12412 segundos</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="Seductora.mp3" />
+     <p>8564 segundos</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="185.0" cellHeight="130.0" border="true" id="secondary">
+    <style>
+     <color background="0xE7E6E6" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>2 horas, 24 minutos, 18 segundos</p>
+    </cell>
+    <cell>
+     <p>1 hora, 13 minutos, 25 segundos</p>
+    </cell>
+    <cell>
+     <p>3 horas, 26 minutos, 52 segundos</p>
+    </cell>
+    <cell>
+     <p>2 horas, 22 minutos, 44 segundos</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Asociación compleja" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Suma y relaciona</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Lo has conseguido</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Si tienes dudas en la suma, consulta la siguiente pantalla</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="30" countDownTime="false" maxActions="6" countDownActions="false" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x003333" dest="0xFFFFFF" angle="50" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x728787" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="210.0" cellHeight="123.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="16" bold="true" />
+     <color background="0x9CB8B8" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="Seductora.mp3" />
+     <p>15h 36min 9seg </p>
+     <p>+ </p>
+     <p>10h 15min 10seg</p>
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="Seductora.mp3" />
+     <p>23grados 25min 31seg </p>
+     <p>+ </p>
+     <p>69grados 25min 3seg</p>
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="Seductora.mp3" />
+     <p>26grados 45min 2seg </p>
+     <p>+ 37min 24seg</p>
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="Seductora.mp3" />
+     <p>35grados 2 seg </p>
+     <p>+ 3seg</p>
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="Seductora.mp3" />
+     <p>22grados 38seg </p>
+     <p>+ 46grados</p>
+    </cell>
+    <cell id="5">
+     <media type="PLAY_AUDIO" level="1" file="Seductora.mp3" />
+     <p>120grados 36min 2seg </p>
+     <p>+ 47grados 26min 5seg</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="243.0" cellHeight="65.0" border="true" id="secondary">
+    <style>
+     <color background="0xE7E6E6" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>25h 51min 19seg</p>
+    </cell>
+    <cell>
+     <p>92grados 50min 34seg</p>
+    </cell>
+    <cell>
+     <p>63grados 45min 26seg</p>
+    </cell>
+    <cell>
+     <p>35grados 5seg</p>
+    </cell>
+    <cell>
+     <p>68grados 38seg</p>
+    </cell>
+    <cell>
+     <p>168grados 2 minutos 7seg</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Asociación simple">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Pasa de grados a minutos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Muy bien! Sigamos adelante</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="63" countDownTime="false" maxActions="12" countDownActions="false" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x003333" dest="0xFFFFFF" angle="50" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x728787" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="264.0" cellHeight="102.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="18" />
+     <color background="0x9CB8B8" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="I get up.mp3" />
+     <p>5 grados</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="I get up.mp3" />
+     <p>15 grados</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="I get up.mp3" />
+     <p>6 grados</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="I get up.mp3" />
+     <p>2 grados</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="I get up.mp3" />
+     <p>3 grados</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="I get up.mp3" />
+     <p>7 grados</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="186.0" cellHeight="94.0" border="true" id="secondary">
+    <style>
+     <color background="0xE7E6E6" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>300 minutos</p>
+    </cell>
+    <cell>
+     <p>900 minutos</p>
+    </cell>
+    <cell>
+     <p>360 minutos</p>
+    </cell>
+    <cell>
+     <p>120 minutos</p>
+    </cell>
+    <cell>
+     <p>180 minutos</p>
+    </cell>
+    <cell>
+     <p>420 minutos</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="Fin" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Muy bien, seguieremos con nuevos programas</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="10" countDownTime="false" report="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x003333" dest="0xFFFFFF" angle="50" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="479.0" cellHeight="79.0" border="false">
+    <style transparent="true" borderStroke="0.7" markerStroke="2.7">
+     <font family="Arial" size="28" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>Hemos llegado al final, espero que os haya gustado.</p>
+    </cell>
+    <cell>
+     <p>La música es original. </p>
+    </cell>
+    <cell>
+     <p>Repetirlo hasta que os salga bien.</p>
+     <p>Ánimo y adelante</p>
+    </cell>
+    <cell>
+     <p>amadorbernardo@edu.xunta.es</p>
+     <p>I.E.S Rosais 2   36207  Teis Vigo</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="Información" code="">
+   <description>
+    <p>Primera pantalla de explicación</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Vamos a intentar trabajar el sistema sexagesimal. ¡ÁNIMO!</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>LO HAS CONSEGUIDO. ENHORABUENA.</p>
+     <p>ERES UN FENÓMENO</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Los errores los cometen los que se esfuerzan. Vuelve a intentarlo</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="30" countDownTime="false" maxActions="6" countDownActions="false" report="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x003333" dest="0xFFFFFF" angle="50" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x728787" transparent="true" border="false" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="651.0" cellHeight="125.0" border="false">
+    <style>
+     <font family="Arial" size="22" />
+     <color background="0x9CB8B8" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell avoidOverlapping="true">
+     <p>El sistema sexagesimal se utiliza en la medida del tiempo y de los ángulos.</p>
+     <p>Seguro que ya sabes que 1 hora es igual a 60 minutos... ¡Qué fácil! </p>
+    </cell>
+    <cell>
+     <p>Un minuto es igual a 60 segundos ¡Todavía más fácil! </p>
+     <p>Por lo tanto pasar de horas a minutos, sólo tienes que multiplicar por 60 y ya lo tienes en minutos, si luego lo vuelves a multiplicar por 60 ya tienes los segundos.</p>
+    </cell>
+    <cell>
+     <p>Por ejemplo. </p>
+     <p>2 horas a minutos= 2x 60= 120 minutos. </p>
+    </cell>
+    <cell>
+     <p>2 horas a segundo = 2 x 60= 120 minutos,  120 m x 60 = 7200 segundos. </p>
+     <p>¿Qué te parece? ¿Es fácil? </p>
+     <p>Sigamos adelante...</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="Inicio" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="10" countDownTime="false" maxActions="5" countDownActions="false" report="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x003333" dest="0xFFFFFF" angle="50" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="454.0" cellHeight="124.0" border="false">
+    <style transparent="true" borderStroke="0.7" markerStroke="2.7">
+     <font family="Arial" size="28" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell avoidOverlapping="true">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="Portada" />
+     <p>Autor:J.Amador Bernardo Vázquez </p>
+    </cell>
+    <cell>
+     <p>Colabora: J.Antonio Rodríguez       </p>
+    </cell>
+    <cell>
+     <p>Testean el programa: </p>
+     <p>Noelia Puime, Javi Cal,Andrés Romero, 2º ESO  Adrián Bello, Antonio Montero, Matías Gallas 1º ESO</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="Portada">
+   <description>
+    <p>Menú</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Elige la actividad que te guste, haciendo clic encima.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x003333" dest="0xFFFFFF" angle="50" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="476.0" cellHeight="135.0" border="true">
+    <style transparent="true" borderStroke="0.7" markerStroke="2.7">
+     <font family="Arial" size="36" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell border="true">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="Información" />
+     <p>Complejo a incomplejo</p>
+    </cell>
+    <cell border="true">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="3ª pantalla" />
+     <p>Incomplejo a complejo</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="Asociación compleja" />
+     <p>Suma de complejos</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.WrittenAnswer" name="Repuesta escrita">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Pon en segundos la respuesta</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="80" countDownTime="false" maxActions="10" countDownActions="false" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x003333" dest="0xFFFFFF" angle="50" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x728787" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="118.0" cellHeight="189.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="18" />
+     <color background="0x9CB8B8" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="máquina2rec.mp3" />
+     <p>2 h 24 m 18 segundos</p>
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="máquina2rec.mp3" />
+     <p>27 minutos 16 segundos</p>
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="máquina2rec.mp3" />
+     <p>1 minuto 40 segundos</p>
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="máquina2rec.mp3" />
+     <p>2 horas 5 minutos 42 segundos</p>
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="máquina2rec.mp3" />
+     <p>4 horas 5 minutos 30 segundos</p>
+    </cell>
+    <cell id="5">
+     <media type="PLAY_AUDIO" level="1" file="máquina2rec.mp3" />
+     <p>3 horas 2  minutos</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="147.0" cellHeight="93.0" border="true" id="answers">
+    <style>
+     <color background="0xE7E6E6" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>8658 segundos</p>
+    </cell>
+    <cell>
+     <p>1636 segundos</p>
+    </cell>
+    <cell>
+     <p>100 segundos</p>
+    </cell>
+    <cell>
+     <p>7542 segundos</p>
+    </cell>
+    <cell>
+     <p>10920 segundos</p>
+    </cell>
+    <cell>
+     <p>240 segundos</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="Respuesta escrita" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Pasa de incomplejo a complejo. Pon el resultado en h, min, seg</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Vuelve a intentarlo.</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="200" countDownTime="false" maxActions="12" countDownActions="false" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x003333" dest="0xFFFFFF" angle="50" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x728787" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="143.0" cellHeight="159.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="18" />
+     <color background="0x9CB8B8" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="máquina2rec.mp3" />
+     <p>30500seg</p>
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="máquina2rec.mp3" />
+     <p>12655seg</p>
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="máquina2rec.mp3" />
+     <p>5789 seg</p>
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="máquina2rec.mp3" />
+     <p>8725seg</p>
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="máquina2rec.mp3" />
+     <p>13633seg</p>
+    </cell>
+    <cell id="5">
+     <media type="PLAY_AUDIO" level="1" file="máquina2rec.mp3" />
+     <p>27436seg</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="257.0" cellHeight="115.0" border="true" id="answers">
+    <style>
+     <color background="0xE7E6E6" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>5h 20min 50seg</p>
+    </cell>
+    <cell>
+     <p>3h 30min 55seg</p>
+    </cell>
+    <cell>
+     <p>1h 36min 29seg</p>
+    </cell>
+    <cell>
+     <p>1h 18min 45seg</p>
+    </cell>
+    <cell>
+     <p>3h 47min 13seg</p>
+    </cell>
+    <cell>
+     <p>7h 37min 16seg</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="Sopa de letras" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Encuentra las palabras escondidas.</p>
+     <p>Son 6</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Qué bien!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Inténtalo otra vez</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="30" countDownTime="false" maxActions="6" countDownActions="false" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x003333" dest="0xFFFFFF" angle="50" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x728787" transparent="true" border="false" />
+   </settings>
+   <textGrid rows="11" columns="9" cellWidth="49.0" cellHeight="49.0" border="true">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>SEGUNDOS***</row>
+     <row>***********</row>
+     <row>***********</row>
+     <row>*MINUTOS***</row>
+     <row>*HORAS*****</row>
+     <row>**GRADOS***</row>
+     <row>SISTEMA****</row>
+     <row>SEXAGESIMAL</row>
+     <row>***********</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">SEXAGESIMAL</clue>
+    <clue id="1">GRADOS</clue>
+    <clue id="2">SEGUNDOS</clue>
+    <clue id="3">MINUTOS</clue>
+    <clue id="4">HORAS</clue>
+    <clue id="5">SISTEMA</clue>
+   </clues>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="incomplejo a complejo.JPG" file="incomplejo_a_complejo.jpg" />
+  <media name="suma sexagesimal.JPG" file="suma_sexagesimal.jpg" />
+  <media name="I get up.mp3" file="i_get_up.mp3" />
+  <media name="máquina2rec.mp3" file="maquina2rec.mp3" />
+  <media name="Seductora.mp3" file="seductora.mp3" />
+ </mediaBag>
+</JClicProject>
+

@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="plgns1e" version="0.1.3">
+ <settings>
+  <title>plgns1e</title>
+  <revision description="created" date="5/31/02" />
+  <descriptors />
+ </settings>
+ <sequence>
+  <item id="plgns1e.pac" name="paq01int.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="plgns1.ass" />
+  <item name="polig1.ass" />
+  <item name="concav.ass" />
+  <item name="plgns2.ass" />
+  <item name="plgns4.ass" />
+  <item name="polig2.ass" />
+  <item name="grae01.ass" />
+  <item name="grae02.ass" />
+  <item name="polgns01.sop" />
+  <item name="plgns3.ass" />
+  <item name="polig5.ass" />
+  <item name="grae3.ass" />
+  <item name="paq01fi.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.ComplexAssociation" name="concav.ass">
+   <description>
+    <p>Classifica polígons en còncaus-convexos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Clasifica estos polígonos según sean CÓNCAVOS o CONVEXOS.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="2" cellWidth="250.0" cellHeight="200.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell id="1" image="pentairr.gif" />
+    <cell id="1" image="hexairr.gif" />
+    <cell id="1" image="quadirr.gif" />
+    <cell id="1" image="octagirr.gif" />
+    <cell id="1" image="nonairr.gif" />
+    <cell id="0" image="octagir1.gif" />
+    <cell id="0" image="trapezi0.gif" />
+    <cell id="0" image="triang7.gif" />
+   </cells>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="200.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>Es un polígono CONVEXO</p>
+    </cell>
+    <cell>
+     <p>Es un polígono CÓNCAVO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="grae01.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Completa la ventana de la izquierda con elementos de la ventana de la derecha.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="6" cols="3" border="false" image="grae01a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="3" rows="6" showEnclosure="true" scaleX="3.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,3,6</shape>
+     </enclosing>
+     <shape>rectangle:0,1,1,1</shape>
+     <shape>rectangle:1,1,1,1</shape>
+     <shape>rectangle:0,2,1,1</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>rectangle:1,3,1,1</shape>
+     <shape>rectangle:2,3,1,1</shape>
+     <shape>rectangle:1,4,1,1</shape>
+     <shape>rectangle:0,5,1,1</shape>
+     <shape>rectangle:2,5,1,1</shape>
+    </shaper>
+    <ids>0 1 3 2 4 5 6 7 8</ids>
+   </cells>
+   <cells rows="6" cols="2" border="true" image="grae01b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="6" />
+   </cells>
+   <cells rows="6" cols="3" border="false" image="grae01c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="3" rows="6" showEnclosure="true" scaleX="3.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,3,6</shape>
+     </enclosing>
+     <shape>rectangle:0,1,1,1</shape>
+     <shape>rectangle:1,1,1,1</shape>
+     <shape>rectangle:0,2,1,1</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>rectangle:1,3,1,1</shape>
+     <shape>rectangle:2,3,1,1</shape>
+     <shape>rectangle:1,4,1,1</shape>
+     <shape>rectangle:0,5,1,1</shape>
+     <shape>rectangle:2,5,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="grae02.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Completa la ventada de la izquierda con elementos de la ventana de la derecha (continuación de la actividad anterior).</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="6" cols="3" border="false" image="grae02a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="3" rows="6" showEnclosure="true" scaleX="3.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,3,6</shape>
+     </enclosing>
+     <shape>rectangle:1,1,1,1</shape>
+     <shape>rectangle:2,1,1,1</shape>
+     <shape>rectangle:0,2,1,1</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>rectangle:1,3,1,1</shape>
+     <shape>rectangle:1,4,1,1</shape>
+     <shape>rectangle:0,5,1,1</shape>
+     <shape>rectangle:2,5,1,1</shape>
+    </shaper>
+    <ids>1 2 3 4 5 6 7 8</ids>
+   </cells>
+   <cells rows="6" cols="2" border="true" image="grae02b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="6" />
+   </cells>
+   <cells rows="6" cols="3" border="false" image="grae02c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="3" rows="6" showEnclosure="true" scaleX="3.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,3,6</shape>
+     </enclosing>
+     <shape>rectangle:1,1,1,1</shape>
+     <shape>rectangle:2,1,1,1</shape>
+     <shape>rectangle:0,2,1,1</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>rectangle:1,3,1,1</shape>
+     <shape>rectangle:1,4,1,1</shape>
+     <shape>rectangle:0,5,1,1</shape>
+     <shape>rectangle:2,5,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="grae3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Completa la ventana de la izquierda con elementos de la ventana de la derecha.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="6" cols="5" border="false" image="grae3a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="5" rows="6" showEnclosure="true" scaleX="5.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,5,6</shape>
+     </enclosing>
+     <shape>rectangle:0,1,1,1</shape>
+     <shape>rectangle:2,1,1,1</shape>
+     <shape>rectangle:3,1,1,1</shape>
+     <shape>rectangle:4,1,1,1</shape>
+     <shape>rectangle:1,2,1,1</shape>
+     <shape>rectangle:3,2,1,1</shape>
+     <shape>rectangle:0,3,1,1</shape>
+     <shape>rectangle:2,3,1,1</shape>
+     <shape>rectangle:4,3,1,1</shape>
+     <shape>rectangle:1,4,1,1</shape>
+     <shape>rectangle:3,4,1,1</shape>
+     <shape>rectangle:0,5,1,1</shape>
+     <shape>rectangle:2,5,1,1</shape>
+     <shape>rectangle:4,5,1,1</shape>
+    </shaper>
+    <ids>1 8 6 7 2 7 3 9 11 4 8 5 10 13</ids>
+   </cells>
+   <cells rows="7" cols="2" border="true" image="grae3b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="7" />
+   </cells>
+   <cells rows="6" cols="5" border="false" image="grae3c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="5" rows="6" showEnclosure="true" scaleX="5.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,5,6</shape>
+     </enclosing>
+     <shape>rectangle:0,1,1,1</shape>
+     <shape>rectangle:2,1,1,1</shape>
+     <shape>rectangle:3,1,1,1</shape>
+     <shape>rectangle:4,1,1,1</shape>
+     <shape>rectangle:1,2,1,1</shape>
+     <shape>rectangle:3,2,1,1</shape>
+     <shape>rectangle:0,3,1,1</shape>
+     <shape>rectangle:2,3,1,1</shape>
+     <shape>rectangle:4,3,1,1</shape>
+     <shape>rectangle:1,4,1,1</shape>
+     <shape>rectangle:3,4,1,1</shape>
+     <shape>rectangle:0,5,1,1</shape>
+     <shape>rectangle:2,5,1,1</shape>
+     <shape>rectangle:4,5,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="paq01fi.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic sobre la flecha de la derecha para volver al menú         &gt;&gt;&gt;</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="portada1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="60.0" border="false">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>FIN DEL PAQUETE 1</p>
+    </cell>
+    <cell>
+     <p>INTRODUCCIÓN A LOS POLÍGONOS</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="paq01int.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic sobre la flecha para iniciar el paquete de actividades         &gt;&gt;&gt;</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="portada1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="60.0" border="false">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>GEOCLIC - PAQUETE 1</p>
+    </cell>
+    <cell>
+     <p>INTRODUCCIÓN A LOS POLÍGONOS</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.Identify" name="plgns1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Aquí hay 42 polígonos y 10 no polígonos. Identifica los POLÍGONOS.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="8" cols="13" border="false" image="plgns1a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="13" rows="8" />
+    <ids>0 1 0 1 0 0 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 0 0 1 0 1 0 1 0 1 0 0 0 1 0 1 0 1 0 1 0 1 0 0 0 1 0 1 0 1 0 0 0 1 0 1 0 0 0 1 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 1 0 1 0 1 0 1 0 1</ids>
+   </cells>
+   <cells rows="8" cols="13" border="false" image="plgns1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="13" rows="8" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="plgns2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica todos los polígonos CÓNCAVOS.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="8" cols="13" border="false" image="plgns1a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="13" rows="8" />
+    <ids>0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 0 1 0 0 0 1 0 1 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 1 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0</ids>
+   </cells>
+   <cells rows="8" cols="13" border="false" image="plgns2c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="13" rows="8" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="plgns3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica los POLÍGONOS REGULARES.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="5" border="false" image="plgns3a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="3" />
+    <ids>0 1 1 1 0 0 1 0 0 1 0 0 1 0 0</ids>
+   </cells>
+   <cells rows="3" cols="5" border="false" image="plgns3c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="5" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="plgns4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica todos los TRIÁNGULOS.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="5" border="false" image="plgns4a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="3" />
+    <ids>0 1 0 0 0 1 0 0 1 0 0 1 0 0 0</ids>
+   </cells>
+   <cells rows="3" cols="5" border="false" image="plgns4c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="5" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="polgns01.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Encuentra los nombres de los polígonos de 3, 4, 5, 6, 7, 8, 10 i 12 lados.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="12" columns="10" cellWidth="36.0" cellHeight="36.0" border="true">
+    <style>
+     <color foreground="0x000040" background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>HEPTAGONO*DD</row>
+     <row>TP*******O*E</row>
+     <row>ORETALIRDAUC</row>
+     <row>N*IN***E***A</row>
+     <row>O**AT*C****G</row>
+     <row>G***NA*****O</row>
+     <row>A***GGG****N</row>
+     <row>X**O**UO***O</row>
+     <row>E*N****LN***</row>
+     <row>HONOGOTCOO**</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">TRIANGULO</clue>
+    <clue id="1">CUADRILATERO</clue>
+    <clue id="2">PENTAGONO</clue>
+    <clue id="3">HEXAGONO</clue>
+    <clue id="4">HEPTAGONO</clue>
+    <clue id="5">OCTOGONO</clue>
+    <clue id="6">DECAGONO</clue>
+    <clue id="7">DODECAGONO</clue>
+   </clues>
+   <cells rows="4" cols="2" cellWidth="120.0" cellHeight="90.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell image="3agon1.gif" />
+    <cell image="4agon1.gif" />
+    <cell image="5agon1.gif" />
+    <cell image="6agon1.gif" />
+    <cell image="7agon1.gif" />
+    <cell image="8agon1.gif" />
+    <cell image="10agon1.gif" />
+    <cell image="12agon1.gif" />
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="polig1.ass">
+   <description>
+    <p>Assenyalar no polígons</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica las figuras que NO sean polígonos.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="5" cellWidth="250.0" cellHeight="200.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="4" />
+    <cell id="0" image="triang5.gif" />
+    <cell id="0" image="octago14.gif" />
+    <cell id="0" image="quadrat.gif" />
+    <cell id="0" image="octagir1.gif" />
+    <cell id="1" image="s_cercl2.gif" />
+    <cell id="0" image="nonairr1.gif" />
+    <cell id="0" image="rectangl.gif" />
+    <cell id="0" image="trapezo1.gif" />
+    <cell id="1" image="cercle1.gif" />
+    <cell id="0" image="trpezi11.gif" />
+    <cell id="1" image="nopolig.gif" />
+    <cell id="0" image="rombe1.gif" />
+    <cell id="0" image="hexagon.gif" />
+    <cell id="0" image="hexagon1.gif" />
+    <cell id="0" image="romboi3.gif" />
+    <cell id="0" image="creuroja.gif" />
+    <cell id="0" image="zigazaga.gif" />
+    <cell id="0" image="pentairr.gif" />
+    <cell id="0" image="triang8.gif" />
+    <cell id="0" image="pentago3.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="polig2.ass">
+   <description>
+    <p>Assenyalar quadrilàters</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica todos los CUADRILÁTEROS.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="5" cellWidth="250.0" cellHeight="200.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="4" />
+    <cell id="0" image="triang5.gif" />
+    <cell id="0" image="octago14.gif" />
+    <cell id="1" image="quadrat.gif" />
+    <cell id="0" image="octagir1.gif" />
+    <cell id="1" image="rombe.gif" />
+    <cell id="0" image="nonairr1.gif" />
+    <cell id="1" image="rectangl.gif" />
+    <cell id="1" image="trapezo1.gif" />
+    <cell id="0" image="triang6.gif" />
+    <cell id="1" image="trpezi11.gif" />
+    <cell id="1" image="quadrat2.gif" />
+    <cell id="1" image="rombe1.gif" />
+    <cell id="0" image="hexagon.gif" />
+    <cell id="0" image="hexagon1.gif" />
+    <cell id="1" image="romboi3.gif" />
+    <cell id="0" image="creuroja.gif" />
+    <cell id="0" image="zigazaga.gif" />
+    <cell id="0" image="pentairr.gif" />
+    <cell id="0" image="triang8.gif" />
+    <cell id="0" image="pentago3.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="polig5.ass">
+   <description>
+    <p>Assenyalar polígons regulars</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica los POLÍGONOS REGULARES.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="5" cellWidth="250.0" cellHeight="210.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="4" />
+    <cell id="1" image="triang5.gif" />
+    <cell id="1" image="octago14.gif" />
+    <cell id="1" image="quadrat.gif" />
+    <cell id="0" image="octagir1.gif" />
+    <cell id="0" image="rombe.gif" />
+    <cell id="0" image="nonairr1.gif" />
+    <cell id="0" image="rectangl.gif" />
+    <cell id="0" image="trapezo1.gif" />
+    <cell id="0" image="triang6.gif" />
+    <cell id="0" image="trpezi11.gif" />
+    <cell id="1" image="quadrat2.gif" />
+    <cell id="0" image="rombe1.gif" />
+    <cell id="0" image="hexagon.gif" />
+    <cell id="1" image="hexagon1.gif" />
+    <cell id="0" image="romboi3.gif" />
+    <cell id="0" image="creuroja.gif" />
+    <cell id="0" image="zigazaga.gif" />
+    <cell id="0" image="pentairr.gif" />
+    <cell id="0" image="triang8.gif" />
+    <cell id="1" image="pentago3.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="10agon1.gif" file="10agon1.gif" animated="false" />
+  <media name="12agon1.gif" file="12agon1.gif" animated="false" />
+  <media name="3agon1.gif" file="3agon1.gif" animated="false" />
+  <media name="4agon1.gif" file="4agon1.gif" animated="false" />
+  <media name="5agon1.gif" file="5agon1.gif" animated="false" />
+  <media name="6agon1.gif" file="6agon1.gif" animated="false" />
+  <media name="7agon1.gif" file="7agon1.gif" animated="false" />
+  <media name="8agon1.gif" file="8agon1.gif" animated="false" />
+  <media name="cercle1.gif" file="cercle1.gif" animated="false" />
+  <media name="creuroja.gif" file="creuroja.gif" animated="false" />
+  <media name="grae01a.gif" file="grae01a.gif" animated="false" />
+  <media name="grae01b.gif" file="grae01b.gif" animated="false" />
+  <media name="grae01c.gif" file="grae01c.gif" animated="false" />
+  <media name="grae02a.gif" file="grae02a.gif" animated="false" />
+  <media name="grae02b.gif" file="grae02b.gif" animated="false" />
+  <media name="grae02c.gif" file="grae02c.gif" animated="false" />
+  <media name="grae3a.gif" file="grae3a.gif" animated="false" />
+  <media name="grae3b.gif" file="grae3b.gif" animated="false" />
+  <media name="grae3c.gif" file="grae3c.gif" animated="false" />
+  <media name="hexagon.gif" file="hexagon.gif" animated="false" />
+  <media name="hexagon1.gif" file="hexagon1.gif" animated="false" />
+  <media name="hexairr.gif" file="hexairr.gif" animated="false" />
+  <media name="nonairr.gif" file="nonairr.gif" animated="false" />
+  <media name="nonairr1.gif" file="nonairr1.gif" animated="false" />
+  <media name="nopolig.gif" file="nopolig.gif" animated="false" />
+  <media name="octagir1.gif" file="octagir1.gif" animated="false" />
+  <media name="octagirr.gif" file="octagirr.gif" animated="false" />
+  <media name="octago14.gif" file="octago14.gif" animated="false" />
+  <media name="pentago3.gif" file="pentago3.gif" animated="false" />
+  <media name="pentairr.gif" file="pentairr.gif" animated="false" />
+  <media name="plgns1a.gif" file="plgns1a.gif" animated="false" />
+  <media name="plgns1c.gif" file="plgns1c.gif" animated="false" />
+  <media name="plgns2c.gif" file="plgns2c.gif" animated="false" />
+  <media name="plgns3a.gif" file="plgns3a.gif" animated="false" />
+  <media name="plgns3c.gif" file="plgns3c.gif" animated="false" />
+  <media name="plgns4a.gif" file="plgns4a.gif" animated="false" />
+  <media name="plgns4c.gif" file="plgns4c.gif" animated="false" />
+  <media name="portada1.gif" file="portada1.gif" animated="false" />
+  <media name="quadirr.gif" file="quadirr.gif" animated="false" />
+  <media name="quadrat.gif" file="quadrat.gif" animated="false" />
+  <media name="quadrat2.gif" file="quadrat2.gif" animated="false" />
+  <media name="rectangl.gif" file="rectangl.gif" animated="false" />
+  <media name="rombe.gif" file="rombe.gif" animated="false" />
+  <media name="rombe1.gif" file="rombe1.gif" animated="false" />
+  <media name="romboi3.gif" file="romboi3.gif" animated="false" />
+  <media name="s_cercl2.gif" file="s_cercl2.gif" animated="false" />
+  <media name="trapezi0.gif" file="trapezi0.gif" animated="false" />
+  <media name="trapezo1.gif" file="trapezo1.gif" animated="false" />
+  <media name="triang5.gif" file="triang5.gif" animated="false" />
+  <media name="triang6.gif" file="triang6.gif" animated="false" />
+  <media name="triang7.gif" file="triang7.gif" animated="false" />
+  <media name="triang8.gif" file="triang8.gif" animated="false" />
+  <media name="trpezi11.gif" file="trpezi11.gif" animated="false" />
+  <media name="zigazaga.gif" file="zigazaga.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

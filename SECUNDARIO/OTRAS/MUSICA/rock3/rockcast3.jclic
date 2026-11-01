@@ -1,0 +1,2237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="rockcast3" version="0.1.3">
+ <settings>
+  <title>El rock</title>
+  <revision description="created" date="4/1/11" />
+  <revision description="Publicación en la zonaClic (http://clic.xtec.cat)" date="10/31/13">
+   <author name="Equip Clic" mail="clic@xtec.cat" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Ramon Llanes Bordes" mail="rllanes@xtec.cat" />
+  <organization name="Institut Manuel de Montsuar" mail="c5006513@xtec.cat" url="http://www.xtec.cat/centres/c5006513" city="Lleida" state="Catalunya" />
+  <language>español</language>
+  <description>
+   <p>Este JClic tiene la intención de mostrar una panorámica general de la música rock, especialmente de los orígenes y de las primeras décadas. Son casi 100 actividades repartidas en cuatro proyectos diferentes.</p>
+   <p>&lt;ul&gt;</p>
+   <p>&lt;li&gt;La historia</p>
+   <p>&lt;li&gt;Audiciones</p>
+   <p>&lt;li&gt;Ejercicios</p>
+   <p>&lt;li&gt;Repaso auditivo</p>
+   <p>&lt;/ul&gt;</p>
+  </description>
+  <descriptors area="Música" level="Secundaria (12-16)">aprendizaje de la música, audición musical, rock</descriptors>
+  <eventSounds>
+   <sound id="start" enabled="false" />
+   <sound id="click" enabled="false" />
+   <sound id="actionOk" enabled="false" />
+   <sound id="finishedError" enabled="false" />
+  </eventSounds>
+  <skin file="@default.xml" />
+ </settings>
+ <sequence>
+  <item id="start" name="Portada 3">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="Blues 1 (estructura)" />
+  <item name="Blues 2 (puzle auditiu)" />
+  <item name="Instruments" />
+  <item name="Elements bàsics 1" />
+  <item name="Elements bàsics 2" />
+  <item name="Elements bàsics 3" />
+  <item name="Elements bàsics 4" />
+  <item name="Tribus" />
+  <item name="CD històrics 1" />
+  <item name="CD històrics 2" />
+  <item name="Líders - grups 1" />
+  <item name="Líders - grups 2" />
+  <item name="Lletres - estils" />
+  <item name="Omplir paraules" />
+  <item name="Beatles (components)" />
+  <item name="Beatles - Puzle Sgt. Pepper's" />
+  <item name="Led Zeppelin 1" />
+  <item name="Led Zeppelin 2" />
+  <item name="Resum (cançons - estils 1)" />
+  <item name="Resum (cançons - estils 2)" />
+  <item name="Resum (autors/es - imatges)" />
+  <item name="Resum (grups - imatges)" />
+  <item name="Resum (autors/es - estil)" />
+  <item name="Final 3">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@memory.MemoryGame" name="Beatles (components)" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Qué grandes genios estos cuatro chicos de Liverpool!</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¿Fácil, no?</p>
+    </cell>
+   </messages>
+   <settings margin="20" maxTime="60" countDownTime="false" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="200.0" cellHeight="200.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="28" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>John Lennon</p>
+    </cell>
+    <cell>
+     <p>Paul McCartney</p>
+    </cell>
+    <cell>
+     <p>George Harrison</p>
+    </cell>
+    <cell>
+     <p>Ringo Starr</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="50.0" cellHeight="30.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Calibri" size="22" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="johnlennon.jpg" />
+    <cell image="paul-mccartney.jpg" />
+    <cell image="GeorgeHarrison.jpg" />
+    <cell image="ringostarr.jpg" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="Beatles - Puzle Sgt. Pepper's" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Para muchos, el mejor disco de la historia del rock. Dispones de 75 segundos... (el título en la parte inferior).</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Hay carátulas que son auténticas obras de arte.</p>
+    </cell>
+   </messages>
+   <settings margin="20" dragCells="true" maxTime="75" countDownTime="false" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xE0E1DD">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="4" cols="4" border="true" image="Sgt.Pepper's.jpg">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.Identify" name="Blues 1 (estructura)" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Clica y escucha la estructura de un blues clásico:</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¿Te acordarás?</p>
+    </cell>
+   </messages>
+   <settings margin="20" dragCells="true" report="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="300.0" cellHeight="200.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="B.B. King - Rock me Baby 1.mp3" />
+     <p>A</p>
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="B.B. King - Rock me Baby 2.mp3" />
+     <p>A'</p>
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="B.B. King - Rock me Baby 3.mp3" />
+     <p>B</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Calibri" size="22" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>Los primeros 4 compases se tocan con el acorde principal (I grado, la tónica). La voz canta los tres primeros, mientras la guitarra llena los huecos con pequeñas improvisaciones.</p>
+    </cell>
+    <cell>
+     <p>Se repite la letra de la primera frase, aunque la armonía se ha desplazado a la subdominante (IV grado).</p>
+    </cell>
+    <cell>
+     <p>Los últimos 4 compases son una conclusión de lo anterior, tanto para la letra como para la armonía (acordes: V, la dominante, IV y I).</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="Blues 2 (puzle auditiu)" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Ahora, ordena las 3 audiciones que forman una estrofa de blues:</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="20" dragCells="true" maxTime="45" countDownTime="false" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="300.0" cellHeight="200.0" border="true">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="B.B. King - Rock me Baby 1.mp3" />
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="B.B. King - Rock me Baby 2.mp3" />
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="B.B. King - Rock me Baby 3.mp3" />
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="BUA" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="CD històrics 1" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Relaciona estos discos históricos con sus autores (1):</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¿Tenéis alguno en casa?</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="150.0" cellHeight="150.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>The Beatles</p>
+    </cell>
+    <cell>
+     <p>Pink Floyd</p>
+    </cell>
+    <cell>
+     <p>Jimi Hendrix</p>
+    </cell>
+    <cell>
+     <p>Deep Purple</p>
+    </cell>
+    <cell>
+     <p>The Rolling Stones</p>
+    </cell>
+    <cell>
+     <p>Bob Dylan</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="700.0" cellHeight="150.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Sergeant Pepper's Lonely Hearts Club Band (1967)</p>
+    </cell>
+    <cell>
+     <p>The Dark Side of the Moon (1973)</p>
+    </cell>
+    <cell>
+     <p>Are You Experienced? (1967)</p>
+    </cell>
+    <cell>
+     <p>Made in Japan (1972)</p>
+    </cell>
+    <cell>
+     <p>Let It Bleed (1969)</p>
+    </cell>
+    <cell>
+     <p>Blonde on Blonde (1966)</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell image="Sgt.Pepper's.jpg" />
+    <cell image="Pink Floyd - Dark Side of the Moon.jpg" />
+    <cell image="are-you-experienced.jpg" />
+    <cell image="madeinjapan.jpg" />
+    <cell image="Let_It_Bleed_Rolling_Stones.jpg" />
+    <cell image="blonde.jpg" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="CD històrics 2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Relaciona estos discos históricos con sus autores (y 2):</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Bufff! Y los que me dejo... El listado de los más actuales tienes que hacerlo tú.</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="150.0" cellHeight="150.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>The Sex Pistols</p>
+    </cell>
+    <cell>
+     <p>The Police</p>
+    </cell>
+    <cell>
+     <p>Nirvana</p>
+    </cell>
+    <cell>
+     <p>Michael Jackson</p>
+    </cell>
+    <cell>
+     <p>AC / DC</p>
+    </cell>
+    <cell>
+     <p>Radiohead</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="700.0" cellHeight="150.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Never Mind the Bollocks (1977)</p>
+    </cell>
+    <cell>
+     <p>Synchronicity (1983)</p>
+    </cell>
+    <cell>
+     <p>Nevermind (1991)</p>
+    </cell>
+    <cell>
+     <p>Bad (1987)</p>
+    </cell>
+    <cell>
+     <p>Back in Black (1980)</p>
+    </cell>
+    <cell>
+     <p>OK Computer (1997)</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell image="Sex Pistols 6.jpg" />
+    <cell image="synchronicity1983.jpg" />
+    <cell image="nevermind.jpg" />
+    <cell image="bad.jpg" />
+    <cell image="back in black.jpg" />
+    <cell image="radiohead-ok-computer.jpg" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Elements bàsics 1" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Relaciona estos elementos musicales del rock:</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¿Sabrías identificarlos en una canción?</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="250.0" cellHeight="150.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Riff</p>
+    </cell>
+    <cell>
+     <p>Cover</p>
+    </cell>
+    <cell>
+     <p>Hook line</p>
+    </cell>
+    <cell>
+     <p>Slap</p>
+    </cell>
+    <cell>
+     <p>Power chord</p>
+    </cell>
+    <cell>
+     <p>Sonido Spector</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="800.0" cellHeight="150.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="22" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Breve frase musical que se repite continuamente y que caracteriza y cohesiona una canción. </p>
+    </cell>
+    <cell>
+     <p>Término equivalente a versión; es decir, a una nueva interpretación de una canción anterior.</p>
+    </cell>
+    <cell>
+     <p>Melodía atractiva, fácil de recordar y repetitiva, ¡imposible de olvidar!</p>
+    </cell>
+    <cell>
+     <p>Técnica funk de tocar el bajo que consiste en "golpear" las cuerdas con la palma de la mano.</p>
+    </cell>
+    <cell>
+     <p>Son dos o tres notas (sobre el I y el V grados) en las cuerdas graves, muy fuertes y distorsionadas.</p>
+    </cell>
+    <cell>
+     <p>Melodía pegadiza, arreglos sofisticados, ecos, instrumentos variados y grabación multipistas ("wall of sound" o muro de sonido).</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="6" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Elements bàsics 2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Relaciona estas curiosidades de la música rock:</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Está claro que el futuro no pasa por la venta de CD...</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="7" cols="1" cellWidth="250.0" cellHeight="150.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell>
+     <p>Hit parade</p>
+    </cell>
+    <cell>
+     <p>MTV</p>
+    </cell>
+    <cell>
+     <p>Jukebox</p>
+    </cell>
+    <cell>
+     <p>Disco de Oro</p>
+    </cell>
+    <cell>
+     <p>Single</p>
+    </cell>
+    <cell>
+     <p>LP</p>
+    </cell>
+    <cell>
+     <p>Grammy</p>
+    </cell>
+   </cells>
+   <cells rows="7" cols="1" cellWidth="800.0" cellHeight="150.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="22" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell>
+     <p>Lista de éxitos de las canciones con más ventas (ya sabes que el rock a veces se debate entre arte e industria).</p>
+    </cell>
+    <cell>
+     <p>Canal de televisión dedicado íntegramente a la música moderna (creado en 1981).</p>
+    </cell>
+    <cell>
+     <p>Máquina que, previo pago, permite seleccionar y escuchar canciones diversas.</p>
+    </cell>
+    <cell>
+     <p>Es un sistema que premia los discos más vendidos según la población de cada país.</p>
+    </cell>
+    <cell>
+     <p>Disco sencillo (gira a 45 RPM) que solo podía grabar dos canciones, una en cada cara (años 50).</p>
+    </cell>
+    <cell>
+     <p>Disco de larga duración (gira a 33 RPM), de vinilo e introducido durante los años 60. En 1980 aparece el CD.</p>
+    </cell>
+    <cell>
+     <p>Premios de la Academia de la música de los EUA. Existen diversas categorías y se consideran los Óscars de la música.</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="7" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Elements bàsics 3" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Relaciona estos personajes vinculados al mundo del rock:</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>No solo los músicos han escrito la historia del rock.</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="7" cols="1" cellWidth="250.0" cellHeight="140.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell>
+     <p>John Travolta</p>
+    </cell>
+    <cell>
+     <p>Malcolm McLaren</p>
+    </cell>
+    <cell>
+     <p>Alan Freed</p>
+    </cell>
+    <cell>
+     <p>Brian Epstein</p>
+    </cell>
+    <cell>
+     <p>John Pasche</p>
+    </cell>
+    <cell>
+     <p>Marcus Garvey</p>
+    </cell>
+    <cell>
+     <p>Ed Sullivan</p>
+    </cell>
+   </cells>
+   <cells rows="7" cols="1" cellWidth="800.0" cellHeight="140.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="22" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell>
+     <p>Protagonista de la película "Saturday night fever".</p>
+    </cell>
+    <cell>
+     <p>Ideólogo del fenómeno punk y mánager de los Sex Pistols.</p>
+    </cell>
+    <cell>
+     <p>Locutor de radio que unió las palabras rock y roll para definir la nueva música de la juventud.</p>
+    </cell>
+    <cell>
+     <p>Mánager de The Beatles.</p>
+    </cell>
+    <cell>
+     <p>Atribuido equivocadamente a Andy Warhol, es el creador del logotipo de los Rolling's (y de este JClic).</p>
+    </cell>
+    <cell>
+     <p>Profeta de la filosofía rastafari que inspiró la música reggae.</p>
+    </cell>
+    <cell>
+     <p>Presentador de un popular programa de TV con actuaciones musicales históricas.</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="7" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Elements bàsics 4" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¿Conoces su nombre real?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¿Ya has pensado tu nombre artístico?</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="8" cols="1" cellWidth="250.0" cellHeight="125.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="8" />
+    <cell>
+     <p>Bob Dylan</p>
+    </cell>
+    <cell>
+     <p>Madonna</p>
+    </cell>
+    <cell image="Prince-logo.bmp" />
+    <cell>
+     <p>Sting</p>
+    </cell>
+    <cell>
+     <p>Jimi Hendrix</p>
+    </cell>
+    <cell>
+     <p>David Bowie</p>
+    </cell>
+    <cell>
+     <p>Donna Summer</p>
+    </cell>
+    <cell>
+     <p>Eminem</p>
+    </cell>
+   </cells>
+   <cells rows="8" cols="1" cellWidth="800.0" cellHeight="125.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE1E0DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="8" />
+    <cell>
+     <p>Robert Allen Zimmerman</p>
+    </cell>
+    <cell>
+     <p>Louise Veronica Ciccone</p>
+    </cell>
+    <cell>
+     <p>Prince Rogers Nelson</p>
+    </cell>
+    <cell>
+     <p>Gordon Matthew Thomas Sumner</p>
+    </cell>
+    <cell>
+     <p>Johnny Allen Hendrix</p>
+    </cell>
+    <cell>
+     <p>David Robert Jones </p>
+    </cell>
+    <cell>
+     <p>LaDonna Adrian Gaines</p>
+    </cell>
+    <cell>
+     <p>Marshall Bruce Mathers III</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="8" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="Final 3" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>1. Clica JClic para consultar los resultados. 2. MENÚ PRINCIPAL (imagen o flecha)</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="5" cols="1" border="false" image="Portada2.jpg">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell />
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="menu" params="rockcast.jclic" />
+    </cell>
+    <cell />
+    <cell>
+     <style borderStroke="10.0" markerStroke="2.7">
+      <font family="Calibri" size="48" bold="true" />
+      <color background="0xFFFFFF" shadow="0xCCCCCC" border="0xCCCCCC" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="menu" params="rockcast.jclic" />
+     <p>¡Larga vida al rock! (3)</p>
+    </cell>
+    <cell txtAlign="middle,top">
+     <style borderStroke="10.0" markerStroke="5.0">
+      <font family="Calibri" size="28" italic="true" />
+      <color background="0xFFFFFF" shadow="0xCCCCCC" border="0xCCCCCC" />
+     </style>
+     <p>rllanes@xtec.cat</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Instruments" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Los instrumentos principales del rock. Relaciona:</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¿Te gustaría tocar algún instrumento?</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="200.0" cellHeight="200.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell image="guitarra martin.jpg" />
+    <cell image="Guitarra Fender Stratocaster.jpg" />
+    <cell image="teclat.jpg" />
+    <cell image="baix.jpg" />
+    <cell image="bateria.jpg" />
+   </cells>
+   <cells rows="5" cols="1" cellWidth="999.0" cellHeight="200.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Calibri" size="22" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>Diseñada en gran parte por C. F. Martin (a finales del s.XIX), difiere de la guitarra clásica por ser un poco más grande, por el mástil estrecho y, sobre todo, por llevar cuerdas metálicas.</p>
+    </cell>
+    <cell>
+     <p>Ya existía con el blues y el jazz, pero se popularizó con el rock, convirtiéndose en su principal instrumento. Destacan dos modelos: las míticas Fender Stratocaster y la Gibson Les Paul.</p>
+    </cell>
+    <cell>
+     <p>Su función en la música rock ha cambiado según la época o el estilo: desde el piano clásico del rock'n'roll hasta los sintetizadores del pop más sofisticado, capaces de imitar y crear cualquier sonoridad.</p>
+    </cell>
+    <cell>
+     <p>Su electrificación no se consolida hasta el inicio del rock gracias a las aportaciones del luthier Leo Fender. Es una combinación de contrabajo (la afinación) y de guitarra (el diseño).</p>
+    </cell>
+    <cell>
+     <p>Es un conjunto de membranófonos e idiófonos preparados para que pueda tocarlos una sola persona. La inventaron, a principios del siglo XX, los músicos de jazz de Nueva Orleans.</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>Guitarra acústica</p>
+    </cell>
+    <cell>
+     <p>Guitarra eléctrica</p>
+    </cell>
+    <cell>
+     <p>Piano, teclado y sintetizador</p>
+    </cell>
+    <cell>
+     <p>Bajo eléctrico</p>
+    </cell>
+    <cell>
+     <p>Batería</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@panels.Explore" name="Led Zeppelin 1" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>"Stairway to heaven" (1971 · LP: Led Zeppelin IV) </p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¿Has escuchado con atención?</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="1" cols="5" cellWidth="200.0" cellHeight="150.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="Led Zeppelin - INICI Stairway To Heaven (71).mp3" />
+     <p>1</p>
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="Led Zeppelin - 2 Stairway To Heaven (71).mp3" />
+     <p>2</p>
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="Led Zeppelin - 3 Stairway To Heaven (71).mp3" />
+     <p>3</p>
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="Led Zeppelin - 4 SOLO Stairway To Heaven (71).mp3" />
+     <p>4</p>
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="Led Zeppelin - 5 FINAL Stairway To Heaven (71).mp3" />
+     <p>5</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="800.0" cellHeight="150.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="22" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>Después de la mítica introducción en arpegios de la guitarra, aparecen las flautas; pero... ¿esto es rock duro?</p>
+    </cell>
+    <cell>
+     <p>La voz de Robert Plant canta un enigmático texto que nos habla de una dama desconocida y del inicio de la primavera (además de algunas alusiones satánicas... ).</p>
+    </cell>
+    <cell>
+     <p>Es una canción larga y elaborada (8 minutos). Ahora se escucha una nueva melodía acompañada por unos acordes y arpegios de guitarra con un sonido acústico, aún...</p>
+    </cell>
+    <cell>
+     <p>En toda composición de hard rock y heavy, tiene que haber un gran "solo" de guitarra como, por ejemplo, este del virtuoso Jimmy Page.</p>
+    </cell>
+    <cell>
+     <p>Y, finalmente, la canción culmina con un contundente tema basado en un típico riff de power chords distorsionados. </p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="Led Zeppelin 2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Qué gran canción! ¿Sabrías ordenarla?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Muy bien! Ahora ya conoces mejor uno de los grandes temas de la historia del rock.</p>
+    </cell>
+   </messages>
+   <settings margin="20" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="1" cols="5" cellWidth="200.0" cellHeight="150.0" border="true">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="Led Zeppelin - INICI Stairway To Heaven (71).mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="Led Zeppelin - 2 Stairway To Heaven (71).mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="Led Zeppelin - 3 Stairway To Heaven (71).mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="Led Zeppelin - 4 SOLO Stairway To Heaven (71).mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="Led Zeppelin - 5 FINAL Stairway To Heaven (71).mp3" />
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Lletres - estils" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Relaciona los textos con su estilo (busca algunas palabras clave):</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¿Difícil?... Cada estilo tiene su filosofía.</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="215.0" cellHeight="150.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE1E0DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>FOLK</p>
+    </cell>
+    <cell>
+     <p>PUNK</p>
+    </cell>
+    <cell>
+     <p>POP</p>
+    </cell>
+    <cell>
+     <p>HEAVY</p>
+    </cell>
+    <cell>
+     <p>ROCK &amp; ROLL</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="999.0" cellHeight="150.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="22" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>Come you masters of war / </p>
+     <p>You that build the big guns / </p>
+     <p>You that build the death planes / </p>
+     <p>You that build all the bombs / </p>
+     <p>You that hide behind walls / You that hide behind desks / I just want you to know / I can see through your masks.</p>
+    </cell>
+    <cell>
+     <p>Right! now ha, ha... / </p>
+     <p>I am an anti-christ / I am an anarchist / Don't know what I want / But I know how to get it.</p>
+     <p>I wanna destroy the passer by / </p>
+     <p>'cos i wanna be anarchy / </p>
+     <p>no dogs body.</p>
+    </cell>
+    <cell>
+     <p>Here comes the sun / Here comes the sun / And I say it's all right / Little darling / It's been a long cold lonely winter / Little darling / It feels like years since it's been here.</p>
+     <p>Here comes the sun / Here comes the sun / And I say it's all right.</p>
+    </cell>
+    <cell>
+     <p>No stop signs, speed limit / </p>
+     <p>Nobody's gonna slow me down / </p>
+     <p>Like a wheel, gonna spin it / </p>
+     <p>Nobody's gonna mess me round / </p>
+     <p>Hey Satan, payed my dues / </p>
+     <p>Playing in a rocking band / </p>
+     <p>Hey Momma, look at me / </p>
+     <p>I'm on my way to the promised land. / </p>
+     <p>I'm on the highway to hell.</p>
+    </cell>
+    <cell>
+     <p>Up in the morning and out to school / The teacher is teaching the Golden Rule / American history and practical math / You study them hard and hoping to pass / Working your fingers right down to the bone / And the guy behind you won't leave you alone.</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p> Bob Dylan "Masters of war"</p>
+    </cell>
+    <cell>
+     <p>The Sex Pistols "Anachy in the U.K."</p>
+    </cell>
+    <cell>
+     <p>The Beatles "Here comes the sun"</p>
+    </cell>
+    <cell>
+     <p> AC / DC "Highway to hell"</p>
+    </cell>
+    <cell>
+     <p>Chuck Berry "School day"</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Líders - grups 1" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Relaciona cada artista con su grupo (1):</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Desgraciadamente, algunos de ellos ya no están...</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="7" cols="1" cellWidth="250.0" cellHeight="150.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell>
+     <p>John Lennon &amp; Paul McCartney</p>
+    </cell>
+    <cell>
+     <p>Mick Jagger &amp; Keith Richards</p>
+    </cell>
+    <cell>
+     <p>Jim Morrison</p>
+    </cell>
+    <cell>
+     <p>Sid Vicious</p>
+    </cell>
+    <cell>
+     <p>Angus Young</p>
+    </cell>
+    <cell>
+     <p>Freddie Mercury</p>
+    </cell>
+    <cell>
+     <p>Eric Clapton</p>
+    </cell>
+   </cells>
+   <cells rows="7" cols="1" cellWidth="600.0" cellHeight="150.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell>
+     <p>The Beatles</p>
+    </cell>
+    <cell>
+     <p>The Rolling Stones</p>
+    </cell>
+    <cell>
+     <p>The Doors</p>
+    </cell>
+    <cell>
+     <p>The Sex Pistols</p>
+    </cell>
+    <cell>
+     <p>AC / DC</p>
+    </cell>
+    <cell>
+     <p>Queen</p>
+    </cell>
+    <cell>
+     <p>The Yardbirds, Cream...</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="7" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Líders - grups 2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Relaciona cada artista con su grupo (y 2):</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Hay músicos que marcan el estilo de toda una banda de rock.</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="7" cols="1" cellWidth="250.0" cellHeight="150.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell>
+     <p>Kurt Cobain</p>
+    </cell>
+    <cell>
+     <p>Bono</p>
+    </cell>
+    <cell>
+     <p>Phil Collins &amp; Peter Gabriel</p>
+    </cell>
+    <cell>
+     <p>Mark Knopfler</p>
+    </cell>
+    <cell>
+     <p>John Bonham</p>
+    </cell>
+    <cell>
+     <p>Bob Marley</p>
+    </cell>
+    <cell>
+     <p>Sting</p>
+    </cell>
+   </cells>
+   <cells rows="7" cols="1" cellWidth="600.0" cellHeight="150.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell>
+     <p>Nirvana</p>
+    </cell>
+    <cell>
+     <p>U2</p>
+    </cell>
+    <cell>
+     <p>Genesis</p>
+    </cell>
+    <cell>
+     <p>Dire Straits</p>
+    </cell>
+    <cell>
+     <p>Led Zeppelin</p>
+    </cell>
+    <cell>
+     <p>The Wailers</p>
+    </cell>
+    <cell>
+     <p>The Police</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="7" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="Omplir paraules" code="" autoJump="true">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Canta... y verás como las palabras te salen solas. Completa:</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Fantástico! ¿No has pensado en formar tu propio grupo de rock?</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false">
+     <size width="700" height="561" />
+    </window>
+    <eventSounds enabled="false" />
+   </settings>
+   <checkButton>Avaluació</checkButton>
+   <document>
+    <style name="default" italic="false" size="24" background="0xFFFFFF" family="Calibri" tabWidth="12" bold="false" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text size="24" background="0xFFFFFF" family="Calibri">1. The answer, my friend, is </text>
+      <text italic="false" size="24" background="0xFFFFFF" family="Calibri" bold="false">blowin</text>
+      <text size="24" background="0xFFFFFF" family="Calibri">'in the </text>
+      <target>
+       <answer>wind</answer>
+       <response fill="_" length="4" maxLength="4" show="w" />
+       <info mode="onError" delay="1">
+        <cell width="100" height="40">
+         <p>Bob Dylan</p>
+        </cell>
+       </info>
+       <text>wind</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text size="24" background="0xFFFFFF" family="Calibri">2. Oh, I believe in </text>
+      <target>
+       <answer>yesterday</answer>
+       <response fill="_" length="9" maxLength="9" show="y" />
+       <info mode="onError">
+        <cell width="100" height="40">
+         <p>The Beatles</p>
+        </cell>
+       </info>
+       <text>yesterday</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text size="24" background="0xFFFFFF" family="Calibri">3. Where gonna rock around the </text>
+      <target>
+       <answer>clock</answer>
+       <response fill="_" length="5" maxLength="5" show="c" />
+       <info mode="onError">
+        <cell width="100" height="40">
+         <p>Bill Haley</p>
+        </cell>
+       </info>
+       <text>clock</text>
+      </target>
+      <text size="24" background="0xFFFFFF" family="Calibri"> tonight</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text size="24" background="0xFFFFFF" family="Calibri">4. I hope I die before I get old (talkin' bout my </text>
+      <target>
+       <answer>generation</answer>
+       <response fill="_" length="10" maxLength="10" show="g" />
+       <info mode="onError">
+        <cell width="100" height="40">
+         <p>The Who</p>
+        </cell>
+       </info>
+       <text>generation</text>
+      </target>
+      <text size="24" background="0xFFFFFF" family="Calibri">)</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text size="24" background="0xFFFFFF" family="Calibri">5. I can't get no (</text>
+      <target>
+       <answer>satisfaction</answer>
+       <response fill="_" length="12" maxLength="12" show="s" />
+       <info mode="onError">
+        <cell width="100" height="40">
+         <p>The Rolling Stones</p>
+        </cell>
+       </info>
+       <text>satisfaction</text>
+      </target>
+      <text size="24" background="0xFFFFFF" family="Calibri">)</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text size="24" background="0xFFFFFF" family="Calibri">6. </text>
+      <target>
+       <answer>Smoke</answer>
+       <response fill="_" length="5" maxLength="5" show="S" />
+       <info mode="onError">
+        <cell width="100" height="40">
+         <p>Deep Purple</p>
+        </cell>
+       </info>
+       <text>Smoke</text>
+      </target>
+      <text size="24" background="0xFFFFFF" family="Calibri"> on the water, the fire in the sky</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text size="24" background="0xFFFFFF" family="Calibri">7. God save the Queen (...) there's no </text>
+      <target>
+       <answer>future</answer>
+       <response fill="_" length="6" maxLength="6" show="f" />
+       <info mode="onError">
+        <cell width="100" height="40">
+         <p>The Sex Pistols</p>
+        </cell>
+       </info>
+       <text>future</text>
+      </target>
+      <text size="24" background="0xFFFFFF" family="Calibri"> for you</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text size="24" background="0xFFFFFF" family="Calibri">9. All in all you're just another brick in the </text>
+      <target>
+       <answer>wall</answer>
+       <response fill="_" length="4" maxLength="4" show="w" />
+       <info mode="onError">
+        <cell width="100" height="40">
+         <p>Pink Floyd</p>
+        </cell>
+       </info>
+       <text>wall</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text size="24" background="0xFFFFFF" family="Calibri">10. </text>
+      <target>
+       <answer>Imagine</answer>
+       <response fill="_" length="7" maxLength="7" show="I" />
+       <info mode="onError">
+        <cell width="100" height="40">
+         <p>John Lennon</p>
+        </cell>
+       </info>
+       <text>Imagine</text>
+      </target>
+      <text size="24" background="0xFFFFFF" family="Calibri"> all the people, living life in peace, uh, uh, uh, uh, uh</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" checkAccents="false" checkPunctuation="false" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="Portada 3" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Hola! Ahora que ya eres un/a experto/a en la historia del rock, completa los siguientes ejercicios:</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="5" cols="1" border="false" image="Portada rock2.jpg">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell />
+    <cell />
+    <cell />
+    <cell>
+     <style borderStroke="10.0" markerStroke="5.0">
+      <font family="Calibri" size="26" />
+      <color background="0xFFFFFF" shadow="0xCCCCCC" border="0xCCCCCC" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Beatles - Yesterday (65).mp3" autoStart="true" />
+     <p>Ramon Llanes Bordes</p>
+    </cell>
+    <cell txtAlign="middle,top">
+     <style borderStroke="10.0" markerStroke="5.0">
+      <font family="Calibri" size="48" />
+      <color background="0xFFFFFF" shadow="0xCCCCCC" border="0xCCCCCC" />
+     </style>
+     <p>El rock (3) · Ejercicios</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Resum (autors/es - estil)" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Y para acabar, relaciona los autores con su estilo:</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false">
+     <sound id="start" enabled="false" />
+     <sound id="click" enabled="false" />
+     <sound id="actionOk" enabled="false" />
+     <sound id="finishedError" enabled="false" />
+     <sound id="finishedOk" enabled="false" />
+    </eventSounds>
+   </settings>
+   <cells rows="2" cols="6" cellWidth="200.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="2" />
+    <cell>
+     <p>Rock &amp; roll</p>
+    </cell>
+    <cell>
+     <p>Heavy</p>
+    </cell>
+    <cell>
+     <p>Punk</p>
+    </cell>
+    <cell>
+     <p>Folk</p>
+    </cell>
+    <cell>
+     <p>Reggae</p>
+    </cell>
+    <cell>
+     <p>Funk</p>
+    </cell>
+    <cell>
+     <p>Hip hop (rap)</p>
+    </cell>
+    <cell>
+     <p>Soul</p>
+    </cell>
+    <cell>
+     <p>New Wave</p>
+    </cell>
+    <cell>
+     <p>Grunge</p>
+    </cell>
+    <cell>
+     <p>Pop</p>
+    </cell>
+    <cell>
+     <p>Rock sinfónico(o progresivo)</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="6" cellWidth="200.0" cellHeight="200.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Calibri" size="24" />
+     <color foreground="0xFFFFFF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="2" />
+    <cell txtAlign="middle,bottom" image="Bill Haley 2.jpg">
+     <p>Bill Haley</p>
+    </cell>
+    <cell txtAlign="middle,bottom" image="deepp.jpg">
+     <p>Deep Purple</p>
+    </cell>
+    <cell txtAlign="middle,bottom" image="ramones-1.jpg">
+     <p>Ramones</p>
+    </cell>
+    <cell txtAlign="middle,bottom" image="SG 1.jpg">
+     <p>Simon &amp; Garfunkel</p>
+    </cell>
+    <cell txtAlign="middle,bottom" image="Bob Marley 2.jpg">
+     <p>Bob Marley</p>
+    </cell>
+    <cell txtAlign="middle,bottom" image="jamesbrown2.jpg">
+     <p>James Brown</p>
+    </cell>
+    <cell txtAlign="middle,top" image="Eminem2.jpg">
+     <p>Eminem</p>
+    </cell>
+    <cell txtAlign="middle,top" image="Otis Redding .jpg">
+     <p>Otis Redding</p>
+    </cell>
+    <cell txtAlign="middle,bottom" image="Police3.jpg">
+     <p>The Police</p>
+    </cell>
+    <cell txtAlign="middle,top" image="Nirvana.jpg">
+     <p>Nirvana</p>
+    </cell>
+    <cell txtAlign="middle,bottom" image="johnlennon.jpg">
+     <p>John Lennon</p>
+    </cell>
+    <cell image="pinkfloyd3.jpg">
+     <p>Pink Floyd</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Resum (autors/es - imatges)" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Relaciona las imágenes con cada artista:</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Perfecto!</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="200.0" cellHeight="200.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>Elvis Presley (1935-1977)</p>
+    </cell>
+    <cell>
+     <p>Bob Dylan (1941)</p>
+    </cell>
+    <cell>
+     <p>Aretha Franklin (1942)</p>
+    </cell>
+    <cell>
+     <p>Eric Clapton (1945)</p>
+    </cell>
+    <cell>
+     <p>Michael Jackson (1958-2009)</p>
+    </cell>
+    <cell>
+     <p>Bruce Springsteen (1949) "The Boss"</p>
+    </cell>
+    <cell>
+     <p>Donna Summer (1948)</p>
+    </cell>
+    <cell>
+     <p>Bob Marley (1945-1981)</p>
+    </cell>
+    <cell>
+     <p>James Brown (1933-2006)</p>
+    </cell>
+    <cell>
+     <p>Jimi Hendrix (1942-1970)</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="5" cellWidth="200.0" cellHeight="200.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Calibri" size="22" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell image="Elvis.jpg" />
+    <cell image="Bob Dylan 1.jpg" />
+    <cell image="Aretha Franklin.jpg" />
+    <cell image="ericclapton.jpg" />
+    <cell image="Michael Jackson.jpg" />
+    <cell image="BruceSpringsteen.jpg" />
+    <cell image="Donna Summer 77.jpg" />
+    <cell image="Bob Marley 2.jpg" />
+    <cell image="jamesbrown2.jpg" />
+    <cell image="Jimi Hendrix.jpg" />
+   </cells>
+   <cells rows="4" cols="1" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell image="Elvis.jpg" />
+    <cell image="Bob Dylan 1.jpg" />
+    <cell image="Aretha Franklin.jpg" />
+    <cell image="ericclapton.jpg" />
+    <cell image="Michael Jackson.jpg" />
+    <cell image="BruceSpringsteen.jpg" />
+    <cell image="Donna Summer 77.jpg" />
+    <cell image="Bob Marley 2.jpg" />
+    <cell image="jamesbrown2.jpg" />
+    <cell image="Jimi Hendrix.jpg" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Resum (cançons - estils 1)" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Relaciona cada canción con su estilo (1):</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Ok! ¿Has pensado alguna vez en ser mánager?</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="Elvis Presley - Hound Dog (56).mp3" />
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="Sex Pistols - God Save the Queen (77).mp3" />
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="Righteous Brothers - Unchained Melody.mp3" />
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="Bob Dylan - Blowin In The Wind (62).mp3" />
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="Eurythmics - Sweet Dreams (84).mp3" />
+    </cell>
+    <cell id="5">
+     <media type="PLAY_AUDIO" level="1" file="Sugar Hill Gang - Rappers Delight.mp3" />
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Calibri" size="24" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Rock &amp; roll</p>
+    </cell>
+    <cell>
+     <p>Punk</p>
+    </cell>
+    <cell>
+     <p>Soul</p>
+    </cell>
+    <cell>
+     <p>Folk</p>
+    </cell>
+    <cell>
+     <p>Tecno</p>
+    </cell>
+    <cell>
+     <p>Rap</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Elvis Presley "Hound dog" (1956)</p>
+    </cell>
+    <cell>
+     <p>Sex Pistols "God save the Queen" (1977)</p>
+    </cell>
+    <cell>
+     <p>Righteous Brothers "Unchained melody" (1965)</p>
+    </cell>
+    <cell>
+     <p>Bob Dylan "Blowin' in the wind" (1962)</p>
+    </cell>
+    <cell>
+     <p>Eurythmics "Sweet dreams" (1984)</p>
+    </cell>
+    <cell>
+     <p>Sugar Hill Gang "Rapper's delight" (1980)</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Resum (cançons - estils 2)" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Relaciona cada canción con su estilo (y 2):</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Buen oído!</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="Beatles - Yesterday (65).mp3" />
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="Guns'n'Roses - Welcome to the jungle (87).mp3" />
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="Bob Marley - INICI Is this love (78).mp3" />
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="Donna Summer - Hot Stuff (79).mp3" />
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="Lynyrd Skynyrd - Sweet Home Alabama (74).mp3" />
+    </cell>
+    <cell id="5">
+     <media type="PLAY_AUDIO" level="1" file="Pink Floyd - INICI Dark Side of  the Moon (Money) (73).mp3" />
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Calibri" size="24" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Pop</p>
+    </cell>
+    <cell>
+     <p>Hard rock / Heavy</p>
+    </cell>
+    <cell>
+     <p>Reggae</p>
+    </cell>
+    <cell>
+     <p>Música disco</p>
+    </cell>
+    <cell>
+     <p>Country rock</p>
+    </cell>
+    <cell>
+     <p>Rock sinfónico o progresivo</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>The Beatles "Yesterday" (1965)</p>
+    </cell>
+    <cell>
+     <p>Guns'n'roses "Welcome to the jungle" (1987)</p>
+    </cell>
+    <cell>
+     <p>Bob Marley "Is this love" (1978)</p>
+    </cell>
+    <cell>
+     <p>Donna Summer "Hot stuff" (1979)</p>
+    </cell>
+    <cell>
+     <p>Lynyrd Skynyrd "Sweet home Alabama" (1974)</p>
+    </cell>
+    <cell>
+     <p>Pink Floyd "Dark side of  the Moon (Money)" (1973)</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Resum (grups - imatges)" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Relaciona las imágenes con cada grupo musical:</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Fantástico!</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+   </settings>
+   <cells rows="2" cols="6" cellWidth="200.0" cellHeight="200.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="2" />
+    <cell>
+     <p>The Beach Boys</p>
+    </cell>
+    <cell>
+     <p>The Beatles</p>
+    </cell>
+    <cell>
+     <p>The Rolling Stones</p>
+    </cell>
+    <cell>
+     <p>AC / DC</p>
+    </cell>
+    <cell>
+     <p>The Sex Pistols</p>
+    </cell>
+    <cell>
+     <p>Nirvana</p>
+    </cell>
+    <cell>
+     <p>Oasis</p>
+    </cell>
+    <cell>
+     <p>Queen</p>
+    </cell>
+    <cell>
+     <p>The Police</p>
+    </cell>
+    <cell>
+     <p>Green Day</p>
+    </cell>
+    <cell>
+     <p>U2</p>
+    </cell>
+    <cell>
+     <p>The Doors</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="6" cellWidth="200.0" cellHeight="200.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Calibri" size="22" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="2" />
+    <cell image="Beach Boys.jpg" />
+    <cell image="beatles_abbey_road.jpg" />
+    <cell image="rolling-stones8.jpg" />
+    <cell image="Acdc2.jpg" />
+    <cell image="Sex Pistols 7.jpg" />
+    <cell image="Nirvana.jpg" />
+    <cell image="oasis.jpg" />
+    <cell image="queen3.jpg" />
+    <cell image="Police3.jpg" />
+    <cell image="green-day.jpg" />
+    <cell image="U2.jpg" />
+    <cell image="doors2.jpg" />
+   </cells>
+   <cells rows="4" cols="1" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="2" />
+    <cell image="Beach Boys.jpg" />
+    <cell image="beatles_abbey_road.jpg" />
+    <cell image="rolling-stones8.jpg" />
+    <cell image="Acdc2.jpg" />
+    <cell image="Sex Pistols 7.jpg" />
+    <cell image="Nirvana.jpg" />
+    <cell image="oasis.jpg" />
+    <cell image="queen3.jpg" />
+    <cell image="Police3.jpg" />
+    <cell image="green-day.jpg" />
+    <cell image="U2.jpg" />
+    <cell image="doors2.jpg" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BUA" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Tribus" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Cada estilo tiene su estética y sus seguidores/as. Relaciona:</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Y tú, ¿eres de alguna tribu urbana?</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="175.0" cellHeight="175.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="22" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell image="Elvis.gif" />
+    <cell image="Hippies.jpg" />
+    <cell image="Heavy - cornut.jpg" />
+    <cell image="Punks.jpg" />
+    <cell image="Disco.jpg" />
+    <cell image="hiphopBreakdance.gif" />
+   </cells>
+   <cells rows="6" cols="1" cellWidth="999.0" cellHeight="175.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Calibri" size="22" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>En los años 50, la juventud toma conciencia de su fuerza y busca señales de identidad:  pantalones vaqueros, masticar chicle, el tupé... mientras escuchaban y bailaban rock'n'roll.</p>
+    </cell>
+    <cell>
+     <p>El movimiento hippy ("flower power") nació a mediados de los 60. Consiguió unir las reivindicaciones políticas pacifistas con la música psicodélica y el folk protesta ("haz el amor y no la guerra").</p>
+    </cell>
+    <cell>
+     <p>Los hay de todas la edades, visten con camisetas negras y llevan el cabello largo. Mueven la cabeza arriba y abajo  (headbanger) y tocan la guitarra ¡sin guitarra! (air guitar).</p>
+    </cell>
+    <cell>
+     <p>El futuro no existe, ¿para qué pensar en él? No están de acuerdo con el sistema (finales de 1970). Reaccionan con agresividad y con una estética personal basada en la negación de la belleza (look pobre).</p>
+    </cell>
+    <cell>
+     <p>Las discotecas se convierten, a finales de los 70, en los nuevos templos de los/las seguidores/as de la música disco. La noche del fin de semana es el momento para bailar y olvidarse de todo.</p>
+    </cell>
+    <cell>
+     <p>La cultura hip hop existe en todo el mundo. Jóvenes con gorra de béisbol, sudadera con capucha, monopatines... mientras recitan unos versos, pintan grafitis o bailan breakdance.</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>"Rockers"</p>
+    </cell>
+    <cell>
+     <p>"Hippies"</p>
+    </cell>
+    <cell>
+     <p>"Heavys"</p>
+    </cell>
+    <cell>
+     <p>"Punkis"</p>
+    </cell>
+    <cell>
+     <p>"Disco"</p>
+    </cell>
+    <cell>
+     <p>"Hip hop"</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BA" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="Prince-logo.bmp" file="prince_logo.bmp" />
+  <media name="Elvis.gif" file="elvis.gif" animated="true" />
+  <media name="hiphopBreakdance.gif" file="hiphopbreakdance.gif" animated="false" />
+  <media name="Acdc2.jpg" file="acdc2.jpg" />
+  <media name="are-you-experienced.jpg" file="are_you_experienced.jpg" />
+  <media name="Aretha Franklin.jpg" file="aretha_franklin.jpg" />
+  <media name="back in black.jpg" file="back_in_black.jpg" />
+  <media name="bad.jpg" file="bad.jpg" />
+  <media name="baix.jpg" file="baix.jpg" />
+  <media name="bateria.jpg" file="bateria.jpg" />
+  <media name="Beach Boys.jpg" file="beach_boys.jpg" />
+  <media name="beatles_abbey_road.jpg" file="beatles_abbey_road.jpg" />
+  <media name="Bill Haley 2.jpg" file="bill_haley_2.jpg" />
+  <media name="blonde.jpg" file="blonde.jpg" />
+  <media name="Bob Dylan 1.jpg" file="bob_dylan_1.jpg" />
+  <media name="Bob Marley 2.jpg" file="bob_marley_2.jpg" />
+  <media name="BruceSpringsteen.jpg" file="brucespringsteen.jpg" />
+  <media name="deepp.jpg" file="deepp.jpg" />
+  <media name="Disco.jpg" file="disco.jpg" />
+  <media name="Donna Summer 77.jpg" file="donna_summer_77.jpg" />
+  <media name="doors2.jpg" file="doors2.jpg" />
+  <media name="Elvis.jpg" file="i01_elvis.jpg" />
+  <media name="Eminem2.jpg" file="eminem2.jpg" />
+  <media name="ericclapton.jpg" file="ericclapton.jpg" />
+  <media name="GeorgeHarrison.jpg" file="georgeharrison.jpg" />
+  <media name="green-day.jpg" file="green_day.jpg" />
+  <media name="Guitarra Fender Stratocaster.jpg" file="guitarra_fender_stratocaster.jpg" />
+  <media name="guitarra martin.jpg" file="guitarra_martin.jpg" />
+  <media name="Heavy - cornut.jpg" file="heavy___cornut.jpg" />
+  <media name="Hippies.jpg" file="hippies.jpg" />
+  <media name="jamesbrown2.jpg" file="jamesbrown2.jpg" />
+  <media name="Jimi Hendrix.jpg" file="jimi_hendrix.jpg" />
+  <media name="johnlennon.jpg" file="johnlennon.jpg" />
+  <media name="Let_It_Bleed_Rolling_Stones.jpg" file="let_it_bleed_rolling_stones.jpg" />
+  <media name="madeinjapan.jpg" file="madeinjapan.jpg" />
+  <media name="Michael Jackson.jpg" file="michael_jackson.jpg" />
+  <media name="nevermind.jpg" file="nevermind.jpg" />
+  <media name="Nirvana.jpg" file="nirvana.jpg" />
+  <media name="oasis.jpg" file="oasis.jpg" />
+  <media name="Otis Redding .jpg" file="otis_redding_.jpg" />
+  <media name="paul-mccartney.jpg" file="paul_mccartney.jpg" />
+  <media name="Pink Floyd - Dark Side of the Moon.jpg" file="pink_floyd___dark_side_of_the_moon.jpg" />
+  <media name="pinkfloyd3.jpg" file="pinkfloyd3.jpg" />
+  <media name="Police3.jpg" file="police3.jpg" />
+  <media name="Portada rock2.jpg" file="portada_rock2.jpg" />
+  <media name="Portada2.jpg" file="portada2.jpg" />
+  <media name="Punks.jpg" file="punks.jpg" />
+  <media name="queen3.jpg" file="queen3.jpg" />
+  <media name="radiohead-ok-computer.jpg" file="radiohead_ok_computer.jpg" />
+  <media name="ramones-1.jpg" file="ramones_1.jpg" />
+  <media name="ringostarr.jpg" file="ringostarr.jpg" />
+  <media name="rolling-stones8.jpg" file="rolling_stones8.jpg" />
+  <media name="Sex Pistols 6.jpg" file="sex_pistols_6.jpg" />
+  <media name="Sex Pistols 7.jpg" file="sex_pistols_7.jpg" />
+  <media name="SG 1.jpg" file="sg_1.jpg" />
+  <media name="Sgt.Pepper's.jpg" file="sgt.pepper_s.jpg" />
+  <media name="synchronicity1983.jpg" file="synchronicity1983.jpg" />
+  <media name="teclat.jpg" file="teclat.jpg" />
+  <media name="U2.jpg" file="u2.jpg" />
+  <media name="B.B. King - Rock me Baby 1.mp3" file="i01_i01_b.b._king___rock_me_baby_1.mp3" />
+  <media name="B.B. King - Rock me Baby 2.mp3" file="i01_i01_b.b._king___rock_me_baby_2.mp3" />
+  <media name="B.B. King - Rock me Baby 3.mp3" file="i01_i01_b.b._king___rock_me_baby_3.mp3" />
+  <media name="Beatles - Yesterday (65).mp3" file="beatles___yesterday__65_.mp3" />
+  <media name="Bob Dylan - Blowin In The Wind (62).mp3" file="bob_dylan___blowin_in_the_wind__62_.mp3" />
+  <media name="Bob Marley - INICI Is this love (78).mp3" file="bob_marley___inici_is_this_love__78_.mp3" />
+  <media name="Donna Summer - Hot Stuff (79).mp3" file="donna_summer___hot_stuff__79_.mp3" />
+  <media name="Elvis Presley - Hound Dog (56).mp3" file="elvis_presley___hound_dog__56_.mp3" />
+  <media name="Eurythmics - Sweet Dreams (84).mp3" file="eurythmics___sweet_dreams__84_.mp3" />
+  <media name="Guns'n'Roses - Welcome to the jungle (87).mp3" file="guns_n_roses___welcome_to_the_jungle__87_.mp3" />
+  <media name="Led Zeppelin - 2 Stairway To Heaven (71).mp3" file="led_zeppelin___2_stairway_to_heaven__71_.mp3" />
+  <media name="Led Zeppelin - 3 Stairway To Heaven (71).mp3" file="led_zeppelin___3_stairway_to_heaven__71_.mp3" />
+  <media name="Led Zeppelin - 4 SOLO Stairway To Heaven (71).mp3" file="led_zeppelin___4_solo_stairway_to_heaven__71_.mp3" />
+  <media name="Led Zeppelin - 5 FINAL Stairway To Heaven (71).mp3" file="led_zeppelin___5_final_stairway_to_heaven__71_.mp3" />
+  <media name="Led Zeppelin - INICI Stairway To Heaven (71).mp3" file="led_zeppelin___inici_stairway_to_heaven__71_.mp3" />
+  <media name="Lynyrd Skynyrd - Sweet Home Alabama (74).mp3" file="lynyrd_skynyrd___sweet_home_alabama__74_.mp3" />
+  <media name="Pink Floyd - INICI Dark Side of  the Moon (Money) (73).mp3" file="pink_floyd___inici_dark_side_of__the_moon__money___73_.mp3" />
+  <media name="Righteous Brothers - Unchained Melody.mp3" file="righteous_brothers___unchained_melody.mp3" />
+  <media name="Sex Pistols - God Save the Queen (77).mp3" file="sex_pistols___god_save_the_queen__77_.mp3" />
+  <media name="Sugar Hill Gang - Rappers Delight.mp3" file="sugar_hill_gang___rappers_delight.mp3" />
+ </mediaBag>
+</JClicProject>
+

@@ -1,0 +1,4799 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="enserie" version="0.1.3">
+ <settings>
+  <title>En serie</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="2/26/07" />
+  <revision description="Conversión de Clic3 a JClic" date="2/26/07">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="María del Carmen Mánuel Vez" mail="macarmavez@terra.es" />
+  <organization name="CEIP Casería de Ossio" mail="caseria1@ono.com" city="San Fernando - Cádiz" />
+  <language>español</language>
+  <description>
+   <p>Proyecto de actividades sobre seriación para educación infantil. El proyecto está dividido en tres partes cada una de ellas en función del número de elementos que constituyen la serie: dos elementos, tres elementos y cuatro elementos.</p>
+  </description>
+  <descriptors area="Matemáticas" level="Infantil (3-6)">series</descriptors>
+  <skin file="@blue.xml" />
+ </settings>
+ <sequence>
+  <item id="start" name="inicio" delay="5">
+   <jump action="STOP" id="back" />
+  </item>
+  <item id="menu" name="índice">
+   <jump action="STOP" id="forward" />
+  </item>
+  <item id="1nivel" name="serie5" delay="2">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="serie6" delay="2" />
+  <item name="serie7" delay="2" />
+  <item name="serie8" delay="2" />
+  <item name="serie16" delay="2" />
+  <item name="serie9" delay="2" />
+  <item name="serie10" delay="2" />
+  <item name="serie11" delay="2" />
+  <item name="serie12" delay="2" />
+  <item name="serie13" delay="2" />
+  <item name="serie14" delay="2" />
+  <item name="serie17" delay="2" />
+  <item name="serie20" delay="2" />
+  <item name="serie18" delay="2" />
+  <item name="serie19" delay="2" />
+  <item name="serie1" delay="2" />
+  <item name="serie2" delay="2" />
+  <item name="serie3" delay="2" />
+  <item name="serie4" delay="2" />
+  <item name="serie15" delay="2" />
+  <item name="serie21" delay="2" />
+  <item name="serie22" delay="2" />
+  <item name="serie23" delay="2">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="2nivel" name="3serie1" delay="2">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="3serie2" delay="2" />
+  <item name="3serie3" delay="2" />
+  <item name="3serie4" delay="2" />
+  <item name="3serie8" delay="2" />
+  <item name="3serie5" delay="2" />
+  <item name="3serie6" delay="2" />
+  <item name="3serie7" delay="2" />
+  <item name="3serie9" delay="2" />
+  <item name="3serie10" delay="2" />
+  <item name="3serie11" delay="2" />
+  <item name="3serie12" delay="2" />
+  <item name="3serie13" delay="2" />
+  <item name="3serie19" delay="2" />
+  <item name="3serie14" delay="2" />
+  <item name="3serie15" delay="2" />
+  <item name="3serie16" delay="2" />
+  <item name="3serie17" delay="2" />
+  <item name="3serie18" delay="2" />
+  <item name="3 serie20" delay="2" />
+  <item name="3serie21" delay="2">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="3nivel" name="4serie1" delay="2">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="4serie2" delay="2" />
+  <item name="4serie3" delay="2" />
+  <item name="4serie4" delay="2" />
+  <item name="4serie5" delay="2" />
+  <item name="4serie6" delay="2" />
+  <item name="4serie7" delay="2" />
+  <item name="4serie8" delay="2" />
+  <item name="4serie9" delay="2" />
+  <item name="4serie10" delay="2" />
+  <item name="4serie11" delay="2" />
+  <item name="4serie12" delay="2" />
+  <item name="4serie13" delay="2" />
+  <item name="4serie14" delay="2" />
+  <item name="4serie15" delay="2" />
+  <item name="4serie16" delay="2" />
+  <item name="4serie17" delay="2" />
+  <item name="4serie18" delay="2" />
+  <item name="4serie19" delay="2" />
+  <item name="4serie20" delay="2">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.ComplexAssociation" name="3 serie20">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_23_06.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="9" cellWidth="86.0" cellHeight="100.0" border="true" id="primary">
+    <style transparent="true">
+     <font family="Arial" size="17" bold="true" />
+    </style>
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="uno.gif" />
+    <cell image="dos.gif" />
+    <cell image="tres.gif" />
+    <cell id="1" />
+    <cell id="2" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+    <cell id="0" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="86.0" cellHeight="100.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="tres.gif" />
+    <cell image="uno.gif" />
+    <cell image="dos.gif" />
+   </cells>
+   <cells rows="1" cols="9" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="uno.gif" />
+    <cell image="dos.gif" />
+    <cell image="tres.gif" />
+    <cell image="uno.gif" />
+    <cell image="dos.gif" />
+    <cell image="tres.gif" />
+    <cell image="uno.gif" />
+    <cell image="dos.gif" />
+    <cell image="tres.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="3serie1">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_23_06.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="9" cellWidth="93.0" cellHeight="109.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="BOLAAZ.GIF" />
+    <cell image="BOLAAM.GIF" />
+    <cell image="BOLAV.GIF" />
+    <cell id="2" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+    <cell id="0" />
+    <cell id="1" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="93.0" cellHeight="109.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="BOLAAM.GIF" />
+    <cell image="BOLAV.GIF" />
+    <cell image="BOLAAZ.GIF" />
+   </cells>
+   <cells rows="1" cols="9" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="BOLAAZ.GIF" />
+    <cell image="BOLAAM.GIF" />
+    <cell image="BOLAV.GIF" />
+    <cell image="BOLAAZ.GIF" />
+    <cell image="BOLAAM.GIF" />
+    <cell image="BOLAV.GIF" />
+    <cell image="BOLAAZ.GIF" />
+    <cell image="BOLAAM.GIF" />
+    <cell image="BOLAV.GIF" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="3serie10">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="kind_084.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="9" cellWidth="100.0" cellHeight="100.0" border="true" id="primary">
+    <style transparent="true">
+     <font family="Arial" size="17" bold="true" />
+    </style>
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="rectangulomAz.gif" />
+    <cell image="rectanguloAz.gif" />
+    <cell image="rectangulopAz.gif" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="100.0" cellHeight="100.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="rectangulomAz.gif" />
+    <cell image="rectanguloAz.gif" />
+    <cell image="rectangulopAz.gif" />
+   </cells>
+   <cells rows="1" cols="9" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="rectangulomAz.gif" />
+    <cell image="rectanguloAz.gif" />
+    <cell image="rectangulopAz.gif" />
+    <cell image="rectangulomAz.gif" />
+    <cell image="rectanguloAz.gif" />
+    <cell image="rectangulopAz.gif" />
+    <cell image="rectangulomAz.gif" />
+    <cell image="rectanguloAz.gif" />
+    <cell image="rectangulopAz.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="3serie11">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_23_06.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="9" cellWidth="100.0" cellHeight="100.0" border="true" id="primary">
+    <style transparent="true">
+     <font family="Arial" size="17" bold="true" />
+    </style>
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="trianguloV.gif" />
+    <cell image="triangulopV.gif" />
+    <cell image="triangulopV.gif" />
+    <cell id="2" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="2" />
+    <cell id="0" />
+    <cell id="0" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="116.0" cellHeight="121.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="triangulopV.gif" />
+    <cell image="triangulomV.gif" />
+    <cell image="trianguloV.gif" />
+   </cells>
+   <cells rows="1" cols="9" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="trianguloV.gif" />
+    <cell image="triangulopV.gif" />
+    <cell image="triangulopV.gif" />
+    <cell image="trianguloV.gif" />
+    <cell image="triangulopV.gif" />
+    <cell image="triangulopV.gif" />
+    <cell image="trianguloV.gif" />
+    <cell image="triangulopV.gif" />
+    <cell image="triangulopV.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="3serie12">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_02_11.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="9" cellWidth="100.0" cellHeight="100.0" border="true" id="primary">
+    <style transparent="true">
+     <font family="Arial" size="17" bold="true" />
+    </style>
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="BOLAROJ.GIF" />
+    <cell image="cuadradoaz.gif" />
+    <cell image="triangulopam.gif" />
+    <cell id="0" />
+    <cell id="4" />
+    <cell id="1" />
+    <cell id="0" />
+    <cell id="4" />
+    <cell id="1" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="100.0" cellHeight="100.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="BOLAROJ.GIF" />
+    <cell image="triangulopam.gif" />
+    <cell image="trianguloam.gif" />
+    <cell image="cuadrapaz.gif" />
+    <cell image="cuadradoaz.gif" />
+    <cell image="BOLAAZ.GIF" />
+   </cells>
+   <cells rows="1" cols="9" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="BOLAROJ.GIF" />
+    <cell image="cuadradoaz.gif" />
+    <cell image="triangulopam.gif" />
+    <cell image="BOLAROJ.GIF" />
+    <cell image="cuadradoaz.gif" />
+    <cell image="triangulopam.gif" />
+    <cell image="BOLAROJ.GIF" />
+    <cell image="cuadradoaz.gif" />
+    <cell image="triangulopam.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="3serie13">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_78_02.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="9" cellWidth="100.0" cellHeight="100.0" border="true" id="primary">
+    <style transparent="true">
+     <font family="Arial" size="17" bold="true" />
+    </style>
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="rectangulomAz.gif" />
+    <cell image="cuadrapV.gif" />
+    <cell image="cuadradoaz.gif" />
+    <cell id="3" />
+    <cell id="1" />
+    <cell id="2" />
+    <cell id="3" />
+    <cell id="1" />
+    <cell id="2" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="100.0" cellHeight="100.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="rectanguloAz.gif" />
+    <cell image="cuadrapV.gif" />
+    <cell image="cuadradoaz.gif" />
+    <cell image="rectangulomAz.gif" />
+    <cell image="cuadradoV.gif" />
+    <cell image="cuadrapaz.gif" />
+   </cells>
+   <cells rows="1" cols="9" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="rectangulomAz.gif" />
+    <cell image="cuadrapV.gif" />
+    <cell image="cuadradoaz.gif" />
+    <cell image="rectangulomAz.gif" />
+    <cell image="cuadrapV.gif" />
+    <cell image="cuadradoaz.gif" />
+    <cell image="rectangulomAz.gif" />
+    <cell image="cuadrapV.gif" />
+    <cell image="cuadradoaz.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="3serie14">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_0064.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="9" cellWidth="93.0" cellHeight="100.0" border="true" id="primary">
+    <style transparent="true">
+     <font family="Arial" size="17" bold="true" />
+    </style>
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="trianguloam.gif" />
+    <cell image="triangulopam.gif" />
+    <cell image="rectangulopV.gif" />
+    <cell id="0" />
+    <cell id="5" />
+    <cell id="1" />
+    <cell id="0" />
+    <cell id="5" />
+    <cell id="1" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="93.0" cellHeight="100.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="trianguloam.gif" />
+    <cell image="rectangulopV.gif" />
+    <cell image="triangulomAm.gif" />
+    <cell image="rectanguloV.gif" />
+    <cell image="rectangulomV.gif" />
+    <cell image="triangulopam.gif" />
+   </cells>
+   <cells rows="1" cols="9" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="trianguloam.gif" />
+    <cell image="triangulopam.gif" />
+    <cell image="rectangulopV.gif" />
+    <cell image="trianguloam.gif" />
+    <cell image="triangulopam.gif" />
+    <cell image="rectangulopV.gif" />
+    <cell image="trianguloam.gif" />
+    <cell image="triangulopam.gif" />
+    <cell image="rectangulopV.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="3serie15">
+   <messages>
+    <cell avoidOverlapping="true" border="true" image="colorea.gif" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Colorea la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="up.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="9" cellWidth="90.0" cellHeight="128.0" border="true" id="primary">
+    <style transparent="true">
+     <font family="Arial" size="17" bold="true" />
+    </style>
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="tulipan roj.gif" />
+    <cell image="tulipanlila.gif" />
+    <cell image="tulipanRosa.gif" />
+    <cell id="5" image="tulipanB.gif" />
+    <cell id="2" image="tulipanB.gif" />
+    <cell id="4" image="tulipanB.gif" />
+    <cell id="5" image="tulipanB.gif" />
+    <cell id="2" image="tulipanB.gif" />
+    <cell id="4" image="tulipanB.gif" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="119.0" cellHeight="120.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="AMARILLO.GIF" />
+    <cell image="AZUL.GIF" />
+    <cell image="LILA.gif" />
+    <cell image="VERDE.GIF" />
+    <cell image="ROSA.gif" />
+    <cell image="ROJO.GIF" />
+   </cells>
+   <cells rows="1" cols="9" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="tulipan roj.gif" />
+    <cell image="tulipanlila.gif" />
+    <cell image="tulipanRosa.gif" />
+    <cell image="tulipan roj.gif" />
+    <cell image="tulipanlila.gif" />
+    <cell image="tulipanRosa.gif" />
+    <cell image="tulipan roj.gif" />
+    <cell image="tulipanlila.gif" />
+    <cell image="tulipanRosa.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="3serie16">
+   <messages>
+    <cell avoidOverlapping="true" border="true" image="colorea.gif" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Colorea la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_02_11.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="9" cellWidth="100.0" cellHeight="129.0" border="true" id="primary">
+    <style transparent="true">
+     <font family="Arial" size="17" bold="true" />
+    </style>
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="gorroV.gif" />
+    <cell image="gorroNar.gif" />
+    <cell image="gorroAm.gif" />
+    <cell id="5" image="gorroB.gif" />
+    <cell id="2" image="gorroB.gif" />
+    <cell id="0" image="gorroB.gif" />
+    <cell id="5" image="gorroB.gif" />
+    <cell id="2" image="gorroB.gif" />
+    <cell id="0" image="gorroB.gif" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="119.0" cellHeight="121.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="AMARILLO.GIF" />
+    <cell image="AZUL.GIF" />
+    <cell image="NARANJA.gif" />
+    <cell image="LILA.gif" />
+    <cell image="ROJO.GIF" />
+    <cell image="VERDE.GIF" />
+   </cells>
+   <cells rows="1" cols="9" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="gorroV.gif" />
+    <cell image="gorroNar.gif" />
+    <cell image="gorroAm.gif" />
+    <cell image="gorroV.gif" />
+    <cell image="gorroNar.gif" />
+    <cell image="gorroAm.gif" />
+    <cell image="gorroV.gif" />
+    <cell image="gorroNar.gif" />
+    <cell image="gorroAm.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="3serie17">
+   <messages>
+    <cell avoidOverlapping="true" border="true" image="colorea.gif" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Colorea la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_0064.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="9" cellWidth="100.0" cellHeight="100.0" border="true" id="primary">
+    <style transparent="true">
+     <font family="Arial" size="17" bold="true" />
+    </style>
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="dadoAz.gif" />
+    <cell image="dadoAm.gif" />
+    <cell image="dadoRoj.gif" />
+    <cell id="4" image="dadoB.gif" />
+    <cell id="3" image="dadoB.gif" />
+    <cell id="0" image="dadoB.gif" />
+    <cell id="4" image="dadoB.gif" />
+    <cell id="3" image="dadoB.gif" />
+    <cell id="0" image="dadoB.gif" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="117.0" cellHeight="120.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="ROJO.GIF" />
+    <cell image="ROSA.gif" />
+    <cell image="VERDE.GIF" />
+    <cell image="AMARILLO.GIF" />
+    <cell image="AZUL.GIF" />
+    <cell image="NARANJA.gif" />
+   </cells>
+   <cells rows="1" cols="9" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="dadoAz.gif" />
+    <cell image="dadoAm.gif" />
+    <cell image="dadoRoj.gif" />
+    <cell image="dadoAz.gif" />
+    <cell image="dadoAm.gif" />
+    <cell image="dadoRoj.gif" />
+    <cell image="dadoAz.gif" />
+    <cell image="dadoAm.gif" />
+    <cell image="dadoRoj.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="3serie18">
+   <messages>
+    <cell avoidOverlapping="true" border="true" image="colorea.gif" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Colorea la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="kind_084.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="9" cellWidth="90.0" cellHeight="128.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="tulipanAm.gif" />
+    <cell image="tulipanAm.gif" />
+    <cell image="gorroAz.gif" />
+    <cell id="0" image="tulipanB.gif" />
+    <cell id="0" image="tulipanB.gif" />
+    <cell id="1" image="gorroB.gif" />
+    <cell id="0" image="tulipanB.gif" />
+    <cell id="0" image="tulipanB.gif" />
+    <cell id="1" image="gorroB.gif" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="100.0" cellHeight="120.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="AMARILLO.GIF" />
+    <cell image="AZUL.GIF" />
+    <cell image="LILA.gif" />
+    <cell image="NARANJA.gif" />
+    <cell image="VERDE.GIF" />
+    <cell image="ROSA.gif" />
+   </cells>
+   <cells rows="1" cols="9" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="tulipanAm.gif" />
+    <cell image="tulipanAm.gif" />
+    <cell image="gorroAz.gif" />
+    <cell image="tulipanAm.gif" />
+    <cell image="tulipanAm.gif" />
+    <cell image="gorroAz.gif" />
+    <cell image="tulipanAm.gif" />
+    <cell image="tulipanAm.gif" />
+    <cell image="gorroAz.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="3serie19">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_78_02.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="9" cellWidth="90.0" cellHeight="120.0" border="true" id="primary">
+    <style transparent="true">
+     <font family="Arial" size="17" bold="true" />
+    </style>
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="gorrorosa.gif" />
+    <cell image="gorrorosa.gif" />
+    <cell image="tulipanlila.gif" />
+    <cell id="2" />
+    <cell id="2" />
+    <cell id="1" />
+    <cell id="2" />
+    <cell id="2" />
+    <cell id="1" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="90.0" cellHeight="120.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="ROSA.gif" />
+    <cell image="tulipanlila.gif" />
+    <cell image="gorrorosa.gif" />
+    <cell image="tulipanRosa.gif" />
+    <cell image="gorroAz.gif" />
+    <cell image="dadoNar.gif" />
+   </cells>
+   <cells rows="1" cols="9" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <cell image="gorrorosa.gif" />
+    <cell image="gorrorosa.gif" />
+    <cell image="tulipanlila.gif" />
+    <cell image="gorrorosa.gif" />
+    <cell image="gorrorosa.gif" />
+    <cell image="tulipanlila.gif" />
+    <cell image="gorrorosa.gif" />
+    <cell image="gorrorosa.gif" />
+    <cell image="tulipanlila.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="3serie2">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="up.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="9" cellWidth="93.0" cellHeight="109.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="triangulopaz.gif" />
+    <cell image="triangulopr.gif" />
+    <cell image="triangulopV.gif" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="93.0" cellHeight="109.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="triangulopaz.gif" />
+    <cell image="triangulopr.gif" />
+    <cell image="triangulopV.gif" />
+   </cells>
+   <cells rows="1" cols="9" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="triangulopaz.gif" />
+    <cell image="triangulopr.gif" />
+    <cell image="triangulopV.gif" />
+    <cell image="triangulopaz.gif" />
+    <cell image="triangulopr.gif" />
+    <cell image="triangulopV.gif" />
+    <cell image="triangulopaz.gif" />
+    <cell image="triangulopr.gif" />
+    <cell image="triangulopV.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="3serie21">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_22_25.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="9" cellWidth="86.0" cellHeight="100.0" border="true" id="primary">
+    <style transparent="true">
+     <font family="Arial" size="17" bold="true" />
+    </style>
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="tres.gif" />
+    <cell image="dos.gif" />
+    <cell image="uno.gif" />
+    <cell id="1" />
+    <cell id="0" />
+    <cell id="2" />
+    <cell id="1" />
+    <cell id="0" />
+    <cell id="2" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="86.0" cellHeight="100.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="dos.gif" />
+    <cell image="tres.gif" />
+    <cell image="uno.gif" />
+   </cells>
+   <cells rows="1" cols="9" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <cell image="tres.gif" />
+    <cell image="dos.gif" />
+    <cell image="uno.gif" />
+    <cell image="tres.gif" />
+    <cell image="dos.gif" />
+    <cell image="uno.gif" />
+    <cell image="tres.gif" />
+    <cell image="dos.gif" />
+    <cell image="uno.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="3serie3">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_02_11.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="9" cellWidth="90.0" cellHeight="100.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="cuadradomAm.gif" />
+    <cell image="cuadradomaz.gif" />
+    <cell image="cuadradomR.gif" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="90.0" cellHeight="100.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="cuadradomAm.gif" />
+    <cell image="cuadradomaz.gif" />
+    <cell image="cuadradomR.gif" />
+   </cells>
+   <cells rows="1" cols="9" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="cuadradomAm.gif" />
+    <cell image="cuadradomaz.gif" />
+    <cell image="cuadradomR.gif" />
+    <cell image="cuadradomAm.gif" />
+    <cell image="cuadradomaz.gif" />
+    <cell image="cuadradomR.gif" />
+    <cell image="cuadradomAm.gif" />
+    <cell image="cuadradomaz.gif" />
+    <cell image="cuadradomR.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="3serie4">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_22_25.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="9" cellWidth="90.0" cellHeight="100.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="BOLAAM.GIF" />
+    <cell image="cuadradoam.gif" />
+    <cell image="trianguloam.gif" />
+    <cell id="2" />
+    <cell id="1" />
+    <cell id="0" />
+    <cell id="2" />
+    <cell id="1" />
+    <cell id="0" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="90.0" cellHeight="100.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="trianguloam.gif" />
+    <cell image="cuadradoam.gif" />
+    <cell image="BOLAAM.GIF" />
+   </cells>
+   <cells rows="1" cols="9" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="BOLAAM.GIF" />
+    <cell image="cuadradoam.gif" />
+    <cell image="trianguloam.gif" />
+    <cell image="BOLAAM.GIF" />
+    <cell image="cuadradoam.gif" />
+    <cell image="trianguloam.gif" />
+    <cell image="BOLAAM.GIF" />
+    <cell image="cuadradoam.gif" />
+    <cell image="trianguloam.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="3serie5">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_23_06.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="9" cellWidth="90.0" cellHeight="120.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="dadoNar.gif" />
+    <cell image="gorroNar.gif" />
+    <cell image="tulipanNar.gif" />
+    <cell id="1" />
+    <cell id="2" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+    <cell id="0" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="90.0" cellHeight="120.0" border="true" id="secondary">
+    <style transparent="true">
+     <font family="Arial" size="17" bold="true" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="tulipanNar.gif" />
+    <cell image="dadoNar.gif" />
+    <cell image="gorroNar.gif" />
+   </cells>
+   <cells rows="1" cols="9" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="dadoNar.gif" />
+    <cell image="gorroNar.gif" />
+    <cell image="tulipanNar.gif" />
+    <cell image="dadoNar.gif" />
+    <cell image="gorroNar.gif" />
+    <cell image="tulipanNar.gif" />
+    <cell image="dadoNar.gif" />
+    <cell image="gorroNar.gif" />
+    <cell image="tulipanNar.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="3serie6">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_78_02.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="9" cellWidth="90.0" cellHeight="100.0" border="true" id="primary">
+    <style transparent="true">
+     <font family="Arial" size="17" bold="true" />
+    </style>
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="cuadradoaz.gif" />
+    <cell image="trianguloaz.gif" />
+    <cell image="rectanguloAz.gif" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="90.0" cellHeight="100.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="cuadradoaz.gif" />
+    <cell image="trianguloaz.gif" />
+    <cell image="rectanguloAz.gif" />
+   </cells>
+   <cells rows="1" cols="9" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="cuadradoaz.gif" />
+    <cell image="trianguloaz.gif" />
+    <cell image="rectanguloAz.gif" />
+    <cell image="cuadradoaz.gif" />
+    <cell image="trianguloaz.gif" />
+    <cell image="rectanguloAz.gif" />
+    <cell image="cuadradoaz.gif" />
+    <cell image="trianguloaz.gif" />
+    <cell image="rectanguloAz.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="3serie7">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="kind_084.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="9" cellWidth="90.0" cellHeight="100.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="BOLAROJ.GIF" />
+    <cell image="rectanguloR.gif" />
+    <cell image="cuadradoR.gif" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="90.0" cellHeight="100.0" border="true" id="secondary">
+    <style transparent="true">
+     <font family="Arial" size="17" bold="true" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="BOLAROJ.GIF" />
+    <cell image="rectanguloR.gif" />
+    <cell image="cuadradoR.gif" />
+   </cells>
+   <cells rows="1" cols="9" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <cell image="BOLAROJ.GIF" />
+    <cell image="rectanguloR.gif" />
+    <cell image="cuadradoR.gif" />
+    <cell image="BOLAROJ.GIF" />
+    <cell image="rectanguloR.gif" />
+    <cell image="cuadradoR.gif" />
+    <cell image="BOLAROJ.GIF" />
+    <cell image="rectanguloR.gif" />
+    <cell image="cuadradoR.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="3serie8">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="up.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="9" cellWidth="100.0" cellHeight="100.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="lapizcorto.gif" />
+    <cell image="lapizmedia.gif" />
+    <cell image="lapizlargo.gif" />
+    <cell id="0" />
+    <cell id="2" />
+    <cell id="1" />
+    <cell id="0" />
+    <cell id="2" />
+    <cell id="1" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="100.0" cellHeight="100.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="lapizcorto.gif" />
+    <cell image="lapizlargo.gif" />
+    <cell image="lapizmedia.gif" />
+   </cells>
+   <cells rows="1" cols="9" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="lapizcorto.gif" />
+    <cell image="lapizmedia.gif" />
+    <cell image="lapizlargo.gif" />
+    <cell image="lapizcorto.gif" />
+    <cell image="lapizmedia.gif" />
+    <cell image="lapizlargo.gif" />
+    <cell image="lapizcorto.gif" />
+    <cell image="lapizmedia.gif" />
+    <cell image="lapizlargo.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="3serie9">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_22_25.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="9" cellWidth="100.0" cellHeight="100.0" border="true" id="primary">
+    <style transparent="true">
+     <font family="Arial" size="17" bold="true" />
+    </style>
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="rectanguloAm.gif" />
+    <cell image="rectangulomAm.gif" />
+    <cell image="rectangulopAm.gif" />
+    <cell id="0" />
+    <cell id="2" />
+    <cell id="1" />
+    <cell id="0" />
+    <cell id="2" />
+    <cell id="1" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="100.0" cellHeight="100.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="rectanguloAm.gif" />
+    <cell image="rectangulopAm.gif" />
+    <cell image="rectangulomAm.gif" />
+   </cells>
+   <cells rows="1" cols="9" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell image="rectanguloAm.gif" />
+    <cell image="rectangulomAm.gif" />
+    <cell image="rectangulopAm.gif" />
+    <cell image="rectanguloAm.gif" />
+    <cell image="rectangulomAm.gif" />
+    <cell image="rectangulopAm.gif" />
+    <cell image="rectanguloAm.gif" />
+    <cell image="rectangulomAm.gif" />
+    <cell image="rectangulopAm.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="4serie1">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_0064.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="12" cellWidth="84.0" cellHeight="120.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="12" rows="1" />
+    <cell image="BOLAAM.GIF" />
+    <cell image="BOLAAZ.GIF" />
+    <cell image="BOLAROJ.GIF" />
+    <cell image="BOLAV.GIF" />
+    <cell id="1" />
+    <cell id="2" />
+    <cell id="3" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+    <cell id="3" />
+    <cell id="0" />
+   </cells>
+   <cells rows="1" cols="4" cellWidth="84.0" cellHeight="120.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="BOLAV.GIF" />
+    <cell image="BOLAAM.GIF" />
+    <cell image="BOLAAZ.GIF" />
+    <cell image="BOLAROJ.GIF" />
+   </cells>
+   <cells rows="1" cols="12" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="12" rows="1" />
+    <cell image="BOLAAM.GIF" />
+    <cell image="BOLAAZ.GIF" />
+    <cell image="BOLAROJ.GIF" />
+    <cell image="BOLAV.GIF" />
+    <cell image="BOLAAM.GIF" />
+    <cell image="BOLAAZ.GIF" />
+    <cell image="BOLAROJ.GIF" />
+    <cell image="BOLAV.GIF" />
+    <cell image="BOLAAM.GIF" />
+    <cell image="BOLAAZ.GIF" />
+    <cell image="BOLAROJ.GIF" />
+    <cell image="BOLAV.GIF" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="4serie10">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_23_06.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="8" cellWidth="100.0" cellHeight="100.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="8" rows="1" />
+    <ids>-1 -1 -1 -1 1 0 4 2</ids>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="100.0" cellHeight="100.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell image="triangulomAz.gif" />
+    <cell image="rectangulopR.gif" />
+    <cell image="cuadradomV.gif" />
+    <cell image="BOLAAZ.GIF" />
+    <cell image="BOLAAM.GIF" />
+    <cell image="cuadrapV.gif" />
+    <cell image="rectangulomR.gif" />
+    <cell image="trianguloaz.gif" />
+   </cells>
+   <cells rows="1" cols="8" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="8" rows="1" />
+    <cell image="rectangulopR.gif" />
+    <cell image="triangulomAz.gif" />
+    <cell image="BOLAAM.GIF" />
+    <cell image="cuadradomV.gif" />
+    <cell image="rectangulopR.gif" />
+    <cell image="triangulomAz.gif" />
+    <cell image="BOLAAM.GIF" />
+    <cell image="cuadradomV.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="4serie11">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_78_02.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="8" cellWidth="100.0" cellHeight="100.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="8" rows="1" />
+    <ids>-1 -1 -1 -1 1 4 5 0</ids>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="100.0" cellHeight="100.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="dadoAm.gif" />
+    <cell image="triangulomAz.gif" />
+    <cell image="triangulopaz.gif" />
+    <cell image="cuadrapAm.gif" />
+    <cell image="gorroAz.gif" />
+    <cell image="cuadradomAm.gif" />
+   </cells>
+   <cells rows="1" cols="8" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="8" rows="1" />
+    <cell image="triangulomAz.gif" />
+    <cell image="gorroAz.gif" />
+    <cell image="cuadradomAm.gif" />
+    <cell image="dadoAm.gif" />
+    <cell image="triangulomAz.gif" />
+    <cell image="gorroAz.gif" />
+    <cell image="cuadradomAm.gif" />
+    <cell image="dadoAm.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="4serie12">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="kind_084.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="8" cellWidth="100.0" cellHeight="100.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="8" rows="1" />
+    <ids>-1 -1 -1 -1 2 2 0 4</ids>
+   </cells>
+   <cells rows="1" cols="5" cellWidth="100.0" cellHeight="100.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell image="gorroRoj.gif" />
+    <cell image="cuadradomR.gif" />
+    <cell image="cuadrapR.gif" />
+    <cell image="cuadradoR.gif" />
+    <cell image="dadoRoj.gif" />
+   </cells>
+   <cells rows="1" cols="8" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="8" rows="1" />
+    <cell image="cuadrapR.gif" />
+    <cell image="cuadrapR.gif" />
+    <cell image="gorroRoj.gif" />
+    <cell image="dadoRoj.gif" />
+    <cell image="cuadrapR.gif" />
+    <cell image="cuadrapR.gif" />
+    <cell image="gorroRoj.gif" />
+    <cell image="dadoRoj.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="4serie13">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="up.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="8" cellWidth="100.0" cellHeight="123.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="8" rows="1" />
+    <ids>-1 -1 -1 -1 3 0 1 2</ids>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="100.0" cellHeight="116.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell image="gorroNar.gif" />
+    <cell image="dadoNar.gif" />
+    <cell image="tulipanRosa.gif" />
+    <cell image="lapizcorto.gif" />
+    <cell image="lapizmedia.gif" />
+    <cell image="tulipanNar.gif" />
+    <cell image="gorrorosa.gif" />
+    <cell image="dadoAm.gif" />
+   </cells>
+   <cells rows="1" cols="8" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="8" rows="1" />
+    <cell image="lapizcorto.gif" />
+    <cell image="gorroNar.gif" />
+    <cell image="dadoNar.gif" />
+    <cell image="tulipanRosa.gif" />
+    <cell image="lapizcorto.gif" />
+    <cell image="gorroNar.gif" />
+    <cell image="dadoNar.gif" />
+    <cell image="tulipanRosa.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="4serie14">
+   <messages>
+    <cell avoidOverlapping="true" border="true" image="colorea.gif" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Colorea la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_0064.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="12" cellWidth="88.0" cellHeight="155.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="12" rows="1" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="1" image="dadoB.gif" />
+    <cell id="1" image="dadoB.gif" />
+    <cell id="1" image="dadoB.gif" />
+    <cell id="0" image="dadoB.gif" />
+    <cell id="1" image="dadoB.gif" />
+    <cell id="1" image="dadoB.gif" />
+    <cell id="1" image="dadoB.gif" />
+    <cell id="0" image="dadoB.gif" />
+   </cells>
+   <cells rows="1" cols="6" cellWidth="150.0" cellHeight="151.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="AMARILLO.GIF" />
+    <cell image="AZUL.GIF" />
+    <cell image="LILA.gif" />
+    <cell image="NARANJA.gif" />
+    <cell image="ROSA.gif" />
+    <cell image="VERDE.GIF" />
+   </cells>
+   <cells rows="1" cols="12" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="12" rows="1" />
+    <cell image="dadoAz.gif" />
+    <cell image="dadoAz.gif" />
+    <cell image="dadoAz.gif" />
+    <cell image="dadoAm.gif" />
+    <cell image="dadoAz.gif" />
+    <cell image="dadoAz.gif" />
+    <cell image="dadoAz.gif" />
+    <cell image="dadoAm.gif" />
+    <cell image="dadoAz.gif" />
+    <cell image="dadoAz.gif" />
+    <cell image="dadoAz.gif" />
+    <cell image="dadoAm.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="4serie15">
+   <messages>
+    <cell avoidOverlapping="true" border="true" image="colorea.gif" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Colorea la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_23_06.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="12" cellWidth="81.0" cellHeight="133.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="12" rows="1" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="2" image="cuadrapB.gif" />
+    <cell image="cuadrapB.gif" />
+    <cell id="1" image="cuadrapB.gif" />
+    <cell id="0" image="cuadrapB.gif" />
+    <cell id="2" image="cuadrapB.gif" />
+    <cell image="cuadrapB.gif" />
+    <cell id="1" image="cuadrapB.gif" />
+    <cell id="0" image="cuadrapB.gif" />
+   </cells>
+   <cells rows="1" cols="6" cellWidth="150.0" cellHeight="151.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="AMARILLO.GIF" />
+    <cell image="AZUL.GIF" />
+    <cell image="VERDE.GIF" />
+    <cell image="ROSA.gif" />
+    <cell image="ROJO.GIF" />
+    <cell image="NARANJA.gif" />
+   </cells>
+   <cells rows="1" cols="12" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="12" rows="1" />
+    <cell image="cuadrapV.gif" />
+    <cell image="cuadrapB.gif" />
+    <cell image="cuadrapaz.gif" />
+    <cell image="cuadrapAm.gif" />
+    <cell image="cuadrapV.gif" />
+    <cell image="cuadrapB.gif" />
+    <cell image="cuadrapaz.gif" />
+    <cell image="cuadrapAm.gif" />
+    <cell image="cuadrapV.gif" />
+    <cell image="cuadrapB.gif" />
+    <cell image="cuadrapaz.gif" />
+    <cell image="cuadrapAm.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="4serie16">
+   <messages>
+    <cell avoidOverlapping="true" border="true" image="colorea.gif" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Colorea la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_02_11.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="12" cellWidth="100.0" cellHeight="153.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="12" rows="1" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="0" image="gorroB.gif" />
+    <cell id="1" image="gorroB.gif" />
+    <cell id="4" image="gorroB.gif" />
+    <cell id="0" image="gorroB.gif" />
+    <cell id="0" image="gorroB.gif" />
+    <cell id="1" image="gorroB.gif" />
+    <cell id="4" image="gorroB.gif" />
+    <cell id="0" image="gorroB.gif" />
+   </cells>
+   <cells rows="1" cols="5" cellWidth="154.0" cellHeight="162.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell image="VERDE.GIF" />
+    <cell image="NARANJA.gif" />
+    <cell image="LILA.gif" />
+    <cell image="AZUL.GIF" />
+    <cell image="AMARILLO.GIF" />
+   </cells>
+   <cells rows="1" cols="12" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="12" rows="1" />
+    <cell image="gorroV.gif" />
+    <cell image="gorroNar.gif" />
+    <cell image="gorroAm.gif" />
+    <cell image="gorroV.gif" />
+    <cell image="gorroV.gif" />
+    <cell image="gorroNar.gif" />
+    <cell image="gorroAm.gif" />
+    <cell image="gorroV.gif" />
+    <cell image="gorroV.gif" />
+    <cell image="gorroNar.gif" />
+    <cell image="gorroAm.gif" />
+    <cell image="gorroV.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="4serie17">
+   <messages>
+    <cell avoidOverlapping="true" border="true" image="colorea.gif" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Colorea la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_78_02.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="12" cellWidth="90.0" cellHeight="194.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="12" rows="1" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="1" image="tulipanB.gif" />
+    <cell id="5" image="tulipanB.gif" />
+    <cell id="3" image="tulipanB.gif" />
+    <cell id="2" image="tulipanB.gif" />
+    <cell id="1" image="tulipanB.gif" />
+    <cell id="5" image="tulipanB.gif" />
+    <cell id="3" image="tulipanB.gif" />
+    <cell id="2" image="tulipanB.gif" />
+   </cells>
+   <cells rows="1" cols="6" cellWidth="155.0" cellHeight="151.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="ROSA.gif" />
+    <cell image="ROJO.GIF" />
+    <cell image="NARANJA.gif" />
+    <cell image="LILA.gif" />
+    <cell image="AZUL.GIF" />
+    <cell image="AMARILLO.GIF" />
+   </cells>
+   <cells rows="1" cols="12" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="12" rows="1" />
+    <cell image="tulipan roj.gif" />
+    <cell image="tulipanAm.gif" />
+    <cell image="tulipanlila.gif" />
+    <cell image="tulipanNar.gif" />
+    <cell image="tulipan roj.gif" />
+    <cell image="tulipanAm.gif" />
+    <cell image="tulipanlila.gif" />
+    <cell image="tulipanNar.gif" />
+    <cell image="tulipan roj.gif" />
+    <cell image="tulipanAm.gif" />
+    <cell image="tulipanlila.gif" />
+    <cell image="tulipanNar.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="4serie18">
+   <messages>
+    <cell avoidOverlapping="true" border="true" image="colorea.gif" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Colorea la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_22_25.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="12" cellWidth="90.0" cellHeight="194.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="12" rows="1" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="1" image="tulipanB.gif" />
+    <cell id="1" image="tulipanB.gif" />
+    <cell id="3" image="tulipanB.gif" />
+    <cell id="3" image="tulipanB.gif" />
+    <cell id="1" image="tulipanB.gif" />
+    <cell id="1" image="tulipanB.gif" />
+    <cell id="3" image="tulipanB.gif" />
+    <cell id="3" image="tulipanB.gif" />
+   </cells>
+   <cells rows="1" cols="5" cellWidth="155.0" cellHeight="151.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell image="ROSA.gif" />
+    <cell image="LILA.gif" />
+    <cell image="NARANJA.gif" />
+    <cell image="AMARILLO.GIF" />
+    <cell image="AZUL.GIF" />
+   </cells>
+   <cells rows="1" cols="12" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="12" rows="1" />
+    <cell image="tulipanlila.gif" />
+    <cell image="tulipanlila.gif" />
+    <cell image="tulipanAm.gif" />
+    <cell image="tulipanAm.gif" />
+    <cell image="tulipanlila.gif" />
+    <cell image="tulipanlila.gif" />
+    <cell image="tulipanAm.gif" />
+    <cell image="tulipanAm.gif" />
+    <cell image="tulipanlila.gif" />
+    <cell image="tulipanlila.gif" />
+    <cell image="tulipanAm.gif" />
+    <cell image="tulipanAm.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="4serie19">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="kind_084.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="8" cellWidth="100.0" cellHeight="100.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="8" rows="1" />
+    <ids>-1 -1 -1 -1 1 0 3 2</ids>
+   </cells>
+   <cells rows="1" cols="4" cellWidth="100.0" cellHeight="100.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="dos.gif" />
+    <cell image="uno.gif" />
+    <cell image="cuatro.gif" />
+    <cell image="tres.gif" />
+   </cells>
+   <cells rows="1" cols="8" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <cell image="uno.gif" />
+    <cell image="dos.gif" />
+    <cell image="tres.gif" />
+    <cell image="cuatro.gif" />
+    <cell image="uno.gif" />
+    <cell image="dos.gif" />
+    <cell image="tres.gif" />
+    <cell image="cuatro.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="4serie2">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_22_25.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="12" cellWidth="84.0" cellHeight="120.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="12" rows="1" />
+    <cell image="triangulopr.gif" />
+    <cell image="triangulopV.gif" />
+    <cell image="triangulopam.gif" />
+    <cell image="triangulopaz.gif" />
+    <cell id="3" />
+    <cell id="0" />
+    <cell id="2" />
+    <cell id="1" />
+    <cell id="3" />
+    <cell id="0" />
+    <cell id="2" />
+    <cell id="1" />
+   </cells>
+   <cells rows="1" cols="4" cellWidth="84.0" cellHeight="120.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="triangulopV.gif" />
+    <cell image="triangulopaz.gif" />
+    <cell image="triangulopam.gif" />
+    <cell image="triangulopr.gif" />
+   </cells>
+   <cells rows="1" cols="12" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="12" rows="1" />
+    <cell image="triangulopr.gif" />
+    <cell image="triangulopV.gif" />
+    <cell image="triangulopam.gif" />
+    <cell image="triangulopaz.gif" />
+    <cell image="triangulopr.gif" />
+    <cell image="triangulopV.gif" />
+    <cell image="triangulopam.gif" />
+    <cell image="triangulopaz.gif" />
+    <cell image="triangulopr.gif" />
+    <cell image="triangulopV.gif" />
+    <cell image="triangulopam.gif" />
+    <cell image="triangulopaz.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="4serie20">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_22_25.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="8" cellWidth="100.0" cellHeight="100.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="8" rows="1" />
+    <ids>-1 -1 -1 -1 2 1 0 3</ids>
+   </cells>
+   <cells rows="1" cols="4" cellWidth="100.0" cellHeight="100.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="dos.gif" />
+    <cell image="tres.gif" />
+    <cell image="cuatro.gif" />
+    <cell image="uno.gif" />
+   </cells>
+   <cells rows="1" cols="8" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="8" rows="1" />
+    <cell image="cuatro.gif" />
+    <cell image="tres.gif" />
+    <cell image="dos.gif" />
+    <cell image="uno.gif" />
+    <cell image="cuatro.gif" />
+    <cell image="tres.gif" />
+    <cell image="dos.gif" />
+    <cell image="uno.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="4serie3">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_02_11.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="12" cellWidth="100.0" cellHeight="100.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="12" rows="1" />
+    <cell image="cuadrapaz.gif" />
+    <cell image="cuadrapV.gif" />
+    <cell image="cuadrapR.gif" />
+    <cell image="cuadrapAm.gif" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+    <cell id="3" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+    <cell id="3" />
+   </cells>
+   <cells rows="1" cols="4" cellWidth="100.0" cellHeight="100.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="cuadrapaz.gif" />
+    <cell image="cuadrapV.gif" />
+    <cell image="cuadrapR.gif" />
+    <cell image="cuadrapAm.gif" />
+   </cells>
+   <cells rows="1" cols="12" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="12" rows="1" />
+    <cell image="cuadrapaz.gif" />
+    <cell image="cuadrapV.gif" />
+    <cell image="cuadrapR.gif" />
+    <cell image="cuadrapAm.gif" />
+    <cell image="cuadrapaz.gif" />
+    <cell image="cuadrapV.gif" />
+    <cell image="cuadrapR.gif" />
+    <cell image="cuadrapAm.gif" />
+    <cell image="cuadrapaz.gif" />
+    <cell image="cuadrapV.gif" />
+    <cell image="cuadrapR.gif" />
+    <cell image="cuadrapAm.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="4serie4">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_23_06.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="12" cellWidth="100.0" cellHeight="100.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="12" rows="1" />
+    <cell image="BOLAV.GIF" />
+    <cell image="cuadrapV.gif" />
+    <cell image="rectangulopV.gif" />
+    <cell image="triangulopV.gif" />
+    <cell id="2" />
+    <cell id="3" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+    <cell id="3" />
+    <cell id="0" />
+    <cell id="1" />
+   </cells>
+   <cells rows="1" cols="4" cellWidth="100.0" cellHeight="100.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="rectangulopV.gif" />
+    <cell image="triangulopV.gif" />
+    <cell image="BOLAV.GIF" />
+    <cell image="cuadrapV.gif" />
+   </cells>
+   <cells rows="1" cols="12" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="12" rows="1" />
+    <cell image="BOLAV.GIF" />
+    <cell image="cuadrapV.gif" />
+    <cell image="rectangulopV.gif" />
+    <cell image="triangulopV.gif" />
+    <cell image="BOLAV.GIF" />
+    <cell image="cuadrapV.gif" />
+    <cell image="rectangulopV.gif" />
+    <cell image="triangulopV.gif" />
+    <cell image="BOLAV.GIF" />
+    <cell image="cuadrapV.gif" />
+    <cell image="rectangulopV.gif" />
+    <cell image="triangulopV.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="4serie5">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_78_02.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="12" cellWidth="100.0" cellHeight="147.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="12" rows="1" />
+    <cell image="dadoAz.gif" />
+    <cell image="gorroAz.gif" />
+    <cell image="triangulopaz.gif" />
+    <cell image="cuadrapaz.gif" />
+    <cell id="1" />
+    <cell id="0" />
+    <cell id="2" />
+    <cell id="3" />
+    <cell id="1" />
+    <cell id="0" />
+    <cell id="2" />
+    <cell id="3" />
+   </cells>
+   <cells rows="1" cols="4" cellWidth="100.0" cellHeight="147.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="gorroAz.gif" />
+    <cell image="dadoAz.gif" />
+    <cell image="triangulopaz.gif" />
+    <cell image="cuadrapaz.gif" />
+   </cells>
+   <cells rows="1" cols="12" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="12" rows="1" />
+    <cell image="dadoAz.gif" />
+    <cell image="gorroAz.gif" />
+    <cell image="triangulopaz.gif" />
+    <cell image="cuadrapaz.gif" />
+    <cell image="dadoAz.gif" />
+    <cell image="gorroAz.gif" />
+    <cell image="triangulopaz.gif" />
+    <cell image="cuadrapaz.gif" />
+    <cell image="dadoAz.gif" />
+    <cell image="gorroAz.gif" />
+    <cell image="triangulopaz.gif" />
+    <cell image="cuadrapaz.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="4serie6">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="kind_084.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="8" cellWidth="100.0" cellHeight="100.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="8" rows="1" />
+    <cell image="lapizlargo.gif" />
+    <cell image="lapizmedia.gif" />
+    <cell image="lapizmedi1.gif" />
+    <cell image="lapizcorto.gif" />
+    <cell id="1" />
+    <cell id="3" />
+    <cell id="0" />
+    <cell id="2" />
+   </cells>
+   <cells rows="2" cols="2" cellWidth="100.0" cellHeight="100.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="lapizmedi1.gif" />
+    <cell image="lapizlargo.gif" />
+    <cell image="lapizcorto.gif" />
+    <cell image="lapizmedia.gif" />
+   </cells>
+   <cells rows="1" cols="8" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="8" rows="1" />
+    <cell image="lapizlargo.gif" />
+    <cell image="lapizmedia.gif" />
+    <cell image="lapizmedi1.gif" />
+    <cell image="lapizcorto.gif" />
+    <cell image="lapizlargo.gif" />
+    <cell image="lapizmedia.gif" />
+    <cell image="lapizmedi1.gif" />
+    <cell image="lapizcorto.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="4serie7">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="up.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="8" cellWidth="100.0" cellHeight="100.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="8" rows="1" />
+    <cell image="lapizcorto.gif" />
+    <cell image="lapizmedi1.gif" />
+    <cell image="lapizmedia.gif" />
+    <cell image="lapizlargo.gif" />
+    <cell id="1" />
+    <cell id="0" />
+    <cell id="2" />
+    <cell id="3" />
+   </cells>
+   <cells rows="2" cols="2" cellWidth="100.0" cellHeight="100.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="lapizmedi1.gif" />
+    <cell image="lapizcorto.gif" />
+    <cell image="lapizmedia.gif" />
+    <cell image="lapizlargo.gif" />
+   </cells>
+   <cells rows="1" cols="8" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="8" rows="1" />
+    <cell image="lapizcorto.gif" />
+    <cell image="lapizmedi1.gif" />
+    <cell image="lapizmedia.gif" />
+    <cell image="lapizlargo.gif" />
+    <cell image="lapizcorto.gif" />
+    <cell image="lapizmedi1.gif" />
+    <cell image="lapizmedia.gif" />
+    <cell image="lapizlargo.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="4serie8">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_0064.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="8" cellWidth="100.0" cellHeight="100.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="8" rows="1" />
+    <cell image="triangulopr.gif" />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="2" />
+    <cell id="1" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="100.0" cellHeight="100.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="triangulopr.gif" />
+    <cell image="trianguloR.gif" />
+    <cell image="triangulomR.gif" />
+   </cells>
+   <cells rows="1" cols="8" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <cell image="triangulopr.gif" />
+    <cell image="triangulopr.gif" />
+    <cell image="triangulomR.gif" />
+    <cell image="trianguloR.gif" />
+    <cell image="triangulopr.gif" />
+    <cell image="triangulopr.gif" />
+    <cell image="triangulomR.gif" />
+    <cell image="trianguloR.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="4serie9">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_23_06.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="8" cellWidth="100.0" cellHeight="100.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="8" rows="1" />
+    <ids>-1 -1 -1 -1 2 1 1 0</ids>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="100.0" cellHeight="100.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="cuadrapaz.gif" />
+    <cell image="cuadradomaz.gif" />
+    <cell image="cuadradoaz.gif" />
+   </cells>
+   <cells rows="1" cols="8" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <cell image="cuadradoaz.gif" />
+    <cell image="cuadradomaz.gif" />
+    <cell image="cuadradomaz.gif" />
+    <cell image="cuadrapaz.gif" />
+    <cell image="cuadradoaz.gif" />
+    <cell image="cuadradomaz.gif" />
+    <cell image="cuadradomaz.gif" />
+    <cell image="cuadrapaz.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="inicio">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Hacemos series</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="351.0" cellHeight="278.0" border="true">
+    <style transparent="true">
+     <font family="Arial" size="17" bold="true" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell txtAlign="middle,top" border="true" image="inicio.jpg">
+     <style shadow="true" margin="4" borderStroke="2.6" markerStroke="2.7">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="serie1">
+   <messages>
+    <cell avoidOverlapping="true" border="true" image="colorea.gif" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Colorea la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_02_11.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+    <eventSounds>
+     <sound id="finishedOk" file="¡bien!.mp3" />
+    </eventSounds>
+   </settings>
+   <cells rows="1" cols="6" cellWidth="500.0" cellHeight="400.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="ESAZ.GIF">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="ESAM.GIF">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0" image="ESTB.GIF">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1" image="ESTB.GIF">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0" image="ESTB.GIF">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1" image="ESTB.GIF">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="500.0" cellHeight="400.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="AZUL.GIF">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="AMARILLO.GIF">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="ESAZ.GIF" />
+    <cell image="ESAM.GIF" />
+    <cell image="ESAZ.GIF" />
+    <cell image="ESAM.GIF" />
+    <cell image="ESAZ.GIF" />
+    <cell image="ESAM.GIF" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="serie10">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_23_06.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+    <cell type="finalError">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="500.0" cellHeight="400.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="BOLAAM.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="trianguloam.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="500.0" cellHeight="400.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="trianguloam.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="BOLAAM.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="BOLAAM.GIF" />
+    <cell image="trianguloam.gif" />
+    <cell image="BOLAAM.GIF" />
+    <cell image="trianguloam.gif" />
+    <cell image="BOLAAM.GIF" />
+    <cell image="trianguloam.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="serie11">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_0064.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="500.0" cellHeight="435.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="tulipan roj.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="gorroRoj.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="500.0" cellHeight="435.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="gorroRoj.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="tulipan roj.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="tulipan roj.gif" />
+    <cell image="gorroRoj.gif" />
+    <cell image="tulipan roj.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="gorroRoj.gif" />
+    <cell image="tulipan roj.gif" />
+    <cell image="gorroRoj.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="serie12">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="up.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="500.0" cellHeight="400.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="BOLAROJ.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="cuadradoR.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="500.0" cellHeight="400.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="BOLAROJ.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="cuadradoR.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="BOLAROJ.GIF" />
+    <cell image="cuadradoR.gif" />
+    <cell image="BOLAROJ.GIF" />
+    <cell image="cuadradoR.gif" />
+    <cell image="BOLAROJ.GIF" />
+    <cell image="cuadradoR.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="serie13">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="kind_084.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="500.0" cellHeight="400.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="cuadrapAm.gif">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="cuadradoam.gif">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="500.0" cellHeight="400.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="cuadrapAm.gif">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="cuadradoam.gif">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="cuadrapAm.gif" />
+    <cell image="cuadradoam.gif" />
+    <cell image="cuadrapAm.gif" />
+    <cell image="cuadradoam.gif" />
+    <cell image="cuadrapAm.gif" />
+    <cell image="cuadradoam.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="serie14">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_22_25.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="500.0" cellHeight="400.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="trianguloaz.gif">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="triangulopaz.gif">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="500.0" cellHeight="400.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="trianguloaz.gif">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="triangulopaz.gif">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="trianguloaz.gif" />
+    <cell image="triangulopaz.gif" />
+    <cell image="trianguloaz.gif" />
+    <cell image="triangulopaz.gif" />
+    <cell image="trianguloaz.gif" />
+    <cell image="triangulopaz.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="serie15">
+   <messages>
+    <cell avoidOverlapping="true" border="true" image="colorea.gif" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Colorea la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="up.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="500.0" cellHeight="400.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="LAZOVp.gif">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="LAZOAMp.gif">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0" image="lazoBp.gif">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1" image="lazoBp.gif">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0" image="lazoBp.gif">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1" image="lazoBp.gif">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="500.0" cellHeight="400.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="VERDE.GIF">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="AMARILLO.GIF">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="LAZOVp.gif" />
+    <cell image="LAZOAMp.gif" />
+    <cell image="LAZOVp.gif" />
+    <cell image="LAZOAMp.gif" />
+    <cell image="LAZOVp.gif" />
+    <cell image="LAZOAMp.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="serie16">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_23_06.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="313.0" cellHeight="500.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="GLOBOAZ.GIF">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="globocelest.gif">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="313.0" cellHeight="500.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="GLOBOAZ.GIF">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="globocelest.gif">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="13.0" cellHeight="159.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="GLOBOAZ.GIF">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="globocelest.gif">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="GLOBOAZ.GIF">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="globocelest.gif">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="GLOBOAZ.GIF">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="globocelest.gif">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="serie17">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_78_02.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="500.0" cellHeight="400.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="libro2.gif">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="libro1.gif">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="500.0" cellHeight="400.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="libro1.gif">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="libro2.gif">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="libro2.gif" />
+    <cell image="libro1.gif" />
+    <cell image="libro2.gif" />
+    <cell image="libro1.gif" />
+    <cell image="libro2.gif" />
+    <cell image="libro1.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="serie18">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_02_11.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="500.0" cellHeight="400.0" border="true" id="primary">
+    <style transparent="true" borderStroke="0.7" markerStroke="5.0" />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="uno.gif" />
+    <cell image="dos.gif" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="0" />
+    <cell id="1" />
+   </cells>
+   <cells rows="1" cols="2" cellWidth="500.0" cellHeight="400.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="uno.gif" />
+    <cell image="dos.gif" />
+   </cells>
+   <cells rows="1" cols="6" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="uno.gif" />
+    <cell image="dos.gif" />
+    <cell image="uno.gif" />
+    <cell image="dos.gif" />
+    <cell image="uno.gif" />
+    <cell image="dos.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="serie19">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_23_06.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="500.0" cellHeight="400.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="dos.gif" />
+    <cell image="uno.gif" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="0" />
+    <cell id="1" />
+   </cells>
+   <cells rows="1" cols="2" cellWidth="500.0" cellHeight="400.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="dos.gif" />
+    <cell image="uno.gif" />
+   </cells>
+   <cells rows="1" cols="6" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="dos.gif" />
+    <cell image="uno.gif" />
+    <cell image="dos.gif" />
+    <cell image="uno.gif" />
+    <cell image="dos.gif" />
+    <cell image="uno.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="serie2">
+   <messages>
+    <cell avoidOverlapping="true" border="true" image="colorea.gif" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Colorea la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="up.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="500.0" cellHeight="400.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="ESR.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="ESAZ.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0" image="ESTB.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1" image="ESTB.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0" image="ESTB.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1" image="ESTB.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="500.0" cellHeight="400.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="ROJO.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="AZUL.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="ESR.GIF" />
+    <cell image="ESAZ.GIF" />
+    <cell image="ESR.GIF" />
+    <cell image="ESAZ.GIF" />
+    <cell image="ESR.GIF" />
+    <cell image="ESAZ.GIF" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="serie20">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_78_02.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="500.0" cellHeight="400.0" border="true" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="lapizlargo.gif" />
+    <cell image="lapizcorto.gif" />
+    <cell id="1" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="0" />
+   </cells>
+   <cells rows="1" cols="2" cellWidth="500.0" cellHeight="400.0" border="true" id="secondary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="lapizcorto.gif" />
+    <cell image="lapizlargo.gif" />
+   </cells>
+   <cells rows="1" cols="6" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="lapizlargo.gif" />
+    <cell image="lapizcorto.gif" />
+    <cell image="lapizlargo.gif" />
+    <cell image="lapizcorto.gif" />
+    <cell image="lapizlargo.gif" />
+    <cell image="lapizcorto.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="serie21">
+   <messages>
+    <cell avoidOverlapping="true" border="true" image="colorea.gif" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Colorea la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_02_11.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="500.0" cellHeight="400.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="ESAM.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="ESAZ.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0" image="ESTB.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1" image="ESTB.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0" image="ESTB.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1" image="ESTB.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="500.0" cellHeight="400.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="AMARILLO.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="AZUL.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="ROJO.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="VERDE.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="ESAM.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="ESAZ.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="ESAM.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="ESAZ.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="ESAM.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="ESAZ.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="serie22">
+   <messages>
+    <cell avoidOverlapping="true" border="true" image="colorea.gif" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Colorea la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_02_11.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="500.0" cellHeight="400.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="COCHEamp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="COCHERp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0" image="COCHEbp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="2" image="COCHEbp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0" image="COCHEbp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="2" image="COCHEbp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="500.0" cellHeight="400.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="AMARILLO.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="AZUL.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="ROJO.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="VERDE.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="COCHEamp.gif" />
+    <cell image="COCHERp.gif" />
+    <cell image="COCHEamp.gif" />
+    <cell image="COCHERp.gif" />
+    <cell image="COCHEamp.gif" />
+    <cell image="COCHERp.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="serie23">
+   <messages>
+    <cell avoidOverlapping="true" border="true" image="colorea.gif" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Colorea la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_78_02.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="500.0" cellHeight="400.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="COCHEazp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="COCHEVERp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="2" image="COCHEbp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0" image="COCHEbp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="2" image="COCHEbp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0" image="COCHEbp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="500.0" cellHeight="432.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="VERDE.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="ROJO.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="AZUL.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="AMARILLO.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="COCHEazp.gif" />
+    <cell image="COCHEVERp.gif" />
+    <cell image="COCHEazp.gif" />
+    <cell image="COCHEVERp.gif" />
+    <cell image="COCHEazp.gif" />
+    <cell image="COCHEVERp.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="serie3">
+   <messages>
+    <cell avoidOverlapping="true" border="true" image="colorea.gif" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Colorea la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_78_02.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="500.0" cellHeight="400.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="COCHEamp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="COCHEVERp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0" image="COCHEbp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1" image="COCHEbp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0" image="COCHEbp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1" image="COCHEbp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="500.0" cellHeight="400.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="AMARILLO.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="VERDE.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="COCHEamp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="COCHEVERp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="COCHEamp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="COCHEVERp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="COCHEamp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="COCHEVERp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="serie4">
+   <messages>
+    <cell avoidOverlapping="true" border="true" image="colorea.gif" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Colorea la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_78_02.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="500.0" cellHeight="400.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="COCHEazp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="COCHERp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0" image="COCHEbp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1" image="COCHEbp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0" image="COCHEbp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1" image="COCHEbp.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="500.0" cellHeight="400.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="AZUL.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="ROJO.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="COCHEazp.gif" />
+    <cell image="COCHERp.gif" />
+    <cell image="COCHEazp.gif" />
+    <cell image="COCHERp.gif" />
+    <cell image="COCHEazp.gif" />
+    <cell image="COCHERp.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="serie5">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_0064.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="500.0" cellHeight="400.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="BOLAAM.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="BOLAAZ.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="500.0" cellHeight="400.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="BOLAAM.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="BOLAAZ.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="BOLAAM.GIF" />
+    <cell image="BOLAAZ.GIF" />
+    <cell image="BOLAAM.GIF" />
+    <cell image="BOLAAZ.GIF" />
+    <cell image="BOLAAM.GIF" />
+    <cell image="BOLAAZ.GIF" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="serie6">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="kind_084.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="500.0" cellHeight="400.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="BOLAROJ.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="BOLAAZ.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="500.0" cellHeight="400.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="BOLAROJ.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="BOLAAZ.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="BOLAROJ.GIF" />
+    <cell image="BOLAAZ.GIF" />
+    <cell image="BOLAROJ.GIF" />
+    <cell image="BOLAAZ.GIF" />
+    <cell image="BOLAROJ.GIF" />
+    <cell image="BOLAAZ.GIF" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="serie7">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="up.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="500.0" cellHeight="400.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="cuadradoR.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="cuadradoV.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="500.0" cellHeight="400.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="cuadradoR.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="cuadradoV.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="cuadradoR.gif" />
+    <cell image="cuadradoV.gif" />
+    <cell image="cuadradoR.gif" />
+    <cell image="cuadradoV.gif" />
+    <cell image="cuadradoR.gif" />
+    <cell image="cuadradoV.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="serie8">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_0064.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien1.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="500.0" cellHeight="400.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="cuadradoaz.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="cuadradoV.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="500.0" cellHeight="400.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="cuadradoaz.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="cuadradoV.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="7" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="cuadradoaz.gif" />
+    <cell image="cuadradoV.gif" />
+    <cell image="cuadradoaz.gif" />
+    <cell image="cuadradoV.gif" />
+    <cell image="cuadradoaz.gif" />
+    <cell image="cuadradoV.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="serie9">
+   <messages>
+    <cell border="true" image="serie1.GIF" type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>Sigue la serie</p>
+    </cell>
+    <cell avoidOverlapping="true" border="true" image="gif_22_25.gif" type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Bien.wav" />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="500.0" cellHeight="400.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="cuadradoaz.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="BOLAAZ.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="0">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell id="1">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="500.0" cellHeight="400.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="cuadradoaz.gif">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+    <cell image="BOLAAZ.GIF">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="cuadradoaz.gif" />
+    <cell image="BOLAAZ.GIF" />
+    <cell image="cuadradoaz.gif" />
+    <cell image="BOLAAZ.GIF" />
+    <cell image="cuadradoaz.gif" />
+    <cell image="BOLAAZ.GIF" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="índice">
+   <messages>
+    <cell type="initial">
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" bold="true" />
+      <color foreground="0x6699FF" background="0xFFCC33" shadow="0xCCCCFF" border="0x6699FF" />
+     </style>
+     <p>¿Con cúantos elementos vas a jugar?</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFCC33">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCC33" border="true" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="150.0" cellHeight="211.0" border="true">
+    <style transparent="true" borderStroke="3.7" markerStroke="5.0">
+     <font family="Comic Sans MS" size="48" bold="true" />
+     <color background="0xFFCC33" inactive="0xFFFFCC" border="0xFFCC33" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell txtAlign="middle,bottom" avoidOverlapping="true" border="true" image="CL_2.GIF">
+     <style shadow="true" margin="4" borderStroke="5.1" markerStroke="5.0">
+      <font family="Comic Sans MS" size="48" bold="true" />
+      <color foreground="0x6699FF" background="0xFFCC33" shadow="0xCCCCFF" alternative="0x0000CC" border="0x6699FF" />
+      <gradient source="0xFFCC33" dest="0xFFFFFF" angle="128" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="1nivel" />
+     <p>elementos</p>
+    </cell>
+    <cell txtAlign="middle,bottom" border="true" image="CL_3.GIF">
+     <style shadow="true" margin="4" borderStroke="4.9" markerStroke="5.0">
+      <font family="Comic Sans MS" size="48" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" alternative="0x0000CC" border="0x6699FF" />
+      <gradient source="0xFFCC33" dest="0xFFFFFF" angle="203" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="2nivel" />
+     <p>elementos</p>
+    </cell>
+    <cell txtAlign="middle,bottom" avoidOverlapping="true" border="true" image="CL_4.GIF">
+     <style shadow="true" margin="4" borderStroke="5.0" markerStroke="5.0">
+      <font family="Comic Sans MS" size="48" bold="true" />
+      <color foreground="0x6699FF" background="0xFFFFCC" shadow="0xCCCCFF" alternative="0x0000CC" border="0x6699FF" />
+      <gradient source="0xFFCC33" dest="0xFFFFFF" angle="120" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="3nivel" />
+     <p>elementos</p>
+    </cell>
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="AMARILLO.GIF" file="amarillo.gif" />
+  <media name="AZUL.GIF" file="azul.gif" />
+  <media name="BOLAAM.GIF" file="bolaam.gif" />
+  <media name="BOLAAZ.GIF" file="bolaaz.gif" />
+  <media name="BOLAROJ.GIF" file="bolaroj.gif" />
+  <media name="BOLAV.GIF" file="bolav.gif" />
+  <media name="CL_2.GIF" file="cl_2.gif" />
+  <media name="CL_3.GIF" file="cl_3.gif" />
+  <media name="CL_4.GIF" file="cl_4.gif" />
+  <media name="COCHEamp.gif" file="cocheamp.gif" />
+  <media name="COCHEazp.gif" file="cocheazp.gif" />
+  <media name="COCHEbp.gif" file="cochebp.gif" />
+  <media name="COCHERp.gif" file="cocherp.gif" />
+  <media name="COCHEVERp.gif" file="cocheverp.gif" />
+  <media name="colorea.gif" file="colorea.gif" />
+  <media name="cuadradoam.gif" file="cuadradoam.gif" />
+  <media name="cuadradoaz.gif" file="cuadradoaz.gif" />
+  <media name="cuadradomAm.gif" file="cuadradomam.gif" />
+  <media name="cuadradomaz.gif" file="cuadradomaz.gif" />
+  <media name="cuadradomR.gif" file="cuadradomr.gif" />
+  <media name="cuadradomV.gif" file="cuadradomv.gif" />
+  <media name="cuadradoR.gif" file="cuadrador.gif" />
+  <media name="cuadradoV.gif" file="cuadradov.gif" />
+  <media name="cuadrapAm.gif" file="cuadrapam.gif" />
+  <media name="cuadrapaz.gif" file="cuadrapaz.gif" />
+  <media name="cuadrapB.gif" file="cuadrapb.gif" />
+  <media name="cuadrapR.gif" file="cuadrapr.gif" />
+  <media name="cuadrapV.gif" file="cuadrapv.gif" />
+  <media name="cuatro.gif" file="cuatro.gif" />
+  <media name="dadoAm.gif" file="dadoam.gif" />
+  <media name="dadoAz.gif" file="dadoaz.gif" />
+  <media name="dadoB.gif" file="dadob.gif" />
+  <media name="dadoNar.gif" file="dadonar.gif" />
+  <media name="dadoRoj.gif" file="dadoroj.gif" />
+  <media name="dos.gif" file="dos.gif" />
+  <media name="ESAM.GIF" file="esam.gif" />
+  <media name="ESAZ.GIF" file="esaz.gif" />
+  <media name="ESR.GIF" file="esr.gif" />
+  <media name="ESTB.GIF" file="estb.gif" />
+  <media name="gif_0064.gif" file="gif_0064.gif" />
+  <media name="gif_02_11.gif" file="gif_02_11.gif" />
+  <media name="gif_22_25.gif" file="gif_22_25.gif" />
+  <media name="gif_23_06.gif" file="gif_23_06.gif" />
+  <media name="gif_78_02.gif" file="gif_78_02.gif" />
+  <media name="GLOBOAZ.GIF" file="globoaz.gif" />
+  <media name="globocelest.gif" file="globocelest.gif" />
+  <media name="gorroAm.gif" file="gorroam.gif" />
+  <media name="gorroAz.gif" file="gorroaz.gif" />
+  <media name="gorroB.gif" file="gorrob.gif" />
+  <media name="gorroNar.gif" file="gorronar.gif" />
+  <media name="gorroRoj.gif" file="gorroroj.gif" />
+  <media name="gorrorosa.gif" file="gorrorosa.gif" />
+  <media name="gorroV.gif" file="gorrov.gif" />
+  <media name="kind_084.gif" file="kind_084.gif" />
+  <media name="lapizcorto.gif" file="lapizcorto.gif" />
+  <media name="lapizlargo.gif" file="lapizlargo.gif" />
+  <media name="lapizmedi1.gif" file="lapizmedi1.gif" />
+  <media name="lapizmedia.gif" file="lapizmedia.gif" />
+  <media name="LAZOAMp.gif" file="lazoamp.gif" />
+  <media name="lazoBp.gif" file="lazobp.gif" />
+  <media name="LAZOVp.gif" file="lazovp.gif" />
+  <media name="libro1.gif" file="libro1.gif" />
+  <media name="libro2.gif" file="libro2.gif" />
+  <media name="LILA.gif" file="lila.gif" />
+  <media name="NARANJA.gif" file="naranja.gif" />
+  <media name="rectanguloAm.gif" file="rectanguloam.gif" />
+  <media name="rectanguloAz.gif" file="rectanguloaz.gif" />
+  <media name="rectangulomAm.gif" file="rectangulomam.gif" />
+  <media name="rectangulomAz.gif" file="rectangulomaz.gif" />
+  <media name="rectangulomR.gif" file="rectangulomr.gif" />
+  <media name="rectangulomV.gif" file="rectangulomv.gif" />
+  <media name="rectangulopAm.gif" file="rectangulopam.gif" />
+  <media name="rectangulopAz.gif" file="rectangulopaz.gif" />
+  <media name="rectangulopR.gif" file="rectangulopr.gif" />
+  <media name="rectangulopV.gif" file="rectangulopv.gif" />
+  <media name="rectanguloR.gif" file="rectangulor.gif" />
+  <media name="rectanguloV.gif" file="rectangulov.gif" />
+  <media name="ROJO.GIF" file="rojo.gif" />
+  <media name="ROSA.gif" file="rosa.gif" />
+  <media name="serie1.GIF" file="serie1.gif" />
+  <media name="tres.gif" file="tres.gif" />
+  <media name="trianguloam.gif" file="trianguloam.gif" />
+  <media name="trianguloaz.gif" file="trianguloaz.gif" />
+  <media name="triangulomAm.gif" file="triangulomam.gif" />
+  <media name="triangulomAz.gif" file="triangulomaz.gif" />
+  <media name="triangulomR.gif" file="triangulomr.gif" />
+  <media name="triangulomV.gif" file="triangulomv.gif" />
+  <media name="triangulopam.gif" file="triangulopam.gif" />
+  <media name="triangulopaz.gif" file="triangulopaz.gif" />
+  <media name="triangulopr.gif" file="triangulopr.gif" />
+  <media name="triangulopV.gif" file="triangulopv.gif" />
+  <media name="trianguloR.gif" file="triangulor.gif" />
+  <media name="trianguloV.gif" file="triangulov.gif" />
+  <media name="tulipan roj.gif" file="tulipan_roj.gif" />
+  <media name="tulipanAm.gif" file="tulipanam.gif" />
+  <media name="tulipanB.gif" file="tulipanb.gif" />
+  <media name="tulipanlila.gif" file="tulipanlila.gif" />
+  <media name="tulipanNar.gif" file="tulipannar.gif" />
+  <media name="tulipanRosa.gif" file="tulipanrosa.gif" />
+  <media name="uno.gif" file="uno.gif" />
+  <media name="up.gif" file="up.gif" />
+  <media name="VERDE.GIF" file="verde.gif" />
+  <media name="inicio.jpg" file="inicio.jpg" />
+  <media name="Bien.wav" file="bien.wav" />
+  <media name="bien1.wav" file="bien1.wav" />
+ </mediaBag>
+</JClicProject>
+

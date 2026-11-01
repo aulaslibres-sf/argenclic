@@ -1,0 +1,2015 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="arranque" version="0.1.3">
+ <settings>
+  <title>Seres vivos y microorganismos</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="7/5/01" />
+  <revision description="Conversión de Clic3 a JClic" date="2/21/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Rosa Ana Santiago Vicario" mail="rosv@wanadoo.es" />
+  <organization name="IES Santa Catalina" city="El Burgo de Osma" state="Castilla y León" />
+  <language>es</language>
+  <description>
+   <p>Esta aplicación, dirigida a 2º de ESO, se divide en dos grandes bloques:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Etapas en la vida de los seres vivos.</p>
+   <p>&lt;LI&gt;Microorganismos.</p>
+   <p>&lt;/UL&gt;</p>
+   <p>Algunos de los contenidos y actividades se basan en el libro de Ciencias de la Naturaleza de 2º de E.S.0. de la Editorial Santillana.</p>
+  </description>
+  <descriptors area-codes="exp" level="Secundaria">evolución, microorganismos</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Esta aplicación, dirigida a 2º de ESO, se divide en dos grandes bloques:</p>
+    <p>&lt;UL&gt;</p>
+    <p>&lt;LI&gt;Etapas en la vida de los seres vivos.</p>
+    <p>&lt;LI&gt;Microorganismos.</p>
+    <p>&lt;/UL&gt;</p>
+    <p>Algunos de los contenidos y actividades se basan en el libro de Ciencias de la Naturaleza de 2º de E.S.0. de la Editorial Santillana.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="arranque.pac" name="inicio.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="arranque.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="natu7.pac" name="portada7.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="sopetavi.sop" />
+  <item name="etavida1.ass" />
+  <item name="etapvida.ass" />
+  <item name="infohere.ass" />
+  <item name="herencia.ass" />
+  <item name="herenci1.ass" />
+  <item name="vidainve.txa" />
+  <item name="llenahue.txa" />
+  <item name="dictado.txa" />
+  <item name="fin.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="natu8.pac" name="portada8.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="sopmicro.sop" />
+  <item name="fotomic.ass" />
+  <item name="infunipl.ass" />
+  <item name="unipluri.ass" />
+  <item name="infauthe.ass" />
+  <item name="autohete.ass" />
+  <item name="infeupro.ass" />
+  <item name="proerca.ass" />
+  <item name="fotomic1.ass" />
+  <item name="infbenpe.ass" />
+  <item name="relbenyp.ass" />
+  <item name="relabeny.ass" />
+  <item name="fotomic2.ass" />
+  <item name="fin.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="arranque.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xE1023A" />
+     </style>
+     <media type="PLAY_MIDI" level="2" file="close.mid" />
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xE1023A" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="marbpale.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" columns="5" cellWidth="566.0" cellHeight="90.0" border="false">
+    <style>
+     <font family="Arial" size="34" bold="true" />
+     <color background="0xF8CDDD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>¿POR DÓNDE QUIERES COMENZAR?</p>
+    </cell>
+    <cell>
+     <p>ELIGE UNA OPCIÓN Y ADELANTE</p>
+    </cell>
+    <cell>
+     <p>_______________________________</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="natu7.pac" />
+     <p>* ETAPAS EN LA VIDA DE LOS SERES VIVOS</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="natu8.pac" />
+     <p>* MICROORGANISMOS</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="autohete.ass">
+   <description>
+    <p>AUTÓTROFOS Y HETERÓTROFOS</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>¿QUÉ SON? ¿AUTÓTROFOS O HETERÓTROFOS?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>¡¡¡FANTÁSTICO!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x80FFFF">
+     <image name="bacterf.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0080FF" border="true" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="3">
+     <p>BACTERIAS</p>
+    </cell>
+    <cell id="0">
+     <p>CIANOBACTERIAS</p>
+    </cell>
+    <cell id="1">
+     <p>PROTOZOOS</p>
+    </cell>
+    <cell id="0">
+     <p>ALGAS MICROSCÓPICAS</p>
+    </cell>
+    <cell id="1">
+     <p>HONGOS MICROSCÓPICOS</p>
+    </cell>
+    <cell id="2">
+     <p>VIRUS</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="2" cellWidth="120.0" cellHeight="139.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>AUTÓTROFAS</p>
+    </cell>
+    <cell>
+     <p>HETERÓTROFAS</p>
+    </cell>
+    <cell>
+     <p>NO TIENEN CÉLULAS</p>
+    </cell>
+    <cell>
+     <p>AUTÓTROFAS        HETERÓTROFAS</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="dictado.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>¡MARAVILLOSO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="marbteal.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="420" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Arial" background="0xFFFFFF" foreground="0x000000" size="17" bold="false" italic="false" tabWidth="24" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <cell width="500" height="100" border="true">
+       <style>
+        <color background="0x80FF80" />
+       </style>
+       <p>ETAPAS EN LA VIDA DE LOS ANIMALES VERTEBRADOS</p>
+       <p>_________________________</p>
+       <p>ESCUCHA ATENTAMENTE Y ESCRIBE</p>
+      </cell>
+     </p>
+     <p />
+     <p />
+     <p>
+      <cell hAlign="left" width="30" height="20" border="false" image="minialt.jpg">
+       <style>
+        <color background="0x80FF80" />
+       </style>
+       <media type="PLAY_AUDIO" level="1" file="1.wav" />
+      </cell>
+      <target>
+       <answer>En la vida de los animales vertebrados distinguimos tres etapas</answer>
+       <response fill="_" length="63" maxLength="63" />
+       <text>En la vida de los animales vertebrados distinguimos tres etapas</text>
+      </target>
+     </p>
+     <p>
+      <cell hAlign="left" width="30" height="20" border="false" image="minialt.jpg">
+       <style>
+        <color background="0x80FF80" />
+       </style>
+       <media type="PLAY_AUDIO" level="1" file="2.wav" />
+      </cell>
+      <target>
+       <answer>Infancia, madurez y ancianidad</answer>
+       <response fill="_" length="30" maxLength="30" />
+       <text>Infancia, madurez y ancianidad</text>
+      </target>
+     </p>
+     <p>
+      <cell hAlign="left" width="30" height="20" border="false" image="minialt.jpg">
+       <style>
+        <color background="0x80FF80" />
+       </style>
+       <media type="PLAY_AUDIO" level="1" file="3.wav" />
+      </cell>
+      <target>
+       <answer>En la infancia crecen y aprenden a desenvolverse en el medio</answer>
+       <response fill="_" length="60" maxLength="60" />
+       <text>En la infancia crecen y aprenden a desenvolverse en el medio</text>
+      </target>
+     </p>
+     <p>
+      <cell hAlign="left" width="30" height="20" border="false" image="minialt.jpg">
+       <style>
+        <color background="0x80FF80" />
+       </style>
+       <media type="PLAY_AUDIO" level="1" file="4.wav" />
+      </cell>
+      <target>
+       <answer>En la madurez ya han desarrollado todas sus facultades</answer>
+       <response fill="_" length="54" maxLength="54" />
+       <text>En la madurez ya han desarrollado todas sus facultades</text>
+      </target>
+     </p>
+     <p>
+      <cell hAlign="left" width="30" height="20" border="false" image="minialt.jpg">
+       <style>
+        <color background="0x80FF80" />
+       </style>
+       <media type="PLAY_AUDIO" level="1" file="5.wav" />
+      </cell>
+      <target>
+       <answer>En el animal anciano observamos en su piel arrugas y manchas</answer>
+       <response fill="_" length="60" maxLength="60" />
+       <text>En el animal anciano observamos en su piel arrugas y manchas</text>
+      </target>
+     </p>
+     <p />
+     <p />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="etapvida.ass">
+   <description>
+    <p>ESCRIBE LA ETAPA DE LA VIDA A LA QUE CORRESPONDE CADA CAR</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>ESCRIBE A QUÉ ETAPA DE LA VIDA PERTENECE CADA CARACTERÍSTICA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>¡CORRECTO!. </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x80FFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00FFFF" border="true" />
+   </settings>
+   <cells rows="4" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell>
+     <p>CRECIMIENTO RÁPIDO</p>
+    </cell>
+    <cell>
+     <p>APRENDE A ANDAR</p>
+    </cell>
+    <cell>
+     <p>APRENDE A HABLAR</p>
+    </cell>
+    <cell>
+     <p>APRENDE A ESCRIBIR</p>
+    </cell>
+    <cell>
+     <p>APRENDE A RELACIONARSE</p>
+    </cell>
+    <cell>
+     <p>ETAPA ENTRE LA INFANCIA Y LA EDAD ADULTA</p>
+    </cell>
+    <cell>
+     <p>ÚLTIMA FASE DEL CRECIMIENTO</p>
+    </cell>
+    <cell>
+     <p>MADURA EL APARATO REPRODUCTOR</p>
+    </cell>
+    <cell>
+     <p>TRANSFORMACIÓN DE NIÑAS EN MUJERES</p>
+    </cell>
+    <cell>
+     <p>TRANSFORMACIÓN DE NIÑOS EN HOMBRES</p>
+    </cell>
+    <cell>
+     <p>EL CRECIMIENTO HA FINALIZADO</p>
+    </cell>
+    <cell>
+     <p>LA MENTE HA ADQUIRIDO TODAS SUS CAPACIDADES</p>
+    </cell>
+    <cell>
+     <p>SE TIENE UNA AMPLIA EXPERIENCIA</p>
+    </cell>
+    <cell>
+     <p>ARRUGAS EN LA PIEL</p>
+    </cell>
+    <cell>
+     <p>MANCHAS EN LA PIEL</p>
+    </cell>
+    <cell>
+     <p>DISMINUCIÓN DE LA ESTATURA</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell>
+     <p>INFANCIA</p>
+    </cell>
+    <cell>
+     <p>INFANCIA</p>
+    </cell>
+    <cell>
+     <p>INFANCIA</p>
+    </cell>
+    <cell>
+     <p>INFANCIA</p>
+    </cell>
+    <cell>
+     <p>INFANCIA</p>
+    </cell>
+    <cell>
+     <p>ADOLESCENCIA</p>
+    </cell>
+    <cell>
+     <p>ADOLESCENCIA</p>
+    </cell>
+    <cell>
+     <p>ADOLESCENCIA</p>
+    </cell>
+    <cell>
+     <p>ADOLESCENCIA</p>
+    </cell>
+    <cell>
+     <p>ADOLESCENCIA</p>
+    </cell>
+    <cell>
+     <p>MADUREZ|EDAD ADULTA</p>
+    </cell>
+    <cell>
+     <p>MADUREZ|EDAD ADULTA</p>
+    </cell>
+    <cell>
+     <p>ANCIANIDAD</p>
+    </cell>
+    <cell>
+     <p>ANCIANIDAD</p>
+    </cell>
+    <cell>
+     <p>ANCIANIDAD</p>
+    </cell>
+    <cell>
+     <p>ANCIANIDAD</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="etavida1.ass">
+   <description>
+    <p>ASOCIACIÓN COMPLEJA,RELACIONA CADA CARAC CON SU ETAP</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+     <p>RELACIONA CADA CARACTERISTICA CON LA ETAPA DE LA VIDA QUE LE CORRESPONDE</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+     <p>¡FACILÍSIMO! CONTINUAMOS...</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFF80">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF00" border="true" />
+   </settings>
+   <cells rows="4" columns="4" cellWidth="300.0" cellHeight="300.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="33" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="0">
+     <p>CRECIMIENTO RÁPIDO</p>
+    </cell>
+    <cell id="0">
+     <p>APRENDE A ANDAR</p>
+    </cell>
+    <cell id="0">
+     <p>APRENDE A HABLAR</p>
+    </cell>
+    <cell id="0">
+     <p>APRENDE A ESCRIBIR</p>
+    </cell>
+    <cell id="0">
+     <p>APRENDE A RELACIONARSE</p>
+    </cell>
+    <cell id="1">
+     <p>ETAPA ENTRE LA INFANCIA Y LA EDAD ADULTA</p>
+    </cell>
+    <cell id="1">
+     <p>ÚLTIMA FASE DEL CRECIMIENTO</p>
+    </cell>
+    <cell id="1">
+     <p>MADURA EL APARATO REPRODUCTOR</p>
+    </cell>
+    <cell id="1">
+     <p>TRANSFORMACIÓN DE NIÑAS EN MUJERES</p>
+    </cell>
+    <cell id="1">
+     <p>TRANSFORMACIÓN DE NIÑOS EN HOMBRES</p>
+    </cell>
+    <cell id="2">
+     <p>EL CRECIMIENTO HA FINALIZADO</p>
+    </cell>
+    <cell id="2">
+     <p>LA MENTE HA ADQUIRIDO TODAS SUS CAPACIDADES</p>
+    </cell>
+    <cell id="3">
+     <p>SE TIENE UNA AMPLIA EXPERIENCIA</p>
+    </cell>
+    <cell id="3">
+     <p>ARRUGAS EN LA PIEL</p>
+    </cell>
+    <cell id="3">
+     <p>MANCHAS EN LA PIEL</p>
+    </cell>
+    <cell id="3">
+     <p>DISMINUCIÓN DE LA ESTATURA</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="2" cellWidth="420.0" cellHeight="420.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="31" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>INFANCIA</p>
+    </cell>
+    <cell>
+     <p>ADOLESCENCIA</p>
+    </cell>
+    <cell>
+     <p>MADUREZ        EDAD ADULTA</p>
+    </cell>
+    <cell>
+     <p>ANCIANIDAD</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="fin.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="simfon40.wav" />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="marbteal.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" columns="4" cellWidth="390.0" cellHeight="70.0" border="false">
+    <style>
+     <color background="0xF4F87C" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>YA HEMOS TERMINADO Y LO HAS HECHO MUY BIEN.</p>
+    </cell>
+    <cell>
+     <p>AVISA AL PROFESOR.</p>
+    </cell>
+    <cell />
+    <cell>
+     <p>Las ACTIVIDADES están basadas en el libro "Ciencias de la Naturaleza" , 2º de ESO Editorial SANTILLANA</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.Explore" name="fotomic.ass">
+   <description>
+    <p>EXPLORACIÓN MICROORGANISMOS,DIBUJOS</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+     <p>PINCHA SOBRE CADA UNO DE LOS MICROORGANISMOS Y VERÁS CÓMO ES</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFAF187">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xF2F821" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="580.0" cellHeight="480.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0" image="bacteria.jpg" />
+    <cell id="1" image="cianobac.jpg" />
+    <cell id="2" image="alga.jpg" />
+    <cell id="2" image="alga1.jpg" />
+    <cell id="3" image="hongo.jpg" />
+    <cell id="3" image="hongo1.jpg" />
+    <cell id="4" image="protozoo.jpg" />
+    <cell id="5" image="virusgri.jpg" />
+   </cells>
+   <cells rows="1" columns="6" cellWidth="400.0" cellHeight="219.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>BACTERIAS</p>
+    </cell>
+    <cell>
+     <p>CIANOBACTERIAS</p>
+    </cell>
+    <cell>
+     <p>ALGAS MICROSCÓPICAS</p>
+    </cell>
+    <cell>
+     <p>HONGOS MICROSCÓPICOS</p>
+    </cell>
+    <cell>
+     <p>PROTOZOOS</p>
+    </cell>
+    <cell>
+     <p>VIRUS DE LA GRIPE</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="fotomic1.ass">
+   <description>
+    <p>RELACIONAR MICROORGANISMOS,DIBUJOS</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+     <p>RELACIONA CADA MICROORGANISMO CON SU DIBUJO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFAF187">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xF2F821" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="700.0" cellHeight="500.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0" image="bacteria.jpg" />
+    <cell id="1" image="cianobac.jpg" />
+    <cell id="2" image="alga.jpg" />
+    <cell id="2" image="alga1.jpg" />
+    <cell id="3" image="hongo.jpg" />
+    <cell id="3" image="hongo1.jpg" />
+    <cell id="4" image="protozoo.jpg" />
+    <cell id="5" image="virusgripe.jpg" />
+   </cells>
+   <cells rows="6" columns="1" cellWidth="480.0" cellHeight="418.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="25" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>BACTERIAS</p>
+    </cell>
+    <cell>
+     <p>CIANOBACTERIAS</p>
+    </cell>
+    <cell>
+     <p>ALGAS MICROSCÓPICAS</p>
+    </cell>
+    <cell>
+     <p>HONGOS MICROSCÓPICOS</p>
+    </cell>
+    <cell>
+     <p>PROTOZOOS</p>
+    </cell>
+    <cell>
+     <p>VIRUS DE LA GRIPE</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="fotomic2.ass">
+   <description>
+    <p>ESCRIBIR EL NOMBRE DE LOS MICROORGANISMOS,</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+     <p>ESCRIBE EL NOMBRE DE CADA MICROORGANISMO </p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+     <p>¡ENHORABUENA!. YA TE LO SABES TODO. </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFAF187">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xF2F821" border="false" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="520.0" cellHeight="350.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell image="bacteria.jpg" />
+    <cell image="cianobac.jpg" />
+    <cell image="alga.jpg" />
+    <cell image="alga1.jpg" />
+    <cell image="hongo.jpg" />
+    <cell image="hongo1.jpg" />
+    <cell image="protozoo.jpg" />
+    <cell image="virusgri.jpg" />
+   </cells>
+   <cells rows="4" columns="2" cellWidth="440.0" cellHeight="350.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="23" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>BACTERIAS</p>
+    </cell>
+    <cell>
+     <p>CIANOBACTERIAS</p>
+    </cell>
+    <cell>
+     <p>ALGAS MICROSCÓPICAS</p>
+    </cell>
+    <cell>
+     <p>HONGOS MICROSCÓPICOS</p>
+    </cell>
+    <cell>
+     <p>PROTOZOOS</p>
+    </cell>
+    <cell>
+     <p>VIRUS GRIPE|VIRUS DE LA GRIPE</p>
+    </cell>
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="herenci1.ass">
+   <description>
+    <p>escribe hereditario o no hereditario</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>ESCRIBE SI ES "HEREDITARIO" O "NO HEREDITARIO"</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>¡MUY BIEN!. ¡GENIAL!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF8080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="4" columns="3" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>COLOR DEL PELO</p>
+    </cell>
+    <cell>
+     <p>COLOR DE LOS OJOS</p>
+    </cell>
+    <cell>
+     <p>COLOR DE LA PIEL</p>
+    </cell>
+    <cell>
+     <p>FORMA DEL LÓBULO DE LA OREJA</p>
+    </cell>
+    <cell>
+     <p>GRUPO SANGUÍNEO Y Rh</p>
+    </cell>
+    <cell>
+     <p>MIOPÍA</p>
+    </cell>
+    <cell>
+     <p>DESARROLLO MUSCULAR</p>
+    </cell>
+    <cell>
+     <p>ARRUGAS EN LA PIEL</p>
+    </cell>
+    <cell>
+     <p>COMPORTAMIENTO SOCIAL</p>
+    </cell>
+    <cell>
+     <p>HERIDAS</p>
+    </cell>
+    <cell>
+     <p>MUTILACIONES</p>
+    </cell>
+    <cell>
+     <p>NIVEL CULTURAL</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="3" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>HEREDITARIO</p>
+    </cell>
+    <cell>
+     <p>HEREDITARIO</p>
+    </cell>
+    <cell>
+     <p>HEREDITARIO</p>
+    </cell>
+    <cell>
+     <p>HEREDITARIO</p>
+    </cell>
+    <cell>
+     <p>HEREDITARIO</p>
+    </cell>
+    <cell>
+     <p>HEREDITARIO</p>
+    </cell>
+    <cell>
+     <p>NO HEREDITARIO</p>
+    </cell>
+    <cell>
+     <p>NO HEREDITARIO</p>
+    </cell>
+    <cell>
+     <p>NO HEREDITARIO</p>
+    </cell>
+    <cell>
+     <p>NO HEREDITARIO</p>
+    </cell>
+    <cell>
+     <p>NO HEREDITARIO</p>
+    </cell>
+    <cell>
+     <p>NO HEREDITARIO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="herencia.ass">
+   <description>
+    <p>ASOCIAR CARACTERISTICAS COMO HERE O NO HERE</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>¿SABES SI ESTAS CARACTERÍSTICAS SON HEREDITARIAS O NO HEREDITARIAS?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x80FF80">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x80FF00" border="true" />
+   </settings>
+   <cells rows="4" columns="3" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell id="0">
+     <p>COLOR DEL PELO</p>
+    </cell>
+    <cell id="0">
+     <p>COLOR DE LOS OJOS</p>
+    </cell>
+    <cell id="0">
+     <p>COLOR DE LA PIEL</p>
+    </cell>
+    <cell id="0">
+     <p>FORMA DEL LÓBULO DE LA OREJA</p>
+    </cell>
+    <cell id="0">
+     <p>GRUPO SANGUÍNEO Y Rh</p>
+    </cell>
+    <cell id="0">
+     <p>MIOPÍA</p>
+    </cell>
+    <cell id="1">
+     <p>DESARROLLO MUSCULAR</p>
+    </cell>
+    <cell id="1">
+     <p>ARRUGAS EN LA PIEL</p>
+    </cell>
+    <cell id="1">
+     <p>COMPORTAMIENTO SOCIAL</p>
+    </cell>
+    <cell id="1">
+     <p>HERIDAS</p>
+    </cell>
+    <cell id="1">
+     <p>MUTILACIONES</p>
+    </cell>
+    <cell id="1">
+     <p>NIVEL CULTURAL</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>CARACTERES HEREDITARIOS</p>
+    </cell>
+    <cell>
+     <p>CARACTERES NO HEREDITARIOS</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="infauthe.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>APRENDE TAMBIÉN ESTAS DEFINICIONES Y SIGUE ADELANTE.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="nuvols.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" columns="4" cellWidth="500.0" cellHeight="90.0" border="false">
+    <style>
+     <color foreground="0x800000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>AUTÓTROFOS</p>
+    </cell>
+    <cell>
+     <p>Elaboran su propio alimento.</p>
+    </cell>
+    <cell>
+     <p>HETERÓTROFOS</p>
+    </cell>
+    <cell>
+     <p>No elaboran su propio alimento, sino que lo toman del medio.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="infbenpe.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>LEE CON ATENCIÓN Y PASA PANTALLA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="nuvols.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" columns="4" cellWidth="500.0" cellHeight="90.0" border="false">
+    <style>
+     <color foreground="0x800000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>ENTRE LOS SERES VIVOS Y LOS MICROORGANISMOS ENCONTRAMOS RELACIONES</p>
+    </cell>
+    <cell>
+     <p>BENEFICIOSAS (aportan algo bueno)</p>
+    </cell>
+    <cell>
+     <p>Y</p>
+    </cell>
+    <cell>
+     <p>PERJUDICIALES (Aportan algo negativo)</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="infeupro.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>YA SABES... HAS DE APRENDER ESTAS DEFINICIONES. ¡ÁNIMO!</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="nuvols.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" columns="8" cellWidth="570.0" cellHeight="80.0" border="false">
+    <style>
+     <color foreground="0x800000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="8" />
+    <cell>
+     <p>EUCARIOTAS</p>
+    </cell>
+    <cell>
+     <p>Tienen núcleo.</p>
+    </cell>
+    <cell />
+    <cell>
+     <p>PROCARIOTAS</p>
+    </cell>
+    <cell>
+     <p>No tienen núcleo.</p>
+    </cell>
+    <cell />
+    <cell>
+     <p>PARÁSITOS</p>
+    </cell>
+    <cell>
+     <p>Viven a expensas de un ser vivo.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="infohere.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>LEE ATENTAMENTE Y PASA PANTALLA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="nuvols.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" columns="4" cellWidth="580.0" cellHeight="90.0" border="false">
+    <style>
+     <color foreground="0x800000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>CARACTERES HEREDITARIOS</p>
+    </cell>
+    <cell>
+     <p>Nacemos con ellos, los heredamos de nuestros padres.</p>
+    </cell>
+    <cell>
+     <p>CARACTERES NO HEREDITARIOS </p>
+    </cell>
+    <cell>
+     <p>No nacemos con ellos, sino que los vamos adquiriendo a lo largo de nuestra vida.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="infunipl.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>APRENDE ESTAS DEFINICIONES Y AVANZA. VAS MUY BIEN.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="nuvols.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" columns="5" cellWidth="500.0" cellHeight="90.0" border="false">
+    <style>
+     <color foreground="0x800000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>UNICELULARES</p>
+    </cell>
+    <cell>
+     <p>Tienen una sola célula.</p>
+    </cell>
+    <cell />
+    <cell>
+     <p>PLURICELULARES</p>
+    </cell>
+    <cell>
+     <p>Tienen varias células.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="inicio.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xDF1A3D" />
+     </style>
+     <media type="PLAY_MIDI" level="2" file="wowoy.mid" />
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xDF1A3D" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="marbpale.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" columns="11" cellWidth="700.0" cellHeight="70.0" border="false">
+    <style>
+     <color background="0xFBD7E6" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="11" />
+    <cell>
+     <p>SERES VIVOS Y MICROORGANISMOS</p>
+    </cell>
+    <cell>
+     <p>2º DE E.S.O.</p>
+    </cell>
+    <cell />
+    <cell>
+     <p>I.E.S. "SANTA CATALINA"</p>
+    </cell>
+    <cell>
+     <p>BURGO DE OSMA (SORIA)</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+    <cell>
+     <p>ROSA ANA SANTIAGO VICARIO </p>
+    </cell>
+    <cell>
+     <p>rosv@wanadoo.es</p>
+    </cell>
+    <cell>
+     <p>MARZO 2001.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.FillInBlanks" name="llenahue.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>Lee atentamente y completa los huecos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="bravo.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="cuaderno.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="600" height="500" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Arial" background="0xFFFFFF" foreground="0x000000" size="16" bold="false" italic="false" tabWidth="4" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text />
+      <cell width="380" height="83" border="true">
+       <style>
+        <color background="0xFFFF80" />
+       </style>
+       <p>REPASAMOS LOS CAMBIOS EN LOS INVERTEBRADOS</p>
+      </cell>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>En los invertebrados, la etapa infantil se llama </text>
+      <target>
+       <answer>larva</answer>
+       <optionList>
+        <option>larva</option>
+        <option>pupa</option>
+        <option>huevo</option>
+       </optionList>
+       <text>larva</text>
+      </target>
+      <text>. </text>
+     </p>
+     <p />
+     <p>
+      <text>Es muy frecuente que el animal viva más tiempo en estado de larva que de </text>
+      <target>
+       <answer>adulto</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text>adulto</text>
+      </target>
+      <text>. </text>
+     </p>
+     <p />
+     <p>
+      <text>Durante este tiempo se </text>
+      <target>
+       <answer>alimentan</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <text>alimentan</text>
+      </target>
+      <text> y </text>
+      <target>
+       <answer>crecen</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text>crecen</text>
+      </target>
+      <text>, hasta que se convierten en adultos. </text>
+     </p>
+     <p />
+     <p>
+      <text>La etapa intermedia que hay entre la infancia y la de adulto se llama </text>
+      <target>
+       <answer>pupa</answer>
+       <optionList>
+        <option>huevo</option>
+        <option>larva</option>
+        <option>pupa</option>
+       </optionList>
+       <text>pupa</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <text>Cuando la larva ha crecido lo suficiente, su piel se hace </text>
+      <target>
+       <answer>dura</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>dura</text>
+      </target>
+      <text> y forma una </text>
+      <target>
+       <answer>cubierta</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>cubierta</text>
+      </target>
+      <text> rígida y de ella sale el adulto completamente transformado.</text>
+     </p>
+     <p />
+     <p>
+      <text>Este cambio de </text>
+      <target>
+       <answer>larva</answer>
+       <optionList>
+        <option>huevo</option>
+        <option>pupa</option>
+        <option>larva</option>
+       </optionList>
+       <text>larva</text>
+      </target>
+      <text> a </text>
+      <target>
+       <answer>adulto</answer>
+       <optionList>
+        <option>pupa</option>
+        <option>adulto</option>
+        <option>huevo</option>
+       </optionList>
+       <text>adulto</text>
+      </target>
+      <text> se llama </text>
+      <target>
+       <answer>metamorfosis</answer>
+       <response fill="_" length="12" maxLength="12" />
+       <text>metamorfosis</text>
+      </target>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="portada7.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <media type="PLAY_MIDI" level="2" file="blowing.mid" />
+     <p>¿ESTÁS PREPARADO PARA COMENZAR?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="brnbricb.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" columns="4" cellWidth="500.0" cellHeight="100.0" border="false">
+    <style>
+     <font family="Arial" size="34" bold="true" />
+     <color foreground="0xFFFFFF" background="0x208267" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>ETAPAS EN LA VIDA DE LOS SERES VIVOS</p>
+    </cell>
+    <cell>
+     <p>___________________________________</p>
+    </cell>
+    <cell>
+     <p>CIENCIAS DE LA NATURALEZA</p>
+    </cell>
+    <cell>
+     <p>2º E.S.O.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="portada8.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <media type="PLAY_MIDI" level="2" file="blowing.mid" />
+     <p>PUEDES COMENZAR CUANDO QUIERAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="cloud.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" columns="4" cellWidth="500.0" cellHeight="100.0" border="false">
+    <style>
+     <font family="Arial" size="34" bold="true" />
+     <color foreground="0xFFFFFF" background="0x3243BA" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>LOS MICROORGANISMOS</p>
+    </cell>
+    <cell>
+     <p>___________________________________</p>
+    </cell>
+    <cell>
+     <p>CIENCIAS DE LA NATURALEZA</p>
+    </cell>
+    <cell>
+     <p>2º E.S.O.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="proerca.ass">
+   <description>
+    <p>PROCARIOTAS Y EUCARIOTAS</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>¿SABES SI SON EUCARIOTAS O PROCARIOTAS?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>¡CORRECTO!, LO HAS HECHO MUY BIEN, SEGUIMOS...</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xACFB86">
+     <image name="cianobf.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x6CDB80" border="true" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="1">
+     <p>BACTERIAS</p>
+    </cell>
+    <cell id="1">
+     <p>CIANOBACTERIAS</p>
+    </cell>
+    <cell id="0">
+     <p>PROTOZOOS</p>
+    </cell>
+    <cell id="0">
+     <p>ALGAS MICROSCÓPICAS</p>
+    </cell>
+    <cell id="0">
+     <p>HONGOS MICROSCÓPICOS</p>
+    </cell>
+    <cell id="3">
+     <p>VIRUS</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>EUCARIOTAS</p>
+    </cell>
+    <cell>
+     <p>PROCARIOTAS</p>
+    </cell>
+    <cell>
+     <p>NO TIENE CÉLULAS</p>
+    </cell>
+    <cell>
+     <p>PARÁSITOS</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="relabeny.ass">
+   <description>
+    <p>ELIMINAR LAS RELACIONES PERJUDICIALES</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>ELIMINA LAS RELACIONES PERJUDICIALES ENTRE LOS MICROORGANISMOS Y LAS PERSONAS Y TE QUEDARÁN LAS RELACIONES BENEFICIOSAS.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>¡¡¡ FABULOSO !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00FF80">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xEFEF92" border="true" />
+   </settings>
+   <cells rows="4" columns="3" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell id="0">
+     <p>MUTUALISMO</p>
+    </cell>
+    <cell id="0">
+     <p>ALGUNOS ALIMENTOS SE REALIZAN CON DISTINTOS MICROORGANISMOS</p>
+    </cell>
+    <cell id="0">
+     <p>ELIMINAR MAREAS NEGRAS</p>
+    </cell>
+    <cell id="0">
+     <p>DEPURAR AGUAS RESIDUALES</p>
+    </cell>
+    <cell id="0">
+     <p>PRODUCIR ENERGÍA NO CONTAMINANTE</p>
+    </cell>
+    <cell id="0">
+     <p>VITAMINAS Y MEDICAMENTOS</p>
+    </cell>
+    <cell id="0">
+     <p>INSECTICIDAS</p>
+    </cell>
+    <cell id="1">
+     <p>ENFERMEDADES INFECIOSAS</p>
+    </cell>
+    <cell id="1">
+     <p>CONTAGIO</p>
+    </cell>
+    <cell id="1">
+     <p>DESTRUYEN PLANTAS</p>
+    </cell>
+    <cell id="1">
+     <p>CAUSAN LA MUERTE DE ALGUNOS ANIMALES</p>
+    </cell>
+    <cell id="1">
+     <p>MOHO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="relbenyp.ass">
+   <description>
+    <p>ESCRIBE BENEFICIOSA O PERJUDICIAL</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>INDICA EN CADA CASO SI SE TRATA DE UNA RELACIÓN "BENEFICIOSA" O "PERJUDICIAL" PARA EL HOMBRE</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>¡¡¡ CORRECTO !!!  </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF8080">
+     <image name="virusgf.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0080" border="true" />
+   </settings>
+   <cells rows="4" columns="3" cellWidth="250.0" cellHeight="250.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>MUTUALISMO</p>
+    </cell>
+    <cell>
+     <p>ALGUNOS ALIMENTOS SE REALIZAN CON DISTINTOS MICROORGANISMOS</p>
+    </cell>
+    <cell>
+     <p>ELIMINAR MAREAS NEGRAS</p>
+    </cell>
+    <cell>
+     <p>DEPURAR AGUAS RESIDUALES</p>
+    </cell>
+    <cell>
+     <p>PRODUCIR ENERGÍA NO CONTAMINANTE</p>
+    </cell>
+    <cell>
+     <p>VITAMINAS Y MEDICAMENTOS</p>
+    </cell>
+    <cell>
+     <p>INSECTICIDAS</p>
+    </cell>
+    <cell>
+     <p>ENFERMEDADES INFECIOSAS</p>
+    </cell>
+    <cell>
+     <p>CONTAGIO</p>
+    </cell>
+    <cell>
+     <p>DESTRUYEN PLANTAS</p>
+    </cell>
+    <cell>
+     <p>CAUSAN LA MUERTE DE ALGUNOS ANIMALES</p>
+    </cell>
+    <cell>
+     <p>MOHO</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="3" cellWidth="200.0" cellHeight="200.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>BENEFICIOSA</p>
+    </cell>
+    <cell>
+     <p>BENEFICIOSA</p>
+    </cell>
+    <cell>
+     <p>BENEFICIOSA</p>
+    </cell>
+    <cell>
+     <p>BENEFICIOSA</p>
+    </cell>
+    <cell>
+     <p>BENEFICIOSA</p>
+    </cell>
+    <cell>
+     <p>BENEFICIOSA</p>
+    </cell>
+    <cell>
+     <p>BENEFICIOSA</p>
+    </cell>
+    <cell>
+     <p>PERJUDICIAL</p>
+    </cell>
+    <cell>
+     <p>PERJUDICIAL</p>
+    </cell>
+    <cell>
+     <p>PERJUDICIAL</p>
+    </cell>
+    <cell>
+     <p>PERJUDICIAL</p>
+    </cell>
+    <cell>
+     <p>PERJUDICIAL</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="sopetavi.sop">
+   <description>
+    <p>BUSCA EN LA SOPA LAS ETAPAS DE LA VIDA</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>BUSCA LAS ETAPAS DE LA VIDA DE LAS PERSONAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>¿A QUE NO SON DIFÍCILES DE APRENDER?</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x00FFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="15" columns="10" cellWidth="200.0" cellHeight="200.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>M**************</row>
+     <row>*A*ANCIANIDAD**</row>
+     <row>**D******N*****</row>
+     <row>***U*****F*****</row>
+     <row>****R****A*****</row>
+     <row>*ADOLESCENCIA**</row>
+     <row>******Z**C*****</row>
+     <row>*********I*****</row>
+     <row>*********A*****</row>
+     <row>***************</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">INFANCIA</clue>
+    <clue id="1">ADOLESCENCIA</clue>
+    <clue id="2">MADUREZ</clue>
+    <clue id="3">ANCIANIDAD</clue>
+   </clues>
+  </activity>
+  <activity class="@textGrid.WordSearch" name="sopmicro.sop">
+   <description>
+    <p>CINCO MICROORGANISMOS</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>¡MENUDA SOPA! ESTÁ LLENA DE MICROORGANISMOS. (6) ¡ENCUENTRALOS!</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>¡MUY BIEN! NO TE HAS DEJADO NINGUNO.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x80FFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="16" columns="10" cellWidth="150.0" cellHeight="160.0" border="false">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>***************B</row>
+     <row>***************A</row>
+     <row>*CIANOBACTERIASC</row>
+     <row>*******L*******T</row>
+     <row>*******GH******E</row>
+     <row>**V****A*O*****R</row>
+     <row>**I****S**N****I</row>
+     <row>**R********G***A</row>
+     <row>**U**PROTOZOOS*S</row>
+     <row>**S**********S**</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">BACTERIAS</clue>
+    <clue id="1">CIANOBACTERIAS</clue>
+    <clue id="2">ALGAS</clue>
+    <clue id="3">HONGOS</clue>
+    <clue id="4">PROTOZOOS</clue>
+    <clue id="5">VIRUS</clue>
+   </clues>
+   <cells rows="3" columns="2" cellWidth="610.0" cellHeight="500.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="bacteri2.jpg" />
+    <cell image="cianoba2.jpg" />
+    <cell image="alga2.jpg" />
+    <cell image="hongo12.jpg" />
+    <cell image="protozo2.jpg" />
+    <cell image="virusgr2.jpg" />
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="unipluri.ass">
+   <description>
+    <p>MICROORGANISMOS</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+     <p>SEÑALA SI ESTOS MICROORGANISMOS SON UNICELULARES O PLURICELULARES</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+     <p>¡¡¡MUY BIEN!!!, PERO HAY MÁS CARACTERÍSTICAS, SIGUE...</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFEFE83">
+     <image name="protozf.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE8EC4F" border="true" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0">
+     <p>BACTERIAS</p>
+    </cell>
+    <cell id="0">
+     <p>CIANOBACTERIAS</p>
+    </cell>
+    <cell id="0">
+     <p>PROTOZOOS</p>
+    </cell>
+    <cell id="2">
+     <p>ALGAS MICROSCÓPICAS</p>
+    </cell>
+    <cell id="2">
+     <p>HONGOS MICROSCÓPICOS</p>
+    </cell>
+    <cell id="3">
+     <p>VIRUS</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>UNICELULARES</p>
+    </cell>
+    <cell>
+     <p>PLURICELULARES</p>
+    </cell>
+    <cell>
+     <p>UNICELULARES O PLURICELULARES</p>
+    </cell>
+    <cell>
+     <p>NO TIENE CÉLULAS</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.Order" name="vidainve.txa" type="orderParagraphs">
+   <description>
+    <p>ORDENAR EL TEXTO CAMBIOS EN LA VIDA DE LOS INVERTEBRADOS</p>
+   </description>
+   <messages>
+    <cell type="previous">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>CUANDO HAYAS LEIDO ATÉNTAMENTE EL TEXTO... ¡SIGUE ADELANTE!</p>
+    </cell>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>¡LOS PÁRRAFOS DE ESTE TEXTO SE HAN VUELTO LOCOS! ¡¡¡ORDÉNALOS!!!</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>¡¡¡ GENIAL !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="cuaderno.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xAFE39D" border="false">
+     <size width="700" height="500" />
+    </window>
+   </settings>
+   <checkButton>¿QUÉ TAL LO HE HECHO?</checkButton>
+   <prevScreen maxTime="30" />
+   <document>
+    <style name="default" family="Arial" background="0xDFFFFF" foreground="0x000000" size="14" bold="false" italic="false" tabWidth="6" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text />
+      <cell width="470" height="90" border="true">
+       <style>
+        <font family="Arial" size="25" />
+        <color background="0xBBE1D3" />
+       </style>
+       <p>CAMBIOS EN LA VIDA DE LOS ANIMALES INVERTEBRADOS.</p>
+      </cell>
+     </p>
+     <p />
+     <p>
+      <target>	En los invertebrados, la etapa infantil se llama larva. Por ejemplo, la etapa infantil de las mariposas es la oruga (que tiene aspecto de gusano y no de insecto).</target>
+     </p>
+     <p />
+     <p>
+      <target>	Es muy frecuente que el animal viva más tiempo en estado de larva que de adulto. Por ejemplo, algunos escarabajos viven en estado de larva durante cinco años, escondidos en el tronco de los árboles.</target>
+     </p>
+     <p />
+     <p>
+      <target>	Durante este tiempo se alimentan y crecen, hasta que se convierten en adultos. </target>
+     </p>
+     <p />
+     <p>
+      <target>	En los insectos, que son los invertebrados más abundantes, el paso de la etapa infantil a la de adulto no es directo, sino que existe un paso intermedio que se llama pupa. Cuando la larva ha crecido lo suficiente, su piel se hace dura y forma una cubierta rígida.</target>
+     </p>
+     <p />
+     <p>
+      <target>	En el interior de la cubierta, el animal sufre importantes cambios.</target>
+     </p>
+     <p />
+     <p>
+      <target>	Al cabo del tiempo, la cubierta se abre y de ella sale el adulto completamente transformado. Este cambio de larva a adulto se llama metamorfosis</target>
+      <text>.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="alga.jpg" file="alga.jpg" />
+  <media name="alga1.jpg" file="alga1.jpg" />
+  <media name="alga2.jpg" file="alga2.jpg" />
+  <media name="bacterf.jpg" file="bacterf.jpg" />
+  <media name="bacteri2.jpg" file="bacteri2.jpg" />
+  <media name="bacteria.jpg" file="bacteria.jpg" />
+  <media name="brnbricb.jpg" file="brnbricb.jpg" />
+  <media name="cianoba2.jpg" file="cianoba2.jpg" />
+  <media name="cianobac.jpg" file="cianobac.jpg" />
+  <media name="cianobf.jpg" file="cianobf.jpg" />
+  <media name="cloud.jpg" file="cloud.jpg" />
+  <media name="cuaderno.jpg" file="cuaderno.jpg" />
+  <media name="hongo.jpg" file="hongo.jpg" />
+  <media name="hongo1.jpg" file="hongo1.jpg" />
+  <media name="hongo12.jpg" file="hongo12.jpg" />
+  <media name="marbpale.jpg" file="marbpale.jpg" />
+  <media name="marbteal.jpg" file="marbteal.jpg" />
+  <media name="minialt.jpg" file="minialt.jpg" />
+  <media name="nuvols.jpg" file="nuvols.jpg" />
+  <media name="protozf.jpg" file="protozf.jpg" />
+  <media name="protozo2.jpg" file="protozo2.jpg" />
+  <media name="protozoo.jpg" file="protozoo.jpg" />
+  <media name="virusgf.jpg" file="virusgf.jpg" />
+  <media name="virusgr2.jpg" file="virusgr2.jpg" />
+  <media name="virusgri.jpg" file="virusgri.jpg" />
+  <media name="virusgripe.jpg" file="virusgripe.jpg" />
+  <media name="blowing.mid" file="blowing.mid" />
+  <media name="close.mid" file="close.mid" />
+  <media name="wowoy.mid" file="wowoy.mid" />
+  <media name="1.wav" file="1.wav" />
+  <media name="2.wav" file="2.wav" />
+  <media name="3.wav" file="3.wav" />
+  <media name="4.wav" file="4.wav" />
+  <media name="5.wav" file="5.wav" />
+  <media name="bravo.wav" file="bravo.wav" />
+  <media name="simfon40.wav" file="simfon40.wav" />
+ </mediaBag>
+</JClicProject>
+

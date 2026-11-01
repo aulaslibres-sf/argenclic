@@ -1,0 +1,952 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="eme" version="0.1.3">
+ <settings>
+  <title>Letras</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="11/10/03" />
+  <revision description="Conversión de Clic3 a JClic" date="11/10/03">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="María Elena Abalo" mail="(mariaelena_abalo@yahoo.com.mx)" />
+  <language>español</language>
+  <description>
+   <p>"Letras" consiste en 4 paquetes de ejercicios para la iniciación a la lecto-escritura en español, en los que se utilizan palabras que contienen las letras P, M y S.</p>
+  </description>
+  <descriptors area="Lenguas" level="Primaria">lengua castellana, aprendizaje de la lengua</descriptors>
+ </settings>
+ <sequence>
+  <item id="eme.pac" name="mamemi.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="conma.ass" />
+  <item name="manoma.ass" />
+  <item name="conmay.ass" />
+  <item name="conmayme.ass" />
+  <item name="conmo.ass" />
+  <item name="maomu.ass" />
+  <item name="nombres.ass" />
+  <item name="complet.txa" />
+  <item name="comple1.txa" />
+  <item name="manueli.puz">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@text.FillInBlanks" name="comple1.txa">
+   <messages>
+    <cell image="lapiz.gif" type="initial">
+     <style>
+      <color background="0x408080" />
+     </style>
+    </cell>
+    <cell image="ok1.gif" type="final">
+     <style>
+      <color background="0x408080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x9EE2D1">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true">
+     <size width="480" height="320" />
+    </window>
+   </settings>
+   <document>
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="default" size="17" background="0xFFFFFF" tabWidth="16" family="Arial" bold="false" foreground="0x000000" italic="false" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p size="17" background="0xFFFFFF" family="Arial" bold="false" name="default" foreground="0x000000" italic="false">
+      <text>  </text>
+      <cell width="145" height="100" border="false" image="goma.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text> </text>
+      <cell width="140" height="100" border="false" image="mago.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text> </text>
+      <cell width="140" height="100" border="false" image="limon1.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+     </p>
+     <p size="17" background="0xFFFFFF" family="Arial" bold="false" name="default" foreground="0x000000" italic="false">
+      <text>         GO</text>
+      <target>
+       <answer>MA</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>MA</text>
+      </target>
+      <text>                     </text>
+      <target>
+       <answer>MA</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>MA</text>
+      </target>
+      <text>GO                    LI</text>
+      <target>
+       <answer>MO</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>MO</text>
+      </target>
+      <text>N</text>
+     </p>
+     <p size="17" background="0xFFFFFF" family="Arial" bold="false" name="default" foreground="0x000000" italic="false" />
+     <p size="17" background="0xFFFFFF" family="Arial" bold="false" name="default" foreground="0x000000" italic="false">
+      <text> </text>
+      <cell width="140" height="100" border="false" image="remera.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text>  </text>
+      <cell width="140" height="100" border="false" image="tomate.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text> </text>
+      <cell width="140" height="100" border="false" image="musica1.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+     </p>
+     <p size="17" background="0xFFFFFF" family="Arial" bold="false" name="default" foreground="0x000000" italic="false">
+      <text>         RE</text>
+      <target>
+       <answer>ME</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>ME</text>
+      </target>
+      <text>RA              TO</text>
+      <target>
+       <answer>MA</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>MA</text>
+      </target>
+      <text>TE               </text>
+      <target>
+       <answer>MU</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>MU</text>
+      </target>
+      <text>SICA</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="complet.txa">
+   <messages>
+    <cell image="lapiz.gif" type="initial">
+     <style>
+      <color background="0xB476C0" />
+     </style>
+    </cell>
+    <cell image="9nenes.gif" type="final">
+     <style>
+      <color background="0xB476C0" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x8080C0">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="525" height="320" />
+    </window>
+   </settings>
+   <document>
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="default" size="17" background="0xE3CCDD" tabWidth="16" family="Arial" bold="false" foreground="0x000000" italic="false" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p size="17" background="0xE3CCDD" family="Arial" bold="false" name="default" foreground="0x000000" italic="false">
+      <cell width="100" height="80" border="false" image="mesa.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text>  </text>
+      <cell width="100" height="80" border="false" image="murci.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text>    </text>
+      <cell width="100" height="80" border="false" image="moto.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text>      </text>
+      <cell width="110" height="80" border="false" image="marti.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+     </p>
+     <p size="17" background="0xE3CCDD" family="Arial" bold="false" name="default" foreground="0x000000" italic="false">
+      <text> </text>
+      <target>
+       <answer>ME</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>ME</text>
+      </target>
+      <text>SA             </text>
+      <target>
+       <answer>MU</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>MU</text>
+      </target>
+      <text>RCIELAGO     </text>
+      <target>
+       <answer>MO</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>MO</text>
+      </target>
+      <text>TO               </text>
+      <target>
+       <answer>MA</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>MA</text>
+      </target>
+      <text>RTILLO</text>
+     </p>
+     <p size="17" background="0xE3CCDD" family="Arial" bold="false" name="default" foreground="0x000000" italic="false" />
+     <p size="17" background="0xE3CCDD" family="Arial" bold="false" name="default" foreground="0x000000" italic="false" />
+     <p size="17" background="0xE3CCDD" family="Arial" bold="false" name="default" foreground="0x000000" italic="false">
+      <cell width="100" height="85" border="false" image="manza.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text>  </text>
+      <cell width="100" height="80" border="false" image="mari.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text>      </text>
+      <cell width="123" height="80" border="false" image="paloma.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text>   </text>
+      <cell width="100" height="80" border="false" image="monio.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+     </p>
+     <p size="17" background="0xE3CCDD" family="Arial" bold="false" name="default" foreground="0x000000" italic="false">
+      <target>
+       <answer>MA</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>MA</text>
+      </target>
+      <text>NZANA        </text>
+      <target>
+       <answer>MA</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>MA</text>
+      </target>
+      <text>RIPOSA        PALO</text>
+      <target>
+       <answer>MA</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>MA</text>
+      </target>
+      <text>             </text>
+      <target>
+       <answer>MO</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>MO</text>
+      </target>
+      <text>ÑO</text>
+     </p>
+     <p size="17" background="0xE3CCDD" family="Arial" bold="false" name="default" foreground="0x000000" italic="false">
+      <text> </text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.Identify" name="conma.ass">
+   <messages>
+    <cell image="ma.gif" type="initial">
+     <style>
+      <color background="0xCDBECC" />
+     </style>
+    </cell>
+    <cell image="9nenes.gif" type="final">
+     <style>
+      <color background="0xCDBECC" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF80C0">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="29" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="1" image="mariposi.gif" />
+    <cell id="1" image="mapa.gif" />
+    <cell id="1" image="manza.gif" />
+    <cell id="1" image="marti.gif" />
+    <cell id="0" image="lapiz.gif" />
+    <cell id="0" image="pera.gif" />
+    <cell id="0" image="oso.gif" />
+    <cell id="0" image="moto.gif" />
+   </cells>
+   <cells rows="2" cols="4" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>MA</p>
+    </cell>
+    <cell>
+     <p>MA</p>
+    </cell>
+    <cell>
+     <p>MA</p>
+    </cell>
+    <cell>
+     <p>MA</p>
+    </cell>
+    <cell>
+     <p>-</p>
+    </cell>
+    <cell>
+     <p>-</p>
+    </cell>
+    <cell>
+     <p>-</p>
+    </cell>
+    <cell>
+     <p>-</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="conmay.ass">
+   <messages>
+    <cell image="flecha.gif" type="initial">
+     <style>
+      <color background="0xDBCCA6" />
+     </style>
+    </cell>
+    <cell image="9nenes.gif" type="final">
+     <style>
+      <color background="0xDBCCA6" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF8040">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="1" cols="5" cellWidth="700.0" cellHeight="500.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="26" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell image="mate1.gif" />
+    <cell image="media1.gif" />
+    <cell image="miel1.gif" />
+    <cell image="mono1.gif" />
+    <cell image="mur.gif" />
+   </cells>
+   <cells rows="1" cols="5" cellWidth="500.0" cellHeight="363.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color background="0xC9A9CB" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>MA</p>
+    </cell>
+    <cell>
+     <p>ME</p>
+    </cell>
+    <cell>
+     <p>MI</p>
+    </cell>
+    <cell>
+     <p>MO</p>
+    </cell>
+    <cell>
+     <p>MU</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="5" cellWidth="700.0" cellHeight="500.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>MA</p>
+    </cell>
+    <cell>
+     <p>ME</p>
+    </cell>
+    <cell>
+     <p>MI</p>
+    </cell>
+    <cell>
+     <p>MO</p>
+    </cell>
+    <cell>
+     <p>MU</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="conmayme.ass">
+   <messages>
+    <cell image="conmi.gif" type="initial">
+     <style>
+      <color background="0x008080" />
+     </style>
+    </cell>
+    <cell image="9nenes.gif" type="final">
+     <style>
+      <color background="0x008080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x9EE2D1">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="1" cols="5" cellWidth="700.0" cellHeight="500.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0x800080" background="0xA8D9AA" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell image="mam_.gif" />
+    <cell image="mesa1.gif" />
+    <cell image="hormi.gif" />
+    <cell image="limon2.gif" />
+    <cell image="muneco.gif" />
+   </cells>
+   <cells rows="1" cols="5" cellWidth="700.0" cellHeight="500.0" border="true" id="secondary">
+    <style>
+     <color background="0xE1E79A" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>MA</p>
+    </cell>
+    <cell>
+     <p>ME</p>
+    </cell>
+    <cell>
+     <p>MI</p>
+    </cell>
+    <cell>
+     <p>MO</p>
+    </cell>
+    <cell>
+     <p>MU</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="5" cellWidth="700.0" cellHeight="500.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>MA</p>
+    </cell>
+    <cell>
+     <p>ME</p>
+    </cell>
+    <cell>
+     <p>MI</p>
+    </cell>
+    <cell>
+     <p>MO</p>
+    </cell>
+    <cell>
+     <p>MU</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BUA" />
+  </activity>
+  <activity class="@panels.Identify" name="conmo.ass">
+   <messages>
+    <cell image="mo.gif" type="initial">
+     <style>
+      <color background="0xA8D9AA" />
+     </style>
+    </cell>
+    <cell image="9nenes.gif" type="final">
+     <style>
+      <color background="0xA8D9AA" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF80C0">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="26" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="1" image="monio.gif" />
+    <cell id="1" image="mono.gif" />
+    <cell id="1" image="moto.gif" />
+    <cell id="0" image="pinza.gif" />
+    <cell id="0" image="pato.gif" />
+    <cell id="0" image="mami.gif" />
+    <cell id="0" image="sapo.gif" />
+    <cell id="0" image="paloma.gif" />
+   </cells>
+   <cells rows="2" cols="4" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>MO</p>
+    </cell>
+    <cell>
+     <p>MO</p>
+    </cell>
+    <cell>
+     <p>MO</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="mamemi.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF80" />
+     </style>
+     <p>RELACIONA Y LEE.</p>
+    </cell>
+    <cell image="9nenes.gif" type="final">
+     <style>
+      <color background="0xFFFF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="pezfon.gif" tiled="true" />
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="700.0" cellHeight="500.0" border="false" id="primary">
+    <style shadow="true">
+     <font family="Arial" size="26" bold="true" />
+     <color foreground="0xFF0000" background="0xFF8080" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell image="m.gif" />
+    <cell image="m.gif" />
+    <cell image="m.gif" />
+    <cell image="m.gif" />
+    <cell image="m.gif" />
+   </cells>
+   <cells rows="5" cols="1" cellWidth="700.0" cellHeight="500.0" border="false" id="secondary">
+    <style>
+     <color background="0xFF80C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell image="a.gif" />
+    <cell image="e.gif" />
+    <cell image="i.gif" />
+    <cell image="o.gif" />
+    <cell image="u.gif" />
+   </cells>
+   <cells rows="5" cols="1" cellWidth="700.0" cellHeight="500.0" border="false" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>MA</p>
+    </cell>
+    <cell>
+     <p>ME</p>
+    </cell>
+    <cell>
+     <p>MI</p>
+    </cell>
+    <cell>
+     <p>MO</p>
+    </cell>
+    <cell>
+     <p>MU</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="manoma.ass">
+   <messages>
+    <cell image="flecha.gif" type="initial">
+     <style>
+      <color background="0xBDAED2" />
+     </style>
+    </cell>
+    <cell image="ok1.gif" type="final">
+     <style>
+      <color background="0xBDAED2" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0080FF">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="700.0" cellHeight="500.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0" image="mar.gif" />
+    <cell id="0" image="masa.gif" />
+    <cell id="0" image="mangue.gif" />
+    <cell id="0" image="mate1.gif" />
+    <cell id="0" image="mataf.gif" />
+    <cell id="1" image="miel1.gif" />
+    <cell id="1" image="mosca1.gif" />
+    <cell id="1" image="muela.gif" />
+   </cells>
+   <cells rows="1" cols="2" cellWidth="413.0" cellHeight="357.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="ma.gif" />
+    <cell image="noma.gif" />
+   </cells>
+   <cells rows="2" cols="4" cellWidth="700.0" cellHeight="500.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>MA</p>
+    </cell>
+    <cell>
+     <p>MA</p>
+    </cell>
+    <cell>
+     <p>MA</p>
+    </cell>
+    <cell>
+     <p>MA</p>
+    </cell>
+    <cell>
+     <p>MA</p>
+    </cell>
+    <cell>
+     <p>-</p>
+    </cell>
+    <cell>
+     <p>-</p>
+    </cell>
+    <cell>
+     <p>-</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="manueli.puz" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xA8D9AA" />
+     </style>
+     <p>¿CÓMO SE LLAMA?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xA8D9AA" />
+     </style>
+     <p>SÍ, ES MANUELITA.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xA8D9AA">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="true" image="manueli1.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="maomu.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x0080FF" />
+     </style>
+     <p>MA-ME-MI-MO-MU</p>
+    </cell>
+    <cell image="9nenes.gif" type="final">
+     <style>
+      <color background="0x0080FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="manosfon.gif" tiled="true" />
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="160.0" cellHeight="160.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="26" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell image="manza.gif" />
+    <cell image="murci.gif" />
+    <cell image="mesa.gif" />
+    <cell image="monio.gif" />
+    <cell image="mapa.gif" />
+    <cell image="mari.gif" />
+    <cell image="moto.gif" />
+    <cell image="mono.gif" />
+   </cells>
+   <cells rows="2" cols="4" cellWidth="140.0" cellHeight="122.0" border="true" id="answers">
+    <style>
+     <color background="0xFF8080" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>MA</p>
+    </cell>
+    <cell>
+     <p>MU</p>
+    </cell>
+    <cell>
+     <p>ME</p>
+    </cell>
+    <cell>
+     <p>MO</p>
+    </cell>
+    <cell>
+     <p>MA</p>
+    </cell>
+    <cell>
+     <p>MA</p>
+    </cell>
+    <cell>
+     <p>MO</p>
+    </cell>
+    <cell>
+     <p>MO</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="160.0" cellHeight="160.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>MA</p>
+    </cell>
+    <cell>
+     <p>MU</p>
+    </cell>
+    <cell>
+     <p>ME</p>
+    </cell>
+    <cell>
+     <p>MO</p>
+    </cell>
+    <cell>
+     <p>MA</p>
+    </cell>
+    <cell>
+     <p>MA</p>
+    </cell>
+    <cell>
+     <p>MO</p>
+    </cell>
+    <cell>
+     <p>MO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="nombres.ass">
+   <messages>
+    <cell image="ma.gif" type="initial">
+     <style>
+      <color background="0x9EE2D1" />
+     </style>
+    </cell>
+    <cell image="9nenes.gif" type="final">
+     <style>
+      <color background="0x9EE2D1" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="manosfon.gif" tiled="true" />
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="700.0" cellHeight="265.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="0" image="carmelo.gif" />
+    <cell id="1" image="tomas.gif" />
+    <cell id="0" image="gimena.gif" />
+    <cell id="0" image="guille.gif" />
+    <cell id="1" image="marta.gif" />
+    <cell id="0" image="miguel.gif" />
+    <cell id="1" image="marina.gif" />
+    <cell id="1" image="marcelo.gif" />
+    <cell id="0" image="monica.gif" />
+   </cells>
+   <cells rows="3" cols="3" cellWidth="700.0" cellHeight="265.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>-</p>
+    </cell>
+    <cell>
+     <p>MA</p>
+    </cell>
+    <cell>
+     <p>-</p>
+    </cell>
+    <cell>
+     <p>-</p>
+    </cell>
+    <cell>
+     <p>MA</p>
+    </cell>
+    <cell>
+     <p>-</p>
+    </cell>
+    <cell>
+     <p>MA</p>
+    </cell>
+    <cell>
+     <p>MA</p>
+    </cell>
+    <cell>
+     <p>-</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="9nenes.gif" file="9nenes.gif" />
+  <media name="a.gif" file="a.gif" />
+  <media name="carmelo.gif" file="carmelo.gif" />
+  <media name="conmi.gif" file="conmi.gif" />
+  <media name="e.gif" file="e.gif" />
+  <media name="flecha.gif" file="flecha.gif" />
+  <media name="gimena.gif" file="gimena.gif" />
+  <media name="goma.gif" file="goma.gif" />
+  <media name="guille.gif" file="guille.gif" />
+  <media name="hormi.gif" file="hormi.gif" />
+  <media name="i.gif" file="i.gif" />
+  <media name="lapiz.gif" file="lapiz.gif" />
+  <media name="limon1.gif" file="limon1.gif" />
+  <media name="limon2.gif" file="limon2.gif" />
+  <media name="m.gif" file="m.gif" />
+  <media name="ma.gif" file="ma.gif" />
+  <media name="mago.gif" file="mago.gif" />
+  <media name="mam_.gif" file="mam_.gif" />
+  <media name="mami.gif" file="mami.gif" />
+  <media name="mangue.gif" file="mangue.gif" />
+  <media name="manosfon.gif" file="manosfon.gif" />
+  <media name="manueli1.gif" file="manueli1.gif" />
+  <media name="manza.gif" file="manza.gif" />
+  <media name="mapa.gif" file="mapa.gif" />
+  <media name="mar.gif" file="mar.gif" />
+  <media name="marcelo.gif" file="marcelo.gif" />
+  <media name="mari.gif" file="mari.gif" />
+  <media name="marina.gif" file="marina.gif" />
+  <media name="mariposi.gif" file="mariposi.gif" />
+  <media name="marta.gif" file="marta.gif" />
+  <media name="marti.gif" file="marti.gif" />
+  <media name="masa.gif" file="masa.gif" />
+  <media name="mataf.gif" file="mataf.gif" />
+  <media name="mate1.gif" file="mate1.gif" />
+  <media name="media1.gif" file="media1.gif" />
+  <media name="mesa.gif" file="mesa.gif" />
+  <media name="mesa1.gif" file="mesa1.gif" />
+  <media name="miel1.gif" file="miel1.gif" />
+  <media name="miguel.gif" file="miguel.gif" />
+  <media name="mo.gif" file="mo.gif" />
+  <media name="monica.gif" file="monica.gif" />
+  <media name="monio.gif" file="monio.gif" />
+  <media name="mono.gif" file="mono.gif" />
+  <media name="mono1.gif" file="mono1.gif" />
+  <media name="mosca1.gif" file="mosca1.gif" />
+  <media name="moto.gif" file="moto.gif" />
+  <media name="muela.gif" file="muela.gif" />
+  <media name="muneco.gif" file="muneco.gif" />
+  <media name="mur.gif" file="mur.gif" />
+  <media name="murci.gif" file="murci.gif" />
+  <media name="musica1.gif" file="musica1.gif" />
+  <media name="noma.gif" file="noma.gif" />
+  <media name="o.gif" file="o.gif" />
+  <media name="ok1.gif" file="ok1.gif" />
+  <media name="oso.gif" file="oso.gif" />
+  <media name="paloma.gif" file="paloma.gif" />
+  <media name="pato.gif" file="pato.gif" />
+  <media name="pera.gif" file="pera.gif" />
+  <media name="pezfon.gif" file="pezfon.gif" />
+  <media name="pinza.gif" file="pinza.gif" />
+  <media name="primera.gif" file="primera.gif" />
+  <media name="remera.gif" file="remera.gif" />
+  <media name="sapo.gif" file="sapo.gif" />
+  <media name="tomas.gif" file="tomas.gif" />
+  <media name="tomate.gif" file="tomate.gif" />
+  <media name="u.gif" file="u.gif" />
+ </mediaBag>
+</JClicProject>
+

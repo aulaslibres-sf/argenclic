@@ -1,0 +1,1483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="comun" version="0.1.3">
+ <settings>
+  <title>Comunicación</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="1/14/05" />
+  <revision description="Conversión de Clic3 a JClic" date="1/14/05">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Aurora Mesía Tello" mail="amtello@hotmail.com" />
+  <organization name="IE Manuel Segundo del Aguila Velasquez" city="Rioja - San Martín" country="Perú" />
+  <language>es</language>
+  <description>
+   <p>Este paquete de actividades está dirigido a alumnos  de Educacion Secundaria, y permite lograr capacidades de comprension lectora, reforzamiento, afianciamiento y evaluacion de temas tratados.</p>
+  </description>
+  <descriptors area-codes="lleng" level="Secundaria">comunicación</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Este paquete de actividades está dirigido a alumnos  de Educacion Secundaria, y permite lograr capacidades de comprension lectora, reforzamiento, afianciamiento y evaluacion de temas tratados.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="comun.pac" name="presenta.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="lolo.sop" />
+  <item name="lolo.txa" />
+  <item name="lolo1.txa" />
+  <item name="lolo1.ass" />
+  <item name="lolo2.ass" />
+  <item name="lolo2.txa" />
+  <item name="lolo3.ass" />
+  <item name="lolo3.txa" />
+  <item name="lolo4.ass" />
+  <item name="lolo4.txa" />
+  <item name="lolo5.ass" />
+  <item name="lolo6.ass" />
+  <item name="lolo6.txa" />
+  <item name="lolo7.ass" />
+  <item name="lolo7.txa" />
+  <item name="lolo8.txa">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@textGrid.WordSearch" name="lolo.sop" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0x0080FF" background="0xFFFF80" />
+     </style>
+     <p>Busca 10 verbos conjugados</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0x0080FF" background="0xFFFF80" />
+     </style>
+     <p>!Que bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF0000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="21" columns="10" cellWidth="38.0" cellHeight="48.0" border="true">
+    <style>
+     <font family="Tahoma" size="24" bold="true" />
+     <color foreground="0xFF0080" background="0x80FFFF" />
+    </style>
+    <text>
+     <row>***E*************COMO</row>
+     <row>SIENTE***************</row>
+     <row>*VIVIMOS*************</row>
+     <row>***E*****C********DAN</row>
+     <row>***J******R*****JUEGA</row>
+     <row>***E*******E********T</row>
+     <row>*NACEMOS****C*******S</row>
+     <row>***E*********E******E</row>
+     <row>***N***SALEN**N******</row>
+     <row>*********************</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">COMO</clue>
+    <clue id="1">SIENTE</clue>
+    <clue id="2">VIVIMOS</clue>
+    <clue id="3">DAN</clue>
+    <clue id="4">JUEGA</clue>
+    <clue id="5">NACEMOS</clue>
+    <clue id="6">SALEN</clue>
+    <clue id="7">CRECEN</clue>
+    <clue id="8">ENVEJECEN</clue>
+    <clue id="9">ESTA</clue>
+   </clues>
+  </activity>
+  <activity class="@text.FillInBlanks" name="lolo.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Book Antiqua" size="25" bold="true" italic="true" />
+      <color foreground="0x00FF80" background="0xFF0080" />
+     </style>
+     <p>Relaciona y marca correctamente</p>
+    </cell>
+    <cell image="lolo1.gif" type="final">
+     <style>
+      <font family="Book Antiqua" size="25" bold="true" italic="true" />
+      <color foreground="0x00FF80" background="0xFF0080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x8080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="686" height="500" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" foreground="0xFF00FF" bold="false" italic="false" size="24" tabWidth="16" background="0x80FFFF" family="Book Antiqua" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua">
+      <text foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua">1. El conferencista </text>
+      <target>
+       <answer>refuta</answer>
+       <optionList>
+        <option>rechaza</option>
+        <option>niega</option>
+        <option>refuta</option>
+        <option>repele</option>
+       </optionList>
+       <text>refuta</text>
+      </target>
+      <text foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua"> fácilmente lo que había dicho su colega.</text>
+     </p>
+     <p foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua">
+      <text foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua">2. La niña </text>
+      <target>
+       <answer>niega</answer>
+       <optionList>
+        <option>rechaza</option>
+        <option>niega</option>
+        <option>refuta</option>
+        <option>repele</option>
+       </optionList>
+       <text>niega</text>
+      </target>
+      <text foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua"> el dulce que le ofrecían.</text>
+     </p>
+     <p foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua">
+      <text foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua">3. Los combatientes </text>
+      <target>
+       <answer>repelen</answer>
+       <optionList>
+        <option>rechazan</option>
+        <option>niegan</option>
+        <option>refutan</option>
+        <option>repelen</option>
+       </optionList>
+       <text>repelen</text>
+      </target>
+      <text foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua"> el ataque</text>
+     </p>
+     <p foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua">
+      <text foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua">4. Él </text>
+      <target>
+       <answer>rechaza</answer>
+       <optionList>
+        <option>rechaza</option>
+        <option>niega</option>
+        <option>refuta</option>
+        <option>repele</option>
+       </optionList>
+       <text>rechaza</text>
+      </target>
+      <text foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua"> que fuera el autor de semejante atropello</text>
+     </p>
+     <p foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua">
+      <text foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua">5. La </text>
+      <target>
+       <answer>rebeldía</answer>
+       <optionList>
+        <option>rebeldía</option>
+        <option>revolución</option>
+        <option>rebelión</option>
+        <option>guerra civil</option>
+       </optionList>
+       <text>rebeldía</text>
+      </target>
+      <text foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua"> es propia de la adolescencia</text>
+     </p>
+     <p foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua">
+      <text foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua">6. Ha sido sofocada la </text>
+      <target>
+       <answer>rebelión</answer>
+       <optionList>
+        <option>rebelión</option>
+        <option>revolución</option>
+        <option>rebeldía</option>
+        <option>guerra civil</option>
+       </optionList>
+       <text>rebelión</text>
+      </target>
+     </p>
+     <p foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua">
+      <text foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua">7. La </text>
+      <target>
+       <answer>revolución</answer>
+       <optionList>
+        <option>rebelión</option>
+        <option>revolución</option>
+        <option>rebeldía</option>
+        <option>guerra civil</option>
+       </optionList>
+       <text>revolución</text>
+      </target>
+      <text foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua"> de Octubre fue derrotada medio siglo después.</text>
+     </p>
+     <p foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua">
+      <text foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua">8. La </text>
+      <target>
+       <answer>guerra civil</answer>
+       <optionList>
+        <option>rebelión</option>
+        <option>revolución</option>
+        <option>rebeldía</option>
+        <option>guerra civil</option>
+       </optionList>
+       <text>guerra civil</text>
+      </target>
+      <text foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua"> de España duró cuatro años</text>
+     </p>
+     <p foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua">
+      <text foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua">9. Cuando cruces una pista debes ser </text>
+      <target>
+       <answer>prudente</answer>
+       <optionList>
+        <option>juicioso</option>
+        <option>prudente</option>
+        <option>precavido</option>
+        <option>discreto</option>
+       </optionList>
+       <text>prudente</text>
+      </target>
+     </p>
+     <p foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua">
+      <text foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua">10. No hablaba nunca de más; era muy </text>
+      <target>
+       <answer>discreto</answer>
+       <optionList>
+        <option>juicioso</option>
+        <option>prudente</option>
+        <option>precavido</option>
+        <option>discreto</option>
+       </optionList>
+       <text>discreto</text>
+      </target>
+     </p>
+     <p foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua">
+      <text foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua">11. Siempre duermo con una linterna en mi mesa de noche, por si hay un temblor soy </text>
+      <target>
+       <answer>precavido</answer>
+       <optionList>
+        <option>juicioso</option>
+        <option>prudente</option>
+        <option>precavido</option>
+        <option>discreto</option>
+       </optionList>
+       <text>precavido</text>
+      </target>
+      <text foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua">.</text>
+     </p>
+     <p foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua">
+      <text foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua">12. Desde niño fue muy </text>
+      <target>
+       <answer>juicioso</answer>
+       <optionList>
+        <option>juicioso</option>
+        <option>prudente</option>
+        <option>precavido</option>
+        <option>discreto</option>
+       </optionList>
+       <text>juicioso</text>
+      </target>
+      <text foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua"> tanto, que parecía adulto</text>
+     </p>
+     <p foreground="0xFF00FF" italic="false" bold="false" size="24" background="0x80FFFF" family="Book Antiqua" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.Identify" name="lolo1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Calisto MT" size="26" />
+      <color foreground="0xFF0000" background="0x00FFFF" />
+     </style>
+     <p>De acuerdo al texto anterior, marca la alternativa correcta</p>
+    </cell>
+    <cell image="lolo2.gif" type="final">
+     <style>
+      <font family="Calisto MT" size="26" />
+      <color foreground="0xFF0000" background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0080C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="260.0" cellHeight="100.0" border="false" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="30" />
+     <color foreground="0xFF0000" background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell id="0">
+     <p>El estado peruano ha sido el mismo a través de todas las etapas de su historia.</p>
+    </cell>
+    <cell id="0">
+     <p>El estado peruano viene a ser el más antiguo del mundo</p>
+    </cell>
+    <cell id="1">
+     <p>El estado ha sido una constante en nuestro proceso histórico</p>
+    </cell>
+    <cell id="0">
+     <p>El territorio peruano ha cambiado mucho, más no el estado</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="lolo1.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="dialog" size="25" />
+      <color foreground="0x804040" background="0xFF0080" />
+     </style>
+     <p>Lee atentamente este texto</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="dialog" size="25" />
+      <color foreground="0x804040" background="0xFF0080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFF80">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="451" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" foreground="0x000000" bold="false" italic="false" size="21" tabWidth="16" background="0x80FFFF" family="dialog" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p foreground="0x000000" italic="false" bold="false" size="21" background="0x80FFFF" family="dialog">
+      <text foreground="0x000000" italic="false" bold="false" size="21" background="0x80FFFF" family="dialog">El proyecto de unidad del estado debe ser delimitado históricamente como un proceso ininterrumpido; y es que en el Perú, en el territorio que hoy llamamos Perú, a pesar de los recortes o cambios a través de los siglos, ha habido un hecho muy importante: la existencia de una fuerza centralizadora, que ha sido el estado; lo tenemos desde antes de los incas, con los incas, con la conquista, en el virreinato, en la independencia y en la república; o sea que abarca un período de muchos siglos, y en ese sentido resulta un fenómeno mucho más antiguo que el de otros países del mundo.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="lolo2.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="dialog" size="24" />
+      <color foreground="0x0080FF" background="0x80FF80" />
+     </style>
+     <p>Mediante una línea une cada sujeto con su predicado</p>
+    </cell>
+    <cell image="lolo5.gif" type="final">
+     <style>
+      <font family="dialog" size="24" />
+      <color foreground="0x0080FF" background="0x80FF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x008000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="169.0" cellHeight="63.0" border="true" id="primary">
+    <style>
+     <font family="dialog" size="24" italic="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>Un hermoso eucalipto</p>
+    </cell>
+    <cell>
+     <p>La luz solar</p>
+    </cell>
+    <cell>
+     <p>Los alumnos de 1º</p>
+    </cell>
+    <cell>
+     <p>El viento y la lluvia</p>
+    </cell>
+    <cell>
+     <p>La contaminación de los mares</p>
+    </cell>
+    <cell>
+     <p>Vallejo, Eguren y Chocano</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="170.0" cellHeight="130.0" border="true" id="secondary">
+    <style>
+     <font family="Colonna MT" size="25" />
+     <color foreground="0xFF0000" background="0x80FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>crecía en el jardín</p>
+    </cell>
+    <cell>
+     <p>iluminó la habitación</p>
+    </cell>
+    <cell>
+     <p>hacen la limpieza de su aula</p>
+    </cell>
+    <cell>
+     <p>golpeaban la copa de los árboles</p>
+    </cell>
+    <cell>
+     <p>provoca graves problemas</p>
+    </cell>
+    <cell>
+     <p>son grandes poetas peruanos</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.Identify" name="lolo2.txa" code="" type="identifyWords">
+   <description />
+   <messages>
+    <cell image="lolo3.gif" type="initial">
+     <style>
+      <color foreground="0xFF0080" background="0x80FF80" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFF0080" background="0x80FF80" />
+     </style>
+     <p>!Que bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF8040">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="494" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" foreground="0xFF00FF" bold="false" italic="false" size="23" tabWidth="16" background="0xFFFF80" family="Book Antiqua" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p foreground="0xFF00FF" italic="false" bold="false" size="23" background="0xFFFF80" family="Book Antiqua">
+      <text foreground="0xFF00FF" italic="false" bold="false" size="23" background="0xFFFF80" family="Book Antiqua">"Por esos </text>
+      <target>largos</target>
+      <text foreground="0xFF00FF" italic="false" bold="false" size="23" background="0xFFFF80" family="Book Antiqua"> caminos del norte del Perú está mi granja, junto a un pueblo </text>
+      <target>pequeñito</target>
+      <text foreground="0xFF00FF" italic="false" bold="false" size="23" background="0xFFFF80" family="Book Antiqua">. </text>
+      <target>Oscuro</target>
+      <text foreground="0xFF00FF" italic="false" bold="false" size="23" background="0xFFFF80" family="Book Antiqua"> de noche, con pocos faros que apenas orientan el sentido de sus calles </text>
+      <target>empedradas</target>
+      <text foreground="0xFF00FF" italic="false" bold="false" size="23" background="0xFFFF80" family="Book Antiqua">.</text>
+     </p>
+     <p foreground="0xFF00FF" italic="false" bold="false" size="23" background="0xFFFF80" family="Book Antiqua" />
+     <p foreground="0xFF00FF" italic="false" bold="false" size="23" background="0xFFFF80" family="Book Antiqua">
+      <text foreground="0xFF00FF" italic="false" bold="false" size="23" background="0xFFFF80" family="Book Antiqua">Desde ese pueblo se puede ir a pie a San Genaro, así se llama nuestra finca. Por un sendero se llega a la casa que está sobre una loma desde donde se ve aquellos sembríos.</text>
+     </p>
+     <p foreground="0xFF00FF" italic="false" bold="false" size="23" background="0xFFFF80" family="Book Antiqua" />
+     <p foreground="0xFF00FF" italic="false" bold="false" size="23" background="0xFFFF80" family="Book Antiqua">
+      <text foreground="0xFF00FF" italic="false" bold="false" size="23" background="0xFFFF80" family="Book Antiqua">Junto a ellos se levanta un </text>
+      <target>pequeño</target>
+      <text foreground="0xFF00FF" italic="false" bold="false" size="23" background="0xFFFF80" family="Book Antiqua"> corral donde mi madre ha criado unas cuantas cabras. Frente a la casa corre una </text>
+      <target>cristalina</target>
+      <text foreground="0xFF00FF" italic="false" bold="false" size="23" background="0xFFFF80" family="Book Antiqua"> acequia. Más allá se alinean militarmente nueve árboles de mango que nos defienden del viento. Aquí, en este lugar paso mis vacaciones".</text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="lolo3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Castellar" size="21" bold="true" />
+      <color foreground="0x8000FF" background="0xFFFFFF" />
+     </style>
+     <p>Empareja cada expresión con su significado</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Castellar" size="21" bold="true" />
+      <color foreground="0x8000FF" background="0xFFFFFF" />
+     </style>
+     <p>!Genial!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="lolo7.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Lucida Sans" size="17" />
+     <color foreground="0x0000FF" background="0xFF80FF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>Tener la sartén por el mango</p>
+    </cell>
+    <cell>
+     <p>En un abrir y cerrar los ojos</p>
+    </cell>
+    <cell>
+     <p>Perder los estribos</p>
+    </cell>
+    <cell>
+     <p>Mirar por encima del hombro</p>
+    </cell>
+    <cell>
+     <p>Pasar por alto</p>
+    </cell>
+    <cell>
+     <p>Consultar con la almohada</p>
+    </cell>
+    <cell>
+     <p>hacerse de la vista gorda</p>
+    </cell>
+    <cell>
+     <p>Con cara de pocos amigos</p>
+    </cell>
+    <cell>
+     <p>Echar la casa por la ventana</p>
+    </cell>
+    <cell>
+     <p>Quedarse con los crespos hechos</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Britannic Bold" size="19" bold="true" />
+     <color foreground="0xFF8080" background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>controlar</p>
+    </cell>
+    <cell>
+     <p>rápidamente</p>
+    </cell>
+    <cell>
+     <p>descontrolarse</p>
+    </cell>
+    <cell>
+     <p>menospreciar</p>
+    </cell>
+    <cell>
+     <p>disculpar</p>
+    </cell>
+    <cell>
+     <p>reflexionar</p>
+    </cell>
+    <cell>
+     <p>disimular</p>
+    </cell>
+    <cell>
+     <p>disgustado</p>
+    </cell>
+    <cell>
+     <p>derrochar</p>
+    </cell>
+    <cell>
+     <p>frustrarse</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="lolo3.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Calisto MT" size="24" bold="true" italic="true" />
+      <color foreground="0x0000FF" background="0x80FF80" />
+     </style>
+     <p>Selecciona la palabra correcta</p>
+    </cell>
+    <cell image="lolo4.gif" type="final">
+     <style>
+      <font family="Calisto MT" size="24" bold="true" italic="true" />
+      <color foreground="0x0000FF" background="0x80FF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x804040">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="700" height="490" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" foreground="0xFF0000" bold="true" italic="false" size="24" tabWidth="16" background="0x80FF80" family="dialog" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p foreground="0xFF0000" italic="false" bold="true" size="24" background="0x80FF80" family="dialog">
+      <text foreground="0xFF0000" italic="false" bold="true" size="24" background="0x80FF80" family="dialog">No podemos considerar como desadaptados y vagos a los desempleados; </text>
+      <target>
+       <answer>pues</answer>
+       <optionList>
+        <option>aunque</option>
+        <option>sin embargo</option>
+        <option>pues</option>
+        <option>por lo tanto</option>
+        <option>si bien</option>
+       </optionList>
+       <text>pues</text>
+      </target>
+      <text foreground="0xFF0000" italic="false" bold="true" size="24" background="0x80FF80" family="dialog"> en ellos la ociosidad es involuntaria.</text>
+     </p>
+     <p foreground="0xFF0000" italic="false" bold="true" size="24" background="0x80FF80" family="dialog" />
+     <p foreground="0xFF0000" italic="false" bold="true" size="24" background="0x80FF80" family="dialog">
+      <text foreground="0xFF0000" italic="false" bold="true" size="24" background="0x80FF80" family="dialog">Darwin dedicó muchos años a estudiar la evolución de las especies y sus teorías revolucionaron la cienciad de su época; </text>
+      <target>
+       <answer>sin embargo</answer>
+       <optionList>
+        <option>debido a</option>
+        <option>aparte de ello</option>
+        <option>por consiguiente</option>
+        <option>luego</option>
+        <option>sin embargo</option>
+       </optionList>
+       <text>sin embargo</text>
+      </target>
+      <text foreground="0xFF0000" italic="false" bold="true" size="24" background="0x80FF80" family="dialog">, su obra fue en un momento rechazada por muchos.</text>
+     </p>
+     <p foreground="0xFF0000" italic="false" bold="true" size="24" background="0x80FF80" family="dialog" />
+     <p foreground="0xFF0000" italic="false" bold="true" size="24" background="0x80FF80" family="dialog">
+      <text foreground="0xFF0000" italic="false" bold="true" size="24" background="0x80FF80" family="dialog">Los paisajes del Perú no tienen nada que envidiarle a los otros países del mundo, </text>
+      <target>
+       <answer>además</answer>
+       <optionList>
+        <option>Por lo tanto</option>
+        <option>ahora</option>
+        <option>además</option>
+        <option>en consecuencia</option>
+        <option>aparte de ello</option>
+       </optionList>
+       <text>además</text>
+      </target>
+      <text foreground="0xFF0000" italic="false" bold="true" size="24" background="0x80FF80" family="dialog"> la gente peruana es muy buena y hospitalaria.</text>
+     </p>
+     <p foreground="0xFF0000" italic="false" bold="true" size="24" background="0x80FF80" family="dialog" />
+     <p foreground="0xFF0000" italic="false" bold="true" size="24" background="0x80FF80" family="dialog">
+      <text foreground="0xFF0000" italic="false" bold="true" size="24" background="0x80FF80" family="dialog">El grado de desarrollo de las culturas no será determinante para su inclusión dentro de los grupos civilizados, </text>
+      <target>
+       <answer>puesto que</answer>
+       <optionList>
+        <option>puesto que</option>
+        <option>no obstante</option>
+        <option>pese a</option>
+        <option>por supuesto que</option>
+        <option>a la vez que</option>
+       </optionList>
+       <text>puesto que</text>
+      </target>
+      <text foreground="0xFF0000" italic="false" bold="true" size="24" background="0x80FF80" family="dialog"> siempre que se trate de poblaciones nómadas serán considerados precivilizadas.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="lolo4.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Century Schoolbook" size="21" bold="true" />
+      <color foreground="0xFFFFFF" background="0xFF0080" />
+     </style>
+     <p>Escribe el nombre que aplican a su compañero las siguientes personas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Century Schoolbook" size="21" bold="true" />
+      <color foreground="0xFFFFFF" background="0xFF0080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="lolo4.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="170.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Californian FB" size="25" bold="true" />
+     <color foreground="0xFF0080" background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>Los médicos que coinciden en un congreso</p>
+    </cell>
+    <cell>
+     <p>Los miembros de un partido político</p>
+    </cell>
+    <cell>
+     <p>Dos comerciantes que son dueños del mismo negocio</p>
+    </cell>
+    <cell>
+     <p>Los amigos del barrio</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="171.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Castellar" size="22" bold="true" />
+     <color foreground="0xFFFF80" background="0xFF0080" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>colega</p>
+    </cell>
+    <cell>
+     <p>camarada</p>
+    </cell>
+    <cell>
+     <p>socio</p>
+    </cell>
+    <cell>
+     <p>pata</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.Identify" name="lolo4.txa" code="" type="identifyWords">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Californian FB" size="25" bold="true" italic="true" />
+      <color foreground="0x80FF80" background="0x0000FF" />
+     </style>
+     <p>Selecciona los sustantivos que encuentres en el siguiente texto</p>
+    </cell>
+    <cell image="lolo6.gif" type="final">
+     <style>
+      <font family="Californian FB" size="25" bold="true" italic="true" />
+      <color foreground="0x80FF80" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="lolo9.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" foreground="0x8000FF" bold="false" italic="true" size="22" tabWidth="16" background="0xFFFF80" family="dialog" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p foreground="0x8000FF" italic="true" bold="false" size="22" background="0xFFFF80" family="dialog">
+      <text foreground="0x8000FF" italic="true" bold="false" size="22" background="0xFFFF80" family="dialog">"El </text>
+      <target>salón</target>
+      <text foreground="0x8000FF" italic="true" bold="false" size="22" background="0xFFFF80" family="dialog"> daba a un jardín lleno de </text>
+      <target>flores</target>
+      <text foreground="0x8000FF" italic="true" bold="false" size="22" background="0xFFFF80" family="dialog">. La </text>
+      <target>ventana</target>
+      <text foreground="0x8000FF" italic="true" bold="false" size="22" background="0xFFFF80" family="dialog"> estaba abierta de par en par y hasta ellos llegaban un </text>
+      <target>olor</target>
+      <text foreground="0x8000FF" italic="true" bold="false" size="22" background="0xFFFF80" family="dialog"> a </text>
+      <target>hierba</target>
+      <text foreground="0x8000FF" italic="true" bold="false" size="22" background="0xFFFF80" family="dialog"> húmeda. El </text>
+      <target>Bebe</target>
+      <text foreground="0x8000FF" italic="true" bold="false" size="22" background="0xFFFF80" family="dialog"> puso el mismo </text>
+      <target>disco</target>
+      <text foreground="0x8000FF" italic="true" bold="false" size="22" background="0xFFFF80" family="dialog"> por cuarta </text>
+      <target>vez</target>
+      <text foreground="0x8000FF" italic="true" bold="false" size="22" background="0xFFFF80" family="dialog"> y ordenó: "Levántate y no seas aguado, es por tu bien". </text>
+      <target>Alberto</target>
+      <text foreground="0x8000FF" italic="true" bold="false" size="22" background="0xFFFF80" family="dialog"> se había desplomado en un </text>
+      <target>sillón</target>
+      <text foreground="0x8000FF" italic="true" bold="false" size="22" background="0xFFFF80" family="dialog">, rendido de </text>
+      <target>fatiga</target>
+      <text foreground="0x8000FF" italic="true" bold="false" size="22" background="0xFFFF80" family="dialog">, </text>
+      <target>Pluto</target>
+      <text foreground="0x8000FF" italic="true" bold="false" size="22" background="0xFFFF80" family="dialog"> y </text>
+      <target>Emilio</target>
+      <text foreground="0x8000FF" italic="true" bold="false" size="22" background="0xFFFF80" family="dialog"> asistían como </text>
+      <target>espectadores</target>
+      <text foreground="0x8000FF" italic="true" bold="false" size="22" background="0xFFFF80" family="dialog"> a las </text>
+      <target>lecciones</target>
+      <text foreground="0x8000FF" italic="true" bold="false" size="22" background="0xFFFF80" family="dialog"> y todo el </text>
+      <target>tiempo</target>
+      <text foreground="0x8000FF" italic="true" bold="false" size="22" background="0xFFFF80" family="dialog"> hacían </text>
+      <target>bromas</target>
+      <text foreground="0x8000FF" italic="true" bold="false" size="22" background="0xFFFF80" family="dialog">, lanzaban </text>
+      <target>insinuaciones</target>
+      <text foreground="0x8000FF" italic="true" bold="false" size="22" background="0xFFFF80" family="dialog">, nombraban a </text>
+      <target>Helena!</target>
+      <text foreground="0x8000FF" italic="true" bold="false" size="22" background="0xFFFF80" family="dialog">.</text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="lolo5.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Book Antiqua" size="18" bold="true" />
+      <color foreground="0xFF8080" background="0xFFFFFF" />
+     </style>
+     <p>Relaciona cada palabra con otra que signifique lo contrario</p>
+    </cell>
+    <cell image="lolo8.gif" type="final">
+     <style>
+      <font family="Book Antiqua" size="18" bold="true" />
+      <color foreground="0xFF8080" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x8080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Californian FB" size="20" bold="true" />
+     <color foreground="0x0080FF" background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>medianoche</p>
+    </cell>
+    <cell>
+     <p>alba</p>
+    </cell>
+    <cell>
+     <p>orto</p>
+    </cell>
+    <cell>
+     <p>clarear</p>
+    </cell>
+    <cell>
+     <p>amanecer</p>
+    </cell>
+    <cell>
+     <p>diurno</p>
+    </cell>
+    <cell>
+     <p>abierto</p>
+    </cell>
+    <cell>
+     <p>apagar</p>
+    </cell>
+    <cell>
+     <p>estrecho</p>
+    </cell>
+    <cell>
+     <p>añadir</p>
+    </cell>
+    <cell>
+     <p>anterior</p>
+    </cell>
+    <cell>
+     <p>delgado</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="4" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Century Gothic" size="19" bold="true" />
+     <color foreground="0xFFFF80" background="0x0080FF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>mediodía</p>
+    </cell>
+    <cell>
+     <p>crepúsculo</p>
+    </cell>
+    <cell>
+     <p>ocaso</p>
+    </cell>
+    <cell>
+     <p>oscurecer</p>
+    </cell>
+    <cell>
+     <p>anochecer</p>
+    </cell>
+    <cell>
+     <p>nocturno</p>
+    </cell>
+    <cell>
+     <p>cerrado</p>
+    </cell>
+    <cell>
+     <p>encender</p>
+    </cell>
+    <cell>
+     <p>ancho</p>
+    </cell>
+    <cell>
+     <p>restar</p>
+    </cell>
+    <cell>
+     <p>posterior</p>
+    </cell>
+    <cell>
+     <p>grueso</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="lolo6.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Book Antiqua" size="24" bold="true" />
+      <color foreground="0xFFFFFF" background="0x8000FF" />
+     </style>
+     <p>Relaciona marcando los antónimos extremos de las palabras </p>
+    </cell>
+    <cell image="lolo5.gif" type="final">
+     <style>
+      <font family="Book Antiqua" size="24" bold="true" />
+      <color foreground="0xFFFFFF" background="0x8000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x808000">
+     <image name="lolo11.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Calisto MT" size="13" bold="true" />
+     <color foreground="0x0000FF" background="0x00FF00" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>Es un artefacto barato</p>
+    </cell>
+    <cell>
+     <p>la paciente está cada vez peor</p>
+    </cell>
+    <cell>
+     <p>esta fruta está verde</p>
+    </cell>
+    <cell>
+     <p>los resultados de sus exámenes fueron pésimos</p>
+    </cell>
+    <cell>
+     <p>escribe tus iniciales en el margen inferior</p>
+    </cell>
+    <cell>
+     <p>recién me enteré de que vivía en la miseria</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Calisto MT" size="21" bold="true" />
+     <color foreground="0x80FF00" background="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>caro</p>
+    </cell>
+    <cell>
+     <p>mejor</p>
+    </cell>
+    <cell>
+     <p>madura</p>
+    </cell>
+    <cell>
+     <p>buenos</p>
+    </cell>
+    <cell>
+     <p>superior</p>
+    </cell>
+    <cell>
+     <p>riqueza</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="lolo6.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="dialog" size="19" bold="true" />
+      <color foreground="0xFFFFFF" background="0xFF0080" />
+     </style>
+     <p>Escribre el sinónimo de anunciar para cada uno de los contextos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="dialog" size="19" bold="true" />
+      <color foreground="0xFFFFFF" background="0xFF0080" />
+     </style>
+     <p>!Genial</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x8000FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" foreground="0x0080FF" bold="false" italic="false" size="19" tabWidth="16" background="0xFFFF80" family="Calisto MT" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p foreground="0x0080FF" italic="false" bold="false" size="19" background="0xFFFF80" family="Calisto MT">
+      <text foreground="0x0080FF" italic="false" bold="false" size="19" background="0xFFFF80" family="Calisto MT">1. </text>
+      <target>
+       <answer>Declarar</answer>
+       <optionList>
+        <option>Notificar</option>
+        <option>Participar</option>
+        <option>Formular</option>
+        <option>Proclamar</option>
+        <option>Declarar</option>
+       </optionList>
+       <text>Declarar</text>
+      </target>
+      <text foreground="0x0080FF" italic="false" bold="false" size="19" background="0xFFFF80" family="Calisto MT"> la guerra contra los precios altos</text>
+     </p>
+     <p foreground="0x0080FF" italic="false" bold="false" size="19" background="0xFFFF80" family="Calisto MT" />
+     <p foreground="0x0080FF" italic="false" bold="false" size="19" background="0xFFFF80" family="Calisto MT">
+      <text foreground="0x0080FF" italic="false" bold="false" size="19" background="0xFFFF80" family="Calisto MT">2. </text>
+      <target>
+       <answer>Proclamar</answer>
+       <optionList>
+        <option>Declarar</option>
+        <option>Revelar</option>
+        <option>Proclamar</option>
+        <option>Participar</option>
+        <option>Notificar</option>
+       </optionList>
+       <text>Proclamar</text>
+      </target>
+      <text foreground="0x0080FF" italic="false" bold="false" size="19" background="0xFFFF80" family="Calisto MT"> la independencia de los esclavos</text>
+     </p>
+     <p foreground="0x0080FF" italic="false" bold="false" size="19" background="0xFFFF80" family="Calisto MT" />
+     <p foreground="0x0080FF" italic="false" bold="false" size="19" background="0xFFFF80" family="Calisto MT">
+      <text foreground="0x0080FF" italic="false" bold="false" size="19" background="0xFFFF80" family="Calisto MT">3. </text>
+      <target>
+       <answer>Revelar</answer>
+       <optionList>
+        <option>Participar</option>
+        <option>Revelar</option>
+        <option>Formular</option>
+        <option>Proclamar</option>
+        <option>Revelar</option>
+       </optionList>
+       <text>Revelar</text>
+      </target>
+      <text foreground="0x0080FF" italic="false" bold="false" size="19" background="0xFFFF80" family="Calisto MT"> un secreto de familia</text>
+     </p>
+     <p foreground="0x0080FF" italic="false" bold="false" size="19" background="0xFFFF80" family="Calisto MT" />
+     <p foreground="0x0080FF" italic="false" bold="false" size="19" background="0xFFFF80" family="Calisto MT">
+      <text foreground="0x0080FF" italic="false" bold="false" size="19" background="0xFFFF80" family="Calisto MT">4. </text>
+      <target>
+       <answer>Formular</answer>
+       <optionList>
+        <option>Formular</option>
+        <option>Proclamar</option>
+        <option>Revelar</option>
+        <option>Notificar</option>
+        <option>Participar</option>
+       </optionList>
+       <text>Formular</text>
+      </target>
+      <text foreground="0x0080FF" italic="false" bold="false" size="19" background="0xFFFF80" family="Calisto MT"> unos interrogantes para los alumnos</text>
+     </p>
+     <p foreground="0x0080FF" italic="false" bold="false" size="19" background="0xFFFF80" family="Calisto MT" />
+     <p foreground="0x0080FF" italic="false" bold="false" size="19" background="0xFFFF80" family="Calisto MT">
+      <text foreground="0x0080FF" italic="false" bold="false" size="19" background="0xFFFF80" family="Calisto MT">5. </text>
+      <target>
+       <answer>Participar</answer>
+       <optionList>
+        <option>Notificar</option>
+        <option>Participar</option>
+        <option>Formular</option>
+        <option>Proclamar</option>
+        <option>Declarar</option>
+       </optionList>
+       <text>Participar</text>
+      </target>
+      <text foreground="0x0080FF" italic="false" bold="false" size="19" background="0xFFFF80" family="Calisto MT"> su próxima actuación en un local de la ciudad</text>
+     </p>
+     <p foreground="0x0080FF" italic="false" bold="false" size="19" background="0xFFFF80" family="Calisto MT" />
+     <p foreground="0x0080FF" italic="false" bold="false" size="19" background="0xFFFF80" family="Calisto MT">
+      <text foreground="0x0080FF" italic="false" bold="false" size="19" background="0xFFFF80" family="Calisto MT">6. </text>
+      <target>
+       <answer>Notificar</answer>
+       <optionList>
+        <option>Revelar</option>
+        <option>Declarar</option>
+        <option>Notificar</option>
+        <option>Proclamar</option>
+        <option>Formular</option>
+       </optionList>
+       <text>Notificar</text>
+      </target>
+      <text foreground="0x0080FF" italic="false" bold="false" size="19" background="0xFFFF80" family="Calisto MT"> la subida de alquileres a los inquilinos</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="lolo7.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Bookman Old Style" size="20" />
+      <color foreground="0xFF0080" background="0xFFFF80" />
+     </style>
+     <p>Escoge el recuadro la palabra que complete mejor cada una de las siguientes relaciones</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Bookman Old Style" size="20" />
+      <color foreground="0xFF0080" background="0xFFFF80" />
+     </style>
+     <p>!Genial!!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="lolo5.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="208.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Bookman Old Style" size="23" />
+     <color foreground="0xFF00FF" background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>Abogado es a reo como médico es</p>
+    </cell>
+    <cell>
+     <p>Rey es a monarquía como presidente es a</p>
+    </cell>
+    <cell>
+     <p>Actor es a escenario como torero es a</p>
+    </cell>
+    <cell>
+     <p>Mercurio es a Venus como Neptuno es a</p>
+    </cell>
+    <cell>
+     <p>Accionista es a utilidad como trabajador es a</p>
+    </cell>
+    <cell>
+     <p>Exagerar es a hipérbole como desordenar es a</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Calisto MT" size="23" />
+     <color foreground="0xFFFF80" background="0xFF80FF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>enfermo</p>
+    </cell>
+    <cell>
+     <p>república</p>
+    </cell>
+    <cell>
+     <p>arena</p>
+    </cell>
+    <cell>
+     <p>plutón</p>
+    </cell>
+    <cell>
+     <p>salario</p>
+    </cell>
+    <cell>
+     <p>hiperbaton</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.Identify" name="lolo7.txa" code="" type="identifyWords">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Century Schoolbook" size="20" bold="true" />
+      <color foreground="0xFF8000" background="0x8000FF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Century Schoolbook" size="20" bold="true" />
+      <color foreground="0xFF8000" background="0x8000FF" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00FF40">
+     <image name="lolo10.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="609" height="392" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" foreground="0xFF0080" bold="true" italic="false" size="17" tabWidth="16" background="0x00FFFF" family="Centaur" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p foreground="0xFF0080" italic="false" bold="true" size="17" background="0x00FFFF" family="Centaur">
+      <cell width="600" height="84" border="false">
+       <style>
+        <font family="Bradley Hand ITC" size="27" bold="true" />
+        <color foreground="0xFF0080" background="0xFFFFFF" />
+       </style>
+       <p>Marcar con un clic el antónimo de la primera palabra de cada línea</p>
+      </cell>
+      <text foreground="0xFF0080" italic="false" bold="true" size="17" background="0x00FFFF" family="Centaur">quitar		extraer		</text>
+      <target>poner</target>
+      <text foreground="0xFF0080" italic="false" bold="true" size="17" background="0x00FFFF" family="Centaur">		verter		colocar</text>
+     </p>
+     <p foreground="0xFF0080" italic="false" bold="true" size="17" background="0x00FFFF" family="Centaur" />
+     <p foreground="0xFF0080" italic="false" bold="true" size="17" background="0x00FFFF" family="Centaur">
+      <text foreground="0xFF0080" italic="false" bold="true" size="17" background="0x00FFFF" family="Centaur">opaco		</text>
+      <target>brillante</target>
+      <text foreground="0xFF0080" italic="false" bold="true" size="17" background="0x00FFFF" family="Centaur">		turbio		transparente    	oscuro</text>
+     </p>
+     <p foreground="0xFF0080" italic="false" bold="true" size="17" background="0x00FFFF" family="Centaur" />
+     <p foreground="0xFF0080" italic="false" bold="true" size="17" background="0x00FFFF" family="Centaur">
+      <text foreground="0xFF0080" italic="false" bold="true" size="17" background="0x00FFFF" family="Centaur">inservible	desechable	útil 		</text>
+      <target>beneficioso</target>
+      <text foreground="0xFF0080" italic="false" bold="true" size="17" background="0x00FFFF" family="Centaur"> 	 inútil</text>
+     </p>
+     <p foreground="0xFF0080" italic="false" bold="true" size="17" background="0x00FFFF" family="Centaur" />
+     <p foreground="0xFF0080" italic="false" bold="true" size="17" background="0x00FFFF" family="Centaur">
+      <text foreground="0xFF0080" italic="false" bold="true" size="17" background="0x00FFFF" family="Centaur">contestar		inquirir		</text>
+      <target>preguntar</target>
+      <text foreground="0xFF0080" italic="false" bold="true" size="17" background="0x00FFFF" family="Centaur">	averiguar	hablar</text>
+     </p>
+     <p foreground="0xFF0080" italic="false" bold="true" size="17" background="0x00FFFF" family="Centaur" />
+     <p foreground="0xFF0080" italic="false" bold="true" size="17" background="0x00FFFF" family="Centaur">
+      <text foreground="0xFF0080" italic="false" bold="true" size="17" background="0x00FFFF" family="Centaur">absurdo		ingenuidad  	 sinrazón 	</text>
+      <target>razonable</target>
+      <text foreground="0xFF0080" italic="false" bold="true" size="17" background="0x00FFFF" family="Centaur">	barbaridad</text>
+     </p>
+     <p foreground="0xFF0080" italic="false" bold="true" size="17" background="0x00FFFF" family="Centaur" />
+     <p foreground="0xFF0080" italic="false" bold="true" size="17" background="0x00FFFF" family="Centaur">
+      <text foreground="0xFF0080" italic="false" bold="true" size="17" background="0x00FFFF" family="Centaur">edificar		cimentar		elevar		</text>
+      <target>destruir</target>
+      <text foreground="0xFF0080" italic="false" bold="true" size="17" background="0x00FFFF" family="Centaur">		labrar</text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.FillInBlanks" name="lolo8.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFF0080" background="0xFFFFFF" />
+     </style>
+     <p>Lee atentamente las indicaciones</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFF0080" background="0xFFFFFF" />
+     </style>
+     <p>Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="lolo1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="547" height="336" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" foreground="0x408080" bold="true" italic="true" size="24" tabWidth="16" background="0xFFFF80" family="Brush Script MT" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p foreground="0x408080" italic="true" bold="true" size="24" background="0xFFFF80" family="Brush Script MT">
+      <cell width="530" height="30" border="false">
+       <style>
+        <color foreground="0xFFFFFF" background="0xFF00FF" />
+       </style>
+       <p>Escoge cuál de las dos palabras entre paréntesis es la correcta</p>
+      </cell>
+      <text foreground="0x408080" italic="true" bold="true" size="24" background="0xFFFF80" family="Brush Script MT">1. Voy a </text>
+      <target>
+       <answer>prescindir</answer>
+       <optionList>
+        <option>presidir</option>
+        <option>prescindir</option>
+       </optionList>
+       <text>prescindir</text>
+      </target>
+      <text foreground="0x408080" italic="true" bold="true" size="24" background="0xFFFF80" family="Brush Script MT"> de sus servicios por estos días de vacaciones</text>
+     </p>
+     <p foreground="0x408080" italic="true" bold="true" size="24" background="0xFFFF80" family="Brush Script MT">
+      <text foreground="0x408080" italic="true" bold="true" size="24" background="0xFFFF80" family="Brush Script MT">2. La campanita de la abuela </text>
+      <target>
+       <answer>repicó</answer>
+       <optionList>
+        <option>replicó</option>
+        <option>repicó</option>
+       </optionList>
+       <text>repicó</text>
+      </target>
+      <text foreground="0x408080" italic="true" bold="true" size="24" background="0xFFFF80" family="Brush Script MT"> desde muy temprano</text>
+     </p>
+     <p foreground="0x408080" italic="true" bold="true" size="24" background="0xFFFF80" family="Brush Script MT">
+      <text foreground="0x408080" italic="true" bold="true" size="24" background="0xFFFF80" family="Brush Script MT">3. Esta tarde habrá una </text>
+      <target>
+       <answer>sesión</answer>
+       <optionList>
+        <option>sesión</option>
+        <option>sección</option>
+       </optionList>
+       <text>sesión</text>
+      </target>
+      <text foreground="0x408080" italic="true" bold="true" size="24" background="0xFFFF80" family="Brush Script MT"> extraordinaria de inquilinos para llegar a un acuerdo.</text>
+     </p>
+     <p foreground="0x408080" italic="true" bold="true" size="24" background="0xFFFF80" family="Brush Script MT">
+      <text foreground="0x408080" italic="true" bold="true" size="24" background="0xFFFF80" family="Brush Script MT">4. Luego firmaron el </text>
+      <target>
+       <answer>acta</answer>
+       <optionList>
+        <option>acta</option>
+        <option>apta</option>
+       </optionList>
+       <text>acta</text>
+      </target>
+      <text foreground="0x408080" italic="true" bold="true" size="24" background="0xFFFF80" family="Brush Script MT"> todos los asistentes a la reunión</text>
+     </p>
+     <p foreground="0x408080" italic="true" bold="true" size="24" background="0xFFFF80" family="Brush Script MT">
+      <text foreground="0x408080" italic="true" bold="true" size="24" background="0xFFFF80" family="Brush Script MT">5. El éxito del negocio consiste en hacer una buena </text>
+      <target>
+       <answer>inversión</answer>
+       <optionList>
+        <option>invención</option>
+        <option>inversión</option>
+       </optionList>
+       <text>inversión</text>
+      </target>
+     </p>
+     <p foreground="0x408080" italic="true" bold="true" size="24" background="0xFFFF80" family="Brush Script MT">
+      <text foreground="0x408080" italic="true" bold="true" size="24" background="0xFFFF80" family="Brush Script MT">6. Dictarán medidas de </text>
+      <target>
+       <answer>previsión</answer>
+       <optionList>
+        <option>provisión</option>
+        <option>previsión</option>
+       </optionList>
+       <text>previsión</text>
+      </target>
+      <text foreground="0x408080" italic="true" bold="true" size="24" background="0xFFFF80" family="Brush Script MT"> para el próximo año</text>
+     </p>
+     <p foreground="0x408080" italic="true" bold="true" size="24" background="0xFFFF80" family="Brush Script MT" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="presenta.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x8000FF" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_MIDI" level="2" file="bach.mid" />
+     <p>Aurora Mesía Tello/amtello@hotmail.com</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x8000FF" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFF00FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="false" image="presen~1.gif">
+    <style>
+     <color foreground="0x8000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="lolo1.gif" file="lolo1.gif" animated="false" />
+  <media name="lolo10.gif" file="lolo10.gif" animated="false" />
+  <media name="lolo11.gif" file="lolo11.gif" animated="false" />
+  <media name="lolo2.gif" file="lolo2.gif" animated="false" />
+  <media name="lolo3.gif" file="lolo3.gif" animated="false" />
+  <media name="lolo4.gif" file="lolo4.gif" animated="false" />
+  <media name="lolo5.gif" file="lolo5.gif" animated="false" />
+  <media name="lolo6.gif" file="lolo6.gif" animated="false" />
+  <media name="lolo7.gif" file="lolo7.gif" animated="false" />
+  <media name="lolo8.gif" file="lolo8.gif" animated="false" />
+  <media name="lolo9.gif" file="lolo9.gif" animated="false" />
+  <media name="presen~1.gif" file="presen_1.gif" animated="false" />
+  <media name="bach.mid" file="bach.mid" />
+ </mediaBag>
+</JClicProject>
+

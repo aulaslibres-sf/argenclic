@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="catorrap" version="0.1.3">
+ <settings>
+  <title>El sueño perdido de Doña Cotorra Pérez</title>
+  <revision description="created" date="12/10/04" />
+  <author name="Diego Quinteros" mail="quinterosd@yahoo.com" />
+  <author name="Lía Carabelli" mail="linecara@yahoo.com" />
+  <author name="Gladys Bandi" />
+  <language>es</language>
+  <description>
+   <p>Cuento EGB1 con actividades de comprensión lectora, reconocimiento de clases de palabras y rompezabezas.</p>
+  </description>
+  <descriptors area="Lengua" level="EGB1" />
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Cuento EGB1 con actividades de comprensión lectora, reconocimiento de clases de palabras y rompezabezas.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="catorrap.pac" name="comienzo.ass">
+   <description>
+    <p>Cuento</p>
+   </description>
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="cuento1.ass" />
+  <item name="cuento2.ass" />
+  <item name="cuento3.ass" />
+  <item name="memo.puz" />
+  <item name="buscar.txa" />
+  <item name="animales.puz" />
+  <item name="buho.puz" />
+  <item name="personaj.sop" />
+  <item name="cotorra.puz" />
+  <item name="secuenci.puz" />
+  <item name="sol.puz" />
+  <item name="sustanti.txa" />
+  <item name="verbos.txa" />
+  <item name="completa.txa">
+   <jump action="STOP" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@puzzles.DoublePuzzle" name="animales.puz" code="">
+   <description>
+    <p>Animales del bosque para armar</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="dialog" size="28" bold="true" />
+      <color background="0xFF8080" />
+     </style>
+     <p>Armá el rompecabezas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="dialog" size="28" bold="true" />
+      <color background="0xFF8080" />
+     </style>
+     <p>¡¡Sos genial!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondow~1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="animtaru.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="buho.puz" code="">
+   <description>
+    <p>armar el buho</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="dialog" size="28" bold="true" />
+      <color background="0xFF8080" />
+     </style>
+     <p>Armá la figura escondida</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="dialog" size="28" bold="true" />
+      <color background="0xFF8080" />
+     </style>
+     <p>¡Sos un genio!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x800040">
+     <image name="flower~1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="false" image="buho1.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.Identify" name="buscar.txa" code="" type="identifyWords">
+   <description>
+    <p>Encontrar los nombres</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="dialog" size="28" bold="true" />
+      <color background="0xFF8080" />
+     </style>
+     <p>Encuentra los nombres de los personajes y la casa de Doña Cotorra</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="dialog" size="28" bold="true" />
+      <color background="0xFF8080" />
+     </style>
+     <p>¡Muy Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="flower~1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true">
+     <size width="700" height="500" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" size="17" background="0xFFFFFF" italic="false" foreground="0x000000" tabWidth="16" bold="false" family="Arial" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">Los </text>
+      <target>animales</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> que estaba alrededor del </text>
+      <target>alcanforero</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> no entendían nada.- ¿Qué es eso de que le han robado un sueño? No entendemos nada.</text>
+      <target>Doña</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> </text>
+      <target>cotorra</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> salió del hueco y se posó en una rama, estaba tan enojada que daba vueltas y vueltas, se ponía boca abajo, pegaba pequeños gruñidos, era tal el enojo que hasta se mordió una pata.-Cuando lograron calmarla les explicó que cuando se acostó al ratito nomás le vino el sueño. Al quedarse dormida soñó con cosas hermosas.- ¿Cómo sabe que soñó cosas hermosas? Le dijo el </text>
+      <target>Conejo</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">.- Estoy segura que eran cosas hermosas porque me desperté riendo y yo casi nunca me despierto riendo. Y al acordarse volvió nuevamente a los gritos: ¡Ladrones, ladrones!-Cálmese y siga contando así podremos ayudarla, dijo la </text>
+      <target>Tortuga</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> que había llegado en ese momento.- Bueno, cuando desperté me miré al espejo y quise acordarme de qué me había reído tanto, pero no pude. Me habían robado el sueño. ¡¡¡ Ladrooooooones, me robaron el sueño!!! -¡Pero quienes le robaron el sueño? - No entendemos - Le protestó la </text>
+      <target>Lechuza</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">.-¡Ellos fueron! eran muchos y vinieron todos juntos y me robaron el sueño.El </text>
+      <target>Escarabajo</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> </text>
+      <target>Azul</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> despacito, despacito, fue subiendo por el árbol en que vivía </text>
+      <target>doña</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> </text>
+      <target>Cotorra</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">. En el camino iba recordando todo lo que había escuchado esa mañana. era todo tan raro. ?Quién podía querer robarle a una señora tan simpática un sueño?</text>
+     </p>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">Iba pensando esas cosas cuando sintió un picotazo en el caparazón, había llegado al hueco y </text>
+      <target>doña</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> </text>
+      <target>Cotorra</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> que está de guardia lo atacó.</text>
+     </p>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">Del golpe casi se cae al piso pero pudo agarrarse de un brotecito de la rama que tenía sobre su cabeza y así se mantuvo hasta que apoyó nuevamente sus patitas sobre el tronco del </text>
+      <target>alcanforero</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">.-¡Pare </text>
+      <target>doña</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> </text>
+      <target>Cotorra!</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> - Yo vengo a ayudarla y Ud. me recibe de esa manera.- Disculpeme </text>
+      <target>Escarabajo</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> </text>
+      <target>Azul</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">, no me di cuenta que eras vos. ¡Estoy tan enojada!-Si, pero con enojos no hacemos nada. Quiero que me cuente qué pasó para averiguar quien le robó el sueño.</text>
+      <target>Doña</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> </text>
+      <target>Cotorra</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> </text>
+      <target>Pérez</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> le contó al </text>
+      <target>Escarabajo</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> con lujos de detalles que le había pasado.</text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@panels.InformationScreen" name="comienzo.ass">
+   <description>
+    <p>Pantalla de descripcion</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondow~1.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="700.0" cellHeight="500.0" border="true">
+    <style>
+     <font family="dialog" size="33" />
+     <color foreground="0xFFFFFF" background="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>El sueño perdido de Doña Cotorra Pérez -SOFTWARE DE RECURSOS EDUCATIVOS 2004- Docentes:Gladys Raquel Bandi-Diego Quinteros-Lía Carabelli - PAÍS:Argentina Buenos Aires AÑO:2004 - linecara@yahoo.com - quinterosd@yahoo.com</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.FillInBlanks" name="completa.txa" code="">
+   <description>
+    <p>Llenar el hueco</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="dialog" size="28" bold="true" />
+      <color background="0xFF8080" />
+     </style>
+     <p>Completa....</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="dialog" size="28" bold="true" />
+      <color background="0xFF8080" />
+     </style>
+     <p>¡Fantástico!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="animtaru.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true">
+     <size width="700" height="250" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" size="17" background="0xFFFFFF" italic="false" foreground="0x000000" tabWidth="16" bold="false" family="Arial" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">La voz de la Sra. Pérez, la Cotorra, que vivía en el </text>
+      <target>
+       <answer>alcanforero viejo</answer>
+       <optionList>
+        <option>alcanforero viejo</option>
+        <option>bosque</option>
+        <option>ramas</option>
+       </optionList>
+       <text>alcanforero viejo</text>
+      </target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">.</text>
+     </p>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <target>
+       <answer>Pajarita Amarilla</answer>
+       <optionList>
+        <option>Pajarita Amarilla</option>
+        <option>Doña Lechuza</option>
+        <option>El Escarabajo Azul</option>
+       </optionList>
+       <text>Pajarita Amarilla</text>
+      </target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> que tenía más confianza, porque era amiga de la hija, se acercó para poder escuchar.</text>
+     </p>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">Los </text>
+      <target>
+       <answer>animales</answer>
+       <optionList>
+        <option>rayos del sol</option>
+        <option>animales</option>
+        <option>los conejos</option>
+       </optionList>
+       <text>animales</text>
+      </target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> que estaba alrededor del alcanforero no entendían nada.</text>
+     </p>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">El </text>
+      <target>
+       <answer>Escarabajo Azul</answer>
+       <optionList>
+        <option>conejo</option>
+        <option>Escarabajo Azul</option>
+        <option>búho</option>
+       </optionList>
+       <text>Escarabajo Azul</text>
+      </target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> despacito, despacito, fue subiendo por el árbol en que vivía doña Cotorra. </text>
+     </p>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">Antes de que saliera el sol, todo el bosque se despertó con las </text>
+      <target>
+       <answer>carcajadas</answer>
+       <optionList>
+        <option>exclamaciones</option>
+        <option>carcajadas</option>
+        <option>risas</option>
+       </optionList>
+       <text>carcajadas</text>
+      </target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> de doña Cotorra Pérez.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="cotorra.puz" code="">
+   <description>
+    <p>Rompecabezas cotorra</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="dialog" size="28" bold="true" />
+      <color background="0xFF8080" />
+     </style>
+     <p>Resuelve</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="dialog" size="33" bold="true" />
+      <color background="0xFF8080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFF80FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x80FFFF" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="cotorra2.bmp">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="cuento1.ass" code="">
+   <description>
+    <p>Texto del cuento</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="dialog" size="28" bold="true" />
+      <color background="0xFF8080" />
+     </style>
+     <p>Lee el cuento...</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="dialog" size="29" bold="true" />
+      <color background="0xFF8080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="cotorra2.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="765.0" cellHeight="576.0" border="true">
+    <style>
+     <font family="Comic Sans MS" size="22" />
+     <color foreground="0xFFFFFF" background="0x0080C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>Uno a uno se iban despertando los animales del bosque con los primeros rayos del sol. Un suave olorcito a pasto fresco inundaba el lugar y las flores abrían sus pétalos lentamente con las primeras luces del alba.De repente un alboroto infernal despertó  a los últimos dormilones que no sabían que pasaban. Unos a otros se miraban tratando de descubrir de dónde venían los gritos.Doña lechuza creyó reconocer la voz de la sra. Pérez, la Cotorra, que vivía en el alcanforero viejo. En unos segundos todos fueron para allá.El bochinche era infernal, se oían desde adentro los chillidos de doña Cotorra, pero nadie alcanzaba a comprender que decía. Pajarita Amarilla que tenía más confianza, porque era amiga de la hija, se acercó para poder escuchar.-¡Ladrones, ladrones! - Gritaba la Cotorra - ¡Me han robado!</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="cuento2.ass" code="">
+   <description>
+    <p>Texto del cuento</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="dialog" size="28" bold="true" />
+      <color background="0xFF8080" />
+     </style>
+     <p>Continúa leyendo</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="dialog" size="29" bold="true" />
+      <color background="0xFF8080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="cotorra2.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="793.0" cellHeight="580.0" border="true">
+    <style>
+     <font family="Comic Sans MS" size="22" />
+     <color foreground="0xFFFFFF" background="0x0080FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>Los animales que estaba alrededor del alcanforero no entendían nada.- ¿Qué es eso de que le han robado un sueño? No entendemos nada.Doña cotorra salió del hueco y se posó en una rama, estaba tan enojada que daba vueltas y vueltas, se ponía boca abajo, pegaba pequeños gruñidos, era tal el enojo que hasta se mordió una pata.-Cuando lograron calmarla les explicó que cuando se acostó al ratito nomás le vino el sueño. Al quedarse dormida soñó con cosas hermosas.- ¿Cómo sabe que soñó cosas hermosas? Le dijo el Conejo.- Estoy segura que eran cosas hermosas porque me desperté riendo y yo casi nunca me despierto riendo. Y al acordarse volvió nuevamente a los gritos: ¡Ladrones, ladrones!-Cálmese y siga contando así podremos ayudarla, dijo la Tortuga que había llegado en ese momento.- Bueno, cuando desperté me miré al espejo y quise acordarme de qué me había reído tanto, pero no pude. Me habían robado el sueño. ¡¡¡ Ladrooooooones, me robaron el sueño!!! -¡Pero quienes le robaron el sueño? - No entendemos - Le protestó la Lechuza.-¡Ellos fueron! eran muchos y vinieron todos juntos y me robaron el sueño.El Escarabajo Azul despacito, despacito, fue subiendo por el árbol en que vivía doña Cotorra. En el camino iba recordando todo lo que había escuchado esa mañana. era todo tan raro. ?Quién podía querer robarle a una señora tan simpática un sueño?</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="cuento3.ass" code="">
+   <description>
+    <p>Texto del cuento</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="dialog" size="28" bold="true" />
+      <color background="0xFF8080" />
+     </style>
+     <p>Y llegó el final.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="dialog" size="29" bold="true" />
+      <color background="0xFF8080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="cotorra2.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="771.0" cellHeight="500.0" border="true">
+    <style>
+     <font family="Comic Sans MS" size="20" />
+     <color foreground="0xFFFFFF" background="0x0080FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>El Escarabajo Azul se despidió, prometiéndole que haría todo lo posible por encontrar el sueño perdido.Todos los animales del bosque estaban atentos a lo que hacía el Escarabajo Azul.No se movían de la puerta de su casita. Si él caminaba, todos caminaban de trás de él, si por casualidad se sentaba en el suelo a pensar, todos buscaban un lugar dónde sentarse, si tosía, todos tosían también.De repente pegó un salto. -¡Ya lo tengo, sé quién se robó el sueño de doña Cotorra Pérez! - Y salió ligerito para el hueco del alcanforero. Trepó con mucho trabajo y cuando estuvo arriba le dio la buena noticia a la triste Cotorra que ya casi ni comía y suspiraba a cada rato.-¡Ya sé quienes se robaron tu sueño!-¡Quienes! - Gritó y de alegría casi se cae al piso.- ¡Fueron los rayos del sol!Miró con cara de asombro al Escarabajo azul y reaccionó enseguida.-¡Claro, si cuando me desperté, porque era de día, noté que lo había perdido! - ¡Fueron ellos y cuando me lo van a devolver? El Escarabajo Azul que había encontrado la respuesta le dijo: - Esta noche cuando te duermas vas a encontrar nuevamente tu sueño.Cada vez que te despiertes y veas que has perdido tu sueño, a la noche, al acostarte, algunas veces lo vas a encontrar.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="memo.puz" code="">
+   <description>
+    <p>Rompecabezas cotorra</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="dialog" size="28" bold="true" />
+      <color background="0xFF8080" />
+     </style>
+     <p>Resuelve</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="dialog" size="33" bold="true" />
+      <color background="0xFF8080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFF80FF">
+     <image name="fondow~1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x80FFFF" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="cotorra2.bmp">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="personaj.sop" code="">
+   <description>
+    <p>Sopa de letras con personajes del cuento</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="dialog" size="28" bold="true" />
+      <color background="0xFF8080" />
+     </style>
+     <p>Buscá los personajes del cuento</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="dialog" size="28" bold="true" />
+      <color background="0xFF8080" />
+     </style>
+     <p>¡Excelente!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="alcanf~1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <textGrid rows="20" columns="10" cellWidth="100.0" cellHeight="60.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>COTORRA*****LECHUZA*</row>
+     <row>O*O**A************N*</row>
+     <row>N*R**Y***P********I*</row>
+     <row>E*T**O***A********M*</row>
+     <row>J*U**S***J********A*</row>
+     <row>O*G******A******SOL*</row>
+     <row>**ALCANFORERO*****E*</row>
+     <row>*********I********S*</row>
+     <row>*********T**********</row>
+     <row>****ESCARABAJO******</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">COTORRA</clue>
+    <clue id="1">LECHUZA</clue>
+    <clue id="2">CONEJO</clue>
+    <clue id="3">TORTUGA</clue>
+    <clue id="4">RAYOS</clue>
+    <clue id="5">ALCANFORERO</clue>
+    <clue id="6">PAJARITA</clue>
+    <clue id="7">ANIMALES</clue>
+    <clue id="8">SOL</clue>
+    <clue id="9">ESCARABAJO</clue>
+   </clues>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="secuenci.puz" code="">
+   <description>
+    <p>Ordenar párrafos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="dialog" size="28" bold="true" />
+      <color background="0xFF8080" />
+     </style>
+     <p>Ordena los párrafos del cuento</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="dialog" size="28" bold="true" />
+      <color background="0xFF8080" />
+     </style>
+     <p>¡Sos un genio!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="fpollito.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="7" cols="1" cellWidth="772.0" cellHeight="82.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell>
+     <p>Uno a uno se iban despertando los animales del bosque con los primeros rayos del sol. </p>
+    </cell>
+    <cell>
+     <p>-¡Ladrones, ladrones! - Gritaba la Cotorra - ¡Me han robado!</p>
+    </cell>
+    <cell>
+     <p>Doña lechuza creyó reconocer la voz de la sra. Pérez, la Cotorra, que vivía en el alcanforero viejo.</p>
+    </cell>
+    <cell>
+     <p>Doña cotorra salió del hueco y se posó en una rama, estaba tan enojada que daba vueltas y vueltas.</p>
+    </cell>
+    <cell>
+     <p>El Escarabajo Azul despacito, despacito, fue subiendo por el árbol en que vivía doña Cotorra. </p>
+    </cell>
+    <cell>
+     <p>-¡Ya lo tengo, sé quién se robó el sueño de doña Cotorra Pérez!</p>
+    </cell>
+    <cell>
+     <p>Cada vez que te despiertes y veas que has perdido tu sueño, a la noche, al acostarte, algunas veces lo vas a encontrar.</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="sol.puz" code="">
+   <description>
+    <p>Armar el sol</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="dialog" size="28" bold="true" />
+      <color background="0xFF8080" />
+     </style>
+     <p>¿Qué imagen se forma?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="dialog" size="28" bold="true" />
+      <color background="0xFF8080" />
+     </style>
+     <p>¡Buenísimo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="fondow~1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="sunsti~1.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@ClassicJigSaw" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@text.Identify" name="sustanti.txa" code="" type="identifyWords">
+   <description>
+    <p>Buscar sustantivos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="dialog" size="28" bold="true" />
+      <color background="0xFF8080" />
+     </style>
+     <p>Buscá y marcá los sustantivos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="dialog" size="28" bold="true" />
+      <color background="0xFF8080" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="flower4.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="611" height="401" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" size="17" background="0xFFFFFF" italic="false" foreground="0x000000" tabWidth="16" bold="false" family="Arial" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">Los </text>
+      <target>animales</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> que estaba alrededor del </text>
+      <target>alcanforero</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> no entendían nada.</text>
+     </p>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">- ¿Qué es eso de que le han robado un </text>
+      <target>sueño?</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> No entendemos nada.</text>
+     </p>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <target>Doña</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> </text>
+      <target>cotorra</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> salió del </text>
+      <target>hueco</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> y se posó en una </text>
+      <target>rama</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">, estaba tan enojada que daba vueltas y vueltas, se ponía </text>
+      <target>boca</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> abajo, pegaba pequeños </text>
+      <target>gruñidos</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">, era tal el </text>
+      <target>enojo</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> que hasta se mordió una </text>
+      <target>pata</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">.</text>
+     </p>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">-Cuando lograron calmarla les explicó que cuando se acostó al ratito nomás le vino el </text>
+      <target>sueño</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">. Al quedarse dormida soñó con </text>
+      <target>cosas</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> hermosas.</text>
+     </p>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">- ¿Cómo sabe que soñó </text>
+      <target>cosas</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> hermosas? Le dijo el </text>
+      <target>Conejo</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">.</text>
+     </p>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">- Estoy segura que eran </text>
+      <target>cosas</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> hermosas porque me desperté riendo y yo casi nunca me despierto riendo. Y al acordarse volvió nuevamente a los </text>
+      <target>gritos</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">: </text>
+      <target>¡Ladrones</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">, </text>
+      <target>ladrones!</target>
+     </p>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">-Cálmese y siga contando así podremos ayudarla, dijo la </text>
+      <target>Tortuga</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> que había llegado en ese </text>
+      <target>momento</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">.</text>
+     </p>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">- Bueno, cuando desperté me miré al </text>
+      <target>espejo</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> y quise acordarme de qué me había reído tanto, pero no pude. Me habían robado el </text>
+      <target>sueño</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">. ¡¡¡ </text>
+      <target>Ladrooooooones</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">, me robaron el </text>
+      <target>sueño!!!</target>
+     </p>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">-¡Pero quienes le robaron el </text>
+      <target>sueño?</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> - No entendemos - Le protestó la </text>
+      <target>Lechuza</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">.</text>
+     </p>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <target>-¡Ellos</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> fueron! eran muchos y vinieron todos juntos y me robaron el </text>
+      <target>sueño</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">.</text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.Identify" name="verbos.txa" code="" type="identifyWords">
+   <description>
+    <p>Marcar verbos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="dialog" size="28" bold="true" />
+      <color background="0x0080C0" />
+     </style>
+     <p>Encuentra los verbos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="dialog" size="28" bold="true" />
+      <color background="0x0080C0" />
+     </style>
+     <p>¡¡Excelente!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF00FF">
+     <image name="flower~1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x8000FF" border="true">
+     <size width="540" height="190" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" size="17" background="0xFFFFFF" italic="false" foreground="0x000000" tabWidth="16" bold="false" family="Arial" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">Uno a uno se </text>
+      <target>iban</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> despertando los animales del bosque con los primeros rayos del sol. Un suave olorcito a pasto fresco </text>
+      <target>inundaba</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> el lugar y las flores </text>
+      <target>abrían</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> sus pétalos lentamente con las primeras luces del alba.</text>
+     </p>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">De repente un alboroto infernal </text>
+      <target>despertó</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">  a los últimos dormilones que no </text>
+      <target>sabían</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> que </text>
+      <target>pasaban</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">. Unos a otros se </text>
+      <target>miraban</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> tratando de descubrir de dónde </text>
+      <target>venían</target>
+      <text size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> los gritos.</text>
+     </p>
+    </section>
+   </document>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="cotorra2.bmp" file="cotorra2.bmp" />
+  <media name="alcanf~1.gif" file="alcanf_1.gif" animated="false" />
+  <media name="animtaru.gif" file="animtaru.gif" animated="false" />
+  <media name="buho1.gif" file="buho1.gif" animated="false" />
+  <media name="cotorra2.gif" file="cotorra2.gif" animated="false" />
+  <media name="flower4.gif" file="flower4.gif" animated="false" />
+  <media name="flower~1.gif" file="flower_1.gif" animated="false" />
+  <media name="fondow~1.gif" file="fondow_1.gif" animated="false" />
+  <media name="fpollito.gif" file="fpollito.gif" animated="false" />
+  <media name="sunsti~1.gif" file="sunsti_1.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

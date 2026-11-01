@@ -1,0 +1,977 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="cosrod1e" version="0.1.3">
+ <settings>
+  <title>cosrod1e</title>
+  <revision description="created" date="5/30/02" />
+  <descriptors />
+ </settings>
+ <sequence>
+  <item id="cosrod1e.pac" name="paq33int.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="pldres20.ass" />
+  <item name="cosrod0.ass" />
+  <item name="pldre1.puz" />
+  <item name="cosrod1.ass" />
+  <item name="caixa1.ass" />
+  <item name="cilind1.ass" />
+  <item name="con1.ass" />
+  <item name="pldres00.sop" />
+  <item name="esf02.ass" />
+  <item name="esf01.ass" />
+  <item name="revol1.ass" />
+  <item name="revol2.ass" />
+  <item name="coniqu1.ass" />
+  <item name="paq33fi.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.ComplexAssociation" name="caixa1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica por sus nombres los cuerpos que no sean poliedros.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="7" border="true" image="caixa1.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="7" rows="5" />
+    <ids>-1 -1 4 -1 8 5 -1 -1 -1 -1 0 1 2 -1 -1 -1 0 -1 -1 -1 -1 0 -1 1 -1 3 -1 -1 -1 6 7 -1 -1 -1 -1</ids>
+   </cells>
+   <cells rows="9" cols="1" cellWidth="64.0" cellHeight="49.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="12" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="9" />
+    <cell>
+     <p>CILINDRO</p>
+    </cell>
+    <cell>
+     <p>CONO</p>
+    </cell>
+    <cell>
+     <p>CONO TRUNCADO</p>
+    </cell>
+    <cell>
+     <p>CILINDRO TRUNCADO</p>
+    </cell>
+    <cell>
+     <p>ESFERA</p>
+    </cell>
+    <cell>
+     <p>SEMI - ESFERA</p>
+    </cell>
+    <cell>
+     <p>TORO</p>
+    </cell>
+    <cell>
+     <p>SEMI - CILINDRO</p>
+    </cell>
+    <cell>
+     <p>OVOIDE</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="7" border="true" image="caixa1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="7" rows="5" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="cilind1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica los elementos de este cilindro.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="6" cols="3" border="false" image="cilind1a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="3" rows="6" showEnclosure="true" scaleX="3.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,3,6</shape>
+     </enclosing>
+     <shape>rectangle:1,1,1,1</shape>
+     <shape>rectangle:0,2,1,1</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>rectangle:1,5,1,1</shape>
+     <shape>rectangle:2,5,1,1</shape>
+    </shaper>
+    <ids>1 2 0 1 3</ids>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="210.0" cellHeight="40.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>GENERATRIZ</p>
+    </cell>
+    <cell>
+     <p>BASE</p>
+    </cell>
+    <cell>
+     <p>SUPERFICIE LATERAL</p>
+    </cell>
+    <cell>
+     <p>RADIO DE LA BASE</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="3" border="false" image="cilind1c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="3" rows="6" showEnclosure="true" scaleX="3.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,3,6</shape>
+     </enclosing>
+     <shape>rectangle:1,1,1,1</shape>
+     <shape>rectangle:0,2,1,1</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>rectangle:1,5,1,1</shape>
+     <shape>rectangle:2,5,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="con1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica los elementos de este cono.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="6" cols="3" border="false" image="con1a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="3" rows="6" showEnclosure="true" scaleX="3.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,3,6</shape>
+     </enclosing>
+     <shape>rectangle:1,0,1,1</shape>
+     <shape>rectangle:0,2,1,1</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>rectangle:0,3,1,1</shape>
+     <shape>rectangle:1,5,1,1</shape>
+     <shape>rectangle:2,5,1,1</shape>
+    </shaper>
+    <ids>0 5 1 2 3 4</ids>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="210.0" cellHeight="40.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>EL VÉRTICE</p>
+    </cell>
+    <cell>
+     <p>GENERATRIZ</p>
+    </cell>
+    <cell>
+     <p>ALTURA</p>
+    </cell>
+    <cell>
+     <p>BASE</p>
+    </cell>
+    <cell>
+     <p>RADIO DE LA BASE</p>
+    </cell>
+    <cell>
+     <p>SUPERFICIE LATERAL</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="3" border="false" image="con1c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="3" rows="6" showEnclosure="true" scaleX="3.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,3,6</shape>
+     </enclosing>
+     <shape>rectangle:1,0,1,1</shape>
+     <shape>rectangle:0,2,1,1</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>rectangle:0,3,1,1</shape>
+     <shape>rectangle:1,5,1,1</shape>
+     <shape>rectangle:2,5,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="coniqu1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica por su nombre cada sección cónica.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="coniqu1a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <ids>0 1 2 3</ids>
+   </cells>
+   <cells rows="1" cols="4" cellWidth="175.0" cellHeight="50.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>CIRCUNFERENCIA</p>
+    </cell>
+    <cell>
+     <p>ELIPSE</p>
+    </cell>
+    <cell>
+     <p>HIPÉRBOLA</p>
+    </cell>
+    <cell>
+     <p>PARÁBOLA</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="4" border="true" image="coniqu1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="cosrod0.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Con las piezas de un juego de arquirectura hemos hecho esta construcción. Responde a estas seis preguntas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="10" cols="6" border="false" image="cosrod0a.gif" id="primary">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="6" rows="10" showEnclosure="true" scaleX="6.0" scaleY="10.0">
+     <enclosing>
+      <shape>rectangle:0,0,6,10</shape>
+     </enclosing>
+     <shape>rectangle:5,1,1,1</shape>
+     <shape>rectangle:5,2,1,1</shape>
+     <shape>rectangle:5,4,1,1</shape>
+     <shape>rectangle:5,5,1,1</shape>
+     <shape>rectangle:5,7,1,1</shape>
+     <shape>rectangle:5,8,1,1</shape>
+    </shaper>
+    <ids>16 19 2 7 0 1</ids>
+   </cells>
+   <cells rows="10" cols="2" cellWidth="70.0" cellHeight="40.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="10" />
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>AZUL</p>
+    </cell>
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>MORADO</p>
+    </cell>
+    <cell>
+     <p>3</p>
+    </cell>
+    <cell>
+     <p>ROJO</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>AMARILLO</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>NEGRO</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>LILA</p>
+    </cell>
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>MARRÓN</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>BLANCO</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>GRIS</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>VERDE</p>
+    </cell>
+   </cells>
+   <cells rows="10" cols="6" border="false" image="cosrod0c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="6" rows="10" showEnclosure="true" scaleX="6.0" scaleY="10.0">
+     <enclosing>
+      <shape>rectangle:0,0,6,10</shape>
+     </enclosing>
+     <shape>rectangle:5,1,1,1</shape>
+     <shape>rectangle:5,2,1,1</shape>
+     <shape>rectangle:5,4,1,1</shape>
+     <shape>rectangle:5,5,1,1</shape>
+     <shape>rectangle:5,7,1,1</shape>
+     <shape>rectangle:5,8,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="cosrod1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Relaciona cada cuerpo geométrico con su nombre.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="cosrod1a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <ids>0 2 3 1 0 5 4 6 0 1 6 0</ids>
+   </cells>
+   <cells rows="7" cols="1" cellWidth="120.0" cellHeight="60.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell>
+     <p>CILINDRO RECTO</p>
+    </cell>
+    <cell>
+     <p>CONO RECTO</p>
+    </cell>
+    <cell>
+     <p>CILINDRO OBLICUO</p>
+    </cell>
+    <cell>
+     <p>CONO OBLICUO</p>
+    </cell>
+    <cell>
+     <p>TRONCO DE CONO</p>
+    </cell>
+    <cell>
+     <p>TRONCO DE CILINDRO</p>
+    </cell>
+    <cell>
+     <p>ESFERA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="esf01.ass">
+   <description>
+    <p>Geometria de la circumferència i del cercle</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Relaciona cada figura con su nombre.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="2" cellWidth="400.0" cellHeight="270.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <p>Sector esférico</p>
+    </cell>
+    <cell>
+     <p>Segmento esférico con una base</p>
+    </cell>
+    <cell>
+     <p>Segmento esférico con dos bases</p>
+    </cell>
+    <cell>
+     <p>Cuña esférica</p>
+    </cell>
+    <cell>
+     <p>Hemisferio</p>
+    </cell>
+    <cell>
+     <p>Casquete esférico</p>
+    </cell>
+    <cell>
+     <p>Zona esférica</p>
+    </cell>
+    <cell>
+     <p>Huso esférico</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="2" cellWidth="400.0" cellHeight="270.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell image="esfsect1.gif" />
+    <cell image="esfseg1.gif" />
+    <cell image="esfseg2.gif" />
+    <cell image="esftasc1.gif" />
+    <cell image="esfhemi1.gif" />
+    <cell image="esfcasq1.gif" />
+    <cell image="esfzona1.gif" />
+    <cell image="esffus1.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="esf02.ass">
+   <description>
+    <p>Geometria de la circumferència i del cercle</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Relaciona cada figura con su nombre.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="2" cellWidth="400.0" cellHeight="270.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <p>Sector esférico</p>
+    </cell>
+    <cell>
+     <p>Segmento esférico con una base</p>
+    </cell>
+    <cell>
+     <p>Segmento esférico con dos bases</p>
+    </cell>
+    <cell>
+     <p>Cuña esférica</p>
+    </cell>
+    <cell>
+     <p>Hemisferio</p>
+    </cell>
+    <cell>
+     <p>Casquete esférico</p>
+    </cell>
+    <cell>
+     <p>Zona esférica</p>
+    </cell>
+    <cell>
+     <p>Huso esférico</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="2" cellWidth="400.0" cellHeight="270.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell image="esfsect2.gif" />
+    <cell image="esfseg3.gif" />
+    <cell image="esfseg4.gif" />
+    <cell image="esftasc2.gif" />
+    <cell image="esfhemi2.gif" />
+    <cell image="esfcasq2.gif" />
+    <cell image="esfzona2.gif" />
+    <cell image="esffus2.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="paq33fi.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic sobre la flecha de la derecha para volver al menú         &gt;&gt;&gt;</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="portada1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" transparent="true" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="60.0" border="false">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>FIN DEL PAQUETE 33</p>
+    </cell>
+    <cell>
+     <p>CILINDROS, CONOS Y ESFERAS</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="paq33int.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic sobre la flecha para iniciar el paquete de actividades         &gt;&gt;&gt;</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="portada1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="60.0" border="false">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>GEOCLIC - PAQUETE 33</p>
+    </cell>
+    <cell>
+     <p>CILINDROS, CONOS Y ESFERAS</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@memory.MemoryGame" name="pldre1.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Aparea dos a dos los seis cuerpos geométricos.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="150.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="pris51.gif" />
+    <cell image="pira61.gif" />
+    <cell image="pris44.gif" />
+    <cell image="esfera2.gif" />
+    <cell image="cilin1.gif" />
+    <cell image="con1.gif" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="pldres00.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Encuentra los nombres de seis cuerpos geométricos.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="8" columns="8" cellWidth="38.0" cellHeight="38.0" border="true">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>CP***OE*</row>
+     <row>PI***RS*</row>
+     <row>RRL**TF*</row>
+     <row>IA*I*OE*</row>
+     <row>SM**NER*</row>
+     <row>MI***DA*</row>
+     <row>AD***RR*</row>
+     <row>*E**CONO</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">PRISMA</clue>
+    <clue id="1">PIRAMIDE</clue>
+    <clue id="2">ORTOEDRO</clue>
+    <clue id="3">ESFERA</clue>
+    <clue id="4">CILINDRO</clue>
+    <clue id="5">CONO</clue>
+   </clues>
+   <cells rows="3" cols="2" cellWidth="120.0" cellHeight="101.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="pris51.gif" />
+    <cell image="pira61.gif" />
+    <cell image="pris44.gif" />
+    <cell image="esfera2.gif" />
+    <cell image="cilin1.gif" />
+    <cell image="con1.gif" />
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="pldres20.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Clasifica los siguientes cuerpos geométricos.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="5" cellWidth="120.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="4" />
+    <cell id="0" image="6edr2.gif" />
+    <cell id="2" image="12edr3.gif" />
+    <cell id="2" image="20edr1.gif" />
+    <cell id="1" image="pira41.gif" />
+    <cell id="1" image="pira51.gif" />
+    <cell id="1" image="pira61.gif" />
+    <cell id="0" image="pris32.gif" />
+    <cell id="0" image="pris42.gif" />
+    <cell id="0" image="pris81.gif" />
+    <cell id="0" image="prisi3.gif" />
+    <cell id="0" image="prisi4.gif" />
+    <cell id="3" image="esfera1.gif" />
+    <cell id="3" image="esfsemi1.gif" />
+    <cell id="3" image="cilin1.gif" />
+    <cell id="3" image="cilin2.gif" />
+    <cell id="3" image="cilin3.gif" />
+    <cell id="3" image="cilinob1.gif" />
+    <cell id="3" image="con1.gif" />
+    <cell id="3" image="con2.gif" />
+    <cell id="3" image="contc1.gif" />
+   </cells>
+   <cells rows="4" cols="1" cellWidth="90.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>PRISMA</p>
+    </cell>
+    <cell>
+     <p>PIRÁMIDE</p>
+    </cell>
+    <cell>
+     <p>NI PRISMA NI PIRÁMIDE (PERO POLIEDRO)</p>
+    </cell>
+    <cell>
+     <p>NO ES UN POLIEDRO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="revol1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica los cuerpos de revolución.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="true" image="revol1a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>0 1 1 0 1 1 0 0 1</ids>
+   </cells>
+   <cells rows="3" cols="3" border="true" image="revol1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="revol2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica los cuerpos de revolución.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="true" image="revol2a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>1 0 0 0 0 0 1 1 1</ids>
+   </cells>
+   <cells rows="3" cols="3" border="true" image="revol2c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="12edr3.gif" file="12edr3.gif" animated="false" />
+  <media name="20edr1.gif" file="20edr1.gif" animated="false" />
+  <media name="6edr2.gif" file="6edr2.gif" animated="false" />
+  <media name="caixa1.gif" file="caixa1.gif" animated="false" />
+  <media name="caixa1c.gif" file="caixa1c.gif" animated="false" />
+  <media name="cilin1.gif" file="cilin1.gif" animated="false" />
+  <media name="cilin2.gif" file="cilin2.gif" animated="false" />
+  <media name="cilin3.gif" file="cilin3.gif" animated="false" />
+  <media name="cilind1a.gif" file="cilind1a.gif" animated="false" />
+  <media name="cilind1c.gif" file="cilind1c.gif" animated="false" />
+  <media name="cilinob1.gif" file="cilinob1.gif" animated="false" />
+  <media name="con1.gif" file="con1.gif" animated="false" />
+  <media name="con1a.gif" file="con1a.gif" animated="false" />
+  <media name="con1c.gif" file="con1c.gif" animated="false" />
+  <media name="con2.gif" file="con2.gif" animated="false" />
+  <media name="coniqu1a.gif" file="coniqu1a.gif" animated="false" />
+  <media name="coniqu1c.gif" file="coniqu1c.gif" animated="false" />
+  <media name="contc1.gif" file="contc1.gif" animated="false" />
+  <media name="cosrod0a.gif" file="cosrod0a.gif" animated="false" />
+  <media name="cosrod0c.gif" file="cosrod0c.gif" animated="false" />
+  <media name="cosrod1a.gif" file="cosrod1a.gif" animated="false" />
+  <media name="esfcasq1.gif" file="esfcasq1.gif" animated="false" />
+  <media name="esfcasq2.gif" file="esfcasq2.gif" animated="false" />
+  <media name="esfera1.gif" file="esfera1.gif" animated="false" />
+  <media name="esfera2.gif" file="esfera2.gif" animated="false" />
+  <media name="esffus1.gif" file="esffus1.gif" animated="false" />
+  <media name="esffus2.gif" file="esffus2.gif" animated="false" />
+  <media name="esfhemi1.gif" file="esfhemi1.gif" animated="false" />
+  <media name="esfhemi2.gif" file="esfhemi2.gif" animated="false" />
+  <media name="esfsect1.gif" file="esfsect1.gif" animated="false" />
+  <media name="esfsect2.gif" file="esfsect2.gif" animated="false" />
+  <media name="esfseg1.gif" file="esfseg1.gif" animated="false" />
+  <media name="esfseg2.gif" file="esfseg2.gif" animated="false" />
+  <media name="esfseg3.gif" file="esfseg3.gif" animated="false" />
+  <media name="esfseg4.gif" file="esfseg4.gif" animated="false" />
+  <media name="esfsemi1.gif" file="esfsemi1.gif" animated="false" />
+  <media name="esftasc1.gif" file="esftasc1.gif" animated="false" />
+  <media name="esftasc2.gif" file="esftasc2.gif" animated="false" />
+  <media name="esfzona1.gif" file="esfzona1.gif" animated="false" />
+  <media name="esfzona2.gif" file="esfzona2.gif" animated="false" />
+  <media name="pira41.gif" file="pira41.gif" animated="false" />
+  <media name="pira51.gif" file="pira51.gif" animated="false" />
+  <media name="pira61.gif" file="pira61.gif" animated="false" />
+  <media name="portada1.gif" file="portada1.gif" animated="false" />
+  <media name="pris32.gif" file="pris32.gif" animated="false" />
+  <media name="pris42.gif" file="pris42.gif" animated="false" />
+  <media name="pris44.gif" file="pris44.gif" animated="false" />
+  <media name="pris51.gif" file="pris51.gif" animated="false" />
+  <media name="pris81.gif" file="pris81.gif" animated="false" />
+  <media name="prisi3.gif" file="prisi3.gif" animated="false" />
+  <media name="prisi4.gif" file="prisi4.gif" animated="false" />
+  <media name="revol1a.gif" file="revol1a.gif" animated="false" />
+  <media name="revol1c.gif" file="revol1c.gif" animated="false" />
+  <media name="revol2a.gif" file="revol2a.gif" animated="false" />
+  <media name="revol2c.gif" file="revol2c.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

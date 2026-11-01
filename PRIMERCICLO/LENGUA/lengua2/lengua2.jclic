@@ -1,0 +1,1116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="bl_fr" version="0.1.3">
+ <settings>
+  <title>Lengua 2º año EGB</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="12/1/04" />
+  <revision description="Conversión de Clic3 a JClic" date="12/1/04">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Estela Rodriguez" mail="estela@elsitio.net" />
+  <organization name="Instituto Ana María Janer" city="Buenos Aires" country="Argentina" />
+  <language>español</language>
+  <description>
+   <p>Paquete de actividades que comprende un conjunto de 16 ejercicios de asociaciones, rompecabezas, crucigramas... sobre el reconocimiento del grupo de letras &lt;B&gt;bl&lt;/B&gt; i &lt;B&gt;fr&lt;/B&gt; así como fijar su grafía.</p>
+  </description>
+  <descriptors area="Lenguas" level="Primaria">aprendizaje de la lengua</descriptors>
+ </settings>
+ <sequence>
+  <item id="bl_fr.pac" name="presenta.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="elige.ass">
+   <jump action="STOP" id="forward" />
+  </item>
+  <item id="fr_pac.pac" name="identifr.ass" delay="1" navButtons="back">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="dictafr.ass" delay="1" navButtons="none" />
+  <item name="dictafrw.ass" delay="1" navButtons="none" />
+  <item name="fruta.puz" delay="1" navButtons="none" />
+  <item name="fritas.puz" delay="1" navButtons="none" />
+  <item name="cofre.puz" delay="1" navButtons="none" />
+  <item name="fresco.puz" delay="1" navButtons="none" />
+  <item name="africa.puz" delay="1" navButtons="none" />
+  <item name="listafr.txa" delay="1" navButtons="none" />
+  <item name="crucifr.crw" delay="1" navButtons="none">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="bl_pac.pac" name="puebloid.ass" delay="1" navButtons="none">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="pueblwav.ass" delay="1" navButtons="none" />
+  <item name="puebldic.ass" delay="1" navButtons="none" />
+  <item name="senalar.txa" delay="1" navButtons="none">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@puzzles.DoublePuzzle" name="africa.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>        Piensa en el nombre de un continente. Empieza con Á</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡¡¡FELICITACIONES!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="6" border="true" image="africa.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="cofre.puz" code="">
+   <description />
+   <messages>
+    <cell image="cofrebrd.gif" type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡¡¡MUY B IEN!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="5" border="true" image="cofre.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.CrossWord" name="crucifr.crw">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xD0CFCF" border="false" />
+   </settings>
+   <textGrid rows="12" columns="6" cellWidth="31.0" cellHeight="33.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>*****FRUTAS*</row>
+     <row>****FRUTILLA</row>
+     <row>*COFRE******</row>
+     <row>FRITAS******</row>
+     <row>*FRASCO*****</row>
+     <row>**FRIO******</row>
+    </text>
+   </textGrid>
+   <cells rows="6" cols="1" cellWidth="272.0" cellHeight="89.0" border="true" id="acrossClues">
+    <style borderStroke="2.0" markerStroke="2.7">
+     <color background="0xFFFFFF" border="0x666666" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0" item="0" image="frutbrde.gif" />
+    <cell id="1" item="0" image="frutilla.gif" />
+    <cell id="2" item="0" image="cofrecit.gif" />
+    <cell id="3" item="0" image="fritabrd.gif" />
+    <cell id="4" item="0">
+     <p>Guarda las galletitas en un ------ de vidrio</p>
+    </cell>
+    <cell id="5" item="0">
+     <p>En el polo hace mucho...</p>
+    </cell>
+   </cells>
+   <cells rows="12" cols="1" cellWidth="272.0" cellHeight="89.0" border="false" id="downClues">
+    <style borderStroke="2.0" markerStroke="2.7">
+     <color background="0xFFFFFF" border="0x666666" />
+    </style>
+    <cell id="0" item="0">
+     <p>     </p>
+    </cell>
+    <cell id="1" item="0">
+     <p>     </p>
+    </cell>
+    <cell id="2" item="0">
+     <p>     </p>
+    </cell>
+    <cell id="3" item="0">
+     <p>     </p>
+    </cell>
+    <cell id="4" item="0">
+     <p>     </p>
+    </cell>
+    <cell id="5" item="0">
+     <p>Cuando no hace mucho frío, decimos que está...</p>
+    </cell>
+    <cell id="6" item="0">
+     <p>     </p>
+    </cell>
+    <cell id="7" item="0">
+     <p>     </p>
+    </cell>
+    <cell id="8" item="0">
+     <p>     </p>
+    </cell>
+    <cell id="9" item="0">
+     <p>      </p>
+    </cell>
+    <cell id="10" item="0">
+     <p>       </p>
+    </cell>
+    <cell id="11" item="0">
+     <p>          </p>
+    </cell>
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="dictafr.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Escribe los nombres de cada dibujo</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡¡¡FELICITACIONES!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="137.0" cellHeight="134.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="frambues.gif" />
+    <cell image="frasco.gif" />
+    <cell image="papfrita.gif" />
+    <cell image="frutas.gif" />
+    <cell image="cofregr.gif" />
+    <cell image="frutill.gif" />
+   </cells>
+   <cells rows="1" cols="6" cellWidth="115.0" cellHeight="74.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>frambuesas</p>
+    </cell>
+    <cell>
+     <p>frasco</p>
+    </cell>
+    <cell>
+     <p>fritas</p>
+    </cell>
+    <cell>
+     <p>frutas</p>
+    </cell>
+    <cell>
+     <p>cofre</p>
+    </cell>
+    <cell>
+     <p>frutillas</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="dictafrw.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Escribe las palabras que escuchas</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡¡¡BRAVO!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="frambues.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="frasco.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="fritas.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="frutas.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cofre.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="frutilla.wav" />
+    </cell>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>frambuesa</p>
+    </cell>
+    <cell>
+     <p>frasco</p>
+    </cell>
+    <cell>
+     <p>fritas</p>
+    </cell>
+    <cell>
+     <p>frutas</p>
+    </cell>
+    <cell>
+     <p>cofre</p>
+    </cell>
+    <cell>
+     <p>frutilla</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="elige.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Elige una opción</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="500.0" cellHeight="100.0" border="false">
+    <style shadow="true">
+     <font family="Arial" size="26" bold="true" />
+     <color foreground="0xFFFFFF" background="0x0000FF" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="bl_pac.pac" />
+     <p>* Grupo "bl"</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="fr_pac.pac" />
+     <p>* Grupo "fr"</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="fresco.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Cuando no hace mucho frío se dice que está...</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡¡¡MUY B IEN!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="6" border="true" image="fresco.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="fritas.puz">
+   <messages>
+    <cell image="fritabrd.gif" type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡¡¡MUY B IEN!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="6" border="true" image="fritas.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="fruta.puz">
+   <messages>
+    <cell image="frutbrde.gif" type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡¡¡BRAVO!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="5" border="true" image="fruta.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="identifr.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Haz clic sobre los dibujos que llevan "fr"</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡¡¡Bravo!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="140.0" cellHeight="140.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="1" image="frutill.gif" />
+    <cell id="1" image="frambues.gif" />
+    <cell id="1" image="frutas.gif" />
+    <cell id="1" image="frasco.gif" />
+    <cell id="1" image="cofregr.gif" />
+    <cell id="1" image="papfrita.gif" />
+    <cell id="0" image="foca.gif" />
+    <cell id="0" image="farol.gif" />
+    <cell id="0" image="fuego.gif" />
+   </cells>
+   <cells rows="3" cols="3" cellWidth="140.0" cellHeight="140.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>Frutillas</p>
+    </cell>
+    <cell>
+     <p>Frambuesas</p>
+    </cell>
+    <cell>
+     <p>Frutas</p>
+    </cell>
+    <cell>
+     <p>Frasco</p>
+    </cell>
+    <cell>
+     <p>Cofre</p>
+    </cell>
+    <cell>
+     <p>Fritas</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="listafr.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Selecciona la palabra correcta de la lista</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡¡¡MUY BIEN!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" foreground="0x000000" bold="false" italic="false" size="17" tabWidth="16" background="0xFFFFFF" family="Arial" />
+    <style name="target" base="default" foreground="0x400040" target="true" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">
+      <cell width="520" height="80" border="true">
+       <style>
+        <font family="Arial" size="18" bold="true" />
+        <color foreground="0xFFFFFF" background="0x408080" />
+       </style>
+       <p>Encuentra las palabras que faltan.</p>
+       <p>Todas llevan "fr"</p>
+      </cell>
+     </p>
+     <p foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial" />
+     <p foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">
+      <target>
+       <answer>Francisco</answer>
+       <optionList>
+        <option>Juan</option>
+        <option>Carlos</option>
+        <option>Francisco</option>
+        <option>Matías</option>
+       </optionList>
+       <info mode="onError">
+        <cell width="140" height="100">
+         <style>
+          <color foreground="0xFFFFFF" background="0x0080FF" />
+         </style>
+         <p>Recuerda... Lleva "Fr"</p>
+        </cell>
+       </info>
+       <text>Francisco</text>
+      </target>
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial"> viajó a </text>
+      <target>
+       <answer>Francia</answer>
+       <optionList>
+        <option>Europa</option>
+        <option>España</option>
+        <option>Brasil</option>
+        <option>Francia</option>
+       </optionList>
+       <info mode="onError">
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="140" height="100">
+         <style>
+          <color foreground="0xFFFFFF" background="0x0080FF" />
+         </style>
+         <p>Recuerda... Lleva "Fr"</p>
+        </cell>
+       </info>
+       <text>Francia</text>
+      </target>
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">.</text>
+     </p>
+     <p foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">En </text>
+      <target>
+       <answer>África</answer>
+       <optionList>
+        <option>Canadá</option>
+        <option>Chile</option>
+        <option>Rusia</option>
+        <option>África</option>
+       </optionList>
+       <info mode="onError">
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="140" height="100">
+         <style>
+          <color foreground="0xFFFFFF" background="0x0080FF" />
+         </style>
+         <p>Recuerda... Lleva "fr"</p>
+        </cell>
+       </info>
+       <text>África</text>
+      </target>
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial"> hace mucho calor.</text>
+     </p>
+     <p foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">Los piratas llevan un </text>
+      <target>
+       <answer>cofre</answer>
+       <optionList>
+        <option>monedero</option>
+        <option>cofre</option>
+        <option>baúl</option>
+        <option>cajón</option>
+       </optionList>
+       <info mode="onError">
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="140" height="100">
+         <style>
+          <color foreground="0xFFFFFF" background="0x0080FF" />
+         </style>
+         <p>Recuerda... Lleva "fr"</p>
+        </cell>
+       </info>
+       <text>cofre</text>
+      </target>
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial"> lleno de monedas de oro.</text>
+     </p>
+     <p foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">Pon ese </text>
+      <target>
+       <answer>frasco</answer>
+       <optionList>
+        <option>plato</option>
+        <option>frasco</option>
+        <option>vaso</option>
+        <option>sifón</option>
+       </optionList>
+       <info mode="onError">
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="140" height="100">
+         <style>
+          <color foreground="0xFFFFFF" background="0x0080FF" />
+         </style>
+         <p>Recuerda... Lleva "fr"</p>
+        </cell>
+       </info>
+       <text>frasco</text>
+      </target>
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial"> en la heladera para que se </text>
+      <target>
+       <answer>enfríe</answer>
+       <optionList>
+        <option>caliente</option>
+        <option>enfríe</option>
+        <option>entibie</option>
+        <option>congele</option>
+       </optionList>
+       <info mode="onError">
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="140" height="100">
+         <style>
+          <color foreground="0xFFFFFF" background="0x0080FF" />
+         </style>
+         <p>Recuerda... Lleva "fr"</p>
+        </cell>
+       </info>
+       <text>enfríe</text>
+      </target>
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">.</text>
+     </p>
+     <p foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">Espero que mañana </text>
+      <target>
+       <answer>refresque</answer>
+       <optionList>
+        <option>llueva</option>
+        <option>nieve</option>
+        <option>caliente</option>
+        <option>refresque</option>
+       </optionList>
+       <info mode="onError">
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="140" height="100">
+         <style>
+          <color foreground="0xFFFFFF" background="0x0080FF" />
+         </style>
+         <p>Recuerda... Lleva "fr"</p>
+        </cell>
+       </info>
+       <text>refresque</text>
+      </target>
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">.</text>
+     </p>
+     <p foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">Estornuda porque está </text>
+      <target>
+       <answer>resfriado</answer>
+       <optionList>
+        <option>cansado</option>
+        <option>alérgico</option>
+        <option>agitado</option>
+        <option>resfriado</option>
+       </optionList>
+       <info mode="onError">
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="140" height="100">
+         <style>
+          <color foreground="0xFFFFFF" background="0x0080FF" />
+         </style>
+         <p>Recuerda...</p>
+         <p>Lleva "fr"</p>
+        </cell>
+       </info>
+       <text>resfriado</text>
+      </target>
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">.</text>
+     </p>
+     <p foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="presenta.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="4" border="false" image="presenta.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@text.WrittenAnswer" name="puebldic.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Escribe el nombre que corresponde a cada dibujo</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡¡¡Bien!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="mueble.gif" />
+    <cell image="tabla.gif" />
+    <cell image="pablo.gif" />
+    <cell image="blusa.gif" />
+    <cell image="pueblo.gif">
+     <p> </p>
+    </cell>
+    <cell image="cables.gif" />
+   </cells>
+   <cells rows="1" cols="6" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>mueble</p>
+    </cell>
+    <cell>
+     <p>tabla</p>
+    </cell>
+    <cell>
+     <p>Pablo</p>
+    </cell>
+    <cell>
+     <p>blusa</p>
+    </cell>
+    <cell>
+     <p>pueblo</p>
+    </cell>
+    <cell>
+     <p>cables</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="puebloid.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Haz clic sobre las palabras que tienen el grupo "bl"</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡¡¡FELICITACIONES!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="1">
+     <p>pueblo</p>
+    </cell>
+    <cell id="1">
+     <p>mueble</p>
+    </cell>
+    <cell id="1">
+     <p>tabla</p>
+    </cell>
+    <cell id="1">
+     <p>blusa</p>
+    </cell>
+    <cell id="1">
+     <p>cables</p>
+    </cell>
+    <cell id="1">
+     <p>Pablo</p>
+    </cell>
+    <cell id="0">
+     <p>abuela</p>
+    </cell>
+    <cell id="0">
+     <p>labios</p>
+    </cell>
+    <cell id="0">
+     <p>silba</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell image="pueblo.gif" />
+    <cell image="mueble.gif" />
+    <cell image="tabla.gif" />
+    <cell image="blusa.gif" />
+    <cell image="cables.gif" />
+    <cell image="pablo.gif" />
+    <cell />
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="pueblwav.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Escribe la palabra que escuchas</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡¡¡Bien!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="mueble.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="tabla.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="pablo.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="blusa.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="pueblo.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cables.wav" />
+    </cell>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>mueble</p>
+    </cell>
+    <cell>
+     <p>tabla</p>
+    </cell>
+    <cell>
+     <p>Pablo</p>
+    </cell>
+    <cell>
+     <p>blusa</p>
+    </cell>
+    <cell>
+     <p>pueblo</p>
+    </cell>
+    <cell>
+     <p>cables</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="mueble.gif" />
+    <cell image="tabla.gif" />
+    <cell image="pablo.gif" />
+    <cell image="blusa.gif" />
+    <cell image="pueblo.gif" />
+    <cell image="cables.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.Identify" name="senalar.txa" type="identifyWords">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡¡¡Muy bien!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <checkButton>Solución</checkButton>
+   <document>
+    <style name="default" foreground="0x000000" bold="false" italic="false" size="17" tabWidth="16" background="0xFFFFFF" family="Arial" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" background="0xC0C0C0" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">
+      <cell width="500" height="100" border="true">
+       <style borderStroke="0.7" markerStroke="5.0">
+        <font family="Arial" size="18" bold="true" />
+        <color foreground="0xFFFFFF" background="0x408080" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+       </style>
+       <p>Señala las palabras que tengan el grupo "bl".</p>
+      </cell>
+     </p>
+     <p foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial" />
+     <p foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">
+      <target>Pablito</target>
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial"> visita el </text>
+      <target>pueblo</target>
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">.</text>
+     </p>
+     <p foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">La abuela </text>
+      <target>habla</target>
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial"> por teléfono.</text>
+     </p>
+     <p foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">Es un teléfono </text>
+      <target>público</target>
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">.</text>
+     </p>
+     <p foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">Un obrero arregla los </text>
+      <target>cables</target>
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">.</text>
+     </p>
+     <p foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">La niña usa una </text>
+      <target>blusa</target>
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial"> </text>
+      <target>blanca</target>
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">.</text>
+     </p>
+     <p foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">Ella camina sobre una </text>
+      <target>tabla</target>
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">.</text>
+     </p>
+     <p foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">Un señor mira la vidriera de la </text>
+      <target>mueblería</target>
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">.</text>
+     </p>
+     <p foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">Allí venden </text>
+      <target>muebles</target>
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial"> de </text>
+      <target>roble</target>
+      <text foreground="0x000000" italic="false" bold="false" size="17" background="0xFFFFFF" family="Arial">.</text>
+     </p>
+    </section>
+   </document>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="africa.gif" file="africa.gif" />
+  <media name="blusa.gif" file="blusa.gif" />
+  <media name="cables.gif" file="cables.gif" />
+  <media name="cofre.gif" file="cofre.gif" />
+  <media name="cofrebrd.gif" file="cofrebrd.gif" />
+  <media name="cofrecit.gif" file="cofrecit.gif" />
+  <media name="cofregr.gif" file="cofregr.gif" />
+  <media name="farol.gif" file="farol.gif" />
+  <media name="foca.gif" file="foca.gif" />
+  <media name="frambues.gif" file="frambues.gif" />
+  <media name="frasco.gif" file="frasco.gif" />
+  <media name="fresco.gif" file="fresco.gif" />
+  <media name="fritabrd.gif" file="fritabrd.gif" />
+  <media name="fritas.gif" file="fritas.gif" />
+  <media name="fruta.gif" file="fruta.gif" />
+  <media name="frutas.gif" file="frutas.gif" />
+  <media name="frutbrde.gif" file="frutbrde.gif" />
+  <media name="frutill.gif" file="frutill.gif" />
+  <media name="frutilla.gif" file="frutilla.gif" />
+  <media name="fuego.gif" file="fuego.gif" />
+  <media name="mueble.gif" file="mueble.gif" />
+  <media name="pablo.gif" file="pablo.gif" />
+  <media name="papfrita.gif" file="papfrita.gif" />
+  <media name="presenta.gif" file="presenta.gif" />
+  <media name="pueblo.gif" file="pueblo.gif" />
+  <media name="tabla.gif" file="tabla.gif" />
+  <media name="blusa.wav" file="blusa.wav" />
+  <media name="cables.wav" file="cables.wav" />
+  <media name="cofre.wav" file="cofre.wav" />
+  <media name="frambues.wav" file="frambues.wav" />
+  <media name="frasco.wav" file="frasco.wav" />
+  <media name="fritas.wav" file="fritas.wav" />
+  <media name="frutas.wav" file="frutas.wav" />
+  <media name="frutilla.wav" file="frutilla.wav" />
+  <media name="mueble.wav" file="mueble.wav" />
+  <media name="pablo.wav" file="pablo.wav" />
+  <media name="pueblo.wav" file="pueblo.wav" />
+  <media name="tabla.wav" file="tabla.wav" />
+ </mediaBag>
+</JClicProject>
+

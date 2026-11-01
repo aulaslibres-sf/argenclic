@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca Aulas Libres - Proyecto ArgenClic</title>
+  <link rel="SHORTCUT ICON" href="../../recursos/favicon.ico"> <!-- Asumiendo que tienes un favicon -->
+  <style>
+    /* Estilos generales para mejorar la legibilidad y el diseño */
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #333;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 960px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    header {
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    header h1 {
+      color: #000099;
+      margin-bottom: 10px;
+    }
+    .activity-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .activity-item {
+      background-color: #e0f7fa; /* Color de fondo para los elementos */
+      padding: 15px;
+      border-radius: 5px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+    .activity-item:nth-child(odd) {
+      background-color: #ffffff; /* Alternar color de fondo */
+    }
+    .activity-item a {
+      font-weight: bold;
+      color: #006600;
+      display: block;
+      padding: 10px 0;
+    }
+    .activity-item:hover {
+      background-color: #cceeff;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+      background-color: #333;
+      color: #fff;
+      border-radius: 8px;
+    }
+    footer a {
+      color: #fff;
+      margin: 0 10px;
+    }
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+    .logo-container img {
+      max-height: 70px;
+      vertical-align: middle;
+    }
+    .nav-menu {
+      background-color: #003366;
+      text-align: center;
+      padding: 10px 0;
+    }
+    .nav-menu a {
+      color: white;
+      font-weight: bold;
+      margin: 0 15px;
+      text-decoration: none;
+      padding: 5px 0;
+      transition: color 0.3s ease;
+    }
+    .nav-menu a:hover {
+      color: #ffd700;
+      text-decoration: none;
+    }
+  </style>
+  <script>
+    // Función para cambiar imágenes (si aún es necesaria, se puede modernizar con CSS)
+    CI=new Image(206,130);
+    CIOn=new Image(206,130);
+    argenclic=new Image(400,146);
+    argenclicOn=new Image(400,146);
+
+    CI.src="../../recursos/disco1.png";
+    CIOn.src="../../recursos/disco2.png"; // Cambiado de logoCI2.png a disco2.png
+    argenclic.src="../../recursos/disco2.png";
+    argenclicOn.src="../../recursos/disco1.png";
+
+    function cambia(nombre, activa) {
+      document.images[nombre].src = activa.src;
+    }
+
+    // Google Analytics (mantener si es necesario)
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-311272-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ====== MENÚ DE NAVEGACIÓN GLOBAL ====== -->
+  <nav class="nav-menu">
+    <a href="../../index.html">Inicio</a>
+    <a href="../../niveles.html">Jugar</a>
+    <a href="../../proyecto.html">Proyecto</a>
+    <a href="../../tecnica.html">Técnica</a>
+    <a href="../../descarga.html">Descarga</a>
+    <a href="../../creditos.html">Créditos</a>
+  </nav>
+  <!-- ====== FIN MENÚ ====== -->
+
+  <div class="container">
+    <header>
+      <h1>Ciencias Naturales</h1>
+      <div class="logo-container">
+        <!-- Enlace y cambio de imagen actualizados -->
+        <a target="_blank" href="http://proyecto.aulaslibres.ar/" onmouseout="cambia('primera',CI);" onmouseover="cambia('primera',CIOn);">
+          <img name="primera" src="../../recursos/disco1.png" alt="Proyecto Aulas Libres Logo" style="width: 206px; height: 130px;">
+        </a>
+        <img src="../../recursos/Logo-AulasLibres-chico98x90.png" alt="Aulas Libres Logo">
+      </div>
+      <h2>SELECCIONE LA ACTIVIDAD</h2>
+    </header>
+
+    <main>
+      <div class="activity-grid">
+        <div class="activity-item">
+          <a href="abejas/index.html" target="_blank">COMUNIDAD DE LAS ABEJAS</a>
+        </div>
+        <div class="activity-item">
+          <a href="animalp/index.html" target="_blank">LOS ANIMALES</a>
+        </div>
+        <div class="activity-item">
+          <a href="cienciax/index.html" target="_blank">APARATO DIGESTIVO</a>
+        </div>
+        <div class="activity-item">
+          <a href="cmedio4/index.html" target="_blank">ECOSISTEMAS Y NUTRICIÓN</a>
+        </div>
+        <div class="activity-item">
+          <a href="cuerpo/index.html" target="_blank">NUESTRO CUERPO</a>
+        </div>
+        <div class="activity-item">
+          <a href="dengue/index.html" target="_blank">EL DENGUE</a>
+        </div>
+        <div class="activity-item">
+          <a href="digrespi/index.html" target="_blank">EL SISTEMA DIGESTIVO</a>
+        </div>
+        <div class="activity-item">
+          <a href="fisica5/index.html" target="_blank">NOCIONES DE FÍSICA</a>
+        </div>
+        <div class="activity-item">
+          <a href="funutri/index.html" target="_blank">LA FUNCIÓN DE NUTRICIÓN</a>
+        </div>
+        <div class="activity-item">
+          <a href="higiesp/index.html" target="_blank">HIGIENE BUCAL</a>
+        </div>
+        <div class="activity-item">
+          <a href="humano/index.html" target="_blank">APARATOS Y SISTEMAS HUMANOS</a>
+        </div>
+        <div class="activity-item">
+          <a href="medio4/index.html" target="_blank">REPASO GENERAL 4º</a>
+        </div>
+        <div class="activity-item">
+          <a href="nacer/index.html" target="_blank">GESTACIÓN HUMANA</a>
+        </div>
+        <div class="activity-item">
+          <a href="orienta/index.html" target="_blank">LA ORIENTACIÓN</a>
+        </div>
+        <div class="activity-item">
+          <a href="tierra/index.html" target="_blank">PLANETA TIERRA</a>
+        </div>
+        <div class="activity-item">
+          <a href="vistas/index.html" target="_blank">VISTAS DE LA TIERRA</a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        <a href="../../index.html">Inicio</a> |
+        <a href="../../descarga.html">Descarga</a> |
+        <a href="../../creditos.html">Créditos</a>
+      </p>
+      <p>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
+          <img alt="Licencia de Creative Commons" src="../../recursos/cc.png">
+        </a>
+      </p>
+      <p>Esta obra está licenciada bajo <a style="color:white;" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">CC BY-NC-SA 2.5 Argentina</a>.</p>
+    </footer>
+  </div>
+
+</body>
+</html>
+

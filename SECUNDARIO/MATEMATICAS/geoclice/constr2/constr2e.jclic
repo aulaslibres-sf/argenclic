@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="constr2e" version="0.1.3">
+ <settings>
+  <title>constr2e</title>
+  <revision description="created" date="5/30/02" />
+  <descriptors />
+ </settings>
+ <sequence>
+  <item id="constr2e.pac" name="paq12int.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="ccc1.ass" />
+  <item name="cac1.ass" />
+  <item name="aca1.ass" />
+  <item name="trequ1.ass" />
+  <item name="circ1.ass" />
+  <item name="circ2.ass" />
+  <item name="hexa1.ass" />
+  <item name="penta1.ass" />
+  <item name="ccc1.puz" />
+  <item name="trequ11.ass" />
+  <item name="hexa1.puz" />
+  <item name="circ12.ass" />
+  <item name="cac11.ass" />
+  <item name="aca1.puz" />
+  <item name="penta12.ass" />
+  <item name="circ21.ass" />
+  <item name="hexa12.ass" />
+  <item name="circ1.puz" />
+  <item name="ccc11.ass" />
+  <item name="cac12.ass" />
+  <item name="penta1.puz" />
+  <item name="aca12.ass" />
+  <item name="trequ12.ass" />
+  <item name="circ22.ass" />
+  <item name="paq12fi.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.Identify" name="aca1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Haz clic sucesivamente sobre las casillas 1, 2, 3 i 4 para ver cómo se construye un triángulo conocidos UN LADO y los DOS ANGULOS ADYACENTES.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Obsérvalo bien y pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false" useOrder="true">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="aca1a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <ids>1 1 1 1</ids>
+   </cells>
+   <cells rows="1" cols="4" border="true" image="aca1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="aca1.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Aquí tienes desordenados cuatro pasos para dibujar un TRIÁNGULO conocidos UN LADO y los ÁNGULOS ADYACENTES. Ordénalos de izquierda a derecha.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="aca1c.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="aca12.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Arriba tienes los dibujos necesarios para construir un TRIÁNGULO conocidos UN LADO y los DOS ÁNGULOS ADYACENTES. Lleva cada explicación al lugar correspondiente.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="aca12a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="aca12b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="aca1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="cac1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Haz clic sucesivamente sobre las casillas 1, 2, 3 i 4 para ver cómo se construye un triángulo conocidos DOS LADOS y el ÁNGULO QUE DETERMINAN.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Obsérvalo bien y pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false" useOrder="true">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="cac1a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <ids>1 1 1 1</ids>
+   </cells>
+   <cells rows="1" cols="4" border="true" image="cac1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="cac11.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Arriba tienes las explicaciones para construir un TRIÁNGULO conocidos DOS LADOS y EL ANGULO QUE DETERMINAN. Lleva cada dibujo al lugar correspondiente.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="cac11a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="cac11b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="cac1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="cac12.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Arriba tienes los dibujos necesarios para construir un TRIÁNGULO conocidos DOS LADOS y el ÁNGULO QUE DETERMINAN. Lleva cada explicación a su lugar.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="cac12a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="cac12b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="cac1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="ccc1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Haz clic sucesivamente sobre las casillas 1, 2, 3 i 4 para ver cómo se construye un triángulo conocidos los TRES LADOS.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Obsérvalo bien y pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false" useOrder="true">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="ccc1a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <ids>1 1 1 1</ids>
+   </cells>
+   <cells rows="1" cols="4" border="true" image="ccc1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="ccc1.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Aquí tienes desordenados cuatro pasos para dibujar un TRIÁNGULO conocidos los TRES LADOS. Ordénalos de izquierda a derecha.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="ccc1c.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="ccc11.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Arriba tienes las explicaciones para construir un TRIÁNGULO conocidos los TRES LADOS. Lleva cada dibujo al lugar correspondiente.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="ccc11a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="ccc11b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="ccc1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="circ1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Haz clic sucesivamente sobre las casillas 1, 2, 3 i 4 para ver cómo se obtiene el CENTRO de una CIRCUNFERENCIA.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Obsérvalo bien y pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false" useOrder="true">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="circ1a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <ids>1 1 1 1</ids>
+   </cells>
+   <cells rows="1" cols="4" border="true" image="circ1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="circ1.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Aquí tienes desordenados cuatro pasos para obtener el CENTRO de una CIRCUNFERENCIA. Ordénalos de izquierda a derecha.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="circ1c.gif">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="circ12.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Arriba tienes los dibujos necesarios para obtener el CENTRO de una CIRCUNFERENCIA. Lleva cada explicación al lugar correspondiente.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="circ12a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="circ12b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="circ1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="circ2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Haz clic sucesivamente sobre las casillas 1, 2, 3 i 4 para ver cómo se dibuja LA CIRCUNFERENCIA que pasa por TRES PUNTOS.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Obsérvalo bien y pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false" useOrder="true">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="circ2a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <ids>1 1 1 1</ids>
+   </cells>
+   <cells rows="1" cols="4" border="true" image="circ2c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="circ21.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Arriba tienes las explicaciones para construir LA CIRCUNFERENCIA que pasa por TRES PUNTOS. Lleva cada dibujo al lugar correspondiente.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="circ21a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="circ21b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="circ2c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="circ22.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Arriba tienes los dibujos necesarios para construir LA CIRCUNFERENCIA que pasa por TRES PUNTOS. Lleva cada explicación al lugar correspondiente.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="circ22a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="circ22b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="circ2c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="hexa1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Haz clic sucesivamente sobre las casillas 1, 2, 3 i 4 para ver cómo se construye un HEXÁGONO REGULAR conocido su lado.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Obsérvalo bien y pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false" useOrder="true">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="hexa1a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <ids>1 1 1 1</ids>
+   </cells>
+   <cells rows="1" cols="4" border="true" image="hexa1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="hexa1.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Aquí tienes desordenados cuatro pasos para construir un HEXÁGONO REGULAR conocido su LADO. Ordénalos de izquierda a derecha.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="hexa1c.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="hexa12.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Arriba tienes los dibujos necesarios para construir un HEXÁGONO REGULAR conocido el LADO. Lleva cada explicación al lugar correspondiente.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="hexa12a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="hexa12b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="hexa1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="paq12fi.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic sobre la flecha de la derecha para volver al menú         &gt;&gt;&gt;</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="portada1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="60.0" border="false">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>FIN DEL PAQUETE 12</p>
+    </cell>
+    <cell>
+     <p>CONTRUCCIONES CON REGLA Y COMPÁS - 2</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="paq12int.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic sobre la flecha para iniciar el paquete de actividades         &gt;&gt;&gt;</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="portada1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="60.0" border="false">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>GEOCLIC - PAQUETE 12</p>
+    </cell>
+    <cell>
+     <p>CONSTRUCCIONES CON REGLA Y COMPÁS - 2</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.Identify" name="penta1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Haz clic sucesivamente sobre las casillas 1, 2, 3 i 4 para ver cómo se inscribe un PENTÁGONO REGULAR en una circunferencia.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Obsérvalo bien y pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false" useOrder="true">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="penta1a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <ids>1 1 1 1</ids>
+   </cells>
+   <cells rows="1" cols="4" border="true" image="penta1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="penta1.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Aquí tienes desordenados cuatro pasos para construir un PENTÁGONO REGULAR inscrito en una circunferencia. Ordénalos de izquierda a derecha.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="penta1c.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="penta12.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Arriba tienes los dibujos necesarios para construir un PENTÁGONO REGULAR inscrito en una circunferencia. Lleva cada explicación al lugar correspondiente.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="penta12a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="penta12b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="penta1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="trequ1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Haz clic sucesivamente sobre las casillas 1, 2, 3 i 4 para ver cómo se construye un TRIÁNGULO EQUILÁTERO conocido el lado.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Obsérvalo bien y pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false" useOrder="true">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="false" image="trequi1a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <ids>1 1 1 1</ids>
+   </cells>
+   <cells rows="1" cols="4" border="false" image="trequi1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="trequ11.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Arriba tienes las explicaciones para construir un TRIÁNGULO EQUILÁTERO conocido el LADO. Lleva cada dibujo al lugar correspondiente.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="false" image="trequ11a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="trequ11b.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="false" image="trequi1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="trequ12.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Arriba tienes los dibujos necesarios para construir un TRIÁNGULO EQUILÁTERO conocido el LADO. Lleva cada explicación al lugar correspondiente.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="false" image="trequ12a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="trequ12b.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="false" image="trequi1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="aca12a.gif" file="aca12a.gif" animated="false" />
+  <media name="aca12b.gif" file="aca12b.gif" animated="false" />
+  <media name="aca1a.gif" file="aca1a.gif" animated="false" />
+  <media name="aca1c.gif" file="aca1c.gif" animated="false" />
+  <media name="cac11a.gif" file="cac11a.gif" animated="false" />
+  <media name="cac11b.gif" file="cac11b.gif" animated="false" />
+  <media name="cac12a.gif" file="cac12a.gif" animated="false" />
+  <media name="cac12b.gif" file="cac12b.gif" animated="false" />
+  <media name="cac1a.gif" file="cac1a.gif" animated="false" />
+  <media name="cac1c.gif" file="cac1c.gif" animated="false" />
+  <media name="ccc11a.gif" file="ccc11a.gif" animated="false" />
+  <media name="ccc11b.gif" file="ccc11b.gif" animated="false" />
+  <media name="ccc1a.gif" file="ccc1a.gif" animated="false" />
+  <media name="ccc1c.gif" file="ccc1c.gif" animated="false" />
+  <media name="circ12a.gif" file="circ12a.gif" animated="false" />
+  <media name="circ12b.gif" file="circ12b.gif" animated="false" />
+  <media name="circ1a.gif" file="circ1a.gif" animated="false" />
+  <media name="circ1c.gif" file="circ1c.gif" animated="false" />
+  <media name="circ21a.gif" file="circ21a.gif" animated="false" />
+  <media name="circ21b.gif" file="circ21b.gif" animated="false" />
+  <media name="circ22a.gif" file="circ22a.gif" animated="false" />
+  <media name="circ22b.gif" file="circ22b.gif" animated="false" />
+  <media name="circ2a.gif" file="circ2a.gif" animated="false" />
+  <media name="circ2c.gif" file="circ2c.gif" animated="false" />
+  <media name="hexa12a.gif" file="hexa12a.gif" animated="false" />
+  <media name="hexa12b.gif" file="hexa12b.gif" animated="false" />
+  <media name="hexa1a.gif" file="hexa1a.gif" animated="false" />
+  <media name="hexa1c.gif" file="hexa1c.gif" animated="false" />
+  <media name="penta12a.gif" file="penta12a.gif" animated="false" />
+  <media name="penta12b.gif" file="penta12b.gif" animated="false" />
+  <media name="penta1a.gif" file="penta1a.gif" animated="false" />
+  <media name="penta1c.gif" file="penta1c.gif" animated="false" />
+  <media name="portada1.gif" file="portada1.gif" animated="false" />
+  <media name="trequ11a.gif" file="trequ11a.gif" animated="false" />
+  <media name="trequ11b.gif" file="trequ11b.gif" animated="false" />
+  <media name="trequ12a.gif" file="trequ12a.gif" animated="false" />
+  <media name="trequ12b.gif" file="trequ12b.gif" animated="false" />
+  <media name="trequi1a.gif" file="trequi1a.gif" animated="false" />
+  <media name="trequi1c.gif" file="trequi1c.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

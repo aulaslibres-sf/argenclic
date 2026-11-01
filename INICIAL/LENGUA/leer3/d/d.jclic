@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="d" version="0.1.3">
+ <settings>
+  <title>Vamos a leer</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="6/1/01" />
+  <revision description="Conversión de Clic3 a JClic" date="7/22/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="José Pedro Roda Martínez" mail="03010247@centres.cult.gva.es" />
+  <organization name="CP Santo Negro" city="Elda" state="País Valencià" />
+  <language>Español</language>
+  <description>
+   <p>Paquete de actividades para el aprendizaje de la lectura. El paquete está dividido en 14 partes con 14 consonantes diferentes: &lt;I&gt;&lt;B&gt;p, s, l, m, t, n, d, ll, b/v, ñ, c/q, f, r/rr, ch&lt;/B&gt;&lt;/I&gt;. Para cada consonante hay una lista de palabras que los niños/as deben asociar, a veces con el sonido, otras con la imagen.</p>
+  </description>
+  <descriptors level="Infantil, Primaria">lengua castellana, lectura</descriptors>
+ </settings>
+ <sequence>
+  <item id="d.pac" name="silabasd.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="sonidsid.ass" />
+  <item name="palabd.ass" />
+  <item name="paladibd.ass" />
+  <item name="silapabd.ass" />
+  <item name="palabesd.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.SimpleAssociation" name="palabd.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Une las palabras iguales</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Enhorabuena!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="47" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="nudo.wav" />
+     <p>nudo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="dado.wav" />
+     <p>dado</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="nido.wav" />
+     <p>nido</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="moneda.wav" />
+     <p>moneda</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="domino.wav" />
+     <p>dominó</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="pomada.wav" />
+     <p>pomada</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="diana.wav" />
+     <p>diana</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="dedo.wav" />
+     <p>dedo</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="25" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="nudo.wav" />
+     <p>nudo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="dado.wav" />
+     <p>dado</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="nido.wav" />
+     <p>nido</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="moneda.wav" />
+     <p>moneda</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="domino.wav" />
+     <p>dominó</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="pomada.wav" />
+     <p>pomada</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="diana.wav" />
+     <p>diana</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="dedo.wav" />
+     <p>dedo</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell image="nudo.gif" />
+    <cell image="dado.gif" />
+    <cell image="nido.gif" />
+    <cell image="moneda.gif" />
+    <cell image="domino.gif" />
+    <cell image="pomada.gif" />
+    <cell image="diana.gif" />
+    <cell image="dedo.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="palabesd.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Escribe el nombre de los dibujos</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Fantástico!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell image="nudo.gif" />
+    <cell image="dado.gif" />
+    <cell image="nido.gif" />
+    <cell image="moneda.gif" />
+    <cell image="domino.gif" />
+    <cell image="pomada.gif" />
+    <cell image="diana.gif" />
+    <cell image="dedo.gif" />
+   </cells>
+   <cells rows="2" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <p>nudo</p>
+    </cell>
+    <cell>
+     <p>dado</p>
+    </cell>
+    <cell>
+     <p>nido</p>
+    </cell>
+    <cell>
+     <p>moneda</p>
+    </cell>
+    <cell>
+     <p>dominó</p>
+    </cell>
+    <cell>
+     <p>pomada</p>
+    </cell>
+    <cell>
+     <p>diana</p>
+    </cell>
+    <cell>
+     <p>dedo</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="nudo.wav" />
+     <p>nudo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="dado.wav" />
+     <p>dado</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="nido.wav" />
+     <p>nido</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="moneda.wav" />
+     <p>moneda</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="domino.wav" />
+     <p>dominó</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="pomada.wav" />
+     <p>pomada</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="diana.wav" />
+     <p>diana</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="dedo.wav" />
+     <p>dedo</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="paladibd.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Relaciona cada palabra con su dibujo</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="47" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <p>nudo</p>
+    </cell>
+    <cell>
+     <p>dado</p>
+    </cell>
+    <cell>
+     <p>nido</p>
+    </cell>
+    <cell>
+     <p>moneda</p>
+    </cell>
+    <cell>
+     <p>dominó</p>
+    </cell>
+    <cell>
+     <p>pomada</p>
+    </cell>
+    <cell>
+     <p>diana</p>
+    </cell>
+    <cell>
+     <p>dedo</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell image="nudo.gif" />
+    <cell image="dado.gif" />
+    <cell image="nido.gif" />
+    <cell image="moneda.gif" />
+    <cell image="domino.gif" />
+    <cell image="pomada.gif" />
+    <cell image="diana.gif" />
+    <cell image="dedo.gif" />
+   </cells>
+   <cells rows="2" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="nudo.wav" />
+     <p>nudo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="dado.wav" />
+     <p>dado</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="nido.wav" />
+     <p>nido</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="moneda.wav" />
+     <p>moneda</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="domino.wav" />
+     <p>dominó</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="pomada.wav" />
+     <p>pomada</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="diana.wav" />
+     <p>diana</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="dedo.wav" />
+     <p>dedo</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="silabasd.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Une las sílabas iguales</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="47" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="da.wav" />
+     <p>da</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="de.wav" />
+     <p>de</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="di.wav" />
+     <p>di</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="do.wav" />
+     <p>do</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="du.wav" />
+     <p>du</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="de.wav" />
+     <p>de</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="di.wav" />
+     <p>di</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="do.wav" />
+     <p>do</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="25" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="da.wav" />
+     <p>da</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="de.wav" />
+     <p>de</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="di.wav" />
+     <p>di</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="do.wav" />
+     <p>do</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="du.wav" />
+     <p>du</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="de.wav" />
+     <p>de</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="di.wav" />
+     <p>di</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="do.wav" />
+     <p>do</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="da.wav" />
+     <p>da</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="de.wav" />
+     <p>de</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="di.wav" />
+     <p>di</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="do.wav" />
+     <p>do</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="du.wav" />
+     <p>du</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="de.wav" />
+     <p>de</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="di.wav" />
+     <p>di</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="do.wav" />
+     <p>do</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="silapabd.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Une para formar palabras</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="47" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>nu</p>
+    </cell>
+    <cell>
+     <p>mo</p>
+    </cell>
+    <cell>
+     <p>do</p>
+    </cell>
+    <cell>
+     <p>dia</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="47" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>do</p>
+    </cell>
+    <cell>
+     <p>neda</p>
+    </cell>
+    <cell>
+     <p>minó</p>
+    </cell>
+    <cell>
+     <p>na</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="nudo.wav" />
+     <p>nudo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="moneda.wav" />
+     <p>moneda</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="domino.wav" />
+     <p>domino</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="diana.wav" />
+     <p>diana</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="sonidsid.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Escucha y relaciona</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Fantástico!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="da.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="de.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="di.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="do.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="du.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="de.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="di.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="do.wav" />
+    </cell>
+   </cells>
+   <cells rows="2" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="47" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="da.wav" />
+     <p>da</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="de.wav" />
+     <p>de</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="di.wav" />
+     <p>di</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="do.wav" />
+     <p>do</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="du.wav" />
+     <p>du</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="de.wav" />
+     <p>de</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="di.wav" />
+     <p>di</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="do.wav" />
+     <p>do</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="da.wav" />
+     <p>da</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="de.wav" />
+     <p>de</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="di.wav" />
+     <p>di</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="do.wav" />
+     <p>do</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="du.wav" />
+     <p>du</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="de.wav" />
+     <p>de</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="di.wav" />
+     <p>di</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="do.wav" />
+     <p>do</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="dado.gif" file="dado.gif" />
+  <media name="dedo.gif" file="dedo.gif" />
+  <media name="diana.gif" file="diana.gif" />
+  <media name="domino.gif" file="domino.gif" />
+  <media name="moneda.gif" file="moneda.gif" />
+  <media name="nido.gif" file="nido.gif" />
+  <media name="nudo.gif" file="nudo.gif" />
+  <media name="pomada.gif" file="pomada.gif" />
+  <media name="da.wav" file="da.wav" />
+  <media name="dado.wav" file="dado.wav" />
+  <media name="de.wav" file="de.wav" />
+  <media name="dedo.wav" file="dedo.wav" />
+  <media name="di.wav" file="di.wav" />
+  <media name="diana.wav" file="diana.wav" />
+  <media name="do.wav" file="do.wav" />
+  <media name="domino.wav" file="domino.wav" />
+  <media name="du.wav" file="du.wav" />
+  <media name="moneda.wav" file="moneda.wav" />
+  <media name="nido.wav" file="nido.wav" />
+  <media name="nudo.wav" file="nudo.wav" />
+  <media name="pomada.wav" file="pomada.wav" />
+ </mediaBag>
+</JClicProject>
+

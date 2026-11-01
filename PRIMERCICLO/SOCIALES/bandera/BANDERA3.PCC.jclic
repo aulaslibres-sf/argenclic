@@ -1,0 +1,1930 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="bandera2" version="0.1.3">
+ <settings>
+  <title>La Bandera Argentina</title>
+  <revision description="created" date="11/2/04" />
+  <author name="Fernando Pelillo" mail="fernando@argenclic.com.ar" url="www.argenclic.com.ar" rol="Director de ArgenClic" organization="ArgenClic" />
+  <language>es</language>
+  <description>
+   <p>Actividades para conocer jugando la ciudad, el monumento y el creador de la Bandera Argentina</p>
+  </description>
+  <descriptors area="Ciencias Sociales" level="EGB 2" />
+  <skin file="@default.xml" />
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Actividades para conocer jugando la ciudad, el monumento y el creador de la Bandera Argentina</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="bandera2.pac" name="presenta.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="ciudad.txa" />
+  <item name="bandera.ass" />
+  <item name="argmundo.ass" />
+  <item name="staarg.ass" />
+  <item name="rossant.ass" />
+  <item name="rosmonu.ass" />
+  <item name="leones.puz" />
+  <item name="rosario.txa" />
+  <item name="monum.puz" />
+  <item name="monum1.txa" />
+  <item name="monu1.ass" />
+  <item name="monu2.ass" />
+  <item name="monupart.txa" />
+  <item name="monu4.sop" />
+  <item name="partesf.ass" />
+  <item name="belgrano.puz" />
+  <item name="nombre.puz" />
+  <item name="nombres.sop" />
+  <item name="fechas.ass" />
+  <item name="linea.puz" />
+  <item name="campan1.txa" />
+  <item name="campan2.txa" />
+  <item name="campan3.txa" />
+  <item name="bateria.ass" />
+  <item name="campana.ass" />
+  <item name="campan4.txa" />
+  <item name="batalla1.ass" />
+  <item name="batalla.puz" />
+  <item name="batlugar.ass" />
+  <item name="campana.sop" />
+  <item name="final.ass">
+   <jump action="STOP" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.ComplexAssociation" name="argmundo.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <p>UNE COLOCA EL NOMBRE DE TU PAÍS EN SU LUGAR Y LO CONOCERÁS</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="fabisal.wav" />
+     <p>ÉSTE ES MI PAÍS</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <image name="preyomu.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="280.0" cellHeight="500.0" border="false" id="primary">
+    <style shadow="true">
+     <font family="Arial" size="33" bold="true" />
+     <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <p>REPÚBLICA ARGENTINA</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="4" border="false" image="argmundo.gif" id="secondary">
+    <style shadow="true">
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+    </style>
+    <shaper class="@Holes" cols="4" rows="5" scaleX="4.0" scaleY="5.0">
+     <enclosing>
+      <shape>rectangle:0,0,4,5</shape>
+     </enclosing>
+     <shape>rectangle:2,3,1,1</shape>
+    </shaper>
+   </cells>
+   <cells rows="1" cols="1" border="false" image="argprov1.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="bandera.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="32" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <p>Une como corresponde.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="32" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <p>Empezamos bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <image name="preyomu.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0080FF" border="false" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="700.0" cellHeight="500.0" border="false" id="primary">
+    <style shadow="true">
+     <font family="Arial" size="32" bold="true" />
+     <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>Creador de la Bandera Argentina.</p>
+    </cell>
+    <cell>
+     <p>Lugar de creación.</p>
+    </cell>
+    <cell>
+     <p>Fecha de creación.</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="700.0" cellHeight="500.0" border="false" id="secondary">
+    <style shadow="true">
+     <font family="Arial" size="32" bold="true" />
+     <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>Manuel Belgrano.</p>
+    </cell>
+    <cell>
+     <p>Ciudad de Rosario(orillas del Río Paraná).</p>
+    </cell>
+    <cell>
+     <p>27 de febrero de 1812.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="batalla.puz" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x808080" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>COLOCA LAS BATALLAS EN ORDEN CRONOLÓGICO</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x808080" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="miban.wav" from="49600" />
+     <p>ESPECTACULAR</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <image name="aereag.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x007FFF" transparent="true" border="false" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="250.0" cellHeight="90.0" border="true">
+    <style shadow="true">
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFFFFFF" background="0x808080" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>TACUARÍ</p>
+    </cell>
+    <cell>
+     <p>PARAGUARÍ</p>
+    </cell>
+    <cell>
+     <p>TUCUMÁN</p>
+    </cell>
+    <cell>
+     <p>SALTA</p>
+    </cell>
+    <cell>
+     <p>VILCAPUGIO</p>
+    </cell>
+    <cell>
+     <p>AYOHUMA</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="batalla1.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="32" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <p>UNE LAS BATALLAS QUE COMANDÓ BELGRANO CON LA FECHA EN QUE SUCEDIERON (COMO AYUDA ESTÁN ORDENADAS CRONOLÓGICAMENTE)</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="32" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <p>¡¡¡TREMENDO!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <image name="belgrano.gif" tiled="true" />
+     <counters time="false" actions="false" score="true" />
+    </container>
+    <window bgColor="0x0080FF" border="false" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="140.0" cellHeight="100.0" border="false" id="primary">
+    <style shadow="true">
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>TACUARÍ</p>
+    </cell>
+    <cell>
+     <p>PARAGUARÍ</p>
+    </cell>
+    <cell>
+     <p>TUCUMÁN</p>
+    </cell>
+    <cell>
+     <p>SALTA</p>
+    </cell>
+    <cell>
+     <p>VILCAPUGIO</p>
+    </cell>
+    <cell>
+     <p>AYOHUMA</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style shadow="true">
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>19 de enero de 1811</p>
+    </cell>
+    <cell>
+     <p>9 de marzo de 1811</p>
+    </cell>
+    <cell>
+     <p>24 de setiembre de 1812</p>
+    </cell>
+    <cell>
+     <p>20 de febrero de 1813</p>
+    </cell>
+    <cell>
+     <p>1 de octubre de 1813</p>
+    </cell>
+    <cell>
+     <p>14 de noviembre de 1813</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="bateria.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFF00" background="0x0000FF" />
+     </style>
+     <p>MARCA LOS NOMBRES CON QUE BAUTIZÓ BELGRANO A LAS BATERÍAS QUE FORMÓ EN ROSARIO EN 1812</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFF00" background="0x0000FF" />
+     </style>
+     <p>BUEN TRABAJO</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="700.0" cellHeight="500.0" border="false" id="primary">
+    <style shadow="true">
+     <font family="Arial" size="23" bold="true" />
+     <color foreground="0xFFFF00" background="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="1">
+     <p>LIBERTAD</p>
+    </cell>
+    <cell id="1">
+     <p>INDEPENDENCIA</p>
+    </cell>
+    <cell id="0">
+     <p>ESCLAVITUD</p>
+    </cell>
+    <cell id="0">
+     <p>BATERÍA REAL</p>
+    </cell>
+    <cell id="0">
+     <p>ESPAÑA</p>
+    </cell>
+    <cell id="0">
+     <p>GLORIA</p>
+    </cell>
+    <cell id="0">
+     <p>VIRREINATO</p>
+    </cell>
+    <cell id="0">
+     <p>RÍO DE LA PLATA</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="700.0" cellHeight="500.0" border="false" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>LIBERTAD</p>
+    </cell>
+    <cell>
+     <p>INDEPENDENCIA</p>
+    </cell>
+    <cell>
+     <p>ESCLAVITUD</p>
+    </cell>
+    <cell>
+     <p>BATERÍA REAL</p>
+    </cell>
+    <cell>
+     <p>ESPAÑA</p>
+    </cell>
+    <cell>
+     <p>GLORIA</p>
+    </cell>
+    <cell>
+     <p>VIRREINATO</p>
+    </cell>
+    <cell>
+     <p>RÍO DE LA PLATA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="batlugar.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Berlin Sans FB" size="36" bold="true" />
+      <color foreground="0x0000FF" background="0xFFFFFF" />
+     </style>
+     <p>INDICA EL LUGAR DONDE SE PRODUJERON LAS BATALLAS</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Berlin Sans FB" size="36" bold="true" />
+      <color foreground="0x0000FF" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="miban.wav" from="48000" />
+     <p>UNA BARBARIDAD, CHE...</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0080FF" border="false" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="140.0" cellHeight="90.0" border="false" id="primary">
+    <style shadow="true">
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" shadow="0xF7F9A6" inactive="0xF7F9A6" alternative="0xF7F9A6" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="5">
+     <p>TACUARÍ</p>
+    </cell>
+    <cell id="5">
+     <p>PARAGUARÍ</p>
+    </cell>
+    <cell id="7">
+     <p>TUCUMÁN</p>
+    </cell>
+    <cell id="4">
+     <p>SALTA</p>
+    </cell>
+    <cell id="1">
+     <p>VILCAPUGIO</p>
+    </cell>
+    <cell id="1">
+     <p>AYOHUMA</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="virrmap1.gif" id="secondary">
+    <style shadow="true">
+     <font family="Berlin Sans FB" size="36" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="false" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="belgrano.puz">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <p>CONOCE AL CREADOR DE LA BANDERA NACIONAL ARGENTINA</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="miban.wav" from="7500" to="14500" />
+     <p>ESTE ES DON MANUEL BELGRANO</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="escudo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="belgrano.gif">
+    <style shadow="true">
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="campan1.txa">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Aprende lo que un simple abogado se animó a hacer para defender a su patria, haciendo clic en la flecha</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <document>
+    <style name="target" base="default" background="0xC0C0C0" target="true" foreground="0x0000FF" />
+    <style name="default" background="0xC0C0C0" italic="false" foreground="0x000000" tabWidth="16" size="17" bold="false" family="Arial" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0xC0C0C0" italic="false" foreground="0x000000" size="17" bold="false" name="default" family="Arial">
+      <cell width="600" height="65" border="false">
+       <style shadow="true">
+        <font family="Times New Roman" size="30" bold="true" />
+        <color shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+       </style>
+       <p>LAS CAMPAÑAS MILITARES</p>
+      </cell>
+      <text>                 __________________________________________ </text>
+     </p>
+     <p background="0xC0C0C0" italic="false" foreground="0x000000" size="17" bold="false" name="default" family="Arial" />
+     <p background="0xC0C0C0" italic="false" foreground="0x000000" size="17" bold="false" name="default" family="Arial">
+      <text>                                        </text>
+      <cell width="210" height="156" border="true" image="creacion.gif">
+       <style shadow="true">
+        <font family="Times New Roman" size="30" bold="true" />
+        <color shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+       </style>
+      </cell>
+     </p>
+     <p background="0xC0C0C0" italic="false" foreground="0x000000" size="17" bold="false" name="default" family="Arial" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.Identify" name="campan2.txa" type="identifyWords">
+   <messages>
+    <cell type="previous">
+     <style shadow="true">
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <p>LEE CON ATENCIÓN Y CLIQUEA EN EL TEXTO</p>
+    </cell>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <p>IDENTIFICA LOS SUSTANTIVOS PROPIOS DEL TEXTO</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <p>EXCELENTE</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <checkButton>APRETAR AQUÍ AL TERMINAR</checkButton>
+   <prevScreen maxTime="30" />
+   <document>
+    <style name="target" base="default" background="0xC0C0C0" target="true" foreground="0x0000FF" />
+    <style name="default" background="0x0080FF" italic="false" foreground="0xFFFFFF" tabWidth="16" size="17" bold="true" family="Arial" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="17" bold="true" name="default" family="Arial">
+      <cell width="360" height="60" border="false">
+       <style shadow="true">
+        <font family="Times New Roman" size="30" bold="true" />
+        <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+       </style>
+       <p>CAMPAÑA AL PARAGUAY</p>
+      </cell>
+      <cell width="140" height="100" border="false" image="batalla.gif">
+       <style shadow="true">
+        <font family="Times New Roman" size="30" bold="true" />
+        <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+       </style>
+      </cell>
+     </p>
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="17" bold="true" name="default" family="Arial">
+      <text> </text>
+      <target>Belgrano</target>
+      <text> fue enviado al </text>
+      <target>Paraguay</target>
+      <text> en campaña militar, pero sus escasas y mal pertrechadas tropas fueron doblegadas en </text>
+      <target>Tacuarí</target>
+      <text> y </text>
+      <target>Paraguarí</target>
+      <text>, en 1811.</text>
+     </p>
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="17" bold="true" name="default" family="Arial">
+      <text>  En el camino a </text>
+      <target>Paraguay</target>
+      <text>, fundó poblaciones y levantó adhesiones de la ciudadanía, por lo que la derrota militar terminó siendo una victoria política para la emancipación americana.</text>
+     </p>
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="17" bold="true" name="default" family="Arial" />
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.Identify" name="campan3.txa" type="identifyChars">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <p>MARCA LOS SIGNOS DE PUNTUACIÓN</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <p>¡¡¡10 PUNTOS!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="target" base="default" background="0xC0C0C0" target="true" foreground="0x0000FF" />
+    <style name="default" background="0x0080FF" italic="false" foreground="0xFFFFFF" tabWidth="16" size="21" bold="true" family="Arial" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="21" bold="true" name="default" family="Arial">
+      <cell width="350" height="60" border="false">
+       <style shadow="true">
+        <font family="Times New Roman" size="30" bold="true" />
+        <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+       </style>
+       <p>LAS BATERÍAS DE ROSARIO</p>
+      </cell>
+     </p>
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="21" bold="true" name="default" family="Arial">
+      <text>Luego de las derrotas en Paraguay</text>
+      <target>,</target>
+      <text> Belgrano es enviado a Rosario a colocar dos baterías que defiendan las costas del Río Paraná</text>
+      <target>.</target>
+      <text> Las llama Libertad e Independencia</text>
+      <target>.</target>
+     </p>
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="21" bold="true" name="default" family="Arial">
+      <text>Estando en Rosario</text>
+      <target>,</target>
+      <text> crea la Bandera Nacional el 27 de febrero de 1812</text>
+      <target>.</target>
+      <text> </text>
+     </p>
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="21" bold="true" name="default" family="Arial" />
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="21" bold="true" name="default" family="Arial" />
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.FillInBlanks" name="campan4.txa">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <p>ELIGE LA OPCIÓN CORRECTA</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <p>TE PASASTE</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <document>
+    <style name="target" base="default" background="0xC0C0C0" target="true" foreground="0x0000FF" />
+    <style name="default" background="0x0080FF" italic="false" foreground="0xFFFFFF" tabWidth="16" size="17" bold="true" family="Arial" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="17" bold="true" name="default" family="Arial">
+      <cell width="350" height="60" border="false">
+       <style shadow="true">
+        <font family="Times New Roman" size="30" bold="true" />
+        <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+       </style>
+       <p>CAMPAÑA AL ALTO PERÚ</p>
+      </cell>
+     </p>
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="17" bold="true" name="default" family="Arial">
+      <target>
+       <answer>Belgrano</answer>
+       <optionList>
+        <option>San Martín</option>
+        <option>Belgrano</option>
+        <option>Bolívar</option>
+        <option>Yo</option>
+       </optionList>
+       <text>Belgrano</text>
+      </target>
+      <text> no se entera que su bandera no fue aprobada por el </text>
+      <target>
+       <answer>gobierno</answer>
+       <optionList>
+        <option>consejo</option>
+        <option>cabildo</option>
+        <option>triunvirato</option>
+        <option>gobierno</option>
+       </optionList>
+       <text>gobierno</text>
+      </target>
+      <text> de Buenos Aires porque marcha a hacerse cargo del Ejército del </text>
+      <target>
+       <answer>Norte</answer>
+       <optionList>
+        <option>Norte</option>
+        <option>Sur</option>
+        <option>Este</option>
+        <option>Oeste</option>
+       </optionList>
+       <text>Norte</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="17" bold="true" name="default" family="Arial">
+      <text>Al mando del mismo, obtiene grandes triunfos contra las tropas de la Corona </text>
+      <target>
+       <answer>Española</answer>
+       <optionList>
+        <option>Española</option>
+        <option>Argentina</option>
+        <option>Portuguesa</option>
+        <option>Francesa</option>
+        <option>Inglesa</option>
+       </optionList>
+       <text>Española</text>
+      </target>
+      <text> en Tucumán y Salta(1812-1813).</text>
+     </p>
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="17" bold="true" name="default" family="Arial">
+      <text>Envalentonado por las </text>
+      <target>
+       <answer>victorias</answer>
+       <optionList>
+        <option>derrotas</option>
+        <option>triunfos</option>
+        <option>victorias</option>
+        <option>fracasos</option>
+       </optionList>
+       <text>victorias</text>
+      </target>
+      <text>, persigue a los realistas hasta el Alto Perú(hoy Bolivia) y es </text>
+      <target>
+       <answer>sorprendido</answer>
+       <optionList>
+        <option>reconocido</option>
+        <option>sorprendido</option>
+        <option>perseguido</option>
+        <option>asaltado</option>
+       </optionList>
+       <text>sorprendido</text>
+      </target>
+      <text> y vencido en Vilcapugio y Ayohuma(1813).</text>
+     </p>
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="17" bold="true" name="default" family="Arial" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.Identify" name="campana.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0x0000FF" background="0xFFFFFF" shadow="0xF7F9A6" inactive="0xF7F9A6" alternative="0xF7F9A6" />
+     </style>
+     <p>HAY QUE CLIQUEAR EN LA CAMPAÑA MILITAR DONDE FUE CREADA LA BANDERA</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0x0000FF" background="0xFFFFFF" shadow="0xF7F9A6" inactive="0xF7F9A6" alternative="0xF7F9A6" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="miban.wav" from="28000" />
+     <p>¡¡¡EFECTIVAMENTE, EN LAS BARRANCAS FRENTE AL RÍO!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="creacion.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="350.0" cellHeight="80.0" border="true" id="primary">
+    <style shadow="true">
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="1">
+     <p>DEFENSA DE LAS COSTAS DEL PARANÁ</p>
+    </cell>
+    <cell id="0">
+     <p>CAMPAÑA AL PARAGUAY</p>
+    </cell>
+    <cell id="0">
+     <p>CAMPAÑA AL ALTO PERÚ</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="350.0" cellHeight="80.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="esrosari.gif" />
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="campana.sop">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color background="0xF8B469" shadow="0xFFFF00" inactive="0xFFFF00" alternative="0xFFFF00" />
+     </style>
+     <p>ENCUENTRA LOS 3 DESTINOS MILITARES DE BELGRANO</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color background="0xF8B469" shadow="0xFFFF00" inactive="0xFFFF00" alternative="0xFFFF00" />
+     </style>
+     <p>GRANDIOSO</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="logo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <textGrid rows="10" columns="8" cellWidth="50.0" cellHeight="50.0" border="true">
+    <style shadow="true">
+     <color background="0xF8B469" shadow="0xFFFF00" inactive="0xFFFF00" alternative="0xFFFF00" />
+    </style>
+    <text>
+     <row>*********A</row>
+     <row>OPARAGUAYL</row>
+     <row>*I*******T</row>
+     <row>**R******O</row>
+     <row>***A*****P</row>
+     <row>****S****E</row>
+     <row>*****O***R</row>
+     <row>******R**U</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">PARAGUAY</clue>
+    <clue id="1">ROSARIO</clue>
+    <clue id="2">ALTOPERU</clue>
+   </clues>
+  </activity>
+  <activity class="@text.FillInBlanks" name="ciudad.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="32" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="soleros.wav" />
+     <p>PASA A LA SIGUIENTE PANTALLA CON LA FLECHA AZUL</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="32" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <p>BUEN TRABAJO</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0080FF" border="false">
+     <size width="700" height="500" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" bold="false" italic="false" family="Arial" size="17" foreground="0xFFFFFF" tabWidth="16" background="0x0080FF" />
+    <style name="target" base="default" foreground="0x0000FF" background="0xC0C0C0" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p bold="false" italic="false" family="Arial" size="17" foreground="0xFFFFFF" background="0x0080FF">
+      <text bold="false" italic="false" family="Arial" size="17" foreground="0xFFFFFF" background="0x0080FF">                   </text>
+      <cell width="100" height="50" border="false" image="texto.gif">
+       <style shadow="true">
+        <font family="Comic Sans MS" size="50" bold="true" italic="true" />
+        <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+       </style>
+      </cell>
+      <cell width="133" height="60" border="false" image="logo.gif">
+       <style shadow="true">
+        <font family="Comic Sans MS" size="50" bold="true" italic="true" />
+        <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+       </style>
+      </cell>
+     </p>
+     <p bold="false" italic="false" family="Arial" size="17" foreground="0xFFFFFF" background="0x0080FF">
+      <text bold="false" italic="false" family="Arial" size="17" foreground="0xFFFFFF" background="0x0080FF">La ciudad de Rosario es conocida como "Cuna de la Bandera", ya que fue en este sitio, sobre las barrancas del río Paraná, donde Manuel Belgrano izó por primera vez la Bandera Nacional. </text>
+     </p>
+     <p bold="false" italic="false" family="Arial" size="17" foreground="0xFFFFFF" background="0x0080FF">
+      <text bold="false" italic="false" family="Arial" size="17" foreground="0xFFFFFF" background="0x0080FF">              </text>
+      <cell width="100" height="140" border="true" image="monu1.gif">
+       <style shadow="true">
+        <font family="Comic Sans MS" size="50" bold="true" italic="true" />
+        <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+       </style>
+      </cell>
+      <text bold="false" italic="false" family="Arial" size="17" foreground="0xFFFFFF" background="0x0080FF">  </text>
+      <cell width="200" height="80" border="false">
+       <style shadow="true" transparent="true" borderStroke="0.7" markerStroke="5.0">
+        <font family="Arial Rounded MT Bold" size="24" bold="true" />
+        <color foreground="0xFFFFFF" background="0x000080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+       </style>
+       <media type="URL" level="1" file="http://www.argenclic.com.ar" />
+       <p>PROYECTO ARGENCLIC</p>
+       <p>Profesor Fernando Pelillo</p>
+      </cell>
+      <text bold="false" italic="false" family="Arial" size="17" foreground="0xFFFFFF" background="0x0080FF">  </text>
+      <cell width="72" height="120" border="true" image="arg_anim.gif">
+       <style shadow="true">
+        <font family="Comic Sans MS" size="50" bold="true" italic="true" />
+        <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+       </style>
+      </cell>
+     </p>
+     <p bold="false" italic="false" family="Arial" size="17" foreground="0xFFFFFF" background="0x0080FF">
+      <text bold="false" italic="false" family="Arial" size="17" foreground="0xFFFFFF" background="0x0080FF">TE INVITAMOS A APRENDER...   </text>
+      <cell width="220" height="60" border="false">
+       <style shadow="true">
+        <font family="Comic Sans MS" size="50" bold="true" italic="true" />
+        <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+       </style>
+       <p>¡¡¡JUGANDO!!!</p>
+      </cell>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="fechas.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <p>Une los datos con las fechas en que sucedieron</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="arg_anim.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0080FF" border="false" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="370.0" cellHeight="100.0" border="false" id="primary">
+    <style shadow="true">
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>Nace Manuel Belgrano en Buenos Aires</p>
+    </cell>
+    <cell>
+     <p>Integra la 1º Junta de Gobierno Patrio</p>
+    </cell>
+    <cell>
+     <p>Crea la Bandera Nacional Argentina a orillas del río Paraná</p>
+    </cell>
+    <cell>
+     <p>Muere pobre y despreciado en Buenos Aires</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style shadow="true">
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>3 de junio de 1770</p>
+    </cell>
+    <cell>
+     <p>25 de mayo de 1810</p>
+    </cell>
+    <cell>
+     <p>27 de febrero de 1812</p>
+    </cell>
+    <cell>
+     <p>20 de junio de 1820</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="final.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="20" bold="true" italic="true" />
+      <color foreground="0xFFFFFF" background="0x000080" shadow="0xFFFF00" inactive="0xFFFF00" alternative="0xFFFF00" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="soleros.wav" />
+     <p>Fernando Pelillo - Rosario,  Argentina</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="20" bold="true" italic="true" />
+      <color foreground="0xFFFFFF" background="0x000080" shadow="0xFFFF00" inactive="0xFFFF00" alternative="0xFFFF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x0080FF">
+     <image name="creacion.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="250.0" cellHeight="500.0" border="false">
+    <style shadow="true">
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0x0080FF" background="0xFFFFFF" shadow="0xFFFF00" inactive="0xFFFF00" alternative="0xFFFF00" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell avoidOverlapping="true">
+     <p>Este es el final de la actividad. Espero que te haya sido útil para aprender. Buena Suerte!!!                                 Para finalizar el programa, salir por la puerta(abajo, a la izquierda)      &lt;-----------</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="leones.puz">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <p>ARMA EL ROMPECABEZAS Y CONOCERÁS EL PALACIO MUNICIPAL Y LA PLAZA 25 DE MAYO</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="laloros.wav" />
+     <p>¡¡¡QUÉ HERMOSO!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <image name="logo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="leones.gif">
+    <style shadow="true">
+     <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="linea.puz">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Armando la línea histórica conocerás más datos de su vida</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Buen trabajo. Lee con atención y pasa a la siguiente actividad</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="belgrano.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="1" cols="5" border="false" image="lineah.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="monu1.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>CONOCE LAS PARTES DEL MONUMENTO A LA BANDERA</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="arg_anim.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="3" cols="4" border="false" image="planmon1.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@text.WrittenAnswer" name="monu2.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>ESCRIBE LOS NOMBRES DE LAS PARTES DEL MONUMENTO</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="fabisal.wav" />
+     <p>¡¡¡ESPECTACULAR!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="arg_anim.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="5" border="false" image="planmon2.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0x0000FF" alternative="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+   </cells>
+   <cells rows="1" cols="5" cellWidth="140.0" cellHeight="50.0" border="true" id="answers">
+    <style shadow="true">
+     <font family="Arial" size="20" bold="true" />
+     <color foreground="0xFFFFFF" background="0x0000FF" shadow="0x0080FF" inactive="0x0080FF" alternative="0x0080FF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>TORRE MIRADOR</p>
+    </cell>
+    <cell>
+     <p>PATIO CÍVICO</p>
+    </cell>
+    <cell>
+     <p>PROPILEO TRIUNFAL</p>
+    </cell>
+    <cell>
+     <p>PASAJE JURAMENTO</p>
+    </cell>
+    <cell>
+     <p>PALACIO MUNICIPAL</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="5" border="false" image="planmon1.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="5" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="monu4.sop">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color background="0xF8B469" shadow="0xFFFF00" inactive="0xFFFF00" alternative="0xFFFF00" />
+     </style>
+     <p>ENCUENTRA LAS 5 PARTES EN LA SOPA</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color background="0xF8B469" shadow="0xFFFF00" inactive="0xFFFF00" alternative="0xFFFF00" />
+     </style>
+     <p>¡¡¡BRAVO!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="logo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <textGrid rows="10" columns="7" cellWidth="50.0" cellHeight="50.0" border="true">
+    <style shadow="true">
+     <color background="0xF8B469" shadow="0xFFFF00" inactive="0xFFFF00" alternative="0xFFFF00" />
+    </style>
+    <text>
+     <row>PROPILEO*T</row>
+     <row>AA**A****O</row>
+     <row>L*T**S***R</row>
+     <row>A**I**A**R</row>
+     <row>C***O**J*E</row>
+     <row>I*******E*</row>
+     <row>O*********</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">TORRE</clue>
+    <clue id="1">PATIO</clue>
+    <clue id="2">PROPILEO</clue>
+    <clue id="3">PASAJE</clue>
+    <clue id="4">PALACIO</clue>
+   </clues>
+  </activity>
+  <activity class="@puzzles.HolePuzzle" name="monum.puz" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="53" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <p>MUEVE LAS PIEZAS HASTA QUE ESTÉN EN SU LUGAR</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Comic Sans MS" size="53" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="miban.wav" from="28000" to="42000" />
+     <p>¿TE GUSTA EL MONUMENTO?</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0080FF" border="false" />
+   </settings>
+   <cells rows="2" cols="3" border="false" image="aereag.gif">
+    <style shadow="true">
+     <font family="Jokerman" size="40" />
+     <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="monum1.txa" code="">
+   <description />
+   <messages>
+    <cell type="previous">
+     <style>
+      <font family="Times New Roman" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" inactive="0xDDE725" alternative="0xDDE725" />
+     </style>
+     <p>LEE CON ATENCIÓN Y CLIQUEA EN EL TEXTO</p>
+    </cell>
+    <cell type="initial">
+     <style>
+      <font family="Times New Roman" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" inactive="0xDDE725" alternative="0xDDE725" />
+     </style>
+     <p>COMPLETA EL TEXTO ESCRIBIENDO LO QUE CORRESPONDA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Times New Roman" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" inactive="0xDDE725" alternative="0xDDE725" />
+     </style>
+     <p>PERFECTO</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="540" height="200" />
+    </window>
+   </settings>
+   <prevScreen maxTime="30" />
+   <document>
+    <style name="default" size="16" bold="true" italic="false" family="Times New Roman" background="0x0080FF" tabWidth="16" foreground="0xFFFFFF" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p size="16" bold="true" italic="false" family="Times New Roman" background="0x0080FF" foreground="0xFFFFFF">
+      <text size="16" bold="true" italic="false" family="Times New Roman" background="0x0080FF" foreground="0xFFFFFF">El M</text>
+      <target>
+       <answer>onumento</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>onumento</text>
+      </target>
+      <text size="16" bold="true" italic="false" family="Times New Roman" background="0x0080FF" foreground="0xFFFFFF"> de la Patria a su B</text>
+      <target>
+       <answer>andera</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text>andera</text>
+      </target>
+      <text size="16" bold="true" italic="false" family="Times New Roman" background="0x0080FF" foreground="0xFFFFFF">, proyecto de larga data, recién comienza a concretarse en 1936.  El diseño perteneciente a los e</text>
+      <target>
+       <answer>scultores</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <text>scultores</text>
+      </target>
+      <text size="16" bold="true" italic="false" family="Times New Roman" background="0x0080FF" foreground="0xFFFFFF"> José Fioravanti y Alfredo Bigatti, y a los a</text>
+      <target>
+       <answer>rquitectos</answer>
+       <response fill="_" length="10" maxLength="10" />
+       <text>rquitectos</text>
+      </target>
+      <text size="16" bold="true" italic="false" family="Times New Roman" background="0x0080FF" foreground="0xFFFFFF"> Ángel Guido y Alejandro Bustillo, fue seleccionado en el c</text>
+      <target>
+       <answer>oncurso</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>oncurso</text>
+      </target>
+      <text size="16" bold="true" italic="false" family="Times New Roman" background="0x0080FF" foreground="0xFFFFFF"> llevado a cabo en 1939. La obra se i</text>
+      <target>
+       <answer>nauguró</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>nauguró</text>
+      </target>
+      <text size="16" bold="true" italic="false" family="Times New Roman" background="0x0080FF" foreground="0xFFFFFF"> el 20 de j</text>
+      <target>
+       <answer>unio</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>unio</text>
+      </target>
+      <text size="16" bold="true" italic="false" family="Times New Roman" background="0x0080FF" foreground="0xFFFFFF"> de 1957. </text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.Order" name="monupart.txa" type="orderParagraphs">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="26" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <p>ORDENA LOS PÁRRAFOS </p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="26" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <p>BRAVO</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="700" height="500" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="target" base="default" background="0x0080FF" foreground="0xFFFFFF" target="true" />
+    <style name="default" background="0x0080FF" italic="false" foreground="0xFFFFFF" tabWidth="16" size="16" bold="true" family="Arial" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="16" bold="true" name="default" family="Arial">
+      <text>LA TORRE, EL PATIO CÍVICO Y EL PROPILEO TRIUNFAL</text>
+     </p>
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="16" bold="true" name="default" family="Arial" />
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="16" bold="true" name="default" family="Arial">
+      <target>La Torre, con sus 70 mts., rememora la gesta de Mayo  de 1810, en su base se encuentra la cripta del General Manuel Belgrano.</target>
+     </p>
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="16" bold="true" name="default" family="Arial" />
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="16" bold="true" name="default" family="Arial">
+      <target>El Patio Cívico, por su escalinata, hace revivir el esfuerzo realizado por los patriotas para organizar el Estado, batallas, acuerdos, pactos, etc.</target>
+     </p>
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="16" bold="true" name="default" family="Arial" />
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="16" bold="true" name="default" family="Arial">
+      <target>El Propileo Triunfal de la Patria simboliza la Nación, jurídicamente organizada, a partir de la sanción de la Constitución de 1853. entre sus columnas encierra la Llama Votiva, fuego sagrado de la argentinidad que arde permanentemente como homenaje a quienes dieron su vida por la Patria. </target>
+     </p>
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="16" bold="true" name="default" family="Arial" />
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="16" bold="true" name="default" family="Arial">
+      <target>El Pasaje Juramento, de reciente creación, nace como una forma de aunar dos espacios de gran relevancia: la Plaza 25 de Mayo con sus dos edificios representativos: la Iglesia Catedral y el Palacio Municipal, con el Monumento Nacional a la Bandera.</target>
+     </p>
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="16" bold="true" name="default" family="Arial" />
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="16" bold="true" name="default" family="Arial" />
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="nombre.puz">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" shadow="0x0080FF" inactive="0x0080FF" alternative="0x0080FF" />
+     </style>
+     <p>Coloca los nombres del Prócer en orden(si puedes)</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" shadow="0x0080FF" inactive="0x0080FF" alternative="0x0080FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="fabisal.wav" />
+     <p>ES UN POCO LARGO, ¿no?</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="noche.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="140.0" cellHeight="100.0" border="true">
+    <style shadow="true">
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFFFFFF" background="0x0000FF" shadow="0x0080FF" inactive="0x0080FF" alternative="0x0080FF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>MANUEL</p>
+    </cell>
+    <cell>
+     <p>JOSÉ</p>
+    </cell>
+    <cell>
+     <p>JOAQUÍN</p>
+    </cell>
+    <cell>
+     <p>DEL CORAZÓN</p>
+    </cell>
+    <cell>
+     <p>DE JESÚS</p>
+    </cell>
+    <cell>
+     <p>BELGRANO</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="nombres.sop">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" shadow="0x0080FF" inactive="0x0080FF" alternative="0x0080FF" />
+     </style>
+     <p>Encuentra los nombres de Belgrano</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" shadow="0x0080FF" inactive="0x0080FF" alternative="0x0080FF" />
+     </style>
+     <p>¡Qué memoria!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="noche.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <textGrid rows="10" columns="5" cellWidth="140.0" cellHeight="100.0" border="true">
+    <style shadow="true">
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFFFFFF" background="0x0000FF" shadow="0x0080FF" inactive="0x0080FF" alternative="0x0080FF" />
+    </style>
+    <text>
+     <row>*LEUNAM*S*</row>
+     <row>JOAQUIN*U*</row>
+     <row>CORAZON*S*</row>
+     <row>**S****DE*</row>
+     <row>**DEL***J*</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">MANUEL</clue>
+    <clue id="1">JOSE</clue>
+    <clue id="2">JOAQUIN</clue>
+    <clue id="3">DEL</clue>
+    <clue id="4">CORAZON</clue>
+    <clue id="5">DE</clue>
+    <clue id="6">JESUS</clue>
+   </clues>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="partesf.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <p>UNE LAS PARTES DEL MONUMENTO CON SU NOMBRE</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="miban.wav" from="28000" />
+     <p>¡QUÉ OBSERVADOR!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="preyomu.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0080FF" border="false" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="150.0" cellHeight="40.0" border="true" id="primary">
+    <style shadow="true">
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell id="0">
+     <p>TORRE MIRADOR</p>
+    </cell>
+    <cell id="1">
+     <p>PATIO CÍVICO</p>
+    </cell>
+    <cell id="2">
+     <p>PROPILEO TRIUNFAL</p>
+    </cell>
+    <cell id="3">
+     <p>PASAJE JURAMENTO</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="150.0" cellHeight="170.0" border="false" id="secondary">
+    <style shadow="true">
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="monum2.gif" />
+    <cell image="recital.gif" />
+    <cell image="llama.gif" />
+    <cell image="jurament.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BUA" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="presenta.ass">
+   <messages>
+    <cell image="escu20.gif" type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="fabisal.wav" />
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="escudo.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="tapa3.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@text.Identify" name="rosario.txa" type="identifyWords">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="32" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <p>IDENTIFICA LOS NOMBRES PROPIOS</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="32" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" shadow="0x0000FF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="laloros.wav" />
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="700" height="500" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="target" base="default" background="0xC0C0C0" target="true" foreground="0x0000FF" />
+    <style name="default" background="0x0080FF" italic="false" foreground="0xFFFFFF" tabWidth="16" size="23" bold="true" family="Times New Roman" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="23" bold="true" name="default" family="Times New Roman">
+      <text> </text>
+      <cell width="80" height="100" border="false" image="monu1.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+     </p>
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="23" bold="true" name="default" family="Times New Roman">
+      <target>Rosario</target>
+      <text>: Una ciudad forjada anónimamente, con el esfuerzo y la creatividad de su gente. Una ciudad de modesta historia, signada por un acontecimiento fundamental. Fue aquí, sobre las barrancas del río </text>
+      <target>Paraná</target>
+      <text>, donde se izó por primera vez, el 27 de febrero de 1812, la </text>
+      <target>Bandera</target>
+      <text> </text>
+      <target>Nacional</target>
+      <text> creada por </text>
+      <target>Don</target>
+      <text> </text>
+      <target>Manuel</target>
+      <text> </text>
+      <target>Belgrano</target>
+      <text>.</text>
+     </p>
+     <p background="0x0080FF" italic="false" foreground="0xFFFFFF" size="23" bold="true" name="default" family="Times New Roman">
+      <text>La ciudad de </text>
+      <target>Rosario</target>
+      <text> está ubicada en el sur de la provincia de </text>
+      <target>Santa</target>
+      <text> </text>
+      <target>Fe</target>
+      <text>, en la orilla oeste del río </text>
+      <target>Paraná</target>
+      <text>, a 170 km de la capital provincial, 300 km de </text>
+      <target>Buenos</target>
+      <text> </text>
+      <target>Aires</target>
+      <text> y 400 km de </text>
+      <target>Córdoba</target>
+      <text>. </text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@panels.Explore" name="rosmonu.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="22" bold="true" />
+      <color background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>HACIENDO CLIC EN LOS NOMBRES O LOS ESCUDOS, PODRÁS CONOCER LUGARES DE MI CIUDAD</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="22" bold="true" />
+      <color background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="7" cols="3" border="false" image="desc05.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="3" rows="7" scaleX="3.0" scaleY="7.0">
+     <enclosing>
+      <shape>rectangle:0,0,3,7</shape>
+     </enclosing>
+     <shape>rectangle:1,1,1,1</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>rectangle:1,3,1,1</shape>
+     <shape>rectangle:2,3,1,1</shape>
+    </shaper>
+    <ids>3 0 1 2</ids>
+   </cells>
+   <cells rows="1" cols="4" cellWidth="300.0" cellHeight="400.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="monu1g.gif" />
+    <cell image="indep.gif" />
+    <cell image="leones.gif" />
+    <cell image="gigante.gif" />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="rossant.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>BUSCA MI CIUDAD Y CLIQUEA SOBRE ELLA</p>
+    </cell>
+    <cell image="esrosari.gif" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="miban.wav" to="14000" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="monum2.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="6" cols="4" border="false" image="sfe.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="6" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" image="sfe.gif" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+   </cells>
+   <cells rows="6" cols="4" border="false" image="mapasf.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="6" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="staarg.ass" code="" inverse="true">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>UNE MI PROVINCIA CON SU LUGAR EN EL MAPA Y CONOCERÁS SU NOMBRE</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>ES LA PROVINCIA DE SANTA FE</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0063FA">
+     <image name="arg_anim.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="sfe.gif" id="primary">
+    <style>
+     <color background="0x0000FF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <ids>9</ids>
+   </cells>
+   <cells rows="5" cols="6" border="false" image="00arg00.gif" id="secondary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <color background="0x0063FF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="5" />
+    <cell />
+    <cell avoidOverlapping="true" image="00arg00.gif" />
+    <cell image="00arg00.gif" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="65.0" cellHeight="90.0" border="false" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>¡QUÉ BUENA VISTA, SI SEÑOR!             ENCONTRASTE LA BOTA EN EL CENTRO DEL PAÍS</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="false" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="00arg00.gif" file="00arg00.gif" animated="false" />
+  <media name="aereag.gif" file="aereag.gif" animated="false" />
+  <media name="arg_anim.gif" file="arg_anim.gif" animated="false" />
+  <media name="argmundo.gif" file="argmundo.gif" animated="false" />
+  <media name="argprov1.gif" file="argprov1.gif" animated="false" />
+  <media name="batalla.gif" file="batalla.gif" animated="false" />
+  <media name="belgrano.gif" file="belgrano.gif" animated="false" />
+  <media name="creacion.gif" file="creacion.gif" animated="false" />
+  <media name="desc05.gif" file="desc05.gif" animated="false" />
+  <media name="escu20.gif" file="escu20.gif" animated="false" />
+  <media name="escudo.gif" file="escudo.gif" animated="false" />
+  <media name="esrosari.gif" file="esrosari.gif" animated="false" />
+  <media name="gigante.gif" file="gigante.gif" animated="false" />
+  <media name="indep.gif" file="indep.gif" animated="false" />
+  <media name="jurament.gif" file="jurament.gif" animated="false" />
+  <media name="leones.gif" file="leones.gif" animated="false" />
+  <media name="lineah.gif" file="lineah.gif" animated="false" />
+  <media name="llama.gif" file="llama.gif" animated="false" />
+  <media name="logo.gif" file="logo.gif" animated="false" />
+  <media name="mapasf.gif" file="mapasf.gif" animated="false" />
+  <media name="monu1.gif" file="monu1.gif" animated="false" />
+  <media name="monu1g.gif" file="monu1g.gif" animated="false" />
+  <media name="monum2.gif" file="monum2.gif" animated="false" />
+  <media name="noche.gif" file="noche.gif" animated="false" />
+  <media name="planmon1.gif" file="planmon1.gif" animated="false" />
+  <media name="planmon2.gif" file="planmon2.gif" animated="false" />
+  <media name="preyomu.gif" file="preyomu.gif" animated="false" />
+  <media name="recital.gif" file="recital.gif" animated="false" />
+  <media name="sfe.gif" file="sfe.gif" animated="false" />
+  <media name="tapa3.gif" file="tapa3.gif" animated="false" />
+  <media name="texto.gif" file="texto.gif" animated="false" />
+  <media name="virrmap1.gif" file="virrmap1.gif" animated="false" />
+  <media name="fabisal.wav" file="fabisal.wav" />
+  <media name="laloros.wav" file="laloros.wav" />
+  <media name="miban.wav" file="miban.wav" />
+  <media name="soleros.wav" file="soleros.wav" />
+ </mediaBag>
+</JClicProject>
+

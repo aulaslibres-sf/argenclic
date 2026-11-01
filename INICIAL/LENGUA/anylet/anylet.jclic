@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="anylet" version="0.1.3">
+ <settings>
+  <title>Animaletras</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="9/12/05" />
+  <revision description="Conversión de Clic3 a JClic" date="9/12/05">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Alberto Alonso Gómez" mail="aalonso@escolapios.es" />
+  <organization name="CPR Nájera" mail="cpr.najera@larioja.org" url="http://www.cprnajera.org" city="Nájera" state="La Rioja" />
+  <language>español</language>
+  <description>
+   <p>Repaso del abecedario, de las mayúsculas y minúsculas, a través de juegos de asociación y de identificación de las letras del alfabeto en forma de dibujos de animales.</p>
+  </description>
+  <descriptors area="Lenguas" level="Infantil (3-6), Primaria (6-12)">lengua castellana</descriptors>
+ </settings>
+ <sequence>
+  <item id="pormenu.pac" name="portada.ass" delay="5" navButtons="none">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="abcdario.ass" delay="5" navButtons="none" />
+  <item name="menuact.ass" delay="5" navButtons="none">
+   <jump action="STOP" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="abcdario.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x0080C0" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="elabcd.wav" />
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x0080C0" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x0080C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x008040" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="abcdar5.jpg">
+    <style>
+     <color background="0x0080FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="menuact.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x2693FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="pulsa2.wav" />
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x2693FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x2693FF">
+     <image name="menuabc7.jpg" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x0000A0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="471.0" cellHeight="94.0" border="true">
+    <style>
+     <color background="0xFFFFC4" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell id="0" image="botanim1.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="maymin.pac" params="maymin/maymin.jclic" />
+    </cell>
+    <cell id="1" image="botanim5.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalet.pac" params="animalet/animalet.jclic" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="portada.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_MIDI" level="2" file="amaiera.mid" />
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="rojo.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="ninport.jpg">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="botanim1.gif" file="botanim1.gif" />
+  <media name="botanim5.gif" file="botanim5.gif" />
+  <media name="abcdar5.jpg" file="abcdar5.jpg" />
+  <media name="menuabc7.jpg" file="menuabc7.jpg" />
+  <media name="ninport.jpg" file="ninport.jpg" />
+  <media name="rojo.jpg" file="rojo.jpg" />
+  <media name="amaiera.mid" file="amaiera.mid" />
+  <media name="elabcd.wav" file="elabcd.wav" />
+  <media name="pulsa2.wav" file="pulsa2.wav" />
+ </mediaBag>
+</JClicProject>
+

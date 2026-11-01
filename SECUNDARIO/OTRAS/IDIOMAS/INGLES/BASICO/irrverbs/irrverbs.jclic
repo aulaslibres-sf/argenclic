@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="irregular_verbs" version="0.1.3">
+ <settings>
+  <title>Irregular verbs</title>
+  <revision description="Creation of the package of activities using Clic 3.0" date="10/4/05" />
+  <revision description="Converted from Clic3 to JClic" date="11/15/05">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="José Hernández Portillo" mail="pepehp@teleline.es" />
+  <language>english</language>
+  <description>
+   <p>JClic activities about the irregular verbs in English. Only the past form.</p>
+  </description>
+  <descriptors area-codes="lleng" level-codes="PRI">English language</descriptors>
+  <meta_langs>english</meta_langs>
+  <descriptions>
+   <description language="english">
+    <p>JClic activities about the irregular verbs in English. Only the past form.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="start" name="presentacio">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="irregular1" />
+  <item name="irregular2" />
+  <item id="Definitions" name="Definitions">
+   <description>
+    <p>Find a definition for the given verbs.</p>
+   </description>
+  </item>
+  <item id="More definitions" name="More definitions">
+   <description>
+    <p>Find a definition for the verbs from below.</p>
+   </description>
+  </item>
+  <item id="Sentences" name="Sentences">
+   <description>
+    <p>Write the past form of the verbs in brackets.</p>
+   </description>
+  </item>
+  <item id="Identifying" name="Identify Verbs">
+   <description>
+    <p>Click on the irregular verbs!</p>
+   </description>
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="presentacio" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="3" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x000000" border="true" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="577.0" cellHeight="125.0" border="false">
+    <style transparent="true" borderStroke="0.7" markerStroke="5.0">
+     <color background="0x999999" />
+     <gradient source="0xFFFFCC" dest="0xFFCCCC" angle="0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <style>
+      <font family="Arial" size="36" bold="true" italic="true" />
+      <color foreground="0x660066" background="0xFFFFFF" />
+      <gradient source="0xFFFFCC" dest="0xFFCCCC" angle="0" />
+     </style>
+     <p>IRREGULAR VERBS</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="22" bold="true" italic="true" />
+      <color foreground="0xFF9900" background="0xFFFFFF" />
+      <gradient source="0xFFFFCC" dest="0xFFCCCC" angle="0" />
+     </style>
+     <p>José Hernández Portillo - pepehp@teleline.es</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.WrittenAnswer" name="Definitions" code="">
+   <description>
+    <p>Find an irregular verb for each definition... Choose from : catch, buy, write and dream.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Write a verb for each definition. Choose from: catch, buy, write and dream.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>You did it!!</p>
+    </cell>
+    <cell type="finalError">
+     <style />
+     <p>Ohhhh!! Try again!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00CCFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00CC66" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="352.0" cellHeight="68.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>to obtain something by paying money for it ______________.</p>
+    </cell>
+    <cell>
+     <p>to experience events and images in your mind while you are sleeping ________________.</p>
+    </cell>
+    <cell>
+     <p>to take hold of something, especially something that is moving through the air _________________.</p>
+    </cell>
+    <cell>
+     <p>to make marks which represent letters, words or numbers on a surface, such as paper or a computer screen, using a pen, pencil or keyboard ______________.</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="144.0" cellHeight="37.0" border="true" id="answers">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>buy</p>
+    </cell>
+    <cell>
+     <p>dream</p>
+    </cell>
+    <cell>
+     <p>catch</p>
+    </cell>
+    <cell>
+     <p>write</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.Identify" name="Identify Verbs" code="" type="identifyWords">
+   <description>
+    <p>Identify the irregular verbs from the table</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Find all the irregular verbs!!</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Great, man!! Becoming a master?</p>
+    </cell>
+    <cell type="finalError">
+     <style />
+     <p>Ooops!! No way!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00CCCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00CC33" border="true">
+     <size width="613" height="418" />
+    </window>
+   </settings>
+   <checkButton>Check</checkButton>
+   <document>
+    <style name="default" background="0xFFFFFF" family="Arial" size="18" italic="false" tabWidth="12" bold="false" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p Alignment="1" background="0xFFFFFF" family="Arial">
+      <cell avoidOverlapping="true" width="400" height="50">
+       <style>
+        <font family="Bookman Old Style" size="24" bold="true" />
+        <color foreground="0xFFFFFF" background="0xCC0000" />
+       </style>
+       <p>Identify all the irregular verbs</p>
+      </cell>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Arial" />
+     <p Alignment="1" background="0xFFFFFF" family="Arial" />
+     <p Alignment="1" background="0xFFFFFF" family="Arial">
+      <text background="0xFFFFFF" family="Arial" size="18" italic="false" bold="false">work   </text>
+      <target>find</target>
+      <text background="0xFFFFFF" family="Arial" size="18" italic="false" bold="false">   study   </text>
+      <target>see</target>
+      <text background="0xFFFFFF" family="Arial" size="18" italic="false" bold="false">   look    view    </text>
+      <target>dream</target>
+      <text background="0xFFFFFF" family="Arial" size="18" italic="false" bold="false">    </text>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Arial">
+      <text background="0xFFFFFF" family="Arial" size="18" italic="false" bold="false">dress   </text>
+      <target>bring</target>
+      <text background="0xFFFFFF" family="Arial" size="18" italic="false" bold="false">   decide   </text>
+      <target>read</target>
+      <text background="0xFFFFFF" family="Arial" size="18" italic="false" bold="false">   play   record   </text>
+      <target>catch</target>
+      <text background="0xFFFFFF" family="Arial" size="18" italic="false" bold="false">   listen   </text>
+      <target>draw</target>
+      <text background="0xFFFFFF" family="Arial" size="18" italic="false" bold="false">   </text>
+      <target>understand</target>
+      <text background="0xFFFFFF" family="Arial" size="18" italic="false" bold="false">   travel   </text>
+      <target>fly</target>
+      <text background="0xFFFFFF" family="Arial" size="18" italic="false" bold="false">   cry   </text>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Arial">
+      <target>make</target>
+      <text background="0xFFFFFF" family="Arial" size="18" italic="false" bold="false">   </text>
+      <target>do</target>
+      <text background="0xFFFFFF" family="Arial" size="18" italic="false" bold="false">   </text>
+      <target>get</target>
+      <text background="0xFFFFFF" family="Arial" size="18" italic="false" bold="false">   gaze   complete   need   </text>
+      <target>go</target>
+      <text background="0xFFFFFF" family="Arial" size="18" italic="false" bold="false">   </text>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Arial">
+      <target>break</target>
+      <text background="0xFFFFFF" family="Arial" size="18" italic="false" bold="false">   </text>
+      <target>come</target>
+      <text background="0xFFFFFF" family="Arial" size="18" italic="false" bold="false">   </text>
+      <target>have</target>
+      <text background="0xFFFFFF" family="Arial" size="18" italic="false" bold="false">   ask  answer   </text>
+      <target>be</target>
+      <text background="0xFFFFFF" family="Arial" size="18" italic="false" bold="false">   pass   </text>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Arial">
+      <target>sell</target>
+      <text background="0xFFFFFF" family="Arial" size="18" italic="false" bold="false">   clean   dust   stay  finish    </text>
+      <target>know</target>
+      <text background="0xFFFFFF" family="Arial" size="18" italic="false" bold="false">   </text>
+      <target>can</target>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.WrittenAnswer" name="More definitions" code="">
+   <description>
+    <p>Try some more verbs...</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Write a verb for each definition. Choose from fight, read, drink, see and come.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>You did it again!! Great!!</p>
+    </cell>
+    <cell type="finalError">
+     <style />
+     <p>OOOpppsss!! Try again!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00CCFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00CC00" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="385.0" cellHeight="69.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>to be aware of what is around you by using your eyes ________________.</p>
+    </cell>
+    <cell>
+     <p>to say the words that are printed or written _____________________.</p>
+    </cell>
+    <cell>
+     <p>to use physical force to try to defeat another person or group of people _____________.</p>
+    </cell>
+    <cell>
+     <p>to get to a particular place _________.</p>
+    </cell>
+    <cell>
+     <p>Have liquid which is taken into the body through the mouth ____________.</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="197.0" cellHeight="30.0" border="true" id="answers">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>see</p>
+    </cell>
+    <cell>
+     <p>read</p>
+    </cell>
+    <cell>
+     <p>fight</p>
+    </cell>
+    <cell>
+     <p>come</p>
+    </cell>
+    <cell>
+     <p>drink</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="Sentences" code="">
+   <description>
+    <p>Write the correct past form of the verb in brackets.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Write the correct past form of the verbs in brackets.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>You did it!! Greetings, master!!</p>
+    </cell>
+    <cell type="finalError">
+     <style />
+     <p>Ooopppssss!! Try again!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00CCFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00CC66" border="true" />
+   </settings>
+   <cells rows="8" cols="1" cellWidth="543.0" cellHeight="48.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="8" />
+    <cell>
+     <p>The soldiers __________ (fight) from house to house.</p>
+    </cell>
+    <cell>
+     <p>The post __________ (come) late in the evening.</p>
+    </cell>
+    <cell>
+     <p>He ________ (drink) three glasses of water.</p>
+    </cell>
+    <cell>
+     <p>I ________ (read) about the family's success in the local paper.</p>
+    </cell>
+    <cell>
+     <p>They ________ (buy) a pretty mansion near the coast.</p>
+    </cell>
+    <cell>
+     <p>Jacqui ______ (see) the car drive up outside the police station.</p>
+    </cell>
+    <cell>
+     <p>I ________(dream) that I was having a baby.</p>
+    </cell>
+    <cell>
+     <p>I ______ (catch) the vase before it broke.</p>
+    </cell>
+   </cells>
+   <cells rows="8" cols="1" cellWidth="72.0" cellHeight="30.0" border="true" id="answers">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="8" />
+    <cell>
+     <p>fought</p>
+    </cell>
+    <cell>
+     <p>came</p>
+    </cell>
+    <cell>
+     <p>drank</p>
+    </cell>
+    <cell>
+     <p>read</p>
+    </cell>
+    <cell>
+     <p>bought</p>
+    </cell>
+    <cell>
+     <p>saw</p>
+    </cell>
+    <cell>
+     <p>dreamt</p>
+    </cell>
+    <cell>
+     <p>caught</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="irregular1" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Write the correct past form of the verb.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>You did it!! Great Student</p>
+    </cell>
+    <cell type="finalError">
+     <style />
+     <p>Sorry!!! Try again!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00CCCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x009999" border="true">
+     <size width="257" height="436" />
+    </window>
+   </settings>
+   <checkButton>Evaluation</checkButton>
+   <document>
+    <style name="default" background="0xFFFFFF" family="Arial" size="14" italic="false" tabWidth="12" bold="false" />
+    <style name="target" base="default" target="true" foreground="0x990000" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">buy		</text>
+      <target>
+       <answer>bought</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text>bought</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">drink		</text>
+      <target>
+       <answer>drank</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>drank</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">write		</text>
+      <target>
+       <answer>wrote</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>wrote</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">put		</text>
+      <target>
+       <answer>put</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>put</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">sell</text>
+      <text size="16">		</text>
+      <target>
+       <answer>sold</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>sold</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">sink</text>
+      <text size="16"> 		</text>
+      <target>
+       <answer>sank</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>sank</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">begin</text>
+      <text size="16"> 		</text>
+      <target>
+       <answer>began</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>began</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">go</text>
+      <text size="16"> 		</text>
+      <target>
+       <answer>went</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>went</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">become</text>
+      <text size="16"> 	</text>
+      <target>
+       <answer>became</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text>became</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">speak</text>
+      <text size="16"> 	</text>
+      <target>
+       <answer>spoke</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>spoke</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">see</text>
+      <text size="16"> 		</text>
+      <target>
+       <answer>saw</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>saw</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">tell</text>
+      <text size="16"> 		</text>
+      <target>
+       <answer>told</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>told</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">say</text>
+      <text size="16"> 		</text>
+      <target>
+       <answer>said</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>said</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">swim</text>
+      <text size="16"> 		</text>
+      <target>
+       <answer>swam</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>swam</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">bring</text>
+      <text size="16"> 		</text>
+      <target>
+       <answer>brought</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>brought</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">catch</text>
+      <text size="16"> 		</text>
+      <target>
+       <answer>caught</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text>caught</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">run</text>
+      <text size="16"> 		</text>
+      <target>
+       <answer>ran</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>ran</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">hit</text>
+      <text size="16"> 		</text>
+      <target>
+       <answer>hit</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>hit</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">fight</text>
+      <text size="16"> 		</text>
+      <target>
+       <answer>fought</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text>fought</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">break</text>
+      <text size="16"> 		</text>
+      <target>
+       <answer>broke</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>broke</text>
+      </target>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="irregular2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Write the correct past form of the verb.</p>
+    </cell>
+    <cell type="final">
+     <p>You did it!! Great Student</p>
+    </cell>
+    <cell type="finalError">
+     <p>Sorry!!! Try again!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00CCCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x009999" border="true">
+     <size width="257" height="436" />
+    </window>
+   </settings>
+   <checkButton>Evaluation</checkButton>
+   <document>
+    <style name="default" background="0xFFFFFF" family="Arial" size="14" italic="false" tabWidth="12" bold="false" />
+    <style name="target" base="default" target="true" foreground="0x990033" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">choose</text>
+      <text size="16">	</text>
+      <target>
+       <answer>chose</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>chose</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">cut</text>
+      <text size="16">		</text>
+      <target>
+       <answer>cut</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>cut</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">draw</text>
+      <text size="16">		</text>
+      <target>
+       <answer>drew</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>drew</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">find</text>
+      <text size="16">		</text>
+      <target>
+       <answer>found</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>found</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">send</text>
+      <text size="16">		</text>
+      <target>
+       <answer>sent</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>sent</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">know</text>
+      <text size="16">		</text>
+      <target>
+       <answer>knew</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>knew</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">teach</text>
+      <text size="16">		</text>
+      <target>
+       <answer>taught</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text>taught</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">do</text>
+      <text size="16">		</text>
+      <target>
+       <answer>did</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>did</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">make</text>
+      <text size="16">		</text>
+      <target>
+       <answer>made</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>made</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">drive</text>
+      <text size="16">		</text>
+      <target>
+       <answer>drove</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>drove</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">fall</text>
+      <text size="16">		</text>
+      <target>
+       <answer>fell</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>fell</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">eat</text>
+      <text size="16">		</text>
+      <target>
+       <answer>ate</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>ate</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">fly</text>
+      <text size="16">		</text>
+      <target>
+       <answer>flew</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>flew</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">forget</text>
+      <text size="16">		</text>
+      <target>
+       <answer>forgot</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text>forgot</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">give</text>
+      <text size="16">		</text>
+      <target>
+       <answer>gave</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>gave</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">hide</text>
+      <text size="16">		</text>
+      <target>
+       <answer>hid</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>hid</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">hold</text>
+      <text size="16">		</text>
+      <target>
+       <answer>held</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>held</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">leave</text>
+      <text size="16">		</text>
+      <target>
+       <answer>left</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>left</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">let</text>
+      <text size="16">		</text>
+      <target>
+       <answer>let</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>let</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="16" bold="true">quit</text>
+      <text size="16">		</text>
+      <target>
+       <answer>quit</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>quit</text>
+      </target>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+ </activities>
+ <mediaBag />
+</JClicProject>
+

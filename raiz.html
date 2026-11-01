@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+<title>ArgenClic · Catálogo de Actividades para el Plan Raíz</title>
+<!-- Favicon usando la misma imagen de la cabecera -->
+<link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/c/c0/Clic.png">
+<style>
+  :root {
+    --bg-color: #0099ff;
+    --card-bg: #ffffff;
+    --text-color: #1a202c;
+    --text-muted: #4a5568;
+    --accent-color: #0066cc;
+    --accent-light: #e6f2ff;
+    --tag-bg: #cce5ff;
+    --tag-text: #004085;
+    --border-radius: 16px;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.5;
+    padding: 16px;
+    font-size: 16px; /* Base legible para tablets */
+  }
+
+  .contenedor { max-width: 1000px; margin: 0 auto; }
+
+  header {
+    text-align: center;
+    padding: 24px 16px;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+  }
+
+  .logo {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 12px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  header h1 { font-size: 1.8rem; color: var(--accent-color); margin-bottom: 8px; }
+  header p { font-size: 1.1rem; color: var(--text-muted); }
+
+  .intro {
+    background: var(--card-bg);
+    padding: 24px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+    border-left: 6px solid var(--accent-color);
+  }
+  .intro h2 { font-size: 1.3rem; color: var(--accent-color); margin-bottom: 12px; }
+  .intro p { margin-bottom: 12px; }
+  .intro ul { padding-left: 20px; margin-bottom: 12px; }
+  .intro li { margin-bottom: 8px; }
+
+  /* ACORDEÓN NATIVO (Máxima compatibilidad táctil) */
+  details.acordeon {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+
+  summary.acordeon-header {
+    padding: 20px 24px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: white;
+    background: var(--accent-color);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 64px; /* Área táctil amplia */
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  summary.acordeon-header::-webkit-details-marker { display: none; }
+  summary.acordeon-header::after { content: "+"; font-size: 1.8rem; font-weight: 300; }
+  details[open] summary.acordeon-header::after { content: "−"; }
+  details[open] summary.acordeon-header { border-bottom: 2px solid var(--accent-light); }
+
+  .acordeon-body { padding: 20px; }
+
+  .grid-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  @media (min-width: 600px) { .grid-cards { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 900px) { .grid-cards { grid-template-columns: repeat(3, 1fr); } }
+
+  .card {
+    background: var(--accent-light);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #cce5ff;
+    display: flex;
+    flex-direction: column;
+  }
+  .card:active { transform: scale(0.98); /* Feedback táctil inmediato */ }
+
+  .card-header { margin-bottom: 16px; }
+  .card-numero {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-color);
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+  .card h3 { color: var(--accent-color); font-size: 1.1rem; margin-bottom: 4px; line-height: 1.3; }
+  .card .autor { font-size: 0.85rem; color: var(--text-muted); font-style: italic; }
+
+  /* FICHA INTEGRADA */
+  .card-ficha {
+    background: white;
+    border-radius: 8px;
+    padding: 14px;
+    margin-bottom: 16px;
+    flex-grow: 1;
+    font-size: 0.9rem;
+  }
+  .ficha-row {
+    margin-bottom: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .ficha-row strong { color: var(--accent-color); min-width: 85px; }
+  
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .tag {
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-family: monospace;
+  }
+
+  .descripcion {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+
+  /* BOTÓN DE ACCIÓN */
+  .btn-enlace {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-color);
+    color: white;
+    padding: 14px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+    min-height: 52px; /* Área táctil óptima (>= 48px) */
+    transition: background 0.2s;
+    gap: 8px;
+  }
+  .btn-enlace:active { background: #004c99; }
+
+  /* SECCIONES INFORMATIVAS */
+  .seccion-info {
+    background: var(--card-bg);
+    padding: 24px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+  }
+  .seccion-info h2 {
+    color: var(--accent-color);
+    margin-bottom: 16px;
+    font-size: 1.3rem;
+    border-bottom: 2px solid var(--accent-light);
+    padding-bottom: 8px;
+  }
+  table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.95rem; }
+  th, td { padding: 12px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+  th { background: var(--accent-light); color: var(--accent-color); font-weight: 700; }
+  tr.total { background: #f0f7ff; font-weight: bold; }
+
+  .notas-lista { list-style: none; padding: 0; }
+  .notas-lista li {
+    padding: 12px 0 12px 28px;
+    position: relative;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.95rem;
+  }
+  .notas-lista li:last-child { border-bottom: none; }
+  .notas-lista li::before {
+    content: "▸";
+    color: var(--accent-color);
+    position: absolute;
+    left: 4px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+  .notas-lista strong { color: var(--accent-color); }
+  code { background: #e2e8f0; padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 0.9em; }
+
+  footer { text-align: center; margin-top: 30px; padding: 20px; color: white; font-size: 0.9rem; opacity: 0.9; }
+
+  @media (max-height: 500px) and (orientation: landscape) {
+    .grid-cards { grid-template-columns: repeat(2, 1fr); }
+    .intro, .seccion-info { padding: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="contenedor">
+
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Clic.png" alt="Logo Clic" class="logo">
+    <h1>ArgenClic para alfabetizar</h1>
+    <p>Caja de herramientas para el aula · Primer Ciclo</p>
+  </header>
+
+  <div class="intro">
+    <h2>Cómo ArgenClic te ayuda en el día a día con el Plan Raíz</h2>
+    <p>Sabemos que el Plan Raíz está dando resultados. Pero también conocemos la realidad de tu aula: las inasistencias, los fines de semana largos y las vacaciones.</p>
+    <p><strong>ArgenClic no viene a reemplazar al Plan Raíz.</strong> Es una biblioteca de actividades digitales pensada para ser tu botiquín de primeros auxilios y tu gimnasio de repaso:</p>
+    <ul>
+      <li><strong>Te ahorra tiempo:</strong> actividades organizadas por lo que necesitás (sílabas trabadas, conciencia fonológica, ortografía).</li>
+      <li><strong>Cero dolores de cabeza técnicos:</strong> funciona directo en el navegador de las tablets del Plan Raíz y de Aprender Conectados. Sin instalar nada.</li>
+      <li><strong>Antídoto contra inasistencias:</strong> consignas predecibles, alta autonomía, y posibilidad de imprimir como fichas.</li>
+      <li><strong>Material para los que necesitan "una vuelta más":</strong> banco de práctica estructurada para acompañar a quienes requieren más repetición.</li>
+    </ul>
+  </div>
+
+  <!-- BLOQUE 1 -->
+  <details class="acordeon" open>
+    <summary class="acordeon-header">Bloque 1 · Alfabetización inicial y conciencia fonológica</summary>
+    <div class="acordeon-body">
+      <div class="grid-cards">
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-numero">1</span>
+            <h3>Aniclic: método de lectura</h3>
+            <div class="autor">Juan Carlos Rodríguez Lorenzo</div>
+          </div>
+          <div class="card-ficha">
+            <div class="ficha-row"><strong>Grado:</strong> 1° y 2° (y nivelación 3°)</div>
+            <div class="ficha-row"><strong>Autonomía:</strong> Alta</div>
+            <div class="ficha-row"><strong>Fijación:</strong> Repetición estructurada, completamiento</div>
+            <div class="tags">
+              <span class="tag">fijacion-silabica</span>
+              <span class="tag">autonomia-alta</span>
+              <span class="tag">repeticion-estructurada</span>
+            </div>
+            <p class="descripcion">La predictibilidad de la mecánica libera atención para el contenido nuevo. El niño no pierde energía decodificando qué se espera de él.</p>
+          </div>
+          <a class="btn-enlace" href="https://argenclic.net.ar/INICIAL/LENGUA/lenguaini.html" target="_blank" rel="noopener noreferrer">▶ Abrir actividades</a>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-numero">2</span>
+            <h3>Las vocales</h3>
+            <div class="autor">Daniel María López Arroyo</div>
+          </div>
+          <div class="card-ficha">
+            <div class="ficha-row"><strong>Grado:</strong> Nivel inicial y 1° (primeros meses)</div>
+            <div class="ficha-row"><strong>Autonomía:</strong> Media-Alta</div>
+            <div class="ficha-row"><strong>Fijación:</strong> Discriminación auditiva y trazo</div>
+            <div class="tags">
+              <span class="tag">conciencia-fonologica-vocalica</span>
+              <span class="tag">apresto-lectoescritura</span>
+              <span class="tag">baja-carga-cognitiva</span>
+            </div>
+            <p class="descripcion">Secuencia cerrada y ritualizada. La repetición de la misma batería para cada vocal transforma el reconocimiento en un reflejo perceptivo.</p>
+          </div>
+          <a class="btn-enlace" href="https://argenclic.net.ar/INICIAL/LENGUA/lenguaini.html" target="_blank" rel="noopener noreferrer">▶ Abrir actividades</a>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-numero">3</span>
+            <h3>Animaletras</h3>
+            <div class="autor">Alberto Alonso Gómez</div>
+          </div>
+          <div class="card-ficha">
+            <div class="ficha-row"><strong>Grado:</strong> 1° (todo el año) y nivelación 2°/3°</div>
+            <div class="ficha-row"><strong>Autonomía:</strong> Alta</div>
+            <div class="ficha-row"><strong>Fijación:</strong> Reconocimiento visual con distractores</div>
+            <div class="tags">
+              <span class="tag">reconocimiento-letra</span>
+              <span class="tag">correspondencia-mayuscula-minuscula</span>
+              <span class="tag">nivelacion-alfabetica</span>
+            </div>
+            <p class="descripcion">Mecánica ultra-predecible de identificación. Andamio necesario para niños sin contacto previo con el sistema alfabético o con confusión b/d, p/q.</p>
+          </div>
+          <a class="btn-enlace" href="https://argenclic.net.ar/INICIAL/LENGUA/lenguaini.html" target="_blank" rel="noopener noreferrer">▶ Abrir actividades</a>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-numero">4</span>
+            <h3>Letras (s, p, m)</h3>
+            <div class="autor">María Elena Abalo</div>
+          </div>
+          <div class="card-ficha">
+            <div class="ficha-row"><strong>Grado:</strong> 1° (fase inicial)</div>
+            <div class="ficha-row"><strong>Autonomía:</strong> Alta</div>
+            <div class="ficha-row"><strong>Fijación:</strong> Asociación letra-sonido y escritura dirigida</div>
+            <div class="tags">
+              <span class="tag">fijacion-silabica</span>
+              <span class="tag">conciencia-fonologica</span>
+              <span class="tag">autonomia-alta</span>
+            </div>
+            <p class="descripcion">Progresión clara desde la identificación hasta la escritura de sílabas, con variación controlada para evitar la respuesta automática no pensada.</p>
+          </div>
+          <a class="btn-enlace" href="https://argenclic.net.ar/INICIAL/LENGUA/lenguaini.html" target="_blank" rel="noopener noreferrer">▶ Abrir actividades</a>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-numero">5</span>
+            <h3>JuegoLec</h3>
+            <div class="autor">Milagros Lorenzo</div>
+          </div>
+          <div class="card-ficha">
+            <div class="ficha-row"><strong>Grado:</strong> 1° a 2°</div>
+            <div class="ficha-row"><strong>Autonomía:</strong> Alta</div>
+            <div class="ficha-row"><strong>Fijación:</strong> Lectura global y asociación palabra-imagen</div>
+            <div class="tags">
+              <span class="tag">lectura-global</span>
+              <span class="tag">asociacion-palabra-imagen</span>
+              <span class="tag">fijacion-lexica</span>
+            </div>
+            <p class="descripcion">Secuencia estructurada por letra: intro, identificación, exploración, asociación y escritura. Ideal para consolidar el léxico visual temprano.</p>
+          </div>
+          <a class="btn-enlace" href="https://argenclic.net.ar/INICIAL/LENGUA/lenguaini.html" target="_blank" rel="noopener noreferrer">▶ Abrir actividades</a>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-numero">6</span>
+            <h3>Ga-go-gu</h3>
+            <div class="autor">Claudia Lovrincevich</div>
+          </div>
+          <div class="card-ficha">
+            <div class="ficha-row"><strong>Grado:</strong> 2°</div>
+            <div class="ficha-row"><strong>Autonomía:</strong> Media</div>
+            <div class="ficha-row"><strong>Fijación:</strong> Clasificación semántica y conteo silábico</div>
+            <div class="tags">
+              <span class="tag">familia-silabica-g</span>
+              <span class="tag">clasificacion-semantica</span>
+              <span class="tag">conteo-silabico</span>
+            </div>
+            <p class="descripcion">Trabaja la familia silábica de la G con actividades de conteo de sílabas, intrusos semánticos y antónimos, ampliando el vocabulario en contexto.</p>
+          </div>
+          <a class="btn-enlace" href="https://argenclic.net.ar/PRIMERCICLO/LENGUA/lenguaprim.html" target="_blank" rel="noopener noreferrer">▶ Abrir actividades</a>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-numero">7</span>
+            <h3>Las sílabas trabadas (trab1)</h3>
+            <div class="autor">Vicente J. Alfonso Repullés</div>
+          </div>
+          <div class="card-ficha">
+            <div class="ficha-row"><strong>Grado:</strong> 2° a 3°</div>
+            <div class="ficha-row"><strong>Autonomía:</strong> Alta</div>
+            <div class="ficha-row"><strong>Fijación:</strong> Conciencia fonológica avanzada y ortográfica</div>
+            <div class="tags">
+              <span class="tag">silabas-trabadas</span>
+              <span class="tag">conciencia-fonologica-avanzada</span>
+              <span class="tag">fijacion-ortografica</span>
+            </div>
+            <p class="descripcion">Patrón repetitivo por familia (bra, fra, tra) que va de la identificación al completamiento de huecos, fundamental para automatizar grupos consonánticos.</p>
+          </div>
+          <a class="btn-enlace" href="https://argenclic.net.ar/PRIMERCICLO/LENGUA/lenguaprim.html" target="_blank" rel="noopener noreferrer">▶ Abrir actividades</a>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-numero">8</span>
+            <h3>Vamos a leer - 2 (leo)</h3>
+            <div class="autor">Claudia Lovrincevich</div>
+          </div>
+          <div class="card-ficha">
+            <div class="ficha-row"><strong>Grado:</strong> 2° a 3°</div>
+            <div class="ficha-row"><strong>Autonomía:</strong> Media</div>
+            <div class="ficha-row"><strong>Fijación:</strong> Vocabulario, adivinanzas y comprensión</div>
+            <div class="tags">
+              <span class="tag">conciencia-fonologica</span>
+              <span class="tag">vocabulario</span>
+              <span class="tag">comprension</span>
+            </div>
+            <p class="descripcion">Combina sopas de letras, crucigramas y ordenamiento de palabras con temáticas motivadoras para consolidar la lectura.</p>
+          </div>
+          <a class="btn-enlace" href="https://argenclic.net.ar/PRIMERCICLO/LENGUA/lenguaprim.html" target="_blank" rel="noopener noreferrer">▶ Abrir actividades</a>
+        </div>
+
+      </div>
+    </div>
+  </details>
+
+  <!-- BLOQUE 2 -->
+  <details class="acordeon">
+    <summary class="acordeon-header">Bloque 2 · Estimulación cognitiva y perceptual</summary>
+    <div class="acordeon-body">
+      <div class="grid-cards">
+        <div class="card">
+          <div class="card-header">
+            <span class="card-numero">9</span>
+            <h3>Estimulación visual</h3>
+            <div class="autor">Francisco José Romero Cabrillana</div>
+          </div>
+          <div class="card-ficha">
+            <div class="ficha-row"><strong>Grado:</strong> Pre-escolar, 1° y NEE (todos los grados)</div>
+            <div class="ficha-row"><strong>Autonomía:</strong> Alta</div>
+            <div class="ficha-row"><strong>Fijación:</strong> Operaciones cognitivas básicas</div>
+            <div class="tags">
+              <span class="tag">atencion-sostenida</span>
+              <span class="tag">memoria-trabajo-visual</span>
+              <span class="tag">constancia-perceptual</span>
+            </div>
+            <p class="descripcion">La percepción se entrena. Ejercicios de figura-fondo, memoria de pares y asociación de contornos. Andamiaje fundamental para niños con TEA o baja estimulación temprana.</p>
+          </div>
+          <a class="btn-enlace" href="https://argenclic.net.ar/INICIAL/LENGUA/lenguaini.html" target="_blank" rel="noopener noreferrer">▶ Abrir actividades</a>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <!-- BLOQUE 3 -->
+  <details class="acordeon">
+    <summary class="acordeon-header">Bloque 3 · Lectoescritura, vocabulario y estructuras</summary>
+    <div class="acordeon-body">
+      <div class="grid-cards">
+        <div class="card">
+          <div class="card-header">
+            <span class="card-numero">10</span>
+            <h3>Actividades de lectoescritura</h3>
+            <div class="autor">Adolfo López Fernández</div>
+          </div>
+          <div class="card-ficha">
+            <div class="ficha-row"><strong>Grado:</strong> 1° a 3° (progresivo por letra)</div>
+            <div class="ficha-row"><strong>Autonomía:</strong> Media-Alta</div>
+            <div class="ficha-row"><strong>Fijación:</strong> Red de actividades por familia silábica</div>
+            <div class="tags">
+              <span class="tag">fijacion-familia-silabica</span>
+              <span class="tag">ortografia-preventiva</span>
+              <span class="tag">conciencia-lexica</span>
+            </div>
+            <p class="descripcion">La misma letra aparece en asociación, dictado, sopa de letras y crucigrama. Consolida el aprendizaje desde distintos canales de entrada.</p>
+          </div>
+          <a class="btn-enlace" href="https://argenclic.net.ar/PRIMERCICLO/LENGUA/lenguaprim.html" target="_blank" rel="noopener noreferrer">▶ Abrir actividades</a>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-numero">11</span>
+            <h3>Actividades de lenguaje (lengua)</h3>
+            <div class="autor">Rafael Rodríguez Martín</div>
+          </div>
+          <div class="card-ficha">
+            <div class="ficha-row"><strong>Grado:</strong> 2° a 3°</div>
+            <div class="ficha-row"><strong>Autonomía:</strong> Alta</div>
+            <div class="ficha-row"><strong>Fijación:</strong> Completamiento masivo y autocorrección</div>
+            <div class="tags">
+              <span class="tag">ortografia</span>
+              <span class="tag">completar-huecos</span>
+              <span class="tag">repeticion-sistematica</span>
+            </div>
+            <p class="descripcion">Batería masiva de ejercicios de completamiento para sílabas trabadas y reglas ortográficas. Retroalimentación inmediata.</p>
+          </div>
+          <a class="btn-enlace" href="https://argenclic.net.ar/PRIMERCICLO/LENGUA/lenguaprim.html" target="_blank" rel="noopener noreferrer">▶ Abrir actividades</a>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-numero">12</span>
+            <h3>La isla del tesoro</h3>
+            <div class="autor">Ángel Prieto Lino</div>
+          </div>
+          <div class="card-ficha">
+            <div class="ficha-row"><strong>Grado:</strong> 2° a 3°</div>
+            <div class="ficha-row"><strong>Autonomía:</strong> Media</div>
+            <div class="ficha-row"><strong>Fijación:</strong> Comprensión lectora extensiva y vocabulario</div>
+            <div class="tags">
+              <span class="tag">comprension-lectora-extensiva</span>
+              <span class="tag">secuenciacion</span>
+              <span class="tag">vocabulario-contextual</span>
+            </div>
+            <p class="descripcion">Paquete temático que integra lectura de capítulos, preguntas de comprensión, sopas de letras y puzzles, manteniendo el interés narrativo.</p>
+          </div>
+          <a class="btn-enlace" href="https://argenclic.net.ar/PRIMERCICLO/LENGUA/lenguaprim.html" target="_blank" rel="noopener noreferrer">▶ Abrir actividades</a>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-numero">13</span>
+            <h3>Sustantivos y adjetivos</h3>
+            <div class="autor">Nancy Fernández</div>
+          </div>
+          <div class="card-ficha">
+            <div class="ficha-row"><strong>Grado:</strong> 2° a 3°</div>
+            <div class="ficha-row"><strong>Autonomía:</strong> Alta</div>
+            <div class="ficha-row"><strong>Fijación:</strong> Categorías gramaticales y concordancia</div>
+            <div class="tags">
+              <span class="tag">categorias-gramaticales</span>
+              <span class="tag">concordancia</span>
+              <span class="tag">ampliacion-lexica</span>
+            </div>
+            <p class="descripcion">Ejercicios de unir sustantivos con adjetivos, masculinos con femeninos, y búsqueda de palabras en contexto para afianzar la estructura de la frase.</p>
+          </div>
+          <a class="btn-enlace" href="https://argenclic.net.ar/PRIMERCICLO/LENGUA/lenguaprim.html" target="_blank" rel="noopener noreferrer">▶ Abrir actividades</a>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-numero">14</span>
+            <h3>Lee y diviértete</h3>
+            <div class="autor">Ángel García</div>
+          </div>
+          <div class="card-ficha">
+            <div class="ficha-row"><strong>Grado:</strong> 2° a 3°</div>
+            <div class="ficha-row"><strong>Autonomía:</strong> Alta</div>
+            <div class="ficha-row"><strong>Fijación:</strong> Lectura lúdica y conciencia fonológica</div>
+            <div class="tags">
+              <span class="tag">lectura-ludica</span>
+              <span class="tag">conciencia-fonologica</span>
+              <span class="tag">fijacion-ortografica</span>
+            </div>
+            <p class="descripcion">Organizado por letras, combina puzzles, memoria y sopas de letras para practicar fonemas específicos de manera entretenida.</p>
+          </div>
+          <a class="btn-enlace" href="https://argenclic.net.ar/PRIMERCICLO/LENGUA/lenguaprim.html" target="_blank" rel="noopener noreferrer">▶ Abrir actividades</a>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-numero">15</span>
+            <h3>La calesita del bosque</h3>
+            <div class="autor">María Elena Abalo</div>
+          </div>
+          <div class="card-ficha">
+            <div class="ficha-row"><strong>Grado:</strong> 2° a 3°</div>
+            <div class="ficha-row"><strong>Autonomía:</strong> Media</div>
+            <div class="ficha-row"><strong>Fijación:</strong> Comprensión lectora y secuenciación narrativa</div>
+            <div class="tags">
+              <span class="tag">comprension-lectora</span>
+              <span class="tag">secuenciacion-narrativa</span>
+              <span class="tag">concordancia-gramatical</span>
+            </div>
+            <p class="descripcion">Basado en un cuento breve. Incluye lectura, preguntas de comprensión, completamiento de oraciones del texto y armado de secuencias.</p>
+          </div>
+          <a class="btn-enlace" href="https://argenclic.net.ar/PRIMERCICLO/LENGUA/lenguaprim.html" target="_blank" rel="noopener noreferrer">▶ Abrir actividades</a>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-numero">16</span>
+            <h3>Lecturas (el viento y el sol)</h3>
+            <div class="autor">Míriam Castillo Castillo</div>
+          </div>
+          <div class="card-ficha">
+            <div class="ficha-row"><strong>Grado:</strong> 2° a 3°</div>
+            <div class="ficha-row"><strong>Autonomía:</strong> Media</div>
+            <div class="ficha-row"><strong>Fijación:</strong> Comprensión lectora y categorías gramaticales</div>
+            <div class="tags">
+              <span class="tag">comprension-lectora</span>
+              <span class="tag">valores</span>
+              <span class="tag">categorias-gramaticales</span>
+            </div>
+            <p class="descripcion">Trabaja sobre una fábula clásica, identificando adjetivos, verbos, antónimos y secuenciando la historia mediante puzzles.</p>
+          </div>
+          <a class="btn-enlace" href="https://argenclic.net.ar/PRIMERCICLO/LENGUA/lenguaprim.html" target="_blank" rel="noopener noreferrer">▶ Abrir actividades</a>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-numero">17</span>
+            <h3>4 fábulas</h3>
+            <div class="autor">Autoría colectiva</div>
+          </div>
+          <div class="card-ficha">
+            <div class="ficha-row"><strong>Grado:</strong> 2° a 3°</div>
+            <div class="ficha-row"><strong>Autonomía:</strong> Media</div>
+            <div class="ficha-row"><strong>Fijación:</strong> Comprensión lectora y secuenciación</div>
+            <div class="tags">
+              <span class="tag">comprension-lectora</span>
+              <span class="tag">secuenciacion</span>
+              <span class="tag">valores</span>
+            </div>
+            <p class="descripcion">Fábulas clásicas. Combina el ordenamiento de secuencias narrativas con el completamiento de textos.</p>
+          </div>
+          <a class="btn-enlace" href="https://argenclic.net.ar/PRIMERCICLO/LENGUA/lenguaprim.html" target="_blank" rel="noopener noreferrer">▶ Abrir actividades</a>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <!-- BLOQUE 4 -->
+  <details class="acordeon">
+    <summary class="acordeon-header">Bloque 4 · Ortografía, acentuación y morfología</summary>
+    <div class="acordeon-body">
+      <div class="grid-cards">
+        <div class="card">
+          <div class="card-header">
+            <span class="card-numero">18</span>
+            <h3>Ortografía (varios)</h3>
+            <div class="autor">Míriam Castillo, R. Carrascosa y otros</div>
+          </div>
+          <div class="card-ficha">
+            <div class="ficha-row"><strong>Grado:</strong> 2° a 3°</div>
+            <div class="ficha-row"><strong>Autonomía:</strong> Alta</div>
+            <div class="ficha-row"><strong>Fijación:</strong> Ortografía reglada y discriminación fonémica</div>
+            <div class="tags">
+              <span class="tag">ortografia-reglada</span>
+              <span class="tag">discriminacion-fonema</span>
+              <span class="tag">b/v</span>
+              <span class="tag">g/j</span>
+            </div>
+            <p class="descripcion">Batería exhaustiva para trabajar las confusiones típicas de la escritura popular (B/V, R/RR, LL/Y, G/J, H) mediante asociación y completamiento.</p>
+          </div>
+          <a class="btn-enlace" href="https://argenclic.net.ar/PRIMERCICLO/LENGUA/lenguaprim.html" target="_blank" rel="noopener noreferrer">▶ Abrir actividades</a>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-numero">19</span>
+            <h3>Acentuación (agudas / acento2)</h3>
+            <div class="autor">Francisco García-Pozuelo y otros</div>
+          </div>
+          <div class="card-ficha">
+            <div class="ficha-row"><strong>Grado:</strong> 3° (y nivelación)</div>
+            <div class="ficha-row"><strong>Autonomía:</strong> Media-Alta</div>
+            <div class="ficha-row"><strong>Fijación:</strong> Tildación y autonomía ortográfica</div>
+            <div class="tags">
+              <span class="tag">acentuacion</span>
+              <span class="tag">agudas-graves-esdrujulas</span>
+              <span class="tag">tildacion</span>
+            </div>
+            <p class="descripcion">Desde la identificación de la sílaba tónica hasta la clasificación y tildación de palabras agudas, graves y esdrújulas con soporte visual.</p>
+          </div>
+          <a class="btn-enlace" href="https://argenclic.net.ar/PRIMERCICLO/LENGUA/lenguaprim.html" target="_blank" rel="noopener noreferrer">▶ Abrir actividades</a>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-numero">20</span>
+            <h3>Prefijos</h3>
+            <div class="autor">Rafael Rodríguez Martín</div>
+          </div>
+          <div class="card-ficha">
+            <div class="ficha-row"><strong>Grado:</strong> 3°</div>
+            <div class="ficha-row"><strong>Autonomía:</strong> Media</div>
+            <div class="ficha-row"><strong>Fijación:</strong> Formación de palabras y ampliación léxica</div>
+            <div class="tags">
+              <span class="tag">formacion-palabras</span>
+              <span class="tag">prefijos</span>
+              <span class="tag">ampliacion-lexica</span>
+            </div>
+            <p class="descripcion">Ejercicios de asociación y escritura para comprender cómo los prefijos modifican el significado de las palabras.</p>
+          </div>
+          <a class="btn-enlace" href="https://argenclic.net.ar/PRIMERCICLO/LENGUA/lenguaprim.html" target="_blank" rel="noopener noreferrer">▶ Abrir actividades</a>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <!-- BLOQUE 5 -->
+  <details class="acordeon">
+    <summary class="acordeon-header">Bloque 5 · Organización léxica y alfabética</summary>
+    <div class="acordeon-body">
+      <div class="grid-cards">
+        <div class="card">
+          <div class="card-header">
+            <span class="card-numero">21</span>
+            <h3>Orden alfabético</h3>
+            <div class="autor">Aurelio Salvador Baselga</div>
+          </div>
+          <div class="card-ficha">
+            <div class="ficha-row"><strong>Grado:</strong> 2° a 3°</div>
+            <div class="ficha-row"><strong>Autonomía:</strong> Alta</div>
+            <div class="ficha-row"><strong>Fijación:</strong> Abecedario y autonomía de búsqueda</div>
+            <div class="tags">
+              <span class="tag">orden-alfabetico</span>
+              <span class="tag">abecedario</span>
+              <span class="tag">autonomia-busqueda</span>
+            </div>
+            <p class="descripcion">Progresión desde completar el abecedario hasta ordenar listas de palabras. Habilidad instrumental clave para el uso futuro de diccionarios.</p>
+          </div>
+          <a class="btn-enlace" href="https://argenclic.net.ar/PRIMERCICLO/LENGUA/lenguaprim.html" target="_blank" rel="noopener noreferrer">▶ Abrir actividades</a>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-numero">22</span>
+            <h3>Sopas de letras</h3>
+            <div class="autor">Toni Miquel Mollà</div>
+          </div>
+          <div class="card-ficha">
+            <div class="ficha-row"><strong>Grado:</strong> 1° a 3°</div>
+            <div class="ficha-row"><strong>Autonomía:</strong> Alta</div>
+            <div class="ficha-row"><strong>Fijación:</strong> Vocabulario temático y atención sostenida</div>
+            <div class="tags">
+              <span class="tag">vocabulario-tematico</span>
+              <span class="tag">atencion-sostenida</span>
+              <span class="tag">barrido-visual</span>
+            </div>
+            <p class="descripcion">Más de 170 actividades organizadas por temas. No es un pasatiempo: es entrenamiento de barrido visual alfabético.</p>
+          </div>
+          <a class="btn-enlace" href="https://argenclic.net.ar/PRIMERCICLO/LENGUA/lenguaprim.html" target="_blank" rel="noopener noreferrer">▶ Abrir actividades</a>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <!-- RESUMEN -->
+  <div class="seccion-info">
+    <h2>📊 Resumen cuantitativo</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Bloque</th>
+          <th>Paquetes</th>
+          <th>Actividades aprox.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Alfabetización inicial y conciencia fonológica</td><td>8</td><td>~555</td></tr>
+        <tr><td>Estimulación cognitiva y perceptual</td><td>1</td><td>~40</td></tr>
+        <tr><td>Lectoescritura, vocabulario y estructuras</td><td>8</td><td>~536</td></tr>
+        <tr><td>Ortografía, acentuación y morfología</td><td>3</td><td>~294</td></tr>
+        <tr><td>Organización léxica y alfabética</td><td>2</td><td>~260</td></tr>
+        <tr class="total"><td>Total</td><td>22</td><td>~1.685</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- NOTAS -->
+  <div class="seccion-info">
+    <h2>📌 Notas para la implementación en el aula</h2>
+    <ul class="notas-lista">
+      <li><strong>Prioridad para 1° grado:</strong> paquetes 1, 2, 3, 4, 5, 7, 9.</li>
+      <li><strong>Prioridad para 2° grado:</strong> paquetes 6, 7, 8, 10, 11, 15, 18.</li>
+      <li><strong>Prioridad para 3° grado y nivelación:</strong> paquetes 10, 12, 13, 18, 19, 20, 21, 22.</li>
+      <li><strong>Uso transversal</strong> (estimulación, memoria, atención): paquete 9.</li>
+      <li><strong>Uso para receso o tarea en casa:</strong> cualquier actividad con etiqueta <code>autonomia-alta</code> y mecánica <em>FillInBlanks</em>, <em>Identify</em> o <em>SimpleAssociation</em>, migrable a papel.</li>
+      <li><strong>Compatibilidad total:</strong> todas las actividades se ejecutan en el navegador web, sin instalación. Funcionan en las tablets del Plan Raíz, Aprender Conectados, netbooks y cualquier dispositivo con Chrome, Edge o Firefox.</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>ArgenClic · Biblioteca de actividades para el Primer Ciclo<br>Compatible con Plan Raíz y Aprender Conectados</p>
+  </footer>
+
+</div>
+
+</body>
+</html>

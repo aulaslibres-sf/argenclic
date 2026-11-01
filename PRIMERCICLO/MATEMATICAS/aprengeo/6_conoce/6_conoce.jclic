@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="6_conoce" version="0.1.3">
+ <settings>
+  <title>Aprengeo</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="2/23/06" />
+  <revision description="Conversión de Clic3 a JClic" date="3/27/06">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Nieves M. Vílchez" mail="nieves59@cantv.net" />
+  <language>español</language>
+  <description>
+   <p>Paquete de actividades para el aprendizaje de la geometría en educación primaria. Este extenso proyecto tiene 6 partes:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Preguntas y respuestas</p>
+   <p>&lt;LI&gt;Actividad dirigida</p>
+   <p>&lt;LI&gt;Explicación</p>
+   <p>&lt;LI&gt;Actividad libre</p>
+   <p>&lt;LI&gt;Ahora aprendemos</p>
+   <p>&lt;LI&gt;Saber más de...</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area="Matemáticas" level="Primaria (6-12)">geometría</descriptors>
+ </settings>
+ <sequence>
+  <item id="6_conoce.pac" name="6_objet.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="6_act2.ass" />
+  <item name="6_act3.ass" />
+  <item name="6_act4.ass" />
+  <item name="6_act6.ass" />
+  <item name="6_act7.txa" />
+  <item name="6_act8.txa" />
+  <item name="6_act1.ass" />
+  <item name="6_act5.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.Explore" name="6_act1.ass">
+   <description>
+    <p>Información sobre Egipto.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Kristen ITC" size="36" />
+      <color foreground="0xFFFFFF" background="0xFF8000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="lee.wav" />
+     <p>Lee   y   aprende.   (Haz CLIC sobre la pregunta)</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Kristen ITC" size="36" />
+      <color foreground="0xFFFFFF" background="0xFF8000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="piram.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x004000" border="false" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="490.0" cellHeight="90.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="37" />
+     <color background="0xFFFFFF" inactive="0xFF0000" alternative="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <p>¿Dónde están las  Pirámides?</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="490.0" cellHeight="145.0" border="false" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color foreground="0xFFFF00" background="0x004000" inactive="0x004000" alternative="0x004000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="egi_pir.wav" />
+     <p>En Egipto, país lejano, existen PIRÁMIDES  construidas desde  mucho tiempo atrás.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="6_act2.ass">
+   <description>
+    <p>Información sobre el volumen.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Kristen ITC" size="36" />
+      <color foreground="0xFFFFFF" background="0xFF8000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="volu.wav" />
+     <p>Lee   y  aprende.  (Haz CLIC  sobre la pregunta)</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Kristen ITC" size="36" />
+      <color foreground="0xFFFFFF" background="0xFF8000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="pizarvol.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x004000" border="false" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="400.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="37" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <p>¿Sabes qué es el volumen  de un cuerpo?</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0xFFFF00" background="0x004000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="qvol.wav" />
+     <p>VOLUMEN es el espacio que ocupan los CUERPOS</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="6_act3.ass">
+   <description>
+    <p>Información sobre MEDIDA</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Kristen ITC" size="36" />
+      <color foreground="0xFFFFFF" background="0xFF8000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="lee.wav" />
+     <p>Lee   y  aprende.  (Haz CLIC sobre la pregunta )</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Kristen ITC" size="36" />
+      <color foreground="0xFFFFFF" background="0xFF8000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="pizadi.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x004000" border="false">
+     <position x="160" y="6" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="520.0" cellHeight="90.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="37" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <p>¿Cómo  podemos  medir ?</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="350.0" cellHeight="145.0" border="false" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0xFFFF00" background="0x004000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p> Podemos medir  la DISTANCIA con: una CUARTA,   el  PIE o   un METRO  </p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="6_act4.ass">
+   <description>
+    <p>Información sobre MEDIDA</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Kristen ITC" size="36" />
+      <color foreground="0xFFFFFF" background="0xFF8000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="lee.wav" />
+     <p>Lee   y  aprende.  (Haz CLIC  sobre la pregunta)</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Kristen ITC" size="36" />
+      <color foreground="0xFFFFFF" background="0xFF8000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="pizame.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x004000" border="false">
+     <position x="165" y="6" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="531.0" cellHeight="105.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="37" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <p>¿Cómo  podemos  medir ?</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="350.0" cellHeight="150.0" border="false" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0xFFFF00" background="0x004000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>Podemos  medir el  VOLUMEN   de un CUERPO   con    UN  LITRO  de algún  líquido    o  con   UN   CUBO.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="6_act5.ass" code="">
+   <description>
+    <p>Información sobre el volumen.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial Black" size="37" />
+      <color foreground="0xFFFFFF" background="0xFF8000" />
+     </style>
+     <p>Haz  CLIC  en  i   y  COLOREA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial Black" size="37" />
+      <color foreground="0xFFFFFF" background="0xFF8000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" infoCmd="mspaint.exe caja.gif" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="rompe.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x004000" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="caja.gif">
+    <style>
+     <font family="Comic Sans MS" size="37" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.Explore" name="6_act6.ass">
+   <description>
+    <p>Información sobre MEDIDA del VOLUMEN</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Kristen ITC" size="36" />
+      <color foreground="0xFFFFFF" background="0xFF8000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="lee.wav" />
+     <p>Lee   y  aprende.  (Haz CLIC sobre la pregunta)</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Kristen ITC" size="36" />
+      <color foreground="0xFFFFFF" background="0xFF8000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="2_pizame.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x004000" border="false">
+     <position x="170" y="0" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="531.0" cellHeight="80.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="38" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <p>¿Qué es un centímetro cúbico?</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="350.0" cellHeight="120.0" border="false" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="41" />
+     <color foreground="0xFFFF00" background="0x004000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>Es una unidad usada para medir el volumen,  dada por un CUBO, donde cada lado   mide  1 centímetro.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="6_act7.txa" code="">
+   <description>
+    <p>Expresar el volumen.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Kristen ITC" size="36" bold="true" />
+      <color foreground="0xFFFFFF" background="0xFF8000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="r_corre.wav" />
+     <p>ESCOGE  LA RESPUESTA  CORRECTA.</p>
+    </cell>
+    <cell image="si.gif" type="final">
+     <style>
+      <font family="Kristen ITC" size="36" bold="true" />
+      <color foreground="0xFFFFFF" background="0xFF8000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="2_pizame.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <position x="140" y="20" />
+     <size width="593" height="238" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" tabWidth="14" foreground="0x000000" bold="true" />
+    <style name="target" base="default" background="0xC0C0C0" target="true" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">¿Cuántos centimetros cúbicos  se llenaron en la cubeta?</text>
+     </p>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000"> Se llenaron  </text>
+      <target>
+       <answer>9</answer>
+       <optionList>
+        <option>1</option>
+        <option>3</option>
+        <option>5</option>
+        <option>9</option>
+        <option>10</option>
+       </optionList>
+       <text>9</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000"> centimetros cúbicos.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="6_act8.txa" code="">
+   <description>
+    <p>Preguntas Generales de volumen</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Kristen ITC" size="37" bold="true" />
+      <color foreground="0xFFFFFF" background="0xFF8000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="r_corre.wav" />
+     <p>ESCOGE  LA RESPUESTA  CORRECTA.</p>
+    </cell>
+    <cell image="si.gif" type="final">
+     <style>
+      <font family="Kristen ITC" size="37" bold="true" />
+      <color foreground="0xFFFFFF" background="0xFF8000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="2_pizame.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <position x="150" y="25" />
+     <size width="550" height="460" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" background="0xFFFFFF" family="Comic Sans MS" size="33" italic="false" tabWidth="14" foreground="0x000000" bold="true" />
+    <style name="target" base="default" background="0xC0C0C0" target="true" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="33" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Comic Sans MS" size="33" italic="false" bold="true" foreground="0x000000">Podemos saber más:</text>
+     </p>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="33" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Comic Sans MS" size="33" italic="false" bold="true" foreground="0x000000">Mi </text>
+      <cell txtAlign="left,middle" imgAlign="left,middle" width="40" height="45" border="false" image="casa.gif">
+       <style>
+        <font family="Arial" size="20" bold="true" />
+        <color foreground="0x004000" background="0xFFFFFF" inactive="0x00FF00" alternative="0x00FF00" />
+       </style>
+       <media type="PLAY_AUDIO" level="1" file="casa.wav" />
+      </cell>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="33" italic="false" bold="true" foreground="0x000000"> tiene </text>
+      <target>
+       <answer>más</answer>
+       <optionList>
+        <option>menos</option>
+        <option>igual</option>
+        <option>más</option>
+       </optionList>
+       <text>más</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="33" italic="false" bold="true" foreground="0x000000"> volumen que un </text>
+      <cell txtAlign="left,middle" imgAlign="left,middle" width="65" height="60" border="false" image="1_cubo.gif">
+       <style>
+        <font family="Arial" size="20" bold="true" />
+        <color foreground="0x004000" background="0xFFFFFF" inactive="0x00FF00" alternative="0x00FF00" />
+       </style>
+       <media type="PLAY_AUDIO" level="1" file="cubo.wav" />
+      </cell>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="33" italic="false" bold="true" foreground="0x000000"> de 1 metro de lado.</text>
+     </p>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="33" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Comic Sans MS" size="33" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Comic Sans MS" size="33" italic="false" bold="true" foreground="0x000000">Mi </text>
+      <cell width="80" height="90" border="true" image="ni_o.gif">
+       <style>
+        <font family="Arial" size="20" bold="true" />
+        <color foreground="0x004000" background="0xFFFFFF" inactive="0x00FF00" alternative="0x00FF00" />
+       </style>
+      </cell>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="33" italic="false" bold="true" foreground="0x000000"> necesita  cerca de </text>
+      <target>
+       <answer>2</answer>
+       <optionList>
+        <option>0</option>
+        <option>2</option>
+        <option>5</option>
+        <option>8</option>
+        <option>10</option>
+       </optionList>
+       <text>2</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="33" italic="false" bold="true" foreground="0x000000"> litros de</text>
+      <cell txtAlign="left,middle" imgAlign="left,middle" width="120" height="90" border="false" image="agua.gif">
+       <style>
+        <font family="Arial" size="20" bold="true" />
+        <color foreground="0x004000" background="0xFFFFFF" inactive="0x00FF00" alternative="0x00FF00" />
+       </style>
+      </cell>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="33" italic="false" bold="true" foreground="0x000000"> por día. </text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="6_objet.ass">
+   <description>
+    <p>OBJETIVOS  DE ESTA  SECCION
+</p>
+    <p>CULTURA GENERAL SOBRE EL TEMA.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Kristen ITC" size="36" />
+      <color foreground="0xFFFFFF" background="0xFF8000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="con_mas.wav" />
+     <p>CONOZCAMOS   MÁS    SOBRE...</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Kristen ITC" size="36" />
+      <color foreground="0xFFFFFF" background="0xFF8000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFF00">
+     <image name="pizarra.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x004000" border="false" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="700.0" cellHeight="85.0" border="false">
+    <style>
+     <font family="Comic Sans MS" size="42" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>NIVEL  0: VISUALIZACIÓN    y   NIVEL 1: ANÁLISIS</p>
+    </cell>
+    <cell>
+     <p>PR0PONEMOS:</p>
+    </cell>
+    <cell>
+     <p>- Dar a conocer  hechos  históricos,  monumentos,  objetos  y  conceptos  relacionados con el  contenido  geométrico tratado  y  emnarcados    en     el  Proyecto de Aula que  desarrolla el docente.</p>
+    </cell>
+    <cell />
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="1_cubo.gif" file="1_cubo.gif" />
+  <media name="2_pizame.gif" file="2_pizame.gif" />
+  <media name="agua.gif" file="agua.gif" />
+  <media name="caja.gif" file="caja.gif" />
+  <media name="casa.gif" file="casa.gif" />
+  <media name="ni_o.gif" file="ni_o.gif" />
+  <media name="piram.gif" file="piram.gif" />
+  <media name="pizadi.gif" file="pizadi.gif" />
+  <media name="pizame.gif" file="pizame.gif" />
+  <media name="pizarra.gif" file="pizarra.gif" />
+  <media name="pizarvol.gif" file="pizarvol.gif" />
+  <media name="rompe.gif" file="rompe.gif" />
+  <media name="si.gif" file="si.gif" />
+  <media name="casa.wav" file="casa.wav" />
+  <media name="con_mas.wav" file="con_mas.wav" />
+  <media name="cubo.wav" file="cubo.wav" />
+  <media name="egi_pir.wav" file="egi_pir.wav" />
+  <media name="lee.wav" file="lee.wav" />
+  <media name="muybien.wav" file="muybien.wav" />
+  <media name="qvol.wav" file="qvol.wav" />
+  <media name="r_corre.wav" file="r_corre.wav" />
+  <media name="volu.wav" file="volu.wav" />
+ </mediaBag>
+</JClicProject>
+

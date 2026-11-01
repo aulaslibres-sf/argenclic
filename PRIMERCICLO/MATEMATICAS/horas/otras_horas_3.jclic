@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="otras_horas_3" version="0.1.3">
+ <settings>
+  <title>Las horas del reloj</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="2/15/08" />
+  <revision description="Conversión de Clic3 a JClic" date="2/14/08">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Tomás Fernández García" mail="tfernandez411@telefonica.net" />
+  <organization name="CP Ausiàs March" city="Alacant" state="País Valencià" />
+  <language>español</language>
+  <description>
+   <p>Proyecto de actividades dirigido a educación primaria  que teine como objetivo principal el aprendizaje y uso del reloj de forma práctica y sistemática. El proyecto tiene más de ciento cincuenta actividades y está dividido en seis partes:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Historia de relojes</p>
+   <p>&lt;LI&gt;En punto</p>
+   <p>&lt;LI&gt;Y media</p>
+   <p>&lt;LI&gt;Y cuarto, menos cuarto</p>
+   <p>&lt;LI&gt;Otras horas</p>
+   <p>&lt;LI&gt;Internet</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area="Matemáticas" level="Primaria (6-12)">tiempo</descriptors>
+  <skin file="@orange.xml" />
+ </settings>
+ <sequence>
+  <item id="start" name="cuanto tiempo pasa 1">
+   <jump tag="fin" project="Otras horas 2.jclic" id="back" />
+  </item>
+  <item name="cuanto tiempo pasa 2" />
+  <item name="tarde" />
+  <item name="tarde ana 2" />
+  <item name="tarde dig 2" />
+  <item id="fin" name="tarde 3">
+   <jump tag="start" project="otras_horas_4.jclic" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.ComplexAssociation" name="cuanto tiempo pasa 1" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="cuanto tiempo ha pasado.wav" />
+     <p>¿CUÁNTO  TIEMPO  HA  PASADO?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="estupendo.wav" />
+     <p>¡¡¡  ESTUPENDO !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo8.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="229.0" cellHeight="199.0" border="true" id="primary">
+    <style borderStroke="2.9" markerStroke="2.7">
+     <font family="Arial" size="16" />
+     <color background="0xFFFFFF" shadow="0xFFFFFF" inactive="0xFFFFFF" border="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="0" txtAlign="left,bottom" imgAlign="middle,top" border="true" image="avion.jpg">
+     <p>Este avión ha salido de Alicante a las 8 y 10 minutos y ha llegado a París a las 10 y 20 minutos ¿Cuánto ha durado el viaje?</p>
+    </cell>
+    <cell txtAlign="left,bottom" imgAlign="middle,top" image="escolares.jpg">
+     <p>Estos escolares suelen tardar un cuarto de hora en llegar al colegio. Si salieran a las 8:40 ¿a qué hora llegarían?</p>
+    </cell>
+    <cell txtAlign="middle,top" imgAlign="middle,bottom" image="estudiante.jpg">
+     <p>Manuel ha repasado matemáticas desde las 3 y 20 minutos hasta las 3 y 50 minutos de la tarde ¿Cuánto tiempo ha repasado?</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="112.0" cellHeight="87.0" border="true" id="secondary">
+    <style borderStroke="3.6" markerStroke="2.7">
+     <color background="0xFFFFCC" inactive="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>2 horas y 10 minutos</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>8 y 55 minutos</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>Media hora</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>1 hora</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>2 horas y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>8 y 50 minutos</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>35 minutos</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>6 horas y 70 minutos</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="cuanto tiempo pasa 2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="cuanto tiempo ha pasado.wav" />
+     <p>¿CUÁNTO  TIEMPO  HA  PASADO?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="correcto.wav" />
+     <p>¡¡¡  CORRECTO !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo8.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="322.0" cellHeight="135.0" border="false" id="primary">
+    <style borderStroke="2.9" markerStroke="2.7">
+     <color background="0xFFFFFF" shadow="0xFFFFFF" inactive="0xFFFFFF" border="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="0" txtAlign="left,top" imgAlign="right,middle" avoidOverlapping="true" border="true" image="FUTBOL.JPG">
+     <p>Juan comenzó a entrenar a las 18:50 y acabó a las 20:00 ¿cuánto tiempo entrenó?</p>
+    </cell>
+    <cell id="1" txtAlign="left,middle" imgAlign="left,middle" avoidOverlapping="true" border="true" image="escribir.jpg">
+     <p>Rosa comenzó a escribir un cuento a las 8:35 horas y tardó 2 horas y cuarto en acabarlo ¿A qué hora lo hizo?</p>
+    </cell>
+    <cell id="2" txtAlign="left,middle" imgAlign="right,middle" avoidOverlapping="true" border="true" image="musica.JPG">
+     <p>Si Juan acabó de ensayar a las 11 y 20 minutos y comenzó 3 horas antes, ¿a qué hora comenzo a ensayar?</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="94.0" cellHeight="109.0" border="true" id="secondary">
+    <style borderStroke="3.6" markerStroke="2.7">
+     <color background="0xFFFFCC" inactive="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>1 hora y 10 minutos</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>A las 10 horas y 50 minutos</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>9 horas y 20 minutos</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>1 hora y 15 minutos</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>A las 10 horas y 30 minutos</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>9 horas y 10 minutos</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>9 horas y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>A las 10 horas 40 minutos</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="tarde" code="">
+   <description>
+    <p>¿Cuándo es una hora en punto?</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="lee atent.wav" />
+     <p>LEE ATENTAMENTE</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo8.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="1" cols="2" cellWidth="356.0" cellHeight="391.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="reloj tarde.jpg">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="20" />
+      <color foreground="0x000033" background="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell txtAlign="left,middle">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="20" />
+      <color foreground="0x000033" background="0xFFFFCC" />
+     </style>
+     <p>LAS HORAS DE LA TARDE Y NOCHE</p>
+     <p>                                                                                 Cuando el tiempo pasa de las 12 del mediodia las horas siguientes se nombran así: </p>
+     <p>                                                                              </p>
+     <p>                                                                      13, 14, 15, ... hasta las 23. La hora 24 coincide con las 0 horas del día siguiente.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.Explore" name="tarde 3" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="senala reloj y obs hora.wav" />
+     <p>SEÑALA UN RELOJ    Y      OBSERVA LA HORA</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo8.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="276.0" cellHeight="317.0" border="true" id="primary">
+    <style shadow="true" borderStroke="3.6" markerStroke="2.7">
+     <color shadow="0x009999" inactive="0xFFCCCC" border="0x0066FF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="0" txtAlign="right,middle" border="false" image="reloj minuto_r.jpg">
+     <style borderStroke="1.6" markerStroke="5.0">
+      <font family="Arial" size="72" />
+      <color foreground="0x33FFFF" background="0xFF9900" inactive="0x0066FF" border="0x99FF00" />
+     </style>
+     <p>                                    </p>
+    </cell>
+    <cell id="1" border="true" image="DIGITA14-55.jpg">
+     <style borderStroke="2.7" markerStroke="2.7">
+      <color background="0x99FF99" border="0x3333FF" />
+     </style>
+    </cell>
+    <cell id="2" border="true" image="DIGITA13-05.jpg">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color background="0xFF99FF" border="0x3333FF" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="453.0" cellHeight="83.0" border="false" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell border="false">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="20" />
+      <color background="0xFF9900" inactive="0xFFCCCC" border="0xFF9900" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="utiliza reloj.wav" />
+     <p>UTILIZA este reloj para ayudarte a entender las horas digitales. </p>
+     <p>                                                                                                                         </p>
+    </cell>
+    <cell imgAlign="right,middle" border="false" image="ana2-55r.jpg">
+     <style borderStroke="0.0" markerStroke="2.7">
+      <font family="Arial" size="20" />
+      <color background="0x99FF99" border="0x66FF00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="14-55.wav" />
+     <p>Las 3 menos 5 minutos de la tarde  </p>
+    </cell>
+    <cell imgAlign="right,middle" image="ana1-05r.jpg">
+     <style borderStroke="0.0" markerStroke="5.0">
+      <font family="Arial" size="20" />
+      <color background="0xFF99FF" border="0x66FF00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="13-05.wav" />
+     <p>La 1 y 5 minutos de la tarde</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="tarde ana 2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="pincha y lee aten.wav" />
+     <p>PINCHA EN  LA  IMAGEN   Y  LEE ATENTAMENTE</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo8.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="352.0" cellHeight="217.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <color inactive="0x6699FF" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell id="0" txtAlign="left,middle" imgAlign="right,middle" border="true" image="ana1-30.jpg">
+     <style borderStroke="1.4" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color foreground="0xFF00CC" background="0x99FFFF" inactive="0x6699FF" border="0x3399FF" />
+     </style>
+     <p>RELOJ</p>
+     <p>ANALÓGICO </p>
+     <p>                                                 POR LA                                                   </p>
+     <p>MAÑANA</p>
+    </cell>
+    <cell id="1" txtAlign="left,middle" imgAlign="right,middle" image="ana1-30.jpg">
+     <style borderStroke="2.2" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color foreground="0x3333FF" background="0xFFFFCC" inactive="0x6699FF" border="0x3399FF" />
+     </style>
+     <p>RELOJ</p>
+     <p>ANALÓGICO </p>
+     <p>                                                 POR LA                                                   </p>
+     <p>NOCHE</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="329.0" cellHeight="244.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell txtAlign="left,middle">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0x99FFFF" border="0x3399FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="1-30 mañana.wav" />
+     <p> LA  1  Y  MEDIA  DE  LA   MAÑANA</p>
+     <p>                                                                    La posición de las agujas del reloj analógico no cambia sea por la mañana, por la tarde o por la noche.                 </p>
+     <p>                                                                                  </p>
+    </cell>
+    <cell txtAlign="left,middle">
+     <style borderStroke="2.6" markerStroke="5.0">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0x3399FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="1-30 noche.wav" />
+     <p> LA  1  Y  MEDIA  DE  LA   NOCHE</p>
+     <p>                                                                   En el momento de decir la hora, para diferenciar entre mañana o tarde, se le añade la palabra que corresponda:</p>
+     <p> </p>
+     <p>                                                  </p>
+     <p>                                                                    La 1 y media de la noche.</p>
+     <p>                                La 1 y media de la noche.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="tarde dig 2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="pincha y lee aten.wav" />
+     <p>PINCHA EN  LA  IMAGEN   Y  LEE ATENTAMENTE</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo8.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="261.0" cellHeight="271.0" border="true" id="primary">
+    <style borderStroke="1.5" markerStroke="5.0">
+     <color background="0xCCFFCC" inactive="0x6699FF" border="0x6699FF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="0" txtAlign="middle,top" imgAlign="middle,bottom" border="false" image="ana5-10.jpg">
+     <style borderStroke="2.9" markerStroke="5.0">
+      <font family="Arial" size="16" />
+      <color foreground="0x0000FF" background="0x99FFFF" inactive="0x6699FF" border="0x3399FF" />
+     </style>
+     <p>RELOJ </p>
+     <p>ANALÓGICO </p>
+     <p>                                                </p>
+    </cell>
+    <cell id="1" txtAlign="middle,top" border="true" image="DIGITA05-10.jpg">
+     <style borderStroke="4.0" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color foreground="0xFF3300" background="0xFFFFCC" inactive="0x6699FF" border="0x3399FF" />
+     </style>
+     <p>RELOJ DIGITAL POR LA MAÑANA</p>
+    </cell>
+    <cell id="2" txtAlign="middle,top" border="true" image="DIGITA17-10.jpg">
+     <style borderStroke="3.6" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color foreground="0x0000FF" background="0xFFCCFF" inactive="0x6699FF" border="0x3399FF" />
+     </style>
+     <p>RELOJ DIGITAL POR LA TARDE / NOCHE</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="201.0" cellHeight="99.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell txtAlign="left,middle">
+     <style borderStroke="2.6" markerStroke="5.0">
+      <font family="Arial" size="16" />
+      <color background="0x99FFFF" inactive="0xCCFFCC" border="0x3399FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="utiliza reloj.wav" />
+     <p>OBSERVA el reloj analógico para entender mejor las horas digitales.</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" inactive="0xCCFFCC" border="0x3399FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="5-10 mañana.wav" />
+     <p>LAS  5 Y 10 MINUTOS  DE  LA   MAÑANA</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFCCFF" inactive="0xCCFFCC" border="0x3399FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="5-10 tarde.wav" />
+     <p>LAS  5 Y 10 MINUTOS  DE  LA   TARDE</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="ana1-05r.jpg" file="ana1_05r.jpg" />
+  <media name="ana1-30.jpg" file="ana1_30.jpg" />
+  <media name="ana2-55r.jpg" file="ana2_55r.jpg" />
+  <media name="ana5-10.jpg" file="ana5_10.jpg" />
+  <media name="avion.jpg" file="i02_avion.jpg" />
+  <media name="DIGITA05-10.jpg" file="digita05_10.jpg" />
+  <media name="DIGITA13-05.jpg" file="digita13_05.jpg" />
+  <media name="DIGITA14-55.jpg" file="digita14_55.jpg" />
+  <media name="DIGITA17-10.jpg" file="digita17_10.jpg" />
+  <media name="escolares.jpg" file="i02_escolares.jpg" />
+  <media name="escribir.jpg" file="i02_escribir.jpg" />
+  <media name="estudiante.jpg" file="i02_estudiante.jpg" />
+  <media name="FUTBOL.JPG" file="i02_futbol.jpg" />
+  <media name="musica.JPG" file="i02_musica.jpg" />
+  <media name="reloj minuto_r.jpg" file="reloj_minuto_r.jpg" />
+  <media name="reloj tarde.jpg" file="reloj_tarde.jpg" />
+  <media name="tiempo8.jpg" file="tiempo8.jpg" />
+  <media name="1-30 mañana.wav" file="1_30_manana.wav" />
+  <media name="1-30 noche.wav" file="1_30_noche.wav" />
+  <media name="13-05.wav" file="13_05.wav" />
+  <media name="14-55.wav" file="14_55.wav" />
+  <media name="5-10 mañana.wav" file="5_10_manana.wav" />
+  <media name="5-10 tarde.wav" file="5_10_tarde.wav" />
+  <media name="correcto.wav" file="correcto.wav" />
+  <media name="cuanto tiempo ha pasado.wav" file="cuanto_tiempo_ha_pasado.wav" />
+  <media name="estupendo.wav" file="estupendo.wav" />
+  <media name="lee atent.wav" file="lee_atent.wav" />
+  <media name="pincha y lee aten.wav" file="pincha_y_lee_aten.wav" />
+  <media name="senala reloj y obs hora.wav" file="senala_reloj_y_obs_hora.wav" />
+  <media name="utiliza reloj.wav" file="utiliza_reloj.wav" />
+ </mediaBag>
+</JClicProject>
+

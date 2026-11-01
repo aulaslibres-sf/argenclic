@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="ddm" version="0.1.3">
+ <settings>
+  <title>Derechos del menor</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="6/3/05" />
+  <revision description="Conversión de Clic3 a JClic" date="6/3/05">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Mario Bermúdez" mail="mariocorreo@gmail.com" />
+  <organization name="CEIP Ricardo León" mail="29005175.averroes@juntadeandalucia.es" url="http://www.juntadeandalucia.es/averroes/ricardoleon/" city="Málaga" state="Andalucía" />
+  <language>es</language>
+  <description>
+   <p>Proyecto JClic dónde a través de rompecabezas los niños y niñas aprenden los derechos del menor.</p>
+  </description>
+  <descriptors area-codes="soc" level-codes="PRI" />
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Proyecto JClic dónde a través de rompecabezas los niños y niñas aprenden los derechos del menor.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="start" name="inicio_0">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="puzamor" />
+  <item name="puzamparo" />
+  <item name="puzauxilio" />
+  <item name="puzcalidad" />
+  <item name="puzeducación" />
+  <item name="puzidentidad" />
+  <item name="puzigualdad" />
+  <item name="puzintegración" />
+  <item name="puzprotección" />
+  <item name="puzsolidaridad" />
+  <item name="sopa" />
+  <item name="crucigrama" />
+  <item name="asocia" />
+  <item name="asocia_2" />
+  <item id="end" name="defensor" />
+  <item name="defensor_2">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.SimpleAssociation" name="asocia" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="17" />
+     </style>
+     <p>Une cada derecho con su pareja.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCCCFF">
+     <image name="ddm.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF9933" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="5" cellWidth="200.0" cellHeight="50.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="17" bold="true" />
+     <color background="0xFFCC99" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>AMOR</p>
+    </cell>
+    <cell>
+     <p>AUXILIO</p>
+    </cell>
+    <cell>
+     <p>EDUCACIÓN</p>
+    </cell>
+    <cell>
+     <p>AMPARO</p>
+    </cell>
+    <cell>
+     <p>CALIDAD DE VIDA</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="5" cellWidth="200.0" cellHeight="300.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <color background="0xCCCCFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>Derecho a recibir cariño y seguridad, especialmente de los padres y la familia.</p>
+    </cell>
+    <cell>
+     <p>Derecho a ser los primeros en recibir protección y socorro cuando sea necesario.</p>
+    </cell>
+    <cell>
+     <p>Derecho a aprender a pensar, jugar, dialogar y disfrutar</p>
+    </cell>
+    <cell>
+     <p>Derecho a que no nos abandonen, que no nos maltraten o exploten realizando trabajos de personas mayores.</p>
+    </cell>
+    <cell>
+     <p>Derecho a la alimentación, vivienda y atención médica.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="asocia_2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+     </style>
+     <p>Une cada derecho con su pareja.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCCCFF">
+     <image name="ddm.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF9933" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="5" cellWidth="200.0" cellHeight="50.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="17" bold="true" />
+     <color background="0xFFCC99" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>IDENTIDAD</p>
+    </cell>
+    <cell>
+     <p>IGUALDAD</p>
+    </cell>
+    <cell>
+     <p>INTEGRACIÓN</p>
+    </cell>
+    <cell>
+     <p>PROTECCIÓN</p>
+    </cell>
+    <cell>
+     <p>SOLIDARIDAD</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="5" cellWidth="200.0" cellHeight="300.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <color background="0xCCCCFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>Derecho a tener un nombre y una nacionalidad para empezar a ser uno mismo.</p>
+    </cell>
+    <cell>
+     <p>Derecho a ser tratados todos de la misma forma. Que por ser hombre o mujer, creer en una religión u otra, ser de una raza u otra, no influya en la forma en que se nos trate.</p>
+    </cell>
+    <cell>
+     <p>Derecho a que me cuiden de una manera especial cuando mi cuerpo o mi mente me impidan llevar una vida normal.</p>
+    </cell>
+    <cell>
+     <p>Derecho a ser protegido mientras no sea adulto y así poderme desarrollar y crecer sano y en libertad.</p>
+    </cell>
+    <cell>
+     <p>Derecho a que nos eduquen para ser comprensivos y solidarios con los demás, para entenderles y ayudarles viviendo en paz.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@textGrid.CrossWord" name="crucigrama" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+     </style>
+     <p>HAZ EL CRUCIGRAMA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+     </style>
+     <p>¡FABULOSO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <textGrid rows="9" columns="9" cellWidth="57.0" cellHeight="51.0" border="true">
+    <style>
+     <font family="Comic Sans MS" size="17" />
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>IDENTIDAD</row>
+     <row>G*D****MP</row>
+     <row>U*U****OA</row>
+     <row>A*C****RD</row>
+     <row>L*AMPARO*</row>
+     <row>D*CALIDAD</row>
+     <row>A*I******</row>
+     <row>D*Ó******</row>
+     <row>**N******</row>
+    </text>
+   </textGrid>
+   <cells rows="1" cols="3" cellWidth="200.0" cellHeight="60.0" border="true" id="acrossClues">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="2" item="2" />
+    <cell id="8" item="1" />
+    <cell id="8" item="0" />
+    <cell id="7" item="2" />
+    <cell id="7" item="0" />
+    <cell id="7" item="1" />
+    <cell id="6" item="2" />
+    <cell id="6" item="0" />
+    <cell id="6" item="1" />
+    <cell id="5" item="2" />
+    <cell id="5" item="0" />
+    <cell id="5" item="1">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xFEB701" />
+     </style>
+     <p>... de vida, otro derecho del menor.</p>
+    </cell>
+    <cell id="4" item="1">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xFEB701" />
+     </style>
+     <p>Derecho a que no nos abandonen, maltraten o exploten</p>
+    </cell>
+    <cell id="4" item="0" />
+    <cell id="4" item="2" />
+    <cell id="2" item="1" />
+    <cell id="2" item="0" />
+    <cell id="3" item="0" />
+    <cell id="3" item="1" />
+    <cell id="3" item="2" />
+    <cell id="3" item="2" />
+    <cell id="2" item="5" />
+    <cell id="2" item="4" />
+    <cell id="1" item="3" />
+    <cell id="1" item="0" />
+    <cell id="1" item="2">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xFEB701" />
+     </style>
+    </cell>
+    <cell id="1" item="1" />
+    <cell id="0" item="1" />
+    <cell id="1" item="5" />
+    <cell id="0" item="0">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xFEB701" />
+     </style>
+     <p>Derecho a tener nombre y nacionalidad</p>
+    </cell>
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="200.0" cellHeight="60.0" border="true" id="downClues">
+    <style />
+    <cell id="11" item="1" />
+    <cell id="11" item="0" />
+    <cell id="10" item="1" />
+    <cell id="10" item="0" />
+    <cell id="9" item="1" />
+    <cell id="9" item="0" />
+    <cell id="6" item="2" />
+    <cell id="6" item="1" />
+    <cell id="5" item="2" />
+    <cell id="5" item="1" />
+    <cell id="4" item="2" />
+    <cell id="4" item="1" />
+    <cell id="1" item="1" />
+    <cell id="1" item="1" />
+    <cell id="3" item="2" />
+    <cell id="3" item="1">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xFEB701" />
+     </style>
+     <p>Defensor del Menor de Andalucía</p>
+    </cell>
+    <cell id="3" item="0" />
+    <cell id="2" item="0">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xFEB701" />
+     </style>
+     <p>Derecho a aprender, pensar, jugar, dialogar y disfrutar</p>
+    </cell>
+    <cell id="8" item="2" />
+    <cell id="8" item="1" />
+    <cell id="8" item="0">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xFEB701" />
+     </style>
+     <p>Defensor del Pueblo Andaluz</p>
+    </cell>
+    <cell id="7" item="0">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xFEB701" />
+     </style>
+     <p>Derecho a recibir cariño y seguridad</p>
+    </cell>
+    <cell id="7" item="0" />
+    <cell id="0" item="0">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xFEB701" />
+     </style>
+     <p>Derecho a ser tratados todos de la misma forma</p>
+    </cell>
+    <cell id="8" />
+    <cell id="8" />
+    <cell id="6" />
+    <cell id="6" />
+    <cell id="1" />
+    <cell id="7" />
+    <cell id="7" />
+    <cell id="5" />
+    <cell id="5" />
+    <cell id="3" />
+    <cell id="3" />
+    <cell id="4" />
+    <cell id="4" />
+    <cell id="2" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="defensor" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+     </style>
+     <p>LEE EL TEXTO</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="ddm.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xCCCCFF" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="500.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color background="0xCCCCFF" />
+     </style>
+     <p>Todos tenemos derecho a nuestra niñez, tenemos derecho a no ser adultos precoces, tenemos derecho a jugar, a convivir con otras gentes y otras culturas, a que se preocupen de nuestra seguridad, nuestro sustento y nuestra salud, a que nos protejan de las situaciones en que somos más vulnerables.</p>
+     <p>El Estado español reconoce todos estos derechos y se ha comprometido a respetarlos y defenderlos.</p>
+     <p>Por eso, el Parlamento de Andalucía designó a una persona para que se encargase de defender los derechos de sus menores. Se le llamó "Defensor del Menor".</p>
+     <p />
+     <p>¿A qué se dedica el Defensor del Menor?.</p>
+     <p>Él recoge todas nuestras quejas y denuncias, las investiga y nos da una respuesta clara.</p>
+     <p>Recibe nuestras consultas y sugerencias, las estudia y las hace llegar a las administraciones, Parlamento o a quien corresponda. En fin, se preocupa de que se respeten y defiendan nuestros derechos, poniendo todos sus medios al servicio de esta causa.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="defensor_2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+     </style>
+     <p>ESTA ES LA WEB DEL DEFENSOR DEL MENOR EN ANDALUCÍA</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x006633">
+     <gradient source="0x006633" dest="0xFFFFFF" angle="0" cycles="2" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xCCCCFF" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="588.0" cellHeight="65.0" border="false">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="72" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell txtAlign="middle,bottom" avoidOverlapping="true">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="48" bold="true" />
+      <color background="0xCCCCFF" />
+     </style>
+     <media type="URL" level="1" file="http://www.defensordelmenor-and.es/menu.asp" />
+     <p>http://www.defensordelmenor-and.es/menu.asp</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xCCCCFF" />
+     </style>
+     <media type="PLAY_MIDI" level="1" file="alleluja.mid" autoStart="true" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="inicio_0" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xF7BC07" />
+     </style>
+     <media type="PLAY_MIDI" level="1" file="alleluja.mid" />
+     <p>LOS DERECHOS DEL MENOR</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x336600">
+     <gradient source="0x006633" dest="0xFFFFFF" angle="0" cycles="2" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFBA000" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="inicio0.jpg">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <color background="0xFFA304" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puzamor" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xEDB60F" />
+     </style>
+     <p>Haz el puzzle y aprende tus derechos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xE6AB15" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xCCCCFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="amor.jpg">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="puzamparo" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xEDB60F" />
+     </style>
+     <p>Haz el puzzle y aprende tus derechos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xE6AB15" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xCCCCFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="amparo.jpg">
+    <style />
+    <shaper class="@ClassicJigSaw" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puzauxilio" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xEDB60F" />
+     </style>
+     <p>Haz el puzzle y aprende tus derechos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xE6AB15" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xCCCCFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="auxilio.jpg">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="puzcalidad" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xEDB60F" />
+     </style>
+     <p>Haz el puzzle y aprende tus derechos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xE6AB15" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xCCCCFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="calidad.jpg">
+    <style />
+    <shaper class="@TriangularJigSaw" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puzeducación" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xEDB60F" />
+     </style>
+     <p>Haz el puzzle y aprende tus derechos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xE6AB15" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xCCCCFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="educacion.jpg">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="puzidentidad" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xEDB60F" />
+     </style>
+     <p>Haz el puzzle y aprende tus derechos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xE6AB15" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xCCCCFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="identidad.jpg">
+    <style />
+    <shaper class="@ClassicJigSaw" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puzigualdad" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xEDB60F" />
+     </style>
+     <p>Haz el puzzle y aprende tus derechos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xE6AB15" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xCCCCFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="igualdad.jpg">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="puzintegración" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xEDB60F" />
+     </style>
+     <p>Haz el puzzle y aprende tus derechos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xE6AB15" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xCCCCFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="integracion.jpg">
+    <style />
+    <shaper class="@TriangularJigSaw" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puzprotección" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xEDB60F" />
+     </style>
+     <p>Haz el puzzle y aprende tus derechos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xE6AB15" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xCCCCFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="proteccion.jpg">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="puzsolidaridad" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xEDB60F" />
+     </style>
+     <p>Haz el puzzle y aprende tus derechos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xE6AB15" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xCCCCFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="solidaridad.jpg">
+    <style />
+    <shaper class="@ClassicJigSaw" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="sopa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="17" />
+      <color background="0xFFB700" />
+     </style>
+     <p>ENCUENTRA OCHO DERECHOS</p>
+    </cell>
+    <cell border="true" type="final">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCCCFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xF7B200" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <textGrid rows="12" columns="8" cellWidth="37.0" cellHeight="29.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>AMOR********</row>
+     <row>MINTEGRACIÓN</row>
+     <row>P*DADITNEDI*</row>
+     <row>A***********</row>
+     <row>R*AUXILIO***</row>
+     <row>ONÓICCETORP*</row>
+     <row>SOLIDARIDAD*</row>
+     <row>EDUCACIÓN***</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">INTEGRACIÓN</clue>
+    <clue id="1">IDENTIDAD</clue>
+    <clue id="2">AUXILIO</clue>
+    <clue id="3">AMOR</clue>
+    <clue id="4">AMPARO</clue>
+    <clue id="5">SOLIDARIDAD</clue>
+    <clue id="6">EDUCACIÓN</clue>
+    <clue id="7">PROTECCIÓN</clue>
+   </clues>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="amor.jpg" file="amor.jpg" />
+  <media name="amparo.jpg" file="amparo.jpg" />
+  <media name="auxilio.jpg" file="auxilio.jpg" />
+  <media name="calidad.jpg" file="calidad.jpg" />
+  <media name="ddm.jpg" file="ddm.jpg" />
+  <media name="educacion.jpg" file="educacion.jpg" />
+  <media name="identidad.jpg" file="identidad.jpg" />
+  <media name="igualdad.jpg" file="igualdad.jpg" />
+  <media name="inicio0.jpg" file="inicio0.jpg" />
+  <media name="integracion.jpg" file="integracion.jpg" />
+  <media name="proteccion.jpg" file="proteccion.jpg" />
+  <media name="solidaridad.jpg" file="solidaridad.jpg" />
+  <media name="alleluja.mid" file="alleluja.mid" />
+ </mediaBag>
+</JClicProject>
+

@@ -1,0 +1,3435 @@
+// Metadatos de proyectos JClic - Generado automáticamente
+const proyectosData = [
+  {
+    "titulo": "Biblioteca Aulas Libres - Proyecto ArgenClic",
+    "descripcion": "",
+    "url": "index.html",
+    "categoria": "",
+    "carpeta": "",
+    "ciclo": "Principal",
+    "keywords": []
+  },
+  {
+    "titulo": "La noticia",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/LENGUA/noti/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "noti",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Partes del diario",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/LENGUA/diario/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "diario",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Los determinantes",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/LENGUA/determin/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "determin",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Lenguaje 4º, sílabas y acentos",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/LENGUA/silabac/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "silabac",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Lengua 4º EP",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/LENGUA/lengua4/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "lengua4",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Clases de adjetivos",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/LENGUA/adjetiv2/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "adjetiv2",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Clases de sustantivos",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/LENGUA/sustanti/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "sustanti",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Ortografía para 4º EP",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/LENGUA/ortogra2/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "ortogra2",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Taller del cuento \"El príncipe feliz\"",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/LENGUA/principe/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "principe",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Lengua castellana - 6º de primaria",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/LENGUA/lensexto/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "lensexto",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Gramática",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/LENGUA/grama5-1/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "grama5-1",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Partes invariables de la oración",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/LENGUA/pinvaria/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "pinvaria",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Análisis sintáctico",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/LENGUA/sintaxis/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "sintaxis",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Lengua castellana - 5º primaria",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/LENGUA/lequinto/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "lequinto",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Los verbos",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/LENGUA/verbos3/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "verbos3",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Las palabras",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/LENGUA/palabras/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "palabras",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Miguel de Cervantes Saavedra",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/LENGUA/cervant2/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "cervant2",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Actividades de Gramática",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/LENGUA/gramat/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "gramat",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Hermanos Grimm",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/LENGUA/grimm/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "grimm",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Poesía para educación primaria",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/LENGUA/poesiap1/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "poesiap1",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Compete",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/OTRAS/compete/index.html",
+    "categoria": "OTRAS",
+    "carpeta": "compete",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Actividades variadas",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/OTRAS/actvaria/index.html",
+    "categoria": "OTRAS",
+    "carpeta": "actvaria",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "ajedrez",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/OTRAS/AJEDREZ/index.html",
+    "categoria": "OTRAS",
+    "carpeta": "AJEDREZ",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Sin nombre",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/SOCIALES/mutual/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "mutual",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "La Argentina",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/SOCIALES/argentin/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "argentin",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Regiones Argentinas",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/SOCIALES/regiones/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "regiones",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Sarmiento",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/SOCIALES/sarmiento/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "sarmiento",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Derechos del menor",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/SOCIALES/derechos/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "derechos",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Sin nombre",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/SOCIALES/atlas/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "atlas",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Sin nombre",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/SOCIALES/belgr/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "belgr",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Cristóbal Colón y el descubrimiento",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/SOCIALES/colon/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "colon",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "boleta",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/SOCIALES/boleta/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "boleta",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Proyecto: Conozcamos nuestros país",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/SOCIALES/clarisa/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "clarisa",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Geografía, los departamentos de Perú",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/SOCIALES/geoperu/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "geoperu",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "La Bandera Argentina",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/SOCIALES/bandera/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "bandera",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Mercosur",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/SOCIALES/mercosur/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "mercosur",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "La igualdad de género",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/SOCIALES/igualdad/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "igualdad",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Los inventos",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/SOCIALES/jclic/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "jclic",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Conozcamos San Luis",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/SOCIALES/sanluis/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "sanluis",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "mundial",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/SOCIALES/mundial/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "mundial",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "República mexicana",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/SOCIALES/mimexico/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "mimexico",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Medios de transporte y educación vial",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/SOCIALES/evial/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "evial",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Proyección de Peters",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/SOCIALES/peters/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "peters",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Sin nombre",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/SOCIALES/dh/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "dh",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Paisaje y territorio",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/SOCIALES/payte/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "payte",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Ejemate",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/MATEMATICAS/ejemate/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "ejemate",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "TETRAVEX: Rompecabezas numéricos",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/MATEMATICAS/tetrav/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "tetrav",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Bingo matemático",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/MATEMATICAS/binmates/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "binmates",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Matemáticas - 6º primaria",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/MATEMATICAS/matsexto/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "matsexto",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Fracciones y operaciones con fracciones",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/MATEMATICAS/fracci/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "fracci",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Prisma cálculo",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/MATEMATICAS/prisma/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "prisma",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Numeración romana",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/MATEMATICAS/romanos/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "romanos",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Los números racionales: las fracciones",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/MATEMATICAS/fraccion/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "fraccion",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Medir el tiempo",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/MATEMATICAS/meditemp/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "meditemp",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Geometría plana",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/MATEMATICAS/poligoes/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "poligoes",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Nivelación restitutiva",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/MATEMATICAS/nivelmat/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "nivelmat",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Iniciación a problemas - 2º ciclo",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/MATEMATICAS/problems/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "problems",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Fracciones - 2",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/MATEMATICAS/fraccio2/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "fraccio2",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Crucigramas de cálculo mental",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/MATEMATICAS/encrenum/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "encrenum",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Problemas variados (ciclo superior)",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/MATEMATICAS/probcast/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "probcast",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Actividades de geometría para primaria",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/MATEMATICAS/geo2prim/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "geo2prim",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Matemáticas para el 2º Ciclo de Primaria",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/MATEMATICAS/mates2c/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "mates2c",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Introducción a las fracciones",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/MATEMATICAS/intrfrac/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "intrfrac",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Ángulos",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/MATEMATICAS/angulos/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "angulos",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Potencia",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/MATEMATICAS/potencia/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "potencia",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Fracciones - 1",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/MATEMATICAS/fraccio1/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "fraccio1",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Fracciones",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/MATEMATICAS/fracc/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "fracc",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "La orientación",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/NATURALES/orienta/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "orienta",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Conocimiento del Medio 4 primaria",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/NATURALES/medio4/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "medio4",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "La comunidad de las abejas, una familia muy especial",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/NATURALES/abejas/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "abejas",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Vistas de la tierra",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/NATURALES/vistas/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "vistas",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Cuerpo humano - aparato digestivo",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/NATURALES/cienciax/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "cienciax",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Aparato Digestivo",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/NATURALES/dig/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "dig",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "El cuerpo humano - 1",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/NATURALES/humano/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "humano",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "La tierra",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/NATURALES/tierra/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "tierra",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Nuestro cuerpo",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/NATURALES/cuerpo/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "cuerpo",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Conocimiento del medio 4º",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/NATURALES/cmedio4/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "cmedio4",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Sin nombre",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/NATURALES/nacer/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "nacer",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "El sistema digestivo",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/NATURALES/digrespi/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "digrespi",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "La función de nutrición",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/NATURALES/funutri/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "funutri",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Dengue",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/NATURALES/dengue/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "dengue",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Higiene dental",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/NATURALES/higiesp/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "higiesp",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Los animales - 2",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/NATURALES/animalp/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "animalp",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Física 5",
+    "descripcion": "",
+    "url": "SEGUNDOCICLO/NATURALES/fisica5/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "fisica5",
+    "ciclo": "Segundo Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Actividades de lectoescritura",
+    "descripcion": "",
+    "url": "INICIAL/LENGUA/lectura/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "lectura",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Ven a leer 1, 2 y 3",
+    "descripcion": "",
+    "url": "INICIAL/LENGUA/venylee1/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "venylee1",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Érase una vez... 1",
+    "descripcion": "",
+    "url": "INICIAL/LENGUA/erase1/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "erase1",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Animaletras",
+    "descripcion": "",
+    "url": "INICIAL/LENGUA/anylet/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "anylet",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Las letras que suenan",
+    "descripcion": "",
+    "url": "INICIAL/LENGUA/lls/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "lls",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Aprender a leer",
+    "descripcion": "",
+    "url": "INICIAL/LENGUA/aprender/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "aprender",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Estimulación visual",
+    "descripcion": "",
+    "url": "INICIAL/LENGUA/ev/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "ev",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Vamos a leer",
+    "descripcion": "",
+    "url": "INICIAL/LENGUA/leer3/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "leer3",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Manuelita",
+    "descripcion": "",
+    "url": "INICIAL/LENGUA/manuelita/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "manuelita",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Cuentos",
+    "descripcion": "",
+    "url": "INICIAL/LENGUA/cuentos2/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "cuentos2",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Discriminación acústica de las vocales",
+    "descripcion": "",
+    "url": "INICIAL/LENGUA/discvoc2/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "discvoc2",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Sílabas",
+    "descripcion": "",
+    "url": "INICIAL/LENGUA/silabes/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "silabes",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Vamos a Leer",
+    "descripcion": "",
+    "url": "INICIAL/LENGUA/leer0/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "leer0",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Aniclic: método de lectura",
+    "descripcion": "",
+    "url": "INICIAL/LENGUA/aniclic/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "aniclic",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Las vocales",
+    "descripcion": "",
+    "url": "INICIAL/LENGUA/vocales/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "vocales",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Taller de cocina",
+    "descripcion": "",
+    "url": "INICIAL/OTRAS/tcocina/index.html",
+    "categoria": "OTRAS",
+    "carpeta": "tcocina",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Me divierto aprendiendo",
+    "descripcion": "",
+    "url": "INICIAL/OTRAS/kinder/index.html",
+    "categoria": "OTRAS",
+    "carpeta": "kinder",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "El ratón",
+    "descripcion": "",
+    "url": "INICIAL/OTRAS/raton/index.html",
+    "categoria": "OTRAS",
+    "carpeta": "raton",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Puzzles de animales",
+    "descripcion": "",
+    "url": "INICIAL/OTRAS/animcast/index.html",
+    "categoria": "OTRAS",
+    "carpeta": "animcast",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Colores",
+    "descripcion": "",
+    "url": "INICIAL/OTRAS/colores/index.html",
+    "categoria": "OTRAS",
+    "carpeta": "colores",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Los tamaños",
+    "descripcion": "",
+    "url": "INICIAL/OTRAS/ta_cdvmo/index.html",
+    "categoria": "OTRAS",
+    "carpeta": "ta_cdvmo",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Estimulación visual",
+    "descripcion": "",
+    "url": "INICIAL/OTRAS/ev/index.html",
+    "categoria": "OTRAS",
+    "carpeta": "ev",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Sin nombre",
+    "descripcion": "",
+    "url": "INICIAL/OTRAS/inforinf/index.html",
+    "categoria": "OTRAS",
+    "carpeta": "inforinf",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "¿Cuál es cuál?",
+    "descripcion": "",
+    "url": "INICIAL/OTRAS/cuales/index.html",
+    "categoria": "OTRAS",
+    "carpeta": "cuales",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Los colores",
+    "descripcion": "",
+    "url": "INICIAL/OTRAS/col_dvmo/index.html",
+    "categoria": "OTRAS",
+    "carpeta": "col_dvmo",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Actividades de educación infantil",
+    "descripcion": "",
+    "url": "INICIAL/OTRAS/infaez5i/index.html",
+    "categoria": "OTRAS",
+    "carpeta": "infaez5i",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "TEQ - Conceptes bàsics",
+    "descripcion": "",
+    "url": "INICIAL/OTRAS/teqes/index.html",
+    "categoria": "OTRAS",
+    "carpeta": "teqes",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Adentro, afuera",
+    "descripcion": "",
+    "url": "INICIAL/OTRAS/adfue/index.html",
+    "categoria": "OTRAS",
+    "carpeta": "adfue",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Colonia",
+    "descripcion": "",
+    "url": "INICIAL/SOCIALES/colonia/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "colonia",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Las Herramientas",
+    "descripcion": "",
+    "url": "INICIAL/SOCIALES/herram/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "herram",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Los Oficios",
+    "descripcion": "",
+    "url": "INICIAL/SOCIALES/oficios/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "oficios",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Dinosaurios",
+    "descripcion": "",
+    "url": "INICIAL/SOCIALES/dinosaur/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "dinosaur",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Transportes",
+    "descripcion": "",
+    "url": "INICIAL/SOCIALES/transpo2/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "transpo2",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Educación Vial para pequeños",
+    "descripcion": "",
+    "url": "INICIAL/SOCIALES/eduvial/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "eduvial",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "EmocionaTEA",
+    "descripcion": "",
+    "url": "INICIAL/SOCIALES/emocion/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "emocion",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Cuento para la tolerancia",
+    "descripcion": "",
+    "url": "INICIAL/SOCIALES/cuentole/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "cuentole",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Formas",
+    "descripcion": "",
+    "url": "INICIAL/MATEMATICAS/formas2/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "formas2",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "En serie",
+    "descripcion": "",
+    "url": "INICIAL/MATEMATICAS/enserie/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "enserie",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Figuras",
+    "descripcion": "",
+    "url": "INICIAL/MATEMATICAS/figuras/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "figuras",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Secuencias",
+    "descripcion": "",
+    "url": "INICIAL/MATEMATICAS/sekuenci/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "sekuenci",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Los primeros números por vía visual directa (Discapacidad visual baja visión)",
+    "descripcion": "",
+    "url": "INICIAL/MATEMATICAS/2num1/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "2num1",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Jugando con los números",
+    "descripcion": "",
+    "url": "INICIAL/MATEMATICAS/numeros2/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "numeros2",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Blocs lògics",
+    "descripcion": "",
+    "url": "INICIAL/MATEMATICAS/blocs/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "blocs",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Uno, dos y ninguno",
+    "descripcion": "",
+    "url": "INICIAL/MATEMATICAS/undostre/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "undostre",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Ordena",
+    "descripcion": "",
+    "url": "INICIAL/MATEMATICAS/ordena/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "ordena",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "La granja",
+    "descripcion": "",
+    "url": "INICIAL/NATURALES/lagranja/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "lagranja",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Sense nom",
+    "descripcion": "",
+    "url": "INICIAL/NATURALES/frutas/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "frutas",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "De viaje por el sistema solar",
+    "descripcion": "",
+    "url": "INICIAL/NATURALES/viajesol/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "viajesol",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Los alimentos",
+    "descripcion": "",
+    "url": "INICIAL/NATURALES/aliment/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "aliment",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Los sentidos",
+    "descripcion": "",
+    "url": "INICIAL/NATURALES/sentido2/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "sentido2",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Mimo - las partes del cuerpo",
+    "descripcion": "",
+    "url": "INICIAL/NATURALES/mimo/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "mimo",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Aprendiendo a reciclar",
+    "descripcion": "",
+    "url": "INICIAL/NATURALES/recicla3/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "recicla3",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Reconocimiento de sonidos",
+    "descripcion": "",
+    "url": "INICIAL/NATURALES/sonidos/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "sonidos",
+    "ciclo": "Nivel Inicial",
+    "keywords": []
+  },
+  {
+    "titulo": "Ls1 y Ls2, ejercicios de práctica y evaluación",
+    "descripcion": "",
+    "url": "SECUNDARIO/LENGUA/ls1/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "ls1",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Pablo Neruda y Gabriela Mistral",
+    "descripcion": "",
+    "url": "SECUNDARIO/LENGUA/poetas/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "poetas",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Comp-Juega",
+    "descripcion": "",
+    "url": "SECUNDARIO/LENGUA/compjueg/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "compjueg",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Razonamiento verbal",
+    "descripcion": "",
+    "url": "SECUNDARIO/LENGUA/rverbal/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "rverbal",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Actividades de literatura castellana",
+    "descripcion": "",
+    "url": "SECUNDARIO/LENGUA/litecast/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "litecast",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Marco de la comunicación",
+    "descripcion": "",
+    "url": "SECUNDARIO/LENGUA/lexico/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "lexico",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "La oración compuesta",
+    "descripcion": "",
+    "url": "SECUNDARIO/LENGUA/oracom/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "oracom",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Harry Potter y La Piedra Filosofal",
+    "descripcion": "",
+    "url": "SECUNDARIO/LENGUA/hpotter/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "hpotter",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Conjuga",
+    "descripcion": "",
+    "url": "SECUNDARIO/LENGUA/conjuga/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "conjuga",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Lengua para 3r ciclo de primaria",
+    "descripcion": "",
+    "url": "SECUNDARIO/LENGUA/lenguac3/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "lenguac3",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Comunicación",
+    "descripcion": "",
+    "url": "SECUNDARIO/LENGUA/comunica/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "comunica",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Lengua castellana y literatura para secundaria",
+    "descripcion": "",
+    "url": "SECUNDARIO/LENGUA/lengueso/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "lengueso",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Homenaje a Mozart",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/MUSICA/mozart/index.html",
+    "categoria": "MUSICA",
+    "carpeta": "mozart",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "El folklore musical de Chile",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/MUSICA/folkch/index.html",
+    "categoria": "MUSICA",
+    "carpeta": "folkch",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Actividades de música para educación infantil",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/MUSICA/musinfes/index.html",
+    "categoria": "MUSICA",
+    "carpeta": "musinfes",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "La flauta Màgica",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/MUSICA/flautaes/index.html",
+    "categoria": "MUSICA",
+    "carpeta": "flautaes",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "El rock (Ejercicios)",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/MUSICA/rock3/index.html",
+    "categoria": "MUSICA",
+    "carpeta": "rock3",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Los instrumentos musicales",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/MUSICA/instrmus/index.html",
+    "categoria": "MUSICA",
+    "carpeta": "instrmus",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Telegrama de la Historia de la Música",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/MUSICA/histmues/index.html",
+    "categoria": "MUSICA",
+    "carpeta": "histmues",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Actividades de música para primaria y ESO",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/MUSICA/musicaes/index.html",
+    "categoria": "MUSICA",
+    "carpeta": "musicaes",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Actividades de ritmo",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/MUSICA/ritmo/index.html",
+    "categoria": "MUSICA",
+    "carpeta": "ritmo",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "El rock (Repaso auditivo)",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/MUSICA/rock4/index.html",
+    "categoria": "MUSICA",
+    "carpeta": "rock4",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "El rock (La historia)",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/MUSICA/rock1/index.html",
+    "categoria": "MUSICA",
+    "carpeta": "rock1",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Britten",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/MUSICA/brittesp/index.html",
+    "categoria": "MUSICA",
+    "carpeta": "brittesp",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Els músics de Bremen",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/MUSICA/musicos/index.html",
+    "categoria": "MUSICA",
+    "carpeta": "musicos",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "El rock (Audiciones)",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/MUSICA/rock2/index.html",
+    "categoria": "MUSICA",
+    "carpeta": "rock2",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "La pintura a finales del siglo XIX y principios del siglo XX",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/pintura/pintura/index.html",
+    "categoria": "pintura",
+    "carpeta": "pintura",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Hobbies and interests",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/SUPERIOR/hobbies/index.html",
+    "categoria": "SUPERIOR",
+    "carpeta": "hobbies",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Phonetics",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/SUPERIOR/phonetic/index.html",
+    "categoria": "SUPERIOR",
+    "carpeta": "phonetic",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Comparatives and Superlatives",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/SUPERIOR/dictatio/index.html",
+    "categoria": "SUPERIOR",
+    "carpeta": "dictatio",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Let's have fun possessives!",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/SUPERIOR/posesive/index.html",
+    "categoria": "SUPERIOR",
+    "carpeta": "posesive",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Mystery project",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/SUPERIOR/mystery/index.html",
+    "categoria": "SUPERIOR",
+    "carpeta": "mystery",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Welcome to London",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/SUPERIOR/london2/index.html",
+    "categoria": "SUPERIOR",
+    "carpeta": "london2",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "London",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/SUPERIOR/london/index.html",
+    "categoria": "SUPERIOR",
+    "carpeta": "london",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "30 irregular verbs",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/SUPERIOR/30verbs/index.html",
+    "categoria": "SUPERIOR",
+    "carpeta": "30verbs",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "English adjectives",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/SUPERIOR/adjectiv/index.html",
+    "categoria": "SUPERIOR",
+    "carpeta": "adjectiv",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Kinds of energy and energy sources",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/SUPERIOR/energy/index.html",
+    "categoria": "SUPERIOR",
+    "carpeta": "energy",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "English topics",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/SUPERIOR/topics/index.html",
+    "categoria": "SUPERIOR",
+    "carpeta": "topics",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Eating Out",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/SUPERIOR/eating/index.html",
+    "categoria": "SUPERIOR",
+    "carpeta": "eating",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Learning English",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/SUPERIOR/learnsnd/index.html",
+    "categoria": "SUPERIOR",
+    "carpeta": "learnsnd",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Daily Routines",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/SUPERIOR/routines/index.html",
+    "categoria": "SUPERIOR",
+    "carpeta": "routines",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "English 5º",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/BASICO/english5/index.html",
+    "categoria": "BASICO",
+    "carpeta": "english5",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Bugs",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/BASICO/bugs/index.html",
+    "categoria": "BASICO",
+    "carpeta": "bugs",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Phonetics",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/BASICO/phonetic/index.html",
+    "categoria": "BASICO",
+    "carpeta": "phonetic",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Twelve adjectives",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/BASICO/12adject/index.html",
+    "categoria": "BASICO",
+    "carpeta": "12adject",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Our pets",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/BASICO/pets/index.html",
+    "categoria": "BASICO",
+    "carpeta": "pets",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Geography in English",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/BASICO/geoeng/index.html",
+    "categoria": "BASICO",
+    "carpeta": "geoeng",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Family",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/BASICO/family/index.html",
+    "categoria": "BASICO",
+    "carpeta": "family",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "The colors",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/BASICO/colors/index.html",
+    "categoria": "BASICO",
+    "carpeta": "colors",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Just grammatical aspects",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/BASICO/justgram/index.html",
+    "categoria": "BASICO",
+    "carpeta": "justgram",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Discovering words",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/BASICO/bugs1/index.html",
+    "categoria": "BASICO",
+    "carpeta": "bugs1",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "The animals",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/BASICO/animals6/index.html",
+    "categoria": "BASICO",
+    "carpeta": "animals6",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Colours",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/BASICO/colours/index.html",
+    "categoria": "BASICO",
+    "carpeta": "colours",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "School",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/BASICO/school/index.html",
+    "categoria": "BASICO",
+    "carpeta": "school",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Inglés para 3º de primaria",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/BASICO/ingles/index.html",
+    "categoria": "BASICO",
+    "carpeta": "ingles",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "English activities",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/BASICO/compsup/index.html",
+    "categoria": "BASICO",
+    "carpeta": "compsup",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "English activities",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/BASICO/be/index.html",
+    "categoria": "BASICO",
+    "carpeta": "be",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Discovering words",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/BASICO/dwp3/index.html",
+    "categoria": "BASICO",
+    "carpeta": "dwp3",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "The human body",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/BASICO/humanbod/index.html",
+    "categoria": "BASICO",
+    "carpeta": "humanbod",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Irregular verbs",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/BASICO/irrverbs/index.html",
+    "categoria": "BASICO",
+    "carpeta": "irrverbs",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "English 6º",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/BASICO/sextoi2/index.html",
+    "categoria": "BASICO",
+    "carpeta": "sextoi2",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Inlgés 4º EP",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/BASICO/ingl4ep/index.html",
+    "categoria": "BASICO",
+    "carpeta": "ingl4ep",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "English activities",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/BASICO/havegot/index.html",
+    "categoria": "BASICO",
+    "carpeta": "havegot",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Animals",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/INGLES/BASICO/anieng/index.html",
+    "categoria": "BASICO",
+    "carpeta": "anieng",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Aprendamos francés",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/FRANCES/apfran/index.html",
+    "categoria": "FRANCES",
+    "carpeta": "apfran",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Allons au restaurant",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/FRANCES/restaur/index.html",
+    "categoria": "FRANCES",
+    "carpeta": "restaur",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "La France, activités de Français",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/FRANCES/lafrance/index.html",
+    "categoria": "FRANCES",
+    "carpeta": "lafrance",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Les nombres en français",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/FRANCES/frnums/index.html",
+    "categoria": "FRANCES",
+    "carpeta": "frnums",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Activités de Français",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/FRANCES/frances/index.html",
+    "categoria": "FRANCES",
+    "carpeta": "frances",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Partir",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/FRANCES/partir/index.html",
+    "categoria": "FRANCES",
+    "carpeta": "partir",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Les verbes (1)",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/FRANCES/verbes/index.html",
+    "categoria": "FRANCES",
+    "carpeta": "verbes",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "France",
+    "descripcion": "",
+    "url": "SECUNDARIO/OTRAS/IDIOMAS/FRANCES/france/index.html",
+    "categoria": "FRANCES",
+    "carpeta": "france",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Sin nombre",
+    "descripcion": "",
+    "url": "SECUNDARIO/SOCIALES/mutual/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "mutual",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "La Prehistoria",
+    "descripcion": "",
+    "url": "SECUNDARIO/SOCIALES/laprehis/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "laprehis",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "La Antigua Roma",
+    "descripcion": "",
+    "url": "SECUNDARIO/SOCIALES/roma2/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "roma2",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Grecia y Roma",
+    "descripcion": "",
+    "url": "SECUNDARIO/SOCIALES/grecroma/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "grecroma",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "argentinas",
+    "descripcion": "",
+    "url": "SECUNDARIO/SOCIALES/argentinas/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "argentinas",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "El humanismo",
+    "descripcion": "",
+    "url": "SECUNDARIO/SOCIALES/humanism/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "humanism",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Las Redes Sociales",
+    "descripcion": "",
+    "url": "SECUNDARIO/SOCIALES/redes/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "redes",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Breve historia del mundo",
+    "descripcion": "",
+    "url": "SECUNDARIO/SOCIALES/breveh/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "breveh",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Etapas de la historia",
+    "descripcion": "",
+    "url": "SECUNDARIO/SOCIALES/ehistori/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "ehistori",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "El rincón de los documentos",
+    "descripcion": "",
+    "url": "SECUNDARIO/SOCIALES/docume/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "docume",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Civilizaciones antiguas",
+    "descripcion": "",
+    "url": "SECUNDARIO/SOCIALES/civilant/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "civilant",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Pueblos primitivos de Chile",
+    "descripcion": "",
+    "url": "SECUNDARIO/SOCIALES/chile/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "chile",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "El nacimiento de la URSS",
+    "descripcion": "",
+    "url": "SECUNDARIO/SOCIALES/urss/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "urss",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Mercosur",
+    "descripcion": "",
+    "url": "SECUNDARIO/SOCIALES/mercosur/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "mercosur",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Educación para la solidaridad",
+    "descripcion": "",
+    "url": "SECUNDARIO/SOCIALES/edusoli1/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "edusoli1",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Geomorfología",
+    "descripcion": "",
+    "url": "SECUNDARIO/SOCIALES/geomorfo/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "geomorfo",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "La Grecia antigua",
+    "descripcion": "",
+    "url": "SECUNDARIO/SOCIALES/grecia2/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "grecia2",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Geografía latinoamericana",
+    "descripcion": "",
+    "url": "SECUNDARIO/SOCIALES/geolat/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "geolat",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Proyección de Peters",
+    "descripcion": "",
+    "url": "SECUNDARIO/SOCIALES/peters/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "peters",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Guerra civil española",
+    "descripcion": "",
+    "url": "SECUNDARIO/SOCIALES/gcivil/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "gcivil",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Derechos Humanos en Argentina",
+    "descripcion": "",
+    "url": "SECUNDARIO/SOCIALES/dh/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "dh",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Grècia i Roma",
+    "descripcion": "",
+    "url": "SECUNDARIO/SOCIALES/histo3es/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "histo3es",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Nuestro mundo",
+    "descripcion": "",
+    "url": "SECUNDARIO/SOCIALES/geo2-1/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "geo2-1",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Proporcionalidad",
+    "descripcion": "",
+    "url": "SECUNDARIO/MATEMATICAS/proporci/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "proporci",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Ecuaciones de primer y segundo grado",
+    "descripcion": "",
+    "url": "SECUNDARIO/MATEMATICAS/ecuac12b/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "ecuac12b",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Geoclic (español)",
+    "descripcion": "",
+    "url": "SECUNDARIO/MATEMATICAS/geoclice/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "geoclice",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Los números enteros",
+    "descripcion": "",
+    "url": "SECUNDARIO/MATEMATICAS/enteros/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "enteros",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Matemáticas y realidad",
+    "descripcion": "",
+    "url": "SECUNDARIO/MATEMATICAS/matreal/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "matreal",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Raíces cuadradas",
+    "descripcion": "",
+    "url": "SECUNDARIO/MATEMATICAS/raices/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "raices",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Potencias y raíces cuadradas",
+    "descripcion": "",
+    "url": "SECUNDARIO/MATEMATICAS/poten/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "poten",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Monomios y polinomios",
+    "descripcion": "",
+    "url": "SECUNDARIO/MATEMATICAS/monomios/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "monomios",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Introducción a la trigonometría",
+    "descripcion": "",
+    "url": "SECUNDARIO/MATEMATICAS/trigonom/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "trigonom",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Trigonometría",
+    "descripcion": "",
+    "url": "SECUNDARIO/MATEMATICAS/trigo2/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "trigo2",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Trigonometría",
+    "descripcion": "",
+    "url": "SECUNDARIO/MATEMATICAS/cuadrant/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "cuadrant",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Sistema binario",
+    "descripcion": "",
+    "url": "SECUNDARIO/MATEMATICAS/binario/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "binario",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Multiplicación y división de monomios",
+    "descripcion": "",
+    "url": "SECUNDARIO/MATEMATICAS/mdm/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "mdm",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Las distintas ecuaciones de las rectas",
+    "descripcion": "",
+    "url": "SECUNDARIO/MATEMATICAS/recafin/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "recafin",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Estudio global de funciones",
+    "descripcion": "",
+    "url": "SECUNDARIO/MATEMATICAS/funcion2/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "funcion2",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Cálculo con radicales",
+    "descripcion": "",
+    "url": "SECUNDARIO/MATEMATICAS/raices2/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "raices2",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Sistema sexagesimal",
+    "descripcion": "",
+    "url": "SECUNDARIO/MATEMATICAS/sexagesi/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "sexagesi",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Sistemas de numeración egipcio, maya y binario",
+    "descripcion": "",
+    "url": "SECUNDARIO/MATEMATICAS/sisnumpq/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "sisnumpq",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Funciones",
+    "descripcion": "",
+    "url": "SECUNDARIO/MATEMATICAS/funcione/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "funcione",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Puntos, gráficas y funciones",
+    "descripcion": "",
+    "url": "SECUNDARIO/MATEMATICAS/pungraes/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "pungraes",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Introducción a la robótica",
+    "descripcion": "",
+    "url": "SECUNDARIO/TECNOLOGIA/robots/index.html",
+    "categoria": "TECNOLOGIA",
+    "carpeta": "robots",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Actividades de tecnología 1º y 2º de ESO (02 - Madera, 1º ESO)",
+    "descripcion": "",
+    "url": "SECUNDARIO/TECNOLOGIA/madera/index.html",
+    "categoria": "TECNOLOGIA",
+    "carpeta": "madera",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Dibujo técnico",
+    "descripcion": "",
+    "url": "SECUNDARIO/TECNOLOGIA/matdibu/index.html",
+    "categoria": "TECNOLOGIA",
+    "carpeta": "matdibu",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Actividades de tecnología 1º y 2º de ESO (04 - Máquinas y mecanismos, 2º ESO)",
+    "descripcion": "",
+    "url": "SECUNDARIO/TECNOLOGIA/maquimec/index.html",
+    "categoria": "TECNOLOGIA",
+    "carpeta": "maquimec",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Tecnología: electrónica",
+    "descripcion": "",
+    "url": "SECUNDARIO/TECNOLOGIA/tecno3/index.html",
+    "categoria": "TECNOLOGIA",
+    "carpeta": "tecno3",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Informática básica",
+    "descripcion": "",
+    "url": "SECUNDARIO/TECNOLOGIA/informat/index.html",
+    "categoria": "TECNOLOGIA",
+    "carpeta": "informat",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "El proceso tecnológico en el aula-taller",
+    "descripcion": "",
+    "url": "SECUNDARIO/TECNOLOGIA/procesos/index.html",
+    "categoria": "TECNOLOGIA",
+    "carpeta": "procesos",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Estructuras",
+    "descripcion": "",
+    "url": "SECUNDARIO/TECNOLOGIA/estructuras/index.html",
+    "categoria": "TECNOLOGIA",
+    "carpeta": "estructuras",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Actividades de tecnología 1º y 2º de ESO (05 - Materiales metálicos, 2º ESO)",
+    "descripcion": "",
+    "url": "SECUNDARIO/TECNOLOGIA/matmetal/index.html",
+    "categoria": "TECNOLOGIA",
+    "carpeta": "matmetal",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Fundamentos de computación",
+    "descripcion": "",
+    "url": "SECUNDARIO/TECNOLOGIA/computad/index.html",
+    "categoria": "TECNOLOGIA",
+    "carpeta": "computad",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "SL",
+    "descripcion": "",
+    "url": "SECUNDARIO/TECNOLOGIA/sl/index.html",
+    "categoria": "TECNOLOGIA",
+    "carpeta": "sl",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Actividades de tecnología 1º y 2º de ESO (01 - Tecnología, 1º ESO)",
+    "descripcion": "",
+    "url": "SECUNDARIO/TECNOLOGIA/latecnol/index.html",
+    "categoria": "TECNOLOGIA",
+    "carpeta": "latecnol",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Actividades de tecnología 1º y 2º de ESO (07 - Circuitos eléctricos, 2º ESO)",
+    "descripcion": "",
+    "url": "SECUNDARIO/TECNOLOGIA/circelec/index.html",
+    "categoria": "TECNOLOGIA",
+    "carpeta": "circelec",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Mecanismos",
+    "descripcion": "",
+    "url": "SECUNDARIO/TECNOLOGIA/mecanis2/index.html",
+    "categoria": "TECNOLOGIA",
+    "carpeta": "mecanis2",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Actividades de tecnología 1º y 2º de ESO (03 - Materiales para utilizar en Tecnología, 1º ESO)",
+    "descripcion": "",
+    "url": "SECUNDARIO/TECNOLOGIA/mater2/index.html",
+    "categoria": "TECNOLOGIA",
+    "carpeta": "mater2",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Plásticos",
+    "descripcion": "",
+    "url": "SECUNDARIO/TECNOLOGIA/plasticos/index.html",
+    "categoria": "TECNOLOGIA",
+    "carpeta": "plasticos",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Los ordenadores",
+    "descripcion": "",
+    "url": "SECUNDARIO/TECNOLOGIA/pc/index.html",
+    "categoria": "TECNOLOGIA",
+    "carpeta": "pc",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Material y operaciones en un laboratorio químico",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/labquies/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "labquies",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Fuerzas",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/fuerzas/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "fuerzas",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Aparatos del cuerpo humano",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/aparatos/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "aparatos",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "La materia",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/materia/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "materia",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Prevención de drogodependencias",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/prevesp/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "prevesp",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Movimiento y fuerzas",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/movfuerz/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "movfuerz",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Microbios",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/microbio/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "microbio",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "El sistema solar - 2",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/ssolar2/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "ssolar2",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Tectónica de placas",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/tpes/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "tpes",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Los cinco sentidos",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/5sentido/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "5sentido",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "El cuerpo humano - 1",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/humano/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "humano",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Ciclo celular en células somáticas",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/ciclocel/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "ciclocel",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Ley de OHM",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/OHM/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "OHM",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "El enlace químico",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/enlace/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "enlace",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Sin nombre",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/nacer/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "nacer",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Átomos",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/atomos/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "atomos",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "La Tierra",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/tierra2/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "tierra2",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "El mundo de las plantas",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/botanica/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "botanica",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Sistema periódico de los elementos",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/periodic/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "periodic",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Las valencias",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/valencias/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "valencias",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Seres vivos y microorganismos",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/naturale/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "naturale",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "El canvi climàtic",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/climaes/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "climaes",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "El sistema solar - 1",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/ssolar/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "ssolar",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "La diabetes tipo I: Complicaciones agudas, Insulina, Ejercicio Físico",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/ediabet2/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "ediabet2",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Formulación",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/formula/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "formula",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Sistemas materiales",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/sistmat/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "sistmat",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Descobrim la diabetes \"Conceptes bàsics\"",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/ediabeti/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "ediabeti",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Trabajar en el laboratorio de química",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/tralabor/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "tralabor",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Introducción al concepto de fuerza",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/din/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "din",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "La Célula",
+    "descripcion": "",
+    "url": "SECUNDARIO/NATURALES/celula/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "celula",
+    "ciclo": "Secundaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Habilidades de lectura y escritura",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/hable/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "hable",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Ga-go-gu",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/ga-go-gu/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "ga-go-gu",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "La acentuación",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/acento2/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "acento2",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "La isla del tesoro",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/itesoro/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "itesoro",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Agudas, llanas y esdrújulas",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/agudas/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "agudas",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Lee y diviértete",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/leeydiv/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "leeydiv",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Sin nombre",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/4fabulas/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "4fabulas",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Las sílabas inversas",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/inversa2/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "inversa2",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Silabitas",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/silabita/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "silabita",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Sopas de letras",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/sopacas/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "sopacas",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Prefijos",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/prefijos/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "prefijos",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Cuentos de Terror",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/terror/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "terror",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "El repasón",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/cultgene/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "cultgene",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Lecturas: El vieto y el sol",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/lecturas/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "lecturas",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Letras",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/letras/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "letras",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Lengua 2º año EGB",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/lengua2/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "lengua2",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Ortografía: Uso de la H, LL, Y",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/ortograf/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "ortograf",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "De la lletra de pal a la lletra lligada",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/pal-llig/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "pal-llig",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "La calesita del bosque",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/calesita/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "calesita",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Actividades de lenguaje para educación primaria",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/lengua/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "lengua",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Grupo CL",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/grupo_cl/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "grupo_cl",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Vamos a leer - 2",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/leo/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "leo",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "JuegoLec",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/juegolec/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "juegolec",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "El sueño perdido de Doña Cotorra Pérez",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/cotorra/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "cotorra",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Las sílabas trabadas",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/trab1/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "trab1",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Abecedario",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/abecedar/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "abecedar",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Sustantivos y adjetivos",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/sustadje/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "sustadje",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Ortografía",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/ortogra/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "ortogra",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Lectura compresnsiva",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/pendarip/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "pendarip",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Orden alfabético",
+    "descripcion": "",
+    "url": "PRIMERCICLO/LENGUA/ordenalf/index.html",
+    "categoria": "LENGUA",
+    "carpeta": "ordenalf",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Las partes de la computadora",
+    "descripcion": "",
+    "url": "PRIMERCICLO/OTRAS/compu/index.html",
+    "categoria": "OTRAS",
+    "carpeta": "compu",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "¿Cuánto sabés de Paint?",
+    "descripcion": "",
+    "url": "PRIMERCICLO/OTRAS/paint/index.html",
+    "categoria": "OTRAS",
+    "carpeta": "paint",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Berni para niños",
+    "descripcion": "",
+    "url": "PRIMERCICLO/OTRAS/berni/index.html",
+    "categoria": "OTRAS",
+    "carpeta": "berni",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Los números en mapudungun",
+    "descripcion": "",
+    "url": "PRIMERCICLO/OTRAS/mapu/index.html",
+    "categoria": "OTRAS",
+    "carpeta": "mapu",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Yo sí sé",
+    "descripcion": "",
+    "url": "PRIMERCICLO/OTRAS/yosise/index.html",
+    "categoria": "OTRAS",
+    "carpeta": "yosise",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "quechua colores",
+    "descripcion": "",
+    "url": "PRIMERCICLO/OTRAS/quechua/index.html",
+    "categoria": "OTRAS",
+    "carpeta": "quechua",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Sin nombre",
+    "descripcion": "",
+    "url": "PRIMERCICLO/SOCIALES/atlas/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "atlas",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Sin nombre",
+    "descripcion": "",
+    "url": "PRIMERCICLO/SOCIALES/belgr/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "belgr",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Trabajamos",
+    "descripcion": "",
+    "url": "PRIMERCICLO/SOCIALES/trabajo/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "trabajo",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Colonia",
+    "descripcion": "",
+    "url": "PRIMERCICLO/SOCIALES/colonia/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "colonia",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "El barrio",
+    "descripcion": "",
+    "url": "PRIMERCICLO/SOCIALES/elbarrio/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "elbarrio",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "La Revolución de Mayo",
+    "descripcion": "",
+    "url": "PRIMERCICLO/SOCIALES/clicurso/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "clicurso",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Los Rincones de clase",
+    "descripcion": "",
+    "url": "PRIMERCICLO/SOCIALES/rincones/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "rincones",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "La Bandera Argentina",
+    "descripcion": "",
+    "url": "PRIMERCICLO/SOCIALES/bandera/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "bandera",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Los Oficios",
+    "descripcion": "",
+    "url": "PRIMERCICLO/SOCIALES/oficios/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "oficios",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Comidas típicas argentinas",
+    "descripcion": "",
+    "url": "PRIMERCICLO/SOCIALES/tipica/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "tipica",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "José de San Martín",
+    "descripcion": "",
+    "url": "PRIMERCICLO/SOCIALES/sanmart/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "sanmart",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Las señales de tránsito",
+    "descripcion": "",
+    "url": "PRIMERCICLO/SOCIALES/transit/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "transit",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Historia de los alimentos",
+    "descripcion": "",
+    "url": "PRIMERCICLO/SOCIALES/hisali/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "hisali",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Sin nombre",
+    "descripcion": "",
+    "url": "PRIMERCICLO/SOCIALES/santafe/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "santafe",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Paseo a Victoria - Entre Rios",
+    "descripcion": "",
+    "url": "PRIMERCICLO/SOCIALES/victoria/index.html",
+    "categoria": "SOCIALES",
+    "carpeta": "victoria",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Sumas y restas",
+    "descripcion": "",
+    "url": "PRIMERCICLO/MATEMATICAS/matesci/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "matesci",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Series numéricas",
+    "descripcion": "",
+    "url": "PRIMERCICLO/MATEMATICAS/seriesp/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "seriesp",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Cálculo Mental del 1 al 100 con resolución de problemas",
+    "descripcion": "",
+    "url": "PRIMERCICLO/MATEMATICAS/mental/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "mental",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Pasatiempos matemáticos 1",
+    "descripcion": "",
+    "url": "PRIMERCICLO/MATEMATICAS/pasmates/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "pasmates",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "A sumar",
+    "descripcion": "",
+    "url": "PRIMERCICLO/MATEMATICAS/asumar/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "asumar",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Las operaciones",
+    "descripcion": "",
+    "url": "PRIMERCICLO/MATEMATICAS/opera/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "opera",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Sumas llevando",
+    "descripcion": "",
+    "url": "PRIMERCICLO/MATEMATICAS/sumas_ll/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "sumas_ll",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "La familia del 100",
+    "descripcion": "",
+    "url": "PRIMERCICLO/MATEMATICAS/fam100/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "fam100",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Aprengeo",
+    "descripcion": "",
+    "url": "PRIMERCICLO/MATEMATICAS/aprengeo/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "aprengeo",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Numeritos",
+    "descripcion": "",
+    "url": "PRIMERCICLO/MATEMATICAS/numerit/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "numerit",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Sumas",
+    "descripcion": "",
+    "url": "PRIMERCICLO/MATEMATICAS/sumas/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "sumas",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Aprendiendo a sumar y restar",
+    "descripcion": "",
+    "url": "PRIMERCICLO/MATEMATICAS/sumasres/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "sumasres",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Numeración",
+    "descripcion": "",
+    "url": "PRIMERCICLO/MATEMATICAS/numerac/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "numerac",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Las tablas de multiplicar - 1",
+    "descripcion": "",
+    "url": "PRIMERCICLO/MATEMATICAS/tablas/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "tablas",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Las horas del reloj",
+    "descripcion": "",
+    "url": "PRIMERCICLO/MATEMATICAS/horas/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "horas",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Cálculo para 3º de primaria",
+    "descripcion": "",
+    "url": "PRIMERCICLO/MATEMATICAS/calculo/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "calculo",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Numeración en primaria",
+    "descripcion": "",
+    "url": "PRIMERCICLO/MATEMATICAS/numerac2/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "numerac2",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Vueltos",
+    "descripcion": "",
+    "url": "PRIMERCICLO/MATEMATICAS/vueltos/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "vueltos",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Mayor y menor",
+    "descripcion": "",
+    "url": "PRIMERCICLO/MATEMATICAS/maymen/index.html",
+    "categoria": "MATEMATICAS",
+    "carpeta": "maymen",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Jugamos con los animales",
+    "descripcion": "",
+    "url": "PRIMERCICLO/NATURALES/aves/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "aves",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Vertebrados e invertebrados",
+    "descripcion": "",
+    "url": "PRIMERCICLO/NATURALES/vertinv/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "vertinv",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Los animales y las plantas",
+    "descripcion": "",
+    "url": "PRIMERCICLO/NATURALES/aniplan/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "aniplan",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Alimentación de animales",
+    "descripcion": "",
+    "url": "PRIMERCICLO/NATURALES/alim-ani/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "alim-ani",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "La comunidad de las abejas, una familia muy especial",
+    "descripcion": "",
+    "url": "PRIMERCICLO/NATURALES/abejas/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "abejas",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Personas, animales y plantas",
+    "descripcion": "",
+    "url": "PRIMERCICLO/NATURALES/payp/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "payp",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "El aire que nos envuelve",
+    "descripcion": "",
+    "url": "PRIMERCICLO/NATURALES/aire/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "aire",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "De viaje por el sistema solar",
+    "descripcion": "",
+    "url": "PRIMERCICLO/NATURALES/viajesol/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "viajesol",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Los alimentos",
+    "descripcion": "",
+    "url": "PRIMERCICLO/NATURALES/losali/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "losali",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Sonidos de animales",
+    "descripcion": "",
+    "url": "PRIMERCICLO/NATURALES/animason/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "animason",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  },
+  {
+    "titulo": "Los alimentos y la nutrición",
+    "descripcion": "",
+    "url": "PRIMERCICLO/NATURALES/alimento/index.html",
+    "categoria": "NATURALES",
+    "carpeta": "alimento",
+    "ciclo": "Primer Ciclo Primaria",
+    "keywords": []
+  }
+];
+
+// Para usar en módulos ES6
+export default proyectosData;

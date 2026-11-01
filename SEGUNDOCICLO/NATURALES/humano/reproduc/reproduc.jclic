@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="reproduc" version="0.1.3">
+ <settings>
+  <title>El cuerpo humano - 1</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="5/5/97" />
+  <revision description="Traducción Español" date="5/5/97">
+   <author name="Rafael Rodríguez Martín" mail="rrodri4@platea.pntic.mec.es" />
+  </revision>
+  <revision description="Conversión de Clic3 a JClic" date="7/11/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Seminari d'Informàtica Educativa del Pla d'Urgell" />
+  <language>es</language>
+  <description>
+   <p>Paquete de actividades sobre el cuerpo humano: los aparatos digestivo, excretor, locomotor, respiratorio, reproductor y circulatorio. Este material corresponde a la unidad de programación &lt;B&gt;&lt;A HREF="http://www.xtec.es/recursos/curricul/experim/coshuma.htm"  TARGET="_blank"&gt;"El cos humà"&lt;/A&gt;&lt;/B&gt;.</p>
+  </description>
+  <descriptors area-codes="exp" level="Primaria, Secundaria">anatomía</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Paquete de actividades sobre el cuerpo humano: los aparatos digestivo, excretor, locomotor, respiratorio, reproductor y circulatorio. Este material corresponde a la unidad de programación &lt;B&gt;&lt;A HREF="http://www.xtec.es/recursos/curricul/experim/coshuma.htm"  TARGET="_blank"&gt;"El cos humà"&lt;/A&gt;&lt;/B&gt;.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="reproduc.pac" name="reproduc/repro01.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="reproduc/penis.ass" />
+  <item name="reproduc/repro03.ass" />
+  <item name="reproduc/repro02.ass" />
+  <item name="reproduc/repro04.ass" />
+  <item name="reproduc/reprod.sop">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.ComplexAssociation" name="reproduc\penis.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Conoces las partes del aparato sexual masculino?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¡ De primera !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" border="false" image="reproduc\penis.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <ids>1 0 1 3 2 3</ids>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="100.0" cellHeight="70.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>Vesículos seminales</p>
+    </cell>
+    <cell>
+     <p>Conductos deferentes</p>
+    </cell>
+    <cell>
+     <p>Penis y Testículos  </p>
+    </cell>
+    <cell>
+     <p>Escroto</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="reproduc\repro01.ass">
+   <description>
+    <p>Activitat d'informació per a presentar la resta d'activitats</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Vamos a estudiar el sistema reproductor humano.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="false" image="reproduc\reproduc.gif">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+  </activity>
+  <activity class="@panels.Explore" name="reproduc\repro02.ass">
+   <description>
+    <p>Activitat d'exploració de l'aparell reproductor femení</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Haz "Clic" sobre las partes del aparato reproductor femenino</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="3" border="false" image="reproduc\vagina.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="4" />
+    <ids>0 5 1 2 4 2 5 3 5 5 3 5</ids>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="125.0" cellHeight="110.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>ovario derecho</p>
+    </cell>
+    <cell>
+     <p>ovario izquierdo</p>
+    </cell>
+    <cell>
+     <p>trompa de Falopio</p>
+    </cell>
+    <cell>
+     <p>vagina</p>
+    </cell>
+    <cell>
+     <p>útero</p>
+    </cell>
+    <cell>
+     <p>señala una parte del dibujo</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="reproduc\repro03.ass">
+   <description>
+    <p>Activitat de resposta escrita per a estudiar l'aparell reproductor masculí.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Escribe a qué órgano corresponden estas definiciones</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¡ Muy bien ! </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="250.0" cellHeight="150.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>Órganos ovalados encargados de producir espermatozoides</p>
+    </cell>
+    <cell>
+     <p>Comunican los testículos con los vesículos seminales</p>
+    </cell>
+    <cell>
+     <p>Producen el líquido seminal, en el cual están los espermatozoides</p>
+    </cell>
+    <cell>
+     <p>El líquido seminal y los espermatozoides salen a través suyo</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="250.0" cellHeight="150.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>Testículos</p>
+    </cell>
+    <cell>
+     <p>Conductos deferentes</p>
+    </cell>
+    <cell>
+     <p>Vesículos seminales</p>
+    </cell>
+    <cell>
+     <p>Penis</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="reproduc\repro04.ass">
+   <description>
+    <p>Activitat d'identificació dels òrgans de l'aparell reproductor femení</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿ Cuáles de estos órgans pertenecen al aparato reproductor femenino ?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¡ Bien !  Estos otros son del masculino.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="2" cellWidth="100.0" cellHeight="70.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell id="0">
+     <p>Testículos</p>
+    </cell>
+    <cell id="0">
+     <p>Conductos deferentes</p>
+    </cell>
+    <cell id="0">
+     <p>Vesículos seminales</p>
+    </cell>
+    <cell id="0">
+     <p>Penis</p>
+    </cell>
+    <cell id="1">
+     <p>Ovarios</p>
+    </cell>
+    <cell id="1">
+     <p>Trompas de Falopio</p>
+    </cell>
+    <cell id="1">
+     <p>Útero</p>
+    </cell>
+    <cell id="1">
+     <p>Vagina</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="reproduc\reprod.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Busca ocho palabras del aparato reproductor</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>De primera, pero te ha costado un poco</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="10" columns="8" cellWidth="40.0" cellHeight="40.0" border="true">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>TESTICULOS</row>
+     <row>***RAVLUV*</row>
+     <row>U**O*A**A*</row>
+     <row>T**M*G**R*</row>
+     <row>E**P*I**I*</row>
+     <row>R**AENEPO*</row>
+     <row>O**S*A**S*</row>
+     <row>*ESCROTO**</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">TROMPAS</clue>
+    <clue id="1">PENE</clue>
+    <clue id="2">TESTICULOS</clue>
+    <clue id="3">OVARIOS</clue>
+    <clue id="4">UTERO</clue>
+    <clue id="5">VAGINA</clue>
+    <clue id="6">ESCROTO</clue>
+    <clue id="7">VULVA</clue>
+   </clues>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="reproduc/penis.gif" file="reproduc_penis.gif" animated="false" />
+  <media name="reproduc/reproduc.gif" file="reproduc_reproduc.gif" animated="false" />
+  <media name="reproduc/vagina.gif" file="reproduc_vagina.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

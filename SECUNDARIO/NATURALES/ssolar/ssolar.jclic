@@ -1,0 +1,1623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="ssolar" version="0.1.3">
+ <settings>
+  <title>El sistema solar - 1</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="11/30/99" />
+  <revision description="Conversión de Clic3 a JClic" date="7/4/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Javier Rey Bacaicoa" mail="javier.rey@retemail.es" />
+  <author name="Lapis de Cores" mail="mveiga@worldonline.es" rol="traducción" />
+  <language>es</language>
+  <description>
+   <p>Paquete de actividades multimedia (incluye sonidos) sobre el sistema solar y sus planetas y satélites, los eclipses, las fases de la luna...&lt;BR&gt;</p>
+   <p>Diseñado para estudiantes de 1º de ESO.</p>
+  </description>
+  <descriptors area-codes="exp" level="Secundaria">sistema solar</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Paquete de actividades multimedia (incluye sonidos) sobre el sistema solar y sus planetas y satélites, los eclipses, las fases de la luna...&lt;BR&gt;</p>
+    <p>Diseñado para estudiantes de 1º de ESO.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="ssolar.pac" name="presenta.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="3planeta.ass" />
+  <item name="3planet2.ass" />
+  <item name="3planet3.ass" />
+  <item name="astros.ass" />
+  <item name="eclipses.txa" />
+  <item name="eclipse1.puz" />
+  <item name="eclipse2.puz" />
+  <item name="fases.ass" />
+  <item name="luna.txa" />
+  <item name="9planet.puz" />
+  <item name="io.ass" />
+  <item name="jupiter.ass" />
+  <item name="jupiter.sop" />
+  <item name="neptuno.ass" />
+  <item name="objetos.ass" />
+  <item name="pendulo.puz" />
+  <item name="respuest.ass" />
+  <item name="tamano.ass" />
+  <item name="teorias.ass" />
+  <item name="teorias2.ass" />
+  <item name="teorias3.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.SimpleAssociation" name="3planet2.ass">
+   <description>
+    <p>3 PLANETAS SIGUIENTES
+</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <p>Ordena cada planeta con su nombre</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x000000">
+     <image name="cielo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x000000" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="193.0" cellHeight="250.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color foreground="0xFFFF00" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="jupit200.jpg" />
+    <cell image="satur200.jpg" />
+    <cell image="urano200.jpg" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="190.0" cellHeight="51.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color foreground="0xFFFF00" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>Júpiter</p>
+    </cell>
+    <cell>
+     <p>Saturno</p>
+    </cell>
+    <cell>
+     <p>Urano</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="193.0" cellHeight="250.0" border="false" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>Júpiter es el mayor de todos los planetas</p>
+    </cell>
+    <cell>
+     <p>Saturno es muy conocido por la estructura de anillos</p>
+    </cell>
+    <cell>
+     <p>Urano tiene su eje de rotación casi tumbado respecto a su órbita</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="3planet3.ass">
+   <description>
+    <p>3 PLANETAS SIGUIENTES
+</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <p>Ordena cada planeta con su nombre</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x000000">
+     <image name="cielo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x000000" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="197.0" cellHeight="250.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color foreground="0xFFFF00" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="marte200.jpg" />
+    <cell image="neptu200.jpg" />
+    <cell image="pluton.jpg" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="190.0" cellHeight="51.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color foreground="0xFFFF00" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>Marte</p>
+    </cell>
+    <cell>
+     <p>Neptuno</p>
+    </cell>
+    <cell>
+     <p>Plutón</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="197.0" cellHeight="250.0" border="false" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>Marte es el planeta más conocido después de la Tierra</p>
+    </cell>
+    <cell>
+     <p>Neptuno es el último gran planeta</p>
+    </cell>
+    <cell>
+     <p>Plutón tiene una órbita muy alargada. Tiene un satélite</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="3planeta.ass">
+   <description>
+    <p>3 PLANETAS MÁS CERCANOS AL SOL
+</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <p>Ordena cada planeta con su nombre</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x000000">
+     <image name="cielo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x000000" border="false" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="190.0" cellHeight="204.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color foreground="0xFFFF00" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="mercuri2.jpg" />
+    <cell image="venus2.jpg" />
+    <cell image="tierra2.jpg" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="190.0" cellHeight="81.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color foreground="0xFFFF00" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>Mercurio</p>
+    </cell>
+    <cell>
+     <p>Venus</p>
+    </cell>
+    <cell>
+     <p>Tierra</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="190.0" cellHeight="204.0" border="false" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>Mercurio no tiene atmósfera y está lleno de cráteres</p>
+    </cell>
+    <cell>
+     <p>Venus tiene atmósfera con gran cantidad de CO2</p>
+    </cell>
+    <cell>
+     <p>La Tierra es el único con condiciones para la vida</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="9planet.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <p>Ordénalos por su cercanía al Sol</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aleluya.wav" />
+     <p>Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x400040">
+     <image name="cielo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x400040" transparent="true" border="false" />
+   </settings>
+   <cells rows="9" cols="1" cellWidth="140.0" cellHeight="100.0" border="false">
+    <style>
+     <font family="Arial" size="25" />
+     <color foreground="0xFFFF00" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="9" />
+    <cell>
+     <p>Mercurio</p>
+    </cell>
+    <cell>
+     <p>Venus</p>
+    </cell>
+    <cell>
+     <p>Tierra</p>
+    </cell>
+    <cell>
+     <p>Marte</p>
+    </cell>
+    <cell>
+     <p>Júpiter</p>
+    </cell>
+    <cell>
+     <p>Saturno</p>
+    </cell>
+    <cell>
+     <p>Urano</p>
+    </cell>
+    <cell>
+     <p>Neptuno</p>
+    </cell>
+    <cell>
+     <p>Plutón</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="astros.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <p>Une cada nombre a cada clase de astro</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso.wav" />
+     <p>¡Muy bien! </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x000000">
+     <image name="cielo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x000000" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="4" cellWidth="140.0" cellHeight="100.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="20" />
+     <color foreground="0xFFFF00" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell id="0">
+     <p>Vía Láctea</p>
+    </cell>
+    <cell id="0">
+     <p>Andrómeda</p>
+    </cell>
+    <cell id="1">
+     <p>Alfa-Centauro</p>
+    </cell>
+    <cell id="1">
+     <p>Sirio</p>
+    </cell>
+    <cell id="1">
+     <p>Betelgeuse</p>
+    </cell>
+    <cell id="2">
+     <p>Halley</p>
+    </cell>
+    <cell id="2">
+     <p>Hale-Boop</p>
+    </cell>
+    <cell id="3">
+     <p>Ceres</p>
+    </cell>
+    <cell id="4">
+     <p>Titán</p>
+    </cell>
+    <cell id="4">
+     <p>Fobos</p>
+    </cell>
+    <cell id="4">
+     <p>Deimos</p>
+    </cell>
+    <cell id="4">
+     <p>Io</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="20" />
+     <color foreground="0x00FFFF" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>Galaxia</p>
+    </cell>
+    <cell>
+     <p>Estrella</p>
+    </cell>
+    <cell>
+     <p>Cometa</p>
+    </cell>
+    <cell>
+     <p>Asteroide</p>
+    </cell>
+    <cell>
+     <p>Satélite</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="eclipse1.puz">
+   <description>
+    <p>Eclipse de Luna</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="19" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <p>Con el Sol a la izquierda, coloca los 3 astros en la posición de un eclipse de Luna</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="19" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aleluya.wav" />
+     <p>¡Muy bien! </p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x000000">
+     <image name="cielo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x000000" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="150.0" cellHeight="150.0" border="false">
+    <style>
+     <font family="Times New Roman" size="30" />
+     <color foreground="0xFFFFFF" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="sol01.gif" />
+    <cell image="negro.gif" />
+    <cell image="tierra01.gif" />
+    <cell image="luna.jpg" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="eclipse2.puz">
+   <description>
+    <p>Eclipse de Sol</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="19" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <p>Con el Sol a la izquierda, coloca los 3 astros en la posición de un eclipse de Sol</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="19" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aleluya.wav" />
+     <p>¡Muy bien! </p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x000000">
+     <image name="cielo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x000000" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="150.0" cellHeight="150.0" border="false">
+    <style>
+     <font family="Times New Roman" size="30" />
+     <color foreground="0xFFFFFF" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="sol01.gif" />
+    <cell image="negro.gif" />
+    <cell image="luna.jpg" />
+    <cell image="tierra01.gif" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="eclipses.txa">
+   <description>
+    <p>Texto en el que se completan palabras sobre el tema.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="23" bold="true" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <p>Completa las palabras que faltan</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="23" bold="true" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="ovacion.wav" />
+     <p>¡Cuánto sabes de eclipses!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x400040">
+     <image name="cielo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x400040" transparent="true" border="false">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" size="20" italic="false" background="0x000000" bold="false" family="Comic Sans MS" foreground="0xFFFFFF" tabWidth="16" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text>LOS ECLIPSES</text>
+     </p>
+     <p />
+     <p>
+      <cell width="202" height="139" border="true" image="eclipse2.jpg">
+       <style>
+        <font family="Times New Roman" size="30" />
+        <color foreground="0xFFFFFF" background="0x000000" />
+       </style>
+      </cell>
+     </p>
+     <p />
+     <p>
+      <text>Se producen cuando un </text>
+      <target>
+       <answer>astro</answer>
+       <optionList>
+        <option>cometa</option>
+        <option>astro</option>
+        <option>anillo</option>
+        <option>sombreado</option>
+       </optionList>
+       <text>astro</text>
+      </target>
+      <text> se interpone entre otros dos.</text>
+     </p>
+     <p>
+      <text>Es el caso del Sol, la Tierra y la </text>
+      <target>
+       <answer>Luna</answer>
+       <optionList>
+        <option>luz</option>
+        <option>Luna</option>
+        <option>sombra</option>
+        <option>atmósfera</option>
+       </optionList>
+       <text>Luna</text>
+      </target>
+      <text>. Debido al movimiento de traslación de la Tierra respecto al Sol, y al de la Luna respecto a la Tierra, hay momentos en que se dan estas situaciones:</text>
+     </p>
+     <p>
+      <text>Cuando, desde la Tierra, dejamos de ver el Sol porque la Luna pasa entre ambos, decimos que el eclipse es de </text>
+      <target>
+       <answer>Sol</answer>
+       <optionList>
+        <option>Luna</option>
+        <option>Tierra</option>
+        <option>Sol</option>
+       </optionList>
+       <text>Sol</text>
+      </target>
+      <text> (porque lo dejamos de ver durante un tiempo).</text>
+     </p>
+     <p>
+      <text>Cuando, desde la Tierra, dejamos de ver el </text>
+      <target>
+       <answer>brillo</answer>
+       <optionList>
+        <option>brillo</option>
+        <option>eje</option>
+        <option>fuego</option>
+       </optionList>
+       <text>brillo</text>
+      </target>
+      <text> de la Luna durante unas horas, decimos que el eclipse es de Luna. En este caso es la Tierra la que "</text>
+      <target>
+       <answer>estorba</answer>
+       <optionList>
+        <option>limpia</option>
+        <option>enciende</option>
+        <option>estorba</option>
+        <option>desvía</option>
+       </optionList>
+       <text>estorba</text>
+      </target>
+      <text>" el paso de la luz del Sol hacia la Luna, y por eso, vemos nuestra propia sombra proyectada sobre el satélite. </text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="fases.ass">
+   <description>
+    <p>Las cuatro fases lunares</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="19" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <p>Une cada fase de la Luna con su nombre</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="19" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso.wav" />
+     <p>¡Bravo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x000000">
+     <image name="cielo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x000000" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="150.0" cellHeight="150.0" border="false" id="primary">
+    <style>
+     <font family="Times New Roman" size="30" />
+     <color foreground="0xFFFFFF" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>Llena</p>
+    </cell>
+    <cell>
+     <p>Cuarto creciente</p>
+    </cell>
+    <cell>
+     <p>Nueva</p>
+    </cell>
+    <cell>
+     <p>Cuarto menguante</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="4" cellWidth="275.0" cellHeight="400.0" border="false" id="secondary">
+    <style>
+     <font family="Times New Roman" size="30" />
+     <color foreground="0xFFFFFF" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="llena.gif" />
+    <cell image="ccreci.gif" />
+    <cell image="nueva.gif" />
+    <cell image="cmengua.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BUA" />
+  </activity>
+  <activity class="@panels.Explore" name="io.ass">
+   <description>
+    <p>Descripción del satélite de Júpiter Io</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <p>Io, extraño satélite de Júpiter</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x000000">
+     <image name="cielo.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x000000" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="4" border="false" image="io.jpg" id="primary">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color foreground="0xFFFF00" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <ids>3 4 0 3 1 0 1 1 3 2 2 4</ids>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="190.0" cellHeight="380.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color foreground="0xFFFF00" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>Io es uno de los satélites mayores de Júpiter. Es casi tan grande como la Luna.</p>
+    </cell>
+    <cell>
+     <p>Tiene muchos volcanes que vomitan azufre derretido en enormes erupciones.</p>
+    </cell>
+    <cell>
+     <p>La fuerza que provoca tantas erupciones es la gravedad enorme del gigantesco planeta Júpiter que crea grandes tensiones en su corteza.</p>
+    </cell>
+    <cell>
+     <p>La composición de Io es, principalmente, de azufre y silicatos. </p>
+    </cell>
+    <cell>
+     <p>El agua desapareció hace tiempo debido a la temperatura tan alta que provocan las erupciones (327º C).</p>
+    </cell>
+    <cell />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="jupiter.ass">
+   <description>
+    <p>Modalidad de información que da datos del planeta</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <p>Haz clic sobre Júpiter y encontrarás información</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x000000">
+     <image name="cielo.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x000000" transparent="true" border="false" />
+   </settings>
+   <cells rows="4" cols="4" border="false" image="jupiter.jpg" id="primary">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color foreground="0xFFFF00" background="0x000000" />
+    </style>
+    <shaper class="@Holes" cols="4" rows="4" showEnclosure="true" scaleX="4.0" scaleY="4.0">
+     <enclosing>
+      <shape>rectangle:0,0,4,4</shape>
+     </enclosing>
+     <shape>rectangle:0,0,1,1</shape>
+     <shape>rectangle:1,0,2,1</shape>
+     <shape>rectangle:3,0,1,1</shape>
+     <shape>rectangle:0,1,1,1</shape>
+     <shape>rectangle:1,1,2,1</shape>
+     <shape>rectangle:3,1,1,1</shape>
+     <shape>rectangle:0,2,1,1</shape>
+     <shape>rectangle:1,2,1,1</shape>
+     <shape>M:2,2|L:2,3|L:2,4|L:3,4|L:3,3|L:3,2|X</shape>
+     <shape>rectangle:3,2,1,1</shape>
+     <shape>rectangle:0,3,1,1</shape>
+     <shape>rectangle:1,3,1,1</shape>
+     <shape>rectangle:3,3,1,1</shape>
+    </shaper>
+    <ids>0 1 3 3 4 5 5 6 2 6 7 0 7</ids>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="190.0" cellHeight="380.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color foreground="0xFFFF00" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Es el mayor planeta del Sistema Solar.</p>
+    </cell>
+    <cell>
+     <p>Está compuesto principalmente de hidrógeno y helio.</p>
+    </cell>
+    <cell>
+     <p>Una de las características más llamativas es la Gran Mancha Roja.</p>
+    </cell>
+    <cell>
+     <p>Su gravedad es enorme en comparación con la de la Tierra.</p>
+    </cell>
+    <cell>
+     <p>Tarda casi 12 años en dar una vuelta completa alrededor del Sol.</p>
+    </cell>
+    <cell>
+     <p>El "día" de Júpiter dura algo menos de 10 horas.</p>
+    </cell>
+    <cell>
+     <p>Su masa es 318 veces mayor que la de la Tierra.</p>
+    </cell>
+    <cell>
+     <p>Se han descubierto 16 satélites que giran a su alrededor.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="jupiter.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <p>Busca 6 palabras relacionadas con el mayor planeta</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="bien.wav" />
+     <p>!Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x000000">
+     <image name="jupiter2.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x000000" border="false">
+     <position x="1" y="51" />
+    </window>
+   </settings>
+   <textGrid rows="10" columns="9" cellWidth="28.0" cellHeight="28.0" border="false">
+    <style>
+     <color foreground="0xFFFFFF" background="0x000000" />
+    </style>
+    <text>
+     <row>G**J*****H</row>
+     <row>*A*U**IO*I</row>
+     <row>**NP*****D</row>
+     <row>E**I*****R</row>
+     <row>U**TM****O</row>
+     <row>R**E*E***G</row>
+     <row>O**R**D**E</row>
+     <row>P******E*N</row>
+     <row>A*MANCHASO</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">GANIMEDES</clue>
+    <clue id="1">IO</clue>
+    <clue id="2">EUROPA</clue>
+    <clue id="3">JUPITER</clue>
+    <clue id="4">HIDROGENO</clue>
+    <clue id="5">MANCHA</clue>
+   </clues>
+  </activity>
+  <activity class="@text.FillInBlanks" name="luna.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="19" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <p>Rellena los huecos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="19" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="ovacion.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x000000">
+     <image name="cielo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x000000" transparent="true" border="false">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" size="30" italic="false" background="0x000000" bold="false" family="Times New Roman" foreground="0xFFFFFF" tabWidth="16" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text>La Luna:</text>
+     </p>
+     <p />
+     <p>
+      <text>Es el único </text>
+      <target>
+       <answer>satélite</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <info delay="2">
+        <cell hAlign="left" width="140" height="100">
+         <style>
+          <color background="0xFFFFFF" />
+         </style>
+         <p>...Que gira alrededor de otro astro...</p>
+        </cell>
+       </info>
+       <text>satélite</text>
+      </target>
+      <text> de la Tierra. Gira a su alrededor a una distancia media de </text>
+      <target>
+       <answer>384.000</answer>
+       <optionList>
+        <option>2.500</option>
+        <option>384.000</option>
+        <option>15.000.000</option>
+        <option>1.200</option>
+        <option>1.500.000</option>
+       </optionList>
+       <text>384.000</text>
+      </target>
+      <text> km y da una vuelta a la misma cada 28-29 días. </text>
+     </p>
+     <p>
+      <text>También tiene un movimiento de </text>
+      <target>
+       <answer>rotación</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>rotación</text>
+      </target>
+      <text> sobre sí misma, que se realiza a la misma velocidad que el de </text>
+      <target>
+       <answer>traslación</answer>
+       <optionList>
+        <option>escape</option>
+        <option>traslación</option>
+        <option>desplazamiento</option>
+       </optionList>
+       <text>traslación</text>
+      </target>
+      <text>. Por eso siempre vemos en la Tierra la misma </text>
+      <target>
+       <answer>cara</answer>
+       <optionList>
+        <option>luz</option>
+        <option>linea</option>
+        <option>cara</option>
+       </optionList>
+       <text>cara</text>
+      </target>
+      <text> de nuestro satélite.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.Explore" name="neptuno.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <p>Neptuno</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x000000">
+     <image name="cielo.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x000000" transparent="true" border="false" />
+   </settings>
+   <cells rows="4" cols="4" border="false" image="neptuno.jpg" id="primary">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color foreground="0xFFFF00" background="0x000000" />
+    </style>
+    <shaper class="@Holes" cols="4" rows="4" showEnclosure="true" scaleX="4.0" scaleY="4.0">
+     <enclosing>
+      <shape>rectangle:0,0,4,4</shape>
+     </enclosing>
+     <shape>rectangle:0,0,1,1</shape>
+     <shape>rectangle:1,0,2,1</shape>
+     <shape>rectangle:3,0,1,1</shape>
+     <shape>rectangle:0,1,2,1</shape>
+     <shape>rectangle:2,1,2,1</shape>
+     <shape>rectangle:0,2,1,1</shape>
+     <shape>rectangle:1,2,2,1</shape>
+     <shape>rectangle:3,2,1,1</shape>
+     <shape>rectangle:0,3,1,1</shape>
+     <shape>rectangle:1,3,2,1</shape>
+     <shape>rectangle:3,3,1,1</shape>
+    </shaper>
+    <ids>0 1 0 2 3 5 4 5 1 2 0</ids>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="190.0" cellHeight="380.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color foreground="0xFFFF00" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>Es uno de los grandes planetas del Sistema Solar</p>
+    </cell>
+    <cell>
+     <p>Tarda casi 165 años en describir una órbita completa</p>
+    </cell>
+    <cell>
+     <p>Su distancia al Sol es de 30 unidades astronómicas (4500 millones de km)</p>
+    </cell>
+    <cell>
+     <p>Tiene un diámetro de 48400 km y una masa equivalente a 17 veces la de la Tierra</p>
+    </cell>
+    <cell>
+     <p>Gira alrededor de sí mismo en 18-20 horas </p>
+    </cell>
+    <cell>
+     <p>Tiene 8 satélites, de los cuales el más importante es Tritón (aproximadamente del tamaño de la Luna)</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="objetos.ass">
+   <description>
+    <p>Astros que pertenecen al Sistema Solar</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <p>Selecciona los astros que pertenecen al Sistema Solar</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="ovacion.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x400040">
+     <image name="cielo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x400040" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="140.0" cellHeight="100.0" border="false" id="primary">
+    <style>
+     <font family="Times New Roman" size="30" />
+     <color foreground="0xFFFFFF" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="0">
+     <p>Galaxia</p>
+    </cell>
+    <cell id="1">
+     <p>Estrella</p>
+    </cell>
+    <cell id="0">
+     <p>Nebulosa</p>
+    </cell>
+    <cell id="0">
+     <p>Constelación</p>
+    </cell>
+    <cell id="1">
+     <p>Planeta</p>
+    </cell>
+    <cell id="1">
+     <p>Cometa</p>
+    </cell>
+    <cell id="1">
+     <p>Satélite</p>
+    </cell>
+    <cell id="1">
+     <p>Asteroide</p>
+    </cell>
+    <cell id="1">
+     <p>Meteorito</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="pendulo.puz">
+   <description>
+    <p>El nombre de Foucault</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF80" background="0x000000" />
+     </style>
+     <p>Ordena este nombre. Con un péndulo demostró...</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF80" background="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="bien.wav" />
+     <p>LA ROTACIÓN DE LA TIERRA ¡Exacto!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x400040">
+     <image name="cielo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x400040" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="100.0" cellHeight="100.0" border="false">
+    <style>
+     <font family="Arial" size="37" bold="true" />
+     <color foreground="0xFFFFFF" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>F  O</p>
+    </cell>
+    <cell>
+     <p>U  C</p>
+    </cell>
+    <cell>
+     <p>A  U</p>
+    </cell>
+    <cell>
+     <p>L  T</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="presenta.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <p>EL SISTEMA SOLAR</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x000000">
+     <image name="cielo.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x000000" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="300.0" border="false">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color foreground="0xFFFF00" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell image="galaxia.jpg" />
+   </cells>
+  </activity>
+  <activity class="@text.WrittenAnswer" name="respuest.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <p>Responde a las preguntas y pulsa ENTER</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="ovacion.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x400040">
+     <image name="cielo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x400040" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="251.0" cellHeight="200.0" border="true" id="primary">
+    <style>
+     <font family="Times New Roman" size="30" />
+     <color foreground="0xFFFFFF" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>Primer hombre que pisó la Luna</p>
+    </cell>
+    <cell>
+     <p>Autor de la teoría heliocéntrica</p>
+    </cell>
+    <cell>
+     <p>Midió por primera vez la longitud de la circunferencia terrestre</p>
+    </cell>
+    <cell>
+     <p>Descubridor de la Gravitación Universal</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="275.0" cellHeight="193.0" border="true" id="answers">
+    <style>
+     <font family="Times New Roman" size="30" />
+     <color foreground="0x8000FF" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>Armstrong|Neil Armstrong|N. Armstrong</p>
+    </cell>
+    <cell>
+     <p>Galileo|Galileo Galilei|Copernico|Copérnico</p>
+    </cell>
+    <cell>
+     <p>Eratóstenes|Eratostenes</p>
+    </cell>
+    <cell>
+     <p>Newton|Isaac Newton|I. Newton</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="tamano.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF80" background="0x000000" />
+     </style>
+     <p>Clasifica los planetas por su tamaño</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF80" background="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="bien.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x400040">
+     <image name="cielo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x400040" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="176.0" cellHeight="100.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="16" />
+     <color foreground="0xFFFF00" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="1">
+     <p>Mercurio</p>
+    </cell>
+    <cell id="1">
+     <p>Venus</p>
+    </cell>
+    <cell id="1">
+     <p>Tierra</p>
+    </cell>
+    <cell id="1">
+     <p>Marte</p>
+    </cell>
+    <cell id="0">
+     <p>Júpiter</p>
+    </cell>
+    <cell id="0">
+     <p>Saturno</p>
+    </cell>
+    <cell id="0">
+     <p>Urano</p>
+    </cell>
+    <cell id="0">
+     <p>Neptuno</p>
+    </cell>
+    <cell id="1">
+     <p>Plutón</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="264.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x408080" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell>
+     <p>MAYORES</p>
+    </cell>
+    <cell>
+     <p>MENORES</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" cellWidth="176.0" cellHeight="100.0" border="false" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>Diámetro de Mercurio: 4600 km</p>
+    </cell>
+    <cell>
+     <p>Diámetro de Venus: 13000 km</p>
+    </cell>
+    <cell>
+     <p>Diámetro de la Tierra: 12500 km</p>
+    </cell>
+    <cell>
+     <p>Diámetro de Marte: 5600 km</p>
+    </cell>
+    <cell>
+     <p>Diámetro de Júpiter: 75600 km</p>
+    </cell>
+    <cell>
+     <p>Diámetro de Saturno: 58000 km</p>
+    </cell>
+    <cell>
+     <p>Diámetro de Urano: 48000 km</p>
+    </cell>
+    <cell>
+     <p>Diámetro de Neptuno: 39000 km</p>
+    </cell>
+    <cell>
+     <p>Diámetro de Plutón: 3900 km</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="BUA" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="teorias.ass">
+   <description>
+    <p>Teorías sobre la Tierra</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF80" background="0x000000" />
+     </style>
+     <p>Une cada personaje con una teoría o con un hecho</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF80" background="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x400040">
+     <image name="cielo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x000000" border="false" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="210.0" cellHeight="127.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color foreground="0xFFFF00" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell id="0">
+     <p>Eratóstenes</p>
+    </cell>
+    <cell id="1">
+     <p>Galileo</p>
+    </cell>
+    <cell id="2">
+     <p>Aristóteles</p>
+    </cell>
+    <cell id="3">
+     <p>Elcano</p>
+    </cell>
+    <cell id="2">
+     <p>Ptolomeo</p>
+    </cell>
+    <cell id="1">
+     <p>Copérnico</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="237.0" cellHeight="110.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color foreground="0x0080C0" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>La Tierra es redonda</p>
+    </cell>
+    <cell>
+     <p>Teoría Heliocéntrica</p>
+    </cell>
+    <cell>
+     <p>Teoría Geocéntrica</p>
+    </cell>
+    <cell>
+     <p>Primera vuelta al mundo</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="210.0" cellHeight="127.0" border="false" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>Eratóstenes midió, además, el diámetro</p>
+    </cell>
+    <cell>
+     <p>Galileo, obligado a arrepentirse por la Iglesia</p>
+    </cell>
+    <cell>
+     <p>Aristóteles (Antigua Grecia)</p>
+    </cell>
+    <cell>
+     <p>Elcano (Dirigía en principio Magallanes, pero murió)</p>
+    </cell>
+    <cell>
+     <p>Ptolomeo (Antigua Grecia)</p>
+    </cell>
+    <cell>
+     <p>Copérnico (fue el primero en hablar de esta teoría)</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="teorias2.ass">
+   <description>
+    <p>Afirmaciones sobre la Tierra</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <p>¿Cuáles de estas afirmaciones sobre la Tierra son ciertas?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="ovacion.wav" />
+     <p>¡Perfecto!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x400040">
+     <image name="cielo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x400040" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="210.0" cellHeight="127.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="22" />
+     <color foreground="0x80FFFF" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="1">
+     <p>Es el 3er. planeta más cercano al Sol</p>
+    </cell>
+    <cell id="1">
+     <p>Tiene forma de esfera ligeramente achatada</p>
+    </cell>
+    <cell id="1">
+     <p>Tiene un satélite</p>
+    </cell>
+    <cell id="1">
+     <p>Da una vuelta al Sol cada 365,26 días</p>
+    </cell>
+    <cell id="0">
+     <p>Es plana aunque en forma de plato redondo</p>
+    </cell>
+    <cell id="0">
+     <p>No tiene satélites</p>
+    </cell>
+    <cell id="0">
+     <p>Las estaciones cambian según la distancia de la Tierra al Sol</p>
+    </cell>
+    <cell id="1">
+     <p>El eje inclinado de giro provoca las estaciones</p>
+    </cell>
+    <cell id="1">
+     <p>El eje inclinado de giro hace variar la duración de día y noche</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="teorias3.ass">
+   <description>
+    <p>Afirmaciones sobre la Tierra</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <p>¿Cuáles de estas afirmaciones sobre el Sistema Solar son ciertas?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0xFFFF00" background="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="ovacion.wav" />
+     <p>¡Perfecto!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x400040">
+     <image name="cielo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x400040" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="210.0" cellHeight="127.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="22" />
+     <color foreground="0x80FFFF" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="1">
+     <p>Tiene 9 planetas que giran (casi todos) en órbitas casi circulares</p>
+    </cell>
+    <cell id="1">
+     <p>Plutón, por su órbita excéntrica, está a veces más cerca del Sol que Neptuno</p>
+    </cell>
+    <cell id="1">
+     <p>Los 2 planetas más cercanos al Sol no tienen satélites</p>
+    </cell>
+    <cell id="1">
+     <p>Los planetas con más satélites son Júpiter y Saturno</p>
+    </cell>
+    <cell id="0">
+     <p>Urano tiene una rotación que le hace girar casi tumbado sobre su órbita</p>
+    </cell>
+    <cell id="0">
+     <p>El mayor satélite del Sistema Solar es Titán (gira alrededor de Saturno)</p>
+    </cell>
+    <cell id="0">
+     <p>Entre Marte y Júpiter hay un cinturón de asteroides</p>
+    </cell>
+    <cell id="1">
+     <p>Marte tiene 5 satélites casi tan grandes como la Luna</p>
+    </cell>
+    <cell id="1">
+     <p>Los cometas son los satélites de los planetas más alejados</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="ccreci.gif" file="ccreci.gif" animated="false" />
+  <media name="cielo.gif" file="cielo.gif" animated="false" />
+  <media name="cmengua.gif" file="cmengua.gif" animated="false" />
+  <media name="jupit200.gif" file="jupit200.gif" animated="false" />
+  <media name="llena.gif" file="llena.gif" animated="false" />
+  <media name="negro.gif" file="negro.gif" animated="false" />
+  <media name="nueva.gif" file="nueva.gif" animated="false" />
+  <media name="sol01.gif" file="sol01.gif" animated="false" />
+  <media name="tierra01.gif" file="tierra01.gif" animated="false" />
+  <media name="eclipse2.jpg" file="eclipse2.jpg" />
+  <media name="galaxia.jpg" file="galaxia.jpg" />
+  <media name="io.jpg" file="io.jpg" />
+  <media name="jupit200.jpg" file="jupit200.jpg" />
+  <media name="jupiter.jpg" file="jupiter.jpg" />
+  <media name="jupiter2.jpg" file="jupiter2.jpg" />
+  <media name="luna.jpg" file="luna.jpg" />
+  <media name="marte200.jpg" file="marte200.jpg" />
+  <media name="mercuri2.jpg" file="mercuri2.jpg" />
+  <media name="neptu200.jpg" file="neptu200.jpg" />
+  <media name="neptuno.jpg" file="neptuno.jpg" />
+  <media name="pluton.jpg" file="pluton.jpg" />
+  <media name="satur200.jpg" file="satur200.jpg" />
+  <media name="tierra2.jpg" file="tierra2.jpg" />
+  <media name="urano200.jpg" file="urano200.jpg" />
+  <media name="venus2.jpg" file="venus2.jpg" />
+  <media name="aleluya.wav" file="aleluya.wav" />
+  <media name="aplauso.wav" file="aplauso.wav" />
+  <media name="bien.wav" file="bien.wav" />
+  <media name="ovacion.wav" file="ovacion.wav" />
+ </mediaBag>
+</JClicProject>
+

@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="resp" version="0.1.3">
+ <settings>
+  <title>Aparatos del cuerpo humano</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="4/4/00" />
+  <revision description="Traducción Español" date="4/4/00">
+   <author name="Aurelio Salvador Baselga" mail="asalvado@roble.pntic.mec.es" />
+  </revision>
+  <revision description="Conversión de Clic3 a JClic" date="7/11/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Ferran Estruch Mascarell" mail="46002842@centres.cult.gva.es" />
+  <organization name="CP Verge del Remei" mail="46002842@centres.cult.gva.es" city="Castelló de Rugat" state="País Valencià" />
+  <language>es</language>
+  <description>
+   <p>Paquete de actividades de Clic sobre los diferentes aparatos del cuerpo humano.  Dividido en seis secciones, una por cada aparato:</p>
+   <p>&lt;LI&gt;Aparato digestivo</p>
+   <p>&lt;LI&gt;Aparato circulatorio</p>
+   <p>&lt;LI&gt;Aparato locomotor</p>
+   <p>&lt;LI&gt;Aparato respiratorio</p>
+   <p>&lt;LI&gt;Aparato excretor</p>
+   <p>&lt;LI&gt;Aparato reproductor</p>
+  </description>
+  <descriptors area-codes="exp" level="Secundaria">anatomía</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Paquete de actividades de Clic sobre los diferentes aparatos del cuerpo humano.  Dividido en seis secciones, una por cada aparato:</p>
+    <p>&lt;LI&gt;Aparato digestivo</p>
+    <p>&lt;LI&gt;Aparato circulatorio</p>
+    <p>&lt;LI&gt;Aparato locomotor</p>
+    <p>&lt;LI&gt;Aparato respiratorio</p>
+    <p>&lt;LI&gt;Aparato excretor</p>
+    <p>&lt;LI&gt;Aparato reproductor</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="resp.pac" name="resp/arespres.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="resp/aprespir.puz" />
+  <item name="resp/apres0.ass" />
+  <item name="resp/apres1.ass" />
+  <item name="resp/pulmons.ass" />
+  <item name="resp/pulmons.sop" />
+  <item name="resp/fossnas.ass" />
+  <item name="resp/fossnas1.ass" />
+  <item name="resp/orapre.ass" />
+  <item name="resp/orapre1.ass" />
+  <item name="resp/resp.ass" />
+  <item name="resp/gasos.ass" />
+  <item name="resp/intgas.puz" />
+  <item name="resp/intergas.txa" />
+  <item name="resp/integas.txa" />
+  <item name="resp/higiene.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.Explore" name="resp\apres0.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xACACD7" />
+     </style>
+     <p>CLICA SOBRE CADA UNO DE LOS PUNTOS VERDES E INFÓRMATE DE LOS ÓRGANOS DEL APARATO RESPIRATORIO,</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xACACD7" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xA4E1FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC8C8E3" border="true" />
+   </settings>
+   <cells rows="6" cols="8" border="false" image="resp\apres1.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="8" rows="6" showEnclosure="true" scaleX="8.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,8,6</shape>
+     </enclosing>
+     <shape>rectangle:4,1,1,1</shape>
+     <shape>rectangle:4,2,1,1</shape>
+     <shape>rectangle:3,3,1,1</shape>
+     <shape>rectangle:4,3,1,1</shape>
+     <shape>rectangle:3,4,1,1</shape>
+     <shape>rectangle:4,4,1,1</shape>
+    </shaper>
+    <ids>0 1 2 3 4 5</ids>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>FOSAS NASALES</p>
+    </cell>
+    <cell>
+     <p>TRÁQUEA</p>
+    </cell>
+    <cell>
+     <p>PULMÓN</p>
+    </cell>
+    <cell>
+     <p>BRONQUIOS</p>
+    </cell>
+    <cell>
+     <p>BRONQUIOLOS</p>
+    </cell>
+    <cell>
+     <p>DIAFRAGMA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="resp\apres1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFF00" background="0x8080C0" />
+     </style>
+     <p>LOCALIZA LOS ÓRGANOS DEL APARATO RESPIRATORIO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFF00" background="0x8080C0" />
+     </style>
+     <p>¡ MUY BIEN !, PUEDES RESPIRAR TRANQUILO.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xD5D5EA">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xAEAED7" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell id="0">
+     <p>FOSAS NASALES</p>
+    </cell>
+    <cell id="1">
+     <p>TRÁQUEA</p>
+    </cell>
+    <cell id="2">
+     <p>BRONQUIOS</p>
+    </cell>
+    <cell id="3">
+     <p>BRONQUIOLOS</p>
+    </cell>
+    <cell id="4">
+     <p>PULMÓN</p>
+    </cell>
+    <cell id="5">
+     <p>DIAFRAGMA</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="4" border="false" image="resp\apres1.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="4" rows="6" showEnclosure="true" scaleX="4.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,4,6</shape>
+     </enclosing>
+     <shape>rectangle:2,1,1,1</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>rectangle:2,3,1,1</shape>
+     <shape>rectangle:1,4,1,1</shape>
+     <shape>rectangle:1,3,1,1</shape>
+     <shape>rectangle:2,4,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="resp\aprespir.puz">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color background="0xFFDBB7" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>MUEVE LAS PIEZAS Y OBTENDRÀS UNA RADIOGRAFIA DE LOS PULMONES.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color background="0xFFDBB7" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>OBSERVA QUE LAS COSTILLAS PROTEGEN LOS PULMONES. ¡SIGUE ADELANTE!.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFE9D2">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" border="false" image="resp\pulm.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="resp\arespres.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFDDBB">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="resp\respres.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="resp\fossnas.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color background="0xB8DCDC" />
+     </style>
+     <p>INFÓRMATE DE LOS ÓRGANOS QUE HAY EN LAS FOSAS NASALES.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color background="0xB8DCDC" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x008080">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="resp\fossnas.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="resp\fossnas1.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFF80" background="0x003060" />
+     </style>
+     <p>LOCALIZA CADA UNO DE LOS ÓRGANOS EN EL DIBUJO.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFF80" background="0x003060" />
+     </style>
+     <p>¡ MUY BIEN !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x004A95" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style shadow="true">
+     <color foreground="0xFFFF80" background="0x003366" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell id="0">
+     <p>FOSAS NASALES</p>
+    </cell>
+    <cell id="1">
+     <p>PITUITARIA</p>
+    </cell>
+    <cell id="2">
+     <p>NERVIO OLFATIVO</p>
+    </cell>
+    <cell id="3">
+     <p>CÉLULAS SENSITIVAS</p>
+    </cell>
+    <cell id="4">
+     <p>CORNETES</p>
+    </cell>
+    <cell id="5">
+     <p>NARIZ</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="3" border="false" image="resp\fossnas1.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="3" rows="6" showEnclosure="true" scaleX="3.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,3,6</shape>
+     </enclosing>
+     <shape>rectangle:0,3,1,1</shape>
+     <shape>rectangle:0,2,1,1</shape>
+     <shape>rectangle:1,0,1,1</shape>
+     <shape>rectangle:1,1,1,1</shape>
+     <shape>rectangle:1,2,1,1</shape>
+     <shape>rectangle:0,1,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="resp\gasos.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFF80" background="0x9D4F00" />
+     </style>
+     <p>LEE ATENTAMENTE E INFÓRMATE DEL INTERCAMBIO DE GASES EN LOS ALVÉOLOS PULMONARES.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFF80" background="0x9D4F00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFDAC8">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="resp\aveol.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="resp\higiene.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0xD70000" />
+     </style>
+     <p>LEE Y DESCUBRE QUÉ MEDIDAS AYUDAN Y CUÁLES PERJUDICAN AL APARATO RESPIRATORIO.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0xD70000" />
+     </style>
+     <p>¡ MUY BIEN ! , ¡ ES TODO !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF9191">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFC8C8" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="230.0" cellHeight="120.0" border="true" id="primary">
+    <style shadow="true">
+     <color foreground="0xFFFFFF" background="0xBDBDDF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell id="1">
+     <p>DORMIR EN HABITACIONES QUE TENGAN PLANTAS.</p>
+    </cell>
+    <cell id="0">
+     <p>RESPIRAR EL AIRE MÁS PURO POSIBLE.</p>
+    </cell>
+    <cell id="1">
+     <p>DURANTE EL INVIERNO DORMIR EN HABITACIONES QUE TENGAN ESTUFAS DE GAS O BRASEROS.</p>
+    </cell>
+    <cell id="0">
+     <p>RESPIRAR EL AIRE POR LA NARIZ SIEMPRE QUE SEA POSIBLE.</p>
+    </cell>
+    <cell id="1">
+     <p>FUMAR O PERMANECER EN HABITACIONES LLENAS DE HUMOS.</p>
+    </cell>
+    <cell id="0">
+     <p>HACER EJERCICIOS RESPIRATORIOS.</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="140.0" cellHeight="140.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell image="resp\si1.gif" />
+    <cell image="resp\no1.gif" />
+   </cells>
+   <cells rows="3" cols="2" cellWidth="230.0" cellHeight="120.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>No es conveniente dormir con plantas porque también respiran oxígeno.</p>
+    </cell>
+    <cell>
+     <p>Es necesario salir al campo y a la montaña, hacer ejercicio y respirar aire puro.</p>
+    </cell>
+    <cell>
+     <p>Las estufas de gas y braseros consumen el oxígeno que necesitamos para respirar.</p>
+    </cell>
+    <cell>
+     <p>Cuando respiramos por la nariz el aire se templa, se humidifica y se filtra de impurezas.</p>
+    </cell>
+    <cell>
+     <p>El humo del tabaco afecta tanto a los fumadores como a los no fumadores.</p>
+    </cell>
+    <cell>
+     <p>Los ejercicios respiratorios ventilan y renuevan totalmente el aire de los pulmones.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.Order" name="resp\integas.txa" type="orderWords" amongParagraphs="true">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFF80" background="0x009F9F" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>UN DUENDE HA CAMBIADO EL LUGAR DE UN GRUPO DE  PALABRAS DEL TEXTO. COLÓCALAS TÚ CORRECTAMENTE.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFF80" background="0x009F9F" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x009797">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" background="0xB3FFFF" bold="false" foreground="0x000000" family="Arial" size="17" italic="false" tabWidth="16" />
+    <style name="target" base="default" background="0xC0C0C0" target="true" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text>Cuando </text>
+      <target>inspiramos</target>
+      <text>, el aire que entra a los </text>
+      <target>alvéolos</target>
+      <text> pulmonares está cargado de </text>
+      <target>oxígeno</target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <text>La </text>
+      <target>sangre</target>
+      <text> que llega a los alvéolos está cargada con </text>
+      <target>dióxido-de-carbono</target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <text>Durante su recorrido, la sangre deja el </text>
+      <target>dióxido-de-carbono</target>
+      <text> y recoge el </text>
+      <target>oxígeno</target>
+      <text> del aire.</text>
+     </p>
+     <p />
+     <p>
+      <text>Cuando </text>
+      <target>espiramos</target>
+      <text>, el aire que sale de los </text>
+      <target>pulmones</target>
+      <text>, está cargado con </text>
+      <target>dióxido-de-carbono</target>
+      <text>.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="resp\intergas.txa">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFF80" background="0x808040" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>SELECIONA LA PALABRA ADECUADA EN CADA FRASE.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFF80" background="0x808040" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xDADAB6">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="600" height="370" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" background="0xCCCC99" bold="false" foreground="0x000000" family="Arial" size="17" italic="false" tabWidth="16" />
+    <style name="target" base="default" background="0xC0C0C0" target="true" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text />
+      <cell width="270" height="60" border="true">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+       <p>EL INTERCAMBIO DE GASES EN LOS PULMONES</p>
+      </cell>
+     </p>
+     <p />
+     <p>
+      <text>1. Cuando </text>
+      <target>
+       <answer>inspiramos</answer>
+       <optionList>
+        <option>cantamos</option>
+        <option>inspiramos</option>
+        <option>espiramos</option>
+       </optionList>
+       <text>inspiramos</text>
+      </target>
+      <text>, el aire que entra a los </text>
+      <target>
+       <answer>alvéolos</answer>
+       <optionList>
+        <option>bronquios</option>
+        <option>bronquiolos</option>
+        <option>alvéolos</option>
+       </optionList>
+       <text>alvéolos</text>
+      </target>
+      <text> pulmonares está cargado con </text>
+      <target>
+       <answer>oxígeno</answer>
+       <optionList>
+        <option>dióxido de carbono</option>
+        <option>oxígeno</option>
+        <option>nitrógeno</option>
+       </optionList>
+       <text>oxígeno</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p>
+      <text>2. La sangre que llega a los </text>
+      <target>
+       <answer>alvéolos</answer>
+       <optionList>
+        <option>riñones</option>
+        <option>intestinos</option>
+        <option>alvéolos</option>
+       </optionList>
+       <text>alvéolos</text>
+      </target>
+      <text> está cargada con </text>
+      <target>
+       <answer>dióxido de carbono</answer>
+       <optionList>
+        <option>oxígeno</option>
+        <option>nitrógeno</option>
+        <option>dióxido de carbono</option>
+       </optionList>
+       <text>dióxido de carbono</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p>
+      <text>3. Durante su recorrido, la sangre deja el </text>
+      <target>
+       <answer>dióxido de carbono</answer>
+       <optionList>
+        <option>nitrógeno</option>
+        <option>dióxido de carbono</option>
+        <option>oxígeno</option>
+       </optionList>
+       <text>dióxido de carbono</text>
+      </target>
+      <text> y recoge </text>
+      <target>
+       <answer>oxígeno</answer>
+       <optionList>
+        <option>oxígeno</option>
+        <option>nitrógeno</option>
+        <option>dióxido de carbono</option>
+       </optionList>
+       <text>oxígeno</text>
+      </target>
+      <text> del aire.</text>
+     </p>
+     <p>
+      <text>4. Cuando </text>
+      <target>
+       <answer>espiramos</answer>
+       <optionList>
+        <option>inspiramos</option>
+        <option>cantamos</option>
+        <option>espiramos</option>
+       </optionList>
+       <text>espiramos</text>
+      </target>
+      <text>, el aire que sale de los</text>
+      <target>
+       <answer>pulmones</answer>
+       <optionList>
+        <option>intestinos</option>
+        <option>riñones</option>
+        <option>pulmones</option>
+       </optionList>
+       <text> pulmones</text>
+      </target>
+      <text>, está cargado con </text>
+      <target>
+       <answer>dióxido de carbono</answer>
+       <optionList>
+        <option>dióxido de carbono</option>
+        <option>oxígeno</option>
+        <option>nitrógeno</option>
+       </optionList>
+       <text>dióxido de carbono</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="resp\intgas.puz">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFF00" background="0x555500" />
+     </style>
+     <p>ORDENA EL PROCESO DE INTECAMBIO DE GASES EN LOS ALVÉOLOS PULMONARES.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFF00" background="0x555500" />
+     </style>
+     <p>¡ MUY BIEN !</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFFF80">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x979700" border="true" />
+   </settings>
+   <cells rows="4" cols="1" border="true" image="resp\intgas.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="resp\orapre.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0xC40000" />
+     </style>
+     <p>IDENTIFICA CADA UNO DE LOS ÓRGANOS DEL APARATO RESPIRATORIO.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0xC40000" />
+     </style>
+     <p>¡ MUY BIEN ! , ¡ FANTÁSTICO !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFB7B7">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF4040" border="true" />
+   </settings>
+   <cells rows="1" cols="5" border="false" image="resp\orapre.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+   </cells>
+   <cells rows="1" cols="5" cellWidth="150.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>FOSAS NASALES</p>
+    </cell>
+    <cell>
+     <p>TRÁQUEA</p>
+    </cell>
+    <cell>
+     <p>LARINGE</p>
+    </cell>
+    <cell>
+     <p>PULMÓN</p>
+    </cell>
+    <cell>
+     <p>ALVÉOLO PULMONAR</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="resp\orapre1.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0x0000A0" />
+     </style>
+     <p>ESCRIBE EL NOMBRE DE CADA UNO DE ESTOS ÓRGANOS </p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0x0000A0" />
+     </style>
+     <p>¡ FANTÁSTICO !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x8080C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x222246" border="true" />
+   </settings>
+   <cells rows="1" cols="5" border="true" image="resp\orapre.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+   </cells>
+   <cells rows="1" cols="5" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>FOSAS NASALES</p>
+    </cell>
+    <cell>
+     <p>TRÁQUEA|TRAQUEA</p>
+    </cell>
+    <cell>
+     <p>LARINGE</p>
+    </cell>
+    <cell>
+     <p>PULMÓN|PULMON|PULMONES</p>
+    </cell>
+    <cell>
+     <p>ALVÉOLOS PULMONARES|ALVÉOLO PULMONAR|ALVEOLO PULMONAR|ALVÉOLOS|ALVEOLOS|ALVÉOLO|ALVEOLO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="resp\pulmons.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0x408080" />
+     </style>
+     <p>LOCALIZA ESTOS ÓRGANOS DEL APARATO RESPIRATORIO.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0x408080" />
+     </style>
+     <p>¡ MUY BIEN !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC7E2E2">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x9ACDCD" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>LARINGE</p>
+    </cell>
+    <cell>
+     <p>TRÁQUEA</p>
+    </cell>
+    <cell>
+     <p>BRONQUIOS</p>
+    </cell>
+    <cell>
+     <p>BRONQUIOLOS</p>
+    </cell>
+    <cell>
+     <p>PULMONES</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" border="false" image="resp\traquia.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="resp\pulmons.sop">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color background="0xFF0000" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>LOCALIZA 5 ÓRGANOS DEL APARATO RESPIRATORIO.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color background="0xFF0000" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>¡ FANTÁSTICO !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFDBDB">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF8484" border="true" />
+   </settings>
+   <textGrid rows="13" columns="9" cellWidth="30.0" cellHeight="30.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>BTRÁQUEA*****</row>
+     <row>R************</row>
+     <row>O*BRONQUIOLOS</row>
+     <row>N************</row>
+     <row>Q**LARINGE***</row>
+     <row>U************</row>
+     <row>I************</row>
+     <row>O***PULMONES*</row>
+     <row>S************</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">LARINGE</clue>
+    <clue id="1">TRÁQUEA</clue>
+    <clue id="2">BRONQUIOS</clue>
+    <clue id="3">BRONQUIOLOS</clue>
+    <clue id="4">PULMONES</clue>
+   </clues>
+   <cells rows="5" cols="1" border="false" image="resp\traquia1.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="resp\resp.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFF80" background="0x494925" />
+     </style>
+     <p>¿POR QUÈ ES MEJOR RESPIRAR POR LA NARIZ QUE POR LA BOCA?</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFF80" background="0x494925" />
+     </style>
+     <p>¡ MUY BIEN !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x808040">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="200.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color foreground="0xFF0000" background="0xD3D3A7" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell id="1">
+     <p>El aire se templa, coge humedad y se limpia.</p>
+    </cell>
+    <cell id="1">
+     <p>No se deforma el paladar.</p>
+    </cell>
+    <cell id="0">
+     <p>Es de más educación.</p>
+    </cell>
+    <cell id="0">
+     <p>Lo recomienda el dentista.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="resp/apres1.gif" file="resp_apres1.gif" animated="false" />
+  <media name="resp/aveol.gif" file="resp_aveol.gif" animated="false" />
+  <media name="resp/fossnas.gif" file="resp_fossnas.gif" animated="false" />
+  <media name="resp/fossnas1.gif" file="resp_fossnas1.gif" animated="false" />
+  <media name="resp/intgas.gif" file="resp_intgas.gif" animated="false" />
+  <media name="resp/no1.gif" file="resp_no1.gif" animated="false" />
+  <media name="resp/orapre.gif" file="resp_orapre.gif" animated="false" />
+  <media name="resp/pulm.gif" file="resp_pulm.gif" animated="false" />
+  <media name="resp/respres.gif" file="resp_respres.gif" animated="false" />
+  <media name="resp/si1.gif" file="resp_si1.gif" animated="false" />
+  <media name="resp/traquia.gif" file="resp_traquia.gif" animated="false" />
+  <media name="resp/traquia1.gif" file="resp_traquia1.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

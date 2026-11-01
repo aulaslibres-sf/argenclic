@@ -1,0 +1,1075 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="agulles" version="0.1.3">
+ <settings>
+  <title>Lenguaje 4º, sílabas y acentos</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="9/12/05" />
+  <revision description="Conversión de Clic3 a JClic" date="9/12/05">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Alberto Alonso Gómez" mail="aalonso@escolapios.es" />
+  <organization name="CPR Nájera" mail="cpr.najera@larioja.org" url="http://www.cprnajera.org" city="Nájera" state="La Rioja" />
+  <language>es</language>
+  <description>
+   <p>Actividades que tienen como objetivo ayudar a los alumnos/as a repasar los conceptos de:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;sílaba, diptongo, hiato</p>
+   <p>&lt;LI&gt;sílaba tónica y sílaba átona</p>
+   <p>&lt;LI&gt;palabras agudas, llanas y esdrújulas</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area-codes="lleng" level-codes="PRI" />
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Actividades que tienen como objetivo ayudar a los alumnos/as a repasar los conceptos de:</p>
+    <p>&lt;UL&gt;</p>
+    <p>&lt;LI&gt;sílaba, diptongo, hiato</p>
+    <p>&lt;LI&gt;sílaba tónica y sílaba átona</p>
+    <p>&lt;LI&gt;palabras agudas, llanas y esdrújulas</p>
+    <p>&lt;/UL&gt;</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="agulles.pac" name="silton.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="acentua1.txa" />
+  <item name="agudas1.ass" />
+  <item name="llanas1.ass" />
+  <item name="esdruj1.ass" />
+  <item name="agulles1.ass" />
+  <item name="agulles2.ass" />
+  <item name="agulles3.ass" />
+  <item name="memor1.puz" />
+  <item name="malacen1.ass" />
+  <item name="malacen2.ass" />
+  <item name="malacen3.ass" />
+  <item name="bosqpuz.puz" />
+  <item name="finsilab.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@text.FillInBlanks" name="acentua1.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" />
+      <color foreground="0xFFFFC8" background="0xC01FB8" />
+     </style>
+     <p>¿Cuándo se acentúan?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" />
+      <color foreground="0xFFFFC8" background="0xC01FB8" />
+     </style>
+     <p>¡Bien estudiado!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x008040">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="700" height="373" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" background="0xFCFCCB" family="Arial" size="25" italic="false" tabWidth="2" bold="true" foreground="0x004080" />
+    <style name="target" base="default" background="0xC0C0C0" target="true" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p Alignment="1" background="0xFCFCCB" family="Arial" size="25" italic="false" foreground="0x004080" bold="true">
+      <text background="0xFCFCCB" family="Arial" size="25" italic="false" bold="true" foreground="0x004080">	</text>
+      <cell width="400" height="70" border="false" image="acent2.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text background="0xFCFCCB" family="Arial" size="25" italic="false" bold="true" foreground="0x004080">	  </text>
+     </p>
+     <p background="0xFCFCCB" family="Arial" size="25" italic="false" bold="true" foreground="0x004080" />
+     <p background="0xFCFCCB" family="Arial" size="25" italic="false" bold="true" foreground="0x004080">
+      <text background="0xFCFCCB" family="Arial" size="25" italic="false" bold="true" foreground="0x004080">- Las agudas se acentúan si acaban </text>
+      <target>
+       <answer>en "n", "s" o vocal.</answer>
+       <optionList>
+        <option>en "n", "s" o vocal.</option>
+        <option>en "r", "s" o vocal.</option>
+       </optionList>
+       <text>en "n", "s" o vocal.</text>
+      </target>
+     </p>
+     <p background="0xFCFCCB" family="Arial" size="25" italic="false" bold="true" foreground="0x004080" />
+     <p background="0xFCFCCB" family="Arial" size="25" italic="false" bold="true" foreground="0x004080">
+      <text background="0xFCFCCB" family="Arial" size="25" italic="false" bold="true" foreground="0x004080">- Las llanas se acentúan si no acaban </text>
+      <target>
+       <answer>en "n", "s" o vocal.</answer>
+       <optionList>
+        <option>en "r", "s" o vocal.</option>
+        <option>en "n", "s" o vocal.</option>
+       </optionList>
+       <text>en "n", "s" o vocal.</text>
+      </target>
+     </p>
+     <p background="0xFCFCCB" family="Arial" size="25" italic="false" bold="true" foreground="0x004080" />
+     <p background="0xFCFCCB" family="Arial" size="25" italic="false" bold="true" foreground="0x004080">
+      <text background="0xFCFCCB" family="Arial" size="25" italic="false" bold="true" foreground="0x004080">- Las esdrújulas se acentúan </text>
+      <target>
+       <answer>todas.</answer>
+       <optionList>
+        <option>si son trisílabas.</option>
+        <option>todas.</option>
+       </optionList>
+       <text>todas.</text>
+      </target>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.Identify" name="agudas1.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" />
+      <color foreground="0xF8EA87" background="0x8000FF" />
+     </style>
+     <p>Señala las palabras agudas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" />
+      <color foreground="0xF8EA87" background="0x8000FF" />
+     </style>
+     <p>¡Perfecto!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xEEE291">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="4" cellWidth="200.0" cellHeight="110.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="26" bold="true" />
+     <color foreground="0xFF8040" background="0x008040" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell id="1">
+     <p>ratón</p>
+    </cell>
+    <cell id="0">
+     <p>lápiz</p>
+    </cell>
+    <cell id="0">
+     <p>médico</p>
+    </cell>
+    <cell id="1">
+     <p>patín</p>
+    </cell>
+    <cell id="0">
+     <p>útil</p>
+    </cell>
+    <cell id="0">
+     <p>cámara</p>
+    </cell>
+    <cell id="1">
+     <p>sartén</p>
+    </cell>
+    <cell id="1">
+     <p>anís</p>
+    </cell>
+    <cell id="1">
+     <p>salió</p>
+    </cell>
+    <cell id="1">
+     <p>delfín</p>
+    </cell>
+    <cell id="1">
+     <p>detrás</p>
+    </cell>
+    <cell id="0">
+     <p>mármol</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="agulles1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" />
+      <color background="0xF9EB86" />
+     </style>
+     <p>Empareja correctamente</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" />
+      <color background="0xF9EB86" />
+     </style>
+     <p>¡Excelente!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x008040">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="575.0" cellHeight="275.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" />
+     <color foreground="0xFFFFB5" background="0x400080" inactive="0x80FFFF" alternative="0x80FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="1">
+     <p>ángel</p>
+    </cell>
+    <cell id="1">
+     <p>fácil</p>
+    </cell>
+    <cell id="1">
+     <p>apóstol</p>
+    </cell>
+    <cell id="0">
+     <p>café</p>
+    </cell>
+    <cell id="0">
+     <p>canapé</p>
+    </cell>
+    <cell id="0">
+     <p>cortés</p>
+    </cell>
+    <cell id="2">
+     <p>música</p>
+    </cell>
+    <cell id="2">
+     <p>melódico</p>
+    </cell>
+    <cell id="2">
+     <p>artístico</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="405.0" cellHeight="275.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xF9F3AE" background="0x400040" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>AGUDA</p>
+    </cell>
+    <cell>
+     <p>LLANA</p>
+    </cell>
+    <cell>
+     <p>ESDRÚJULA</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" cellWidth="575.0" cellHeight="275.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>ángel: llana</p>
+    </cell>
+    <cell>
+     <p>fácil: llana</p>
+    </cell>
+    <cell>
+     <p>apóstol: llana</p>
+    </cell>
+    <cell>
+     <p>café: aguda</p>
+    </cell>
+    <cell>
+     <p>canapé: aguda</p>
+    </cell>
+    <cell>
+     <p>cortés: aguda</p>
+    </cell>
+    <cell>
+     <p>música: esdrújula</p>
+    </cell>
+    <cell>
+     <p>melódico: esdrújula</p>
+    </cell>
+    <cell>
+     <p>artístico: esdrújula</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="agulles2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" />
+      <color background="0xF3DA8B" />
+     </style>
+     <p>Empareja correctamente</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" />
+      <color background="0xF3DA8B" />
+     </style>
+     <p>¡Excelente!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x400080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="575.0" cellHeight="275.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" />
+     <color foreground="0xFFFFB5" background="0x008080" inactive="0xFF8040" alternative="0xFF8040" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="0">
+     <p>pastel</p>
+    </cell>
+    <cell id="0">
+     <p>doctor</p>
+    </cell>
+    <cell id="0">
+     <p>jugar</p>
+    </cell>
+    <cell id="1">
+     <p>leche</p>
+    </cell>
+    <cell id="1">
+     <p>vino</p>
+    </cell>
+    <cell id="1">
+     <p>agua</p>
+    </cell>
+    <cell id="2">
+     <p>tóxico</p>
+    </cell>
+    <cell id="2">
+     <p>física</p>
+    </cell>
+    <cell id="2">
+     <p>lámina</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="405.0" cellHeight="275.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xF9F3AE" background="0x400040" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>AGUDA</p>
+    </cell>
+    <cell>
+     <p>LLANA</p>
+    </cell>
+    <cell>
+     <p>ESDRÚJULA</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" cellWidth="575.0" cellHeight="275.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>pastel: aguda</p>
+    </cell>
+    <cell>
+     <p>doctor: aguda</p>
+    </cell>
+    <cell>
+     <p>jugar: aguda</p>
+    </cell>
+    <cell>
+     <p>leche: llana</p>
+    </cell>
+    <cell>
+     <p>vino: llana</p>
+    </cell>
+    <cell>
+     <p>agua: llana</p>
+    </cell>
+    <cell>
+     <p>tóxico: esdrújula</p>
+    </cell>
+    <cell>
+     <p>física: esdrújula</p>
+    </cell>
+    <cell>
+     <p>lámina: esdrújula</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="agulles3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" />
+      <color foreground="0x800040" background="0x84DDFB" />
+     </style>
+     <p>Empareja correctamente</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" />
+      <color foreground="0x800040" background="0x84DDFB" />
+     </style>
+     <p>¡Excelente!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xBF00BF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="575.0" cellHeight="275.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" />
+     <color foreground="0xFFFFB5" background="0x0080C0" inactive="0x004000" alternative="0x004000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="2">
+     <p>sábana</p>
+    </cell>
+    <cell id="2">
+     <p>túnica</p>
+    </cell>
+    <cell id="2">
+     <p>ácido</p>
+    </cell>
+    <cell id="1">
+     <p>plato</p>
+    </cell>
+    <cell id="1">
+     <p>percha</p>
+    </cell>
+    <cell id="1">
+     <p>corcho</p>
+    </cell>
+    <cell id="0">
+     <p>cantar</p>
+    </cell>
+    <cell id="0">
+     <p>silbar</p>
+    </cell>
+    <cell id="0">
+     <p>gritar</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="405.0" cellHeight="275.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xF9F3AE" background="0x400040" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>AGUDA</p>
+    </cell>
+    <cell>
+     <p>LLANA</p>
+    </cell>
+    <cell>
+     <p>ESDRÚJULA</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" cellWidth="575.0" cellHeight="275.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>sábana: esdrújula</p>
+    </cell>
+    <cell>
+     <p>túnica: esdrújula</p>
+    </cell>
+    <cell>
+     <p>ácido: esdrújula</p>
+    </cell>
+    <cell>
+     <p>plato: llana</p>
+    </cell>
+    <cell>
+     <p>percha: llana</p>
+    </cell>
+    <cell>
+     <p>corcho: llana</p>
+    </cell>
+    <cell>
+     <p>cantar: aguda</p>
+    </cell>
+    <cell>
+     <p>silbar: aguda</p>
+    </cell>
+    <cell>
+     <p>gritar: aguda</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="bosqpuz.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" />
+      <color foreground="0xFFFFBB" background="0x008040" />
+     </style>
+     <p>Un bonito atardecer en el bosque</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" />
+      <color foreground="0xFFFFBB" background="0x008040" />
+     </style>
+     <p>¡Fantástico! </p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x60AFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="bosqpuz.gif">
+    <style>
+     <font family="Arial" size="25" />
+     <color foreground="0xFFFFAC" background="0x008040" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.Identify" name="esdruj1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" />
+      <color foreground="0xFF8080" background="0x0000A0" />
+     </style>
+     <p>Señala las palabras esdrújulas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" />
+      <color foreground="0xFF8080" background="0x0000A0" />
+     </style>
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x8080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0080FF" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="4" cellWidth="225.0" cellHeight="140.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFAE685" background="0x008080" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell id="1">
+     <p>rápido</p>
+    </cell>
+    <cell id="0">
+     <p>Ramón</p>
+    </cell>
+    <cell id="1">
+     <p>tráfico</p>
+    </cell>
+    <cell id="0">
+     <p>Héctor</p>
+    </cell>
+    <cell id="1">
+     <p>cántico</p>
+    </cell>
+    <cell id="0">
+     <p>Rubén</p>
+    </cell>
+    <cell id="1">
+     <p>cántaro</p>
+    </cell>
+    <cell id="0">
+     <p>Óscar</p>
+    </cell>
+    <cell id="1">
+     <p>árbitro</p>
+    </cell>
+    <cell id="0">
+     <p>Ángel</p>
+    </cell>
+    <cell id="1">
+     <p>típico</p>
+    </cell>
+    <cell id="0">
+     <p>mástil</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="finsilab.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x0080FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="fin1.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.Identify" name="llanas1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" />
+      <color foreground="0x008000" background="0xF7F1B0" />
+     </style>
+     <p>Señala las palabras llanas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" />
+      <color foreground="0x008000" background="0xF7F1B0" />
+     </style>
+     <p>¡Magnífico!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="4" cellWidth="250.0" cellHeight="140.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0x400080" background="0xFCEBB8" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell id="1">
+     <p>césped</p>
+    </cell>
+    <cell id="0">
+     <p>betún</p>
+    </cell>
+    <cell id="1">
+     <p>árbol</p>
+    </cell>
+    <cell id="0">
+     <p>túnica</p>
+    </cell>
+    <cell id="1">
+     <p>débil</p>
+    </cell>
+    <cell id="1">
+     <p>túnel</p>
+    </cell>
+    <cell id="0">
+     <p>volcán</p>
+    </cell>
+    <cell id="1">
+     <p>estiércol</p>
+    </cell>
+    <cell id="1">
+     <p>inútil</p>
+    </cell>
+    <cell id="0">
+     <p>pétalo</p>
+    </cell>
+    <cell id="0">
+     <p>látigo</p>
+    </cell>
+    <cell id="0">
+     <p>parchís</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="malacen1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="23" />
+      <color foreground="0x800040" background="0xFFFFBF" />
+     </style>
+     <p>Señala las palabras mal acentuadas o sin acentuar</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="23" />
+      <color foreground="0x800040" background="0xFFFFBF" />
+     </style>
+     <p>Fíjate bien ahora cómo se escriben</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x8080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="250.0" cellHeight="107.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="28" bold="true" />
+     <color foreground="0xFFFFAA" background="0x004080" inactive="0xFF0080" alternative="0xFF0080" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="0">
+     <p>escorpión</p>
+    </cell>
+    <cell id="1">
+     <p>cadetrál</p>
+    </cell>
+    <cell id="1">
+     <p>cuadérno</p>
+    </cell>
+    <cell id="0">
+     <p>cráter</p>
+    </cell>
+    <cell id="1">
+     <p>bólsa</p>
+    </cell>
+    <cell id="0">
+     <p>cámara</p>
+    </cell>
+    <cell id="0">
+     <p>depósito</p>
+    </cell>
+    <cell id="1">
+     <p>marron</p>
+    </cell>
+    <cell id="1">
+     <p>carcel</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" cellWidth="250.0" cellHeight="107.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>escorpión</p>
+    </cell>
+    <cell>
+     <p>catedral</p>
+    </cell>
+    <cell>
+     <p>cuaderno</p>
+    </cell>
+    <cell>
+     <p>cráter</p>
+    </cell>
+    <cell>
+     <p>bolsa</p>
+    </cell>
+    <cell>
+     <p>cámara</p>
+    </cell>
+    <cell>
+     <p>depósito</p>
+    </cell>
+    <cell>
+     <p>marrón</p>
+    </cell>
+    <cell>
+     <p>cárcel</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="malacen2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="24" />
+      <color foreground="0x800040" background="0xFFFFBF" />
+     </style>
+     <p>Señala las palabras mal acentuadas o sin acentuar</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="24" />
+      <color foreground="0x800040" background="0xFFFFBF" />
+     </style>
+     <p>Fíjate bien ahora cómo se escriben</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x408080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="250.0" cellHeight="107.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="28" bold="true" />
+     <color foreground="0xFFFFAA" background="0x800080" inactive="0x80FFFF" alternative="0x80FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="1">
+     <p>terraplen</p>
+    </cell>
+    <cell id="0">
+     <p>excursión</p>
+    </cell>
+    <cell id="1">
+     <p>orangutan</p>
+    </cell>
+    <cell id="0">
+     <p>capitán</p>
+    </cell>
+    <cell id="1">
+     <p>esqueléto</p>
+    </cell>
+    <cell id="1">
+     <p>cristál</p>
+    </cell>
+    <cell id="1">
+     <p>aguarras</p>
+    </cell>
+    <cell id="1">
+     <p>pincél</p>
+    </cell>
+    <cell id="0">
+     <p>cáncer</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" cellWidth="250.0" cellHeight="107.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>terraplén</p>
+    </cell>
+    <cell>
+     <p>excursión</p>
+    </cell>
+    <cell>
+     <p>orangután</p>
+    </cell>
+    <cell>
+     <p>capitán</p>
+    </cell>
+    <cell>
+     <p>esqueleto</p>
+    </cell>
+    <cell>
+     <p>cristal</p>
+    </cell>
+    <cell>
+     <p>aguarrás</p>
+    </cell>
+    <cell>
+     <p>pincel</p>
+    </cell>
+    <cell>
+     <p>cáncer</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="malacen3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="24" />
+      <color foreground="0x800040" background="0xFFFFBF" />
+     </style>
+     <p>Señala las palabras mal acentuadas o sin acentuar</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="24" />
+      <color foreground="0x800040" background="0xFFFFBF" />
+     </style>
+     <p>Fíjate bien ahora cómo se escriben</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF8EFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="250.0" cellHeight="107.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="28" bold="true" />
+     <color foreground="0xFFFFAA" background="0x0080FF" inactive="0x000040" alternative="0x000040" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="1">
+     <p>timpano</p>
+    </cell>
+    <cell id="1">
+     <p>portál</p>
+    </cell>
+    <cell id="0">
+     <p>cartón</p>
+    </cell>
+    <cell id="1">
+     <p>monopatin</p>
+    </cell>
+    <cell id="1">
+     <p>libelula</p>
+    </cell>
+    <cell id="0">
+     <p>líquido</p>
+    </cell>
+    <cell id="1">
+     <p>debil</p>
+    </cell>
+    <cell id="1">
+     <p>cása</p>
+    </cell>
+    <cell id="0">
+     <p>césped</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" cellWidth="250.0" cellHeight="107.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>tímpano</p>
+    </cell>
+    <cell>
+     <p>portal</p>
+    </cell>
+    <cell>
+     <p>cartón</p>
+    </cell>
+    <cell>
+     <p>monopatín</p>
+    </cell>
+    <cell>
+     <p>libélula</p>
+    </cell>
+    <cell>
+     <p>líquido</p>
+    </cell>
+    <cell>
+     <p>débil</p>
+    </cell>
+    <cell>
+     <p>casa</p>
+    </cell>
+    <cell>
+     <p>césped</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="memor1.puz" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" bold="true" />
+      <color foreground="0x0080FF" background="0xFFFFB5" />
+     </style>
+     <p>¿Cómo andas de memoria?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" bold="true" />
+      <color foreground="0x0080FF" background="0xFFFFB5" />
+     </style>
+     <p>Un poco mareado ¿no?</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x60AFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="4" cols="3" cellWidth="123.0" cellHeight="114.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="4" />
+    <cell image="geo08a.gif" />
+    <cell image="geo08b.gif" />
+    <cell image="coq4bi.gif" />
+    <cell image="coq4di.gif" />
+    <cell image="geo08e.gif" />
+    <cell image="geo13a1i.gif" />
+    <cell image="geo13b1i.gif" />
+    <cell image="geo24e.gif" />
+    <cell image="geo13d1i.gif" />
+    <cell image="geo24c.gif" />
+    <cell image="geo24a.gif" />
+    <cell image="geo24b.gif" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="silton.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" />
+      <color background="0xFF00FF" />
+     </style>
+     <p>Lee con atención y recuerda</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" />
+      <color background="0xFF00FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFCFDBD">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="silaton5.gif">
+    <style>
+     <font family="Arial" size="25" />
+     <color foreground="0xF5E885" background="0x68B4FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="acent2.gif" file="acent2.gif" animated="false" />
+  <media name="bosqpuz.gif" file="bosqpuz.gif" animated="false" />
+  <media name="coq4bi.gif" file="coq4bi.gif" animated="false" />
+  <media name="coq4di.gif" file="coq4di.gif" animated="false" />
+  <media name="fin1.gif" file="fin1.gif" animated="false" />
+  <media name="geo08a.gif" file="geo08a.gif" animated="false" />
+  <media name="geo08b.gif" file="geo08b.gif" animated="false" />
+  <media name="geo08e.gif" file="geo08e.gif" animated="false" />
+  <media name="geo13a1i.gif" file="geo13a1i.gif" animated="false" />
+  <media name="geo13b1i.gif" file="geo13b1i.gif" animated="false" />
+  <media name="geo13d1i.gif" file="geo13d1i.gif" animated="false" />
+  <media name="geo24a.gif" file="geo24a.gif" animated="false" />
+  <media name="geo24b.gif" file="geo24b.gif" animated="false" />
+  <media name="geo24c.gif" file="geo24c.gif" animated="false" />
+  <media name="geo24e.gif" file="geo24e.gif" animated="false" />
+  <media name="silaton5.gif" file="silaton5.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

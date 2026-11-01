@@ -1,0 +1,1923 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="conjuga" version="0.1.3">
+ <settings>
+  <title>Conjuga</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="1/31/00" />
+  <revision description="Conversión de Clic3 a JClic" date="11/29/01">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Graciela Solano" mail="chelaeduc@latinmail.com" />
+  <author name="Luz Marina Pereira" />
+  <author name="Juan De La Cruz Orozco" />
+  <author name="Hipolito Gutierrez L." mail="essacc@epb.multi.net.co" />
+  <language>es</language>
+  <description>
+   <p>Paquete de actividades de Clic sobre los verbos en español. Las actividades están divididas en cuatro secciones:&lt;BR&gt;</p>
+   <p>- El verbo&lt;BR&gt;</p>
+   <p>- Accidentes del verbo&lt;BR&gt;</p>
+   <p>- Formas no personales del verbo&lt;BR&gt;</p>
+   <p>- Clases de verbos&lt;P&gt;</p>
+   <p>Las actividades son variadas e incluyen asociaciones, pantallas de información, respuesta escrita, etc.</p>
+  </description>
+  <descriptors level="Secundaria">lengua castellana, gramática</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Paquete de actividades de Clic sobre los verbos en español. Las actividades están divididas en cuatro secciones:&lt;BR&gt;</p>
+    <p>- El verbo&lt;BR&gt;</p>
+    <p>- Accidentes del verbo&lt;BR&gt;</p>
+    <p>- Formas no personales del verbo&lt;BR&gt;</p>
+    <p>- Clases de verbos&lt;P&gt;</p>
+    <p>Las actividades son variadas e incluyen asociaciones, pantallas de información, respuesta escrita, etc.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="conjuga.pac" name="portada3.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="autor.ass" />
+  <item name="indice.ass">
+   <jump action="STOP" id="forward" />
+  </item>
+  <item id="capitulo.pac" name="defverb1.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="accver1.ass" />
+  <item name="memoria.puz" />
+  <item name="indice.ass">
+   <jump tag="conjuga.pac" id="forward">
+    <jump tag="conjuga.pac" threshold="75" id="upper" />
+    <jump tag="capitulo.pac" threshold="25" id="lower" />
+   </jump>
+  </item>
+  <item id="capitul2.pac" name="acciden2.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="numyper.ass" />
+  <item name="tiempo.ass" />
+  <item name="acctiemp.ass" />
+  <item name="modo.ass" />
+  <item name="accvf2.ass" />
+  <item name="indice.ass">
+   <jump action="STOP" id="forward" />
+  </item>
+  <item id="capitul3.pac" name="formasn.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="sopacp3.sop" />
+  <item name="texto3.txa" />
+  <item name="indice.ass">
+   <jump action="STOP" id="forward" />
+  </item>
+  <item id="capitul4.pac" name="introdu4.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="clases.ass" />
+  <item name="ver4.ass" />
+  <item name="txa14.txa" />
+  <item name="vercap4.sop" />
+  <item name="verirr4.ass" />
+  <item name="actid4f.ass" />
+  <item name="frases4.puz" />
+  <item name="cruci4.crw">
+   <jump tag="capitul3.pac" id="forward">
+    <jump tag="conjuga.pac" threshold="25" id="lower" />
+   </jump>
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.Identify" name="acciden2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="23" bold="true" />
+      <color foreground="0xFF0080" background="0x80FF80" />
+     </style>
+     <p>PULSA CONSECUTIVAMENTE Y APRENDERAS LOS ACCIDENTES DEL VERBO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="23" bold="true" />
+      <color foreground="0xFF0080" background="0x80FF80" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso.wav" />
+     <p>AHORA PUEDES CONTINUAR </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondo.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="1" border="false" image="1234.gif" id="primary">
+    <style>
+     <font family="Arial" size="23" bold="true" />
+     <color foreground="0xFF0080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <ids>1 1 1 1</ids>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="239.0" cellHeight="100.0" border="false" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>NUMERO</p>
+    </cell>
+    <cell>
+     <p>PERSONA</p>
+    </cell>
+    <cell>
+     <p>TIEMPO</p>
+    </cell>
+    <cell>
+     <p>MODO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="acctiemp.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFF0000" background="0x80FFFF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <p>ASOCIAR CORRECTAMENTE</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFF0000" background="0x80FFFF" inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso.wav" />
+     <p>!GENIAL!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="fondo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" columns="5" cellWidth="230.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="22" bold="true" />
+     <color foreground="0xFF00FF" background="0x80FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell id="1">
+     <p>AMÓ</p>
+    </cell>
+    <cell id="2">
+     <p>CORRERÁ</p>
+    </cell>
+    <cell id="0">
+     <p>RECUERDA</p>
+    </cell>
+    <cell id="1">
+     <p>VIVIÓ</p>
+    </cell>
+    <cell id="0">
+     <p>SABE</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="3" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color foreground="0xFF0000" background="0x80FFFF" inactive="0x0000FF" alternative="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>PRESENTE</p>
+    </cell>
+    <cell>
+     <p>PASADO</p>
+    </cell>
+    <cell>
+     <p>FUTURO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="accver1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFF0000" background="0x0080C0" />
+     </style>
+     <p>RELACIONA CORRECTAMENTE</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFF0000" background="0x0080C0" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>EMPEZÓ BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="fondo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00FFFF" border="true" />
+   </settings>
+   <cells rows="1" columns="3" cellWidth="422.0" cellHeight="164.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color foreground="0x0000FF" background="0xFF80C0" inactive="0xFF0000" alternative="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="0">
+     <p>EL VERBO EXPRESA___________Y  </p>
+    </cell>
+    <cell id="1">
+     <p>EXISTENCIA    DEL_________Y</p>
+    </cell>
+    <cell id="2">
+     <p>ES EL _________ DEL PREDICADO</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="3" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color foreground="0xFF00FF" background="0x00FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>ACCION</p>
+    </cell>
+    <cell>
+     <p>SUJETO</p>
+    </cell>
+    <cell>
+     <p>NUCLEO</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="3" cellWidth="422.0" cellHeight="164.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>EL VERBO EXPRESA ACCION </p>
+    </cell>
+    <cell>
+     <p>Y EXISTENCIA DEL SUJETO</p>
+    </cell>
+    <cell>
+     <p>Y ES EL NUCLEO DEL PREDICADO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="accvf2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" />
+      <color foreground="0xFF0080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <p>ESCRIBE LA RESPUESTA CORRESPONDIENTE Y PULSA ENTER</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" />
+      <color foreground="0xFF0080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso.wav" />
+     <p>!MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="fondo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF80" border="true" />
+   </settings>
+   <cells rows="1" columns="5" cellWidth="580.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="15" />
+     <color foreground="0xFF0080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>PRIMERA PERSONA DEL PLURAL___________</p>
+    </cell>
+    <cell>
+     <p>SE DETERMINA TENIENDO EN CUENTA EL MOMENTO EN QUE SE HABLA_______</p>
+    </cell>
+    <cell>
+     <p>LAS ACCIONES ESTAN CONDICIONADAS____________</p>
+    </cell>
+    <cell>
+     <p>TERMINA EN AR-ER-IR______________</p>
+    </cell>
+    <cell>
+     <p>ES UNA FORMA NO PERSONAL DEL VERBO________</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="5" cellWidth="313.0" cellHeight="130.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="15" />
+     <color foreground="0xFF0080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>NOSOTROS</p>
+    </cell>
+    <cell>
+     <p>TIEMPO</p>
+    </cell>
+    <cell>
+     <p>MODO POTENCIAL</p>
+    </cell>
+    <cell>
+     <p>INFINITIVO</p>
+    </cell>
+    <cell>
+     <p>PARTICIPIO</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="5" cellWidth="580.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>PRIMERA PERSONA DEL PLURAL NOSOTROS</p>
+    </cell>
+    <cell>
+     <p>SE DETERMINA TENIENDO EN CUENTA EL MOMENTO EN QUE SE HABLA TIEMPO</p>
+    </cell>
+    <cell>
+     <p>LAS ACCIONES ESTAN CONDICIONADAS MODO POTENCIAL</p>
+    </cell>
+    <cell>
+     <p>TERMINA EN AR-ER-IR INFINITIVO</p>
+    </cell>
+    <cell>
+     <p>EL PARTICIPIO ES UNA FORMA NO PERSONAL DEL VERBO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="actid4f.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x80FFFF" />
+     </style>
+     <p>COMPLETA LAS SIGUIENTES ORACIONES</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x80FFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="vaca.wav" />
+     <p> !BRAVO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="fondo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" columns="8" cellWidth="640.0" cellHeight="115.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFF80" inactive="0xFF00FF" alternative="0xFF00FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="8" />
+    <cell id="0">
+     <p>ELHOMBRE______LA RES EN EL MATADERO</p>
+    </cell>
+    <cell id="1">
+     <p>ALGUNOS PUEBLOS______ MERCANCIAS</p>
+    </cell>
+    <cell id="2">
+     <p>ELLOS_______LA LISTA DE DESEMPLEADOS DEL PAIS</p>
+    </cell>
+    <cell id="3">
+     <p>TU__________MUY BIEN LAS HABAS</p>
+    </cell>
+    <cell id="4">
+     <p>EN LA FABRICA DEL PUEBLO_______EL CAFÉ</p>
+    </cell>
+    <cell id="5">
+     <p>ELLOS_______LAS TUERCAS</p>
+    </cell>
+    <cell id="6">
+     <p>TU __________LAS REJAS PARA LAS VENTANAS</p>
+    </cell>
+    <cell id="7">
+     <p>LOS PROFESORES DE LA NOCHE______SOBRE EL PARO</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="8" cellWidth="362.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color background="0xFF80FF" inactive="0xFF0000" alternative="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="8" />
+    <cell>
+     <p>DESOLLAR</p>
+    </cell>
+    <cell>
+     <p>TROCAR</p>
+    </cell>
+    <cell>
+     <p>ENGROSAR</p>
+    </cell>
+    <cell>
+     <p>COCER</p>
+    </cell>
+    <cell>
+     <p>TOSTAR</p>
+    </cell>
+    <cell>
+     <p>APRETAR</p>
+    </cell>
+    <cell>
+     <p>SOLDAR</p>
+    </cell>
+    <cell>
+     <p>DISCERNIR</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="8" cellWidth="640.0" cellHeight="115.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="8" />
+    <cell>
+     <p>EL HOMBRE DESUELLA LA RES EN EL MATADERO</p>
+    </cell>
+    <cell>
+     <p>ALGUNOS PUEBLOS TRUECAN MERCANCÍAS</p>
+    </cell>
+    <cell>
+     <p>ELLOS ENGRUESAN LA LISTA DE DESEMPLEADOS DEL PAIS</p>
+    </cell>
+    <cell>
+     <p>TU CUECES MUY BIEN LAS HABAS</p>
+    </cell>
+    <cell>
+     <p>EN LA FABRICA DEL PUEBLO TUESTAN EL CAFÉ</p>
+    </cell>
+    <cell>
+     <p>ELLOS APRIETAN LAS TUERCAS</p>
+    </cell>
+    <cell>
+     <p>TU SUELDAS LAS REJAS PARA LAS VENTANAS</p>
+    </cell>
+    <cell>
+     <p>LOS PROFESORES DE LA NOCHE DISCIERNEN SOBRE EL PARO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="autor.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial Narrow" size="30" />
+      <color background="0x80FF80" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="14.wav" />
+     <p>BIENVENIDO A CONJUGA </p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial Narrow" size="30" />
+      <color background="0x80FF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondo.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="3" border="false" image="portada3.gif">
+    <style>
+     <font family="Arial Narrow" size="30" />
+     <color background="0x80FF80" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@panels.Identify" name="clases.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x00FF80" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <p>HAZ CLIC CONSECUTIVAMENTE Y SABRAS LAS CLASES DE VERBOS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FF80" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <p>AHORA TIENES LAS CLASES DE VERBOS ,CONTINUE POR FAVOR</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondo.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="1" border="false" image="1234.gif" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <ids>1 1 1 1</ids>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="700.0" cellHeight="100.0" border="false" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>VERBOS REGULARES</p>
+    </cell>
+    <cell>
+     <p>SON LOS QUE EN SU CONJUGACION SIGUEN UNA REGLA GENERAL Y UNIFORME CONSERVANDO SU RADICAL</p>
+    </cell>
+    <cell>
+     <p>VERBOS IRREGULARES</p>
+    </cell>
+    <cell>
+     <p>ES EL QUE SE CONJUGA ALTERANDO SUS RADICALES O TERMINACIONES  </p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@textGrid.CrossWord" name="cruci4.crw">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFF0080" background="0x00FF80" />
+     </style>
+     <p>RESULVE EL CRUCIGRAMA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFF0080" background="0x00FF80" />
+     </style>
+     <p> !MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="7" columns="7" cellWidth="90.0" cellHeight="80.0" border="true">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0x80FFFF" inactive="0x408080" alternative="0x408080" />
+    </style>
+    <text>
+     <row>*H*C**U</row>
+     <row>CUELAS*</row>
+     <row>*EMANAR</row>
+     <row>*LAMINA</row>
+     <row>YO*AME*</row>
+     <row>**IRA*O</row>
+     <row>EIR*SON</row>
+    </text>
+   </textGrid>
+   <cells rows="1" columns="7" cellWidth="200.0" cellHeight="75.0" border="false" id="acrossClues">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFF80" />
+    </style>
+    <cell id="0" item="0">
+     <p>letra</p>
+    </cell>
+    <cell id="0" item="1">
+     <p>letra</p>
+    </cell>
+    <cell id="0" item="2">
+     <p>vocal cerrada</p>
+    </cell>
+    <cell id="1" item="0">
+     <p>colar en pasado</p>
+    </cell>
+    <cell id="1" item="1">
+     <p>persona singular</p>
+    </cell>
+    <cell id="2" item="0">
+     <p>desprenderse una sustancia</p>
+    </cell>
+    <cell id="3" item="0">
+     <p>laminar en pasado tercera persona singular</p>
+    </cell>
+    <cell id="4" item="0">
+     <p>primera persona singular</p>
+    </cell>
+    <cell id="4" item="1">
+     <p>pasado del verbo amar</p>
+    </cell>
+    <cell id="5" item="0">
+     <p>pasado del verbo ir segunda persona singular</p>
+    </cell>
+    <cell id="5" item="1">
+     <p>vocal abierta</p>
+    </cell>
+    <cell id="6" item="0">
+     <p>invertido verbo reir en pasado segunda persona</p>
+    </cell>
+    <cell id="6" item="1">
+     <p>ser tercera persona plural</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="7" cellWidth="200.0" cellHeight="75.0" border="false" id="downClues">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFF80" />
+    </style>
+    <cell id="0" item="0">
+     <p>letra</p>
+    </cell>
+    <cell id="0" item="1">
+     <p>letra</p>
+    </cell>
+    <cell id="0" item="2">
+     <p>vocal abierta</p>
+    </cell>
+    <cell id="1" item="0">
+     <p>verbo oler en pasado primera persona singular</p>
+    </cell>
+    <cell id="1" item="1">
+     <p>vocal cerrada</p>
+    </cell>
+    <cell id="2" item="0">
+     <p>invertida amar en pasado primera persona singular</p>
+    </cell>
+    <cell id="3" item="0">
+     <p>llamar a gritos</p>
+    </cell>
+    <cell id="4" item="0">
+     <p>animar presente segunda  persona singular</p>
+    </cell>
+    <cell id="5" item="0">
+     <p>sanar en pasado primera persona singular</p>
+    </cell>
+    <cell id="5" item="1">
+     <p>vocal</p>
+    </cell>
+    <cell id="6" item="0">
+     <p>invertido terminacion verbal</p>
+    </cell>
+    <cell id="6" item="1">
+     <p>invertido negacion</p>
+    </cell>
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="defverb1.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>LEA DETENIDAMENTE Y CONTINUE</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondo.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" border="true" />
+   </settings>
+   <cells rows="1" columns="3" cellWidth="530.0" cellHeight="145.0" border="false">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color foreground="0xFF00FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>EL VERBO</p>
+    </cell>
+    <cell>
+     <p>ES LA PARTE DE LA ORACION QUE EXPRESA EXISTENCIA,ESTADO,ACCION O PASION DEL SUJETO</p>
+    </cell>
+    <cell>
+     <p>INDICANDO CASI SIEMPRE TIEMPO Y PERSONA.SE CARACTERIZA POR SER EL NUCLEO DEL PREDICADO</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="formasn.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFF00FF" background="0x80FF80" />
+     </style>
+     <p>LEE DETENIDAMENTE Y CONTINUA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFF00FF" background="0x80FF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondo.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" columns="4" cellWidth="700.0" cellHeight="110.0" border="true">
+    <style>
+     <color foreground="0x000040" background="0x80FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>FORMAS NO PERSONALES DEL VERBO</p>
+    </cell>
+    <cell>
+     <p>INFINITIVO : TERMINA EN AR-ER-IR EJEMPLO: PASAR, CORRER, REIR</p>
+    </cell>
+    <cell>
+     <p>PARTICIPIO: TERMINA EN ANTE,ENTE,IENTE,CUANDO ES ACTIVO EJ:AMANTE   .TERMINA EN ADO EN LOS VERBOS DE LA PRIMERA CONJUGACION.EJ:AMADO  .TERMINA EN IDO EN LA SEGUNDA Y TERCERA CONJUGACION EJ: TEMIDO,PARTIDO</p>
+    </cell>
+    <cell>
+     <p>GERUNDIO:TERMINA EN ANDO EN LOS VERBOS DE LA PRIMERA CONJUGACION.EJ :AMANDO,TERMINA EN IENDO SI PERTENECE A LA SEGUNDA Y TERCERA CONJUGACION EJ:TENIENDO,PARTIENDO</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="frases4.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFF0000" background="0x80FFFF" />
+     </style>
+     <p>FORMA LA ORACION CORRECTA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFF0000" background="0x80FFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso.wav" />
+     <p> !MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" infoCmd="winhelp.exe verbos.hlp" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="fondo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x80FFFF" border="true" />
+   </settings>
+   <cells rows="4" columns="4" cellWidth="140.0" cellHeight="100.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell>
+     <p>EN </p>
+    </cell>
+    <cell>
+     <p>LA SECCION</p>
+    </cell>
+    <cell>
+     <p>NOCTURNA </p>
+    </cell>
+    <cell>
+     <p>RIGE</p>
+    </cell>
+    <cell>
+     <p>UNA</p>
+    </cell>
+    <cell>
+     <p>EXIGENTE</p>
+    </cell>
+    <cell>
+     <p>DISCIPLINA</p>
+    </cell>
+    <cell>
+     <p>LA</p>
+    </cell>
+    <cell>
+     <p>CUAL </p>
+    </cell>
+    <cell>
+     <p>SATISFACE</p>
+    </cell>
+    <cell>
+     <p>LAS</p>
+    </cell>
+    <cell>
+     <p>EXPECTATIVAS</p>
+    </cell>
+    <cell>
+     <p>DE</p>
+    </cell>
+    <cell>
+     <p>LOS </p>
+    </cell>
+    <cell>
+     <p>ALUMNOS</p>
+    </cell>
+    <cell>
+     <p>.</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="indice.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" />
+      <color foreground="0xFF00FF" background="0x80FF80" />
+     </style>
+     <media type="PLAY_MIDI" level="2" file="carmen.mid" />
+     <p>ELIGE UN TEMA </p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" />
+      <color foreground="0xFF00FF" background="0x80FF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondo.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" border="true" />
+   </settings>
+   <cells rows="1" columns="5" cellWidth="540.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="Arial Narrow" size="30" />
+     <color background="0x80FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell image="i.gif" />
+    <cell image="i1.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="capitulo.pac" />
+    </cell>
+    <cell image="i2.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="capitul2.pac" />
+    </cell>
+    <cell image="i3.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="capitul3.pac" />
+    </cell>
+    <cell image="i4.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="capitul4.pac" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="introdu4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFF0000" background="0xFFFF80" />
+     </style>
+     <p>ESTAS EN EL CAPITULO 4 </p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFF0000" background="0xFFFF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondo.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" columns="1" cellWidth="630.0" cellHeight="100.0" border="false">
+    <style>
+     <color foreground="0xFF00FF" background="0x80FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>HAS LLEGADO AL OBJETIVO DE ESTE PROGRAMA ,"APRENDER A CONJUGAR VERBOS IRREGULARES".ENCONTRARAS UN ICONO DE INFORMACION QUE DEBES LEER ANTES DE RESOLVER LA ACTIVIDAD. BUENA SUERTE</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@memory.MemoryGame" name="memoria.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial Narrow" size="30" />
+      <color background="0x80FF80" />
+     </style>
+     <p>Haga las parejas de verbos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial Narrow" size="30" />
+      <color background="0x80FF80" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso.wav" />
+     <p>!Genial! </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" columns="3" cellWidth="140.0" cellHeight="100.0" border="false" id="primary">
+    <style>
+     <font family="Arial Narrow" size="30" />
+     <color background="0x80FF80" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>acertar</p>
+    </cell>
+    <cell>
+     <p>contar</p>
+    </cell>
+    <cell>
+     <p>mover</p>
+    </cell>
+    <cell>
+     <p>jugar</p>
+    </cell>
+    <cell>
+     <p>gemir</p>
+    </cell>
+    <cell>
+     <p>pedir</p>
+    </cell>
+    <cell>
+     <p>reir</p>
+    </cell>
+    <cell>
+     <p>vestir</p>
+    </cell>
+    <cell>
+     <p>oler</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="modo.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFF00FF" background="0x80FFFF" inactive="0x00FFFF" alternative="0x00FFFF" />
+     </style>
+     <p>APRENDE!    ¿ SERA IMPERATIVO?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFF00FF" background="0x80FFFF" inactive="0x00FFFF" alternative="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondo.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" columns="5" cellWidth="478.0" cellHeight="138.0" border="false">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color foreground="0x0000FF" background="0x00FFFF" inactive="0x00FFFF" alternative="0x00FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>MODO:SON LAS DISTINTAS MANERAS GENERALES DE EXPRESAR LA SIGNIFICACIÓN DEL VERBO</p>
+    </cell>
+    <cell>
+     <p>INDICATIVO: LAS ACCIONES SE PERCIBEN COMO REALES</p>
+    </cell>
+    <cell>
+     <p>SUBJUNTIVO : SE EXPRESAN DUDAS SOBRE LAS ACCIONES</p>
+    </cell>
+    <cell>
+     <p>POTENCIAL : LAS ACCIONES ESTÁN CONDICIONADAS	</p>
+    </cell>
+    <cell>
+     <p>IMPERATIVO : SE ORDENA REALIZAR LA ACCION</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="numyper.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>LEE DETENIDAMENTE Y CONTINUA</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondo.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" columns="5" cellWidth="566.0" cellHeight="162.0" border="true">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color foreground="0xFF00FF" background="0x00FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>ACCIDENTES DEL VERBO</p>
+    </cell>
+    <cell>
+     <p>NUMERO : SINGULAR O PLURAL</p>
+    </cell>
+    <cell>
+     <p>PRIMERA PERSONA  YO . NOSOTROS</p>
+    </cell>
+    <cell>
+     <p>SEGUNDA PERSONA  TU.VOSOTROS</p>
+    </cell>
+    <cell>
+     <p>TERCERA PERSONA  EL,ELLA.ELLOS ELLAS</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="portada3.ass">
+   <description>
+    <p>PORTADA PROYECTO</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Century Gothic" size="31" bold="true" />
+      <color background="0xFFFF80" inactive="0x80FF80" alternative="0x80FF80" />
+     </style>
+     <media type="PLAY_MIDI" level="2" file="campesi.mid" />
+     <p>DISFRUTA Y APRENDE</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Century Gothic" size="31" bold="true" />
+      <color background="0xFFFF80" inactive="0x80FF80" alternative="0x80FF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondo.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFF80" transparent="true" border="false" />
+   </settings>
+   <cells rows="4" columns="3" border="false" image="ni_a.gif">
+    <style>
+     <font family="Century Gothic" size="31" bold="true" />
+     <color background="0xFFFF80" inactive="0x80FF80" alternative="0x80FF80" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@textGrid.WordSearch" name="sopacp3.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0x0000FF" background="0x80FFFF" inactive="0xFF0080" alternative="0xFF0080" />
+     </style>
+     <p>ENCUENTRA 9 FORMAS VERBALES NO PERSONALES</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0x0000FF" background="0x80FFFF" inactive="0xFF0080" alternative="0xFF0080" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="oveja.wav" />
+     <p>!LISTO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="fondo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="10" columns="10" cellWidth="460.0" cellHeight="230.0" border="false">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>M***B*M*RH</row>
+     <row>U***E*U*IU</row>
+     <row>E**AN*L*GY</row>
+     <row>R**MD*L*IE</row>
+     <row>T**AI*I*EN</row>
+     <row>O**NT*D*ND</row>
+     <row>VISTO*O*DO</row>
+     <row>***E****O*</row>
+     <row>HENCHIR***</row>
+     <row>****REZADO</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">MUERTO</clue>
+    <clue id="1">VISTO</clue>
+    <clue id="2">HENCHIR</clue>
+    <clue id="3">REZADO</clue>
+    <clue id="4">BENDITO</clue>
+    <clue id="5">MULLIDO</clue>
+    <clue id="6">RIGIENDO</clue>
+    <clue id="7">AMANTE</clue>
+    <clue id="8">HUYENDO</clue>
+   </clues>
+  </activity>
+  <activity class="@text.FillInBlanks" name="texto3.txa">
+   <description>
+    <p>Actividad con mensaje previo</p>
+   </description>
+   <messages>
+    <cell type="previous">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFF0000" background="0x80FFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="informa.wav" />
+     <p>BUENA SUERTE</p>
+    </cell>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFF0000" background="0x80FFFF" />
+     </style>
+     <p> Completa estas series.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFF0000" background="0x80FFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso.wav" />
+     <p>¡Acertar! ¡Acertando! ¡Acertado!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="fondo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <size width="540" height="300" />
+    </window>
+   </settings>
+   <evaluator class="@ComplexEvaluator" />
+   <prevScreen>
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <p>En esta actividad deberás rellenar una tabla con las formas  verbales no personales, a partir de varios ejemplos.</p>
+    <p>.</p>
+    <p>Cuando quieras... haz clic para empezar.</p>
+   </prevScreen>
+   <document>
+    <style name="default" bold="false" family="Arial" background="0xFFFFFF" italic="false" size="17" foreground="0x000000" tabWidth="26" />
+    <style name="target" base="default" target="true" background="0xFFFFFF" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <cell hAlign="left" width="118" height="30" border="false">
+       <style shadow="true">
+        <font family="Arial" size="13" bold="true" />
+        <color foreground="0xFFFFFF" background="0x0000FF" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+       </style>
+       <p>Infinitivo</p>
+      </cell>
+      <text />
+      <cell hAlign="left" width="118" height="30" border="false">
+       <style shadow="true">
+        <font family="Arial" size="13" bold="true" />
+        <color foreground="0xFFFFFF" background="0x0000FF" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+       </style>
+       <p>gerundio</p>
+      </cell>
+      <text />
+      <cell width="118" height="30" border="false">
+       <style shadow="true">
+        <font family="Arial" size="13" bold="true" />
+        <color foreground="0xFFFFFF" background="0x0000FF" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+       </style>
+       <p>participio</p>
+      </cell>
+     </p>
+     <p>
+      <target>
+       <answer>decir</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>decir    </text>
+      </target>
+      <text>              diciendo	</text>
+      <target>
+       <answer>dicho</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>dicho</text>
+      </target>
+     </p>
+     <p>
+      <text>poner	</text>
+      <target>
+       <answer>poniendo</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>poniendo</text>
+      </target>
+      <text />
+      <target>
+       <answer>puesto</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text>puesto</text>
+      </target>
+     </p>
+     <p>
+      <target>
+       <answer>absolver</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>absolver</text>
+      </target>
+      <text />
+      <target>
+       <answer>absolviendo</answer>
+       <response fill="_" length="11" maxLength="11" />
+       <text>absolviendo</text>
+      </target>
+      <text>       absuelto</text>
+     </p>
+     <p>
+      <text>insertar             </text>
+      <target>
+       <answer> insertando</answer>
+       <response fill="_" length="10" maxLength="10" />
+       <text> insertando</text>
+      </target>
+      <text />
+      <target>
+       <answer>inserto</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>inserto</text>
+      </target>
+     </p>
+     <p>
+      <text>soldar              </text>
+      <target>
+       <answer>soldando</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text> soldando   </text>
+      </target>
+      <text />
+      <target>
+       <answer>soldado</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>soldado</text>
+      </target>
+     </p>
+     <p>
+      <target>
+       <answer>componer</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>componer   </text>
+      </target>
+      <text />
+      <target>
+       <answer>componiendo</answer>
+       <response fill="_" length="11" maxLength="11" />
+       <text>componiendo</text>
+      </target>
+      <text>     compuesto</text>
+     </p>
+     <p>
+      <target>
+       <answer>morir</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>morir    </text>
+      </target>
+      <text>              muriendo          </text>
+      <target>
+       <answer> muerto</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text> muerto</text>
+      </target>
+     </p>
+     <p>
+      <text>hacer                </text>
+      <target>
+       <answer>haciendo</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text> haciendo  </text>
+      </target>
+      <text />
+      <target>
+       <answer>hecho</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>hecho</text>
+      </target>
+     </p>
+     <p>
+      <text>escribir               </text>
+      <target>
+       <answer>escribiendo</answer>
+       <response fill="_" length="11" maxLength="11" />
+       <text>escribiendo</text>
+      </target>
+      <text />
+      <target>
+       <answer>escrito</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>escrito</text>
+      </target>
+     </p>
+     <p>
+      <target>
+       <answer>satisfacer</answer>
+       <response fill="_" length="10" maxLength="10" />
+       <text>satisfacer</text>
+      </target>
+      <text>          satisfaciendo     </text>
+      <target>
+       <answer>satisfecho</answer>
+       <response fill="_" length="10" maxLength="10" />
+       <text>satisfecho</text>
+      </target>
+     </p>
+     <p>
+      <text />
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@panels.Identify" name="tiempo.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFF0000" />
+     </style>
+     <p>PULSA CONSECUTIVAMENTE Y APRENDERAS EL TIEMPO DE LOS VERBOS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFF0000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="oveja.wav" />
+     <p>MUY BIEN ! </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondo.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="1" border="true" image="1234.gif" id="primary">
+    <style>
+     <color foreground="0xFF0000" background="0x80FFFF" inactive="0xFF00FF" alternative="0xFF00FF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <ids>1 1 1 1</ids>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="247.0" cellHeight="200.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>TIEMPO  DETERMINA EL MOMENTO QUE SE HABLA</p>
+    </cell>
+    <cell>
+     <p>TIEMPO PRESENTE    LA ACCION SE REALIZA EN EL MOMENTO QUE SE HABLA</p>
+    </cell>
+    <cell>
+     <p>TIEMPO PASADO      LA ACCION YA SE REALIZÓ</p>
+    </cell>
+    <cell>
+     <p>TIEMPO FUTURO      LA ACCION VA A REALIZARSE</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="txa14.txa">
+   <description>
+    <p>Actividad con mensaje previo</p>
+   </description>
+   <messages>
+    <cell type="previous">
+     <style>
+      <font family="Arial" size="22" bold="true" />
+      <color foreground="0xFF0000" background="0x80FFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="informa.wav" />
+     <p>BUENA SUERTE</p>
+    </cell>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="22" bold="true" />
+      <color foreground="0xFF0000" background="0x80FFFF" />
+     </style>
+     <p> Completa estas series.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="22" bold="true" />
+      <color foreground="0xFF0000" background="0x80FFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso.wav" />
+     <p>¡Aciertas! ¡Acertaste! ¡Acertarás!</p>
+    </cell>
+   </messages>
+   <settings margin="8" infoCmd="winhelp.exe verbos.hlp" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="fondo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <size width="540" height="300" />
+    </window>
+   </settings>
+   <evaluator class="@ComplexEvaluator" />
+   <prevScreen>
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color foreground="0xFF0000" background="0x80FFFF" />
+    </style>
+    <p>En esta actividad deberás rellenar una tabla con conjugaciones verbales, a partir de varios ejemplos.</p>
+    <p>Fíjate en qué persona se muestra cada ejemplo para resolver correctamente el ejercicio.</p>
+    <p>Cuando quieras... haz clic para empezar.</p>
+   </prevScreen>
+   <document>
+    <style name="default" bold="false" family="Arial" background="0xFFFFFF" italic="false" size="17" foreground="0x000000" tabWidth="26" />
+    <style name="target" base="default" target="true" background="0xFFFFFF" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <cell hAlign="left" width="118" height="30" border="false">
+       <style shadow="true">
+        <font family="Arial" size="13" bold="true" />
+        <color foreground="0xFFFFFF" background="0x0000FF" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+       </style>
+       <p>Infinitivo</p>
+      </cell>
+      <text />
+      <cell hAlign="left" width="118" height="30" border="false">
+       <style shadow="true">
+        <font family="Arial" size="13" bold="true" />
+        <color foreground="0xFFFFFF" background="0x0000FF" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+       </style>
+       <p>Presente</p>
+      </cell>
+      <text />
+      <cell width="118" height="30" border="false">
+       <style shadow="true">
+        <font family="Arial" size="13" bold="true" />
+        <color foreground="0xFFFFFF" background="0x0000FF" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+       </style>
+       <p>PASADO</p>
+      </cell>
+      <text />
+      <cell hAlign="left" width="118" height="30" border="false">
+       <style shadow="true">
+        <font family="Arial" size="13" bold="true" />
+        <color foreground="0xFFFFFF" background="0x0000FF" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+       </style>
+       <p>Futuro</p>
+      </cell>
+     </p>
+     <p>
+      <target>
+       <answer>huir</answer>
+       <response fill="_" length="1" maxLength="10" />
+       <text>huir</text>
+      </target>
+      <text>	huyo	</text>
+      <target>
+       <answer>huí</answer>
+       <response fill="_" length="1" maxLength="10" />
+       <text>huí</text>
+      </target>
+      <text />
+      <target>
+       <answer>huiré</answer>
+       <response fill="_" length="1" maxLength="10" />
+       <text>huiré</text>
+      </target>
+     </p>
+     <p>
+      <target>
+       <answer>desviar</answer>
+       <response fill="_" length="1" maxLength="10" />
+       <text>desviar</text>
+      </target>
+      <text />
+      <target>
+       <answer>desvías</answer>
+       <response fill="_" length="1" maxLength="10" />
+       <text>desvías</text>
+      </target>
+      <text />
+      <target>
+       <answer>desviaste</answer>
+       <response fill="_" length="1" maxLength="10" />
+       <text>desviaste</text>
+      </target>
+      <text>	desviarás</text>
+     </p>
+     <p>
+      <target>
+       <answer>venir</answer>
+       <response fill="_" length="1" maxLength="10" />
+       <text>venir</text>
+      </target>
+      <text />
+      <target>
+       <answer>viene</answer>
+       <response fill="_" length="1" maxLength="10" />
+       <text>viene</text>
+      </target>
+      <text>	vino	</text>
+      <target>
+       <answer>vendrá</answer>
+       <response fill="_" length="1" maxLength="10" />
+       <text>vendrá</text>
+      </target>
+     </p>
+     <p>
+      <target>
+       <answer>bailar</answer>
+       <response fill="_" length="1" maxLength="10" />
+       <text>bailar</text>
+      </target>
+      <text>	bailamos	</text>
+      <target>
+       <answer>bailamos</answer>
+       <response fill="_" length="1" maxLength="10" />
+       <text>bailamos</text>
+      </target>
+      <text />
+      <target>
+       <answer>bailaremos</answer>
+       <response fill="_" length="1" maxLength="10" />
+       <text>bailaremos</text>
+      </target>
+     </p>
+     <p>
+      <text>dar	</text>
+      <target>
+       <answer>dan</answer>
+       <response fill="_" length="1" maxLength="10" />
+       <text>dan</text>
+      </target>
+      <text />
+      <target>
+       <answer>dieron</answer>
+       <response fill="_" length="1" maxLength="10" />
+       <text>dieron</text>
+      </target>
+      <text>	darán</text>
+     </p>
+     <p>
+      <target>
+       <answer>poner</answer>
+       <response fill="_" length="1" maxLength="10" />
+       <text>poner</text>
+      </target>
+      <text />
+      <target>
+       <answer>ponen</answer>
+       <response fill="_" length="1" maxLength="10" />
+       <text>ponen</text>
+      </target>
+      <text>	pusieron	</text>
+      <target>
+       <answer>pondrán</answer>
+       <response fill="_" length="1" maxLength="10" />
+       <text>pondrán</text>
+      </target>
+     </p>
+     <p>
+      <target>
+       <answer>valer</answer>
+       <response fill="_" length="1" maxLength="10" />
+       <text>valer</text>
+      </target>
+      <text>	valgo	</text>
+      <target>
+       <answer>valí</answer>
+       <response fill="_" length="1" maxLength="10" />
+       <text>valí</text>
+      </target>
+      <text />
+      <target>
+       <answer>valdré</answer>
+       <response fill="_" length="1" maxLength="10" />
+       <text>valdré</text>
+      </target>
+     </p>
+     <p>
+      <target>
+       <answer>querer</answer>
+       <response fill="_" length="1" maxLength="10" />
+       <text>querer</text>
+      </target>
+      <text />
+      <target>
+       <answer>quieres</answer>
+       <response fill="_" length="1" maxLength="10" />
+       <text>quieres</text>
+      </target>
+      <text />
+      <target>
+       <answer>quisiste</answer>
+       <response fill="_" length="1" maxLength="10" />
+       <text>quisiste</text>
+      </target>
+      <text>	querrás</text>
+     </p>
+     <p>
+      <target>
+       <answer>cambiar</answer>
+       <response fill="_" length="1" maxLength="10" />
+       <text>cambiar</text>
+      </target>
+      <text />
+      <target>
+       <answer>cambio</answer>
+       <response fill="_" length="1" maxLength="10" />
+       <text>cambio</text>
+      </target>
+      <text>	cambié	</text>
+      <target>
+       <answer>cambiaré</answer>
+       <response fill="_" length="1" maxLength="10" />
+       <text>cambiaré</text>
+      </target>
+     </p>
+     <p />
+    </section>
+   </document>
+  </activity>
+  <activity class="@panels.InformationScreen" name="ver4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="informa.wav" />
+     <p>Lee esta información y pasa a la siguiente actividad.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" infoCmd="winhelp.exe verbos.hlp" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" columns="2" border="false" image="ver4.gif">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+   </cells>
+  </activity>
+  <activity class="@textGrid.WordSearch" name="vercap4.sop">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>ENCUENTRA 7 FORMAS VERBALES IRREGULARES</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="vaca.wav" />
+     <p>  !BIEN! </p>
+    </cell>
+   </messages>
+   <settings margin="8" infoCmd="winhelp.exe verbos.hlp" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="fondo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x80FFFF" border="true" />
+   </settings>
+   <textGrid rows="10" columns="10" cellWidth="350.0" cellHeight="151.0" border="false">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>STUESTOP*V</row>
+     <row>U****R*U*I</row>
+     <row>E***OU*E*E</row>
+     <row>L***ZE*B*R</row>
+     <row>D***EC*L*T</row>
+     <row>O***UO*A*E</row>
+     <row>TRUECO*S**</row>
+     <row>**********</row>
+     <row>**********</row>
+     <row>CUELAS****</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">SUELDO</clue>
+    <clue id="1">PUEBLAS</clue>
+    <clue id="2">CUEZO</clue>
+    <clue id="3">CUELAS</clue>
+    <clue id="4">TRUECO</clue>
+    <clue id="5">VIERTE</clue>
+    <clue id="6">TUESTO</clue>
+   </clues>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="verirr4.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Identifica en que tiempo se encuentran los siguientes verbos</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="aplauso.wav" />
+     <p> !Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="fondo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" columns="6" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0x80FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="6" />
+    <cell id="0">
+     <p>discierno</p>
+    </cell>
+    <cell id="0">
+     <p>tañen</p>
+    </cell>
+    <cell id="1">
+     <p>movió</p>
+    </cell>
+    <cell id="1">
+     <p>herraron</p>
+    </cell>
+    <cell id="2">
+     <p>contarás</p>
+    </cell>
+    <cell id="2">
+     <p>conducirá</p>
+    </cell>
+    <cell id="0">
+     <p>tuestan</p>
+    </cell>
+    <cell id="0">
+     <p>satisfaces</p>
+    </cell>
+    <cell id="0">
+     <p>colamos</p>
+    </cell>
+    <cell id="1">
+     <p>poblaron</p>
+    </cell>
+    <cell id="2">
+     <p>satisfará</p>
+    </cell>
+    <cell id="2">
+     <p>acertará</p>
+    </cell>
+    <cell id="0">
+     <p>trueco</p>
+    </cell>
+    <cell id="0">
+     <p>desuello</p>
+    </cell>
+    <cell id="1">
+     <p>troqué</p>
+    </cell>
+    <cell id="1">
+     <p>soldaba</p>
+    </cell>
+    <cell id="2">
+     <p>herrarán</p>
+    </cell>
+    <cell id="2">
+     <p>irá</p>
+    </cell>
+    <cell id="0">
+     <p>cegamos</p>
+    </cell>
+    <cell id="1">
+     <p>mintieron</p>
+    </cell>
+    <cell id="1">
+     <p>erró</p>
+    </cell>
+    <cell id="2">
+     <p>deducirán</p>
+    </cell>
+    <cell id="2">
+     <p>apretará</p>
+    </cell>
+    <cell id="0">
+     <p>cocemos</p>
+    </cell>
+    <cell id="0">
+     <p>vierto</p>
+    </cell>
+    <cell id="1">
+     <p>engrosó</p>
+    </cell>
+    <cell id="1">
+     <p>mullí</p>
+    </cell>
+    <cell id="2">
+     <p>huirá</p>
+    </cell>
+    <cell id="2">
+     <p>tostará</p>
+    </cell>
+    <cell id="0">
+     <p>aprietas</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="3" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0x80FF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>presente</p>
+    </cell>
+    <cell>
+     <p>pasado</p>
+    </cell>
+    <cell>
+     <p>futuro</p>
+    </cell>
+   </cells>
+   <cells rows="5" columns="6" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="5" rows="6" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="1234.gif" file="1234.gif" animated="false" />
+  <media name="fondo.gif" file="fondo.gif" animated="false" />
+  <media name="i.gif" file="i.gif" animated="false" />
+  <media name="i1.gif" file="i1.gif" animated="false" />
+  <media name="i2.gif" file="i2.gif" animated="false" />
+  <media name="i3.gif" file="i3.gif" animated="false" />
+  <media name="i4.gif" file="i4.gif" animated="false" />
+  <media name="ni_a.gif" file="ni_a.gif" animated="false" />
+  <media name="portada3.gif" file="portada3.gif" animated="false" />
+  <media name="ver4.gif" file="ver4.gif" animated="false" />
+  <media name="campesi.mid" file="campesi.mid" />
+  <media name="carmen.mid" file="carmen.mid" />
+  <media name="14.wav" file="14.wav" />
+  <media name="aplauso.wav" file="aplauso.wav" />
+  <media name="informa.wav" file="informa.wav" />
+  <media name="muybien.wav" file="muybien.wav" />
+  <media name="oveja.wav" file="oveja.wav" />
+  <media name="vaca.wav" file="vaca.wav" />
+ </mediaBag>
+</JClicProject>
+

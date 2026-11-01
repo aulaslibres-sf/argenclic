@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="matdibu" version="0.1.3">
+ <settings>
+  <title>Dibujo técnico</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="1/15/07" />
+  <revision description="Conversión de Clic3 a JClic" date="1/15/07">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Concha Giovanetti Fdez de Henestrosa" mail="cgiova1@gmail.com" />
+  <organization name="IES Tamujal" mail="ies.arroyoservan@edu.juntaextremadura.net" url="http://www.iestamujal.org/" city="Arroyo de San Serván" state="Andalucía" />
+  <language>es</language>
+  <description>
+   <p>Actividades sobre el dibujo técnico, algunas de ellas,  basadas en el libro de Tecnología de 1º de ESO de la editorial Oxford.</p>
+  </description>
+  <descriptors area-codes="tec" level-codes="SEC">dibujo técnico</descriptors>
+  <skin file="@simple.xml" />
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Actividades sobre el dibujo técnico, algunas de ellas,  basadas en el libro de Tecnología de 1º de ESO de la editorial Oxford.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="start" name="inicial">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="Lapices" delay="3" />
+  <item name="Papel" delay="3" />
+  <item name="Papel2" delay="3" />
+  <item name="reglas" delay="3" />
+  <item name="reglas y descripcion" delay="4" />
+  <item name="posicionreglas" delay="4" />
+  <item name="enlaceadibujo" />
+  <item name="utilesdi.ass" />
+  <item name="escucar.ass" />
+  <item name="bocecroq.ass" />
+  <item name="bocecro1.ass" />
+  <item name="isometri.ass" />
+  <item name="isometr1.ass" />
+  <item name="isometr2.ass" />
+  <item name="fincomun.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@text.Complete" name="Lapices" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color foreground="0x0066CC" background="0xFFFFFF" />
+     </style>
+     <p>Después de cada palabra en negrita falta otra palabra. Consulta tu libro de texto y completa las frases.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color foreground="0x0066CC" background="0xFFFFFF" />
+     </style>
+     <p>Muy bien, continúa...</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0066CC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true">
+     <size width="576" height="206" />
+    </window>
+   </settings>
+   <checkButton />
+   <document>
+    <style name="default" family="Comic Sans MS" size="16" tabWidth="12" bold="false" foreground="0x0066CC" background="0xFFFFFF" italic="false" />
+    <style name="target" base="default" target="true" foreground="0x0066CC" />
+    <style name="targetError" base="target" foreground="0xFF0033" />
+    <section>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFFFF">- El lápiz es </text>
+      <text family="Arial" bold="true" background="0xFFFFFF">una</text>
+      <text family="Arial" background="0xFFFFFF"> </text>
+      <target>herramienta</target>
+      <text family="Arial" background="0xFFFFFF"> básica del dibujo, que constan de </text>
+      <text family="Arial" bold="true" background="0xFFFFFF">una</text>
+      <text family="Arial" background="0xFFFFFF"> </text>
+      <target>mina</target>
+      <text family="Arial" background="0xFFFFFF">, compuesta por una mezcla </text>
+      <text family="Arial" bold="true" background="0xFFFFFF">de</text>
+      <text family="Arial" background="0xFFFFFF"> </text>
+      <target>grafito</target>
+      <text family="Arial" background="0xFFFFFF"> y grasas que se deshace </text>
+      <text family="Arial" bold="true" background="0xFFFFFF">al</text>
+      <text family="Arial" background="0xFFFFFF"> </text>
+      <target>presionar</target>
+      <text family="Arial" background="0xFFFFFF"> contra el papel, rodeada de una vaina </text>
+      <text family="Arial" bold="true" background="0xFFFFFF">de</text>
+      <text family="Arial" background="0xFFFFFF"> </text>
+      <target>madera</target>
+      <text family="Arial" background="0xFFFFFF"> cilíndrica o prismática.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFFFF">- La dureza de la mina depende de la cantidad </text>
+      <text family="Arial" bold="true" background="0xFFFFFF">de</text>
+      <text family="Arial" background="0xFFFFFF"> </text>
+      <target>grafito</target>
+      <text family="Arial" background="0xFFFFFF"> que contenga.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFFFF">- La mina más dura es </text>
+      <text family="Arial" bold="true" background="0xFFFFFF">la</text>
+      <text family="Arial" background="0xFFFFFF"> </text>
+      <target>6H</target>
+      <text family="Arial" background="0xFFFFFF"> y la más blanda </text>
+      <text family="Arial" bold="true" background="0xFFFFFF">la</text>
+      <text family="Arial" background="0xFFFFFF"> </text>
+      <target>6B</target>
+      <text family="Arial" background="0xFFFFFF">.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFFFF">- Los </text>
+      <text family="Arial" bold="true" background="0xFFFFFF">lápices</text>
+      <text family="Arial" background="0xFFFFFF"> </text>
+      <target>blandos</target>
+      <text family="Arial" background="0xFFFFFF"> se usan en dibujo artístico y los </text>
+      <text family="Arial" bold="true" background="0xFFFFFF">lápices</text>
+      <text family="Arial" background="0xFFFFFF"> </text>
+      <target>duros</target>
+      <text family="Arial" background="0xFFFFFF"> se emplean en el dibujo técnico.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFFFF">-La mina del </text>
+      <text family="Arial" bold="true" background="0xFFFFFF">tipo</text>
+      <text family="Arial" background="0xFFFFFF"> </text>
+      <target>HB</target>
+      <text family="Arial" background="0xFFFFFF"> tiene una </text>
+      <text family="Arial" bold="true" background="0xFFFFFF">dureza</text>
+      <text family="Arial" background="0xFFFFFF"> </text>
+      <target>intermedia</target>
+      <text family="Arial" background="0xFFFFFF"> y se utiliza tanto en el dibujo artístico como en el técnico.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Papel" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color foreground="0xFFFFFF" background="0x0066CC" border="0x40A2D9" />
+     </style>
+     <p>Identifica cada tipo de formato con su tamaño</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color foreground="0xFFFFFF" background="0x0066CC" />
+     </style>
+     <p>¡Bien! Adelante...</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x40A2D9">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0066CC" transparent="true" border="true" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="213.0" cellHeight="34.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="17" />
+     <color foreground="0x0066CC" background="0xFFFFFF" border="0x0066CC" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>DIN A-0</p>
+    </cell>
+    <cell>
+     <p>DIN A-1</p>
+    </cell>
+    <cell>
+     <p>DIN A-2</p>
+    </cell>
+    <cell>
+     <p>DIN A-3</p>
+    </cell>
+    <cell>
+     <p>DIN A-4</p>
+    </cell>
+    <cell>
+     <p>DIN A-5</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="401.0" cellHeight="36.0" border="true" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="17" />
+     <color foreground="0xFFFFFF" background="0x0066CC" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>84.1 X 118.9</p>
+    </cell>
+    <cell>
+     <p>59.4 X 84.1</p>
+    </cell>
+    <cell>
+     <p>42 X 59.4</p>
+    </cell>
+    <cell>
+     <p>29.7 X 42</p>
+    </cell>
+    <cell>
+     <p>21 X 29.7</p>
+    </cell>
+    <cell>
+     <p>14.8 X 21</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Papel2" code="">
+   <description />
+   <messages />
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0066CC" border="true" />
+    <skin file="@simple.xml" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="159.0" cellHeight="40.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color foreground="0x0066CC" background="0xFFFFFF" border="0x000099" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <p>MATE</p>
+    </cell>
+    <cell id="0">
+     <p>SATINADO</p>
+    </cell>
+    <cell id="1">
+     <p>LISO</p>
+    </cell>
+    <cell id="1">
+     <p>RUGOSO</p>
+    </cell>
+    <cell id="2">
+     <p>BLANCO</p>
+    </cell>
+    <cell id="2">
+     <p>COLOREADO</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="292.0" cellHeight="30.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color foreground="0xFFFFFF" background="0x0085CC" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>BRILLO</p>
+    </cell>
+    <cell>
+     <p>TEXTURA</p>
+    </cell>
+    <cell>
+     <p>COLOR</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="bocecro1.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color foreground="0x9999FF" background="0xFFFFFF" />
+     </style>
+     <p>Asocia cada dibujo con su nombre</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x9999FF" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x9999FF" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="primary">
+    <style borderStroke="2.3" markerStroke="2.7">
+     <color background="0x9999FF" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>Boceto</p>
+    </cell>
+    <cell>
+     <p>Croquis</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="140.0" cellHeight="115.0" border="false" id="secondary">
+    <style borderStroke="2.8" markerStroke="2.7">
+     <color foreground="0xFFFFFF" background="0xFFFF80" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell image="boceto.gif" />
+    <cell image="croquis.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="bocecroq.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0099CC" />
+     </style>
+     <p>Relaciona las características con el tipo de dibujo</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0099CC" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="4" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color foreground="0x0099CC" background="0xFFFFCC" border="0x0099CC" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell id="0">
+     <p>Es el primer dibujo que hacemos de un objeto.</p>
+    </cell>
+    <cell id="0">
+     <p>Se hace a mano alzada.</p>
+    </cell>
+    <cell id="0">
+     <p>Muestra la forma y las partes principales.</p>
+    </cell>
+    <cell id="0">
+     <p>Se hace con rapidez.</p>
+    </cell>
+    <cell id="0">
+     <p>No incluye muchos detalles ni medidas exactas.</p>
+    </cell>
+    <cell id="0">
+     <p>Debe ser claro y limpio</p>
+    </cell>
+    <cell id="0">
+     <p>Es el paso previo para obtener un croquis.</p>
+    </cell>
+    <cell id="1">
+     <p>Es la representación gráfica definitiva de la idea.</p>
+    </cell>
+    <cell id="1">
+     <p>Se hace a mano alzada pero con mucha precisión y proporcionado.</p>
+    </cell>
+    <cell id="1">
+     <p>Indica las medidas mediante cotas.</p>
+    </cell>
+    <cell id="1">
+     <p>Muestra la forma y las partes principales y también los detalles.</p>
+    </cell>
+    <cell id="1">
+     <p>Se pueden dibujar las vistas que sean necesarias.</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color foreground="0xFFFFFF" background="0x0099CC" border="0xFFFFCC" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0xFFFFCC" background="0x0099CC" />
+     </style>
+     <p>BOCETO</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0xFFFFCC" background="0x0099CC" />
+     </style>
+     <p>CROQUIS</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="enlaceadibujo" code="">
+   <description />
+   <messages />
+   <settings margin="8" report="false">
+    <container bgColor="0x9999FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="408.0" cellHeight="246.0" border="true">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <style borderStroke="2.4" markerStroke="2.7">
+      <font family="Comic Sans MS" size="17" />
+      <color foreground="0x6666FF" background="0xFFFFFF" border="0x6666FF" />
+     </style>
+     <p>A partir de ahora no podrás encontrar la solucion de las actividades en tu libro. Estan sacadas de otras actividas clic sobre dibujo realizadas por otros autores.</p>
+     <p>Haz clic en la flecha para continuar.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="escucar.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x0099CC" background="0xFFFFFF" />
+     </style>
+     <p>Relaciona cada ángulo construido con escuadra y cartabón con su valor</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x0099CC" background="0xFFFFFF" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xD8EEFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" transparent="true" border="false" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="224.0" cellHeight="137.0" border="false" id="primary">
+    <style>
+     <color background="0xFF8080" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell image="escuca15.gif" />
+    <cell image="escuca75.gif" />
+    <cell image="escuc105.gif" />
+    <cell image="escuc150.gif" />
+    <cell image="escuc165.gif" />
+   </cells>
+   <cells rows="5" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>15º</p>
+    </cell>
+    <cell>
+     <p>75º</p>
+    </cell>
+    <cell>
+     <p>105º</p>
+    </cell>
+    <cell>
+     <p>150º</p>
+    </cell>
+    <cell>
+     <p>165º</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="fincomun.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF8080" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="530.0" cellHeight="327.0" border="false">
+    <style>
+     <font family="Arial" size="28" />
+     <color foreground="0xFFFF99" background="0x0099CC" border="0xFFFFCC" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>Enhorabuena. Has llegado al final de las actividades básicas de dibujo técnico</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="inicial" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Comic Sans MS" size="17" />
+      <color foreground="0x0066CC" background="0xFFFFFF" border="0x6666FF" />
+     </style>
+     <p>Pulsa las flechas para continuar.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x2D82BF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+    <skin file="@simple.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="553.0" cellHeight="276.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <style borderStroke="6.0" markerStroke="2.7">
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x4061B1" background="0xD6E3FF" border="0xFFFFFF" />
+     </style>
+     <p>EN ESTA ACTIVIDAD APRENDERÁS LO MÁS BÁSICO SOBRE DIBUJO TÉCNICO.</p>
+     <p>PARA COMPLETAR LAS ACTIVIDADES DEBES CONSULTAR TÚ LIBRO DE TECNOLOGÍA OXFORD</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.Identify" name="isometr1.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0099CC" />
+     </style>
+     <p>Indica cuáles de estas vistas corresponden a la figura anterior</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF8080" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="185.0" cellHeight="154.0" border="true" id="primary">
+    <style borderStroke="1.7" markerStroke="5.0">
+     <color background="0x0099CC" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="1" image="alzadois.gif" />
+    <cell id="1" image="plantais.gif" />
+    <cell id="1" image="perfizis.gif" />
+    <cell id="0" image="alzadcab.gif" />
+    <cell id="0" image="plantaca.gif" />
+    <cell id="0" image="perfdeca.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="isometr2.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color foreground="0xFFFFFF" background="0x0099CC" />
+     </style>
+     <p>Asocia cada una de las vistas con su nombre</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0099CC" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF8080" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="201.0" cellHeight="175.0" border="true" id="primary">
+    <style borderStroke="1.9" markerStroke="2.7">
+     <color background="0x0099CC" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="alzadois.gif" />
+    <cell image="plantais.gif" />
+    <cell image="perfizis.gif" />
+   </cells>
+   <cells rows="3" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="2.4" markerStroke="2.7">
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFFFFFF" background="0x0099CC" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>Alzado</p>
+    </cell>
+    <cell>
+     <p>Planta</p>
+    </cell>
+    <cell>
+     <p>Perfil izquierdo</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="isometri.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x0099CC" background="0xFFFFFF" />
+     </style>
+     <p>Observa la figura con  mucha atención y cuando te parezca que la has visto bien pasa a la siguiente pantalla</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFF8080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x0099CC">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF8080" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="isometri.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="posicionreglas">
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="18" />
+      <color foreground="0x669900" background="0xFFFFFF" />
+     </style>
+     <p>Ordena las piezas de manera que resulte una imagen donde puedas ver cómo se colocan las reglas para trazar paralelas y perpendiculares.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color foreground="0x669900" background="0xFFFFFF" />
+     </style>
+     <p>No olvides colocar así las reglas cuando dibujes.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x6699FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+    <skin file="@simple.xml" />
+   </settings>
+   <cells rows="6" cols="3" border="true" image="trazarparalelas.gif">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="6" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="reglas">
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="17" />
+      <color foreground="0x0099CC" background="0xFFFFFF" border="0x0099CC" />
+     </style>
+     <p>Descubre las parejas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color foreground="0x0099CC" background="0xFFFFFF" />
+     </style>
+     <p>Adelante....</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="266.0" cellHeight="299.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" border="0x009933" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="cartabonfoto.gif" />
+    <cell image="compasfoto.gif" />
+    <cell image="reglafoto.gif" />
+    <cell image="escuadrafoto.gif" />
+    <cell image="portaangulosfoto.gif" />
+    <cell />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="reglas y descripcion">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color foreground="0x0099CC" background="0xFFFFFF" border="0x0099CC" />
+     </style>
+     <p>Relaciona cada útil de dibujo con su definición.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color foreground="0x0099CC" background="0xFFFFFF" border="0x0099CC" />
+     </style>
+     <p>Bien otra vez.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0099CC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="151.0" cellHeight="151.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" border="0x009933" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell image="cartabonfoto.gif" />
+    <cell image="compasfoto.gif" />
+    <cell image="escuadrafoto.gif" />
+    <cell image="portaangulosfoto.gif" />
+    <cell image="reglafoto.gif" />
+   </cells>
+   <cells rows="5" cols="1" cellWidth="637.0" cellHeight="200.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" border="0x009933" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell image="cartabonletra.gif" />
+    <cell image="compasletra.gif" />
+    <cell image="escuadraletra.gif" />
+    <cell image="portaangulosletra.gif" />
+    <cell image="reglaletra.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="utilesdi.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Une los nombres de los útiles de dibujo con sus representaciones</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="3" cols="4" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color foreground="0x0099CC" background="0xFFFFCC" border="0x0099CC" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>Papel para bocetos</p>
+    </cell>
+    <cell>
+     <p>Papel vegetal</p>
+    </cell>
+    <cell>
+     <p>Lápiz</p>
+    </cell>
+    <cell>
+     <p>Lápices de colores</p>
+    </cell>
+    <cell>
+     <p>Portaminas</p>
+    </cell>
+    <cell>
+     <p>Rotuladores</p>
+    </cell>
+    <cell>
+     <p>Goma de borrar</p>
+    </cell>
+    <cell>
+     <p>Compás</p>
+    </cell>
+    <cell>
+     <p>Regla</p>
+    </cell>
+    <cell>
+     <p>Escuadra</p>
+    </cell>
+    <cell>
+     <p>Cartabón</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="12" />
+      <color foreground="0x0099CC" background="0xFFFFCC" border="0x0099CC" />
+     </style>
+     <p>Transportador de ángulos</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="4" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFCC" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell image="papelboc.gif" />
+    <cell image="papelveg.gif" />
+    <cell image="lapiz.gif" />
+    <cell image="lapizcol.gif" />
+    <cell image="portamin.gif" />
+    <cell image="rotulado.gif" />
+    <cell image="goma.gif" />
+    <cell image="compas.gif" />
+    <cell image="regla.gif" />
+    <cell image="escuadra.gif" />
+    <cell image="cartabon.gif" />
+    <cell image="transpor.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="alzadcab.gif" file="alzadcab.gif" animated="false" />
+  <media name="alzadois.gif" file="alzadois.gif" animated="false" />
+  <media name="boceto.gif" file="boceto.gif" animated="false" />
+  <media name="cartabon.gif" file="cartabon.gif" animated="false" />
+  <media name="cartabonfoto.gif" file="cartabonfoto.gif" animated="false" />
+  <media name="cartabonletra.gif" file="cartabonletra.gif" animated="false" />
+  <media name="compas.gif" file="compas.gif" animated="false" />
+  <media name="compasfoto.gif" file="compasfoto.gif" animated="false" />
+  <media name="compasletra.gif" file="compasletra.gif" animated="false" />
+  <media name="croquis.gif" file="croquis.gif" animated="false" />
+  <media name="escuadra.gif" file="escuadra.gif" animated="false" />
+  <media name="escuadrafoto.gif" file="escuadrafoto.gif" animated="false" />
+  <media name="escuadraletra.gif" file="escuadraletra.gif" animated="false" />
+  <media name="escuc105.gif" file="escuc105.gif" animated="false" />
+  <media name="escuc150.gif" file="escuc150.gif" animated="false" />
+  <media name="escuc165.gif" file="escuc165.gif" animated="false" />
+  <media name="escuca15.gif" file="escuca15.gif" animated="false" />
+  <media name="escuca75.gif" file="escuca75.gif" animated="false" />
+  <media name="goma.gif" file="goma.gif" animated="false" />
+  <media name="isometri.gif" file="isometri.gif" animated="false" />
+  <media name="lapiz.gif" file="lapiz.gif" animated="false" />
+  <media name="lapizcol.gif" file="lapizcol.gif" animated="false" />
+  <media name="papelboc.gif" file="papelboc.gif" animated="false" />
+  <media name="papelveg.gif" file="papelveg.gif" animated="false" />
+  <media name="perfdeca.gif" file="perfdeca.gif" animated="false" />
+  <media name="perfizis.gif" file="perfizis.gif" animated="false" />
+  <media name="plantaca.gif" file="plantaca.gif" animated="false" />
+  <media name="plantais.gif" file="plantais.gif" animated="false" />
+  <media name="portaangulosfoto.gif" file="portaangulosfoto.gif" animated="false" />
+  <media name="portaangulosletra.gif" file="portaangulosletra.gif" animated="false" />
+  <media name="portamin.gif" file="portamin.gif" animated="false" />
+  <media name="regla.gif" file="regla.gif" animated="false" />
+  <media name="reglafoto.gif" file="reglafoto.gif" animated="false" />
+  <media name="reglaletra.gif" file="reglaletra.gif" animated="false" />
+  <media name="rotulado.gif" file="rotulado.gif" animated="false" />
+  <media name="transpor.gif" file="transpor.gif" animated="false" />
+  <media name="trazarparalelas.gif" file="trazarparalelas.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

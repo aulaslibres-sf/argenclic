@@ -1,0 +1,984 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="constr1e" version="0.1.3">
+ <settings>
+  <title>constr1e</title>
+  <revision description="created" date="5/30/02" />
+  <descriptors />
+ </settings>
+ <sequence>
+  <item id="constr1e.pac" name="paq11int.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="media1.ass" />
+  <item name="perpen1.ass" />
+  <item name="perpen2.ass" />
+  <item name="paral1.ass" />
+  <item name="divi1.ass" />
+  <item name="divi2.ass" />
+  <item name="bisec1.ass" />
+  <item name="trans1.ass" />
+  <item name="media1.puz" />
+  <item name="perpen11.ass" />
+  <item name="perpen22.ass" />
+  <item name="paral1.puz" />
+  <item name="divi11.ass" />
+  <item name="trans12.ass" />
+  <item name="bisec1.puz" />
+  <item name="divi22.ass" />
+  <item name="media11.ass" />
+  <item name="divi1.puz" />
+  <item name="perpen21.ass" />
+  <item name="divi21.ass" />
+  <item name="perpen1.puz" />
+  <item name="paral12.ass" />
+  <item name="trans1.puz" />
+  <item name="bisec11.ass" />
+  <item name="paq11fi.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.Identify" name="bisec1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Haz clic sucesivamente sobre las casillas 1, 2, 3 y 4 para ver cómo se traza la BISECTRIZ de un ángulo.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Obsérvalo bien y pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false" useOrder="true">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="bisec1a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <ids>1 1 1 1</ids>
+   </cells>
+   <cells rows="1" cols="4" border="true" image="bisec1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="bisec1.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Aquí tienes desordenados cuatro pasos para trazar la BISECTRIZ de un ángulo. Ordénalos de izquierda a derecha.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="bisec1c.gif">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="bisec11.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Arriba tienes las explicaciones para trazar la BISECTRIZ de un ángulo. Lleva cada dibujo al lugar correspondiente.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="bisec11a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="bisec11b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="bisec1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="divi1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Haz clic sucesivamente sobre las casillas 1, 2, 3 y 4 para ver cómo se DIVIDE un segmento AB en 5 partes iguales.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Obsérvalo bien y pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false" useOrder="true">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="divi1a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <ids>1 1 1 1</ids>
+   </cells>
+   <cells rows="1" cols="4" border="true" image="divi1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="divi1.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Aquí tienes desordenados cuatro pasos para DIVIDIR un segmento AB en 5 partes iguales. Ordénalos de izquierda a derecha.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="divi1c.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="divi11.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Arriba tienes las explicaciones para DIVIDIR un segmento AB en 5 partes iguales. Lleva cada dibujo al sitio correspondiente.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="false" image="divi11a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="divi11b.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="false" image="divi1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="divi2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Haz clic sucesivamente sobre las casillas 1, 2, 3 y 4 para ver cómo se DIVIDE un segmento AB en 3 partes PROPORCIONALES a los segmentos a, b y c.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Obsérvalo bien y pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false" useOrder="true">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="divi2a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <ids>1 1 1 1</ids>
+   </cells>
+   <cells rows="1" cols="4" border="true" image="divi2c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="divi21.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Arriba tienes las explicaciones para DIVIDIR un segmento AB en 3 partes PROPORCIONALES a los segmentos a, b y c. Lleva cada dibujo a su lugar.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="false" image="divi21a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="divi21b.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="false" image="divi2c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="divi22.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Arriba tienes los dibujos necesarios para DIVIDIR un segmento AB en 3 partes PROPORCIONALES a los segmentos a, b y c. Lleva cada explicación a su lugar.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="false" image="divi22a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="divi22b.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="false" image="divi2c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="media1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Haz clic sucesivamente sobre las casillas 1, 2, 3 y 4 para ver cómo se dibuja la MEDIATRIZ de un segmento AB.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Obsérvalo bien y pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false" useOrder="true">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="false" image="media1a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <ids>1 1 1 1</ids>
+   </cells>
+   <cells rows="1" cols="4" border="false" image="media1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="media1.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Aquí tienes desordenados cuatro pasos para trazar la MEDIATRIZ de un segmento AB. Ordénalos de izquierda a derecha.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="media1c.gif">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="media11.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Arriba tienes las explicaciones para trazar la MEDIATRIZ de un segmento AB. Lleva cada dibujo al lugar correspondiente.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="media11a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="media11b.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="media1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="paq11fi.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic sobre la flecha de la derecha para volver al menú         &gt;&gt;&gt;</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="portada1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="60.0" border="false">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>FIN DEL PAQUETE 11</p>
+    </cell>
+    <cell>
+     <p>CONSTRUCCIONES CON REGLA Y COMPÁS - 1</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="paq11int.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic sobre la flecha para iniciar el paquete de actividades         &gt;&gt;&gt;</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="portada1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" transparent="true" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="60.0" border="false">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>GEOCLIC - PAQUETE 11</p>
+    </cell>
+    <cell>
+     <p>CONSTRUCCIONES CON REGLA Y COMPÁS - 1</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.Identify" name="paral1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Haz clic sucesivamente sobre las casillas 1, 2, 3 y 4 para ver cómo se traza una PARALELA a una recta r por un punto P exterior a ella.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Obsérvalo bien y pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false" useOrder="true">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="false" image="paral1a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <ids>1 1 1 1</ids>
+   </cells>
+   <cells rows="1" cols="4" border="false" image="paral1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="paral1.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Aquí tienes desordenados cuatro pasos para trazar la PARALELA a una recta r por un punto P exterior a ella. Ordénalos de izquierda a derecha.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="paral1c.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="paral12.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Arriba tienes los dibujos necesarios para trazar una PARALELA a una recta r por un punto P exterior a ella. Lleva cada explicación al lugar correspondiente.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="false" image="paral12a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="paral12b.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="false" image="paral1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="perpen1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Haz clic sucesivamente sobre las casillas 1, 2, 3 y 4 para ver cómo se traza una PERPENDICULAR a una recta r por un punto P de ella misma.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Obsérvalo bien y pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false" useOrder="true">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="false" image="perpen1a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <ids>1 1 1 1</ids>
+   </cells>
+   <cells rows="1" cols="4" border="false" image="perpen1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="perpen1.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Aquí tienes desordenados cuatro pasos para trazar la PERPENDICULAR a una recta r por un punto P de ella misma. Ordénalos de izquierda a derecha.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="perpen1c.gif">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="perpen11.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Arriba tienes las explicaciones para trazar la PERPENDICULAR a una recta r por un punto P de ella misma. Lleva cada dibujo al lugar correspondiente.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="false" image="perpe11a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="perpe11b.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="false" image="perpen1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="perpen2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Haz clic sucesivamente sobre las casillas 1, 2, 3 y 4 para ver cómo se traza una PERPENDICULAR a una recta r por un punto P exterior a ella.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Obsérvalo bien y pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false" useOrder="true">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="false" image="perpen2a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <ids>1 1 1 1</ids>
+   </cells>
+   <cells rows="1" cols="4" border="false" image="perpen2c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="perpen21.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Arriba tienes las explicaciones para trazar la PERPENDICULAR a una recta r por un punto P exterior a ella. Lleva cada dibujo al lugar correspondiente.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="false" image="perpe21a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="perpe21b.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="false" image="perpen2c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="perpen22.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Arriba tienes los dibujos necesarios para trazar la PERPENDICULAR a una recta r por un punto P exterior a ella. Lleva cada explicación al lugar correspondiente.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="false" image="perpe22a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="perpe22b.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="false" image="perpen2c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="trans1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Haz clic sucesivamente sobre las casillas 1, 2, 3 y 4 para ver cómo se TRANSPORTA UN ÁNGULO sobre un segmento.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Obsérvalo bien y pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false" useOrder="true">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="trans1a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <ids>1 1 1 1</ids>
+   </cells>
+   <cells rows="1" cols="4" border="true" image="trans1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="trans1.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Aquí tienes desordenados cuatro pasos para TRANSPORTAR UN ÁNGULO sobre un segmento. Ordénalos de izquierda a derecha.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="trans1c.gif">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="trans12.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Arriba tienes los dibujos necesarios para TRANSPORTAR UN ÁNGULO sobre un segmento. Lleva cada explicación al lugar correspondiente.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="trans12a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="trans12b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="trans1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="bisec11a.gif" file="bisec11a.gif" animated="false" />
+  <media name="bisec11b.gif" file="bisec11b.gif" animated="false" />
+  <media name="bisec1a.gif" file="bisec1a.gif" animated="false" />
+  <media name="bisec1c.gif" file="bisec1c.gif" animated="false" />
+  <media name="divi11a.gif" file="divi11a.gif" animated="false" />
+  <media name="divi11b.gif" file="divi11b.gif" animated="false" />
+  <media name="divi1a.gif" file="divi1a.gif" animated="false" />
+  <media name="divi1c.gif" file="divi1c.gif" animated="false" />
+  <media name="divi21a.gif" file="divi21a.gif" animated="false" />
+  <media name="divi21b.gif" file="divi21b.gif" animated="false" />
+  <media name="divi22a.gif" file="divi22a.gif" animated="false" />
+  <media name="divi22b.gif" file="divi22b.gif" animated="false" />
+  <media name="divi2a.gif" file="divi2a.gif" animated="false" />
+  <media name="divi2c.gif" file="divi2c.gif" animated="false" />
+  <media name="media11a.gif" file="media11a.gif" animated="false" />
+  <media name="media11b.gif" file="media11b.gif" animated="false" />
+  <media name="media1a.gif" file="media1a.gif" animated="false" />
+  <media name="media1c.gif" file="media1c.gif" animated="false" />
+  <media name="paral12a.gif" file="paral12a.gif" animated="false" />
+  <media name="paral12b.gif" file="paral12b.gif" animated="false" />
+  <media name="paral1a.gif" file="paral1a.gif" animated="false" />
+  <media name="paral1c.gif" file="paral1c.gif" animated="false" />
+  <media name="perpe11a.gif" file="perpe11a.gif" animated="false" />
+  <media name="perpe11b.gif" file="perpe11b.gif" animated="false" />
+  <media name="perpe21a.gif" file="perpe21a.gif" animated="false" />
+  <media name="perpe21b.gif" file="perpe21b.gif" animated="false" />
+  <media name="perpe22a.gif" file="perpe22a.gif" animated="false" />
+  <media name="perpe22b.gif" file="perpe22b.gif" animated="false" />
+  <media name="perpen1a.gif" file="perpen1a.gif" animated="false" />
+  <media name="perpen1c.gif" file="perpen1c.gif" animated="false" />
+  <media name="perpen2a.gif" file="perpen2a.gif" animated="false" />
+  <media name="perpen2c.gif" file="perpen2c.gif" animated="false" />
+  <media name="portada1.gif" file="portada1.gif" animated="false" />
+  <media name="trans12a.gif" file="trans12a.gif" animated="false" />
+  <media name="trans12b.gif" file="trans12b.gif" animated="false" />
+  <media name="trans1a.gif" file="trans1a.gif" animated="false" />
+  <media name="trans1c.gif" file="trans1c.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

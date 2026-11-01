@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="sopalec" version="0.1.3">
+ <settings>
+  <title>Ciclo celular en células somáticas</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="9/9/02" />
+  <revision description="Conversión de Clic3 a JClic" date="11/4/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Yolanda Giraldo Claros" mail="gcyoly@yahoo.com" />
+  <organization name="Universidad Antonio Nariño" city="Popayán" country="Colombia" />
+  <language>es</language>
+  <description>
+   <p>Paquete de actividades para el complicado aprendizaje del ciclo celular. Dentro del paquete encontramos diferentes tipos de actividades: de texto, asociaciones, crucigramas, sopas de letras y rompecabezas. De este modo se permite que el alumno se familiarice con el complicado vocabulario de este tema de manera más entretenida y motivadora.</p>
+  </description>
+  <descriptors area-codes="exp" level="Secundaria">biología</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Paquete de actividades para el complicado aprendizaje del ciclo celular. Dentro del paquete encontramos diferentes tipos de actividades: de texto, asociaciones, crucigramas, sopas de letras y rompecabezas. De este modo se permite que el alumno se familiarice con el complicado vocabulario de este tema de manera más entretenida y motivadora.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="sopalec.pac" name="mitsopa.sop">
+   <jump action="RETURN" id="forward" />
+   <jump action="RETURN" id="back" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@textGrid.WordSearch" name="mitsopa.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="34" bold="true" />
+      <color foreground="0x004040" />
+     </style>
+     <p>Busca 20 palabras escondidas relacionadas con el Ciclo Celular</p>
+    </cell>
+    <cell image="gardfie2.gif" type="final">
+     <style>
+      <font family="Comic Sans MS" size="34" bold="true" />
+      <color foreground="0x004040" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="ganar.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="gardfiel.gif" tiled="false" />
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <position x="380" y="331" />
+    </window>
+   </settings>
+   <textGrid rows="20" columns="10" cellWidth="20.0" cellHeight="20.0" border="true">
+    <style>
+     <font family="Arial" size="32" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>C*RALULECANARBMEM***</row>
+     <row>AE*D****J********E*A</row>
+     <row>MONN***I*A*METAFASEN</row>
+     <row>OLOT**H**N*S*****A*I</row>
+     <row>SUL*RA***AAISARBIF*T</row>
+     <row>OCO*LIPROFASE**H*R*A</row>
+     <row>MIPU*ZO*OA*O**U**E*M</row>
+     <row>OTL*CICLOSNT*S***T*O</row>
+     <row>RE****E*OERIOELCUN*R</row>
+     <row>CROMATIDASAM*****I*C</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">ADN</clue>
+    <clue id="1">ANAFASE</clue>
+    <clue id="2">ARN</clue>
+    <clue id="3">CELULAHIJA</clue>
+    <clue id="4">CENTRIOLOS</clue>
+    <clue id="5">CICLOS</clue>
+    <clue id="6">CROMATIDAS</clue>
+    <clue id="7">CROMATINA</clue>
+    <clue id="8">CROMOSOMA</clue>
+    <clue id="9">FIBRAS</clue>
+    <clue id="10">HUSO</clue>
+    <clue id="11">INTERFASE</clue>
+    <clue id="12">MEMBRANACELULAR</clue>
+    <clue id="13">METAFASE</clue>
+    <clue id="14">MITOSIS</clue>
+    <clue id="15">NUCLEO</clue>
+    <clue id="16">POLO</clue>
+    <clue id="17">PROFASE</clue>
+    <clue id="18">RETICULO</clue>
+    <clue id="19">TELOFASE</clue>
+   </clues>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="gardfie2.gif" file="gardfie2.gif" animated="false" />
+  <media name="gardfiel.gif" file="gardfiel.gif" animated="false" />
+  <media name="ganar.wav" file="ganar.wav" />
+ </mediaBag>
+</JClicProject>
+

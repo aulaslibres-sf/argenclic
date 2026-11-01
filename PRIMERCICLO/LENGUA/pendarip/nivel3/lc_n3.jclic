@@ -1,0 +1,2166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="lc_n3" version="0.1.3">
+ <settings>
+  <title>Lectura compresnsiva</title>
+  <revision description="created" date="6/24/08" />
+  <revision description="Publicación en la zonaClic (http://clic.xtec.cat)" date="9/30/10">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <organization name="Asociación Barro" mail="asociacionbarro@asociaciones.org" url="http://www.asociacionbarro.org.es/" city="Madrid" state="Madrid" />
+  <language>español</language>
+  <description>
+   <p>Actividades JClic de lectoescritura, ortografía y gramática con textos y vocabulario de la cultura gitana. Las actividades están estructuradas en tres niveles de dificultad creciente.</p>
+  </description>
+  <descriptors area="Lenguas" level="Primaria (6-12)">aprendizaje de la lengua, lengua castellana, comprensión lectora</descriptors>
+ </settings>
+ <sequence>
+  <item id="inicio" name="lunares">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="lunares_2" />
+  <item name="lunares_3" />
+  <item name="Preguntas y respuestas" />
+  <item name="Sopa de letras" />
+  <item name="colocar alfabeticamente" />
+  <item name="Sinonimos" />
+  <item name="Antónimos" />
+  <item name="Ortografia 1" />
+  <item name="Ortografia _2" />
+  <item name="Ortografía 2" />
+  <item name="ortografía b" />
+  <item name="Ortografía  b" />
+  <item name="acentos" />
+  <item name="acentos agudas" />
+  <item name="acentos llanas" />
+  <item name="acentos llanas 2" />
+  <item name="acento esdrújulas" />
+  <item name="acentos esdrújulas 2" />
+  <item name="Acentos completo" />
+  <item name="Poner tilde" />
+  <item name="Sustantivo, adjetivo, verbo" />
+  <item name="Sujeto" />
+  <item name="Predicado" />
+  <item name="puzzle niño libro" />
+  <item name="bibliografía">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.ComplexAssociation" name="Acentos completo" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="48" />
+      <color background="0x9999FF" />
+     </style>
+     <p>Coloca cada palabra en su lugar</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="48" />
+      <color background="0x9999FF" />
+     </style>
+     <p>Muy bien !!!!!!!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x9999FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x99FF33" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="4" cols="4" cellWidth="300.0" cellHeight="300.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Comic Sans MS" size="24" bold="true" />
+     <color background="0xCCCC00" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="1">
+     <p>Gitana</p>
+    </cell>
+    <cell id="0">
+     <p>Chaval</p>
+    </cell>
+    <cell id="0">
+     <p>Parné</p>
+    </cell>
+    <cell id="1">
+     <p>Chungo</p>
+    </cell>
+    <cell id="0">
+     <p>Pinrel</p>
+    </cell>
+    <cell id="0">
+     <p>Chanelar</p>
+    </cell>
+    <cell id="0">
+     <p>Currar</p>
+    </cell>
+    <cell id="1">
+     <p>Canguelo</p>
+    </cell>
+    <cell id="2">
+     <p>Sábado</p>
+    </cell>
+    <cell id="2">
+     <p>Página</p>
+    </cell>
+    <cell id="2">
+     <p>Bolígrafo</p>
+    </cell>
+    <cell id="1">
+     <p>Lache</p>
+    </cell>
+    <cell id="1">
+     <p>árbol</p>
+    </cell>
+    <cell id="0">
+     <p>general</p>
+    </cell>
+    <cell id="0">
+     <p>Pirar</p>
+    </cell>
+    <cell id="0">
+     <p>Ronear</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="300.0" cellHeight="300.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="22" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>AGUDAS</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="22" />
+      <color background="0xCC00CC" />
+     </style>
+     <p>LLANAS</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="48" bold="true" />
+      <color background="0xFFFF00" />
+     </style>
+     <p>ESDRÚJULAS</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="4" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell>
+     <p>Silaba tónica la penúltima</p>
+    </cell>
+    <cell>
+     <p>Silaba tónica la última</p>
+    </cell>
+    <cell>
+     <p>Silaba tónica la última</p>
+    </cell>
+    <cell>
+     <p>Silaba tónica la penúltima</p>
+    </cell>
+    <cell>
+     <p>Silaba tónica la última</p>
+    </cell>
+    <cell>
+     <p>Silaba tónica la última</p>
+    </cell>
+    <cell>
+     <p>Silaba tónica la última</p>
+    </cell>
+    <cell>
+     <p>Silaba tónica la penúltima</p>
+    </cell>
+    <cell>
+     <p>Sílaba tónica la antepenúl-tima</p>
+    </cell>
+    <cell>
+     <p>Sílaba tónica la antepenúl-tima</p>
+    </cell>
+    <cell>
+     <p>Sílaba tónica la antepenúl-tima</p>
+    </cell>
+    <cell>
+     <p>Silaba tónica la penúltima</p>
+    </cell>
+    <cell>
+     <p>Silaba tónica la penúltima</p>
+    </cell>
+    <cell>
+     <p>Silaba tónica la última</p>
+    </cell>
+    <cell>
+     <p>Silaba tónica la última</p>
+    </cell>
+    <cell>
+     <p>Silaba tónica la última</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Antónimos" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" />
+      <color background="0x99FF00" />
+     </style>
+     <p>Une cada palabra con su antónimo</p>
+    </cell>
+    <cell image="gorra con aplausos.gif" type="final">
+     <style>
+      <color background="0x99FF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondo disco de colores.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00FFCC" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="200.0" cellHeight="200.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Comic Sans MS" size="28" />
+     <color background="0xFF9900" inactive="0x99CC00" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>Significativo</p>
+    </cell>
+    <cell>
+     <p>Frugalidad</p>
+    </cell>
+    <cell>
+     <p>Excepcional</p>
+    </cell>
+    <cell>
+     <p>Extravagante</p>
+    </cell>
+    <cell>
+     <p>Temperamental</p>
+    </cell>
+    <cell>
+     <p>Sensualidad</p>
+    </cell>
+    <cell>
+     <p>Salud</p>
+    </cell>
+    <cell>
+     <p>Perseverancica</p>
+    </cell>
+    <cell>
+     <p>Prosperidad</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" cellWidth="200.0" cellHeight="200.0" border="true" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="28" />
+     <color background="0x99CC00" inactive="0xFF9900" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>Insignificante</p>
+    </cell>
+    <cell>
+     <p>Voracidad</p>
+    </cell>
+    <cell>
+     <p>Frecuente</p>
+    </cell>
+    <cell>
+     <p>Corriente</p>
+    </cell>
+    <cell>
+     <p>Cerebral</p>
+    </cell>
+    <cell>
+     <p>Espiritualidad</p>
+    </cell>
+    <cell>
+     <p>Enfermedad</p>
+    </cell>
+    <cell>
+     <p>Inconstancia</p>
+    </cell>
+    <cell>
+     <p>Decadencia</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="Ortografia 1" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Comic Sans MS" size="24" />
+      <color background="0xFF99FF" />
+     </style>
+     <p>Coloca las piezas  y encontrarás una regla de ortografía</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="28" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>Muy bien!!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xCCCCFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF99FF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="300.0" cellHeight="200.0" border="true">
+    <style margin="8" borderStroke="2.9" markerStroke="2.7">
+     <font family="Comic Sans MS" size="17" />
+     <color background="0xFF00FF" border="0x33FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>Las palabras acabadas en </p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="3.5" markerStroke="2.7">
+      <font family="Arial" size="72" />
+      <color background="0xFF33FF" border="0x00FFFF" />
+     </style>
+     <p>-Z</p>
+    </cell>
+    <cell>
+     <p>forman su plural en                                                                                      </p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="2.0" markerStroke="2.7">
+      <font family="Arial" size="72" />
+      <color background="0xFF33FF" border="0x33FFFF" />
+     </style>
+     <p>-CES</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="Ortografia _2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Comic Sans MS" size="24" />
+      <color background="0xFF99FF" />
+     </style>
+     <p>Coloca las piezas  y encontrarás una regla de ortografía</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="28" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>Muy bien!!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xCCCCFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF99FF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="300.0" cellHeight="200.0" border="true">
+    <style margin="8" borderStroke="2.9" markerStroke="2.7">
+     <font family="Comic Sans MS" size="17" />
+     <color background="0xFF00FF" border="0x00CCCC" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>Las palabras acabdas en</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.0" markerStroke="2.7">
+      <font family="Arial" size="72" />
+      <color background="0xFF33FF" border="0x33FFFF" />
+     </style>
+     <p>-D</p>
+    </cell>
+    <cell>
+     <p>forman su plural en</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.0" markerStroke="2.7">
+      <font family="Arial" size="72" />
+      <color background="0xFF33FF" border="0x33FFFF" />
+     </style>
+     <p>-DES</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Ortografía  b" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="48" />
+      <color background="0xFF9900" />
+     </style>
+     <p>Forma palabras con v y b</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="48" />
+      <color background="0xFFCC00" />
+     </style>
+     <p>Que control!!!!!!!!!!!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFF33">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x66FFCC" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="200.0" cellHeight="200.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="24" bold="true" />
+     <color background="0x9999FF" inactive="0x9999FF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="1">
+     <p>Her_ir</p>
+    </cell>
+    <cell id="0">
+     <p>Escri_ir</p>
+    </cell>
+    <cell id="1">
+     <p>vi_ir</p>
+    </cell>
+    <cell id="0">
+     <p>su_ir</p>
+    </cell>
+    <cell id="0">
+     <p>reci_ir</p>
+    </cell>
+    <cell id="1">
+     <p>ser_ir</p>
+    </cell>
+    <cell id="0">
+     <p>prohi_ir</p>
+    </cell>
+    <cell id="0">
+     <p>conce_ir</p>
+    </cell>
+    <cell id="0">
+     <p>exi_ir</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="200.0" cellHeight="150.0" border="true" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="48" />
+     <color background="0xCC00CC" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>b</p>
+    </cell>
+    <cell>
+     <p>v</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>hervir</p>
+    </cell>
+    <cell>
+     <p>escribir</p>
+    </cell>
+    <cell>
+     <p>vivir</p>
+    </cell>
+    <cell>
+     <p>subir</p>
+    </cell>
+    <cell>
+     <p>recibir</p>
+    </cell>
+    <cell>
+     <p>servir</p>
+    </cell>
+    <cell>
+     <p>prohibir</p>
+    </cell>
+    <cell>
+     <p>concebir</p>
+    </cell>
+    <cell>
+     <p>exibir</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Ortografía 2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color background="0x9999FF" />
+     </style>
+     <p>Forma el plural de estas palabras</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="48" />
+      <color background="0x99CCFF" />
+     </style>
+     <p>Muy bien!!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x9999FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x99FFCC" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="200.0" cellHeight="200.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="24" bold="true" />
+     <color background="0x00CCCC" inactive="0xCC99FF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="0">
+     <p>Nariz</p>
+    </cell>
+    <cell id="0">
+     <p>Arroz</p>
+    </cell>
+    <cell id="0">
+     <p>Feliz</p>
+    </cell>
+    <cell id="0">
+     <p>Capaz</p>
+    </cell>
+    <cell id="1">
+     <p>Honestidad</p>
+    </cell>
+    <cell id="1">
+     <p>Felicidad</p>
+    </cell>
+    <cell id="1">
+     <p>Solidaridad</p>
+    </cell>
+    <cell id="1">
+     <p>Sensualidad</p>
+    </cell>
+    <cell id="1">
+     <p>Frugalidad</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="200.0" cellHeight="150.0" border="true" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color background="0xCCCC00" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>-CES</p>
+    </cell>
+    <cell>
+     <p>-DES</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="Poner tilde" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color background="0xFFFF33" />
+     </style>
+     <p>Escribe las palabras con sus tildes correspondientes</p>
+    </cell>
+    <cell image="aplauso 2.gif" type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x66CCFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF33" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="4" cols="3" cellWidth="300.0" cellHeight="300.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="28" />
+     <color background="0xFF33FF" inactive="0xCC00FF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="4" />
+    <cell id="0">
+     <p>arbol</p>
+    </cell>
+    <cell id="1">
+     <p>azucar</p>
+    </cell>
+    <cell id="2">
+     <p>paripe</p>
+    </cell>
+    <cell id="3">
+     <p>sabado</p>
+    </cell>
+    <cell id="4">
+     <p>asi</p>
+    </cell>
+    <cell id="5">
+     <p>lapiz</p>
+    </cell>
+    <cell id="6">
+     <p>parne</p>
+    </cell>
+    <cell id="7">
+     <p>telefono</p>
+    </cell>
+    <cell id="8">
+     <p>tambien</p>
+    </cell>
+    <cell id="9">
+     <p>caracter</p>
+    </cell>
+    <cell id="10">
+     <p>posicion</p>
+    </cell>
+    <cell id="11">
+     <p>huerfano</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="3" cellWidth="600.0" cellHeight="300.0" border="true" id="answers">
+    <style>
+     <font family="Comic Sans MS" size="28" />
+     <color background="0xCC00FF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="4" />
+    <cell>
+     <p>árbol</p>
+    </cell>
+    <cell>
+     <p>azúcar</p>
+    </cell>
+    <cell>
+     <p>paripé</p>
+    </cell>
+    <cell>
+     <p>sábado</p>
+    </cell>
+    <cell>
+     <p>así</p>
+    </cell>
+    <cell>
+     <p>lápiz</p>
+    </cell>
+    <cell>
+     <p>parné</p>
+    </cell>
+    <cell>
+     <p>teléfono</p>
+    </cell>
+    <cell>
+     <p>también</p>
+    </cell>
+    <cell>
+     <p>carácter</p>
+    </cell>
+    <cell>
+     <p>posición</p>
+    </cell>
+    <cell>
+     <p>huérfano</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="Predicado" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="26" />
+      <color background="0xCCCC00" />
+     </style>
+     <p>Escribe el predicado de cada oracion</p>
+    </cell>
+    <cell image="aplauso 2.gif" type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCCCFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xCCFF99" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="7" cols="1" cellWidth="800.0" cellHeight="200.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="18" />
+     <color background="0xCC99FF" inactive="0xFFCC00" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell id="0">
+     <p>Algunos Shuvanis predicen el futuro de un niño o una niña</p>
+    </cell>
+    <cell id="1">
+     <p>La posición del lunar es importante</p>
+    </cell>
+    <cell id="2">
+     <p>Los lunares grandes son más significativos</p>
+    </cell>
+    <cell id="3">
+     <p>el lunar belloso es un indicio negativo</p>
+    </cell>
+    <cell id="4">
+     <p>Es señal de gran potencial un lunar en relieve</p>
+    </cell>
+    <cell id="5">
+     <p>Un lunar claro da mucha suerte</p>
+    </cell>
+    <cell id="6">
+     <p>Un lunar puntiagudo indica mala suerte</p>
+    </cell>
+   </cells>
+   <cells rows="7" cols="1" cellWidth="999.0" cellHeight="200.0" border="true" id="answers">
+    <style>
+     <font family="Comic Sans MS" size="18" />
+     <color background="0xFFCC00" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell>
+     <p>predicen el futuro de un niño o una niña</p>
+    </cell>
+    <cell>
+     <p>es importante</p>
+    </cell>
+    <cell>
+     <p>son más significativos</p>
+    </cell>
+    <cell>
+     <p>es un indicio negativo</p>
+    </cell>
+    <cell>
+     <p>Es señal de gran potencial</p>
+    </cell>
+    <cell>
+     <p>da mucha suerte</p>
+    </cell>
+    <cell>
+     <p>indica mala suerte</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="Preguntas y respuestas" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0x99CCFF" />
+     </style>
+     <p>Elige la respuesta correcta</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="lunares blancos fondo rojo.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true">
+     <size width="600" height="600" />
+    </window>
+    <skin file="@blue.xml" />
+   </settings>
+   <document>
+    <style name="default" italic="false" size="16" tabWidth="12" family="Arial" bold="false" background="0xFFCCFF" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xFFCCFF" />
+    <style name="targetError" base="target" foreground="0xFF0000" background="0xFFFFFF" />
+    <section>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text size="16">¿Quién predice el furturo mediante los lunares del cuerpo?</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>Los Shuvanis</answer>
+       <optionList>
+        <option>Los adivinos</option>
+        <option>Las gitanas del Retiro</option>
+        <option>Los Shuvanis</option>
+       </optionList>
+       <text>Los Shuvanis</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="16">¿Qué se considera importante para interpretar el significado de los lunares?</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>Su posición y su forma</answer>
+       <optionList>
+        <option>Su tamaño y color</option>
+        <option>Su posición y su forma</option>
+        <option>Su forma y su tamaño</option>
+       </optionList>
+       <text>Su posición y su forma</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="16">¿Qué lunares son más significativos?</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>Los lunares grandes</answer>
+       <optionList>
+        <option>Los lunares marrones</option>
+        <option>Los lunares grandes</option>
+        <option>Los lunares pequeños</option>
+       </optionList>
+       <text>Los lunares grandes</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="16">¿Qué indica un lunar puntiagudo?</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>Mala suerte</answer>
+       <optionList>
+        <option>Buena suerte</option>
+        <option>Nada</option>
+        <option>Mala suerte</option>
+       </optionList>
+       <text>Mala suerte</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="16">¿Cómo se considera un lunar velloso?</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>Extremadamente negativo</answer>
+       <optionList>
+        <option>Buenísima suerte</option>
+        <option>Mucha suerte</option>
+        <option>Extremadamente negativo</option>
+       </optionList>
+       <text>Extremadamente negativo</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="16">¿Qué indican los lunares que están en el centro de la cabeza o en las cejas?</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>Honores, riqueza y amor</answer>
+       <optionList>
+        <option>Fracasos, pobreza y desamor</option>
+        <option>Honores, riqueza y amor</option>
+        <option>Fortuna suerte y salud</option>
+       </optionList>
+       <text>Honores, riqueza y amor</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="16">¿Para ser una persona estudiosa y seria, donde tiene que tener los lunares?</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>En las mejillas</answer>
+       <optionList>
+        <option>En las mejillas</option>
+        <option>En los párpados</option>
+        <option>En los pies</option>
+       </optionList>
+       <text>En las mejillas</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="16">¿Cómo se interpretan los lunares  de la barbilla?</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>Como buena suerte, fortuna y prosperidad.</answer>
+       <optionList>
+        <option>Como buena suerte, fortuna y prosperidad.</option>
+        <option>Mala salud</option>
+        <option>Trabajo y amor</option>
+       </optionList>
+       <text>Como buena suerte, fortuna y prosperidad.</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="16">¿Qué cualidad define a un lunar en la oreja derecha?</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>Valor</answer>
+       <optionList>
+        <option>Amor</option>
+        <option>Valor</option>
+        <option>Suerte</option>
+       </optionList>
+       <text>Valor</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Sinonimos" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color background="0xCC00CC" />
+     </style>
+     <p>Une cada palabra con su sinónimo</p>
+    </cell>
+    <cell image="animadora.gif" type="final">
+     <style>
+      <color background="0xCC00CC" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondo canicas colores.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="200.0" cellHeight="200.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="24" bold="true" />
+     <color background="0xCC00FF" inactive="0xFFCC00" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>Marca</p>
+    </cell>
+    <cell>
+     <p>Posición</p>
+    </cell>
+    <cell>
+     <p>Significativo</p>
+    </cell>
+    <cell>
+     <p>Frugalidad</p>
+    </cell>
+    <cell>
+     <p>Excepcional</p>
+    </cell>
+    <cell>
+     <p>Honestidad</p>
+    </cell>
+    <cell>
+     <p>Extravagante</p>
+    </cell>
+    <cell>
+     <p>Temperamento</p>
+    </cell>
+    <cell>
+     <p>Sensualidad</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" cellWidth="200.0" cellHeight="200.0" border="true" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="24" bold="true" />
+     <color background="0xFFCC00" inactive="0xCC00FF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>Señal</p>
+    </cell>
+    <cell>
+     <p>Ubicación</p>
+    </cell>
+    <cell>
+     <p>Importante</p>
+    </cell>
+    <cell>
+     <p>Moderación</p>
+    </cell>
+    <cell>
+     <p>Excelente</p>
+    </cell>
+    <cell>
+     <p>Honrado</p>
+    </cell>
+    <cell>
+     <p>Raro</p>
+    </cell>
+    <cell>
+     <p>Carácter</p>
+    </cell>
+    <cell>
+     <p>Erotismo</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="Sopa de letras" code="">
+   <description />
+   <messages>
+    <cell imgAlign="left,middle" avoidOverlapping="true" image="Buscando con linterna.gif" type="initial">
+     <style>
+      <font family="Comic Sans MS" size="22" />
+      <color background="0x9966FF" />
+     </style>
+     <p>Busca  9 cualidades positivas de una persona</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color background="0xFF33FF" />
+     </style>
+     <p>MUY BIEN!!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF33FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x9966FF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <textGrid rows="15" columns="14" cellWidth="45.0" cellHeight="45.0" border="true">
+    <style>
+     <font family="Comic Sans MS" size="17" bold="true" />
+     <color background="0xCC99FF" />
+    </style>
+    <text>
+     <row>***INTELIGENTE*</row>
+     <row>*H****F*****T**</row>
+     <row>SOLIDARIA**N**G</row>
+     <row>*N****A***E***E</row>
+     <row>*E****N**I****N</row>
+     <row>*S****C*L**F**E</row>
+     <row>*T****AA***R**R</row>
+     <row>*A****V****A**O</row>
+     <row>***********T**S</row>
+     <row>**BELLA****E**A</row>
+     <row>***********R***</row>
+     <row>***********N***</row>
+     <row>***SINCERA*A***</row>
+     <row>***************</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">INTELIGENTE</clue>
+    <clue id="1">HONESTA</clue>
+    <clue id="2">FRANCA</clue>
+    <clue id="3">SINCERA</clue>
+    <clue id="4">VALIENTE</clue>
+    <clue id="5">SOLIDARIA</clue>
+    <clue id="6">FRATERNA</clue>
+    <clue id="7">GENEROSA</clue>
+    <clue id="8">BELLA</clue>
+   </clues>
+  </activity>
+  <activity class="@text.WrittenAnswer" name="Sujeto" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color background="0x99CCFF" />
+     </style>
+     <p>Escribe el sujeto de cada oración</p>
+    </cell>
+    <cell image="ganaOscar.gif" type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFF99">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCFF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="7" cols="1" cellWidth="800.0" cellHeight="200.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="18" />
+     <color background="0xCC99FF" inactive="0xFFCC00" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell id="0">
+     <p>Algunos Shuvanis preciden el futuro de un niño o una niña</p>
+    </cell>
+    <cell id="1">
+     <p>La posición del lunar es importante</p>
+    </cell>
+    <cell id="2">
+     <p>Los lunares grandes son más significativos</p>
+    </cell>
+    <cell id="3">
+     <p>el lunar belloso es un indicio negativo</p>
+    </cell>
+    <cell id="4">
+     <p>Es señal de gran potencial un lunar en relieve</p>
+    </cell>
+    <cell id="5">
+     <p>Un lunar claro da mucha suerte</p>
+    </cell>
+    <cell id="6">
+     <p>Un lunar puntiagudo indica mala suerte</p>
+    </cell>
+   </cells>
+   <cells rows="7" cols="1" cellWidth="999.0" cellHeight="200.0" border="true" id="answers">
+    <style>
+     <font family="Comic Sans MS" size="18" />
+     <color background="0xFFCC00" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell>
+     <p>Algunos Shuvanis</p>
+    </cell>
+    <cell>
+     <p>La posición del lunar</p>
+    </cell>
+    <cell>
+     <p>Los lunares grandes</p>
+    </cell>
+    <cell>
+     <p>El lunar belloso</p>
+    </cell>
+    <cell>
+     <p>un lunar en relieve</p>
+    </cell>
+    <cell>
+     <p>un lunar claro</p>
+    </cell>
+    <cell>
+     <p>un lunar puntiagudo</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Sustantivo, adjetivo, verbo" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color background="0xCC66FF" />
+     </style>
+     <p>Indica el tipo de palabra</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="48" />
+      <color background="0xFF3399" />
+     </style>
+     <p>Bravoo!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x9999FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF99CC" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="4" cols="3" cellWidth="200.0" cellHeight="200.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="24" bold="true" />
+     <color background="0x99FF00" inactive="0xFF66CC" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="4" />
+    <cell id="2">
+     <p>Niño</p>
+    </cell>
+    <cell id="2">
+     <p>Salud</p>
+    </cell>
+    <cell id="2">
+     <p>Fortuna</p>
+    </cell>
+    <cell id="1">
+     <p>Afortunado</p>
+    </cell>
+    <cell id="2">
+     <p>Lunar</p>
+    </cell>
+    <cell id="1">
+     <p>Bueno</p>
+    </cell>
+    <cell id="1">
+     <p>Redondo</p>
+    </cell>
+    <cell id="1">
+     <p>Puntiagudo</p>
+    </cell>
+    <cell id="0">
+     <p>Es</p>
+    </cell>
+    <cell id="0">
+     <p>Están</p>
+    </cell>
+    <cell id="0">
+     <p>Indicar</p>
+    </cell>
+    <cell id="0">
+     <p>Veremos</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="200.0" cellHeight="150.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="28" />
+      <color background="0xFF33FF" />
+     </style>
+     <p>Verbo</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="28" />
+      <color background="0x9966FF" />
+     </style>
+     <p>Adjetivo</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="28" />
+      <color background="0xFFCC00" />
+     </style>
+     <p>Sustantivo</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="acento esdrújulas" code="">
+   <description />
+   <messages>
+    <cell image="leer.gif" type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCC66FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF66CC" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="600.0" cellHeight="400.0" border="true">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color background="0xFF0099" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>Las palabras ESDRÚJULAS son  las que tienen la sílaba tónica en </p>
+     <p>antepenúltimo lugar. </p>
+     <p>Llevan tilde  todas.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="acentos" code="">
+   <description />
+   <messages>
+    <cell image="leer.gif" type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x9999FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x9966FF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="600.0" cellHeight="400.0" border="true">
+    <style>
+     <font family="Comic Sans MS" size="48" />
+     <color background="0x9966FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color background="0xCC66FF" />
+     </style>
+     <p>Las palabras AGUDAS son las que tienen la sílaba tónica en último lugar.</p>
+     <p>Llevan tilde las que terminan en VOCAL, -N, o -S</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.Identify" name="acentos agudas" code="">
+   <description />
+   <messages>
+    <cell txtAlign="middle,top" imgAlign="middle,bottom" image="clic.gif" type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color background="0xFF66CC" />
+     </style>
+     <p>Pincha en las palabras agudas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="48" />
+      <color background="0xFFCC00" />
+     </style>
+     <p>Guauuu!!!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF99FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x99CCFF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="4" cols="4" cellWidth="999.0" cellHeight="600.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="24" bold="true" />
+     <color background="0x00CCCC" inactive="0xCC00FF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="0">
+     <p>examen</p>
+    </cell>
+    <cell id="1">
+     <p>detrás</p>
+    </cell>
+    <cell id="1">
+     <p>ayer</p>
+    </cell>
+    <cell id="1">
+     <p>usted</p>
+    </cell>
+    <cell id="1">
+     <p>así</p>
+    </cell>
+    <cell id="0">
+     <p>delantero</p>
+    </cell>
+    <cell id="1">
+     <p>excursión</p>
+    </cell>
+    <cell id="1">
+     <p>alrededor</p>
+    </cell>
+    <cell id="0">
+     <p>carárter</p>
+    </cell>
+    <cell id="1">
+     <p>también</p>
+    </cell>
+    <cell id="0">
+     <p>restas</p>
+    </cell>
+    <cell id="1">
+     <p>general</p>
+    </cell>
+    <cell id="1">
+     <p>habrá</p>
+    </cell>
+    <cell id="0">
+     <p>árbol</p>
+    </cell>
+    <cell id="1">
+     <p>responsabilidad</p>
+    </cell>
+    <cell id="0">
+     <p>ella</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="4" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell />
+    <cell>
+     <p> AGUDAS </p>
+    </cell>
+    <cell>
+     <p> AGUDAS </p>
+    </cell>
+    <cell>
+     <p> AGUDAS </p>
+    </cell>
+    <cell>
+     <p> AGUDAS </p>
+    </cell>
+    <cell />
+    <cell>
+     <p> AGUDAS </p>
+    </cell>
+    <cell>
+     <p> AGUDAS </p>
+    </cell>
+    <cell />
+    <cell>
+     <p> AGUDAS </p>
+    </cell>
+    <cell />
+    <cell>
+     <p> AGUDAS </p>
+    </cell>
+    <cell>
+     <p> AGUDAS </p>
+    </cell>
+    <cell />
+    <cell>
+     <p> AGUDAS </p>
+    </cell>
+    <cell />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="acentos esdrújulas 2" code="">
+   <description />
+   <messages>
+    <cell image="clic.gif" type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color background="0xCCFF00" />
+     </style>
+     <p>Pincha en las palabras esdrújulas</p>
+    </cell>
+    <cell image="gorra con aplausos.gif" type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x9999FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xCCFF00" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="4" cols="4" cellWidth="400.0" cellHeight="200.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Comic Sans MS" size="24" bold="true" />
+     <color background="0x99FF00" inactive="0x0099FF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="1">
+     <p>Sílaba</p>
+    </cell>
+    <cell id="0">
+     <p>Pinrel</p>
+    </cell>
+    <cell id="1">
+     <p>Miércoles</p>
+    </cell>
+    <cell id="1">
+     <p>sábado</p>
+    </cell>
+    <cell id="0">
+     <p>Currar</p>
+    </cell>
+    <cell id="1">
+     <p>página</p>
+    </cell>
+    <cell id="0">
+     <p>lápiz</p>
+    </cell>
+    <cell id="0">
+     <p>Chanelar</p>
+    </cell>
+    <cell id="0">
+     <p>paripé</p>
+    </cell>
+    <cell id="1">
+     <p>teléfono</p>
+    </cell>
+    <cell id="0">
+     <p>restas</p>
+    </cell>
+    <cell id="1">
+     <p>bilígrafo</p>
+    </cell>
+    <cell id="0">
+     <p>azúcar</p>
+    </cell>
+    <cell id="0">
+     <p>árbol</p>
+    </cell>
+    <cell id="0">
+     <p>responsabilidad</p>
+    </cell>
+    <cell id="0">
+     <p>fácil</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="4" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="16" />
+      <color background="0xCCFFCC" />
+     </style>
+     <p>ESDRÚJULA</p>
+    </cell>
+    <cell />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="16" />
+      <color background="0xCCFFCC" />
+     </style>
+     <p>ESDRÚJULA</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="16" />
+      <color background="0xCCFFCC" />
+     </style>
+     <p>ESDRÚJULA</p>
+    </cell>
+    <cell />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="16" />
+      <color background="0xCCFFCC" />
+     </style>
+     <p>ESDRÚJULA</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="16" />
+      <color background="0xCCFFCC" />
+     </style>
+     <p>ESDRÚJULA</p>
+    </cell>
+    <cell />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="16" />
+      <color background="0xCCFFCC" />
+     </style>
+     <p>ESDRÚJULA</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="acentos llanas" code="">
+   <description />
+   <messages>
+    <cell image="lectura.gif" type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x6600CC" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFCC00">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x6600CC" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="600.0" cellHeight="400.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color background="0xFF9900" />
+     </style>
+     <p>Las palabras LLANAS son  las que tienen la sílaba tónica en penúltimo lugar.</p>
+     <p>Llevan tilde las que no terminan en vocal, ni en -n ni en -s</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.Identify" name="acentos llanas 2" code="">
+   <description />
+   <messages>
+    <cell image="clic.gif" type="initial">
+     <style>
+      <font family="Comic Sans MS" size="26" />
+      <color background="0xCC33FF" />
+     </style>
+     <p>Pincha en las palabras llanas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color background="0xFF66CC" />
+     </style>
+     <p>¡Si que chanelas!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFCC00">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCC66" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="4" cols="4" cellWidth="400.0" cellHeight="200.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="24" bold="true" />
+     <color background="0xFF33FF" inactive="0xFF99FF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="1">
+     <p>examen</p>
+    </cell>
+    <cell id="0">
+     <p>detrás</p>
+    </cell>
+    <cell id="0">
+     <p>ayer</p>
+    </cell>
+    <cell id="0">
+     <p>usted</p>
+    </cell>
+    <cell id="0">
+     <p>así</p>
+    </cell>
+    <cell id="1">
+     <p>delantero</p>
+    </cell>
+    <cell id="1">
+     <p>lápiz</p>
+    </cell>
+    <cell id="0">
+     <p>alrededor</p>
+    </cell>
+    <cell id="1">
+     <p>carárter</p>
+    </cell>
+    <cell id="0">
+     <p>también</p>
+    </cell>
+    <cell id="1">
+     <p>restas</p>
+    </cell>
+    <cell id="0">
+     <p>general</p>
+    </cell>
+    <cell id="1">
+     <p>azúcar</p>
+    </cell>
+    <cell id="1">
+     <p>árbol</p>
+    </cell>
+    <cell id="0">
+     <p>responsabilidad</p>
+    </cell>
+    <cell id="1">
+     <p>fácil</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="4" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="16" />
+      <color background="0x9966FF" />
+     </style>
+     <p> LLANAS</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="16" />
+      <color background="0x9966FF" />
+     </style>
+     <p> LLANAS</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="16" />
+      <color background="0x9966FF" />
+     </style>
+     <p> LLANAS</p>
+    </cell>
+    <cell />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="16" />
+      <color background="0x9966FF" />
+     </style>
+     <p> LLANAS</p>
+    </cell>
+    <cell />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="16" />
+      <color background="0x9966FF" />
+     </style>
+     <p> LLANAS</p>
+    </cell>
+    <cell />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="16" />
+      <color background="0x9966FF" />
+     </style>
+     <p> LLANAS</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="16" />
+      <color background="0x9966FF" />
+     </style>
+     <p> LLANAS</p>
+    </cell>
+    <cell />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="16" />
+      <color background="0x9966FF" />
+     </style>
+     <p> LLANAS</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="bibliografía" code="">
+   <description />
+   <messages>
+    <cell image="Logo Barró.JPG" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCCFF33">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x66CCFF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="tpm 4.JPG">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="colocar alfabeticamente" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Comic Sans MS" size="28" />
+      <color background="0x9966FF" />
+     </style>
+     <p>Coloca alfabeticamente estas palabras</p>
+    </cell>
+    <cell image="ok.gif" type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x99FF00">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x99FF00" border="false" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="3" cols="4" cellWidth="200.0" cellHeight="200.0" border="true">
+    <style borderStroke="10.0" markerStroke="2.7">
+     <font family="Comic Sans MS" size="28" bold="true" />
+     <color background="0x99FF00" inactive="0x99FF00" border="0xFF00CC" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>Adivina</p>
+    </cell>
+    <cell>
+     <p>Barbilla</p>
+    </cell>
+    <cell>
+     <p>Boca</p>
+    </cell>
+    <cell>
+     <p>Cabeza</p>
+    </cell>
+    <cell>
+     <p>Ceja</p>
+    </cell>
+    <cell>
+     <p>Derecha</p>
+    </cell>
+    <cell>
+     <p>Fama</p>
+    </cell>
+    <cell>
+     <p>Izquierda</p>
+    </cell>
+    <cell>
+     <p>Matrimonio</p>
+    </cell>
+    <cell>
+     <p>Mejilla</p>
+    </cell>
+    <cell>
+     <p>Nariz</p>
+    </cell>
+    <cell>
+     <p>Párpados</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@text.Complete" name="lunares" code="">
+   <description />
+   <messages>
+    <cell image="lectura.gif" type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCC00" border="true">
+     <size width="800" height="600" />
+    </window>
+    <skin file="@blue.xml" />
+   </settings>
+   <checkButton />
+   <document>
+    <style name="default" italic="false" size="11" tabWidth="12" family="Arial" background="0xCCCCFF" bold="false" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p Alignment="1" family="Arial" background="0xFFFFFF" />
+     <p Alignment="1" family="Arial" background="0xFFFFFF">
+      <text size="22" family="Arial" background="0xCCCCFF" bold="true">LECTURA DE LOS LUNARES</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">    Algunos shuvanis predicen el futuro de un niño o niña mediante los lunares de su cuerpo. Dado que son marcas de nacimiento, su posición se considera significativa. Pero no solamente es importante la posición; la forma también tiene su significado.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">    Los lunares grandes son más significativos que los pequeños. </text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">    Un lunar redondo significa suerte: mientras más perfecta sea la circunferencia, mayor será la fortuna.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">    Un lunar puntiagudo indica mala suerte y está será excepcional si tiene  dos o más lunares puntiagudos. </text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">    Si el lunar tiene una forma especial, que le sugiera a la adivina  un animal o un objeto, se interpreta. </text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">    Si la forma es alargada y en relieve, es señal de un gran potencial.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.Complete" name="lunares_2" code="">
+   <description />
+   <messages>
+    <cell image="lectura.gif" type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF00" border="true">
+     <size width="800" height="600" />
+    </window>
+    <skin file="@blue.xml" />
+   </settings>
+   <checkButton />
+   <document>
+    <style name="default" italic="false" size="11" tabWidth="12" family="Arial" background="0xCCCCFF" bold="false" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p Alignment="0" family="Arial" background="0xFFFFFF" />
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">    Si el lunar es velloso, se considera como un indicio extremadamente negativo. Un lunar claro da más suerte que uno oscuro. A coninuación veremos  las posiciones:</text>
+     </p>
+     <p Alignment="0" family="Arial" background="0xFFFFFF" />
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">- En la cabeza y sobre las cejas: </text>
+     </p>
+     <p Alignment="0" family="Arial" background="0xFFFFFF" />
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">      Si está a la derecha, gran inteligencia, potencial para tener fama y fortuna. </text>
+     </p>
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">      Si está a la izquierda, extravagancia, irresponsabilidad. </text>
+     </p>
+     <p Alignment="0" family="Arial" background="0xFFFFFF" />
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">     Si está en el centro, honores, riqueza y amor. </text>
+     </p>
+     <p Alignment="0" family="Arial" background="0xFFFFFF" />
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">- En las cejas:</text>
+     </p>
+     <p Alignment="0" family="Arial" background="0xFFFFFF" />
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">      Derecha,felicidad, perseverancia, posibilidad de un matrimonio prematuro. </text>
+     </p>
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">     Izquierda, matrimonio infeliz a menos que se haga un gran esfuerzo.</text>
+     </p>
+     <p Alignment="0" family="Arial" background="0xFFFFFF" />
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">- En los párpados: </text>
+     </p>
+     <p Alignment="0" family="Arial" background="0xFFFFFF" />
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">    Frugalidad. </text>
+     </p>
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">    Si están en el extremo contrario al lagrimal, honestidad, formalidad, franqueza.</text>
+     </p>
+     <p Alignment="0" family="Arial" background="0xFFFFFF" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.Complete" name="lunares_3" code="">
+   <description />
+   <messages>
+    <cell image="lectura.gif" type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCC00" border="true">
+     <size width="800" height="600" />
+    </window>
+    <skin file="@blue.xml" />
+   </settings>
+   <checkButton />
+   <document>
+    <style name="default" italic="false" size="11" tabWidth="12" family="Arial" background="0xCCCCFF" bold="false" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">- En las mejillas: Persona seria y estudiosa. </text>
+     </p>
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">    Derecha, felicidad, buen matrimonio. </text>
+     </p>
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">    Izquierda, esfuerzoa y problemas durante toda la vida.</text>
+     </p>
+     <p Alignment="0" family="Arial" background="0xFFFFFF" />
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">- En la nariz: Sexualidad, buena suerte, viajes, y un amigo sincero.</text>
+     </p>
+     <p Alignment="0" family="Arial" background="0xFFFFFF" />
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">- En la boca: Sensualidad, felicidad.</text>
+     </p>
+     <p Alignment="0" family="Arial" background="0xFFFFFF" />
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">- En la barbilla: Buena suerte, fortuna, prosperidad y un temperamento cariñoso, asumir responsabilidades.</text>
+     </p>
+     <p Alignment="0" family="Arial" background="0xFFFFFF" />
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">- En la madíbula: Mala salud.</text>
+     </p>
+     <p Alignment="0" family="Arial" background="0xFFFFFF" />
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">- En las orejas:  							</text>
+      <cell width="100" height="60" image="bola de cristal.gif">
+       <style>
+        <color background="0xCCCCFF" />
+       </style>
+      </cell>
+     </p>
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">    Izquierda, temeridad. </text>
+     </p>
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <text size="18" family="Comic Sans MS" background="0xCCCCFF">    Derecha,valor.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="ortografía b" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="28" />
+      <color background="0x99CCFF" />
+     </style>
+     <p>Coloca esta regla ortográfica</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color background="0xFFFF33" />
+     </style>
+     <p>¡ Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFF66CC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xCC33FF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="300.0" cellHeight="200.0" border="true">
+    <style>
+     <font family="Comic Sans MS" size="22" bold="true" />
+     <color background="0x00FFCC" inactive="0xFF99FF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>Se escriben con b</p>
+    </cell>
+    <cell>
+     <p>los verbos acabados en -bir</p>
+    </cell>
+    <cell>
+     <p>menos</p>
+    </cell>
+    <cell>
+     <p>hervir</p>
+    </cell>
+    <cell>
+     <p>vivir</p>
+    </cell>
+    <cell>
+     <p>y servir</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puzzle niño libro" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="48" />
+      <color background="0xCCCCFF" />
+     </style>
+     <p>Haz este puzzle</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="48" />
+      <color background="0xCC00CC" />
+     </style>
+     <p>Tu si que chanelas</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x000000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="4" cols="4" border="true" image="niño libro.jpg">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="animadora.gif" file="animadora.gif" />
+  <media name="aplauso 2.gif" file="aplauso_2.gif" />
+  <media name="bola de cristal.gif" file="bola_de_cristal.gif" />
+  <media name="Buscando con linterna.gif" file="buscando_con_linterna.gif" />
+  <media name="clic.gif" file="clic.gif" />
+  <media name="ganaOscar.gif" file="ganaoscar.gif" />
+  <media name="gorra con aplausos.gif" file="gorra_con_aplausos.gif" />
+  <media name="lectura.gif" file="lectura.gif" />
+  <media name="leer.gif" file="leer.gif" />
+  <media name="ok.gif" file="ok.gif" />
+  <media name="fondo canicas colores.jpg" file="fondo_canicas_colores.jpg" />
+  <media name="fondo disco de colores.jpg" file="fondo_disco_de_colores.jpg" />
+  <media name="Logo Barró.JPG" file="logo_barro.jpg" />
+  <media name="lunares blancos fondo rojo.jpg" file="lunares_blancos_fondo_rojo.jpg" />
+  <media name="niño libro.jpg" file="nino_libro.jpg" />
+  <media name="tpm 4.JPG" file="tpm_4.jpg" />
+ </mediaBag>
+</JClicProject>
+

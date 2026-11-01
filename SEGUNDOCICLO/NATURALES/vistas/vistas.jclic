@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="tierra" version="0.1.3">
+ <settings>
+  <title>Vistas de la tierra</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="9/9/02" />
+  <revision description="Conversión de Clic3 a JClic" date="11/4/02">
+   <author name="Equip Clic" mail="clic@xtec.cat" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Pedro Villar Sánchez" mail="pvillar@villena.infoville.net" />
+  <organization name="IES Hermanos Amorós" city="Villena" state="País Valencià" />
+  <language>español</language>
+  <description>
+   <p>Los ingredientes de este paquete de actividades son diversas fotografías de nuestro planeta tomadas por satélites a diversas horas del día y desde diversas posiciones. Esto nos permite observar el paso de la noche al día, los continentes y océanos, zonas pobladas y zonas desérticas, etc.</p>
+  </description>
+  <descriptors area="Ciencias experimentales" level="Primaria, Secundaria">astronomía</descriptors>
+ </settings>
+ <sequence>
+  <item id="tierra.pac" name="presen.ass" delay="2">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="presen.txa" delay="2" />
+  <item name="paq.ass" delay="2">
+   <jump action="STOP" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="paq.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Times New Roman" size="30" bold="true" />
+      <color foreground="0x000080" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Haz clic sobre una opción</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Times New Roman" size="30" bold="true" />
+      <color foreground="0x000080" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="sat.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" transparent="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="270.0" cellHeight="160.0" border="true">
+    <style>
+     <font family="Times New Roman" size="30" />
+     <color foreground="0xFFFFFF" background="0x000040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="hst.jpg" />
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="hispasat.pac" params="hispasat/hispasat.jclic" />
+     <p>El día y la noche </p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="vistas.pac" params="vistas/vistas.jclic" />
+     <p>Vistas de la Tierra desde satélites </p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="conti.pac" params="conti/conti.jclic" />
+     <p>Continentes y océanos </p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="presen.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x000000" />
+     </style>
+     <media type="PLAY_MIDI" level="2" file="memorias.mid" />
+     <p />
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondo.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x000000" border="false" />
+   </settings>
+   <cells rows="3" cols="4" border="false" image="presenta.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@text.FillInBlanks" name="presen.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x800040" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x800040" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x000000">
+     <image name="fondo.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x000000" border="false">
+     <size width="700" height="405" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" foreground="0xFFFFFF" background="0x000000" italic="false" size="17" bold="false" family="Arial" tabWidth="16" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" background="0xC0C0C0" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <text>Las imágenes que acompañan esta actividad fueron  tomadas  los días 16 y 17 de Junio de 1998 desde diversos satélites,  entre otros el Hispasat-1A, a una distancia de 35.775 Km. de la Tierra, sobre 0º 1´Latitud Norte  y 29º 56´ Longitud Oeste</text>
+     </p>
+     <p />
+     <p>
+      <text>Pertenecen a la página WEB  </text>
+     </p>
+     <p>
+      <text>http://www.fourmilab.ch/earthview/vplanet.html, desde la que se puede acceder a las imágenes que en tiempo real sirven más de 1000 satélites alrededor de la Tierra.</text>
+     </p>
+     <p>
+      <text>Los derechos de las imágenes pertenecen a ©1998 The Living Earth, Inc./Earth Viewer. A mi requerimiento estas imágenes han sido autorizadas a su exposición en esta actividad educativa no comercial.</text>
+     </p>
+     <p />
+     <p>
+      <text>(*) La horas que figuran en las actividades son referidas a hora local en España, con dos horas de adelanto con respecto a la hora solar</text>
+     </p>
+     <p>
+      <text />
+     </p>
+     <p>
+      <text>                                                           PEDRO VILLAR</text>
+     </p>
+     <p>
+      <text>                                  I.E.S. Hermanos Amorós.-  Villena (Alicante)</text>
+     </p>
+     <p />
+     <p />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="fondo.gif" file="fondo.gif" animated="false" />
+  <media name="presenta.gif" file="presenta.gif" animated="false" />
+  <media name="sat.gif" file="sat.gif" animated="false" />
+  <media name="hst.jpg" file="hst.jpg" />
+  <media name="memorias.mid" file="memorias.mid" />
+ </mediaBag>
+</JClicProject>
+

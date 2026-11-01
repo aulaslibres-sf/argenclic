@@ -1,0 +1,2405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="boleta" version="0.1.3">
+ <settings>
+  <title>boleta</title>
+  <revision description="created" date="4/22/11" />
+  <author name="Fernando Pelillo" mail="fernando@gleducar.org.ar" url="www.argenclic.org.ar" rol="Docente" organization="ArgenClic" />
+  <language>es</language>
+  <descriptors area="Formación Ética y Ciudadana" level="Todos">elección,boleta,única,votación,Santa Fe, 2011</descriptors>
+  <skin file="@blue.xml" />
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es" />
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="start" name="portada" />
+  <item name="001" />
+  <item name="01" />
+  <item name="01e" />
+  <item name="02" />
+  <item name="03" />
+  <item name="04" />
+  <item name="05" />
+  <item name="06" />
+  <item name="07" />
+  <item name="08" />
+  <item name="09" />
+  <item name="10" />
+  <item id="BOLETA" name="11" />
+  <item name="11a" />
+  <item id="GOBERNADOR" name="12" navButtons="back" />
+  <item id="DIPUTADOS" name="13" />
+  <item name="13a" />
+  <item id="SENADOR" name="14" />
+  <item name="15" />
+  <item name="16" />
+  <item name="17" />
+  <item name="18" />
+  <item name="19" />
+  <item name="19a" />
+  <item name="20">
+   <jump action="STOP" id="forward" />
+  </item>
+  <item name="1211">
+   <jump action="STOP" id="forward" />
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="1212">
+   <jump action="STOP" id="forward" />
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="1221">
+   <jump action="STOP" id="forward" />
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="1222">
+   <jump action="STOP" id="forward" />
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="1223">
+   <jump action="STOP" id="forward" />
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="1231">
+   <jump action="STOP" id="forward" />
+   <jump action="STOP" id="back" />
+  </item>
+  <item id="GOB_BLANCO" name="12b">
+   <jump action="STOP" id="forward" />
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="1311">
+   <jump action="STOP" id="forward" />
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="1312">
+   <jump action="STOP" id="forward" />
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="1321">
+   <jump action="STOP" id="forward" />
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="1322">
+   <jump action="STOP" id="forward" />
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="1323">
+   <jump action="STOP" id="forward" />
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="1331">
+   <jump action="STOP" id="forward" />
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="13b">
+   <jump action="STOP" id="forward" />
+   <jump action="STOP" id="back" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.SimpleAssociation" name="001" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0x0099FF" background="0xFFFFFF" shadow="0x12E4FA" />
+     </style>
+     <p>Une como corresponde</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>Ya sabes cuándo se vota</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE4E4E4">
+     <image name="portada.jpg" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE4E4E4" transparent="true" border="false">
+     <position x="80" y="0" />
+    </window>
+   </settings>
+   <cells rows="3" cols="1" cellWidth="300.0" cellHeight="60.0" border="true" id="primary">
+    <style shadow="true" borderStroke="4.2" markerStroke="2.7">
+     <font family="Arial" size="48" bold="true" />
+     <color foreground="0x0099FF" background="0xFEFEFE" shadow="0x25F0FD" border="0x673445FD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>Elección primaria</p>
+    </cell>
+    <cell>
+     <p>Elección general</p>
+    </cell>
+    <cell>
+     <p>Simulacro escolar</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="200.0" cellHeight="60.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="26" bold="true" />
+     <color background="0xFEFEFE" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>22 de mayo</p>
+    </cell>
+    <cell>
+     <p>24 de julio</p>
+    </cell>
+    <cell>
+     <p>12 de mayo</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@text.Order" name="01" code="" type="orderParagraphs">
+   <description />
+   <messages>
+    <cell type="previous">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>LEE CON ATENCIÓN</p>
+    </cell>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>ORDENA LOS PASOS PARA VOTAR</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>¡¡¡A EJERCER EL DERECHO CIUDADANO!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="portada.jpg" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true">
+     <position x="20" y="10" />
+     <size width="660" height="520" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <prevScreen maxTime="30" />
+   <document>
+    <style name="default" italic="false" background="0xFFFFFF" bold="false" tabWidth="12" family="Times New Roman" size="20" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p background="0xFFFFFF" family="Arial" Alignment="1">
+      <cell width="300" height="40">
+       <style shadow="true" borderStroke="0.7" markerStroke="2.7">
+        <font family="Arial" size="24" bold="true" />
+        <color foreground="0xFEFEFE" background="0x010101" />
+       </style>
+       <p>PASOS A SEGUIR</p>
+      </cell>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <target>1) El elector concurre al lugar de votación con su documento.</target>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <target>2) El presidente de mesa le da una boleta por cada categoría electoral y un bolígrafo. Cada boleta tiene un color diferente (no hay más sobres) y toda la oferta electoral de esa categoría es exhibida en la misma papeleta.</target>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <target>3) El elector ingresa a un box individual con todas las boletas, donde deberá marcar con el bolígrafo entregado por la autoridad de mesa una sola opción por cada boleta (varios electores pueden votar simultáneamente ya que habrá varias cabinas o boxes en las salas de votación).</target>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <target>4) Luego de marcar una opción por categoría -incluso el voto en blanco debe ser marcado en un casillero-, el elector pliega cada boleta, vuelve a la mesa y las coloca en la urna, que tendrá cinco bocas (una por cada categoría). Cada ranura de la urna estará identificada con el color de la boleta y la denominación de la categoría, pues cada compartimento es individual y está dividido del resto.</target>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" checkAccents="false" checkPunctuation="false" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="01e" code="">
+   <description />
+   <messages>
+    <cell type="previous">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x030303" />
+     </style>
+     <p>LEER CON ATENCIÓN</p>
+    </cell>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>Completa el texto con las opciones</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>A no equivocarse...</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="portada.jpg" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true">
+     <size width="660" height="400" />
+    </window>
+   </settings>
+   <prevScreen maxTime="24" />
+   <document>
+    <style name="default" italic="false" background="0xFFFFFF" bold="false" tabWidth="12" family="Times New Roman" size="20" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p background="0xFFFFFF" family="Times New Roman" Alignment="1" size="20">
+      <cell width="300" height="56">
+       <style shadow="true">
+        <font family="Arial" size="22" bold="true" />
+        <color foreground="0xFEFEFE" background="0xFF0000" />
+       </style>
+       <p>IMPORTANTE:</p>
+      </cell>
+     </p>
+     <p background="0xFFFFFF" family="Times New Roman" Alignment="1" size="20" />
+     <p background="0xFFFFFF" family="Times New Roman" size="20">
+      <text background="0xFFFFFF" family="Arial">- Si el </text>
+      <target>
+       <answer>votante</answer>
+       <optionList>
+        <option>votante</option>
+        <option>candidato</option>
+        <option>vecino</option>
+       </optionList>
+       <text>votante</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial"> se equivoca al realizar la elección, debe comunicarlo a las autoridades de </text>
+      <target>
+       <answer>mesa</answer>
+       <optionList>
+        <option>piso</option>
+        <option>mesa</option>
+        <option>elección</option>
+       </optionList>
+       <text>mesa</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial">. Todas las boletas entregadas se </text>
+      <target>
+       <answer>anulan</answer>
+       <optionList>
+        <option>regalan</option>
+        <option>utilizan</option>
+        <option>anulan</option>
+       </optionList>
+       <text>anulan</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial"> y se reemplazan por un nuevo juego, dejándose constancia del </text>
+      <target>
+       <answer>inconveniente</answer>
+       <optionList>
+        <option>acto</option>
+        <option>inconveniente</option>
+        <option>voto</option>
+       </optionList>
+       <text>inconveniente</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial">.</text>
+     </p>
+     <p background="0xFFFFFF" family="Times New Roman" size="20" />
+     <p background="0xFFFFFF" family="Times New Roman" size="20">
+      <text background="0xFFFFFF" family="Arial">- Si el votante se </text>
+      <target>
+       <answer>equivoca</answer>
+       <optionList>
+        <option>pone nervioso</option>
+        <option>equivoca</option>
+        <option>escapa</option>
+       </optionList>
+       <text>equivoca</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial"> al introducir la </text>
+      <target>
+       <answer>boleta</answer>
+       <optionList>
+        <option>boleta</option>
+        <option>mano</option>
+        <option>documentación</option>
+       </optionList>
+       <text>boleta</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial">, cuando finaliza el comicio y se abre la </text>
+      <target>
+       <answer>urna</answer>
+       <optionList>
+        <option>mano</option>
+        <option>elección</option>
+        <option>urna</option>
+       </optionList>
+       <text>urna</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial">, la boleta es colocada para el </text>
+      <target>
+       <answer>escrutinio</answer>
+       <optionList>
+        <option>presidente</option>
+        <option>escrutinio</option>
+        <option>descarte</option>
+       </optionList>
+       <text>escrutinio</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial"> en el compartimento correspondiente sin desdoblarla.</text>
+     </p>
+     <p background="0xFFFFFF" family="Times New Roman" size="20" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="02" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0x0099FF" background="0xFFFFFF" shadow="0x12E4FA" />
+     </style>
+     <p>Resuelve el rompecabezas</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0x0099FF" background="0xFFFFFF" shadow="0x12E4FA" />
+     </style>
+     <p>YA ESTÁS LISTO PARA VOTAR</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xE4E4E4">
+     <image name="portada.jpg" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE4E4E4" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="urnas.jpg">
+    <style shadow="true" borderStroke="4.2" markerStroke="2.7">
+     <font family="Arial" size="48" bold="true" />
+     <color foreground="0x0099FF" background="0xFEFEFE" shadow="0x25F0FD" border="0x673445FD" />
+    </style>
+    <shaper class="@ClassicJigSaw" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@text.Complete" name="03" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0x0099FF" background="0xFFFFFF" shadow="0x12E4FA" />
+     </style>
+     <p>&lt;&lt;&lt;---  Lee con atención y pasa con la flecha azul</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xE4E4E4">
+     <image name="portada.jpg" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE4E4E4" transparent="true" border="false">
+     <size width="600" height="460" />
+    </window>
+   </settings>
+   <checkButton />
+   <document>
+    <style name="default" italic="false" background="0xFFFFFF" bold="false" tabWidth="12" family="Times New Roman" size="20" />
+    <style name="target" base="default" background="0xFFFFFF" target="true" foreground="0x0000FF" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p background="0xFFFFFF" family="Arial" Alignment="1">
+      <cell width="400" height="60">
+       <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+        <font family="Arial" size="24" bold="true" />
+        <color foreground="0xFEFEFE" background="0x070AFD" shadow="0x93C7BFBF" />
+       </style>
+       <p>Elecciones primarias</p>
+      </cell>
+     </p>
+     <p background="0xFFFFFF" family="Arial" Alignment="1">
+      <text background="0xFFFFFF" family="Arial" size="18">El 22 de mayo son las elecciones primarias abiertas, simultáneas y obligatorias y los</text>
+      <text background="0xFFFFFF" family="Arial"> </text>
+      <text background="0xFFFFFF" family="Arial" size="18">ciudadanos debemos elegir</text>
+      <text background="0xFFFFFF" family="Arial" size="18" foreground="0xF80303"> </text>
+      <text italic="false" background="0x65FFFFFF" bold="false" family="Times New Roman" size="20" foreground="0xF80303">candidatos</text>
+      <text background="0xFFFFFF" family="Arial" size="18"> para las siguientes categorías:</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text background="0xFFFFFF" family="Times New Roman" size="20">* </text>
+      <text italic="false" background="0x65FFFFFF" bold="true" family="Times New Roman" size="20" foreground="0xF20909">Gobernador</text>
+      <text background="0xFFFFFF" family="Times New Roman" size="20"> y vicegobernador de la provincia.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text background="0xFFFFFF" family="Times New Roman" size="20">* </text>
+      <text italic="false" background="0x65FFFFFF" bold="true" family="Times New Roman" size="20" foreground="0xF30C0C">Diputados</text>
+      <text background="0xFFFFFF" family="Times New Roman" size="20"> provinciales </text>
+      <text background="0xFFFFFF" family="Times New Roman" size="16">(50 titulares y 10 suplentes).</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text background="0xFFFFFF" family="Times New Roman" size="20">* </text>
+      <text italic="false" background="0x65FFFFFF" bold="true" family="Times New Roman" size="20" foreground="0xFA0E0E">Senador</text>
+      <text background="0xFFFFFF" family="Times New Roman" size="20"> departamental </text>
+      <text background="0xFFFFFF" family="Times New Roman" size="16">(19 titulares y 19 suplentes, uno por cada departamento).</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text background="0xFFFFFF" family="Times New Roman" size="20">* </text>
+      <text italic="false" background="0x65FFFFFF" bold="true" family="Times New Roman" size="20" foreground="0xFB0C0C">Intendente</text>
+      <text background="0xFFFFFF" family="Times New Roman" size="20">.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text background="0xFFFFFF" family="Times New Roman" size="20">* </text>
+      <text italic="false" background="0x65FFFFFF" bold="true" family="Times New Roman" size="20" foreground="0xF90A0A">Concejales</text>
+      <text background="0xFFFFFF" family="Times New Roman" size="20"> municipales o comisiones comunales y contralores de cuentas de comunas </text>
+      <text background="0xFFFFFF" family="Times New Roman" size="16">(titulares y suplentes).</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" checkAccents="false" checkPunctuation="false" detail="false" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="04" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0x0099FF" background="0xFFFFFF" shadow="0x12E4FA" />
+     </style>
+     <p>Relaciona con el poder correspondiente</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0x0099FF" background="0xFFFFFF" shadow="0x12E4FA" />
+     </style>
+     <p>Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE4E4E4">
+     <image name="portada.jpg" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE4E4E4" transparent="true" border="false">
+     <position x="100" y="360" />
+    </window>
+   </settings>
+   <cells rows="1" cols="5" cellWidth="120.0" cellHeight="60.0" border="true" id="primary">
+    <style shadow="true" borderStroke="4.2" markerStroke="5.0">
+     <font family="Arial" size="48" />
+     <color foreground="0x0099FF" background="0xFEFEFE" shadow="0x25F0FD" inactive="0x00808080" border="0x673445FD" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell id="0">
+     <p>Gobernador</p>
+    </cell>
+    <cell id="1">
+     <p>Diputados</p>
+    </cell>
+    <cell id="1">
+     <p>Senador</p>
+    </cell>
+    <cell id="0">
+     <p>Intendente</p>
+    </cell>
+    <cell id="1">
+     <p>Concejales</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="300.0" cellHeight="60.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="26" bold="true" />
+     <color background="0xFEFEFE" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell>
+     <p>Poder Ejecutivo</p>
+    </cell>
+    <cell>
+     <p>Poder Legislativo</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="05" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0x0099FF" background="0xFFFFFF" shadow="0x12E4FA" />
+     </style>
+     <p>Clic sobre los cargos que se eligen en toda la provincia (el mismo candidato para todo Santa Fe)</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0x0099FF" background="0xFFFFFF" shadow="0x12E4FA" />
+     </style>
+     <p>Buen trabajo</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE4E4E4">
+     <image name="portada.jpg" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE4E4E4" transparent="true" border="false" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="60.0" border="true" id="primary">
+    <style shadow="true" borderStroke="4.2" markerStroke="2.7">
+     <font family="Arial" size="48" bold="true" />
+     <color foreground="0x0099FF" background="0xFEFEFE" shadow="0x25F0FD" border="0x673445FD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell id="1">
+     <p>Gobernador</p>
+    </cell>
+    <cell id="1">
+     <p>Diputados</p>
+    </cell>
+    <cell id="0">
+     <p>Senador</p>
+    </cell>
+    <cell id="0">
+     <p>Intendente</p>
+    </cell>
+    <cell id="0">
+     <p>Concejales</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="06" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0x0099FF" background="0xFFFFFF" shadow="0x12E4FA" />
+     </style>
+     <p>Clic sobre los cargos que se eligen para cada uno de los 19 departamentos</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0x0099FF" background="0xFFFFFF" shadow="0x12E4FA" />
+     </style>
+     <p>Buen trabajo</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE4E4E4">
+     <image name="portada.jpg" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE4E4E4" transparent="true" border="false" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="60.0" border="true" id="primary">
+    <style shadow="true" borderStroke="4.2" markerStroke="2.7">
+     <font family="Arial" size="48" bold="true" />
+     <color foreground="0x0099FF" background="0xFEFEFE" shadow="0x25F0FD" border="0x673445FD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell id="0">
+     <p>Gobernador</p>
+    </cell>
+    <cell id="0">
+     <p>Diputados</p>
+    </cell>
+    <cell id="1">
+     <p>Senador</p>
+    </cell>
+    <cell id="0">
+     <p>Intendente</p>
+    </cell>
+    <cell id="0">
+     <p>Concejales</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="07" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0x0099FF" background="0xFFFFFF" shadow="0x12E4FA" />
+     </style>
+     <p>Clic sobre los cargos que se eligen para cada ciudad de la provincia</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0x0099FF" background="0xFFFFFF" shadow="0x12E4FA" />
+     </style>
+     <p>Buen trabajo</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE4E4E4">
+     <image name="portada.jpg" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE4E4E4" transparent="true" border="false" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="60.0" border="true" id="primary">
+    <style shadow="true" borderStroke="4.2" markerStroke="2.7">
+     <font family="Arial" size="48" bold="true" />
+     <color foreground="0x0099FF" background="0xFEFEFE" shadow="0x25F0FD" border="0x673445FD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell id="0">
+     <p>Gobernador</p>
+    </cell>
+    <cell id="0">
+     <p>Diputados</p>
+    </cell>
+    <cell id="0">
+     <p>Senador</p>
+    </cell>
+    <cell id="1">
+     <p>Intendente</p>
+    </cell>
+    <cell id="1">
+     <p>Concejales</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="08" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0x0099FF" background="0xFFFFFF" shadow="0x12E4FA" />
+     </style>
+     <p>Relaciona cada cargo con el color que lo identifica</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0x0099FF" background="0xFFFFFF" shadow="0x12E4FA" />
+     </style>
+     <p>Buen trabajo</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE4E4E4">
+     <image name="portada.jpg" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE4E4E4" transparent="true" border="false">
+     <position x="10" y="0" />
+    </window>
+   </settings>
+   <cells rows="1" cols="5" cellWidth="120.0" cellHeight="60.0" border="true" id="primary">
+    <style shadow="true" borderStroke="4.2" markerStroke="2.7">
+     <font family="Arial" size="48" bold="true" />
+     <color foreground="0x0099FF" background="0xFEFEFE" shadow="0x25F0FD" border="0x673445FD" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell id="0">
+     <p>Gobernador</p>
+    </cell>
+    <cell id="0">
+     <p>Diputados</p>
+    </cell>
+    <cell id="1">
+     <p>Senador</p>
+    </cell>
+    <cell>
+     <p>Intendente</p>
+    </cell>
+    <cell>
+     <p>Concejales</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="5" cellWidth="120.0" cellHeight="60.0" border="false" id="secondary">
+    <style transparent="true" borderStroke="0.7" markerStroke="5.0" />
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell image="gob_fondo.jpg" />
+    <cell image="dipu_fondo.jpg" />
+    <cell image="sena_fondo.jpg" />
+    <cell image="inten_fondo.jpg" />
+    <cell image="conce_fondo.jpg" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="09" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>CÓMO SE VOTA</p>
+    </cell>
+   </messages>
+   <settings margin="12" report="false">
+    <container bgColor="0xE4E4E4">
+     <image name="portada.jpg" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE4E4E4" transparent="true" border="false">
+     <position x="13" y="8" />
+    </window>
+   </settings>
+   <cells rows="3" cols="1" cellWidth="760.0" cellHeight="175.0" border="false">
+    <style shadow="true" margin="20" borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="20" />
+     <color foreground="0x0918FE" background="0xFEFEFE" shadow="0xD1F4F6" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>Para elegir gobernador y vicegobernador de la Provincia, senadores e intendentes municipales la boleta única contendrá, junto al logo partidario, el nombre de los candidatos titulares y sus respectivas fotos. En el caso de los suplentes serán incluidos sólo con sus nombres.</p>
+    </cell>
+    <cell>
+     <p>Para la elección de diputados provinciales, concejales y miembros de comisiones comunales y controladores de cuenta titulares y suplentes, la boleta única contendrá nómina de los primeros 3 candidatos (el primero con foto). </p>
+     <p>Las listas completas de candidatos con sus respectivos suplentes se exhibirán con un facsímil o afiche colocados dentro del box o cabina de votación y con anterioridad en lugares públicos.</p>
+    </cell>
+    <cell>
+     <p>A cada opción electoral le corresponde un casillero, donde el elector debe efectuar una marca.</p>
+     <p>Si marca dos veces, el voto será nulo.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="10" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>Encuentra los candidatos a Gobernador</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>Observa bien la cantidad de partidos y listas internas</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="gob_fondo.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="gob_listas.jpg">
+    <style />
+    <shaper class="@ClassicJigSaw" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.Identify" name="11" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>Identifica el espacio donde se marca a los candidatos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>No se permiten marcas en otras partes de la boleta</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="gob_fondo.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="7" cols="18" border="false" image="gob_listas.jpg" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color shadow="0xF40B0B" inactive="0xF80707" alternative="0xFA0909" />
+    </style>
+    <shaper class="@Rectangular" cols="18" rows="7" />
+    <ids>0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0</ids>
+   </cells>
+   <cells rows="7" cols="18" border="true" image="gob_listas.jpg" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="18" rows="7" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell>
+     <style shadow="true" transparent="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p> .         X</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell>
+     <style shadow="true" transparent="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>.               X</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell>
+     <style shadow="true" transparent="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>.              X</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell>
+     <style shadow="true" transparent="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>.          X</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell>
+     <p>.            X</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell>
+     <p>.          X</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell>
+     <p>.            X</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@panels.Identify" name="11a" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>IDENTIFICA LAS AFIRMACIONES CORRECTAS</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>BUEN TRABAJO</p>
+    </cell>
+   </messages>
+   <settings margin="12" report="true" reportActions="false">
+    <container bgColor="0xE4E4E4">
+     <image name="portada.jpg" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE4E4E4" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="290.0" cellHeight="170.0" border="false" id="primary">
+    <style shadow="true" margin="20" borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="20" bold="true" />
+     <color foreground="0x0918FE" background="0xFEFEFE" shadow="0xD1F4F6" inactive="0x00808080" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell id="0">
+     <p>PUEDO VOTAR POR UN CANDIDATO DE CADA PARTIDO</p>
+    </cell>
+    <cell id="1">
+     <p>SÓLO PUEDO VOTAR UN CANDIDATO POR BOLETA</p>
+    </cell>
+    <cell id="0">
+     <p>PUEDO MARCAR LA CARA O EL NOMBRE DEL CANDIDATO PARA ASEGURAR QUE SE ENTIENDA MI VOTO</p>
+    </cell>
+    <cell id="1">
+     <p>SÓLO PUEDO MARCAR LA CASILLA BLANCA DE LA IZQUIERDA PARA REALIZAR MI ELECCIÓN</p>
+    </cell>
+    <cell id="0">
+     <p>ES IMPOSIBLE VOTAR EN BLANCO</p>
+    </cell>
+    <cell id="1">
+     <p>PARA VOTAR EN BLANCO, DEBO MARCAR LA CASILLA JUNTO A "VOTO EN BLANCO"</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="12" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>Elige a tu candidato</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>Buen trabajo (no anules tu voto)</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="gob_fondo.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="7" cols="18" border="false" image="gob_listas.jpg" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color shadow="0xF40B0B" inactive="0xF80707" alternative="0xFA0909" />
+    </style>
+    <shaper class="@Rectangular" cols="18" rows="7" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="1">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="1211" />
+    </cell>
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="1">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="1212" />
+    </cell>
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="1">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="1221" />
+    </cell>
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="1">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="1222" />
+    </cell>
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="1">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="1223" />
+    </cell>
+    <cell id="0">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="1223" />
+    </cell>
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="1">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="1231" />
+    </cell>
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="1">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="12b" />
+    </cell>
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="1211" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>YA ELEGISTE CANDIDATO A GOBERNADOR (clic en la pantalla para continuar)</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="gobL1.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="500.0" cellHeight="100.0" border="true">
+    <style shadow="true">
+     <font family="Arial" size="24" bold="true" />
+     <color foreground="0xFEFEFE" background="0x010101" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="13" />
+     <p>Elegiste a Domingo Sarmiento como Gobernador y Juan Alberdi como Vicegobernador</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="13" />
+     <p>Son los candidatos de la lista </p>
+     <p>BASES PARA UNA NUEVA PROVINCIA</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="13" />
+     <p>Participaste de la interna del Partido </p>
+     <p>UNA NUEVA NACIÓN</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="1212" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>YA ELEGISTE CANDIDATO A GOBERNADOR (clic en la pantalla para continuar)</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="gobL1.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="500.0" cellHeight="100.0" border="true">
+    <style shadow="true">
+     <font family="Arial" size="24" bold="true" />
+     <color foreground="0xFEFEFE" background="0x010101" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="13" />
+     <p>Elegiste a Nicolás Avellaneda como Gobernador y Adolfo Alsina como Vicegobernador</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="13" />
+     <p>Son los candidatos de la lista </p>
+     <p>COLONIAS PARA EL PROGRESO</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="13" />
+     <p>Participaste de la interna del Partido </p>
+     <p>UNA NUEVA NACIÓN</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="1221" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>YA ELEGISTE CANDIDATO A GOBERNADOR (clic en la pantalla para continuar)</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="gobL2.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="500.0" cellHeight="100.0" border="true">
+    <style shadow="true">
+     <font family="Arial" size="24" bold="true" />
+     <color foreground="0xFEFEFE" background="0x010101" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="13" />
+     <p>Elegiste a Manuel Belgrano como Gobernador y Martín Guemes como Vicegobernador</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="13" />
+     <p>Son los candidatos de la lista </p>
+     <p>CELESTE Y BLANCA</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="13" />
+     <p>Participaste de la interna del Partido </p>
+     <p>POR LA LIBERTAD</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="1222" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>YA ELEGISTE CANDIDATO A GOBERNADOR (clic en la pantalla para continuar)</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="gobL2.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="500.0" cellHeight="100.0" border="true">
+    <style shadow="true">
+     <font family="Arial" size="24" bold="true" />
+     <color foreground="0xFEFEFE" background="0x010101" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="13" />
+     <p>Elegiste a Estanisláo López como Gobernador y Domingo Cullen como Vicegobernador</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="13" />
+     <p>Son los candidatos de la lista </p>
+     <p>CONFEDERACIÓN</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="13" />
+     <p>Participaste de la interna del Partido </p>
+     <p>POR LA LIBERTAD</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="1223" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>YA ELEGISTE CANDIDATO A GOBERNADOR (clic en la pantalla para continuar)</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="gobL2.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="500.0" cellHeight="100.0" border="true">
+    <style shadow="true">
+     <font family="Arial" size="24" bold="true" />
+     <color foreground="0xFEFEFE" background="0x010101" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="13" />
+     <p>Elegiste a Bartolomé Mitre como Gobernador y Esteban Echeverría como Vicegobernador</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="13" />
+     <p>Son los candidatos de la lista </p>
+     <p>NUEVO ORDEN</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="13" />
+     <p>Participaste de la interna del Partido </p>
+     <p>POR LA LIBERTAD</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="1231" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>YA ELEGISTE CANDIDATO A GOBERNADOR (clic en la pantalla para continuar)</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="gobL3.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="500.0" cellHeight="100.0" border="true">
+    <style shadow="true">
+     <font family="Arial" size="24" bold="true" />
+     <color foreground="0xFEFEFE" background="0x010101" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="13" />
+     <p>Elegiste a Julio Roca como Gobernador y Carlos Pellegrini como Vicegobernador</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="13" />
+     <p>Son los candidatos de la lista </p>
+     <p>ORDEN Y PROGRESO</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="13" />
+     <p>Participaste de la interna del Partido </p>
+     <p>ORDEN Y PROGRESO</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="12b" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>YA ELEGISTE CANDIDATO A GOBERNADOR (clic en la pantalla para continuar)</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="vblanco.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="500.0" cellHeight="100.0" border="true">
+    <style shadow="true">
+     <font family="Arial" size="24" bold="true" />
+     <color foreground="0xFEFEFE" background="0x010101" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="13" />
+     <p>ELEGISTE VOTAR EN BLANCO</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="13" />
+     <p>NO VOTASTE NINGUNA LISTA</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="13" />
+     <p>NO PARTICIPASTE DE LA INTERNA DE NINGÚN PARTIDO</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="13" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>Encuentra los candidatos a diputados</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="dipu_fondo.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="dipu_listas.jpg">
+    <style />
+    <shaper class="@ClassicJigSaw" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.Identify" name="1311" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>www.argenclic.org.ar</p>
+    </cell>
+    <cell type="final" />
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="dipuL1.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="500.0" cellHeight="150.0" border="true" id="primary">
+    <style shadow="true">
+     <font family="Arial" size="24" bold="true" />
+     <color foreground="0xFEFEFE" background="0x010101" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell id="0">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="14" />
+     <p>Lista</p>
+     <p>BASES PARA UNA NUEVA PROVINCIA</p>
+    </cell>
+    <cell id="0">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="14" />
+     <p>Partido</p>
+     <p>UNA NUEVA NACIÓN</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@panels.Identify" name="1312" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>www.argenclic.org.ar</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="dipuL1.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="500.0" cellHeight="150.0" border="true" id="primary">
+    <style shadow="true">
+     <font family="Arial" size="24" bold="true" />
+     <color foreground="0xFEFEFE" background="0x010101" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell id="0">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="14" />
+     <p>Lista </p>
+     <p>COLONIAS PARA EL PROGRESO</p>
+    </cell>
+    <cell id="0">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="14" />
+     <p>Partido</p>
+     <p>UNA NUEVA NACIÓN</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@panels.Identify" name="1321" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>www.argenclic.org.ar</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="dipuL2.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="500.0" cellHeight="150.0" border="true" id="primary">
+    <style shadow="true">
+     <font family="Arial" size="24" bold="true" />
+     <color foreground="0xFEFEFE" background="0x010101" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell id="0">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="14" />
+     <p>Lista </p>
+     <p>CELESTE Y BLANCA</p>
+    </cell>
+    <cell id="0">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="14" />
+     <p>Partido</p>
+     <p>POR LA LIBERTAD</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@panels.Identify" name="1322" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>www.argenclic.org.ar</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="dipuL2.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="500.0" cellHeight="150.0" border="true" id="primary">
+    <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="24" bold="true" />
+     <color foreground="0xFEFEFE" background="0x010101" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell id="0">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="14" />
+     <p>Lista</p>
+     <p>CONFEDERACIÓN</p>
+    </cell>
+    <cell id="0">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="14" />
+     <p>Partido</p>
+     <p>POR LA LIBERTAD</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@panels.Identify" name="1323" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>www.argenclic.org.ar</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="dipuL2.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="500.0" cellHeight="150.0" border="true" id="primary">
+    <style shadow="true">
+     <font family="Arial" size="24" bold="true" />
+     <color foreground="0xFEFEFE" background="0x010101" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell id="0">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="14" />
+     <p>Lista</p>
+     <p>NUEVO ORDEN</p>
+    </cell>
+    <cell id="0">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="14" />
+     <p>Partido</p>
+     <p>POR LA LIBERTAD</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@panels.Identify" name="1331" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>www.argenclic.org.ar</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="dipuL3.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="500.0" cellHeight="150.0" border="true" id="primary">
+    <style shadow="true">
+     <font family="Arial" size="24" bold="true" />
+     <color foreground="0xFEFEFE" background="0x010101" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell id="0">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="14" />
+     <p>Lista</p>
+     <p>ORDEN Y PROGRESO</p>
+    </cell>
+    <cell id="0">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="14" />
+     <p>Partido</p>
+     <p>ORDEN Y PROGRESO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@panels.Identify" name="13a" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>Elige a tu candidato</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>Buen trabajo (no anules tu voto)</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="dipu_fondo.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="7" cols="18" border="false" image="dipu_listas.jpg" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color shadow="0xF40B0B" inactive="0xF80707" alternative="0xFA0909" />
+    </style>
+    <shaper class="@Rectangular" cols="18" rows="7" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="1311" />
+    </cell>
+    <cell id="1">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="1211" />
+    </cell>
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="1312" />
+    </cell>
+    <cell id="1">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="1212" />
+    </cell>
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="1321" />
+    </cell>
+    <cell id="1">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="1221" />
+    </cell>
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="1322" />
+    </cell>
+    <cell id="1">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="1222" />
+    </cell>
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="1323" />
+    </cell>
+    <cell id="1">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="1223" />
+    </cell>
+    <cell id="0">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="1223" />
+    </cell>
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="1331" />
+    </cell>
+    <cell id="1">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="1231" />
+    </cell>
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="13b" />
+    </cell>
+    <cell id="1">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="12b" />
+    </cell>
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@panels.Identify" name="13b" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>www.argenclic.org.ar</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="vblanco.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="500.0" cellHeight="150.0" border="true" id="primary">
+    <style shadow="true">
+     <font family="Arial" size="24" bold="true" />
+     <color foreground="0xFEFEFE" background="0x010101" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell id="0">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="14" />
+     <p>VOTO EN BLANCO</p>
+    </cell>
+    <cell id="0">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="14" />
+     <p>CONTINUAR CON ELECCIÓN A INTENDENTE</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="14" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>Encuentra los candidatos a Senador por tu departamento</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="sena_fondo.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="sena_listas.jpg">
+    <style />
+    <shaper class="@ClassicJigSaw" cols="3" rows="3" />
+    <ids>1 1 0 0 0 0 0 0 0</ids>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="15" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>ENCUENTRA LOS CANDIDATOS A INTENDENTE DE TU CIUDAD</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>BRAVO</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="inten_fondo.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="inte_listas.jpg">
+    <style />
+    <shaper class="@ClassicJigSaw" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="16" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>ENCUENTRA LOS CANDIDATOS PARA EL CONCEJO DELIBERANTE</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="conce_fondo.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="conce_listas.jpg">
+    <style />
+    <shaper class="@ClassicJigSaw" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.Identify" name="17" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>Identifica las listas del Partido </p>
+     <p>UNA NUEVA NACIÓN</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>El Partido UNA NUEVA NACIÓN presenta 2 listas de candidatos.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="portada.jpg" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="550.0" cellHeight="215.0" border="false" id="primary">
+    <style transparent="true" borderStroke="0.7" markerStroke="5.0" />
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="1" image="inteL01.jpg" />
+    <cell id="0" image="inteL02.jpg" />
+    <cell id="0" image="inteL03.jpg" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@panels.Identify" name="18" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>Identifica las listas del Partido </p>
+     <p>POR LA LIBERTAD</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>El Partido POR LA LIBERTAD presenta 3 listas de candidatos.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="portada.jpg" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="550.0" cellHeight="215.0" border="false" id="primary">
+    <style transparent="true" borderStroke="0.7" markerStroke="5.0" />
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="0" image="conceL01.jpg" />
+    <cell id="1" image="conceL02.jpg" />
+    <cell id="0" image="conceL03.jpg" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@panels.Identify" name="19" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>Identifica las listas del Partido </p>
+     <p>ORDEN Y PROGRESO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>El Partido ORDEN Y PROGRESO presenta 1 lista de candidatos.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="portada.jpg" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="550.0" cellHeight="215.0" border="false" id="primary">
+    <style transparent="true" borderStroke="0.7" markerStroke="5.0" />
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="0" image="conceL01.jpg" />
+    <cell id="0" image="conceL02.jpg" />
+    <cell id="1" image="conceL03.jpg" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="19a" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>RELACIONA CADA LISTA CON SU PARTIDO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>EXCELENTE</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="portada.jpg" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="350.0" cellHeight="50.0" border="true" id="primary">
+    <style shadow="true" borderStroke="2.4" markerStroke="2.7">
+     <font family="Arial" size="20" bold="true" />
+     <color foreground="0xFEFEFE" background="0x010101" shadow="0x9BF4E20B" inactive="0x00F80707" alternative="0xFA0909" border="0xFCEF13" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <p>BASES PARA UNA NUEVA PROVINCIA</p>
+    </cell>
+    <cell id="0">
+     <p>COLONIAS PARA EL PROGRESO</p>
+    </cell>
+    <cell id="1">
+     <p>CELESTE Y BLANCA</p>
+    </cell>
+    <cell id="1">
+     <p>CONFEDERACIÓN</p>
+    </cell>
+    <cell id="1">
+     <p>NUEVO ORDEN</p>
+    </cell>
+    <cell id="2">
+     <p>ORDEN Y PROGRESO</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="250.0" cellHeight="100.0" border="true" id="secondary">
+    <style shadow="true">
+     <font family="Arial" size="24" bold="true" />
+     <color foreground="0x000AFF" background="0xFEFEFE" shadow="0x70F8F226" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>UNA NUEVA NACIÓN</p>
+    </cell>
+    <cell>
+     <p>POR LA LIBERTAD</p>
+    </cell>
+    <cell>
+     <p>ORDEN Y PROGRESO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="20" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0x0101F8" background="0xFEFEFE" shadow="0x9B6DEDF8" />
+     </style>
+     <p>COLABORANDO CON EL EJERCICIO DE LA CIUDADANÍA</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="portada.jpg" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="660.0" cellHeight="160.0" border="false" id="primary">
+    <style shadow="true">
+     <font family="Arial" size="24" bold="true" />
+     <color foreground="0x5186F8" background="0xC8FEFEFE" shadow="0x9EFEF632" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="0">
+     <p>ACTIVIDAD EDUCATIVA DESARROLLADA POR FERNANDO PELILLO PARA COLABORAR CON EL SIMULACRO ELECTORAL ESCOLAR DEL 12 DE MAYO DE 2011 EN LA PROVINCIA DE SANTA FE, CON MOTIVO DE IMPLEMENTARSE EL SISTEMA DE BOLETA ÚNICA.</p>
+    </cell>
+    <cell id="0" txtAlign="middle,top" imgAlign="middle,bottom" avoidOverlapping="true" image="logo2010.png">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xF801F5" background="0xC6FEFEFE" shadow="0x9B6DEDF8" />
+     </style>
+     <media type="URL" level="1" file="http://www.argenclic.org.ar" />
+     <p>MÁS INFORMACIÓN EN WWW.ARGENCLIC.ORG.AR</p>
+    </cell>
+    <cell id="0" imgAlign="middle,bottom">
+     <media type="URL" level="1" file="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/" />
+     <p>USTED PUEDE UTILIZAR, COPIAR, DISTRIBUIR, MODIFICAR Y REUTILIZAR ESTA OBRA RESPETANDO ESTE MENSAJE Y LA LICENCIA CREATIVE COMMONS BY/SA/NC</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="portada" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0x0099FF" background="0xFFFFFF" shadow="0x12E4FA" />
+     </style>
+     <p>APRENDER A ELEGIR CON EL NUEVO SISTEMA</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xE4E4E4">
+     <image name="portada.jpg" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE4E4E4" transparent="true" border="false" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="600.0" cellHeight="100.0" border="false">
+    <style shadow="true" transparent="true">
+     <font family="Arial" size="48" bold="true" />
+     <color foreground="0x0099FF" shadow="0x25F0FD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="36" bold="true" />
+      <color foreground="0x0099FF" background="0xC8FFFFFF" shadow="0x12E4FA" />
+     </style>
+     <p>NUEVO PROCEDIMIENTO DE VOTACIÓN</p>
+    </cell>
+    <cell>
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="72" bold="true" />
+      <color foreground="0xF2F9FF" background="0x64FFFFFF" shadow="0x09B0C2" />
+     </style>
+     <p>"BOLETA ÚNICA"</p>
+    </cell>
+    <cell />
+    <cell>
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color foreground="0x010101" background="0xC3FFFFFF" shadow="0xFAF312" />
+     </style>
+     <p>Santa Fe implementará el sistema de Boleta Única a partir de las próximas elecciones primarias, abiertas, simultáneas y obligatorias del 22 de mayo.</p>
+    </cell>
+    <cell>
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color foreground="0x010101" background="0xC3FFFFFF" shadow="0xFAF312" />
+     </style>
+     <p>Los candidatos que resulten elegidos figurarán luego en las Boletas Únicas de la elección general del 24 de julio.</p>
+    </cell>
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="conce_fondo.jpg" file="conce_fondo.jpg" />
+  <media name="conce_listas.jpg" file="conce_listas.jpg" />
+  <media name="conceL01.jpg" file="concel01.jpg" />
+  <media name="conceL02.jpg" file="concel02.jpg" />
+  <media name="conceL03.jpg" file="concel03.jpg" />
+  <media name="dipu_fondo.jpg" file="dipu_fondo.jpg" />
+  <media name="dipu_listas.jpg" file="dipu_listas.jpg" />
+  <media name="dipuL1.jpg" file="dipul1.jpg" />
+  <media name="dipuL2.jpg" file="dipul2.jpg" />
+  <media name="dipuL3.jpg" file="dipul3.jpg" />
+  <media name="gob_fondo.jpg" file="gob_fondo.jpg" />
+  <media name="gob_listas.jpg" file="gob_listas.jpg" />
+  <media name="gobL1.jpg" file="gobl1.jpg" />
+  <media name="gobL2.jpg" file="gobl2.jpg" />
+  <media name="gobL3.jpg" file="gobl3.jpg" />
+  <media name="inte_listas.jpg" file="inte_listas.jpg" />
+  <media name="inteL01.jpg" file="intel01.jpg" />
+  <media name="inteL02.jpg" file="intel02.jpg" />
+  <media name="inteL03.jpg" file="intel03.jpg" />
+  <media name="inten_fondo.jpg" file="inten_fondo.jpg" />
+  <media name="portada.jpg" file="portada.jpg" />
+  <media name="sena_fondo.jpg" file="sena_fondo.jpg" />
+  <media name="sena_listas.jpg" file="sena_listas.jpg" />
+  <media name="urnas.jpg" file="urnas.jpg" />
+  <media name="vblanco.jpg" file="vblanco.jpg" />
+  <media name="logo2010.png" file="logo2010.png" />
+ </mediaBag>
+</JClicProject>
+

@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="sustadje" version="0.1.3">
+ <settings>
+  <title>Sustantivos y adjetivos</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="11/7/03" />
+  <revision description="Conversión de Clic3 a JClic" date="1/8/04">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Nancy Fernández" mail="nancyefernandez@hotmail.com" />
+  <language>español</language>
+  <description>
+   <p>Paquete de actividades de lengua con asociaciones simples y complejas, actividades de texto, sopas de letras y rompecabezas. Los ejercicios trabajan la distinción entre singular y plural, masculino y femenino, y la concordancia entre adjetivos y substantivos.</p>
+  </description>
+  <descriptors area="Lenguas" level="Primaria">lengua castellana, vocabulario</descriptors>
+ </settings>
+ <sequence>
+  <item id="sustadje.pac" name="caratu2.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="caratula.ass" />
+  <item name="animale1.ass" />
+  <item name="animale2.ass" />
+  <item name="animale3.ass" />
+  <item name="animale4.ass" />
+  <item name="susadj.ass" />
+  <item name="animale4.txa" />
+  <item name="animale5.txa" />
+  <item name="animale6.txa" />
+  <item name="animele3.txa" />
+  <item name="animale6.sop" />
+  <item name="animale7.sop" />
+  <item name="animale6.puz" />
+  <item name="animale7.puz">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.SimpleAssociation" name="animale1.ass">
+   <description>
+    <p>UNIR CON SU DIBUJO</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <p>UNÍ CADA SUSTANTIVO CON SU DIBUJO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color inactive="0x0000FF" alternative="0x0000FF" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF80C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF80C0" border="false" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>CABALLO</p>
+    </cell>
+    <cell>
+     <p>GALLO</p>
+    </cell>
+    <cell>
+     <p>GATO</p>
+    </cell>
+    <cell>
+     <p>PATO</p>
+    </cell>
+    <cell>
+     <p>PERRO</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell image="caballo.gif" />
+    <cell image="gallo.gif" />
+    <cell image="gato.gif" />
+    <cell image="pato.gif" />
+    <cell image="perro.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="animale2.ass" code="">
+   <description>
+    <p>UNIR CON SU PAREJA</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color inactive="0x80FFFF" alternative="0x80FFFF" />
+     </style>
+     <p>UNÍ MASCULINOS CON FEMENINOS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color inactive="0x80FFFF" alternative="0x80FFFF" />
+     </style>
+     <p>¡TE FELICITO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x80FF00">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xCCFFCC" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>GALLO</p>
+    </cell>
+    <cell>
+     <p>LEÓN</p>
+    </cell>
+    <cell>
+     <p>MONO</p>
+    </cell>
+    <cell>
+     <p>OSO</p>
+    </cell>
+    <cell>
+     <p>PERRO</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>GALLINA</p>
+    </cell>
+    <cell>
+     <p>LEONA</p>
+    </cell>
+    <cell>
+     <p>MONA</p>
+    </cell>
+    <cell>
+     <p>OSA</p>
+    </cell>
+    <cell>
+     <p>PERRA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="animale3.ass">
+   <description>
+    <p>UNIR CON SU DIBUJO</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>UNÍ A CADA SUSTANTIVO  CON SU DIBUJO</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡FELICITACIONES!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF8000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF8000" border="false" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>CONEJO</p>
+    </cell>
+    <cell>
+     <p>MONO</p>
+    </cell>
+    <cell>
+     <p>OSO</p>
+    </cell>
+    <cell>
+     <p>PALOMA</p>
+    </cell>
+    <cell>
+     <p>VACA</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell image="conejo.gif" />
+    <cell image="mono.gif" />
+    <cell image="oso.gif" />
+    <cell image="paloma.gif" />
+    <cell image="vaca.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="animale4.ass">
+   <description>
+    <p>UNIR SUSTANTIVO CON ADJETIVO</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>UNÍ CADA SUSTANTIVO CON SU ADJETIVO</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡TE FELICITO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00FFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00FFFF" border="false" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>GATA</p>
+    </cell>
+    <cell>
+     <p>MONO</p>
+    </cell>
+    <cell>
+     <p>TORTUGA</p>
+    </cell>
+    <cell>
+     <p>PERRO</p>
+    </cell>
+    <cell>
+     <p>PALOMA</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>CARIÑOSA</p>
+    </cell>
+    <cell>
+     <p>INQUIETO</p>
+    </cell>
+    <cell>
+     <p>LENTA</p>
+    </cell>
+    <cell>
+     <p>COMPAÑERO</p>
+    </cell>
+    <cell>
+     <p>MENSAJERA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.Order" name="animale4.txa" type="orderWords" amongParagraphs="true">
+   <description>
+    <p>ORDENAR PALABRAS</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>PONÉ EN ORDEN LOS ADJETIVOS QUE SE HAN MEZCLADO</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x8080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x8080FF" border="false">
+     <size width="300" height="300" />
+    </window>
+   </settings>
+   <checkButton>CUANDO TERMINES HACÉ CLIC AQUÍ</checkButton>
+   <document>
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="default" size="17" background="0xFFFFFF" tabWidth="16" family="Arial" bold="false" foreground="0x000000" italic="false" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p size="17" background="0xFFFFFF" family="Arial" bold="false" name="default" foreground="0x000000" italic="false">
+      <text>NORA ES MI GATA </text>
+      <target>CARIÑOSA</target>
+      <text>. SE DESPIERTA </text>
+      <target>TEMPRANO</target>
+      <text> Y ME PIDE SU COMIDA. YO LE LLENO SU PLATO CON LECHE </text>
+      <target>FRESCA</target>
+      <text>. ELLA SE RELAME LOS BIGOTES </text>
+      <target>LARGOS</target>
+      <text>. DESPUÉS SE ESTIRA Y SALE AL JARDÍN A CORRER ENTRE LAS FLORES </text>
+      <target>HERMOSAS</target>
+      <text>.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@text.Identify" name="animale5.txa" code="" type="identifyWords">
+   <description>
+    <p>BUSCAR ADJETIVOS</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>MARCÁ LOS ADJETIVOS </p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡TE FELICITO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF0080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0080" border="false">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <checkButton>HACÉ CLIC ACÁ CUANDO FINALICES</checkButton>
+   <document>
+    <style name="default" size="17" background="0xFFFFFF" tabWidth="16" family="Arial" bold="false" foreground="0x000000" italic="false" />
+    <style name="target" base="default" foreground="0x0000FF" background="0xC0C0C0" target="true" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p size="17" background="0xFFFFFF" family="Arial" bold="false" foreground="0x000000" italic="false">
+      <text size="17" background="0xFFFFFF" family="Arial" bold="false" foreground="0x000000" italic="false">DOROTEA Y SU PERRITO SON ARRASTRADOS POR UN </text>
+      <target>ENORME</target>
+      <text size="17" background="0xFFFFFF" family="Arial" bold="false" foreground="0x000000" italic="false"> REMOLINO DE VIENTO QUE DESPEGA SU CASA DEL SUELO Y LA LLEVA VOLANDO HASTA UNA </text>
+      <target>EXTRAÑA</target>
+      <text size="17" background="0xFFFFFF" family="Arial" bold="false" foreground="0x000000" italic="false"> REGIÓN. ALLÍ SE ENCUENTRA CON UNOS PERSONAJES </text>
+      <target>RARÍSIMOS</target>
+      <text size="17" background="0xFFFFFF" family="Arial" bold="false" foreground="0x000000" italic="false">:</text>
+     </p>
+     <p size="17" background="0xFFFFFF" family="Arial" bold="false" foreground="0x000000" italic="false">
+      <text size="17" background="0xFFFFFF" family="Arial" bold="false" foreground="0x000000" italic="false">MIENTRAS ESTABA ALLI DE PIE, MIRANDO </text>
+      <target>ÁVIDAMENTE</target>
+      <text size="17" background="0xFFFFFF" family="Arial" bold="false" foreground="0x000000" italic="false"> EL </text>
+      <target>EXTRAÑO</target>
+      <text size="17" background="0xFFFFFF" family="Arial" bold="false" foreground="0x000000" italic="false"> Y </text>
+      <target>HERMOSO</target>
+      <text size="17" background="0xFFFFFF" family="Arial" bold="false" foreground="0x000000" italic="false"> PAISAJE, OBSERVÓ QUE SE LE ACERCABA UN GRUPO DE GENTE MUY </text>
+      <target>RARA</target>
+      <text size="17" background="0xFFFFFF" family="Arial" bold="false" foreground="0x000000" italic="false">.</text>
+     </p>
+     <p size="17" background="0xFFFFFF" family="Arial" bold="false" foreground="0x000000" italic="false">
+      <text size="17" background="0xFFFFFF" family="Arial" bold="false" foreground="0x000000" italic="false">ERAN TRES HOMBRES Y UNA MUJER, Y VESTÍAN TODOS CON EXTRAVAGANCIA.  LLEVABAN SOMBREROS </text>
+      <target>REDONDOS</target>
+      <text size="17" background="0xFFFFFF" family="Arial" bold="false" foreground="0x000000" italic="false"> QUE TERMINABAN EN UNA PUNTA </text>
+      <target>AGUDA</target>
+      <text size="17" background="0xFFFFFF" family="Arial" bold="false" foreground="0x000000" italic="false">, CON UNAS CAMPANILLAS EN LAS ALAS, QUE SONABAN DULCEMENTE CUANDO SE MOVÍAN.</text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="animale6.puz">
+   <description>
+    <p>LEON PARA ARMAR</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>ARMÁ AL REY DE LA SELVA</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡TE FELICITO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x8080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x8080FF" border="false" />
+   </settings>
+   <cells rows="4" cols="4" border="true" image="leonar~1.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="animale6.sop" code="">
+   <description>
+    <p>SOPA DE SUSTANTIVOS</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>TENÉS QUE ENCONTRAR 6 SUSTANTIVOS ESCONDIDOS EN LA SOPA DE LETRAS</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡FELICITACIONES!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF0080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <textGrid rows="12" columns="7" cellWidth="40.0" cellHeight="40.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>*******C****</row>
+     <row>*PERRO*A*G**</row>
+     <row>*A***L*B*A**</row>
+     <row>*T***L*A*T**</row>
+     <row>*OSO*A*L*O**</row>
+     <row>*****G*L****</row>
+     <row>*******O****</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">CABALLO</clue>
+    <clue id="1">PERRO</clue>
+    <clue id="2">PATO</clue>
+    <clue id="3">GALLO</clue>
+    <clue id="4">OSO</clue>
+    <clue id="5">GATO</clue>
+   </clues>
+  </activity>
+  <activity class="@text.FillInBlanks" name="animale6.txa">
+   <description>
+    <p>COMPLETAR CON ADJETIVOS</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>COMPLETÁ CON LOS ADJETIVOS ADECUADOS</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡TE FELICITO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFF00">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF00" border="true">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <document>
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="default" size="17" background="0xFFFFFF" tabWidth="16" family="Arial" bold="false" foreground="0x000000" italic="false" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p size="17" background="0xFFFFFF" family="Arial" bold="false" name="default" foreground="0x000000" italic="false">
+      <text>ESAS FLORES </text>
+      <target>
+       <answer>ROJAS</answer>
+       <optionList>
+        <option>ROJAS</option>
+        <option>MAYOR</option>
+        <option>FRÍA</option>
+        <option>RÁPIDA</option>
+       </optionList>
+       <text>ROJAS</text>
+      </target>
+      <text> SON AMAPOLAS</text>
+     </p>
+     <p size="17" background="0xFFFFFF" family="Arial" bold="false" name="default" foreground="0x000000" italic="false">
+      <text>LA HERMANA </text>
+      <target>
+       <answer>MAYOR</answer>
+       <optionList>
+        <option>ROJAS</option>
+        <option>MAYOR</option>
+        <option>FRÍA</option>
+        <option>RÁPIDA</option>
+       </optionList>
+       <text>MAYOR</text>
+      </target>
+      <text> DE LUIS SE CASÓ</text>
+     </p>
+     <p size="17" background="0xFFFFFF" family="Arial" bold="false" name="default" foreground="0x000000" italic="false">
+      <text>AYER NO HABÍA GAS Y ME DUCHÉ CON AGUA </text>
+      <target>
+       <answer>FRÍA</answer>
+       <optionList>
+        <option>ROJAS</option>
+        <option>MAYOR</option>
+        <option>FRÍA</option>
+        <option>RÁPIDA</option>
+       </optionList>
+       <text>FRÍA</text>
+      </target>
+     </p>
+     <p size="17" background="0xFFFFFF" family="Arial" bold="false" name="default" foreground="0x000000" italic="false">
+      <text>LA LIEBRE ES MÁS </text>
+      <target>
+       <answer>RÁPIDA</answer>
+       <optionList>
+        <option>ROJAS</option>
+        <option>MAYOR</option>
+        <option>FRÍA</option>
+        <option>RÁPIDA</option>
+       </optionList>
+       <text>RÁPIDA</text>
+      </target>
+      <text> QUE LA TORTUGA</text>
+     </p>
+     <p size="17" background="0xFFFFFF" family="Arial" bold="false" name="default" foreground="0x000000" italic="false" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="animale7.puz" code="">
+   <description>
+    <p>VACA PARA ARMAR</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>¿QUIÉN NOS DA LA LECHE, EL DULCE DE LECHE Y LA MANTECA?</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x008000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x008000" border="false" />
+   </settings>
+   <cells rows="3" cols="3" border="true" image="vacaar~1.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@ClassicJigSaw" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="animale7.sop" code="">
+   <description>
+    <p>ENCONTRAR 5 ADJETIVOS</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>TENÉS QUE ENCONTRAR 5 ADJETIVOS ESCONDIDOS EN LA SOPA DE LETRAS</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡FELICITACIONES!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF0080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <textGrid rows="10" columns="9" cellWidth="40.0" cellHeight="40.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>H**C******</row>
+     <row>E**A**L**A</row>
+     <row>R**R**E*EM</row>
+     <row>M**I**N*TI</row>
+     <row>O**Ñ**T*RG</row>
+     <row>S**O**A*EA</row>
+     <row>A**S****UB</row>
+     <row>***A****FL</row>
+     <row>*********E</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">CARIÑOSA</clue>
+    <clue id="1">AMIGABLE</clue>
+    <clue id="2">LENTA</clue>
+    <clue id="3">FUERTE</clue>
+    <clue id="4">HERMOSA</clue>
+   </clues>
+  </activity>
+  <activity class="@text.FillInBlanks" name="animele3.txa">
+   <description>
+    <p>LLENAR HUECOS</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>ESCRIBE LAS PALABRAS QUE FALTAN EN ESTE TEXTO</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡FELICITACIONES!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00FFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00FFFF" border="true">
+     <size width="300" height="300" />
+    </window>
+   </settings>
+   <checkButton>CUANDO TERMINES HACÉ CLIC AQUÍ</checkButton>
+   <document>
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="default" size="15" background="0xFFFFFF" tabWidth="16" family="Arial" bold="false" foreground="0x000000" italic="false" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p size="15" background="0xFFFFFF" family="Arial" bold="false" name="default" foreground="0x000000" italic="false">
+      <text>UN </text>
+      <target>
+       <answer>CANARIO</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <info>
+        <cell width="90" height="90">
+         <style>
+          <font family="Arial" size="15" />
+          <color background="0xFFFFFF" />
+         </style>
+         <p>EL MAS FAMOSO SE LLAMA TWEETY</p>
+        </cell>
+       </info>
+       <text>CANARIO</text>
+      </target>
+      <text> AMARILLO</text>
+     </p>
+     <p size="15" background="0xFFFFFF" family="Arial" bold="false" name="default" foreground="0x000000" italic="false" />
+     <p size="15" background="0xFFFFFF" family="Arial" bold="false" name="default" foreground="0x000000" italic="false" />
+     <p size="15" background="0xFFFFFF" family="Arial" bold="false" name="default" foreground="0x000000" italic="false">
+      <text>UNA </text>
+      <target>
+       <answer>PALOMA</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <info>
+        <cell width="90" height="90">
+         <style>
+          <font family="Arial" size="15" />
+          <color background="0xFFFFFF" />
+         </style>
+         <p>ES MENSAJERA</p>
+        </cell>
+       </info>
+       <text>PALOMA</text>
+      </target>
+      <text> BLANCA</text>
+     </p>
+     <p size="15" background="0xFFFFFF" family="Arial" bold="false" name="default" foreground="0x000000" italic="false" />
+     <p size="15" background="0xFFFFFF" family="Arial" bold="false" name="default" foreground="0x000000" italic="false" />
+     <p size="15" background="0xFFFFFF" family="Arial" bold="false" name="default" foreground="0x000000" italic="false">
+      <text>EL </text>
+      <target>
+       <answer>GALLO</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <info>
+        <cell width="90" height="90">
+         <style>
+          <font family="Arial" size="15" />
+          <color background="0xFFFFFF" />
+         </style>
+         <p>CANTA A LA MAÑANA EN EL </p>
+         <p>CAMPO</p>
+        </cell>
+       </info>
+       <text>GALLO</text>
+      </target>
+      <text> CANTOR</text>
+     </p>
+     <p size="15" background="0xFFFFFF" family="Arial" bold="false" name="default" foreground="0x000000" italic="false" />
+     <p size="15" background="0xFFFFFF" family="Arial" bold="false" name="default" foreground="0x000000" italic="false" />
+     <p size="15" background="0xFFFFFF" family="Arial" bold="false" name="default" foreground="0x000000" italic="false">
+      <text>LA </text>
+      <target>
+       <answer>TORTUGA</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <info>
+        <cell width="90" height="90">
+         <style>
+          <font family="Arial" size="15" />
+          <color background="0xFFFFFF" />
+         </style>
+         <p>COME LECHUGA Y VIVE EN EL JARDÍN</p>
+        </cell>
+       </info>
+       <text>TORTUGA</text>
+      </target>
+      <text> DORMILONA</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="caratu2.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x9999FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x9999FF" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="caratu~1.gif">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <color background="0x9999FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <style>
+      <color background="0x9999FF" />
+     </style>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="caratula.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFF00FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="caratula.gif">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="susadj.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>RELACIONÁ</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00FFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000FF" border="true" />
+   </settings>
+   <cells rows="13" cols="1" cellWidth="250.0" cellHeight="27.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="13" />
+    <cell id="0">
+     <p>GRANDE</p>
+    </cell>
+    <cell id="1">
+     <p>MONO</p>
+    </cell>
+    <cell id="0">
+     <p>AMARILLAS</p>
+    </cell>
+    <cell id="0">
+     <p>PEQUEÑOS</p>
+    </cell>
+    <cell id="1">
+     <p>GATA</p>
+    </cell>
+    <cell id="0">
+     <p>CARIÑOSA</p>
+    </cell>
+    <cell id="1">
+     <p>CABALLO</p>
+    </cell>
+    <cell id="1">
+     <p>VACA</p>
+    </cell>
+    <cell id="0">
+     <p>LENTA</p>
+    </cell>
+    <cell id="0">
+     <p>AMIGABLE</p>
+    </cell>
+    <cell id="1">
+     <p>CONEJO</p>
+    </cell>
+    <cell id="1">
+     <p>TORTUGA</p>
+    </cell>
+    <cell id="0">
+     <p>ROJA</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="200.0" cellHeight="75.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>ADJETIVO</p>
+    </cell>
+    <cell>
+     <p>SUSTANTIVO</p>
+    </cell>
+   </cells>
+   <cells rows="13" cols="1" cellWidth="250.0" cellHeight="27.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="13" />
+    <cell>
+     <p>(A)GRANDE</p>
+    </cell>
+    <cell>
+     <p>(S)MONO</p>
+    </cell>
+    <cell>
+     <p>(A)AMARILLAS</p>
+    </cell>
+    <cell>
+     <p>(A)PEQUEÑOS</p>
+    </cell>
+    <cell>
+     <p>(S)GATA</p>
+    </cell>
+    <cell>
+     <p>(A)CARIÑOSA</p>
+    </cell>
+    <cell>
+     <p>(S)CABALLO</p>
+    </cell>
+    <cell>
+     <p>(S)VACA</p>
+    </cell>
+    <cell>
+     <p>(A)LENTA</p>
+    </cell>
+    <cell>
+     <p>(A)AMIGABLE</p>
+    </cell>
+    <cell>
+     <p>(S)CONEJO</p>
+    </cell>
+    <cell>
+     <p>(S)TORTUGA</p>
+    </cell>
+    <cell>
+     <p>(S)ROJA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="caballo.gif" file="caballo.gif" />
+  <media name="caratula.gif" file="caratula.gif" />
+  <media name="caratu~1.gif" file="caratu_1.gif" />
+  <media name="conejo.gif" file="conejo.gif" />
+  <media name="gallo.gif" file="gallo.gif" />
+  <media name="gato.gif" file="gato.gif" />
+  <media name="leonar~1.gif" file="leonar_1.gif" />
+  <media name="mono.gif" file="mono.gif" />
+  <media name="oso.gif" file="oso.gif" />
+  <media name="paloma.gif" file="paloma.gif" />
+  <media name="pato.gif" file="pato.gif" />
+  <media name="perro.gif" file="perro.gif" />
+  <media name="vaca.gif" file="vaca.gif" />
+  <media name="vacaar~1.gif" file="vacaar_1.gif" />
+ </mediaBag>
+</JClicProject>
+

@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="otras_horas_4" version="0.1.3">
+ <settings>
+  <title>Las horas del reloj</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="2/15/08" />
+  <revision description="Conversión de Clic3 a JClic" date="2/14/08">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Tomás Fernández García" mail="tfernandez411@telefonica.net" />
+  <organization name="CP Ausiàs March" city="Alacant" state="País Valencià" />
+  <language>español</language>
+  <description>
+   <p>Proyecto de actividades dirigido a educación primaria  que teine como objetivo principal el aprendizaje y uso del reloj de forma práctica y sistemática. El proyecto tiene más de ciento cincuenta actividades y está dividido en seis partes:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Historia de relojes</p>
+   <p>&lt;LI&gt;En punto</p>
+   <p>&lt;LI&gt;Y media</p>
+   <p>&lt;LI&gt;Y cuarto, menos cuarto</p>
+   <p>&lt;LI&gt;Otras horas</p>
+   <p>&lt;LI&gt;Internet</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area="Matemáticas" level="Primaria (6-12)">tiempo</descriptors>
+  <skin file="@orange.xml" />
+ </settings>
+ <sequence>
+  <item id="start" name="tardes 4">
+   <jump tag="fin" project="Otras horas 3.jclic" id="back" />
+  </item>
+  <item name="tardes 5" />
+  <item name="tardes 5a" />
+  <item name="compl minutos ana" />
+  <item id="fin" name="compl minutos dig">
+   <jump tag="start" project="otras_horas_5.jclic" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@text.FillInBlanks" name="compl minutos ana" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="abre vent y comp tex.wav" />
+     <p>ABRE  LAS VENTANAS  Y  COMPLETA  EL  TEXTO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bravo  cons.wav" />
+     <p>¡¡  BRAVO, LO HAS CONSEGUIDO !!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo8.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true">
+     <size width="685" height="401" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" size="18" family="Comic Sans MS" tabWidth="12" italic="false" background="0x99FFFF" bold="false" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" background="0xFFFFCC" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p size="18" family="Comic Sans MS" background="0x99FFFF" />
+     <p size="18" family="Comic Sans MS" background="0x99FFFF">
+      <text size="18" family="Comic Sans MS" background="0x99FFFF">Para que un reloj ANALÓGICO marque las 19 y 20 minutos, la aguja </text>
+      <target>
+       <answer>horaria</answer>
+       <optionList>
+        <option>horaria</option>
+        <option>minutera</option>
+        <option>segundera</option>
+       </optionList>
+       <text>horaria</text>
+      </target>
+      <text size="18" family="Comic Sans MS" background="0x99FFFF"> debe estar </text>
+      <target>
+       <answer>entre el 7 y el 8</answer>
+       <optionList>
+        <option>entre el 6 y el 7</option>
+        <option>entre el 7 y el 8</option>
+        <option>entre el 8 y el 9</option>
+        <option>en el 7</option>
+        <option>en el 8</option>
+        <option>en el 4</option>
+        <option>en el 6</option>
+       </optionList>
+       <text>entre el 7 y el 8</text>
+      </target>
+      <text size="18" family="Comic Sans MS" background="0x99FFFF">, y la aguja minutera en el </text>
+      <target>
+       <answer>4</answer>
+       <optionList>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+       </optionList>
+       <text>4</text>
+      </target>
+      <text size="18" family="Comic Sans MS" background="0x99FFFF">.</text>
+     </p>
+     <p size="18" family="Comic Sans MS" background="0x99FFFF" />
+     <p size="18" family="Comic Sans MS" background="0x99FFFF">
+      <text size="18" family="Comic Sans MS" background="0x99FFFF">Para que un reloj ANALÓGICO marque las 21 menos 5 minutos , la aguja horaria debe estar </text>
+      <target>
+       <answer>más cerca del 9 que del 8</answer>
+       <optionList>
+        <option>más cerca del 8 que del 9</option>
+        <option>en medio del 8 y el 9</option>
+        <option>en el 8</option>
+        <option>en el 9</option>
+        <option>más cerca del 9 que del 8</option>
+       </optionList>
+       <text>más cerca del  9 que del 8</text>
+      </target>
+      <text size="18" family="Comic Sans MS" background="0x99FFFF">, y la aguja minutera en el </text>
+      <target>
+       <answer>11</answer>
+       <optionList>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+       </optionList>
+       <text>11</text>
+      </target>
+      <text size="18" family="Comic Sans MS" background="0x99FFFF">.</text>
+     </p>
+     <p size="18" family="Comic Sans MS" background="0x99FFFF" />
+     <p size="18" family="Comic Sans MS" background="0x99FFFF">
+      <text size="18" family="Arial" foreground="0x000000" bold="false" background="0x99FFFF">Para que un reloj ANALÓGICO marque las 16 y 10 minutos, la aguja horaria debe estar </text>
+      <target>
+       <answer>entre el 4 y el 5</answer>
+       <optionList>
+        <option>entre el 3 y el 4</option>
+        <option>entre el 4 y el 5</option>
+        <option>en el 3</option>
+        <option>en el 4</option>
+        <option>en el 5</option>
+       </optionList>
+       <text>entre el 4 y el 5</text>
+      </target>
+      <text size="18" family="Arial" foreground="0x000000" bold="false" background="0x99FFFF">, y la aguja minutera en el </text>
+      <target>
+       <answer>2</answer>
+       <optionList>
+        <option>12</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+       </optionList>
+       <text>2</text>
+      </target>
+      <text size="18" family="Arial" foreground="0x000000" bold="false" background="0x99FFFF">.</text>
+     </p>
+     <p size="18" family="Comic Sans MS" background="0x99FFFF" />
+     <p size="18" family="Comic Sans MS" background="0x99FFFF">
+      <text size="18" family="Arial" foreground="0x000000" bold="false" background="0x99FFFF">Para que un reloj ANALÓGICO marque las </text>
+      <target>
+       <answer>15 menos 20 minutos</answer>
+       <optionList>
+        <option>15 y 20 minutos</option>
+        <option>15 y media</option>
+        <option>15 menos 20 minutos</option>
+        <option>15 y cuarto</option>
+       </optionList>
+       <text>15 menos 20 minutos</text>
+      </target>
+      <text size="18" family="Arial" foreground="0x000000" bold="false" background="0x99FFFF">, la aguja horaria debe estar entre el 3 y el 4, y la aguja minutera en el 8.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="compl minutos dig" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="abre vent y comp tex.wav" />
+     <p>ABRE  LAS VENTANAS  Y  COMPLETA  EL  TEXTO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="correcto.wav" />
+     <p>¡¡  CORRECTO !!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo8.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true">
+     <size width="675" height="431" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" size="18" family="Comic Sans MS" tabWidth="12" italic="false" background="0x99FFFF" bold="false" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" background="0xFFFFCC" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p size="18" family="Comic Sans MS" background="0x99FFFF">
+      <text size="18" family="Comic Sans MS" background="0x99FFFF">Para que un reloj DIGITAL marque las 4 y 10 minutos de la tarde, el número que marca las horas debe ser un </text>
+      <target>
+       <answer>16</answer>
+       <optionList>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>15</option>
+        <option>16</option>
+        <option>17</option>
+       </optionList>
+       <text>16</text>
+      </target>
+      <text size="18" family="Comic Sans MS" background="0x99FFFF"> y el número que marca los minutos un </text>
+      <target>
+       <answer>10</answer>
+       <optionList>
+        <option>10</option>
+        <option>15</option>
+        <option>30</option>
+        <option>35</option>
+        <option>40</option>
+        <option>45</option>
+        <option>50</option>
+        <option>55</option>
+       </optionList>
+       <text>10</text>
+      </target>
+      <text size="18" family="Comic Sans MS" background="0x99FFFF">. </text>
+     </p>
+     <p size="18" family="Comic Sans MS" background="0x99FFFF" />
+     <p size="18" family="Comic Sans MS" background="0x99FFFF">
+      <text size="18" family="Arial" foreground="0x000000" bold="false" background="0x99FFFF">Para que un reloj DIGITAL marque las 7 menos cuarto de la tarde, el número que marca las horas debe ser un </text>
+      <target>
+       <answer>18</answer>
+       <optionList>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>18</option>
+        <option>19</option>
+        <option>20</option>
+       </optionList>
+       <text>18</text>
+      </target>
+      <text size="18" family="Arial" foreground="0x000000" bold="false" background="0x99FFFF"> y el número que marca los minutos un </text>
+      <target>
+       <answer>45</answer>
+       <optionList>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>40</option>
+        <option>45</option>
+        <option>60</option>
+       </optionList>
+       <text>45</text>
+      </target>
+      <text size="18" family="Arial" foreground="0x000000" bold="false" background="0x99FFFF">. </text>
+     </p>
+     <p size="18" family="Comic Sans MS" background="0x99FFFF" />
+     <p size="18" family="Comic Sans MS" background="0x99FFFF">
+      <text size="18" family="Arial" foreground="0x000000" bold="false" background="0x99FFFF">Para que un reloj DIGITAL marque las </text>
+      <target>
+       <answer>5 y 20 minutos de la tarde</answer>
+       <optionList>
+        <option>5 menos 20 minutos de la tarde</option>
+        <option>5 menos 20 minutos de la mañana</option>
+        <option>5 y 20 minutos de la mañana</option>
+        <option>5 y 20 minutos de la tarde</option>
+       </optionList>
+       <text>5 y 20 minutos de la tarde</text>
+      </target>
+      <text size="18" family="Arial" foreground="0x000000" bold="false" background="0x99FFFF"> , el número que marca las horas debe ser un 17 y el número que marca los minutos un 20. </text>
+     </p>
+     <p size="18" family="Comic Sans MS" background="0x99FFFF" />
+     <p size="18" family="Comic Sans MS" background="0x99FFFF">
+      <text size="18" family="Arial" foreground="0x000000" bold="false" background="0x99FFFF">Para que un reloj DIGITAL marque las </text>
+      <target>
+       <answer>10 menos 25 minutos de la noche</answer>
+       <optionList>
+        <option>10 y 25 minutos de la noche</option>
+        <option>10 y 25 minutos de la mañana</option>
+        <option>10 menos 25 minutos de la mañana</option>
+        <option>10 menos 25 minutos de la noche</option>
+       </optionList>
+       <text>10 menos 25 minutos de la tarde</text>
+      </target>
+      <text size="18" family="Arial" foreground="0x000000" bold="false" background="0x99FFFF">, el número que marca las horas debe ser un 21 y el número que marca los minutos un 35. </text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="tardes 4" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="une dig con hora.wav" />
+     <p>UNE  CADA  HORA  DEL RELOJ   DIGITAL CON  SU  CORRESPONDIENTE  HORA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="enhorabuena.wav" />
+     <p>¡¡¡   ENHORABUENA   !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="reloj tarde.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="148.0" cellHeight="108.0" border="false" id="primary">
+    <style borderStroke="2.6" markerStroke="5.0">
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFFFF" inactive="0xCCFFFF" alternative="0xCC0033" border="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell id="0" border="false" image="DIGITA14-35.jpg" />
+    <cell id="1" image="DIGITA15-50.jpg" />
+    <cell id="6" image="DIGITA18-00.jpg" />
+    <cell id="3" image="DIGITA19-30.jpg" />
+   </cells>
+   <cells rows="2" cols="4" cellWidth="149.0" cellHeight="93.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <color background="0xFFCCCC" inactive="0x3366FF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="14" />
+      <color foreground="0x000033" background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 3 menos 25 minutos de la tarde</p>
+    </cell>
+    <cell id="1">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="14" />
+      <color foreground="0x000033" background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 4 menos 10 minutos de la tarde</p>
+    </cell>
+    <cell id="2">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="14" />
+      <color background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 6 en punto de la mañana</p>
+    </cell>
+    <cell id="3">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="14" />
+      <color foreground="0x000033" background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 7 y media de la tarde</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="14" />
+      <color foreground="0x000033" background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 4 y 35 minutos de la tarde</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="14" />
+      <color foreground="0x000033" background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 5 menos 10 minutos de la tarde</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="14" />
+      <color foreground="0x000033" background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 6 en punto de la tarde</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="14" />
+      <color foreground="0x000033" background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 8 y 30 minutos de la tarde</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="4" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <style shadow="true" borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="22" />
+      <color foreground="0xCC0033" background="0xFFFFFF" shadow="0xFFFFFF" inactive="0x999999" alternative="0xCC0033" border="0xFFFFFF" />
+     </style>
+     <p>LO</p>
+    </cell>
+    <cell>
+     <style shadow="true" borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="22" />
+      <color foreground="0xCC0033" background="0xFFFFFF" shadow="0xFFFFFF" inactive="0x999999" alternative="0xCC0033" border="0xFFFFFF" />
+     </style>
+     <p>VAS</p>
+    </cell>
+    <cell txtAlign="right,middle">
+     <style shadow="true" borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="22" />
+      <color foreground="0xCC0033" background="0xFFFFFF" shadow="0xFFFFFF" inactive="0x999999" alternative="0xCC0033" border="0xFFFFFF" />
+     </style>
+     <p>CONSI</p>
+    </cell>
+    <cell txtAlign="left,middle">
+     <style shadow="true" borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="22" />
+      <color foreground="0xCC0033" background="0xFFFFFF" shadow="0xFFFFFF" inactive="0x999999" alternative="0xCC0033" border="0xFFFFFF" />
+     </style>
+     <p>GUIENDO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="tardes 5" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="une dig con hora.wav" />
+     <p>UNE   CADA   RELOJ    DIGITAL  CON  SU    CORRESPONDIENTE    HORA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="eres un lince.wav" />
+     <p>¡¡¡   ERES  UN  LINCE   !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="reloj tarde.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="122.0" cellHeight="81.0" border="false" id="primary">
+    <style borderStroke="2.6" markerStroke="2.7">
+     <color background="0xFFFFFF" inactive="0x66CCFF" alternative="0x000000" border="0x3366FF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell id="0" border="false" image="DIGITA17-40.jpg" />
+    <cell id="1" image="DIGITA19-20.jpg" />
+    <cell id="2" image="DIGITA22-00.jpg" />
+    <cell id="3" image="DIGITA23-30.jpg" />
+    <cell id="4" image="DIGITA15-15.jpg" />
+    <cell id="5" image="DIGITA16-35.jpg" />
+   </cells>
+   <cells rows="2" cols="6" cellWidth="124.0" cellHeight="89.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <color background="0xFFCCCC" inactive="0x3366FF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="2" />
+    <cell>
+     <style borderStroke="2.6" markerStroke="5.0">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 6 menos 20 minutos de la tarde</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 7 y 20 minutos de la tarde</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 10 en punto de la noche</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 11 y media de la  noche</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 3 y cuarto de la tarde</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 5 menos 25 minutos de la tarde</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 5 menos 20 minutos de la tarde</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 7 menos 20 minutos de la tarde</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0x000000" border="0x3366FF" />
+     </style>
+     <p>Las 10 en punto de la mañana</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="15" />
+      <color background="0xFFFFCC" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0x000000" border="0x3366FF" />
+     </style>
+     <p>Las 12 y media de la noche</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="15" />
+      <color background="0xFFFFCC" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0x000000" border="0x3366FF" />
+     </style>
+     <p>Las 3 menos cuarto de la tarde</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="15" />
+      <color background="0xFFFFCC" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0x000000" border="0x3366FF" />
+     </style>
+     <p>Las 4 y 25 minutos de la tarde</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="tardes 5a" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="une dig con hora.wav" />
+     <p>UNE   CADA   RELOJ    DIGITAL  CON  SU    CORRESPONDIENTE    HORA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="eres un genio.wav" />
+     <p>¡¡¡   ERES   UN   GENIO   !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="reloj tarde.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="2" cols="6" cellWidth="122.0" cellHeight="85.0" border="false" id="primary">
+    <style borderStroke="2.6" markerStroke="2.7">
+     <color background="0xFFFFFF" inactive="0xFF3399" alternative="0x000000" border="0x3333FF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="2" />
+    <cell id="0" border="false" image="DIGITA21-50.jpg" />
+    <cell id="1" border="false" image="DIGITA06-45.jpg" />
+    <cell id="2" border="false" image="DIGITA16-00.jpg" />
+    <cell id="3" border="false" image="DIGITA04-35.jpg" />
+    <cell id="4" border="false" image="DIGITA15-50.jpg" />
+    <cell id="5" border="false" image="DIGITA16-45.jpg" />
+    <cell image="DIGITA05-30.jpg" />
+    <cell image="DIGITA11-40.jpg" />
+    <cell image="DIGITA19-30.jpg" />
+    <cell image="DIGITA18-15.jpg" />
+    <cell image="DIGITA04-30.jpg" />
+    <cell image="DIGITA04-00.jpg" />
+   </cells>
+   <cells rows="2" cols="6" cellWidth="121.0" cellHeight="77.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <color background="0xFFCCCC" inactive="0x3366FF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="2" />
+    <cell>
+     <style borderStroke="2.6" markerStroke="5.0">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" inactive="0x999999" border="0x6666FF" />
+     </style>
+     <p>Las 10 menos 10 minutos de la noche</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" inactive="0x999999" border="0x6666FF" />
+     </style>
+     <p>Las 7 menos cuarto de la mañana</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" inactive="0x999999" border="0x6666FF" />
+     </style>
+     <p>Las 4 en punto de la tarde</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" inactive="0x999999" border="0x6666FF" />
+     </style>
+     <p>Las 5 menos 25 minutos de la mañana</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" inactive="0x999999" border="0x6666FF" />
+     </style>
+     <p>Las 4 menos 10 minutos de la tarde</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" inactive="0x999999" border="0x6666FF" />
+     </style>
+     <p>Las 5 menos cuarto de la tarde</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" inactive="0x999999" border="0x6666FF" />
+     </style>
+     <p>Las 5 y media de la mañana</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" inactive="0x999999" border="0x6666FF" />
+     </style>
+     <p>Las 12 menos 10 minutos de la mañana</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" shadow="0xFFFFFF" inactive="0x999999" alternative="0x000000" border="0x3366FF" />
+     </style>
+     <p>Las 7 y media de la tarde</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="15" />
+      <color background="0xFFFFCC" shadow="0xFFFFFF" inactive="0x999999" alternative="0x000000" border="0x3366FF" />
+     </style>
+     <p>Las 6 y cuarto de la tarde</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="15" />
+      <color background="0xFFFFCC" shadow="0xFFFFFF" inactive="0x999999" alternative="0x000000" border="0x3366FF" />
+     </style>
+     <p>Las 4 y media de la mañana</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="15" />
+      <color background="0xFFFFCC" shadow="0xFFFFFF" inactive="0x999999" alternative="0x000000" border="0x3366FF" />
+     </style>
+     <p>Las 4 en punto de la mañana</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="2" />
+    <cell image="LUNA.jpg" />
+    <cell image="SOL.jpg" />
+    <cell image="LUNA.jpg" />
+    <cell image="SOL.jpg" />
+    <cell image="LUNA.jpg" />
+    <cell image="LUNA.jpg" />
+    <cell image="SOL.jpg" />
+    <cell image="SOL.jpg" />
+    <cell image="LUNA.jpg" />
+    <cell image="LUNA.jpg" />
+    <cell image="SOL.jpg" />
+    <cell image="SOL.jpg" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="DIGITA04-00.jpg" file="digita04_00.jpg" />
+  <media name="DIGITA04-30.jpg" file="digita04_30.jpg" />
+  <media name="DIGITA04-35.jpg" file="digita04_35.jpg" />
+  <media name="DIGITA05-30.jpg" file="digita05_30.jpg" />
+  <media name="DIGITA06-45.jpg" file="digita06_45.jpg" />
+  <media name="DIGITA11-40.jpg" file="digita11_40.jpg" />
+  <media name="DIGITA14-35.jpg" file="digita14_35.jpg" />
+  <media name="DIGITA15-15.jpg" file="digita15_15.jpg" />
+  <media name="DIGITA15-50.jpg" file="digita15_50.jpg" />
+  <media name="DIGITA16-00.jpg" file="digita16_00.jpg" />
+  <media name="DIGITA16-35.jpg" file="digita16_35.jpg" />
+  <media name="DIGITA16-45.jpg" file="digita16_45.jpg" />
+  <media name="DIGITA17-40.jpg" file="digita17_40.jpg" />
+  <media name="DIGITA18-00.jpg" file="digita18_00.jpg" />
+  <media name="DIGITA18-15.jpg" file="digita18_15.jpg" />
+  <media name="DIGITA19-20.jpg" file="digita19_20.jpg" />
+  <media name="DIGITA19-30.jpg" file="digita19_30.jpg" />
+  <media name="DIGITA21-50.jpg" file="digita21_50.jpg" />
+  <media name="DIGITA22-00.jpg" file="digita22_00.jpg" />
+  <media name="DIGITA23-30.jpg" file="digita23_30.jpg" />
+  <media name="LUNA.jpg" file="luna.jpg" />
+  <media name="reloj tarde.jpg" file="reloj_tarde.jpg" />
+  <media name="SOL.jpg" file="sol.jpg" />
+  <media name="tiempo8.jpg" file="tiempo8.jpg" />
+  <media name="abre vent y comp tex.wav" file="abre_vent_y_comp_tex.wav" />
+  <media name="bravo  cons.wav" file="bravo__cons.wav" />
+  <media name="correcto.wav" file="correcto.wav" />
+  <media name="enhorabuena.wav" file="enhorabuena.wav" />
+  <media name="eres un genio.wav" file="eres_un_genio.wav" />
+  <media name="eres un lince.wav" file="eres_un_lince.wav" />
+  <media name="une dig con hora.wav" file="une_dig_con_hora.wav" />
+ </mediaBag>
+</JClicProject>
+

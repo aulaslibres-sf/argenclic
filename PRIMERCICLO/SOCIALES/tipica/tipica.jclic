@@ -1,0 +1,1673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="tipica" version="0.1.3">
+ <settings>
+  <title>Comidas típicas argentinas</title>
+  <revision description="created" date="4/23/05" />
+  <author name="Isabel Vázquez" mail="isabel_vazquez22@yahoo.com.ar" url="www.argenclic.com.ar" organization="ArgenClic" />
+  <description>
+   <p>PAquete creado cmo Proyecto Final del curso en línea de ArgenClic</p>
+  </description>
+  <descriptors />
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>PAquete creado cmo Proyecto Final del curso en línea de ArgenClic</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="menu.pac" name="01.ass" delay="10">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="02.ass" delay="10" />
+  <item name="03.ass" delay="10">
+   <jump action="STOP" id="forward" />
+  </item>
+  <item id="comidas1.pac" name="comidas1.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="01comi.ass" />
+  <item name="comida2.ass" />
+  <item name="gaucho.ass" />
+  <item name="juegos2.ass" />
+  <item name="rompe3.puz" />
+  <item name="rompe2.puz" />
+  <item name="rompe4.puz" />
+  <item name="final.ass">
+   <jump tag="menu.pac" id="forward">
+    <jump tag="comidas2.pac" threshold="60" id="upper" />
+   </jump>
+  </item>
+  <item id="comidas2.pac" name="comidas.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="comida4.ass" />
+  <item name="juegos.ass" />
+  <item name="juegos3.ass" />
+  <item name="rompe1.puz" />
+  <item name="rompe5.puz" />
+  <item name="comidas.sop" />
+  <item name="final.ass">
+   <jump tag="menu.pac" id="forward" />
+  </item>
+  <item id="comidas3.pac" name="comida4.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="juegos3.ass" />
+  <item name="rompe6.puz" />
+  <item name="gaucho.sop" />
+  <item name="comidas.txa" />
+  <item name="gaucho.txa" />
+  <item name="asado.txa" />
+  <item name="comidas.crw" />
+  <item name="final.ass">
+   <jump tag="menu.pac" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="01.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial Black" size="37" />
+      <color foreground="0xFFFFFF" background="0x804040" />
+     </style>
+     <p>BUENOS AIRES - 2005</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial Black" size="37" />
+      <color foreground="0xFFFFFF" background="0x804040" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="asador.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="650.0" cellHeight="430.0" border="false">
+    <style>
+     <color background="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell image="presenta.gif" />
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="01comi.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="dos.wav" />
+     <p>UNI CADA COMIDA CON SU NOMBRE</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="asador.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="700.0" cellHeight="500.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="23" bold="true" />
+     <color foreground="0x400040" background="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell id="0">
+     <p>ASADO</p>
+    </cell>
+    <cell id="1">
+     <p>EMPANADA</p>
+    </cell>
+    <cell id="2">
+     <p>PASTELITO</p>
+    </cell>
+    <cell id="3">
+     <p>LOCRO</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="700.0" cellHeight="500.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell image="asado.gif" />
+    <cell image="empanada.gif" />
+    <cell image="pastel.gif" />
+    <cell image="locro.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="02.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFF0000" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFF0000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFF0000">
+     <image name="asador.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF0000" border="false" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="400.0" cellHeight="400.0" border="true">
+    <style>
+     <color background="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell image="texto.gif" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="03.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial Black" size="37" />
+      <color foreground="0xFFFFFF" background="0xFF0000" />
+     </style>
+     <p>ELIGE LA DIFICULTAD</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial Black" size="37" />
+      <color foreground="0xFFFFFF" background="0xFF0000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFF0000">
+     <image name="asador.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF0000" border="false" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="400.0" cellHeight="100.0" border="true">
+    <style shadow="true">
+     <font family="Arial Black" size="37" />
+     <color foreground="0xFFFFFF" background="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="comidas1.pac" />
+     <p>FÁCIL</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="comidas2.pac" />
+     <p>NO TANTO</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="comidas3.pac" />
+     <p>DIFICIL</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.Order" name="asado.txa" type="orderParagraphs">
+   <messages>
+    <cell type="previous">
+     <style shadow="true">
+      <font family="Arial Black" size="37" />
+      <color background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>LEE ANTES DE COMENZAR LA ACTIVIDAD</p>
+    </cell>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial Black" size="37" />
+      <color background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>ORDENAR LAS FRASES EN ESTE TEXTO</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial Black" size="37" />
+      <color background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>¡LO LOGRASTE!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="gaucho.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="700" height="500" />
+    </window>
+   </settings>
+   <checkButton>HAZ CLIC PARA LA CORRECCIÓN</checkButton>
+   <prevScreen />
+   <document>
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="default" background="0xFFFFFF" foreground="0x000000" family="Tahoma" size="16" bold="true" tabWidth="16" italic="false" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0xFFFFFF" family="Tahoma" foreground="0x000000" name="default" bold="true" size="16" italic="false">
+      <text>                                </text>
+      <cell width="100" height="60" border="true" image="asado.gif">
+       <style shadow="true">
+        <font family="Arial Black" size="37" />
+        <color background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+       </style>
+      </cell>
+      <cell width="160" height="50" border="false">
+       <style shadow="true">
+        <font family="Arial Black" size="37" />
+        <color background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+       </style>
+       <p>EL ASADO</p>
+      </cell>
+     </p>
+     <p background="0xFFFFFF" family="Tahoma" foreground="0x000000" name="default" bold="true" size="16" italic="false">
+      <target>El conocido asado, que es la cocción de distintas partes de la vaca a las brasas, está extendido por todo el país y es una comida típica argentina.</target>
+     </p>
+     <p background="0xFFFFFF" family="Tahoma" foreground="0x000000" name="default" bold="true" size="16" italic="false">
+      <text>Generalmente comienza con un chorizo y una morcilla antes de que llegue la carne. También puede ser acompañado con riñones, mollejas, hígado y chinchulines, que componen la vísceras del ganado vacuno. También se suele incluir carne de pollo y esporádicamente lechón.</text>
+     </p>
+     <p background="0xFFFFFF" family="Tahoma" foreground="0x000000" name="default" bold="true" size="16" italic="false">
+      <text>En lugares especializados y sobre todo en el interior, es común clavar terneros, corderos o chivitos enteros en estacas que se van asando lentamente rodeados de las calurosas brasas o leñas.</text>
+     </p>
+     <p background="0xFFFFFF" family="Tahoma" foreground="0x000000" name="default" bold="true" size="16" italic="false">
+      <target>El condimento típico del asado es el chimichurri, que es una especia de salsa sabrosa que se compone de diferentes especias y vegetales naturales (ajo, pimiento rojo, perejil, orégano, ají, tomillo, cebolla y laurel), mezclados con agua, vinagre, azúcar, sal y aceite. Esta comida regional se acompaña de sabrosas ensaladas de lechuga, tomate, cebolla, zanahoria, huevo duro y papa, por nombrar algunos elementos. El vino tinto es infaltable para esta ocasión.</target>
+     </p>
+     <p background="0xFFFFFF" family="Tahoma" foreground="0x000000" name="default" bold="true" size="16" italic="false">
+      <target>La frase "chuparse los dedos" expresa que el asado está muy sabroso. El origen de esta frase se remonta a la época del gaucho: la única "vajilla" que utilizaba al atravesar la solitaria e inmensa Pampa, era el facón (cuchilla). </target>
+     </p>
+     <p background="0xFFFFFF" family="Tahoma" foreground="0x000000" name="default" bold="true" size="16" italic="false">
+      <target>Al momento de comer, cortaba del asador un trozo de carne, lo sostenía con una mano y con el facón practicaba un corte parcial, el cual se llevaba a la boca con las manos (técnica que fue evolucionando). Es muy probable que de ahí viniese el uso de esta expresión.  </target>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="comida2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="23" bold="true" />
+      <color foreground="0x00FF00" background="0xFF0000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="tres.wav" />
+     <p>UNI SEGUN CORRESPONDA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="23" bold="true" />
+      <color foreground="0x00FF00" background="0xFF0000" />
+     </style>
+     <p>¡TE FELICITO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="asador.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="400.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="23" bold="true" />
+     <color foreground="0x400040" background="0xFF0000" inactive="0x00FF00" alternative="0x00FF00" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="cuatro.wav" />
+     <p>COCCION DE DIFERENTES PARTES DE LA VACA A LAS BRASAS.</p>
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="cinco.wav" />
+     <p>SE PREPARA CON MAIZ O TRIGO.</p>
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="seis.wav" />
+     <p>EN LA MASA SE ENVUELVE UN RELLENO CON CARNE, ACEITUNAS, HUEVO, ETC.</p>
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="siete.wav" />
+     <p>SE USA DULCE DE BATATA O MEMBRILLO Y CON LA MASA SE FORMA UNA ESTRELLA.</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="250.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="23" bold="true" />
+     <color foreground="0x400040" background="0xFF0000" inactive="0x00FF00" alternative="0x00FF00" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell image="asado.gif">
+     <p>ASADO</p>
+    </cell>
+    <cell image="locro.gif">
+     <p>LOCRO</p>
+    </cell>
+    <cell image="empanada.gif">
+     <p>EMPANADAS</p>
+    </cell>
+    <cell image="pastel.gif">
+     <p>PASTELITOS</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="400.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>ASADO</p>
+    </cell>
+    <cell>
+     <p>LOCRO</p>
+    </cell>
+    <cell>
+     <p>EMPANADA</p>
+    </cell>
+    <cell>
+     <p>PASTELITO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="comida4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <p>ESCRIBE EL NOMBRE DE CADA COMIDA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <p>¡LO HICISTE MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="asador.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="700.0" cellHeight="300.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell image="asado.gif" />
+    <cell image="empanada.gif" />
+    <cell image="pastel.gif" />
+    <cell image="locro.gif" />
+    <cell image="carbon.gif" />
+    <cell image="pororo.gif" />
+   </cells>
+   <cells rows="6" cols="1" cellWidth="700.0" cellHeight="200.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>ASADO</p>
+    </cell>
+    <cell>
+     <p>EMPANADA</p>
+    </cell>
+    <cell>
+     <p>PASTELITO</p>
+    </cell>
+    <cell>
+     <p>LOCRO</p>
+    </cell>
+    <cell>
+     <p>CARBONADA</p>
+    </cell>
+    <cell>
+     <p>PORORÓ</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="comidas.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="dos.wav" />
+     <p>UNI CADA COMIDA CON SU NOMBRE</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="asador.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="700.0" cellHeight="500.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="23" bold="true" />
+     <color foreground="0x400040" background="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <p>ASADO</p>
+    </cell>
+    <cell id="1">
+     <p>EMPANADA</p>
+    </cell>
+    <cell id="2">
+     <p>PASTELITO</p>
+    </cell>
+    <cell id="3">
+     <p>LOCRO</p>
+    </cell>
+    <cell id="4">
+     <p>CARBONADA</p>
+    </cell>
+    <cell id="5">
+     <p>PORORÓ</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="700.0" cellHeight="500.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell image="asado.gif" />
+    <cell image="empanada.gif" />
+    <cell image="pastel.gif" />
+    <cell image="locro.gif" />
+    <cell image="carbon.gif" />
+    <cell image="pororo.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.CrossWord" name="comidas.crw">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xCEE998" />
+     </style>
+     <p>ANIMATE A COMPLETARLO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xCEE998" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="bravo.wav" />
+     <p>¡GENIAL!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="gaucho2.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xCEE998" border="true" />
+   </settings>
+   <textGrid rows="11" columns="10" cellWidth="30.0" cellHeight="30.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>CHIMICHURRI</row>
+     <row>A*NA*PAN***</row>
+     <row>R**T****PAR</row>
+     <row>BE*EMPANADA</row>
+     <row>ORO**O**TOS</row>
+     <row>N*LOCRO*O*T</row>
+     <row>A*EL*O***AR</row>
+     <row>D***ER*DOMA</row>
+     <row>A*VINO*ORA*</row>
+     <row>*LIO**ASADO</row>
+    </text>
+   </textGrid>
+   <cells rows="10" cols="1" cellWidth="200.0" cellHeight="75.0" border="false" id="acrossClues">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <cell id="0" item="0">
+     <p>CONDIMENTO PARA EL ASADO</p>
+    </cell>
+    <cell id="1" item="0">
+     <p> VOZ DE LA NIÑEZ</p>
+    </cell>
+    <cell id="1" item="1">
+     <p> ALIMENTO DE TODOS LOS DIAS</p>
+    </cell>
+    <cell id="2" item="0">
+     <p> </p>
+    </cell>
+    <cell id="2" item="1">
+     <p> DOS</p>
+    </cell>
+    <cell id="3" item="0">
+     <p>LETRA</p>
+    </cell>
+    <cell id="3" item="1" image="empanada.gif">
+     <p> </p>
+    </cell>
+    <cell id="4" item="0">
+     <p>METAL PRECIOSO</p>
+    </cell>
+    <cell id="4" item="1">
+     <p>  </p>
+    </cell>
+    <cell id="4" item="2">
+     <p> MOVIMIENTO RUIDOSO DE LA RESPIRACION</p>
+    </cell>
+    <cell id="5" item="0">
+     <p> GUISO EN BASE A MAIZ O TRIGO</p>
+    </cell>
+    <cell id="6" item="0">
+     <p>ARTICULO</p>
+    </cell>
+    <cell id="6" item="1">
+     <p> </p>
+    </cell>
+    <cell id="6" item="2">
+     <p>TERMINACION VERBAL</p>
+    </cell>
+    <cell id="7" item="0">
+     <p>TERMINACION VERBAL</p>
+    </cell>
+    <cell id="7" item="1" image="doma.gif" />
+    <cell id="8" item="0">
+     <p>INFALTABLE CON EL ASADO</p>
+    </cell>
+    <cell id="8" item="1">
+     <p> REZA</p>
+    </cell>
+    <cell id="9" item="0">
+     <p>ATADO/PROBLEMA</p>
+    </cell>
+    <cell id="9" item="1">
+     <p> CARNE A LAS BRASAS</p>
+    </cell>
+   </cells>
+   <cells rows="11" cols="1" cellWidth="200.0" cellHeight="75.0" border="false" id="downClues">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <cell id="0" item="0">
+     <p>GUISO CON CALABAZA Y CARNE</p>
+    </cell>
+    <cell id="1" item="0">
+     <p>TERMINACION VERBAL</p>
+    </cell>
+    <cell id="2" item="0">
+     <p>INSEPARABLE</p>
+    </cell>
+    <cell id="2" item="1">
+     <p>EXPRESION ESPAÑOLA</p>
+    </cell>
+    <cell id="2" item="2">
+     <p>VER</p>
+    </cell>
+    <cell id="3" item="0">
+     <p>INFUSION</p>
+    </cell>
+    <cell id="4" item="0">
+     <p>DENTRO</p>
+    </cell>
+    <cell id="5" item="0">
+     <p>CODIGO POSTAL</p>
+    </cell>
+    <cell id="5" item="1">
+     <p>MAIZ INFLADO</p>
+    </cell>
+    <cell id="6" item="0">
+     <p>EXPRESION</p>
+    </cell>
+    <cell id="7" item="0">
+     <p>ARTICULO</p>
+    </cell>
+    <cell id="7" item="1">
+     <p> PAR</p>
+    </cell>
+    <cell id="8" item="0">
+     <p>JUEGO A CABALLO POR EQUIPOS</p>
+    </cell>
+    <cell id="8" item="1">
+     <p> REZA</p>
+    </cell>
+    <cell id="9" item="0">
+     <p>TERMINACION DE VERBO</p>
+    </cell>
+    <cell id="9" item="1">
+     <p> QUERED</p>
+    </cell>
+    <cell id="10" item="0">
+     <p>CINTO DE PLATA DEL GAUCHO </p>
+    </cell>
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="comidas.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <p>ENCUENTRA LAS COMIDAS EN ESTA SOPA DE LETRAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="bravo.wav" />
+     <p> ¡LO HICISTE MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="gaucho.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="13" columns="8" cellWidth="40.0" cellHeight="40.0" border="true">
+    <style>
+     <font family="Arial" size="21" bold="true" />
+     <color background="0xFF0000" />
+    </style>
+    <text>
+     <row>*PASTELITO***</row>
+     <row>*****M****L**</row>
+     <row>*****PORORO**</row>
+     <row>*****A****C**</row>
+     <row>*****N****R**</row>
+     <row>*****A****O**</row>
+     <row>**ASADO******</row>
+     <row>****CARBONADA</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">PASTELITO</clue>
+    <clue id="1">EMPANADA</clue>
+    <clue id="2">LOCRO</clue>
+    <clue id="3">PORORO</clue>
+    <clue id="4">ASADO</clue>
+    <clue id="5">CARBONADA</clue>
+   </clues>
+  </activity>
+  <activity class="@text.Identify" name="comidas.txa" code="" type="identifyWords">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial Black" size="37" />
+      <color foreground="0x400040" background="0xCEE998" />
+     </style>
+     <p>SEÑALA LOS SUSTANTIVOS COMUNES</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial Black" size="37" />
+      <color foreground="0x400040" background="0xCEE998" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="mate.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="700" height="325" />
+    </window>
+   </settings>
+   <checkButton>Pulsa cuando creas que terminaste</checkButton>
+   <document>
+    <style name="default" background="0xFFFFFF" foreground="0x000000" family="Arial" bold="true" size="17" tabWidth="16" italic="false" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false">
+      <cell width="600" height="80" border="false">
+       <style shadow="true">
+        <font family="Arial Black" size="37" />
+        <color background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+       </style>
+       <p>EL MATE</p>
+      </cell>
+     </p>
+     <p background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false">
+      <text background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false">El </text>
+      <target>mate</target>
+      <text background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false"> es una </text>
+      <target>bebida</target>
+      <text background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false"> similar al </text>
+      <target>té</target>
+      <text background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false"> que se consume principalmente en Argentina y Uruguay. En menor </text>
+      <target>escala</target>
+      <text background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false"> lo hacen en Paraguay y </text>
+      <target>sur</target>
+      <text background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false"> de Brasil. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false">
+      <text background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false">El </text>
+      <target>nombre</target>
+      <text background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false"> </text>
+      <target>mate</target>
+      <text background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false"> deriva de la </text>
+      <target>palabra</target>
+      <text background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false"> quechua matí que significa </text>
+      <target>vaso</target>
+      <text background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false"> o </text>
+      <target>recipiente</target>
+      <text background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false"> para beber. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false">
+      <text background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false">El </text>
+      <target>mate</target>
+      <text background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false"> tiene un característico </text>
+      <target>sabor</target>
+      <text background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false"> maduro y algo dulce, ácido (como de </text>
+      <target>hoja</target>
+      <text background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false"> seca) similar al obtenido del </text>
+      <target>té</target>
+      <text background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false">.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false">
+      <text background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false">Esta </text>
+      <target>costumbre</target>
+      <text background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false"> fue extendiéndose y </text>
+      <target>hoy</target>
+      <text background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false"> es muy raro que la </text>
+      <target>infusión</target>
+      <text background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false"> nacional más popular en todos los </text>
+      <target>ámbitos</target>
+      <text background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false"> no se practique, cuando menos, dos </text>
+      <target>veces</target>
+      <text background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false"> al </text>
+      <target>día</target>
+      <text background="0xFFFFFF" family="Arial" foreground="0x000000" bold="true" size="17" italic="false">.  </text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@panels.Explore" name="comidas1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="uno.wav" />
+     <p>HAZ CLIC PARA SABER EL NOMBRE DE LAS COMIDAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="asador.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF0000" border="false" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="700.0" cellHeight="500.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="23" bold="true" />
+     <color foreground="0x400040" background="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell id="0" image="asado.gif" />
+    <cell id="1" image="empanada.gif" />
+    <cell id="4" image="pastel.gif" />
+    <cell id="2" image="locro.gif" />
+    <cell id="3" image="carbon.gif" />
+    <cell id="5" image="pororo.gif" />
+   </cells>
+   <cells rows="6" cols="1" cellWidth="700.0" cellHeight="500.0" border="false" id="secondary">
+    <style>
+     <font family="Dialog" size="30" />
+     <color background="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="comidas.wav" from="0" to="867" />
+     <p>ASADO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="comidas.wav" from="902" to="1932" />
+     <p>EMPANADA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="comidas.wav" from="2048" to="2997" />
+     <p>LOCRO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="comidas.wav" from="3113" to="4270" />
+     <p>CARBONADA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="comidas.wav" from="4328" to="5566" />
+     <p>PASTELITO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="comidas.wav" from="5647" to="6492" />
+     <p>PORORÓ</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="final.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial Black" size="37" />
+      <color foreground="0xFFFFFF" background="0x800000" />
+     </style>
+     <p>Llegamos al final. Hasta la próxima!</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial Black" size="37" />
+      <color foreground="0xFFFFFF" background="0x800000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x800000">
+     <image name="asador.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="doma2.gif">
+    <style>
+     <color background="0x800000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.Identify" name="gaucho.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xD8D9A8" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="nueve.wav" />
+     <p>HAZ CLIC EN LAS IMAGENES RELACIONADAS CON EL GAUCHO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xD8D9A8" />
+     </style>
+     <p>¡GENIAL!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="gaucho2.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xCED0B0" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="100.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xD8E899" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell id="1" image="rancho2.gif" />
+    <cell id="1" image="facon.gif" />
+    <cell id="1" image="carreta.gif" />
+    <cell id="0" image="edificio.gif" />
+    <cell id="0" image="fideos.gif" />
+   </cells>
+   <cells rows="5" cols="1" border="false" image="gauchos3.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="5" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="gaucho.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xD2D5AC" />
+     </style>
+     <p>ENCONTRA 10 PALABRAS RELACIONADAS CON TODO LO VISTO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xD2D5AC" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="bravo.wav" />
+     <p>¡EXCELENTE!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="gauchos3.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="10" columns="9" cellWidth="40.0" cellHeight="40.0" border="true">
+    <style>
+     <color background="0xD2D5AC" />
+    </style>
+    <text>
+     <row>*CARRETA*G</row>
+     <row>FACON**S*A</row>
+     <row>*PATO**A*U</row>
+     <row>R******D*C</row>
+     <row>A*DOMA*O*H</row>
+     <row>S******R*O</row>
+     <row>T*ESTANCIA</row>
+     <row>R***RANCHO</row>
+     <row>A*SORTIJAS</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">FACON</clue>
+    <clue id="1">RASTRA</clue>
+    <clue id="2">RANCHO</clue>
+    <clue id="3">CARRETA</clue>
+    <clue id="4">ESTANCIA</clue>
+    <clue id="5">GAUCHO</clue>
+    <clue id="6">ASADOR</clue>
+    <clue id="7">SORTIJAS</clue>
+    <clue id="8">DOMA</clue>
+    <clue id="9">PATO</clue>
+   </clues>
+  </activity>
+  <activity class="@text.FillInBlanks" name="gaucho.txa">
+   <messages>
+    <cell type="previous">
+     <style shadow="true">
+      <font family="Arial Black" size="37" />
+      <color background="0xD2DFA2" />
+     </style>
+     <p>LUEGO DE LEER, HAZ CLIC PARA COMENZAR LA ACTIVIDAD</p>
+    </cell>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial Black" size="37" />
+      <color background="0xD2DFA2" />
+     </style>
+     <p>ESCRIBI LAS PALABRAS QUE FALTAN</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial Black" size="37" />
+      <color background="0xD2DFA2" />
+     </style>
+     <p>¡BUENÍSIMO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="carreta.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="700" height="500" />
+    </window>
+   </settings>
+   <prevScreen />
+   <document>
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="default" background="0xFFFFFF" foreground="0x000000" family="Arial" size="15" bold="false" tabWidth="16" italic="false" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0xFFFFFF" family="Arial" foreground="0x000000" name="default" bold="false" size="15" italic="false">
+      <cell width="500" height="50" border="false">
+       <style shadow="true">
+        <font family="Arial" size="17" bold="true" />
+        <color background="0xFFFFFF" />
+       </style>
+       <p>EL GAUCHO, SU ALIMENTACION</p>
+      </cell>
+      <cell width="140" height="50" border="true" image="carreta.gif">
+       <style shadow="true">
+        <font family="Arial" size="17" bold="true" />
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+     </p>
+     <p background="0xFFFFFF" family="Arial" foreground="0x000000" name="default" bold="false" size="15" italic="false">
+      <text>El </text>
+      <target>
+       <answer>gaucho</answer>
+       <response fill="_" length="7" maxLength="6" />
+       <info>
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="140" height="100" image="gaucho2.gif">
+         <style>
+          <font family="Arial" size="15" />
+          <color background="0xFFFFFF" />
+         </style>
+        </cell>
+       </info>
+       <text>gaucho </text>
+      </target>
+      <text>en la campaña -haciendo una vida errante y casi nómade- tenía hábitos de </text>
+      <target>
+       <answer>alimentación</answer>
+       <optionList>
+        <option>comida</option>
+        <option>alimento</option>
+        <option>alimentación</option>
+       </optionList>
+       <text>alimentación</text>
+      </target>
+      <text> muy limitados. </text>
+      <target>
+       <answer>Carne</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>Carne</text>
+      </target>
+      <text> asada o desecada (también llamada "charque") más agua y "</text>
+      <target>
+       <answer>mate</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <info>
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="200" height="140" image="mate2.gif">
+         <style>
+          <font family="Arial" size="15" />
+          <color background="0xFFFFFF" />
+         </style>
+        </cell>
+       </info>
+       <text>mate</text>
+      </target>
+      <text>" constituían su dieta principal.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" foreground="0x000000" name="default" bold="false" size="15" italic="false">
+      <text>Ya en la </text>
+      <target>
+       <answer>estancia</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <info>
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="140" height="100">
+         <style>
+          <font family="Arial" size="15" />
+          <color background="0xFFFFFF" />
+         </style>
+         <p>gran extensión de tierra dedicada al ganado</p>
+        </cell>
+       </info>
+       <text>estancia</text>
+      </target>
+      <text> el uso de una amplia variedad de ingredientes y utensilios, daban lugar a una cocina que -a pesar de su sencillez- ostentaba </text>
+      <target>
+       <answer>manjares</answer>
+       <optionList>
+        <option>delicias</option>
+        <option>exquisiteces</option>
+        <option>manjares</option>
+       </optionList>
+       <text>manjares</text>
+      </target>
+      <text> famosos en todo el mundo por su sabor.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" foreground="0x000000" name="default" bold="false" size="15" italic="false">
+      <text>El asador es una barra o planchuela de hierro, de corte rectangular. Aproximadamente de un metro treinta de longitud, siete milímetros de espesor y cuatro de ancho. En la parte superior de la barra hay un travesaño o un gancho, que sirve para sujetar la carne y evitar que resbale hacia el suelo. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" foreground="0x000000" name="default" bold="false" size="15" italic="false">
+      <text>A él se sujeta el costillar de una </text>
+      <target>
+       <answer>ternera</answer>
+       <optionList>
+        <option>oveja</option>
+        <option>ternera</option>
+        <option>buey</option>
+       </optionList>
+       <text>ternera</text>
+      </target>
+      <text>, la res de un "capón" (cordero) o trozos de carne vacuna. El calor necesario -como no puede ser de otra manera en la </text>
+      <target>
+       <answer>pampa</answer>
+       <optionList>
+        <option>llanura</option>
+        <option>campo</option>
+        <option>pampa</option>
+       </optionList>
+       <text>pampa</text>
+      </target>
+      <text>- se logra con brasas de leña (cuando más secas y aromáticas tanto mejor). A medida que la carne se va asando, se la aproxima al </text>
+      <target>
+       <answer>fuego</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <info>
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="140" height="100" image="asador.gif">
+         <style>
+          <font family="Arial" size="15" />
+          <color background="0xFFFFFF" />
+         </style>
+        </cell>
+       </info>
+       <text>fuego</text>
+      </target>
+      <text> sin llamas y de la primitiva colocación vertical del hierro y la carne, se pasa a un marcado ángulo abierto, hasta que el encargado del trámite ("el asador") coloca el asado horizontalmente para que termine su cocción lentamente.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" foreground="0x000000" name="default" bold="false" size="15" italic="false">
+      <text>Colocados los gauchos frente a él, cada cual corta el trozo de su preferencia y come, usando como único utensilio su "</text>
+      <target>
+       <answer>facón</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <info>
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="140" height="100" image="facon.gif">
+         <style>
+          <font family="Arial" size="15" />
+          <color background="0xFFFFFF" />
+         </style>
+        </cell>
+       </info>
+       <text>facón</text>
+      </target>
+      <text>" (cuchillo), casi siempre ayudando por media galleta. El modo de hacerlo, es tomar la carne con los dientes y cortar con el cuchillo, de abajo hacia arriba. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" foreground="0x000000" name="default" bold="false" size="15" italic="false">
+      <text>Aunque parezca fácil, no cualquiera sabe hacer un buen asado "al asador"; se requiere habilidad y conocimientos especiales para lograr que la carne no se arrebate -es decir- se cocine por afuera y quede </text>
+      <target>
+       <answer>cruda</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>cruda</text>
+      </target>
+      <text> interiormente. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" foreground="0x000000" name="default" bold="false" size="15" italic="false" />
+     <p background="0xFFFFFF" family="Arial" foreground="0x000000" name="default" bold="false" size="15" italic="false" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="juegos.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xD8D9A8" />
+     </style>
+     <p>UNI SEGUN CORRESPONDA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xD8D9A8" />
+     </style>
+     <p>¡FELICITACIONES!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="gaucho2.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xCED0B0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="250.0" cellHeight="200.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xD8E899" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="11.wav" />
+     <p>DOMA</p>
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="12.wav" />
+     <p>CARRERA DE SORTIJAS</p>
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="13.wav" />
+     <p>PATO</p>
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="14.wav" />
+     <p>DANZA</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="4" cellWidth="250.0" cellHeight="200.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xD8D9A8" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="doma.gif" />
+    <cell image="carrera.gif" />
+    <cell image="pato.gif" />
+    <cell image="danzas02.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="juegos2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="diez.wav" />
+     <p>HAZ CLIC SOBRE LA FOTO PARA SABER LA ACTIVIDAD</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="gaucho.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="270.0" cellHeight="200.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell id="0" image="doma.gif" />
+    <cell id="1" image="carrera.gif" />
+    <cell id="2" image="pato.gif" />
+    <cell id="3" image="danzas02.gif" />
+   </cells>
+   <cells rows="4" cols="1" cellWidth="270.0" cellHeight="200.0" border="false" id="secondary">
+    <style shadow="true">
+     <font family="Arial Black" size="37" />
+     <color foreground="0xFFFFFF" background="0x808080" shadow="0x400040" inactive="0x400040" alternative="0x400040" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="11.wav" />
+     <p>DOMA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="12.wav" />
+     <p>CARRERA DE SORTIJAS</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="13.wav" />
+     <p>PATO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="14.wav" />
+     <p>DANZA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="juegos3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xC9FC85" />
+     </style>
+     <p>ESCRIBE EL NOMBRE</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xC9FC85" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="bravo.wav" />
+     <p>¡BRAVO! </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="gaucho.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC9FC85" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="700.0" cellHeight="300.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xC9FC85" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell image="doma.gif" />
+    <cell image="carrera.gif" />
+    <cell image="pato.gif" />
+    <cell image="danzas02.gif" />
+   </cells>
+   <cells rows="4" cols="1" cellWidth="700.0" cellHeight="200.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xC9FC85" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>DOMA</p>
+    </cell>
+    <cell>
+     <p>CARRERA DE SORTIJAS</p>
+    </cell>
+    <cell>
+     <p>PATO</p>
+    </cell>
+    <cell>
+     <p>DANZA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="rompe1.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <p>ANIMATE A ARMARLO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <p>¡FELICITACIONES!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF0000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="doma2.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="rompe2.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="19" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <p>ANIMATE A ARMARLO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="19" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <p>¡LO HICISTE MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF0000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" border="true" image="vaca.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="rompe3.puz">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial Black" size="37" />
+      <color foreground="0xFFFFFF" background="0xB70000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="15.wav" />
+     <p>BUSCAR LAS PAREJAS</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial Black" size="37" />
+      <color foreground="0xFFFFFF" background="0xB70000" />
+     </style>
+     <p>¡TE FELICITO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xB70000">
+     <image name="asador.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xB70000" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xB70000" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="asado.gif" />
+    <cell image="empanada.gif" />
+    <cell image="pastel.gif" />
+    <cell image="locro.gif" />
+    <cell image="carbon.gif" />
+    <cell image="pororo.gif" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="rompe4.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xC9FC85" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="15.wav" />
+     <p>PONEMOS EN PAREJAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xC9FC85" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="genial.wav" />
+     <p>¡GENIAL!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="gaucho.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="210.0" border="true" id="primary">
+    <style>
+     <color background="0xC9FC85" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell image="doma.gif" />
+    <cell image="carrera.gif" />
+    <cell image="pato.gif" />
+    <cell image="danzas02.gif" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="rompe5.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xC9FC85" />
+     </style>
+     <p>ARMA LA CASA DONDE VIVIA EL GAUCHO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xC9FC85" />
+     </style>
+     <p>¡LO HICISTE MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="gaucho.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC9FC85" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="true" image="rancho.gif">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xC9FC85" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.HolePuzzle" name="rompe6.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" />
+      <color background="0xBAE19F" />
+     </style>
+     <p>¿Será muy difícil?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" />
+      <color background="0xBAE19F" />
+     </style>
+     <p>¡Excelente!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xB4E39D">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC7E998" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="campo.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="asado.gif" file="asado.gif" animated="false" />
+  <media name="asador.gif" file="asador.gif" animated="false" />
+  <media name="campo.gif" file="campo.gif" animated="false" />
+  <media name="carbon.gif" file="carbon.gif" animated="false" />
+  <media name="carrera.gif" file="carrera.gif" animated="false" />
+  <media name="carreta.gif" file="carreta.gif" animated="false" />
+  <media name="danzas02.gif" file="danzas02.gif" animated="false" />
+  <media name="doma.gif" file="doma.gif" animated="false" />
+  <media name="doma2.gif" file="doma2.gif" animated="false" />
+  <media name="edificio.gif" file="edificio.gif" animated="false" />
+  <media name="empanada.gif" file="empanada.gif" animated="false" />
+  <media name="facon.gif" file="facon.gif" animated="false" />
+  <media name="fideos.gif" file="fideos.gif" animated="false" />
+  <media name="gaucho.gif" file="gaucho.gif" animated="false" />
+  <media name="gaucho2.gif" file="gaucho2.gif" animated="false" />
+  <media name="gauchos3.gif" file="gauchos3.gif" animated="false" />
+  <media name="locro.gif" file="locro.gif" animated="false" />
+  <media name="mate.gif" file="mate.gif" animated="false" />
+  <media name="mate2.gif" file="mate2.gif" animated="false" />
+  <media name="pastel.gif" file="pastel.gif" animated="false" />
+  <media name="pato.gif" file="pato.gif" animated="false" />
+  <media name="pororo.gif" file="pororo.gif" animated="false" />
+  <media name="presenta.gif" file="presenta.gif" animated="false" />
+  <media name="rancho.gif" file="rancho.gif" animated="false" />
+  <media name="rancho2.gif" file="rancho2.gif" animated="false" />
+  <media name="texto.gif" file="texto.gif" animated="false" />
+  <media name="vaca.gif" file="vaca.gif" animated="false" />
+  <media name="11.wav" file="11.wav" />
+  <media name="12.wav" file="12.wav" />
+  <media name="13.wav" file="13.wav" />
+  <media name="14.wav" file="14.wav" />
+  <media name="15.wav" file="15.wav" />
+  <media name="bravo.wav" file="bravo.wav" />
+  <media name="cinco.wav" file="cinco.wav" />
+  <media name="comidas.wav" file="comidas.wav" />
+  <media name="cuatro.wav" file="cuatro.wav" />
+  <media name="diez.wav" file="diez.wav" />
+  <media name="dos.wav" file="dos.wav" />
+  <media name="genial.wav" file="genial.wav" />
+  <media name="nueve.wav" file="nueve.wav" />
+  <media name="seis.wav" file="seis.wav" />
+  <media name="siete.wav" file="siete.wav" />
+  <media name="tres.wav" file="tres.wav" />
+  <media name="uno.wav" file="uno.wav" />
+ </mediaBag>
+</JClicProject>
+

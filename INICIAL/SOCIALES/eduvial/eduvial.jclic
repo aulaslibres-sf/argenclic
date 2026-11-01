@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="eduvial" version="0.1.3">
+ <settings>
+  <title>Educación Vial para pequeños</title>
+  <revision description="created" date="8/12/09" />
+  <author name="José S. D. Giménez" />
+  <language>español (es)</language>
+  <descriptors area="Ciencias Sociales" level="Inicial, Primario">señales, tránsito, educación vial</descriptors>
+ </settings>
+ <sequence>
+  <item id="eduvial.pac" name="00cara.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="memoria.puz" />
+  <item name="triangu.ass" />
+  <item name="01cartel.ass" />
+  <item name="rectan.ass" />
+  <item name="02cartel.ass" />
+  <item name="circulo.ass" />
+  <item name="03cartel.ass" />
+  <item name="memoria.puz" />
+  <item name="rombo.ass" />
+  <item name="xfin.ass">
+   <jump action="STOP" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="00cara.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>BIENVENIDOS</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="caratula.bmp">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="01cartel.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>TAMAÑOS</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="1" cols="5" cellWidth="160.0" cellHeight="160.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell image="tri_peat.bmp" />
+    <cell image="rec_hosp.bmp" />
+    <cell image="rom_loma.bmp" />
+    <cell image="cir_esta.bmp" />
+    <cell image="hex_pare.bmp" />
+   </cells>
+   <cells rows="1" cols="5" cellWidth="160.0" cellHeight="160.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell image="gtri_pea.bmp" />
+    <cell image="grec_hos.bmp" />
+    <cell image="grom_lom.bmp" />
+    <cell image="gcir_est.bmp" />
+    <cell image="ghex_par.bmp" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="02cartel.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>TAMAÑOS</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="1" cols="5" cellWidth="160.0" cellHeight="160.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell image="tri_tren.bmp" />
+    <cell image="rec_aero.bmp" />
+    <cell image="rom_anim.bmp" />
+    <cell image="cir_peat.bmp" />
+    <cell image="hex_pare.bmp" />
+   </cells>
+   <cells rows="1" cols="5" cellWidth="160.0" cellHeight="160.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell image="gtri_tre.bmp" />
+    <cell image="grec_aer.bmp" />
+    <cell image="grom_ani.bmp" />
+    <cell image="gcir_pea.bmp" />
+    <cell image="ghex_par.bmp" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="03cartel.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>TAMAÑOS</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="1" cols="5" cellWidth="160.0" cellHeight="160.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell image="tri_peat.bmp" />
+    <cell image="rec_tren.bmp" />
+    <cell image="rom_escu.bmp" />
+    <cell image="cir_noes.bmp" />
+    <cell image="rom_curv.bmp" />
+   </cells>
+   <cells rows="1" cols="5" cellWidth="160.0" cellHeight="160.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell image="gtri_pea.bmp" />
+    <cell image="grec_tre.bmp" />
+    <cell image="grom_esc.bmp" />
+    <cell image="gcir_noe.bmp" />
+    <cell image="grom_cur.bmp" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="circulo.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>DISTINTO</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="1" cols="5" cellWidth="120.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell id="0" image="cir_boci.bmp" />
+    <cell id="0" image="cir_esta.bmp" />
+    <cell id="0" image="cir_noes.bmp" />
+    <cell id="0" image="cir_peat.bmp" />
+    <cell id="1" image="rec_aero.bmp" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="memoria.puz">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>PAREJAS</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="4" cols="3" cellWidth="110.0" cellHeight="110.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="4" />
+    <cell image="rec_aero.bmp" />
+    <cell image="rec_hosp.bmp" />
+    <cell image="rec_tren.bmp" />
+    <cell image="cir_boci.bmp" />
+    <cell image="cir_esta.bmp" />
+    <cell image="cir_noes.bmp" />
+    <cell image="rom_bade.bmp" />
+    <cell image="rom_curv.bmp" />
+    <cell image="rom_escu.bmp" />
+    <cell image="tri_peat.bmp" />
+    <cell image="tri_tren.bmp" />
+    <cell image="hex_pare.bmp" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="rectan.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>DISTINTO</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="120.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell id="0" image="rec_aero.bmp" />
+    <cell id="0" image="rec_hosp.bmp" />
+    <cell id="0" image="rec_tren.bmp" />
+    <cell id="1" image="tri_peat.bmp" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="rombo.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>DISTINTO</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="120.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell id="0" image="rom_anim.bmp" />
+    <cell id="0" image="rom_bade.bmp" />
+    <cell id="0" image="rom_curv.bmp" />
+    <cell id="0" image="rom_escu.bmp" />
+    <cell id="0" image="rom_loma.bmp" />
+    <cell id="1" image="cir_boci.bmp" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="triangu.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>DISTINTO</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="120.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="0" image="tri_peat.bmp" />
+    <cell id="0" image="tri_tren.bmp" />
+    <cell id="1" image="hex_pare.bmp" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="xfin.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>BIENVENIDOS</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="carafin.bmp">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="carafin.bmp" file="carafin.bmp" />
+  <media name="caratula.bmp" file="caratula.bmp" />
+  <media name="cir_boci.bmp" file="cir_boci.bmp" />
+  <media name="cir_esta.bmp" file="cir_esta.bmp" />
+  <media name="cir_noes.bmp" file="cir_noes.bmp" />
+  <media name="cir_peat.bmp" file="cir_peat.bmp" />
+  <media name="gcir_est.bmp" file="gcir_est.bmp" />
+  <media name="gcir_noe.bmp" file="gcir_noe.bmp" />
+  <media name="gcir_pea.bmp" file="gcir_pea.bmp" />
+  <media name="ghex_par.bmp" file="ghex_par.bmp" />
+  <media name="grec_aer.bmp" file="grec_aer.bmp" />
+  <media name="grec_hos.bmp" file="grec_hos.bmp" />
+  <media name="grec_tre.bmp" file="grec_tre.bmp" />
+  <media name="grom_ani.bmp" file="grom_ani.bmp" />
+  <media name="grom_cur.bmp" file="grom_cur.bmp" />
+  <media name="grom_esc.bmp" file="grom_esc.bmp" />
+  <media name="grom_lom.bmp" file="grom_lom.bmp" />
+  <media name="gtri_pea.bmp" file="gtri_pea.bmp" />
+  <media name="gtri_tre.bmp" file="gtri_tre.bmp" />
+  <media name="hex_pare.bmp" file="hex_pare.bmp" />
+  <media name="rec_aero.bmp" file="rec_aero.bmp" />
+  <media name="rec_hosp.bmp" file="rec_hosp.bmp" />
+  <media name="rec_tren.bmp" file="rec_tren.bmp" />
+  <media name="rom_anim.bmp" file="rom_anim.bmp" />
+  <media name="rom_bade.bmp" file="rom_bade.bmp" />
+  <media name="rom_curv.bmp" file="rom_curv.bmp" />
+  <media name="rom_escu.bmp" file="rom_escu.bmp" />
+  <media name="rom_loma.bmp" file="rom_loma.bmp" />
+  <media name="tri_peat.bmp" file="tri_peat.bmp" />
+  <media name="tri_tren.bmp" file="tri_tren.bmp" />
+ </mediaBag>
+</JClicProject>
+

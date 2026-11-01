@@ -1,0 +1,2212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="partir" version="0.1.3">
+ <settings>
+  <title>Partir</title>
+  <revision description="Creation of the package of activities using Clic 3.0" date="1/20/00" />
+  <revision description="Converted from Clic3 to JClic" date="3/8/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Llanos Navalón Yeste" mail="monyllanos@infomail.lacaixa.es" />
+  <organization name="CP Juan Ramón Jiménez" mail="03010946@centres.cult.gva.es" url="http://intercentres.cult.gva.es/intercentres/03010946/" city="Sant Vicent del Raspeig" state="País Valencià" />
+  <language>french</language>
+  <description>
+   <p>French activities.  Second part of "France".  The sections are:</p>
+   <p>&lt;LI&gt;Countries and nationalities</p>
+   <p>&lt;LI&gt;Verb "être"</p>
+   <p>&lt;LI&gt;Determinate and indeterminate articles</p>
+   <p>&lt;LI&gt;Gender and number</p>
+   <p>&lt;LI&gt;The time</p>
+   <p>&lt;LI&gt;States and french language across the globe</p>
+  </description>
+  <descriptors level="Secondary school">French language, grammar</descriptors>
+  <meta_langs>french</meta_langs>
+  <descriptions>
+   <description language="french">
+    <p>French activities.  Second part of "France".  The sections are:</p>
+    <p>&lt;LI&gt;Countries and nationalities</p>
+    <p>&lt;LI&gt;Verb "être"</p>
+    <p>&lt;LI&gt;Determinate and indeterminate articles</p>
+    <p>&lt;LI&gt;Gender and number</p>
+    <p>&lt;LI&gt;The time</p>
+    <p>&lt;LI&gt;States and french language across the globe</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="partir.pac" name="port.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="paises.ass" />
+  <item name="nation.ass" />
+  <item name="nation.txa" />
+  <item name="intrus.txa" />
+  <item name="pays.sop" />
+  <item name="verser.ass" />
+  <item name="etre.txa" />
+  <item name="article.ass" />
+  <item name="article.txa" />
+  <item name="habite.txa" />
+  <item name="habite2.txa" />
+  <item name="habite3.txa" />
+  <item name="genre.txa" />
+  <item name="heure1.ass" />
+  <item name="heure2.ass" />
+  <item name="heures.ass" />
+  <item name="heure3.ass" />
+  <item name="heure4.ass" />
+  <item name="civi.txa" />
+  <item name="vrai.ass" />
+  <item name="capital.ass" />
+  <item name="capital2.ass" />
+  <item name="relie.ass" />
+  <item name="bientot.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.Identify" name="article.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color background="0xB5B5FF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <p>CHERCHEZ LES FORMES CORRECTES</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color background="0xB5B5FF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <p>TRÈS BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF82FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="3" cellWidth="100.0" cellHeight="90.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="18" />
+     <color foreground="0x0000FF" background="0xFFFFFF" inactive="0xFF0000" alternative="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell id="1">
+     <p>LE GARÇON</p>
+    </cell>
+    <cell id="0">
+     <p>LA GARÇON</p>
+    </cell>
+    <cell id="1">
+     <p>LA FILLE</p>
+    </cell>
+    <cell id="1">
+     <p>LES FILLES</p>
+    </cell>
+    <cell id="0">
+     <p>LE FILLE</p>
+    </cell>
+    <cell id="1">
+     <p>UN LIVRE</p>
+    </cell>
+    <cell id="0">
+     <p>UNE LIVRE</p>
+    </cell>
+    <cell id="1">
+     <p>DES LIVRES</p>
+    </cell>
+    <cell id="1">
+     <p>LE PROFESSEUR</p>
+    </cell>
+    <cell id="1">
+     <p>L'ÉCOLE</p>
+    </cell>
+    <cell id="1">
+     <p>LES ECOLES</p>
+    </cell>
+    <cell id="0">
+     <p>LE ÉCOLE</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="3" cellWidth="100.0" cellHeight="90.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>LE</p>
+    </cell>
+    <cell>
+     <p>-</p>
+    </cell>
+    <cell>
+     <p>LA</p>
+    </cell>
+    <cell>
+     <p>LES</p>
+    </cell>
+    <cell>
+     <p>-</p>
+    </cell>
+    <cell>
+     <p>UN</p>
+    </cell>
+    <cell>
+     <p>-</p>
+    </cell>
+    <cell>
+     <p>DES</p>
+    </cell>
+    <cell>
+     <p>LE</p>
+    </cell>
+    <cell>
+     <p>L'</p>
+    </cell>
+    <cell>
+     <p>LES</p>
+    </cell>
+    <cell />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="article.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xA0E0D3" />
+     </style>
+     <p>COMPLÉTE LES ARTICLES.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xA0E0D3" />
+     </style>
+     <p>TRÈS BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x8EB8FD">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xA0E0D3" border="true">
+     <size width="540" height="260" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" background="0xFDECB9" foreground="0x000000" bold="false" size="17" italic="false" family="Arial" tabWidth="16" />
+    <style name="target" base="default" background="0xA0E0D3" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <text>		DÉFINI   	 	 INDÉFINI</text>
+     </p>
+     <p />
+     <p>
+      <text>MASC. SING.	</text>
+      <target>
+       <answer>LE</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>LE</text>
+      </target>
+      <text>      		UN</text>
+     </p>
+     <p />
+     <p>
+      <text>FEM. SING.	LA		</text>
+      <target>
+       <answer>UNE</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>UNE</text>
+      </target>
+     </p>
+     <p />
+     <p>
+      <text>PLURIEL		</text>
+      <target>
+       <answer>LES</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>LES</text>
+      </target>
+      <text>		DES	</text>
+     </p>
+     <p>
+      <text>MAS/FEM</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="bientot.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0x008080" background="0x65EFE4" shadow="0xFF80FF" inactive="0xFF80FF" alternative="0xFF80FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="chan.wav" />
+     <p>AU REVOIR!</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0x008080" background="0x65EFE4" shadow="0xFF80FF" inactive="0xFF80FF" alternative="0xFF80FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="mundo.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <position x="100" y="130" />
+    </window>
+   </settings>
+   <cells rows="1" columns="1" border="true" image="bientot.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="capital.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xA8FFA8" />
+     </style>
+     <p>FAIS CORREPONDRE CAPITALES ET PAYS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xA8FFA8" />
+     </style>
+     <p>FORMIDABLE!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x9BC2E6">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x80FF80" border="true" />
+   </settings>
+   <cells rows="1" columns="6" cellWidth="260.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="20" />
+     <color background="0xFFFFFF" inactive="0xFF0000" alternative="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>BERLIN</p>
+    </cell>
+    <cell>
+     <p>DUBLIN</p>
+    </cell>
+    <cell>
+     <p>ROME</p>
+    </cell>
+    <cell>
+     <p>RABAT</p>
+    </cell>
+    <cell>
+     <p>PARIS</p>
+    </cell>
+    <cell>
+     <p>MOSCOU</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="6" cellWidth="262.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" inactive="0x9BC2E6" alternative="0x9BC2E6" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>L'ALLEMAGNE</p>
+    </cell>
+    <cell>
+     <p>L'IRLANDE</p>
+    </cell>
+    <cell>
+     <p>L'ITALIE</p>
+    </cell>
+    <cell>
+     <p>LE MAROC</p>
+    </cell>
+    <cell>
+     <p>LA FRANCE</p>
+    </cell>
+    <cell>
+     <p>LA RUSSIE</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="6" cellWidth="260.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>L'ALLEMAGNE</p>
+    </cell>
+    <cell>
+     <p>L'IRLANDE</p>
+    </cell>
+    <cell>
+     <p>L'ITALIE</p>
+    </cell>
+    <cell>
+     <p>LE MAROC</p>
+    </cell>
+    <cell>
+     <p>LA FRANCE</p>
+    </cell>
+    <cell>
+     <p>LA RUSSIE</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="capital2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x73B9FF" />
+     </style>
+     <p>ÉCRIS LES NOMS DES PAYS QUE CORRESPONDRENT AUX SUIVANTS CAPITALS.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x73B9FF" />
+     </style>
+     <p>FORMIDABLE!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x9BC2E6">
+     <image name="eif.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x73B9FF" border="true" />
+   </settings>
+   <cells rows="6" columns="1" cellWidth="260.0" cellHeight="240.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="20" />
+     <color background="0xFFFFFF" inactive="0xFF0000" alternative="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>BERLIN</p>
+    </cell>
+    <cell>
+     <p>DUBLIN</p>
+    </cell>
+    <cell>
+     <p>ROME</p>
+    </cell>
+    <cell>
+     <p>RABAT</p>
+    </cell>
+    <cell>
+     <p>PARIS</p>
+    </cell>
+    <cell>
+     <p>MOSCOU</p>
+    </cell>
+   </cells>
+   <cells rows="6" columns="1" cellWidth="262.0" cellHeight="240.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" inactive="0x9BC2E6" alternative="0x9BC2E6" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>L'ALLEMAGNE</p>
+    </cell>
+    <cell>
+     <p>L'IRLANDE</p>
+    </cell>
+    <cell>
+     <p>L'ITALIE</p>
+    </cell>
+    <cell>
+     <p>LE MAROC</p>
+    </cell>
+    <cell>
+     <p>LA FRANCE</p>
+    </cell>
+    <cell>
+     <p>LA RUSSIE</p>
+    </cell>
+   </cells>
+   <cells rows="6" columns="1" cellWidth="260.0" cellHeight="240.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>L'ALLEMAGNE</p>
+    </cell>
+    <cell>
+     <p>L'IRLANDE</p>
+    </cell>
+    <cell>
+     <p>L'ITALIE</p>
+    </cell>
+    <cell>
+     <p>LE MAROC</p>
+    </cell>
+    <cell>
+     <p>LA FRANCE</p>
+    </cell>
+    <cell>
+     <p>LA RUSSIE</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="civi.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xD0FFFF" />
+     </style>
+     <p>CIVILISATION. LISSEZ L'INFORMATION ET CONTINUEZ.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xD0FFFF" />
+     </style>
+     <p />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="tierra.gif" tiled="true" />
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" background="0xD0FFFF" foreground="0x000000" bold="false" size="11" italic="false" family="Arial" tabWidth="16" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <text />
+     </p>
+     <p>
+      <text>		180 ÉTATS SUR LA PLANÈTE</text>
+     </p>
+     <p>
+      <text>.</text>
+     </p>
+     <p>
+      <text>Actuellement, on compte près de 180 États indépendants dans le monde. Ce nombre varie. Des pays  s'unissent ou, au contraire, se divisent.</text>
+     </p>
+     <p>
+      <text>Un État indépendant est un territoire délimité par une frontière. Un État est représenté par un gouvernement, une capitale, une monnaie et un drapeau.</text>
+     </p>
+     <p>
+      <text>L'État le plus petit est le Vatican. Sa superficie est de 0,4 km/2 et il est gouverné par l'église catholique. </text>
+     </p>
+     <p>
+      <text>Certains régions de la surface de la planète ne font partie d'aucun État, comme l'Antarctique, ouvert à la recherche scientifique internationale.</text>
+     </p>
+     <p />
+     <p>
+      <text>		LA LANGUE FRANÇAISE.</text>
+     </p>
+     <p />
+     <p>
+      <text>Le français est une langue d'origine latine, comme l'espagnol, l'italien, le roumain et le portugais. La langue germanique parlée par les Francs, qui occupent la France aux V et VI siècles, influence la formation du français.</text>
+     </p>
+     <p>
+      <text>On parle français en France et dans les départaments et les territoires d'outremer dépendant de la France, et aussi en Belgique, en Suisse, au Luxembourg, dans la Principauté de Monaco, à Andorre et dans une partie du Canada. Le français est également une langue impotante dans des nombreux pays de l'Afrique et de l'Asie. </text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="etre.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x000080" background="0x8EB8FD" />
+     </style>
+     <p>ÉCOUTE ET CONJUGUE LE PRÉSENT D'INDICATIF DU VERBE ÊTRE.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x000080" background="0x8EB8FD" />
+     </style>
+     <p>TRÈS BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="i1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="520" height="130" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" background="0x8EB8FD" foreground="0x0000A0" bold="false" size="11" italic="false" family="Arial" tabWidth="16" />
+    <style name="target" base="default" background="0xFFFFFF" foreground="0x000080" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <cell width="30" height="30" border="false" image="minialt.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+       <media type="PLAY_AUDIO" level="1" file="etre.wav" from="0" to="3000" />
+       <p />
+      </cell>
+      <target>
+       <answer>Je suis</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>Je suis</text>
+      </target>
+      <text />
+      <cell width="30" height="30" border="false" image="minialt.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+       <media type="PLAY_AUDIO" level="1" file="etre.wav" from="3000" to="7527" />
+       <p />
+      </cell>
+      <target>
+       <answer>tu es</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>tu es</text>
+      </target>
+      <text />
+      <cell width="30" height="30" border="false" image="minialt.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+       <media type="PLAY_AUDIO" level="1" file="etre.wav" from="7527" to="14366" />
+       <p />
+      </cell>
+      <target>
+       <answer>il/elle est</answer>
+       <response fill="_" length="13" maxLength="13" />
+       <text>il/elle est</text>
+      </target>
+      <text />
+      <cell width="30" height="30" border="false" image="minialt.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+       <media type="PLAY_AUDIO" level="1" file="etre.wav" from="14366" to="17996" />
+       <p />
+      </cell>
+      <target>
+       <answer>nous sommes</answer>
+       <response fill="_" length="11" maxLength="11" />
+       <text>nous sommes</text>
+      </target>
+     </p>
+     <p />
+     <p />
+     <p>
+      <cell width="30" height="30" border="false" image="minialt.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+       <media type="PLAY_AUDIO" level="1" file="etre.wav" from="17996" to="23546" />
+       <p />
+      </cell>
+      <target>
+       <answer>vous êtes</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <text>vous êtes</text>
+      </target>
+      <text />
+      <cell width="30" height="30" border="false" image="minialt.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+       <media type="PLAY_AUDIO" level="1" file="etre.wav" from="23546" to="30890" />
+       <p />
+      </cell>
+      <target>
+       <answer>ils/elles sont</answer>
+       <response fill="_" length="16" maxLength="16" />
+       <text>ils/elles sont</text>
+      </target>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="genre.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color background="0xB5B5FF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <p>GENRE ET NOMBRE. COMPLÉTE.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color background="0xB5B5FF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <p>FORMIDABLE!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF82FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="260" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" background="0xFFFFFF" foreground="0x0000FF" bold="false" size="18" italic="false" family="Arial" tabWidth="16" />
+    <style name="target" base="default" background="0xFE9EFA" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <text>Il est allemand. Elle est </text>
+      <target>
+       <answer>allemande</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <text>allemande</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <text>Il est russe. Elle est </text>
+      <target>
+       <answer>russe</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>russe</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <text>Un garçon </text>
+      <target>
+       <answer>allemand</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>allemand</text>
+      </target>
+      <text>. Des garçons allemands.</text>
+     </p>
+     <p />
+     <p>
+      <text>Un garçon anglais. Des garçons </text>
+      <target>
+       <answer>anglais</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>anglais</text>
+      </target>
+      <text>.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="habite.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xA0E0D3" />
+     </style>
+     <p>COMPLÉTE</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xA0E0D3" />
+     </style>
+     <p>TRÈS BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x8EB8FD">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xA0E0D3" border="true">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" background="0xFFFFBD" foreground="0x000000" bold="false" size="17" italic="false" family="Arial" tabWidth="16" />
+    <style name="target" base="default" background="0xA0E0D3" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <cell width="140" height="210" border="false" image="i5.gif">
+       <style>
+        <color background="0xFFFFBD" inactive="0xA0E0D3" alternative="0xA0E0D3" />
+       </style>
+      </cell>
+      <text />
+      <cell hAlign="left" width="100" height="234" border="false">
+       <style>
+        <color background="0xFFFFBD" inactive="0xA0E0D3" alternative="0xA0E0D3" />
+       </style>
+       <p>J'habite à Madrid.</p>
+      </cell>
+      <text>	Ah, </text>
+      <cell width="140" height="205" border="false" image="i6.gif">
+       <style>
+        <color background="0xFFFFBD" inactive="0xA0E0D3" alternative="0xA0E0D3" />
+       </style>
+      </cell>
+     </p>
+     <p>
+      <text>				tu es </text>
+      <target>
+       <answer>espagnole</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <text>espagnole</text>
+      </target>
+     </p>
+     <p />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="habite2.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xA0E0D3" />
+     </style>
+     <p>COMPLÉTE</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xA0E0D3" />
+     </style>
+     <p>TRÈS BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x8EB8FD">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xA0E0D3" border="true">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" background="0xFFFFBD" foreground="0x000000" bold="false" size="17" italic="false" family="Arial" tabWidth="16" />
+    <style name="target" base="default" background="0xA0E0D3" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <cell width="140" height="210" border="false" image="i7.gif">
+       <style>
+        <color background="0xFFFFBD" inactive="0xA0E0D3" alternative="0xA0E0D3" />
+       </style>
+      </cell>
+      <text />
+      <cell hAlign="left" width="100" height="234" border="false">
+       <style>
+        <color background="0xFFFFBD" inactive="0xA0E0D3" alternative="0xA0E0D3" />
+       </style>
+       <p>Je suis français,</p>
+       <p>(France), et toi?</p>
+      </cell>
+      <text>(Chine)	 </text>
+      <cell width="140" height="210" border="false" image="i8b.gif">
+       <style>
+        <color background="0xFFFFBD" inactive="0xA0E0D3" alternative="0xA0E0D3" />
+       </style>
+      </cell>
+     </p>
+     <p>
+      <text>				Je suis </text>
+      <target>
+       <answer>chinoise</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>chinoise</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="habite3.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xA0E0D3" />
+     </style>
+     <p>COMPLÉTE</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xA0E0D3" />
+     </style>
+     <p>TRÈS BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x8EB8FD">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xA0E0D3" border="true">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" background="0xFFFFBD" foreground="0x000000" bold="false" size="17" italic="false" family="Arial" tabWidth="16" />
+    <style name="target" base="default" background="0xA0E0D3" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <cell width="140" height="210" border="false" image="i9.gif">
+       <style>
+        <color background="0xFFFFBD" inactive="0xA0E0D3" alternative="0xA0E0D3" />
+       </style>
+      </cell>
+      <text />
+      <cell hAlign="left" width="100" height="234" border="false">
+       <style>
+        <color background="0xFFFFBD" inactive="0xA0E0D3" alternative="0xA0E0D3" />
+       </style>
+       <p>Tu es allemand?</p>
+      </cell>
+      <text />
+      <cell width="140" height="210" border="false" image="i10.gif">
+       <style>
+        <color background="0xFFFFBD" inactive="0xA0E0D3" alternative="0xA0E0D3" />
+       </style>
+      </cell>
+     </p>
+     <p>
+      <text>			( Belgique) </text>
+     </p>
+     <p>
+      <text>			Non, Je suis </text>
+      <target>
+       <answer>belge</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>belge</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="heure1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFB3D9" />
+     </style>
+     <p>REGARDE L'EXPRESSION DE L'HEURE EN FRANÇAIS.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFB3D9" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x9BC2E6">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" columns="1" border="true" image="heure.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="heure2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFB3D9" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <p>QUELLE HEURE EST-IL? IL EST...</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFB3D9" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <p>TRÈS BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x9BC2E6">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xA8FFA8" border="true" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFF0000" alternative="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="h1b.gif" />
+    <cell image="h2b.gif" />
+    <cell image="h3b.gif" />
+    <cell image="h4c.gif" />
+    <cell image="h5b.gif" />
+    <cell image="h6b.gif" />
+   </cells>
+   <cells rows="3" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xA8FFA8" alternative="0xA8FFA8" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>MIDI/MINUIT</p>
+    </cell>
+    <cell>
+     <p>MIDI CINQ</p>
+    </cell>
+    <cell>
+     <p>MIDI ET QUART</p>
+    </cell>
+    <cell>
+     <p>UNE HEURE ET DEMIE</p>
+    </cell>
+    <cell>
+     <p>DEUX HEURES MOINS DIX</p>
+    </cell>
+    <cell>
+     <p>TROIS HEURES MOINS LE QUART</p>
+    </cell>
+   </cells>
+   <cells rows="3" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>MIDI/MINUIT</p>
+    </cell>
+    <cell>
+     <p>MIDI CINQ</p>
+    </cell>
+    <cell>
+     <p>MIDI ET QUART</p>
+    </cell>
+    <cell>
+     <p>UNE HEURE ET DEMIE</p>
+    </cell>
+    <cell>
+     <p>DEUX HEURES MOINS DIX</p>
+    </cell>
+    <cell>
+     <p>TROIS HEURES MOINS LE QUART</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="heure3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFF00" background="0x804000" />
+     </style>
+     <p>ÉCRIS.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFF00" background="0x804000" />
+     </style>
+     <p>TRÈS BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="h4b.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x804000" border="true" />
+   </settings>
+   <cells rows="4" columns="3" cellWidth="150.0" cellHeight="180.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" />
+     <color background="0xFFFFFF" inactive="0x804000" alternative="0x804000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>Il est une heure</p>
+    </cell>
+    <cell>
+     <p>Il est midi</p>
+    </cell>
+    <cell>
+     <p>Il est minuit</p>
+    </cell>
+    <cell>
+     <p>Il est onze heures et quart</p>
+    </cell>
+    <cell>
+     <p>Il est trois heures moins le quart</p>
+    </cell>
+    <cell>
+     <p>Il est midi et quart</p>
+    </cell>
+    <cell>
+     <p>Il est midi moins le quart</p>
+    </cell>
+    <cell>
+     <p>Il est quatre heures</p>
+    </cell>
+    <cell>
+     <p>Il est six heures et demie</p>
+    </cell>
+    <cell>
+     <p>Il est midi et demie</p>
+    </cell>
+    <cell>
+     <p>Il est neuf heures justes</p>
+    </cell>
+    <cell>
+     <p>Il est dix heures moins le quart</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="3" cellWidth="140.0" cellHeight="140.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>1h</p>
+    </cell>
+    <cell>
+     <p>12h</p>
+    </cell>
+    <cell>
+     <p>24h</p>
+    </cell>
+    <cell>
+     <p>11'15h</p>
+    </cell>
+    <cell>
+     <p>2'45h</p>
+    </cell>
+    <cell>
+     <p>12'15h</p>
+    </cell>
+    <cell>
+     <p>11'45h</p>
+    </cell>
+    <cell>
+     <p>4h</p>
+    </cell>
+    <cell>
+     <p>18'30h</p>
+    </cell>
+    <cell>
+     <p>12'30h</p>
+    </cell>
+    <cell>
+     <p>9h</p>
+    </cell>
+    <cell>
+     <p>9'45h</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="3" cellWidth="150.0" cellHeight="180.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>Il est une heure-1</p>
+    </cell>
+    <cell>
+     <p>Il est midi-12</p>
+    </cell>
+    <cell>
+     <p>Il est minuit-24</p>
+    </cell>
+    <cell>
+     <p>Il est onze heures et quart-11'5</p>
+    </cell>
+    <cell>
+     <p>Il est trois heures moins le quart-2'45</p>
+    </cell>
+    <cell>
+     <p>Il est midi et quart-12'15</p>
+    </cell>
+    <cell>
+     <p>Il est midi moins le quart-11'45</p>
+    </cell>
+    <cell>
+     <p>Il est quatre heures-4</p>
+    </cell>
+    <cell>
+     <p>Il est six heures et demi-18'30</p>
+    </cell>
+    <cell>
+     <p>Il est midi et demi-12'30</p>
+    </cell>
+    <cell>
+     <p>Il est neuf heures justes-9</p>
+    </cell>
+    <cell>
+     <p>Il est dix heures moins le quart-9'45</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="heure4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFF00" background="0x804000" />
+     </style>
+     <p>ÉCRIS.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFF00" background="0x804000" />
+     </style>
+     <p>TRÈS BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="h4b.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x804000" border="true" />
+   </settings>
+   <cells rows="4" columns="3" cellWidth="150.0" cellHeight="180.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" />
+     <color background="0xFFFFFF" inactive="0x804000" alternative="0x804000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>1h</p>
+    </cell>
+    <cell>
+     <p>12h</p>
+    </cell>
+    <cell>
+     <p>24h</p>
+    </cell>
+    <cell>
+     <p>11'15h</p>
+    </cell>
+    <cell>
+     <p>2'45h</p>
+    </cell>
+    <cell>
+     <p>12'15h</p>
+    </cell>
+    <cell>
+     <p>11'45h</p>
+    </cell>
+    <cell>
+     <p>4h</p>
+    </cell>
+    <cell>
+     <p>18'30h</p>
+    </cell>
+    <cell>
+     <p>12'30h</p>
+    </cell>
+    <cell>
+     <p>9h</p>
+    </cell>
+    <cell>
+     <p>9'45h</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="3" cellWidth="140.0" cellHeight="140.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>Il est une heure</p>
+    </cell>
+    <cell>
+     <p>Il est midi</p>
+    </cell>
+    <cell>
+     <p>Il est minuit</p>
+    </cell>
+    <cell>
+     <p>Il est onze heures et quart</p>
+    </cell>
+    <cell>
+     <p>Il est trois heures moins le quart</p>
+    </cell>
+    <cell>
+     <p>Il est midi et quart</p>
+    </cell>
+    <cell>
+     <p>Il est midi moins le quart</p>
+    </cell>
+    <cell>
+     <p>Il est quatre heures</p>
+    </cell>
+    <cell>
+     <p>Il est six heures et demie</p>
+    </cell>
+    <cell>
+     <p>Il est midi et demie</p>
+    </cell>
+    <cell>
+     <p>Il est neuf heures justes</p>
+    </cell>
+    <cell>
+     <p>Il est dix heures moins le quart</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="3" cellWidth="150.0" cellHeight="180.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>Il est une heure</p>
+    </cell>
+    <cell>
+     <p>Il est midi</p>
+    </cell>
+    <cell>
+     <p>Il est minuit</p>
+    </cell>
+    <cell>
+     <p>Il est onze heures et quart</p>
+    </cell>
+    <cell>
+     <p>Il est trois heures moins le quart</p>
+    </cell>
+    <cell>
+     <p>Il est midi et quart</p>
+    </cell>
+    <cell>
+     <p>Il est midi moins le quart</p>
+    </cell>
+    <cell>
+     <p>Il est quatre heures</p>
+    </cell>
+    <cell>
+     <p>Il est six heures et demie</p>
+    </cell>
+    <cell>
+     <p>Il est midi et demie</p>
+    </cell>
+    <cell>
+     <p>Il est neuf heures justes</p>
+    </cell>
+    <cell>
+     <p>Il est dix heures moins le quart</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="heures.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFF00" background="0x804000" />
+     </style>
+     <p>FAIS CORRESPONDRE</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFF00" background="0x804000" />
+     </style>
+     <p>TRÈS BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="h4b.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x804000" border="true" />
+   </settings>
+   <cells rows="4" columns="3" cellWidth="150.0" cellHeight="180.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" />
+     <color background="0xFFFFFF" inactive="0x804000" alternative="0x804000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell id="0">
+     <p>Il est une heure</p>
+    </cell>
+    <cell id="1">
+     <p>Il est midi</p>
+    </cell>
+    <cell id="2">
+     <p>Il est minuit</p>
+    </cell>
+    <cell id="3">
+     <p>Il est onze heures et quart</p>
+    </cell>
+    <cell id="4">
+     <p>Il est trois heures moins le quart</p>
+    </cell>
+    <cell id="5">
+     <p>Il est midi et quart</p>
+    </cell>
+    <cell id="6">
+     <p>Il est midi moins le quart</p>
+    </cell>
+    <cell id="7">
+     <p>Il est quatre heures</p>
+    </cell>
+    <cell id="8">
+     <p>Il est six heures et demie</p>
+    </cell>
+    <cell id="9">
+     <p>Il est midi et demie</p>
+    </cell>
+    <cell id="10">
+     <p>Il est neuf heures justes</p>
+    </cell>
+    <cell id="11">
+     <p>Il est dix heures moins le quart</p>
+    </cell>
+   </cells>
+   <cells rows="3" columns="4" cellWidth="140.0" cellHeight="140.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="4" />
+    <cell>
+     <p>1h</p>
+    </cell>
+    <cell>
+     <p>12h</p>
+    </cell>
+    <cell>
+     <p>24h</p>
+    </cell>
+    <cell>
+     <p>11'15h</p>
+    </cell>
+    <cell>
+     <p>2'45h</p>
+    </cell>
+    <cell>
+     <p>12'15h</p>
+    </cell>
+    <cell>
+     <p>11'45h</p>
+    </cell>
+    <cell>
+     <p>4h</p>
+    </cell>
+    <cell>
+     <p>18'30h</p>
+    </cell>
+    <cell>
+     <p>12'30h</p>
+    </cell>
+    <cell>
+     <p>9h</p>
+    </cell>
+    <cell>
+     <p>9'45h</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="3" cellWidth="150.0" cellHeight="180.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>Il est une heure-1</p>
+    </cell>
+    <cell>
+     <p>Il est midi-12</p>
+    </cell>
+    <cell>
+     <p>Il est minuit-24</p>
+    </cell>
+    <cell>
+     <p>Il est onze heures et quart-11'5</p>
+    </cell>
+    <cell>
+     <p>Il est trois heures moins le quart-2'45</p>
+    </cell>
+    <cell>
+     <p>Il est midi et quart-12'15</p>
+    </cell>
+    <cell>
+     <p>Il est midi moins le quart-11'45</p>
+    </cell>
+    <cell>
+     <p>Il est quatre heures-4</p>
+    </cell>
+    <cell>
+     <p>Il est six heures et demi-18'30</p>
+    </cell>
+    <cell>
+     <p>Il est midi et demi-12'30</p>
+    </cell>
+    <cell>
+     <p>Il est neuf heures justes-9</p>
+    </cell>
+    <cell>
+     <p>Il est dix heures moins le quart-9'45</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.Identify" name="intrus.txa" type="identifyWords">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xB5FFFF" />
+     </style>
+     <p>CHASE L'INTRUS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xB5FFFF" />
+     </style>
+     <p>TRÈS BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="globo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="450" height="260" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" background="0xB5FFFF" foreground="0x000000" bold="false" size="17" italic="false" family="Arial" tabWidth="16" />
+    <style name="target" base="default" background="0x80FF00" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <text>SUISSE - BELGIQUE - </text>
+      <target>IRLANDE</target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <text>MEXIQUE - </text>
+      <target>PORTUGAL</target>
+      <text> - NICARAGUA.</text>
+     </p>
+     <p />
+     <p>
+      <text>SUÉDE - NORVÈGE - </text>
+      <target>OSLO</target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <target>JAPON</target>
+      <text> - CHINE - CORÉE.</text>
+     </p>
+     <p />
+    </section>
+   </document>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="nation.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xA0E0D3" />
+     </style>
+     <p>LES NATIONALITÉS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xA0E0D3" />
+     </style>
+     <p>TRÈS BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x8EB8FD">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xA0E0D3" border="true" />
+   </settings>
+   <cells rows="1" columns="3" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFF0000" alternative="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="i2b.gif" />
+    <cell image="i3b.gif" />
+    <cell image="i4b.gif" />
+   </cells>
+   <cells rows="1" columns="3" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xA0E0D3" alternative="0xA0E0D3" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>JE SUIS AMÉRICAIN</p>
+    </cell>
+    <cell>
+     <p>JE SUIS CHINOIS</p>
+    </cell>
+    <cell>
+     <p>JE SUIS FRANÇAIS</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="3" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>JE SUIS AMÉRICAIN</p>
+    </cell>
+    <cell>
+     <p>JE SUIS CHINOIS</p>
+    </cell>
+    <cell>
+     <p>JE SUIS FRANÇAIS</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="nation.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x8AD0F7" />
+     </style>
+     <p>COMPLÈTE AVEC LES NATIONALITÉS.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x8AD0F7" />
+     </style>
+     <p>TRÈS BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="i8b.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <position x="25" y="57" />
+     <size width="450" height="270" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" background="0x8AD0F7" foreground="0x000000" bold="false" size="17" italic="false" family="Arial" tabWidth="16" />
+    <style name="target" base="default" background="0xFFB3D9" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <text>S'il est de New-York, il est </text>
+      <target>
+       <answer>américain</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <text>américain</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <text>Si elle est de Tokio, elle est </text>
+      <target>
+       <answer>japonaise</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <text>japonaise</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <text>S'il est de Madrid, il est </text>
+      <target>
+       <answer>espagnol</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>espagnol</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <text>S'il est de Paris, il est </text>
+      <target>
+       <answer>français</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>français</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <text>Si elle est de Londres, elle est </text>
+      <target>
+       <answer>anglaise</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>anglaise</text>
+      </target>
+      <text>.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="paises.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x00FFFF" background="0x408080" />
+     </style>
+     <p>Fais correspondre</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x00FFFF" background="0x408080" />
+     </style>
+     <p>TRÈS BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x80FFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x408080" border="true" />
+   </settings>
+   <cells rows="3" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="20" />
+     <color background="0xFFFFFF" inactive="0xFF0000" alternative="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="4" />
+    <cell id="8">
+     <p>La Suisse</p>
+    </cell>
+    <cell id="6">
+     <p>La Belgique</p>
+    </cell>
+    <cell id="11">
+     <p>Le Mexique</p>
+    </cell>
+    <cell id="2">
+     <p>La Chine</p>
+    </cell>
+    <cell id="9">
+     <p>Le Japon</p>
+    </cell>
+    <cell id="3">
+     <p>L'Allemagne</p>
+    </cell>
+    <cell id="0">
+     <p>La France</p>
+    </cell>
+    <cell id="10">
+     <p>L'Argentine</p>
+    </cell>
+    <cell id="1">
+     <p>L'Espagne</p>
+    </cell>
+    <cell id="7">
+     <p>L'Amerique</p>
+    </cell>
+    <cell id="5">
+     <p>L'Anglaterre</p>
+    </cell>
+    <cell id="4">
+     <p>La Russie</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="3" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>Français</p>
+    </cell>
+    <cell>
+     <p>Espagnol</p>
+    </cell>
+    <cell>
+     <p>Chinois</p>
+    </cell>
+    <cell>
+     <p>Allemand</p>
+    </cell>
+    <cell>
+     <p>Russe</p>
+    </cell>
+    <cell>
+     <p>Anglais</p>
+    </cell>
+    <cell>
+     <p>Belge</p>
+    </cell>
+    <cell>
+     <p>Américain</p>
+    </cell>
+    <cell>
+     <p>Suisse</p>
+    </cell>
+    <cell>
+     <p>Japonais</p>
+    </cell>
+    <cell>
+     <p>Argentin</p>
+    </cell>
+    <cell>
+     <p>mexicain</p>
+    </cell>
+   </cells>
+   <cells rows="3" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="4" />
+    <cell image="globo2.gif" />
+    <cell image="globo2.gif" />
+    <cell image="globo2.gif" />
+    <cell image="globo2.gif" />
+    <cell image="globo2.gif" />
+    <cell image="globo2.gif" />
+    <cell image="globo2.gif" />
+    <cell image="globo2.gif" />
+    <cell image="globo2.gif" />
+    <cell image="globo2.gif" />
+    <cell image="globo2.gif" />
+    <cell image="globo2.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="pays.sop">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0x008080" background="0x65EFE4" shadow="0xFF80FF" inactive="0xFF80FF" alternative="0xFF80FF" />
+     </style>
+     <p>TROUVE LES PAYS</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0x008080" background="0x65EFE4" shadow="0xFF80FF" inactive="0xFF80FF" alternative="0xFF80FF" />
+     </style>
+     <p>TRÈS BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="mundo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="10" columns="10" cellWidth="100.0" cellHeight="100.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>ALLEMAGNEP</row>
+     <row>COREE***SO</row>
+     <row>I*J**I**PR</row>
+     <row>R*A**N**AT</row>
+     <row>L*P**D**GU</row>
+     <row>A*O**E**NG</row>
+     <row>NONRUSSIEA</row>
+     <row>DS*U*****L</row>
+     <row>EL**S*****</row>
+     <row>*O***A****</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">ALLEMAGNE</clue>
+    <clue id="1">COREE</clue>
+    <clue id="2">RUSSIE</clue>
+    <clue id="3">USA</clue>
+    <clue id="4">PORTUGAL</clue>
+    <clue id="5">ESPAGNE</clue>
+    <clue id="6">IRLANDE</clue>
+    <clue id="7">INDE</clue>
+    <clue id="8">JAPO</clue>
+    <clue id="9">OSLO</clue>
+   </clues>
+  </activity>
+  <activity class="@panels.InformationScreen" name="port.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0x008080" background="0x65EFE4" shadow="0xFF80FF" inactive="0xFF80FF" alternative="0xFF80FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="chan.wav" />
+     <p>PARTIR</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0x008080" background="0x65EFE4" shadow="0xFF80FF" inactive="0xFF80FF" alternative="0xFF80FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="mundo.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <position x="100" y="130" />
+    </window>
+   </settings>
+   <cells rows="1" columns="1" border="true" image="port2.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="relie.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xA0E0D3" />
+     </style>
+     <p>RELIE LES MOTS SUIVANTS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xA0E0D3" />
+     </style>
+     <p>TRÈS BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x8EB8FD">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xA0E0D3" border="true" />
+   </settings>
+   <cells rows="1" columns="9" cellWidth="400.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFF0000" alternative="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="9" />
+    <cell>
+     <p>PASSE</p>
+    </cell>
+    <cell>
+     <p>LI</p>
+    </cell>
+    <cell>
+     <p>CHÂ</p>
+    </cell>
+    <cell>
+     <p>BAN</p>
+    </cell>
+    <cell>
+     <p>AUTO</p>
+    </cell>
+    <cell>
+     <p>CAMP</p>
+    </cell>
+    <cell>
+     <p>ÉCRI</p>
+    </cell>
+    <cell>
+     <p>AÉRO</p>
+    </cell>
+    <cell>
+     <p>EMPE</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="9" cellWidth="400.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xA0E0D3" alternative="0xA0E0D3" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="9" />
+    <cell>
+     <p>PORT</p>
+    </cell>
+    <cell>
+     <p>VRE</p>
+    </cell>
+    <cell>
+     <p>TEAU</p>
+    </cell>
+    <cell>
+     <p>QUE</p>
+    </cell>
+    <cell>
+     <p>MOBILE</p>
+    </cell>
+    <cell>
+     <p>PAGNE</p>
+    </cell>
+    <cell>
+     <p>VAIN</p>
+    </cell>
+    <cell>
+     <p>PORT</p>
+    </cell>
+    <cell>
+     <p>REUR</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="9" cellWidth="400.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="9" />
+    <cell>
+     <p>PASAPORTE</p>
+    </cell>
+    <cell>
+     <p>LIBRO</p>
+    </cell>
+    <cell>
+     <p>CASTILLO</p>
+    </cell>
+    <cell>
+     <p>BANCO</p>
+    </cell>
+    <cell>
+     <p>AUTOMÓVIL</p>
+    </cell>
+    <cell>
+     <p>CAMPIÑA</p>
+    </cell>
+    <cell>
+     <p>ESCRITOR</p>
+    </cell>
+    <cell>
+     <p>AEROPUERTO</p>
+    </cell>
+    <cell>
+     <p>EMPERADOR</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="verser.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xA8FFA8" />
+     </style>
+     <p>CONJUGE</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xA8FFA8" />
+     </style>
+     <p>TRÈS BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x9BC2E6">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x80FF80" border="true" />
+   </settings>
+   <cells rows="1" columns="6" cellWidth="260.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="20" />
+     <color background="0xFFFFFF" inactive="0xFF0000" alternative="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>SUIS</p>
+    </cell>
+    <cell>
+     <p>ES</p>
+    </cell>
+    <cell>
+     <p>EST</p>
+    </cell>
+    <cell>
+     <p>SOMMES</p>
+    </cell>
+    <cell>
+     <p>ÊTES</p>
+    </cell>
+    <cell>
+     <p>SONT</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="6" cellWidth="262.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" inactive="0x9BC2E6" alternative="0x9BC2E6" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>JE</p>
+    </cell>
+    <cell>
+     <p>TU</p>
+    </cell>
+    <cell>
+     <p>IL/ELLE/ON</p>
+    </cell>
+    <cell>
+     <p>NOUS</p>
+    </cell>
+    <cell>
+     <p>VOUS</p>
+    </cell>
+    <cell>
+     <p>ILS/ELLES</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="6" cellWidth="260.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>JE</p>
+    </cell>
+    <cell>
+     <p>TU</p>
+    </cell>
+    <cell>
+     <p>IL/ELLE/ON</p>
+    </cell>
+    <cell>
+     <p>NOUS</p>
+    </cell>
+    <cell>
+     <p>VOUS</p>
+    </cell>
+    <cell>
+     <p>ILS/ELLES</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="vrai.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x80FFFF" />
+     </style>
+     <p>VRAI OU FAUX?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x80FFFF" />
+     </style>
+     <p>TRÈS BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x80FFFF">
+     <image name="tierra.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x80FFFF" border="true" />
+   </settings>
+   <cells rows="1" columns="6" cellWidth="460.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <p>Le monde est divisé en États.</p>
+    </cell>
+    <cell id="0">
+     <p>Le nombre d'États est variable.</p>
+    </cell>
+    <cell id="1">
+     <p>Le Vatican est un grand État.</p>
+    </cell>
+    <cell id="1">
+     <p>Toutes les régions du monde font partie d'un État.</p>
+    </cell>
+    <cell id="1">
+     <p>On parle français au Portugal.</p>
+    </cell>
+    <cell id="0">
+     <p>Le français est important dans certains pays africains.</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>VRAI</p>
+    </cell>
+    <cell>
+     <p>FAUX</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="6" cellWidth="460.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Le monde est divisé en États.</p>
+    </cell>
+    <cell>
+     <p>Le nombre d'États est variable.</p>
+    </cell>
+    <cell>
+     <p>Le Vatican est un grand État.</p>
+    </cell>
+    <cell>
+     <p>Toutes les régions du monde font partie d'un État.</p>
+    </cell>
+    <cell>
+     <p>On parle français au Portugal.</p>
+    </cell>
+    <cell>
+     <p>Le français est important dans certains pays africains.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="bientot.gif" file="bientot.gif" animated="false" />
+  <media name="eif.gif" file="eif.gif" animated="false" />
+  <media name="globo.gif" file="globo.gif" animated="false" />
+  <media name="globo2.gif" file="globo2.gif" animated="false" />
+  <media name="h1b.gif" file="h1b.gif" animated="false" />
+  <media name="h2b.gif" file="h2b.gif" animated="false" />
+  <media name="h3b.gif" file="h3b.gif" animated="false" />
+  <media name="h4b.gif" file="h4b.gif" animated="false" />
+  <media name="h4c.gif" file="h4c.gif" animated="false" />
+  <media name="h5b.gif" file="h5b.gif" animated="false" />
+  <media name="h6b.gif" file="h6b.gif" animated="false" />
+  <media name="heure.gif" file="heure.gif" animated="false" />
+  <media name="i1.gif" file="i1.gif" animated="false" />
+  <media name="i10.gif" file="i10.gif" animated="false" />
+  <media name="i2b.gif" file="i2b.gif" animated="false" />
+  <media name="i3b.gif" file="i3b.gif" animated="false" />
+  <media name="i4b.gif" file="i4b.gif" animated="false" />
+  <media name="i5.gif" file="i5.gif" animated="false" />
+  <media name="i6.gif" file="i6.gif" animated="false" />
+  <media name="i7.gif" file="i7.gif" animated="false" />
+  <media name="i8b.gif" file="i8b.gif" animated="false" />
+  <media name="i9.gif" file="i9.gif" animated="false" />
+  <media name="minialt.gif" file="minialt.gif" animated="false" />
+  <media name="mundo.gif" file="mundo.gif" animated="false" />
+  <media name="port2.gif" file="port2.gif" animated="false" />
+  <media name="tierra.gif" file="tierra.gif" animated="false" />
+  <media name="chan.wav" file="chan.wav" />
+  <media name="etre.wav" file="etre.wav" />
+ </mediaBag>
+</JClicProject>
+

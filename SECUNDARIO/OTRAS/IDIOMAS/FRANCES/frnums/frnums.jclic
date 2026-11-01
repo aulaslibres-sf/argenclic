@@ -1,0 +1,1789 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="frnums" version="0.1.3">
+ <settings>
+  <title>Les nombres en français</title>
+  <revision description="Creation of the package of activities using Clic 3.0" date="9/20/05" />
+  <revision description="Converted from Clic3 to JClic" date="9/26/05">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="José Enrique Calle Carmona" mail="jecalle@platea.pntic.mec.es" />
+  <organization name="CEIP Simón de Colonia" city="Aranda de Duero" state="Castilla y León" />
+  <language>french</language>
+  <description>
+   <p>Application to learn to count in French. The package includes the system of composition of numbers from 70.</p>
+  </description>
+  <descriptors area-codes="lleng" level-codes="PRI, SEC">French language</descriptors>
+  <meta_langs>french</meta_langs>
+  <descriptions>
+   <description language="french">
+    <p>Application to learn to count in French. The package includes the system of composition of numbers from 70.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="numeros.pac" name="info.ass" delay="3">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="nums1.ass" delay="3" />
+  <item name="et.ass" delay="3" />
+  <item name="70.ass" delay="3" />
+  <item name="nums2.ass" delay="3" />
+  <item name="80.ass" delay="3" />
+  <item name="nums3.ass" delay="3" />
+  <item name="90.ass" delay="3" />
+  <item name="nums4.ass" delay="3" />
+  <item name="decen.ass" delay="3" />
+  <item name="res25.ass" delay="3" />
+  <item name="res50.ass" delay="3" />
+  <item name="res75.ass" delay="3" />
+  <item name="res25_2.ass" delay="3" />
+  <item name="res50_2.ass" delay="3" />
+  <item name="res75_2.ass" delay="3" />
+  <item name="centena.ass" delay="3" />
+  <item name="fin.ass" delay="3">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.Explore" name="70.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="2" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="cuaderno.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="1" cols="5" border="false" image="70.gif" id="primary">
+    <style>
+     <font family="Verdana" size="32" />
+     <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <ids>-1 -1 0 -1 1</ids>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="400.0" cellHeight="80.0" border="false" id="secondary">
+    <style>
+     <font family="Verdana" size="32" />
+     <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="60.wav" />
+     <p>SOIXANTE- </p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="10.wav" />
+     <p>SOIXANTE-DIX</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="80.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="2" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="cuaderno.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="1" cols="5" border="false" image="80.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <ids>-1 -1 0 -1 1</ids>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="Verdana" size="35" />
+     <color foreground="0x8000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="4.wav" />
+     <p>QUATRE-</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="20.wav" />
+     <p>QUATRE-VINGTS</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="90.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="2" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="cuaderno.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="1" cols="10" border="false" image="90.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="10" rows="1" />
+    <ids>-1 -1 -1 0 0 -1 1 1 2 2</ids>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="Verdana" size="35" />
+     <color foreground="0x8000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="4.wav" />
+     <p>QUATRE-</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="20.wav" />
+     <p>QUATRE-VINGT-</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="10.wav" />
+     <p>QUATRE-VINGT-DIX</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="centena.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Clique sur les numéros roses</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="2" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="cuaderno.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="20" cols="6" border="false" image="centenas.gif" id="primary">
+    <style>
+     <font family="Verdana" size="32" />
+     <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="6" rows="20" scaleX="6.0" scaleY="20.0">
+     <enclosing>
+      <shape>rectangle:0,0,6,20</shape>
+     </enclosing>
+     <shape>M:4,0|L:4,1|L:4,2|L:6,2|L:6,1|L:6,0|X</shape>
+     <shape>M:3,2|L:3,3|L:3,4|L:4,4|L:4,3|L:4,2|X</shape>
+     <shape>M:4,2|L:4,3|L:4,4|L:6,4|L:6,3|L:6,2|X</shape>
+     <shape>M:3,4|L:3,5|L:3,6|L:4,6|L:4,5|L:4,4|X</shape>
+     <shape>rectangle:4,5,2,1</shape>
+     <shape>M:3,7|L:3,8|L:3,9|L:4,9|L:4,8|L:4,7|X</shape>
+     <shape>rectangle:4,7,2,1</shape>
+     <shape>M:3,9|L:3,10|L:3,11|L:4,11|L:4,10|L:4,9|X</shape>
+     <shape>M:4,9|L:4,10|L:4,11|L:6,11|L:6,10|L:6,9|X</shape>
+     <shape>M:3,11|L:3,12|L:3,13|L:4,13|L:4,12|L:4,11|X</shape>
+     <shape>rectangle:4,12,2,1</shape>
+     <shape>M:3,13|L:3,14|L:3,15|L:3,16|L:4,16|L:4,15|L:4,14|L:4,13|X</shape>
+     <shape>rectangle:4,14,2,1</shape>
+     <shape>M:3,16|L:3,17|L:3,18|L:4,18|L:4,17|L:4,16|X</shape>
+     <shape>M:4,16|L:4,17|L:4,18|L:6,18|L:6,17|L:6,16|X</shape>
+     <shape>M:3,18|L:3,19|L:3,20|L:4,20|L:4,19|L:4,18|X</shape>
+     <shape>M:4,18|L:4,19|L:4,20|L:6,20|L:6,19|L:6,18|X</shape>
+    </shaper>
+    <ids>0 1 9 2 10 3 11 4 12 5 13 6 14 7 15 8 16</ids>
+   </cells>
+   <cells rows="17" cols="1" cellWidth="400.0" cellHeight="80.0" border="false" id="secondary">
+    <style>
+     <font family="Verdana" size="32" />
+     <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="17" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="100.wav" />
+     <p>CENT</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="2.wav" />
+     <p>DEUX...</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="3.wav" />
+     <p>TROIS...</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="4.wav" />
+     <p>QUATRE...</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="5.wav" />
+     <p>CINQ...</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="6.wav" />
+     <p>SIX...</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="7.wav" />
+     <p>SEPT...</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="8.wav" />
+     <p>HUIT...</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="9.wav" />
+     <p>NEUF...</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="100.wav" />
+     <p>DEUX CENTS</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="100.wav" />
+     <p>TROIS CENTS</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="100.wav" />
+     <p>QUATRE CENTS</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="100.wav" />
+     <p>CINQ CENTS</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="100.wav" />
+     <p>SIX CENTS</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="100.wav" />
+     <p>SEPT CENTS</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="100.wav" />
+     <p>HUIT CENTS</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="100.wav" />
+     <p>NEUF CENTS</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="decen.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Écris les numéros (en chiffres)</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Excellent!</p>
+    </cell>
+   </messages>
+   <settings margin="2" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="cuaderno.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="250.0" border="false" id="primary">
+    <style>
+     <font family="Verdana" size="35" />
+     <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="10.wav" />
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="20.wav" />
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="30.wav" />
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="40.wav" />
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="50.wav" />
+    </cell>
+    <cell id="5">
+     <media type="PLAY_AUDIO" level="1" file="60.wav" />
+    </cell>
+    <cell id="6">
+     <media type="PLAY_AUDIO" level="1" file="70.wav" />
+    </cell>
+    <cell id="7">
+     <media type="PLAY_AUDIO" level="1" file="80.wav" />
+    </cell>
+    <cell id="8">
+     <media type="PLAY_AUDIO" level="1" file="90.wav" />
+    </cell>
+    <cell id="9">
+     <media type="PLAY_AUDIO" level="1" file="100.wav" />
+    </cell>
+   </cells>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="250.0" border="true" id="answers">
+    <style>
+     <font family="Verdana" size="32" />
+     <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>20</p>
+    </cell>
+    <cell>
+     <p>30</p>
+    </cell>
+    <cell>
+     <p>40</p>
+    </cell>
+    <cell>
+     <p>50</p>
+    </cell>
+    <cell>
+     <p>60</p>
+    </cell>
+    <cell>
+     <p>70</p>
+    </cell>
+    <cell>
+     <p>80</p>
+    </cell>
+    <cell>
+     <p>90</p>
+    </cell>
+    <cell>
+     <p>100</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="et.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Fais attention aux numéros avec ET</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="2" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="cuaderno.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="6" cols="5" border="false" image="et.gif" id="primary">
+    <style>
+     <font family="Verdana" size="32" />
+     <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="5" rows="6" scaleX="5.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,5,6</shape>
+     </enclosing>
+     <shape>rectangle:2,0,1,1</shape>
+     <shape>rectangle:4,0,1,1</shape>
+     <shape>rectangle:2,1,1,1</shape>
+     <shape>rectangle:4,1,1,1</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>rectangle:4,2,1,1</shape>
+     <shape>rectangle:2,3,1,1</shape>
+     <shape>rectangle:4,3,1,1</shape>
+     <shape>M:2,4|L:2,5|L:2,6|L:3,6|L:3,5|L:3,4|X</shape>
+     <shape>rectangle:4,4,1,1</shape>
+     <shape>rectangle:4,5,1,1</shape>
+    </shaper>
+    <ids>0 5 1 6 2 7 3 8 4 9 10</ids>
+   </cells>
+   <cells rows="11" cols="1" cellWidth="400.0" cellHeight="80.0" border="false" id="secondary">
+    <style>
+     <font family="Verdana" size="32" />
+     <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="11" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="20.wav" />
+     <p>VINGT</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="30.wav" />
+     <p>TRENTE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="40.wav" />
+     <p>QUARENTE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="50.wav" />
+     <p>CINQUANTE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="60.wav" />
+     <p>SOIXANTE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="et1.wav" />
+     <p>VINGT ET UN</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="et1.wav" />
+     <p>TRENTE ET UN</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="et1.wav" />
+     <p>QUARANTE ET UN</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="et1.wav" />
+     <p>CINQUANTE ET UN</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="et1.wav" />
+     <p>SOIXANTE ET UN</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="et11.wav" />
+     <p>SOIXANTE ET ONZE</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="fin.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="2" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="manitas.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="4" border="false" image="fin.gif">
+    <style>
+     <font family="Verdana" size="32" />
+     <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="info.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="2" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="manitas.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="4" border="false" image="portada.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@panels.Explore" name="nums1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Clique, écoute et lis</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="2" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="cuaderno.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="5" cols="10" border="false" image="numeros.gif" id="primary">
+    <style>
+     <font family="Verdana" size="32" />
+     <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="10" rows="5" scaleX="10.0" scaleY="5.0">
+     <enclosing>
+      <shape>rectangle:0,0,10,5</shape>
+     </enclosing>
+     <shape>rectangle:0,0,1,1</shape>
+     <shape>rectangle:1,0,1,1</shape>
+     <shape>rectangle:2,0,1,1</shape>
+     <shape>rectangle:3,0,1,1</shape>
+     <shape>rectangle:4,0,1,1</shape>
+     <shape>rectangle:5,0,1,1</shape>
+     <shape>rectangle:6,0,1,1</shape>
+     <shape>rectangle:7,0,1,1</shape>
+     <shape>rectangle:8,0,1,1</shape>
+     <shape>rectangle:9,0,1,1</shape>
+     <shape>rectangle:0,1,1,1</shape>
+     <shape>rectangle:1,1,1,1</shape>
+     <shape>rectangle:2,1,1,1</shape>
+     <shape>rectangle:3,1,1,1</shape>
+     <shape>rectangle:4,1,1,1</shape>
+     <shape>rectangle:5,1,1,1</shape>
+     <shape>rectangle:6,1,1,1</shape>
+     <shape>rectangle:7,1,1,1</shape>
+     <shape>rectangle:8,1,1,1</shape>
+     <shape>rectangle:9,1,1,1</shape>
+     <shape>rectangle:0,2,1,1</shape>
+     <shape>rectangle:1,2,1,1</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>rectangle:3,2,1,1</shape>
+     <shape>rectangle:4,2,1,1</shape>
+     <shape>rectangle:5,2,1,1</shape>
+     <shape>rectangle:6,2,1,1</shape>
+     <shape>rectangle:7,2,1,1</shape>
+     <shape>rectangle:8,2,1,1</shape>
+     <shape>rectangle:9,2,1,1</shape>
+     <shape>rectangle:0,4,1,1</shape>
+     <shape>rectangle:1,4,1,1</shape>
+     <shape>rectangle:2,4,1,1</shape>
+     <shape>rectangle:3,4,1,1</shape>
+     <shape>rectangle:4,4,1,1</shape>
+     <shape>rectangle:5,4,1,1</shape>
+     <shape>rectangle:6,4,1,1</shape>
+     <shape>rectangle:7,4,1,1</shape>
+     <shape>rectangle:8,4,1,1</shape>
+     <shape>rectangle:9,4,1,1</shape>
+    </shaper>
+    <ids>0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 9 19 29 30 31 32 33 34 35 36</ids>
+   </cells>
+   <cells rows="5" cols="10" cellWidth="150.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="Verdana" size="32" />
+     <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="10" rows="5" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="1.wav" />
+     <p>UN, UNE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="2.wav" />
+     <p>DEUX</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="3.wav" />
+     <p>TROIS</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="4.wav" />
+     <p>QUATRE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="5.wav" />
+     <p>CINQ</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="6.wav" />
+     <p>SIX</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="7.wav" />
+     <p>SEPT</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="8.wav" />
+     <p>HUIT</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="9.wav" />
+     <p>NEUF</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="10.wav" />
+     <p>DIX</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="11.wav" />
+     <p>ONZE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="12.wav" />
+     <p>DOUZE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="13.wav" />
+     <p>TREIZE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="14.wav" />
+     <p>QUATORZE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="15.wav" />
+     <p>QUINZE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="16.wav" />
+     <p>SEIZE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="17.wav" />
+     <p>DIX-SEPT</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="18.wav" />
+     <p>DIX-HUIT</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="19.wav" />
+     <p>DIX-NEUF</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="20.wav" />
+     <p>VINGT</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="21.wav" />
+     <p>VINGT ET UN</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="22.wav" />
+     <p>VINGT-DEUX</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="23.wav" />
+     <p>VINGT-TROIS</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="24.wav" />
+     <p>VINGT-QUATRE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="25.wav" />
+     <p>VINGT-CINQ</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="26.wav" />
+     <p>VINGT-SIX</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="27.wav" />
+     <p>VINGT-SEPT</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="28.wav" />
+     <p>VINGT-HUIT</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="29.wav" />
+     <p>VINGT-NEUF</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="30.wav" />
+     <p>TRENTE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="40.wav" />
+     <p>QUARANTE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="50.wav" />
+     <p>CINQUANTE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="60.wav" />
+     <p>SOIXANTE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="70.wav" />
+     <p>SOIXANTE-DIX</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="80.wav" />
+     <p>QUATRE-VINGTS</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="90.wav" />
+     <p>QUATRE-VINGT-DIX</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="100.wav" />
+     <p>CENT</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="nums2.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Clique sur chaque nombre de l'addition</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="2" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="cuaderno.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="9" cols="5" border="false" image="num70.gif" id="primary">
+    <style>
+     <font family="Verdana" size="32" />
+     <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="5" rows="9" scaleX="5.0" scaleY="9.0">
+     <enclosing>
+      <shape>rectangle:0,0,5,9</shape>
+     </enclosing>
+     <shape>M:2,0|L:2,1|L:2,2|L:2,3|L:2,4|L:2,5|L:2,6|L:2,7|L:2,8|L:2,9|L:3,9|L:3,8|L:3,7|L:3,6|L:3,5|L:3,4|L:3,3|L:3,2|L:3,1|L:3,0|X</shape>
+     <shape>rectangle:4,0,1,1</shape>
+     <shape>rectangle:4,1,1,1</shape>
+     <shape>rectangle:4,2,1,1</shape>
+     <shape>rectangle:4,3,1,1</shape>
+     <shape>rectangle:4,4,1,1</shape>
+     <shape>rectangle:4,5,1,1</shape>
+     <shape>rectangle:4,6,1,1</shape>
+     <shape>rectangle:4,7,1,1</shape>
+     <shape>rectangle:4,8,1,1</shape>
+    </shaper>
+    <ids>0 1 2 3 4 5 6 7 8 9</ids>
+   </cells>
+   <cells rows="10" cols="1" cellWidth="400.0" cellHeight="80.0" border="false" id="secondary">
+    <style>
+     <font family="Verdana" size="32" />
+     <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="10" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="60.wav" />
+     <p>SOIXANTE-...</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="et11.wav" />
+     <p>SOIXANTE ET ONZE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="12.wav" />
+     <p>SOIXANTE-DOUZE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="13.wav" />
+     <p>SOIXANTE-TREIZE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="14.wav" />
+     <p>SOIXANTE-QUATORZE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="15.wav" />
+     <p>SOIXANTE-QUINZE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="16.wav" />
+     <p>SOIXANTE-SEIZE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="17.wav" />
+     <p>SOIXANTE-DIX-SEPT</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="18.wav" />
+     <p>SOIXANTE-DIX-HUIT</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="19.wav" />
+     <p>SOIXANTE-DIX-NEUF</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="nums3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Clique sur les numéros roses</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="2" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="cuaderno.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="9" cols="7" border="false" image="num80.gif" id="primary">
+    <style>
+     <font family="Verdana" size="32" />
+     <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="7" rows="9" scaleX="7.0" scaleY="9.0">
+     <enclosing>
+      <shape>rectangle:0,0,7,9</shape>
+     </enclosing>
+     <shape>M:2,0|L:2,1|L:2,2|L:2,3|L:2,4|L:2,5|L:2,6|L:2,7|L:2,8|L:2,9|L:3,9|L:3,8|L:3,7|L:3,6|L:3,5|L:3,4|L:3,3|L:3,2|L:3,1|L:3,0|X</shape>
+     <shape>M:4,0|L:4,1|L:4,2|L:4,3|L:4,4|L:4,5|L:4,6|L:4,7|L:4,8|L:4,9|L:5,9|L:5,8|L:5,7|L:5,6|L:5,5|L:5,4|L:5,3|L:5,2|L:5,1|L:5,0|X</shape>
+     <shape>rectangle:6,0,1,1</shape>
+     <shape>rectangle:6,1,1,1</shape>
+     <shape>rectangle:6,2,1,1</shape>
+     <shape>rectangle:6,3,1,1</shape>
+     <shape>rectangle:6,4,1,1</shape>
+     <shape>rectangle:6,5,1,1</shape>
+     <shape>rectangle:6,6,1,1</shape>
+     <shape>rectangle:6,7,1,1</shape>
+     <shape>rectangle:6,8,1,1</shape>
+    </shaper>
+    <ids>0 1 2 3 4 5 6 7 8 9 10</ids>
+   </cells>
+   <cells rows="11" cols="1" cellWidth="400.0" cellHeight="80.0" border="false" id="secondary">
+    <style>
+     <font family="Verdana" size="32" />
+     <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="11" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="4.wav" />
+     <p>QUATRE-</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="20.wav" />
+     <p>QUATRE-VINGT-</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="01.wav" />
+     <p>QUATRE-VINGT-UN</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="2.wav" />
+     <p>QUATRE-VINGT-DEUX</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="3.wav" />
+     <p>QUATRE-VINGT-TROIS</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="4.wav" />
+     <p>QUATRE-VINGT-QUATRE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="5.wav" />
+     <p>QUATRE-VINGT-CINQ</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="6.wav" />
+     <p>QUATRE-VINGT-SIX</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="7.wav" />
+     <p>QUATRE-VINGT-SEPT</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="8.wav" />
+     <p>QUATRE-VINGT-HUIT</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="9.wav" />
+     <p>QUATRE-VINGT-NEUF</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="nums4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Clique sur les numéros roses</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="2" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="cuaderno.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="9" cols="7" border="false" image="num90.gif" id="primary">
+    <style>
+     <font family="Verdana" size="32" />
+     <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="7" rows="9" scaleX="7.0" scaleY="9.0">
+     <enclosing>
+      <shape>rectangle:0,0,7,9</shape>
+     </enclosing>
+     <shape>M:2,0|L:2,1|L:2,2|L:2,3|L:2,4|L:2,5|L:2,6|L:2,7|L:2,8|L:2,9|L:3,9|L:3,8|L:3,7|L:3,6|L:3,5|L:3,4|L:3,3|L:3,2|L:3,1|L:3,0|X</shape>
+     <shape>M:4,0|L:4,1|L:4,2|L:4,3|L:4,4|L:4,5|L:4,6|L:4,7|L:4,8|L:4,9|L:5,9|L:5,8|L:5,7|L:5,6|L:5,5|L:5,4|L:5,3|L:5,2|L:5,1|L:5,0|X</shape>
+     <shape>rectangle:6,0,1,1</shape>
+     <shape>rectangle:6,1,1,1</shape>
+     <shape>rectangle:6,2,1,1</shape>
+     <shape>rectangle:6,3,1,1</shape>
+     <shape>rectangle:6,4,1,1</shape>
+     <shape>rectangle:6,5,1,1</shape>
+     <shape>rectangle:6,6,1,1</shape>
+     <shape>rectangle:6,7,1,1</shape>
+     <shape>rectangle:6,8,1,1</shape>
+    </shaper>
+    <ids>0 1 2 3 4 5 6 7 8 9 10</ids>
+   </cells>
+   <cells rows="11" cols="1" cellWidth="400.0" cellHeight="80.0" border="false" id="secondary">
+    <style>
+     <font family="Verdana" size="32" />
+     <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="11" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="4.wav" />
+     <p>QUATRE-</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="20.wav" />
+     <p>QUATRE-VINGT-</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="11.wav" />
+     <p>QUATRE-VINGT-ONZE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="12.wav" />
+     <p>QUATRE-VINGT-DOUZE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="13.wav" />
+     <p>QUATRE-VINGT-TREIZE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="14.wav" />
+     <p>QUATRE-VINGT-QUATORZE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="15.wav" />
+     <p>QUATRE-VINGT-QUINZE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="16.wav" />
+     <p>QUATRE-VINGT-SEIZE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="17.wav" />
+     <p>QUATRE-VINGT-DIX-SEPT</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="18.wav" />
+     <p>QUATRE-VINGT-DIX-HUIT</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="19.wav" />
+     <p>QUATRE-VINGT-DIX-NEUF</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="res25.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Écris les numéros (en chiffres)</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Exellent!</p>
+    </cell>
+   </messages>
+   <settings margin="2" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="cuaderno.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="250.0" cellHeight="250.0" border="false" id="primary">
+    <style>
+     <font family="Verdana" size="35" />
+     <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="3.wav" />
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="6.wav" />
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="9.wav" />
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="12.wav" />
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="15.wav" />
+    </cell>
+    <cell id="5">
+     <media type="PLAY_AUDIO" level="1" file="18.wav" />
+    </cell>
+    <cell id="6">
+     <media type="PLAY_AUDIO" level="1" file="21.wav" />
+    </cell>
+    <cell id="7">
+     <media type="PLAY_AUDIO" level="1" file="24.wav" />
+    </cell>
+    <cell id="8">
+     <media type="PLAY_AUDIO" level="1" file="25.wav" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" cellWidth="250.0" cellHeight="250.0" border="true" id="answers">
+    <style>
+     <font family="Verdana" size="32" />
+     <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>3</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>15</p>
+    </cell>
+    <cell>
+     <p>18</p>
+    </cell>
+    <cell>
+     <p>21</p>
+    </cell>
+    <cell>
+     <p>24</p>
+    </cell>
+    <cell>
+     <p>25</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" cellWidth="250.0" cellHeight="250.0" border="false" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell image="3.gif" />
+    <cell image="6.gif" />
+    <cell image="9.gif" />
+    <cell image="12.gif" />
+    <cell image="15.gif" />
+    <cell image="18.gif" />
+    <cell image="21.gif" />
+    <cell image="24.gif" />
+    <cell image="25.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="res25_2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Rélie les audios aux numéros</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Excellent!</p>
+    </cell>
+   </messages>
+   <settings margin="2" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="cuaderno.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="100.0" cellHeight="100.0" border="false" id="primary">
+    <style>
+     <font family="Verdana" size="32" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="3.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="6.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="9.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="12.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="15.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="18.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="21.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="24.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="25.wav" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="33" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell image="3.gif" />
+    <cell image="6.gif" />
+    <cell image="9.gif" />
+    <cell image="12.gif" />
+    <cell image="15.gif" />
+    <cell image="18.gif" />
+    <cell image="21.gif" />
+    <cell image="24.gif" />
+    <cell image="25.gif" />
+   </cells>
+   <cells rows="3" cols="3" cellWidth="100.0" cellHeight="100.0" border="false" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell image="3.gif" />
+    <cell image="6.gif" />
+    <cell image="9.gif" />
+    <cell image="12.gif" />
+    <cell image="15.gif" />
+    <cell image="18.gif" />
+    <cell image="21.gif" />
+    <cell image="24.gif" />
+    <cell image="25.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="res50.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Écris les numéros (en lettres)</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Excellent!</p>
+    </cell>
+   </messages>
+   <settings margin="2" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="cuaderno.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="250.0" cellHeight="250.0" border="false" id="primary">
+    <style>
+     <font family="Verdana" size="35" />
+     <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="4.wav" />
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="7.wav" />
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="10.wav" />
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="13.wav" />
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="16.wav" />
+    </cell>
+    <cell id="5">
+     <media type="PLAY_AUDIO" level="1" file="19.wav" />
+    </cell>
+    <cell id="6">
+     <media type="PLAY_AUDIO" level="1" file="22.wav" />
+    </cell>
+    <cell id="7">
+     <media type="PLAY_AUDIO" level="1" file="25.wav" />
+    </cell>
+    <cell id="8">
+     <media type="PLAY_AUDIO" level="1" file="26.wav" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" cellWidth="250.0" cellHeight="250.0" border="true" id="answers">
+    <style>
+     <font family="Verdana" size="32" />
+     <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>quatre</p>
+    </cell>
+    <cell>
+     <p>sept</p>
+    </cell>
+    <cell>
+     <p>dix</p>
+    </cell>
+    <cell>
+     <p>treize</p>
+    </cell>
+    <cell>
+     <p>seize</p>
+    </cell>
+    <cell>
+     <p>dix-neuf</p>
+    </cell>
+    <cell>
+     <p>vingt-deux</p>
+    </cell>
+    <cell>
+     <p>vingt-cinq</p>
+    </cell>
+    <cell>
+     <p>vingt-six</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" cellWidth="250.0" cellHeight="250.0" border="false" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell image="4.gif" />
+    <cell image="7.gif" />
+    <cell image="10.gif" />
+    <cell image="13.gif" />
+    <cell image="16.gif" />
+    <cell image="19.gif" />
+    <cell image="22.gif" />
+    <cell image="25.gif" />
+    <cell image="26.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="res50_2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Rélie les audios aux numéros</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Excellent!</p>
+    </cell>
+   </messages>
+   <settings margin="2" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="cuaderno.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="100.0" cellHeight="100.0" border="false" id="primary">
+    <style>
+     <font family="Verdana" size="32" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="4.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="7.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="10.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="13.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="16.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="19.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="22.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="25.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="26.wav" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="33" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell image="4.gif" />
+    <cell image="7.gif" />
+    <cell image="10.gif" />
+    <cell image="13.gif" />
+    <cell image="16.gif" />
+    <cell image="19.gif" />
+    <cell image="22.gif" />
+    <cell image="25.gif" />
+    <cell image="26.gif" />
+   </cells>
+   <cells rows="3" cols="3" cellWidth="100.0" cellHeight="100.0" border="false" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell image="4.gif" />
+    <cell image="7.gif" />
+    <cell image="10.gif" />
+    <cell image="13.gif" />
+    <cell image="16.gif" />
+    <cell image="19.gif" />
+    <cell image="22.gif" />
+    <cell image="25.gif" />
+    <cell image="26.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="res75.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Écris les numéros (en lettres)</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Excellent!</p>
+    </cell>
+   </messages>
+   <settings margin="2" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="cuaderno.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="250.0" cellHeight="250.0" border="false" id="primary">
+    <style>
+     <font family="Verdana" size="35" />
+     <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="5.wav" />
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="8.wav" />
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="11.wav" />
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="14.wav" />
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="17.wav" />
+    </cell>
+    <cell id="5">
+     <media type="PLAY_AUDIO" level="1" file="20.wav" />
+    </cell>
+    <cell id="6">
+     <media type="PLAY_AUDIO" level="1" file="23.wav" />
+    </cell>
+    <cell id="7">
+     <media type="PLAY_AUDIO" level="1" file="26.wav" />
+    </cell>
+    <cell id="8">
+     <media type="PLAY_AUDIO" level="1" file="27.wav" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" cellWidth="250.0" cellHeight="250.0" border="true" id="answers">
+    <style>
+     <font family="Verdana" size="32" />
+     <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>cinq</p>
+    </cell>
+    <cell>
+     <p>huit</p>
+    </cell>
+    <cell>
+     <p>onze</p>
+    </cell>
+    <cell>
+     <p>quatorze</p>
+    </cell>
+    <cell>
+     <p>dix-sept</p>
+    </cell>
+    <cell>
+     <p>vingt</p>
+    </cell>
+    <cell>
+     <p>vingt-trois</p>
+    </cell>
+    <cell>
+     <p>vingt-six</p>
+    </cell>
+    <cell>
+     <p>vingt-sept</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" cellWidth="250.0" cellHeight="250.0" border="false" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell image="5.gif" />
+    <cell image="8.gif" />
+    <cell image="11.gif" />
+    <cell image="14.gif" />
+    <cell image="17.gif" />
+    <cell image="20.gif" />
+    <cell image="23.gif" />
+    <cell image="26.gif" />
+    <cell image="27.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="res75_2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Rélie les audios aux numéros</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Verdana" size="20" />
+      <color foreground="0x8000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Excellent!</p>
+    </cell>
+   </messages>
+   <settings margin="2" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="cuaderno.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="100.0" cellHeight="100.0" border="false" id="primary">
+    <style>
+     <font family="Verdana" size="32" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="5.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="8.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="11.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="14.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="17.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="20.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="23.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="26.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="27.wav" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="33" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell image="5.gif" />
+    <cell image="8.gif" />
+    <cell image="11.gif" />
+    <cell image="14.gif" />
+    <cell image="17.gif" />
+    <cell image="20.gif" />
+    <cell image="23.gif" />
+    <cell image="26.gif" />
+    <cell image="27.gif" />
+   </cells>
+   <cells rows="3" cols="3" cellWidth="100.0" cellHeight="100.0" border="false" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell image="5.gif" />
+    <cell image="8.gif" />
+    <cell image="11.gif" />
+    <cell image="14.gif" />
+    <cell image="17.gif" />
+    <cell image="20.gif" />
+    <cell image="23.gif" />
+    <cell image="26.gif" />
+    <cell image="27.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="10.gif" file="10.gif" animated="false" />
+  <media name="11.gif" file="11.gif" animated="false" />
+  <media name="12.gif" file="12.gif" animated="false" />
+  <media name="13.gif" file="13.gif" animated="false" />
+  <media name="14.gif" file="14.gif" animated="false" />
+  <media name="15.gif" file="15.gif" animated="false" />
+  <media name="16.gif" file="16.gif" animated="false" />
+  <media name="17.gif" file="17.gif" animated="false" />
+  <media name="18.gif" file="18.gif" animated="false" />
+  <media name="19.gif" file="19.gif" animated="false" />
+  <media name="20.gif" file="20.gif" animated="false" />
+  <media name="21.gif" file="21.gif" animated="false" />
+  <media name="22.gif" file="22.gif" animated="false" />
+  <media name="23.gif" file="23.gif" animated="false" />
+  <media name="24.gif" file="24.gif" animated="false" />
+  <media name="25.gif" file="25.gif" animated="false" />
+  <media name="26.gif" file="26.gif" animated="false" />
+  <media name="27.gif" file="27.gif" animated="false" />
+  <media name="3.gif" file="3.gif" animated="false" />
+  <media name="4.gif" file="4.gif" animated="false" />
+  <media name="5.gif" file="5.gif" animated="false" />
+  <media name="6.gif" file="6.gif" animated="false" />
+  <media name="7.gif" file="7.gif" animated="false" />
+  <media name="70.gif" file="70.gif" animated="false" />
+  <media name="8.gif" file="8.gif" animated="false" />
+  <media name="80.gif" file="80.gif" animated="false" />
+  <media name="9.gif" file="9.gif" animated="false" />
+  <media name="90.gif" file="90.gif" animated="false" />
+  <media name="centenas.gif" file="centenas.gif" animated="false" />
+  <media name="cuaderno.gif" file="cuaderno.gif" animated="false" />
+  <media name="et.gif" file="et.gif" animated="false" />
+  <media name="fin.gif" file="fin.gif" animated="false" />
+  <media name="manitas.gif" file="manitas.gif" animated="false" />
+  <media name="num70.gif" file="num70.gif" animated="false" />
+  <media name="num80.gif" file="num80.gif" animated="false" />
+  <media name="num90.gif" file="num90.gif" animated="false" />
+  <media name="numeros.gif" file="numeros.gif" animated="false" />
+  <media name="portada.gif" file="portada.gif" animated="false" />
+  <media name="01.wav" file="01.wav" />
+  <media name="1.wav" file="1.wav" />
+  <media name="10.wav" file="10.wav" />
+  <media name="100.wav" file="100.wav" />
+  <media name="11.wav" file="11.wav" />
+  <media name="12.wav" file="12.wav" />
+  <media name="13.wav" file="13.wav" />
+  <media name="14.wav" file="14.wav" />
+  <media name="15.wav" file="15.wav" />
+  <media name="16.wav" file="16.wav" />
+  <media name="17.wav" file="17.wav" />
+  <media name="18.wav" file="18.wav" />
+  <media name="19.wav" file="19.wav" />
+  <media name="2.wav" file="2.wav" />
+  <media name="20.wav" file="20.wav" />
+  <media name="21.wav" file="21.wav" />
+  <media name="22.wav" file="22.wav" />
+  <media name="23.wav" file="23.wav" />
+  <media name="24.wav" file="24.wav" />
+  <media name="25.wav" file="25.wav" />
+  <media name="26.wav" file="26.wav" />
+  <media name="27.wav" file="27.wav" />
+  <media name="28.wav" file="28.wav" />
+  <media name="29.wav" file="29.wav" />
+  <media name="3.wav" file="3.wav" />
+  <media name="30.wav" file="30.wav" />
+  <media name="4.wav" file="4.wav" />
+  <media name="40.wav" file="40.wav" />
+  <media name="5.wav" file="5.wav" />
+  <media name="50.wav" file="50.wav" />
+  <media name="6.wav" file="6.wav" />
+  <media name="60.wav" file="60.wav" />
+  <media name="7.wav" file="7.wav" />
+  <media name="70.wav" file="70.wav" />
+  <media name="8.wav" file="8.wav" />
+  <media name="80.wav" file="80.wav" />
+  <media name="9.wav" file="9.wav" />
+  <media name="90.wav" file="90.wav" />
+  <media name="et1.wav" file="et1.wav" />
+  <media name="et11.wav" file="et11.wav" />
+ </mediaBag>
+</JClicProject>
+

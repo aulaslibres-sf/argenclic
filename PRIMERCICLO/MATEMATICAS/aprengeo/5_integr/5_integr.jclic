@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="5_integr" version="0.1.3">
+ <settings>
+  <title>Aprengeo</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="2/23/06" />
+  <revision description="Conversión de Clic3 a JClic" date="3/27/06">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Nieves M. Vílchez" mail="nieves59@cantv.net" />
+  <language>español</language>
+  <description>
+   <p>Paquete de actividades para el aprendizaje de la geometría en educación primaria. Este extenso proyecto tiene 6 partes:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Preguntas y respuestas</p>
+   <p>&lt;LI&gt;Actividad dirigida</p>
+   <p>&lt;LI&gt;Explicación</p>
+   <p>&lt;LI&gt;Actividad libre</p>
+   <p>&lt;LI&gt;Ahora aprendemos</p>
+   <p>&lt;LI&gt;Saber más de...</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area="Matemáticas" level="Primaria (6-12)">geometría</descriptors>
+ </settings>
+ <sequence>
+  <item id="5_integr.pac" name="5_objet.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="puerta1.ass" />
+  <item name="3_act2.txa" />
+  <item name="3_act7.sop" />
+  <item name="3_act8.txa" />
+  <item name="5_act5.puz" />
+  <item name="5_act1.ass" />
+  <item name="5_act8.txa" />
+  <item name="elem.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@text.FillInBlanks" name="3_act2.txa" code="">
+   <description>
+    <p>IDENTIFICAR  ARISTAS Y VÉRTICES.</p>
+   </description>
+   <messages>
+    <cell type="previous">
+     <style>
+      <font family="dialog" size="32" bold="true" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="cadatapa.wav" />
+     <p>Haz  CLIC en el TEXTO  </p>
+    </cell>
+    <cell type="initial">
+     <style>
+      <font family="dialog" size="32" bold="true" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="r_corre.wav" />
+     <p>ESCOGE  LA RESPUESTA  CORRECTA.</p>
+    </cell>
+    <cell image="mano1.gif" type="final">
+     <style>
+      <font family="dialog" size="32" bold="true" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="fin.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="elemento.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <position x="49" y="2" />
+     <size width="700" height="259" />
+    </window>
+   </settings>
+   <prevScreen maxTime="30" />
+   <document>
+    <style name="default" background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" tabWidth="14" foreground="0x000000" bold="true" />
+    <style name="target" base="default" background="0xC0C0C0" target="true" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">Cada  tapa  del  </text>
+      <cell txtAlign="left,middle" imgAlign="left,middle" width="45" height="35" border="false" image="1_cubo.gif">
+       <style>
+        <font family="Arial" size="20" bold="true" />
+        <color foreground="0x004000" background="0xFFFFFF" inactive="0x00FF00" alternative="0x00FF00" />
+       </style>
+      </cell>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">  se le llama  </text>
+      <cell txtAlign="left,middle" imgAlign="left,middle" width="45" height="40" border="false" image="si.gif">
+       <style>
+        <font family="Arial" size="20" bold="true" />
+        <color foreground="0x004000" background="0xFFFFFF" inactive="0x00FF00" alternative="0x00FF00" />
+       </style>
+      </cell>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">.</text>
+     </p>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">Cada  esquina  del  cubo  se llama   </text>
+      <target>
+       <answer>VÉRTICE</answer>
+       <optionList>
+        <option>CARA</option>
+        <option>ARISTA</option>
+        <option>VÉRTICE</option>
+       </optionList>
+       <info mode="onError">
+        <media type="PLAY_AUDIO" level="1" file="vertice.wav" />
+       </info>
+       <text> VÉRTICE</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">.</text>
+     </p>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">Cada </text>
+      <cell txtAlign="left,middle" imgAlign="left,middle" width="60" height="40" border="false" image="segmento.gif">
+       <style>
+        <font family="Arial" size="20" bold="true" />
+        <color foreground="0x004000" background="0xFFFFFF" inactive="0x00FF00" alternative="0x00FF00" />
+       </style>
+      </cell>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">  del cubo se llama     </text>
+      <target>
+       <answer>ARISTA</answer>
+       <optionList>
+        <option>CARA</option>
+        <option>ARISTA</option>
+        <option>VÉRTICE</option>
+       </optionList>
+       <info mode="onError">
+        <media type="PLAY_AUDIO" level="1" file="arista.wav" />
+       </info>
+       <text>ARISTA</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">.</text>
+     </p>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="3_act7.sop">
+   <description>
+    <p>Elementos del CUBO</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="26" bold="true" />
+      <color foreground="0xFF0000" background="0x0000FF" />
+     </style>
+     <p>CONSIGUE LOS ELEMENTOS DE UN CUERPO</p>
+    </cell>
+    <cell image="mano1.gif" type="final">
+     <style>
+      <font family="Arial" size="26" bold="true" />
+      <color foreground="0xFF0000" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="pizarra1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <textGrid rows="6" columns="7" cellWidth="60.0" cellHeight="40.0" border="true">
+    <style>
+     <font family="Arial" size="23" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>**V***</row>
+     <row>**E***</row>
+     <row>CARA**</row>
+     <row>**T***</row>
+     <row>ARISTA</row>
+     <row>**C***</row>
+     <row>**E***</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">CARA</clue>
+    <clue id="1">ARISTA</clue>
+    <clue id="2">VERTICE</clue>
+   </clues>
+  </activity>
+  <activity class="@text.FillInBlanks" name="3_act8.txa" code="">
+   <description>
+    <p>Estudiar CARAS  ARISTAS Y VÉRTICES.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="dialog" size="32" bold="true" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="r_corre.wav" />
+     <p>ESCOGE  LA  RESPUESTA  CORRECTA.</p>
+    </cell>
+    <cell image="mano1.gif" type="final">
+     <style>
+      <font family="dialog" size="32" bold="true" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="fin.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="pizarra1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <position x="160" y="52" />
+     <size width="590" height="345" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" background="0xFFFFFF" family="Comic Sans MS" size="25" italic="false" tabWidth="14" foreground="0x000000" bold="true" />
+    <style name="target" base="default" background="0xC0C0C0" target="true" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="25" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Comic Sans MS" size="25" italic="false" bold="true" foreground="0x000000">- Cada </text>
+      <cell txtAlign="left,middle" imgAlign="left,middle" width="42" height="36" border="false" image="si.gif">
+       <style>
+        <font family="Arial" size="20" bold="true" />
+        <color foreground="0x004000" background="0xFFFFFF" inactive="0x00FF00" alternative="0x00FF00" />
+       </style>
+      </cell>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="25" italic="false" bold="true" foreground="0x000000">  del</text>
+      <cell txtAlign="left,middle" imgAlign="left,middle" width="65" height="60" border="false" image="1_cubo.gif">
+       <style>
+        <font family="Arial" size="20" bold="true" />
+        <color foreground="0x004000" background="0xFFFFFF" inactive="0x00FF00" alternative="0x00FF00" />
+       </style>
+       <media type="PLAY_AUDIO" level="1" file="cubo.wav" />
+      </cell>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="25" italic="false" bold="true" foreground="0x000000">  es un </text>
+      <target>
+       <answer>cuadrado</answer>
+       <optionList>
+        <option>triángulo</option>
+        <option>cuadrado</option>
+        <option>rectángulo</option>
+       </optionList>
+       <text>cuadrado</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="25" italic="false" bold="true" foreground="0x000000">.</text>
+     </p>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="25" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Comic Sans MS" size="25" italic="false" bold="true" foreground="0x000000">- Cada  arista  del  </text>
+      <cell txtAlign="left,middle" imgAlign="left,middle" width="65" height="65" border="false" image="1_cubo.gif">
+       <style>
+        <font family="Arial" size="20" bold="true" />
+        <color foreground="0x004000" background="0xFFFFFF" inactive="0x00FF00" alternative="0x00FF00" />
+       </style>
+       <media type="PLAY_AUDIO" level="1" file="cubo.wav" />
+      </cell>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="25" italic="false" bold="true" foreground="0x000000">  es un </text>
+      <cell txtAlign="left,middle" imgAlign="left,middle" width="60" height="30" border="false" image="segmento.gif">
+       <style>
+        <font family="Arial" size="20" bold="true" />
+        <color foreground="0x004000" background="0xFFFFFF" inactive="0x00FF00" alternative="0x00FF00" />
+       </style>
+      </cell>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="25" italic="false" bold="true" foreground="0x000000">  llamado </text>
+      <target>
+       <answer>segmento</answer>
+       <optionList>
+        <option>punto</option>
+        <option>segmento</option>
+        <option>cuadrado</option>
+       </optionList>
+       <text>segmento</text>
+      </target>
+     </p>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="25" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Comic Sans MS" size="25" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Comic Sans MS" size="25" italic="false" bold="true" foreground="0x000000">- Cada  </text>
+      <target>
+       <answer>vértice</answer>
+       <optionList>
+        <option>arista</option>
+        <option>vértice</option>
+        <option>cara</option>
+       </optionList>
+       <info mode="onError">
+        <media type="PLAY_AUDIO" level="1" file="vertice.wav" />
+       </info>
+       <text>vértice</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="25" italic="false" bold="true" foreground="0x000000"> es un </text>
+      <cell txtAlign="left,middle" imgAlign="left,middle" width="60" height="40" border="false" image="punto.gif">
+       <style>
+        <font family="Arial" size="20" bold="true" />
+        <color foreground="0x004000" background="0xFFFFFF" inactive="0x00FF00" alternative="0x00FF00" />
+       </style>
+      </cell>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="25" italic="false" bold="true" foreground="0x000000"> donde se unen dos líneas.</text>
+     </p>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="25" italic="false" bold="true" foreground="0x000000" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="5_act1.ass">
+   <description>
+    <p>Asocia  Nombre-Cuerpo</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="34" bold="true" />
+      <color foreground="0xFFFFFF" background="0x008000" />
+     </style>
+     <p>ASOCIA </p>
+    </cell>
+    <cell image="si.gif" type="final">
+     <style>
+      <font family="Arial" size="34" bold="true" />
+      <color foreground="0xFFFFFF" background="0x008000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="pizarra1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF00" border="false">
+     <position x="160" y="90" />
+    </window>
+   </settings>
+   <cells rows="2" cols="4" border="true" image="cuerpo1.gif" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0x004000" background="0x000000" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <ids>4 0 3 1 2 0 4 0</ids>
+   </cells>
+   <cells rows="1" cols="5" cellWidth="150.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>CUBO</p>
+    </cell>
+    <cell>
+     <p>CILINDRO</p>
+    </cell>
+    <cell>
+     <p>PIRÁMIDE CUADRADA</p>
+    </cell>
+    <cell>
+     <p>PIRÁMIDE TRÍANGULAR</p>
+    </cell>
+    <cell>
+     <p>ESFERA</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="150.0" cellHeight="170.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>ESFERA</p>
+    </cell>
+    <cell>
+     <p>CUBO</p>
+    </cell>
+    <cell>
+     <p>PIRÁMIDE TRÍANGULAR</p>
+    </cell>
+    <cell>
+     <p>CILINDRO</p>
+    </cell>
+    <cell>
+     <p>PIRÁMIDE CUADRADA</p>
+    </cell>
+    <cell>
+     <p>CUBO</p>
+    </cell>
+    <cell>
+     <p>ESFERA</p>
+    </cell>
+    <cell>
+     <p>CUBO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="5_act5.puz">
+   <description>
+    <p>Fase5. Explicacion</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0xFF0000" background="0xFFFF00" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="orde_c.wav" />
+     <p> ARMA LA FRASE</p>
+    </cell>
+    <cell image="mano1.gif" type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0xFF0000" background="0xFFFF00" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x008000">
+     <image name="pizarra1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF80" border="false" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="110.0" cellHeight="130.0" border="true">
+    <style>
+     <font family="Comic Sans MS" size="53" bold="true" />
+     <color foreground="0x400000" background="0xFFFFFF" inactive="0xFFFF00" alternative="0xFFFF00" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>Cada </p>
+    </cell>
+    <cell image="si.gif" />
+    <cell>
+     <p>de un</p>
+    </cell>
+    <cell image="1_cubo.gif" />
+    <cell>
+     <p>es  un</p>
+    </cell>
+    <cell>
+     <p>cuadrado.</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="5_act8.txa" code="">
+   <description>
+    <p>Estudiar elementos de la esfera</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="dialog" size="32" bold="true" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="r_corre.wav" />
+     <p>ESCOGE  LA RESPUESTA  CORRECTA.</p>
+    </cell>
+    <cell image="si.gif" type="final">
+     <style>
+      <font family="dialog" size="32" bold="true" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="pizarra1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <position x="150" y="50" />
+     <size width="605" height="330" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" background="0xFFFFFF" family="Comic Sans MS" size="24" italic="false" tabWidth="14" foreground="0x000000" bold="true" />
+    <style name="target" base="default" background="0xC0C0C0" target="true" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="24" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Comic Sans MS" size="24" italic="false" bold="true" foreground="0x000000">-La  </text>
+      <cell txtAlign="left,middle" imgAlign="left,middle" width="125" height="105" border="false" image="esfera.gif">
+       <style>
+        <font family="Arial" size="20" bold="true" />
+        <color foreground="0x004000" background="0xFFFFFF" inactive="0x00FF00" alternative="0x00FF00" />
+       </style>
+      </cell>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="24" italic="false" bold="true" foreground="0x000000">se distingue por  dos elementos: </text>
+     </p>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="24" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Comic Sans MS" size="24" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Comic Sans MS" size="24" italic="false" bold="true" foreground="0x000000">a) Un </text>
+      <cell txtAlign="left,middle" imgAlign="left,middle" width="60" height="25" border="false" image="punto.gif">
+       <style>
+        <font family="Arial" size="20" bold="true" />
+        <color foreground="0x004000" background="0xFFFFFF" inactive="0x00FF00" alternative="0x00FF00" />
+       </style>
+      </cell>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="24" italic="false" bold="true" foreground="0x000000"> llamado </text>
+      <target>
+       <answer>CENTRO</answer>
+       <optionList>
+        <option>CARA</option>
+        <option>CENTRO</option>
+        <option>RADIO</option>
+       </optionList>
+       <text>CENTRO</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="24" italic="false" bold="true" foreground="0x000000">  de la ESFERA.</text>
+     </p>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="24" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Comic Sans MS" size="24" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Comic Sans MS" size="24" italic="false" bold="true" foreground="0x000000">b) Un número  llamado </text>
+      <target>
+       <answer>RADIO</answer>
+       <optionList>
+        <option>CENTRO</option>
+        <option>CARA</option>
+        <option>RADIO</option>
+       </optionList>
+       <text>RADIO</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="24" italic="false" bold="true" foreground="0x000000">, que da la distancia del Centro  a cualquier </text>
+      <cell txtAlign="left,middle" imgAlign="left,middle" width="28" height="25" border="false" image="punto.gif">
+       <style>
+        <font family="Arial" size="20" bold="true" />
+        <color foreground="0x004000" background="0xFFFFFF" inactive="0x00FF00" alternative="0x00FF00" />
+       </style>
+      </cell>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="24" italic="false" bold="true" foreground="0x000000"> de la esfera.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="5_objet.ass">
+   <description>
+    <p>5-OBJETIVOS DE LA FASE 5.  NIVEL 0.Visualizacion.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="dialog" size="32" bold="true" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>  ¿Qué  hemos  aprendido?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="dialog" size="32" bold="true" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x004000">
+     <image name="pizarra.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="670.0" cellHeight="90.0" border="false">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>NIVEL  0: VISUALIZACIÓN    y   NIVEL 1: ANÁLISIS</p>
+    </cell>
+    <cell>
+     <p>FASE  5.  NOS PR0PONEMOS:</p>
+    </cell>
+    <cell>
+     <p>- Integrar  nuevos conceptos  y vocabulario mediante el análisis y síntesis de las actividades de fases anteriores..</p>
+    </cell>
+    <cell />
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="elem.ass" code="">
+   <description>
+    <p>Elementos de la esfera y el cubo</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="dialog" size="33" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>RELACIONA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="dialog" size="33" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>MUY  BIEN  ..!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" infoUrl="texcu.htm" report="true" reportActions="false">
+    <container bgColor="0x80FFFF">
+     <image name="pizarra1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF8000" border="true" />
+   </settings>
+   <cells rows="2" cols="1" border="true" image="eleesfe.gif" id="primary">
+    <style>
+     <font family="Arial" size="31" bold="true" />
+     <color background="0x80FF80" inactive="0x408080" alternative="0x408080" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <ids>1 0</ids>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="510.0" cellHeight="330.0" border="true" id="secondary">
+    <style>
+     <font family="Kristen ITC" size="36" />
+     <color background="0xFFFFFF" inactive="0xFF8000" alternative="0xFF8000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>Caras, Aristas  y Vértices</p>
+    </cell>
+    <cell>
+     <p>Centro  y   Radio</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="350.0" cellHeight="220.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell image="mano1.gif" />
+    <cell image="mano1.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="puerta1.ass">
+   <description>
+    <p>propuesta-portada 1</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFFFFFF" background="0xFF0000" />
+     </style>
+     <media type="PLAY_MIDI" level="2" file="music1.mid" />
+     <p>COMIENZAN  TUS   ACTIVIDADES</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFFFFFF" background="0xFF0000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x008000">
+     <image name="rompe.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFF00" border="false" />
+   </settings>
+   <cells rows="4" cols="1" border="false" image="por_alu.gif">
+    <style>
+     <font family="Comic Sans MS" size="33" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="1_cubo.gif" file="1_cubo.gif" />
+  <media name="cuerpo1.gif" file="cuerpo1.gif" />
+  <media name="eleesfe.gif" file="eleesfe.gif" />
+  <media name="elemento.gif" file="elemento.gif" />
+  <media name="esfera.gif" file="esfera.gif" />
+  <media name="mano1.gif" file="mano1.gif" />
+  <media name="pizarra.gif" file="pizarra.gif" />
+  <media name="pizarra1.gif" file="pizarra1.gif" />
+  <media name="por_alu.gif" file="por_alu.gif" />
+  <media name="punto.gif" file="punto.gif" />
+  <media name="rompe.gif" file="rompe.gif" />
+  <media name="segmento.gif" file="segmento.gif" />
+  <media name="si.gif" file="si.gif" />
+  <media name="music1.mid" file="music1.mid" />
+  <media name="cadatapa.wav" file="cadatapa.wav" />
+  <media name="cubo.wav" file="cubo.wav" />
+  <media name="fin.wav" file="fin.wav" />
+  <media name="muybien.wav" file="muybien.wav" />
+  <media name="orde_c.wav" file="orde_c.wav" />
+  <media name="r_corre.wav" file="r_corre.wav" />
+ </mediaBag>
+</JClicProject>
+

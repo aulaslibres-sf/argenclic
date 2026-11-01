@@ -1,0 +1,1865 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="num2cif" version="0.1.3">
+ <settings>
+  <title>Numeración</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="10/24/02" />
+  <revision description="Conversión de Clic3 a JClic" date="12/16/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Virgilio Pedraz Hernández" mail="vpedraz@roble.pntic.mec.es" />
+  <organization name="CRA Vía de la Plata" city="La Garganta" state="Extremadura" />
+  <language>español</language>
+  <description>
+   <p>Paquete de actividades para trabajar:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;lectura y escritura de números</p>
+   <p>&lt;LI&gt;números anterior y posterior</p>
+   <p>&lt;LI&gt;ordenación</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area="Matemáticas" level="Primaria">análisis numérico</descriptors>
+ </settings>
+ <sequence>
+  <item id="num2cif.pac" name="presen.ass" delay="4">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="a1.ass" delay="4" />
+  <item name="a2.ass" delay="4" />
+  <item name="a9.ass" delay="4" />
+  <item name="a11.ass" delay="4" />
+  <item name="a10.ass" delay="4" />
+  <item name="a12.ass" delay="4" />
+  <item name="s1.sop" delay="4" />
+  <item name="a3.ass" delay="4" />
+  <item name="a4.ass" delay="4" />
+  <item name="a5.ass" delay="4" />
+  <item name="a7.ass" delay="4" />
+  <item name="a6.ass" delay="4" />
+  <item name="a8.ass" delay="4" />
+  <item name="t2.txa" delay="4" />
+  <item name="t4.txa" delay="4" />
+  <item name="t3.txa" delay="4" />
+  <item name="t5.txa" delay="4" />
+  <item name="t1.txa" delay="4" />
+  <item name="a15.ass" delay="4" />
+  <item name="a14.ass" delay="4" />
+  <item name="a16.ass" delay="4" />
+  <item name="c1.crw" delay="4" />
+  <item name="a17.ass" delay="4" />
+  <item name="a13.ass" delay="4" />
+  <item name="pucele.puz" delay="4">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="presen.ass">
+   <description>
+    <p>PRESENTACIÓN</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>NÚMEROS DE DOS CIFRAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x0080FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="calzada.jpg">
+    <style>
+     <font family="Arial" size="53" bold="true" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="a1.ass">
+   <description>
+    <p>leer números hasta 100</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>¿Cómo se lee cada número?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="14" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="53" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="14" />
+    <cell>
+     <p>17</p>
+    </cell>
+    <cell>
+     <p>20</p>
+    </cell>
+    <cell>
+     <p>84</p>
+    </cell>
+    <cell>
+     <p>91</p>
+    </cell>
+    <cell>
+     <p>37</p>
+    </cell>
+    <cell>
+     <p>76</p>
+    </cell>
+    <cell>
+     <p>48</p>
+    </cell>
+    <cell>
+     <p>67</p>
+    </cell>
+    <cell>
+     <p>23</p>
+    </cell>
+    <cell>
+     <p>56</p>
+    </cell>
+    <cell>
+     <p>66</p>
+    </cell>
+    <cell>
+     <p>90</p>
+    </cell>
+    <cell>
+     <p>16</p>
+    </cell>
+    <cell>
+     <p>89</p>
+    </cell>
+   </cells>
+   <cells rows="14" cols="1" cellWidth="700.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="53" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="14" />
+    <cell>
+     <p>diecisiete</p>
+    </cell>
+    <cell>
+     <p>veinte</p>
+    </cell>
+    <cell>
+     <p>ochenta y cuatro</p>
+    </cell>
+    <cell>
+     <p>noventa y uno</p>
+    </cell>
+    <cell>
+     <p>treinta y siete</p>
+    </cell>
+    <cell>
+     <p>setenta y seis</p>
+    </cell>
+    <cell>
+     <p>cuarenta y ocho</p>
+    </cell>
+    <cell>
+     <p>sesenta y siete</p>
+    </cell>
+    <cell>
+     <p>veintitres</p>
+    </cell>
+    <cell>
+     <p>cincuenta y seis</p>
+    </cell>
+    <cell>
+     <p>sesenta y seis</p>
+    </cell>
+    <cell>
+     <p>noventa</p>
+    </cell>
+    <cell>
+     <p>dieciseis</p>
+    </cell>
+    <cell>
+     <p>ochenta y nueve</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="a2.ass">
+   <description>
+    <p>escribir números (hasta el cien) con cifras</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Escribe los números</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>¡Así se hace!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="10" cols="1" cellWidth="480.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="53" bold="true" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="10" />
+    <cell>
+     <p>Ochenta y cinco</p>
+    </cell>
+    <cell>
+     <p>Veinte</p>
+    </cell>
+    <cell>
+     <p>Doce</p>
+    </cell>
+    <cell>
+     <p>Cuarenta y siete</p>
+    </cell>
+    <cell>
+     <p>Veinticuatro</p>
+    </cell>
+    <cell>
+     <p>Noventa y seis</p>
+    </cell>
+    <cell>
+     <p>Setenta</p>
+    </cell>
+    <cell>
+     <p>Treinta y ocho</p>
+    </cell>
+    <cell>
+     <p>Cincuenta y dos</p>
+    </cell>
+    <cell>
+     <p>Veinticinco</p>
+    </cell>
+   </cells>
+   <cells rows="10" cols="1" cellWidth="235.0" cellHeight="235.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="53" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="10" />
+    <cell>
+     <p>85</p>
+    </cell>
+    <cell>
+     <p>20</p>
+    </cell>
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>47</p>
+    </cell>
+    <cell>
+     <p>24</p>
+    </cell>
+    <cell>
+     <p>96</p>
+    </cell>
+    <cell>
+     <p>70</p>
+    </cell>
+    <cell>
+     <p>38</p>
+    </cell>
+    <cell>
+     <p>52</p>
+    </cell>
+    <cell>
+     <p>25</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="a9.ass">
+   <description>
+    <p>lectura del 18</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>¿Cómo se escribe 18? </p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Estupendo</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="520.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="53" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="0">
+     <p>dieziocho</p>
+    </cell>
+    <cell id="0">
+     <p>diez y ocho</p>
+    </cell>
+    <cell id="1">
+     <p>dieciocho</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="a11.ass">
+   <description>
+    <p>lectura del 35</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>¿Cómo se lee el número 35?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Estupendo</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="520.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="53" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="1">
+     <p>treinta y cinco</p>
+    </cell>
+    <cell id="0">
+     <p>trenta y cinco</p>
+    </cell>
+    <cell id="0">
+     <p>treintaicinco</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="a10.ass">
+   <description>
+    <p>lectura del 22</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>¿Cómo se lee el número 22?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Estupendo</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="520.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="53" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="1">
+     <p>veintidos</p>
+    </cell>
+    <cell id="0">
+     <p>ventidos</p>
+    </cell>
+    <cell id="0">
+     <p>veinte y dos</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="a12.ass">
+   <description>
+    <p>lectura del 78</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>¿Cómo se lee el número 78?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Estupendo</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="520.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="53" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="1">
+     <p>setenta y ocho</p>
+    </cell>
+    <cell id="0">
+     <p>seteinta y ocho</p>
+    </cell>
+    <cell id="0">
+     <p>sesenta y ocho</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="s1.sop">
+   <description>
+    <p>Buscar números en una sopa</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Busca los números 0 4 7 10 12 15 18 20 70 y 90</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>EXCELENTE</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <textGrid rows="10" columns="10" cellWidth="140.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color foreground="0x008000" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <text>
+     <row>DOCE******</row>
+     <row>I*********</row>
+     <row>E*V*******</row>
+     <row>ZCEROS**C*</row>
+     <row>**I**I**U*</row>
+     <row>**NOVENTA*</row>
+     <row>SETENTA*T*</row>
+     <row>**E**E**R*</row>
+     <row>DIECIOCHO*</row>
+     <row>QUINCE****</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">CERO</clue>
+    <clue id="1">CUATRO</clue>
+    <clue id="2">SIETE</clue>
+    <clue id="3">DIEZ</clue>
+    <clue id="4">DOCE</clue>
+    <clue id="5">QUINCE</clue>
+    <clue id="6">DIECIOCHO</clue>
+    <clue id="7">VEINTE</clue>
+    <clue id="8">SETENTA</clue>
+    <clue id="9">NOVENTA</clue>
+   </clues>
+  </activity>
+  <activity class="@text.WrittenAnswer" name="a3.ass">
+   <description>
+    <p>escribir el anterior</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Escribe el número anterior</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>¡Fenómeno!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="10" cols="1" cellWidth="235.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="53" bold="true" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="10" />
+    <cell>
+     <p>19</p>
+    </cell>
+    <cell>
+     <p>81</p>
+    </cell>
+    <cell>
+     <p>92</p>
+    </cell>
+    <cell>
+     <p>61</p>
+    </cell>
+    <cell>
+     <p>39</p>
+    </cell>
+    <cell>
+     <p>40</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>99</p>
+    </cell>
+    <cell>
+     <p>90</p>
+    </cell>
+   </cells>
+   <cells rows="10" cols="1" cellWidth="235.0" cellHeight="235.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="53" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="10" />
+    <cell>
+     <p>18</p>
+    </cell>
+    <cell>
+     <p>80</p>
+    </cell>
+    <cell>
+     <p>91</p>
+    </cell>
+    <cell>
+     <p>60</p>
+    </cell>
+    <cell>
+     <p>38</p>
+    </cell>
+    <cell>
+     <p>39</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>98</p>
+    </cell>
+    <cell>
+     <p>89</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="a4.ass">
+   <description>
+    <p>Escribir el posterior</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Escribe el número posterior</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Genial</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="10" cols="1" cellWidth="235.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="53" bold="true" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="10" />
+    <cell>
+     <p>19</p>
+    </cell>
+    <cell>
+     <p>81</p>
+    </cell>
+    <cell>
+     <p>92</p>
+    </cell>
+    <cell>
+     <p>61</p>
+    </cell>
+    <cell>
+     <p>39</p>
+    </cell>
+    <cell>
+     <p>40</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>99</p>
+    </cell>
+    <cell>
+     <p>90</p>
+    </cell>
+   </cells>
+   <cells rows="10" cols="1" cellWidth="235.0" cellHeight="235.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="53" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="10" />
+    <cell>
+     <p>20</p>
+    </cell>
+    <cell>
+     <p>82</p>
+    </cell>
+    <cell>
+     <p>93</p>
+    </cell>
+    <cell>
+     <p>62</p>
+    </cell>
+    <cell>
+     <p>40</p>
+    </cell>
+    <cell>
+     <p>41</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>11</p>
+    </cell>
+    <cell>
+     <p>100</p>
+    </cell>
+    <cell>
+     <p>91</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="a5.ass">
+   <description>
+    <p>Identificar el menor</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Señala el número menor</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="53" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="0">
+     <p>38</p>
+    </cell>
+    <cell id="0">
+     <p>30</p>
+    </cell>
+    <cell id="1">
+     <p>29</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>29</p>
+    </cell>
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="a7.ass">
+   <description>
+    <p>Identificar el mayor</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Señala el número mayor</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="53" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="0">
+     <p>79</p>
+    </cell>
+    <cell id="0">
+     <p>70</p>
+    </cell>
+    <cell id="1">
+     <p>81</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>29</p>
+    </cell>
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="a6.ass">
+   <description>
+    <p>Identificar el menor</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Señala el número menor</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="53" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="1">
+     <p>43</p>
+    </cell>
+    <cell id="0">
+     <p>45</p>
+    </cell>
+    <cell id="0">
+     <p>46</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>29</p>
+    </cell>
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="a8.ass">
+   <description>
+    <p>Identificar el mayor</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Señala el número mayor</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="53" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="0">
+     <p>18</p>
+    </cell>
+    <cell id="0">
+     <p>16</p>
+    </cell>
+    <cell id="1">
+     <p>19</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>29</p>
+    </cell>
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@text.Order" name="t2.txa" type="orderWords">
+   <description>
+    <p>Ordenar de menor a mayor</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Ordena de menor a mayor</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Lo has hecho bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true">
+     <size width="581" height="120" />
+    </window>
+   </settings>
+   <checkButton>Pulsa aquí cuando termines</checkButton>
+   <document>
+    <style name="default" bold="false" italic="false" background="0xC0C0C0" family="Arial" foreground="0x0000FF" size="53" tabWidth="18" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <target>29</target>
+      <text> </text>
+      <target>30</target>
+      <text> </text>
+      <target>35</target>
+      <text> </text>
+      <target>38</target>
+      <text> </text>
+      <target>42</target>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@text.Order" name="t4.txa" type="orderWords">
+   <description>
+    <p>ordenar de mayor a menor</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Ordena de mayor a menor</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true">
+     <size width="581" height="120" />
+    </window>
+   </settings>
+   <checkButton>Pulsa aquí cuando termines</checkButton>
+   <document>
+    <style name="default" bold="false" italic="false" background="0xC0C0C0" family="Arial" foreground="0x0000FF" size="53" tabWidth="18" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <target>96</target>
+      <text> </text>
+      <target>69</target>
+      <text> </text>
+      <target>54</target>
+      <text> </text>
+      <target>45</target>
+      <text> </text>
+      <target>40</target>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@text.Order" name="t3.txa" type="orderWords">
+   <description>
+    <p>Ordenar de menor a mayor</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Ordena de menor a mayor</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Lo has hecho bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true">
+     <size width="581" height="120" />
+    </window>
+   </settings>
+   <checkButton>Pulsa aquí cuando termines</checkButton>
+   <document>
+    <style name="default" bold="false" italic="false" background="0xC0C0C0" family="Arial" foreground="0x0000FF" size="53" tabWidth="18" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text>50 </text>
+      <target>67</target>
+      <text> </text>
+      <target>76</target>
+      <text> </text>
+      <target>87</target>
+      <text> </text>
+      <target>90</target>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@text.Order" name="t5.txa" type="orderWords">
+   <description>
+    <p>ordenar de mayor a menor</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Ordena de mayor a menor</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Eres muy bueno</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true">
+     <size width="581" height="120" />
+    </window>
+   </settings>
+   <checkButton>Pulsa aquí cuando termines</checkButton>
+   <document>
+    <style name="default" bold="false" italic="false" background="0xC0C0C0" family="Arial" foreground="0x0000FF" size="53" tabWidth="18" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <target>60</target>
+      <text> </text>
+      <target>59</target>
+      <text> </text>
+      <target>51</target>
+      <text> </text>
+      <target>50</target>
+      <text> </text>
+      <target>49</target>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="t1.txa">
+   <description>
+    <p>decena</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Completa</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>¡Sí!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" bold="false" italic="false" background="0xC0C0C0" family="Arial" foreground="0x0000FF" size="53" tabWidth="16" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text>Diez unidades forman una </text>
+      <target>
+       <answer>decena</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text>decena</text>
+      </target>
+      <text>.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="a15.ass">
+   <description>
+    <p>Escribir un número dándonos sus cifras</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="37" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Escribe los números que tienen las cifras que se indican</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="37" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="9" cols="1" cellWidth="640.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="9" />
+    <cell>
+     <p>2 decenas y 1 unidad</p>
+    </cell>
+    <cell>
+     <p>5 decenas y 2 unidades</p>
+    </cell>
+    <cell>
+     <p>7 unidades y 6 decenas</p>
+    </cell>
+    <cell>
+     <p>7 decenas y 6 unidades</p>
+    </cell>
+    <cell>
+     <p>4 unidades y 8 decenas</p>
+    </cell>
+    <cell>
+     <p>5 unidades y 4 decenas</p>
+    </cell>
+    <cell>
+     <p>3 decenas y 8 unidades</p>
+    </cell>
+    <cell>
+     <p>1 decena y 9 unidades</p>
+    </cell>
+    <cell>
+     <p>3 unidades y 9 decenas</p>
+    </cell>
+   </cells>
+   <cells rows="9" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="53" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="9" />
+    <cell>
+     <p>21</p>
+    </cell>
+    <cell>
+     <p>52</p>
+    </cell>
+    <cell>
+     <p>67</p>
+    </cell>
+    <cell>
+     <p>76</p>
+    </cell>
+    <cell>
+     <p>84</p>
+    </cell>
+    <cell>
+     <p>45</p>
+    </cell>
+    <cell>
+     <p>38</p>
+    </cell>
+    <cell>
+     <p>19</p>
+    </cell>
+    <cell>
+     <p>93</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="a14.ass">
+   <description>
+    <p>Identificar la cifra de las decenas</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Escribe cuántas decenas hay en cada número</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Sigue así</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="9" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="9" />
+    <cell>
+     <p>21</p>
+    </cell>
+    <cell>
+     <p>52</p>
+    </cell>
+    <cell>
+     <p>67</p>
+    </cell>
+    <cell>
+     <p>76</p>
+    </cell>
+    <cell>
+     <p>84</p>
+    </cell>
+    <cell>
+     <p>45</p>
+    </cell>
+    <cell>
+     <p>38</p>
+    </cell>
+    <cell>
+     <p>19</p>
+    </cell>
+    <cell>
+     <p>93</p>
+    </cell>
+   </cells>
+   <cells rows="9" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="53" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="9" />
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>3</p>
+    </cell>
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="a16.ass">
+   <description>
+    <p>Identificar la cifra de las unidades</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Escribe la cifra de las unidades</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Vale</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="9" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="9" />
+    <cell>
+     <p>21</p>
+    </cell>
+    <cell>
+     <p>52</p>
+    </cell>
+    <cell>
+     <p>67</p>
+    </cell>
+    <cell>
+     <p>76</p>
+    </cell>
+    <cell>
+     <p>84</p>
+    </cell>
+    <cell>
+     <p>45</p>
+    </cell>
+    <cell>
+     <p>38</p>
+    </cell>
+    <cell>
+     <p>19</p>
+    </cell>
+    <cell>
+     <p>93</p>
+    </cell>
+   </cells>
+   <cells rows="9" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="53" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="9" />
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>3</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.CrossWord" name="c1.crw">
+   <description>
+    <p>Crucigrama</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>CRUCIGRAMA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>GENIAL</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <textGrid rows="6" columns="6" cellWidth="140.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color foreground="0x0000FF" inactive="0x400040" alternative="0x400040" />
+    </style>
+    <text>
+     <row>DECENA</row>
+     <row>O*****</row>
+     <row>CIEN**</row>
+     <row>E*****</row>
+     <row>NUEVE*</row>
+     <row>A*****</row>
+    </text>
+   </textGrid>
+   <cells rows="6" cols="1" cellWidth="200.0" cellHeight="75.0" border="false" id="acrossClues">
+    <style>
+     <font family="Arial" size="53" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <cell id="0" item="0">
+     <p>Diez unidades.</p>
+    </cell>
+    <cell id="1" item="0">
+     <p>Cero</p>
+    </cell>
+    <cell id="2" item="0">
+     <p>50+50</p>
+    </cell>
+    <cell id="3" item="0">
+     <p>La segunda vocal</p>
+    </cell>
+    <cell id="4" item="0">
+     <p>El anterior al 10</p>
+    </cell>
+    <cell id="5" item="0">
+     <p>La primera letra</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="200.0" cellHeight="75.0" border="false" id="downClues">
+    <style>
+     <font family="Arial" size="53" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <cell id="0" item="0">
+     <p>Doce cosas</p>
+    </cell>
+    <cell id="1" item="0">
+     <p> </p>
+    </cell>
+    <cell id="2" item="0">
+     <p> </p>
+    </cell>
+    <cell id="3" item="0">
+     <p> </p>
+    </cell>
+    <cell id="4" item="0">
+     <p> </p>
+    </cell>
+    <cell id="5" item="0">
+     <p> </p>
+    </cell>
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="a17.ass">
+   <description>
+    <p>decena más próxima</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>¿De qué decena está más cerca cada número?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>GUAY</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="3" cols="4" cellWidth="135.0" cellHeight="135.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="53" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell id="0">
+     <p>7</p>
+    </cell>
+    <cell id="2">
+     <p>28</p>
+    </cell>
+    <cell id="2">
+     <p>32</p>
+    </cell>
+    <cell id="4">
+     <p>47</p>
+    </cell>
+    <cell id="4">
+     <p>51</p>
+    </cell>
+    <cell id="6">
+     <p>67</p>
+    </cell>
+    <cell id="7">
+     <p>78</p>
+    </cell>
+    <cell id="7">
+     <p>82</p>
+    </cell>
+    <cell id="3">
+     <p>36</p>
+    </cell>
+    <cell id="6">
+     <p>66</p>
+    </cell>
+    <cell id="8">
+     <p>93</p>
+    </cell>
+    <cell id="1">
+     <p>19</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" cellWidth="100.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="53" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>20</p>
+    </cell>
+    <cell>
+     <p>30</p>
+    </cell>
+    <cell>
+     <p>40</p>
+    </cell>
+    <cell>
+     <p>50</p>
+    </cell>
+    <cell>
+     <p>60</p>
+    </cell>
+    <cell>
+     <p>70</p>
+    </cell>
+    <cell>
+     <p>80</p>
+    </cell>
+    <cell>
+     <p>90</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="a13.ass">
+   <description>
+    <p>Operaciones</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Haz las cuentas y busca el resultado</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>EXTRAORDINARIO</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="3" cols="4" cellWidth="500.0" cellHeight="500.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="53" bold="true" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell id="0">
+     <p>5+4</p>
+    </cell>
+    <cell id="1">
+     <p>7+3</p>
+    </cell>
+    <cell id="2">
+     <p>20+10</p>
+    </cell>
+    <cell id="3">
+     <p>25+20</p>
+    </cell>
+    <cell id="4">
+     <p>50+50</p>
+    </cell>
+    <cell id="5">
+     <p>25+25</p>
+    </cell>
+    <cell id="6">
+     <p>10-7</p>
+    </cell>
+    <cell id="7">
+     <p>10-3</p>
+    </cell>
+    <cell id="8">
+     <p>16-8</p>
+    </cell>
+    <cell id="9">
+     <p>90-30</p>
+    </cell>
+    <cell id="10">
+     <p>15+40</p>
+    </cell>
+    <cell id="11">
+     <p>26+45</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="4" cellWidth="470.0" cellHeight="470.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="53" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>30</p>
+    </cell>
+    <cell>
+     <p>45</p>
+    </cell>
+    <cell>
+     <p>100</p>
+    </cell>
+    <cell>
+     <p>50</p>
+    </cell>
+    <cell>
+     <p>3</p>
+    </cell>
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>60</p>
+    </cell>
+    <cell>
+     <p>55</p>
+    </cell>
+    <cell>
+     <p>71</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="pucele.puz">
+   <description>
+    <p>puzzle</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Haz el puzzle</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>¡GUAY DEL PARAGUAY!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="decena.jpg">
+    <style>
+     <font family="Arial" size="53" bold="true" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="calzada.jpg" file="calzada.jpg" />
+  <media name="decena.jpg" file="decena.jpg" />
+ </mediaBag>
+</JClicProject>
+

@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="volums2e" version="0.1.3">
+ <settings>
+  <title>volums2e</title>
+  <revision description="created" date="6/3/02" />
+  <descriptors />
+ </settings>
+ <sequence>
+  <item id="volums2e.pac" name="paq37int.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="volu0.ass" />
+  <item name="volu1.ass" />
+  <item name="volu11.ass" />
+  <item name="volu2.ass" />
+  <item name="volu22.ass" />
+  <item name="volu3.ass" />
+  <item name="volu4.ass" />
+  <item name="supe1.ass" />
+  <item name="supe11.ass" />
+  <item name="supe2.ass" />
+  <item name="supe3.ass" />
+  <item name="supvol1.ass" />
+  <item name="paq37fi.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="paq37fi.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic sobre la flecha de la derecha para volver al menú         &gt;&gt;&gt;</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="portada1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="60.0" border="false">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>FIN DEL PAQUETE 37</p>
+    </cell>
+    <cell>
+     <p>VOLUMENES Y ÁREAS DE CUERPOS</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="paq37int.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic sobre la flecha para iniciar el paquete de actividades         &gt;&gt;&gt;</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="portada1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="60.0" border="false">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>GEOCLIC - PAQUETE 37</p>
+    </cell>
+    <cell>
+     <p>VOLUMENES Y ÁREAS DE CUERPOS</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="supe1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>En cada casilla tienes dibujado un poliedro y su desarrollo plano. ¿Cómo calcularías el área total de cada poliedro?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="supe1a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <ids>0 1 1 2</ids>
+   </cells>
+   <cells rows="8" cols="1" cellWidth="150.0" cellHeight="53.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="8" />
+    <cell>
+     <p>6a²</p>
+    </cell>
+    <cell>
+     <p>2a²+ 4ab</p>
+    </cell>
+    <cell>
+     <p>2ab+2ac+2bc</p>
+    </cell>
+    <cell>
+     <p>a³</p>
+    </cell>
+    <cell>
+     <p>a²b</p>
+    </cell>
+    <cell>
+     <p>abc</p>
+    </cell>
+    <cell>
+     <p>a²+ b²+ c²</p>
+    </cell>
+    <cell>
+     <p>3a+3b+3c</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="supe11.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>En cada casilla tienes dibujado un poliedro y su desarrollo plano. ¿Cuánto vale el área total de cada poliedro?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="supe11a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <cells rows="2" cols="2" cellWidth="100.0" cellHeight="50.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>54</p>
+    </cell>
+    <cell>
+     <p>48</p>
+    </cell>
+    <cell>
+     <p>30</p>
+    </cell>
+    <cell>
+     <p>62</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="supe2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>En cada casilla tienes dibujado un poliedro y su desarrollo plano. ¿Cómo calcularías el área total de cada poliedro?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="supe2a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <ids>2 3 4 6</ids>
+   </cells>
+   <cells rows="8" cols="1" cellWidth="150.0" cellHeight="53.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="8" />
+    <cell>
+     <p>abc</p>
+    </cell>
+    <cell>
+     <p>4bc+4ba</p>
+    </cell>
+    <cell>
+     <p>5bc+5ba</p>
+    </cell>
+    <cell>
+     <p>6bc+6ba</p>
+    </cell>
+    <cell>
+     <p>8bc+8ba</p>
+    </cell>
+    <cell>
+     <p>¶r²c</p>
+    </cell>
+    <cell>
+     <p>2¶rc+2¶r²</p>
+    </cell>
+    <cell>
+     <p>a²+b²+c²</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="supe3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>En cada casilla tienes dibujado un poliedro y su desarrollo plano. ¿Cómo calcularías el área total de cada poliedro?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="supe3a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <ids>0 1 4 3</ids>
+   </cells>
+   <cells rows="6" cols="1" border="true" image="supe3b.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="supvol1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Responde a los interrogantes de la ventana de la izquierda.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="6" cols="5" border="false" image="supvol1a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="5" rows="6" showEnclosure="true" scaleX="5.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,5,6</shape>
+     </enclosing>
+     <shape>rectangle:3,0,1,1</shape>
+     <shape>rectangle:3,1,1,1</shape>
+     <shape>rectangle:3,2,1,1</shape>
+     <shape>rectangle:4,2,1,1</shape>
+     <shape>rectangle:3,3,1,1</shape>
+     <shape>rectangle:4,3,1,1</shape>
+     <shape>M:3,4|L:3,5|L:3,6|L:4,6|L:4,5|L:4,4|X</shape>
+     <shape>rectangle:4,4,1,1</shape>
+     <shape>rectangle:4,5,1,1</shape>
+    </shaper>
+    <ids>0 1 2 3 4 5 6 3 5</ids>
+   </cells>
+   <cells rows="8" cols="2" border="false" image="supvol1b.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="2" rows="8" showEnclosure="true" scaleX="2.0" scaleY="8.0">
+     <enclosing>
+      <shape>rectangle:0,0,2,8</shape>
+     </enclosing>
+     <shape>rectangle:1,1,1,1</shape>
+     <shape>rectangle:0,0,1,1</shape>
+     <shape>rectangle:1,3,1,1</shape>
+     <shape>rectangle:0,7,1,1</shape>
+     <shape>rectangle:1,6,1,1</shape>
+     <shape>rectangle:1,7,1,1</shape>
+     <shape>rectangle:0,5,1,1</shape>
+    </shaper>
+   </cells>
+   <cells rows="6" cols="5" border="false" image="supvol1c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="5" rows="6" showEnclosure="true" scaleX="5.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,5,6</shape>
+     </enclosing>
+     <shape>rectangle:3,0,1,1</shape>
+     <shape>rectangle:3,1,1,1</shape>
+     <shape>rectangle:3,2,1,1</shape>
+     <shape>rectangle:4,2,1,1</shape>
+     <shape>rectangle:3,3,1,1</shape>
+     <shape>rectangle:4,3,1,1</shape>
+     <shape>M:3,4|L:3,5|L:3,6|L:4,6|L:4,5|L:4,4|X</shape>
+     <shape>rectangle:4,4,1,1</shape>
+     <shape>rectangle:4,5,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="volu0.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Cómo calcularías el volumen de estos cuerpos?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="4" border="true" image="volu0a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <ids>0 0 0 0 1 1 1 1 0 0 0 1 1 2 2 2</ids>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="200.0" cellHeight="145.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>ÁREA DE LA BASE POR LA ALTURA</p>
+    </cell>
+    <cell>
+     <p>UN TERCIO DE ÁREA DE LA BASE POR LA ALTURA</p>
+    </cell>
+    <cell>
+     <p>HACIENDO UN CÁLCULO DISTINTO DE LOS DOS ANTERIORES</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="volu1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Cómo calcularías el volumen de estos cuerpos?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" border="true" image="volu1a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <ids>3 8 2 7 1 5</ids>
+   </cells>
+   <cells rows="5" cols="2" border="true" image="volu1b.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="volu11.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Qué volumen tiene estos cuerpos?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" border="true" image="volu11a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <ids>11 9 6 12 23 20</ids>
+   </cells>
+   <cells rows="8" cols="3" cellWidth="54.0" cellHeight="54.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="8" />
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>15</p>
+    </cell>
+    <cell>
+     <p>16</p>
+    </cell>
+    <cell>
+     <p>18</p>
+    </cell>
+    <cell>
+     <p>20</p>
+    </cell>
+    <cell>
+     <p>24</p>
+    </cell>
+    <cell>
+     <p>25</p>
+    </cell>
+    <cell>
+     <p>27</p>
+    </cell>
+    <cell>
+     <p>30</p>
+    </cell>
+    <cell>
+     <p>32</p>
+    </cell>
+    <cell>
+     <p>36</p>
+    </cell>
+    <cell>
+     <p>¶</p>
+    </cell>
+    <cell>
+     <p>4¶</p>
+    </cell>
+    <cell>
+     <p>8¶</p>
+    </cell>
+    <cell>
+     <p>12¶</p>
+    </cell>
+    <cell>
+     <p>14¶</p>
+    </cell>
+    <cell>
+     <p>16¶</p>
+    </cell>
+    <cell>
+     <p>20¶</p>
+    </cell>
+    <cell>
+     <p>24¶</p>
+    </cell>
+    <cell>
+     <p>36¶</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="volu2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Cómo calcularías el volumen de estos cuerpos?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" border="true" image="volu2a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <ids>9 7 9 7 5 5</ids>
+   </cells>
+   <cells rows="5" cols="2" border="true" image="volu2b.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="volu22.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Qué volumen tienen estos cuerpos?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" border="true" image="volu22a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <ids>4 8 2 5 18 17</ids>
+   </cells>
+   <cells rows="8" cols="3" cellWidth="54.0" cellHeight="54.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="8" />
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>15</p>
+    </cell>
+    <cell>
+     <p>16</p>
+    </cell>
+    <cell>
+     <p>18</p>
+    </cell>
+    <cell>
+     <p>20</p>
+    </cell>
+    <cell>
+     <p>24</p>
+    </cell>
+    <cell>
+     <p>25</p>
+    </cell>
+    <cell>
+     <p>27</p>
+    </cell>
+    <cell>
+     <p>30</p>
+    </cell>
+    <cell>
+     <p>32</p>
+    </cell>
+    <cell>
+     <p>36</p>
+    </cell>
+    <cell>
+     <p>¶</p>
+    </cell>
+    <cell>
+     <p>4¶</p>
+    </cell>
+    <cell>
+     <p>8¶</p>
+    </cell>
+    <cell>
+     <p>12¶</p>
+    </cell>
+    <cell>
+     <p>14¶</p>
+    </cell>
+    <cell>
+     <p>16¶</p>
+    </cell>
+    <cell>
+     <p>20¶</p>
+    </cell>
+    <cell>
+     <p>24¶</p>
+    </cell>
+    <cell>
+     <p>36¶</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="volu3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Cómo calcularías el volumen de estos cuerpos?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" border="true" image="volu3a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <ids>4 9 2 7 0 5</ids>
+   </cells>
+   <cells rows="5" cols="2" border="true" image="volu3b.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="volu4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Cómo calcularías el volumen de estos cuerpos?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" border="true" image="volu4a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <ids>0 7 5 5 6 8</ids>
+   </cells>
+   <cells rows="5" cols="2" border="true" image="volu4b.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="portada1.gif" file="portada1.gif" animated="false" />
+  <media name="supe11a.gif" file="supe11a.gif" animated="false" />
+  <media name="supe1a.gif" file="supe1a.gif" animated="false" />
+  <media name="supe2a.gif" file="supe2a.gif" animated="false" />
+  <media name="supe3a.gif" file="supe3a.gif" animated="false" />
+  <media name="supe3b.gif" file="supe3b.gif" animated="false" />
+  <media name="supvol1a.gif" file="supvol1a.gif" animated="false" />
+  <media name="supvol1b.gif" file="supvol1b.gif" animated="false" />
+  <media name="supvol1c.gif" file="supvol1c.gif" animated="false" />
+  <media name="volu0a.gif" file="volu0a.gif" animated="false" />
+  <media name="volu11a.gif" file="volu11a.gif" animated="false" />
+  <media name="volu1a.gif" file="volu1a.gif" animated="false" />
+  <media name="volu1b.gif" file="volu1b.gif" animated="false" />
+  <media name="volu22a.gif" file="volu22a.gif" animated="false" />
+  <media name="volu2a.gif" file="volu2a.gif" animated="false" />
+  <media name="volu2b.gif" file="volu2b.gif" animated="false" />
+  <media name="volu3a.gif" file="volu3a.gif" animated="false" />
+  <media name="volu3b.gif" file="volu3b.gif" animated="false" />
+  <media name="volu4a.gif" file="volu4a.gif" animated="false" />
+  <media name="volu4b.gif" file="volu4b.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

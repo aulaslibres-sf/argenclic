@@ -1,0 +1,1714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="litera" version="0.1.3">
+ <settings>
+  <title>Actividades de literatura castellana</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="5/5/97" />
+  <revision description="Conversión de Clic3 a JClic" date="7/2/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Silvano Andrés de la Morena" mail="sandres@pie.xtec.es" />
+  <author name="Carme Muñoz Gimeno" mail="cmunoz@pie.xtec.es" />
+  <organization name="IES Parc de l'Escorxador" mail="a8043462@centres.xtec.es" url="http://www.xtec.es/centres/a8043462" city="Barcelona" state="Catalunya" />
+  <organization name="IES Terra Roja" mail="a8034001@centres.xtec.es" url="http://www.xtec.es/centres/a8034001" city="Santa Coloma de Gramenet" state="Catalunya" />
+  <language>es</language>
+  <description>
+   <p>Conjunto de tres paquetes de actividades para trabajar los sonetos, temas de métrica (versos, rimas y estrofas), figuras retóricas y tópicos literarios.</p>
+  </description>
+  <descriptors level="Secundaria">lengua castellana, poesía</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Conjunto de tres paquetes de actividades para trabajar los sonetos, temas de métrica (versos, rimas y estrofas), figuras retóricas y tópicos literarios.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="litera.pac" name="litera.ass">
+   <description>
+    <p>Actividades para la literatura</p>
+   </description>
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="autors.ass" />
+  <item name="triapac.ass">
+   <jump action="STOP" id="forward" />
+  </item>
+  <item id="metrica.pac" name="metrica.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="versif.sop" />
+  <item name="rimar.ass" />
+  <item name="rimvers.ass" />
+  <item name="rimtip.ass" />
+  <item name="estrof3.ass" />
+  <item name="estrof4.ass" />
+  <item name="estrof.ass" />
+  <item name="versestr.ass" />
+  <item name="popular.ass" />
+  <item name="popular2.ass" />
+  <item name="palmero.puz">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="figuras.pac" name="figuras.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="figuras.sop" />
+  <item name="topics.ass" />
+  <item name="figtop.ass" />
+  <item name="topceles.ass" />
+  <item name="topmanri.ass" />
+  <item name="figuret.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="soneto.pac" name="soneto.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="petrarca.puz" />
+  <item name="metroson.sop" />
+  <item name="structur.puz" />
+  <item name="sonestr.ass" />
+  <item name="sonconts.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="autors.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="3" border="false" image="autores.gif">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="estrof.ass">
+   <description>
+    <p>Pareado, lira y soleá</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Conoces estas estrofas?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>No te va mal en esto de la métrica</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" columns="3" cellWidth="500.0" cellHeight="156.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="pareado.gif" />
+    <cell image="solea.gif" />
+    <cell image="lira.gif" />
+   </cells>
+   <cells rows="1" columns="3" cellWidth="500.0" cellHeight="156.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>PAREADO</p>
+    </cell>
+    <cell>
+     <p>SOLEÁ</p>
+    </cell>
+    <cell>
+     <p>LIRA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="estrof3.ass">
+   <description>
+    <p>Disposición de rima en estrofas de dos y tres versos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Identificarías estrofas de 2 y 3 versos?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¡Era sencillo! ¿no?</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" columns="4" cellWidth="200.0" cellHeight="70.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>SOLEÁ</p>
+    </cell>
+    <cell>
+     <p>TERCETO</p>
+    </cell>
+    <cell>
+     <p>TERCETO ENCADENADO</p>
+    </cell>
+    <cell>
+     <p>PAREADO</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="4" cellWidth="200.0" cellHeight="70.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>a - a</p>
+    </cell>
+    <cell>
+     <p>A - A</p>
+    </cell>
+    <cell>
+     <p>ABA BCB</p>
+    </cell>
+    <cell>
+     <p>AA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="estrof4.ass">
+   <description>
+    <p>Disposición métrica de estrofas de cuatro versos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="14" />
+     </style>
+     <p>Relaciona estrofa con disposición de rima</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="14" />
+     </style>
+     <p>Ya dominas las estrofas de cuatro versos</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" columns="6" cellWidth="300.0" cellHeight="87.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="14" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>redondilla</p>
+    </cell>
+    <cell>
+     <p>serventesio</p>
+    </cell>
+    <cell>
+     <p>cuarteto</p>
+    </cell>
+    <cell>
+     <p>cuarteta</p>
+    </cell>
+    <cell>
+     <p>copla</p>
+    </cell>
+    <cell>
+     <p>cuaderna vía</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="6" cellWidth="300.0" cellHeight="87.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="14" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>abba</p>
+    </cell>
+    <cell>
+     <p>ABAB</p>
+    </cell>
+    <cell>
+     <p>ABBA</p>
+    </cell>
+    <cell>
+     <p>abab  </p>
+    </cell>
+    <cell>
+     <p>-a-a  </p>
+    </cell>
+    <cell>
+     <p>AAAA  </p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="figtop.ass">
+   <description>
+    <p>Reconocer los nombres de algunas figuras y tópicos literarios</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Qué es figura y qué tópico literario?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Ha sido sencillo ¿no?</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="5" cellWidth="500.0" cellHeight="177.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell id="1">
+     <p>Carpe Diem</p>
+    </cell>
+    <cell id="1">
+     <p>Aurea mediocritas</p>
+    </cell>
+    <cell id="1">
+     <p>Beatus ille</p>
+    </cell>
+    <cell id="1">
+     <p>Ubi sunt</p>
+    </cell>
+    <cell id="1">
+     <p>Tempus fugit</p>
+    </cell>
+    <cell id="1">
+     <p>Locus amoenus</p>
+    </cell>
+    <cell id="0">
+     <p>Calambur</p>
+    </cell>
+    <cell id="0">
+     <p>Quiasmo</p>
+    </cell>
+    <cell id="0">
+     <p>Sinécdoque</p>
+    </cell>
+    <cell id="0">
+     <p>Políptoton</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="2" cellWidth="500.0" cellHeight="177.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>FIGURA RETÓRICA</p>
+    </cell>
+    <cell>
+     <p>TÓPICO LITERARIO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="figuras.ass">
+   <description>
+    <p>Pantalla de presentación</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" />
+     </style>
+     <p>Figuras retóricas y tópicos literarios</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="3" border="false" image="figuras.gif">
+    <style>
+     <font family="Arial" size="17" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@textGrid.WordSearch" name="figuras.sop">
+   <description>
+    <p>Localizar figuras retóricas</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Localiza 12 figuras retóricas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¡Vaya nombres tienen!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="21" columns="10" cellWidth="20.0" cellHeight="20.0" border="false">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>H******RALITERACION**</row>
+     <row>I*R*****E**ANTITESIS*</row>
+     <row>P*E******T*OXIMORON*M</row>
+     <row>E*TCALAMBUR*********E</row>
+     <row>R*R*N******U********T</row>
+     <row>B*A*A*******ETOPEYA*A</row>
+     <row>O*T*F********C******F</row>
+     <row>L*ONOMATOPEYA*A*****O</row>
+     <row>E***R**********N****R</row>
+     <row>***PARALELISMO**O***A</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">ONOMATOPEYA</clue>
+    <clue id="1">ANAFORA</clue>
+    <clue id="2">CALAMBUR</clue>
+    <clue id="3">RETRUECANO</clue>
+    <clue id="4">ALITERACION</clue>
+    <clue id="5">ETOPEYA</clue>
+    <clue id="6">RETRATO</clue>
+    <clue id="7">HIPERBOLE</clue>
+    <clue id="8">OXIMORON</clue>
+    <clue id="9">ANTITESIS</clue>
+    <clue id="10">METAFORA</clue>
+    <clue id="11">PARALELISMO</clue>
+   </clues>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="figuret.ass">
+   <description>
+    <p>Reconocer algunas figuras retóricas mediante fragmentos literarios</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Qué tal te va con las figuras literarias?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>No te va nada mal</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" columns="6" cellWidth="500.0" cellHeight="104.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Un sabroso veneno, una dulce amargura, una deleitable dolencia.</p>
+    </cell>
+    <cell>
+     <p>Su luna de pergamino Preciosa tocando viene</p>
+    </cell>
+    <cell>
+     <p>Temprano madrugó la madrugada</p>
+    </cell>
+    <cell>
+     <p>El mar sonríe a lo lejos</p>
+    </cell>
+    <cell>
+     <p>No destrozada nave en roca dura</p>
+    </cell>
+    <cell>
+     <p>Ella de flores la rosada frente, él de encendidos rayos coronado</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="6" cellWidth="500.0" cellHeight="104.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>OXÍMORON </p>
+    </cell>
+    <cell>
+     <p>METÁFORA </p>
+    </cell>
+    <cell>
+     <p>PLEONASMO</p>
+    </cell>
+    <cell>
+     <p>PERSONIFICACIÓN </p>
+    </cell>
+    <cell>
+     <p>QUIASMO</p>
+    </cell>
+    <cell>
+     <p>PARALELISMO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="litera.ass">
+   <description>
+    <p>Primera pantalla de presentación</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Times New Roman" size="30" />
+     </style>
+     <p>Métrica y retórica</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Times New Roman" size="30" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="3" border="false" image="litera.gif">
+    <style>
+     <font family="Times New Roman" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="metrica.ass">
+   <description>
+    <p>Pantalla de presentación de las actividades de métrica</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" />
+     </style>
+     <p>Acerca de versos, rimas y estrofas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="3" border="false" image="metrica.gif">
+    <style>
+     <font family="Arial" size="16" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@textGrid.WordSearch" name="metroson.sop">
+   <description>
+    <p>Términos asociados métricamente al soneto</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Localiza términos relacionados con el soneto.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¡Eres un genio de la métrica!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="21" columns="10" cellWidth="20.0" cellHeight="20.0" border="false">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>*********************</row>
+     <row>*****OISETNEVRES*****</row>
+     <row>***O*****************</row>
+     <row>****TT************E**</row>
+     <row>**ENDECASILABO****S**</row>
+     <row>*****RT***********T**</row>
+     <row>*****C*R**********R**</row>
+     <row>*****E**A*********O**</row>
+     <row>***ICTUS*U********F**</row>
+     <row>*****O****C****RIMA**</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">ENDECASILABO</clue>
+    <clue id="1">CUARTETO</clue>
+    <clue id="2">TERCETO</clue>
+    <clue id="3">ICTUS</clue>
+    <clue id="4">SERVENTESIO</clue>
+    <clue id="5">ESTROFA</clue>
+    <clue id="6">RIMA</clue>
+   </clues>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="palmero.puz">
+   <description>
+    <p>Reconstrucción de un romance</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Reconstruye el "Romance del palmero"</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>­Genial!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="8" cellWidth="207.0" cellHeight="70.0" border="true">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="8" />
+    <cell>
+     <p>En el tiempo que me vi </p>
+    </cell>
+    <cell>
+     <p>más alegre y placentero</p>
+    </cell>
+    <cell>
+     <p>encontré con un palmero </p>
+    </cell>
+    <cell>
+     <p>que me habló y dijo así:</p>
+    </cell>
+    <cell>
+     <p>¿Dónde vas el caballero?</p>
+    </cell>
+    <cell>
+     <p>¿dónde vas triste de ti?</p>
+    </cell>
+    <cell>
+     <p>Muerta es tu linda amiga,</p>
+    </cell>
+    <cell>
+     <p>muerta es que yo la vi;</p>
+    </cell>
+    <cell>
+     <p>las andas en que ella iba</p>
+    </cell>
+    <cell>
+     <p>de luto las vi cubrir, </p>
+    </cell>
+    <cell>
+     <p>duques, condes la lloraban, </p>
+    </cell>
+    <cell>
+     <p>todos por amor de ti;</p>
+    </cell>
+    <cell>
+     <p>dueñas, damas y doncellas</p>
+    </cell>
+    <cell>
+     <p>llorando dicen así:</p>
+    </cell>
+    <cell>
+     <p>- ¡Oh triste del caballero</p>
+    </cell>
+    <cell>
+     <p>que tal dama pierde aquí!</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="petrarca.puz">
+   <description>
+    <p>Recomponer la imagen del poeta que dio la forma actual al soneto</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Quién dio la forma actual al soneto?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¡Francesco Petrarca, naturalmente!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="3" border="true" image="petrarc2.gif">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.Explore" name="popular.ass">
+   <description>
+    <p>Exploración de la estructura del villancico</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="14" />
+     </style>
+     <p>El villancico es una composición estrofa muy peculiar, descúbrela</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="14" />
+     </style>
+     <p>Así es el villancico, lo has comprobado</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" columns="11" border="false" image="villan.gif" id="primary">
+    <style>
+     <font family="Arial" size="14" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="11" />
+    <ids>0 0 0 1 1 1 1 2 3 4 4</ids>
+   </cells>
+   <cells rows="1" columns="5" cellWidth="242.0" cellHeight="48.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="14" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>ESTRIBILLO o CABEZA         Versos monorrimos</p>
+    </cell>
+    <cell>
+     <p>MUDANZA                                  4 versos en rima abrazada</p>
+    </cell>
+    <cell>
+     <p>VERSO DE ENLACE                  Rima con el último verso de la mudanza</p>
+    </cell>
+    <cell>
+     <p>VERSO DE VUELTA             Rima con el estribillo</p>
+    </cell>
+    <cell>
+     <p>ESTRIBILLO                       Último verso de cabeza</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="popular2.ass">
+   <description>
+    <p>Identificar los componentes de  la estructura de un villancico</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Qué partes componen la estructura de un villancico?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Al final, no resulta ser tan complicado</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" columns="5" cellWidth="500.0" cellHeight="130.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell id="0" image="zejel1.gif" />
+    <cell id="1" image="zejel2.gif" />
+    <cell id="2" image="zejel3.gif" />
+    <cell id="3" image="zejel4.gif" />
+    <cell id="4" image="zejel5.gif" />
+   </cells>
+   <cells rows="1" columns="5" cellWidth="500.0" cellHeight="130.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>ESTRIBILLO o CABEZA      </p>
+    </cell>
+    <cell>
+     <p>MUDANZA</p>
+    </cell>
+    <cell>
+     <p>VERSO DE ENLACE</p>
+    </cell>
+    <cell>
+     <p>VERSO DE VUELTA</p>
+    </cell>
+    <cell>
+     <p>ESTRIBILLO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="rimar.ass">
+   <description>
+    <p>Associación de palabras que riman entre sí, tanto asonante como consonantemente</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Qué palabras riman entre sí?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Ya sabes, la rima es una cuestión de coincidencia fónica</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="5" cellWidth="100.0" cellHeight="70.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>GRIS</p>
+    </cell>
+    <cell>
+     <p>SAL</p>
+    </cell>
+    <cell>
+     <p>ANCLA</p>
+    </cell>
+    <cell>
+     <p>VIENTO</p>
+    </cell>
+    <cell>
+     <p>RIBERA</p>
+    </cell>
+    <cell>
+     <p>BAJEL</p>
+    </cell>
+    <cell>
+     <p>ESPUMA</p>
+    </cell>
+    <cell>
+     <p>SIRENA</p>
+    </cell>
+    <cell>
+     <p>SALINO</p>
+    </cell>
+    <cell>
+     <p>AMANECER</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="5" cellWidth="100.0" cellHeight="70.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>AÑIL</p>
+    </cell>
+    <cell>
+     <p>MAR</p>
+    </cell>
+    <cell>
+     <p>ALBA</p>
+    </cell>
+    <cell>
+     <p>CIELO</p>
+    </cell>
+    <cell>
+     <p>ESCOLLERA</p>
+    </cell>
+    <cell>
+     <p>PEZ</p>
+    </cell>
+    <cell>
+     <p>BRUMA</p>
+    </cell>
+    <cell>
+     <p>GALERA</p>
+    </cell>
+    <cell>
+     <p>AMIGO</p>
+    </cell>
+    <cell>
+     <p>VER</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="rimtip.ass">
+   <description>
+    <p>Identificar diferentes disposiciones de rima</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Times New Roman" size="15" />
+     </style>
+     <p>¡Aquí tienes cuatro tipos de rima!</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Times New Roman" size="15" />
+     </style>
+     <p>No te va nada mal con la rima</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="2" cellWidth="234.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Times New Roman" size="15" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>AAAA</p>
+    </cell>
+    <cell>
+     <p>ABBA</p>
+    </cell>
+    <cell>
+     <p>ABAB</p>
+    </cell>
+    <cell>
+     <p>ABA BCB</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="2" cellWidth="234.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Times New Roman" size="15" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>Rima continua</p>
+    </cell>
+    <cell>
+     <p>Rima abrazada</p>
+    </cell>
+    <cell>
+     <p>Rima alterna</p>
+    </cell>
+    <cell>
+     <p>Rima encadenada</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="rimvers.ass">
+   <description>
+    <p>Sobre el verso y sus intimidades</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Acerca de versos, rimas y otras menudencias</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Ictus, cesura, hemistiquio ¿suenan bien, no?</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="4" cellWidth="500.0" cellHeight="300.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <p>Ictus</p>
+    </cell>
+    <cell>
+     <p>Acento versal</p>
+    </cell>
+    <cell>
+     <p>Verso suelto</p>
+    </cell>
+    <cell>
+     <p>Verso libre</p>
+    </cell>
+    <cell>
+     <p>Verso de arte menor</p>
+    </cell>
+    <cell>
+     <p>Verso de arte mayor</p>
+    </cell>
+    <cell>
+     <p>Cesura</p>
+    </cell>
+    <cell>
+     <p>Hemistiquio</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="4" cellWidth="500.0" cellHeight="300.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <p>Acento inicial del verso</p>
+    </cell>
+    <cell>
+     <p>Acento final del verso</p>
+    </cell>
+    <cell>
+     <p>Aparecen junto a otros versos que riman</p>
+    </cell>
+    <cell>
+     <p>No hay rima en ningún verso de la estrofa</p>
+    </cell>
+    <cell>
+     <p>Versos de menos de ocho sílabas</p>
+    </cell>
+    <cell>
+     <p>Versos de más de ocho sílabas</p>
+    </cell>
+    <cell>
+     <p>Pausa que divide al verso en dos partes</p>
+    </cell>
+    <cell>
+     <p>Parte del verso dividido por una cesura</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="sonconts.ass">
+   <description>
+    <p>Contenido del soneto</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>EL SONETO ES UN SILOGISMO POÉTICO ¿no?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="4" border="false" image="sonconts.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <ids>0 0 0 0 1 1 1 1 2 2 2 2 3 3 3 3</ids>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="196.0" cellHeight="70.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>Apertura: plantamiento temático</p>
+    </cell>
+    <cell>
+     <p>Aumento de tensión argumental</p>
+    </cell>
+    <cell>
+     <p>Reflexión</p>
+    </cell>
+    <cell>
+     <p>Cierre:Concentración temática</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="sonestr.ass">
+   <description>
+    <p>Explorar la estructura del soneto</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Sitúate sobre el texto y explora la estructura del soneto</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="4" border="false" image="sontestr.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <ids>0 0 0 4 1 1 1 4 2 2 2 5 3 3 3 5</ids>
+   </cells>
+   <cells rows="2" columns="3" cellWidth="100.0" cellHeight="70.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>PRIMER CUARTETO</p>
+    </cell>
+    <cell>
+     <p>SEGUNDO CUARTETO</p>
+    </cell>
+    <cell>
+     <p>PRIMER TERCETO</p>
+    </cell>
+    <cell>
+     <p>SEGUNDO TERCETO</p>
+    </cell>
+    <cell>
+     <p>RIMA ABRAZADA</p>
+    </cell>
+    <cell>
+     <p>RIMA ENCADENADA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="soneto.ass">
+   <description>
+    <p>Pantalla de presentación de las actividades sobre el soneto</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+     </style>
+     <p>Para conocerlos y comprenderlos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="3" border="false" image="soneto.gif">
+    <style>
+     <font family="Arial" size="16" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="structur.puz">
+   <description>
+    <p>Estructura del soneto</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Descubre la estructura métrica del soneto</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¡ Parecía más fácil !</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="4" border="true" image="structur.gif">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="topceles.ass">
+   <description>
+    <p>Tres tópicos: carpe diem, locus amoenus, temus fugit
+</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Tres tópicos que aparecen en "La Celestina"</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Tres temas clásicos en los textos literarios</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" columns="3" cellWidth="500.0" cellHeight="179.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>Goza tu mocedad, el buen día, la buena noche, el buen comer y beber, Cuando pudieres haberlo, no lo dejes.</p>
+    </cell>
+    <cell>
+     <p>El mal y el bien, la prosperidad y la advesidad, la gloria y la pena todo pierde con el tiempo la fuerza de su acelerado principio.</p>
+    </cell>
+    <cell>
+     <p>Todo se goza en este huerto con tu venida. Mira la luma cuán clasra se nos muestra, mira las nubes como huyen, oye la corriente agua por entre las frescas hierbas.</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="3" cellWidth="500.0" cellHeight="179.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>CARPE DIEM</p>
+    </cell>
+    <cell>
+     <p>TEMPUS FUGIT</p>
+    </cell>
+    <cell>
+     <p>LOCUS AMOENUS</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="topics.ass">
+   <description>
+    <p>Significado de algunos tópicos literarios</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Conoces el significado de los tópicos literarios?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>No ha sido tan difícil como parecía ¿no?</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" columns="5" cellWidth="150.0" cellHeight="70.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>Lugar apacible</p>
+    </cell>
+    <cell>
+     <p>Goza de la juventud</p>
+    </cell>
+    <cell>
+     <p>Dichoso aquel...</p>
+    </cell>
+    <cell>
+     <p>¿Dónde están?</p>
+    </cell>
+    <cell>
+     <p>El tiempo pasa</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="5" cellWidth="150.0" cellHeight="70.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>Locus amoenus</p>
+    </cell>
+    <cell>
+     <p>Carpe Diem</p>
+    </cell>
+    <cell>
+     <p>Beatus ille</p>
+    </cell>
+    <cell>
+     <p>Ubi sunt</p>
+    </cell>
+    <cell>
+     <p>Tempus fugit</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="topmanri.ass">
+   <description>
+    <p>Tópicos literarios en Manrique</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Tópicos literarios usados por Jorge Manrique</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" columns="2" cellWidth="234.0" cellHeight="139.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>¿Qué se hicieron las damas, sus tocados, sus vestidos, sus olores? ¿Qué se hicieron las llamas de los fuegos encendidos de amadores?</p>
+    </cell>
+    <cell>
+     <p>La gentil frescura y la tez de la cara, la color y la blancura, cuando viene la vejez ¿Cuál se para? Las mañas y ligereza y la fuerza corporal de juventud, todo se trona graveza cuando llega al arraval de senectud</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="2" cellWidth="234.0" cellHeight="139.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>UBI SUNT</p>
+    </cell>
+    <cell>
+     <p>TEMPUS FUGIT</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="triapac.ass">
+   <description>
+    <p>Pantalla menú</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="21" />
+     </style>
+     <p>Elige un tema </p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="21" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" columns="1" cellWidth="160.0" cellHeight="160.0" border="true">
+    <style>
+     <font family="Arial" size="21" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="metr.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="metrica.pac" />
+    </cell>
+    <cell image="fig.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="figuras.pac" />
+    </cell>
+    <cell image="son.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="soneto.pac" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="versestr.ass">
+   <description>
+    <p>Relaciones entre estrofa y tipología de versos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Qué tipo de verso emplea cada tipo de composición?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>No te va nada mal en este tema</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="5" cellWidth="500.0" cellHeight="130.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell id="0">
+     <p>Lira</p>
+    </cell>
+    <cell id="1">
+     <p>Soneto</p>
+    </cell>
+    <cell id="2">
+     <p>Romance</p>
+    </cell>
+    <cell id="3">
+     <p>Cuaderna vía</p>
+    </cell>
+    <cell id="0">
+     <p>Estancia</p>
+    </cell>
+    <cell id="0">
+     <p>Silva</p>
+    </cell>
+    <cell id="1">
+     <p>Octava real</p>
+    </cell>
+    <cell id="4">
+     <p>Copla de pie quebrado</p>
+    </cell>
+    <cell id="1">
+     <p>Terceto encadenado </p>
+    </cell>
+    <cell id="2">
+     <p>Villancico</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="5" cellWidth="500.0" cellHeight="130.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>Endecasílabos y heptasílabos</p>
+    </cell>
+    <cell>
+     <p>Endecasílabos</p>
+    </cell>
+    <cell>
+     <p>Octosílabos</p>
+    </cell>
+    <cell>
+     <p>Tetradecasílabo</p>
+    </cell>
+    <cell>
+     <p>Octosílabos y tetrasílabos</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="versif.sop">
+   <description>
+    <p>Términos relacionados con la versificación</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Localiza términos relacionados con la métrica</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Puedes seguir, vas bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="20" columns="10" cellWidth="20.0" cellHeight="20.0" border="false">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>*******C*******D***S</row>
+     <row>******HEMISTIQUIO**I</row>
+     <row>****VERSO*I****E*A*N</row>
+     <row>*******U**N****R*S*E</row>
+     <row>*******RIMA****E*O*R</row>
+     <row>*ESTROFA**L****S*N*E</row>
+     <row>**********E****I*A*S</row>
+     <row>**********F****S*N*I</row>
+     <row>****CONSONANTE***T*S</row>
+     <row>*****************E**</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">HEMISTIQUIO</clue>
+    <clue id="1">CESURA</clue>
+    <clue id="2">VERSO</clue>
+    <clue id="3">RIMA</clue>
+    <clue id="4">ESTROFA</clue>
+    <clue id="5">SINALEFA</clue>
+    <clue id="6">ASONANTE</clue>
+    <clue id="7">CONSONANTE</clue>
+   </clues>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="autores.gif" file="autores.gif" animated="false" />
+  <media name="fig.gif" file="fig.gif" animated="false" />
+  <media name="figuras.gif" file="figuras.gif" animated="false" />
+  <media name="lira.gif" file="lira.gif" animated="false" />
+  <media name="litera.gif" file="litera.gif" animated="false" />
+  <media name="metr.gif" file="metr.gif" animated="false" />
+  <media name="metrica.gif" file="metrica.gif" animated="false" />
+  <media name="pareado.gif" file="pareado.gif" animated="false" />
+  <media name="petrarc2.gif" file="petrarc2.gif" animated="false" />
+  <media name="solea.gif" file="solea.gif" animated="false" />
+  <media name="son.gif" file="son.gif" animated="false" />
+  <media name="sonconts.gif" file="sonconts.gif" animated="false" />
+  <media name="soneto.gif" file="soneto.gif" animated="false" />
+  <media name="sontestr.gif" file="sontestr.gif" animated="false" />
+  <media name="structur.gif" file="structur.gif" animated="false" />
+  <media name="villan.gif" file="villan.gif" animated="false" />
+  <media name="zejel1.gif" file="zejel1.gif" animated="false" />
+  <media name="zejel2.gif" file="zejel2.gif" animated="false" />
+  <media name="zejel3.gif" file="zejel3.gif" animated="false" />
+  <media name="zejel4.gif" file="zejel4.gif" animated="false" />
+  <media name="zejel5.gif" file="zejel5.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

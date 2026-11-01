@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="movim4e" version="0.1.3">
+ <settings>
+  <title>movim4e</title>
+  <revision description="created" date="5/31/02" />
+  <descriptors />
+ </settings>
+ <sequence>
+  <item id="movim4e.pac" name="paq16int.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="trans6.ass" />
+  <item name="simax3.ass" />
+  <item name="gir1.ass" />
+  <item name="simcen1.ass" />
+  <item name="trans2.ass" />
+  <item name="transl11.ass" />
+  <item name="simaxi1.ass" />
+  <item name="simaxi7.ass" />
+  <item name="simaxi6.ass" />
+  <item name="hora1.ass" />
+  <item name="trans3.ass" />
+  <item name="trans4.ass" />
+  <item name="claus1.ass" />
+  <item name="gos2.ass" />
+  <item name="claus3.ass" />
+  <item name="paq16fi.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.ComplexAssociation" name="claus1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica cada movimiento del plano señalado con un interrogante.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="3" border="false" image="claus1a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <ids>1 0 2</ids>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>TRASLACIÓN</p>
+    </cell>
+    <cell>
+     <p>ROTACIÓN</p>
+    </cell>
+    <cell>
+     <p>SIMETRÍA AXIAL</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="3" border="false" image="claus1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="claus3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Efectuamos sucesivamente estos movimientos. Substituye cada interrogante por la figura correspondiente.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" border="false" image="claus3a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <ids>-1 1 1 -1 -1 2</ids>
+   </cells>
+   <cells rows="4" cols="1" border="false" image="claus3b.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+   </cells>
+   <cells rows="2" cols="3" border="false" image="claus3c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="gir1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Haz clic en el sitio aproximado donde va a parar esta figura si se le aplica una rotación de 45° respecto al centro indicado.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="6" cols="6" border="false" image="gir1a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="6" rows="6" showEnclosure="true" scaleX="6.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,6,6</shape>
+     </enclosing>
+     <shape>M:4,3|L:4,4|L:3,4|L:3,3|X|M:0,0|L:0,1|L:0,2|L:0,3|L:0,4|L:0,5|L:0,6|L:6,6|L:6,5|L:6,4|L:6,3|L:6,2|L:6,1|L:6,0|X</shape>
+     <shape>rectangle:3,3,1,1</shape>
+    </shaper>
+    <ids>0 1</ids>
+   </cells>
+   <cells rows="6" cols="6" border="false" image="gir1c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="6" rows="6" showEnclosure="true" scaleX="6.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,6,6</shape>
+     </enclosing>
+     <shape>M:4,3|L:4,4|L:3,4|L:3,3|X|M:0,0|L:0,1|L:0,2|L:0,3|L:0,4|L:0,5|L:0,6|L:6,6|L:6,5|L:6,4|L:6,3|L:6,2|L:6,1|L:6,0|X</shape>
+     <shape>rectangle:3,3,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="gos2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica los elementos de estos tres movimientos del plano.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="4" border="false" image="gos2a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="4" rows="4" showEnclosure="true" scaleX="4.0" scaleY="4.0">
+     <enclosing>
+      <shape>rectangle:0,0,4,4</shape>
+     </enclosing>
+     <shape>rectangle:1,1,1,1</shape>
+     <shape>rectangle:2,1,1,1</shape>
+     <shape>rectangle:2,3,1,1</shape>
+     <shape>rectangle:3,3,1,1</shape>
+    </shaper>
+    <ids>3 2 1 0</ids>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>CENTRO DE ROTACIÓN</p>
+    </cell>
+    <cell>
+     <p>ÁNGULO DE ROTACIÓN</p>
+    </cell>
+    <cell>
+     <p>VECTOR DE TRASLACIÓN</p>
+    </cell>
+    <cell>
+     <p>EJE DE SIMETRÍA</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="4" border="false" image="gos2c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="4" rows="4" showEnclosure="true" scaleX="4.0" scaleY="4.0">
+     <enclosing>
+      <shape>rectangle:0,0,4,4</shape>
+     </enclosing>
+     <shape>rectangle:1,1,1,1</shape>
+     <shape>rectangle:2,1,1,1</shape>
+     <shape>rectangle:2,3,1,1</shape>
+     <shape>rectangle:3,3,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="hora1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Estos relojes están reflejados en un espejo. ¿Cuál es la hora real en cada caso?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="hora1a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <ids>4 5 10 3</ids>
+   </cells>
+   <cells rows="7" cols="2" border="true" image="hora1b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="7" />
+   </cells>
+   <cells rows="2" cols="2" border="true" image="hora1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="paq16fi.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic sobre la flecha de la derecha para volver al menú         &gt;&gt;&gt;</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="portada1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="60.0" border="false">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>FI DEL PAQUETE 16</p>
+    </cell>
+    <cell>
+     <p>ACTIVIDADES DIVERSAS SOBRE DESPLAZAMIENTOS EN EL PLANO</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="paq16int.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic sobre la flecha para iniciar el paquete de actividades         &gt;&gt;&gt;</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="portada1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="60.0" border="false">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>GEOCLIC - PAQUETE 16</p>
+    </cell>
+    <cell>
+     <p>ACTIVIDADES DIVERSAS SOBRE DESPLAZAMIENTOS EN EL PLANO</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.Identify" name="simax3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Haz clic en el sitio aproximado donde va a parar esta figura si se le aplica una simetría axial respecto al eje indicado.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="7" cols="7" border="false" image="simeax3a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="7" rows="7" showEnclosure="true" scaleX="7.0" scaleY="7.0">
+     <enclosing>
+      <shape>rectangle:0,0,7,7</shape>
+     </enclosing>
+     <shape>M:3,4|L:3,5|L:2,5|L:2,4|X|M:0,0|L:0,1|L:0,2|L:0,3|L:0,4|L:0,5|L:0,6|L:0,7|L:7,7|L:7,6|L:7,5|L:7,4|L:7,3|L:7,2|L:7,1|L:7,0|X</shape>
+     <shape>rectangle:2,4,1,1</shape>
+    </shaper>
+    <ids>0 1</ids>
+   </cells>
+   <cells rows="7" cols="7" border="false" image="simeax3c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="7" rows="7" showEnclosure="true" scaleX="7.0" scaleY="7.0">
+     <enclosing>
+      <shape>rectangle:0,0,7,7</shape>
+     </enclosing>
+     <shape>M:3,4|L:3,5|L:2,5|L:2,4|X|M:0,0|L:0,1|L:0,2|L:0,3|L:0,4|L:0,5|L:0,6|L:0,7|L:7,7|L:7,6|L:7,5|L:7,4|L:7,3|L:7,2|L:7,1|L:7,0|X</shape>
+     <shape>rectangle:2,4,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="simaxi1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Substituye cada interrogante por la imagen correspondiente sabiendo que se ha realizado una simetría axial.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="simax1a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <ids>0 3 4 6</ids>
+   </cells>
+   <cells rows="4" cols="2" border="true" image="mans1b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+   </cells>
+   <cells rows="2" cols="2" border="true" image="simax1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="simaxi6.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Substituye cada interrogante por la imagen correspondiente sabiendo que se ha realizado una simetría axial.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="simax6a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <ids>5 4 2 3</ids>
+   </cells>
+   <cells rows="4" cols="2" border="true" image="falg1b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+   </cells>
+   <cells rows="2" cols="2" border="true" image="simax6c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="simaxi7.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Substituye cada interrogante por la imagen correspondiente sabiendo que se ha realizado una simetría axial.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="simax7a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <ids>0 3 5 7</ids>
+   </cells>
+   <cells rows="4" cols="2" border="true" image="arbre1b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+   </cells>
+   <cells rows="2" cols="2" border="true" image="simax7c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="simcen1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Haz clic en el sitio aproximado donde va a parar esta figura si se le aplica una simetría central respecto al centro indicado.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="10" border="false" image="simcen1a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="10" rows="5" showEnclosure="true" scaleX="10.0" scaleY="5.0">
+     <enclosing>
+      <shape>rectangle:0,0,10,5</shape>
+     </enclosing>
+     <shape>M:8,1|L:8,2|L:7,2|L:7,1|X|M:0,0|L:0,1|L:0,2|L:0,3|L:0,4|L:0,5|L:10,5|L:10,4|L:10,3|L:10,2|L:10,1|L:10,0|X</shape>
+     <shape>rectangle:7,1,1,1</shape>
+    </shaper>
+    <ids>0 1</ids>
+   </cells>
+   <cells rows="5" cols="10" border="false" image="simcen1c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="10" rows="5" showEnclosure="true" scaleX="10.0" scaleY="5.0">
+     <enclosing>
+      <shape>rectangle:0,0,10,5</shape>
+     </enclosing>
+     <shape>M:8,1|L:8,2|L:7,2|L:7,1|X|M:0,0|L:0,1|L:0,2|L:0,3|L:0,4|L:0,5|L:10,5|L:10,4|L:10,3|L:10,2|L:10,1|L:10,0|X</shape>
+     <shape>rectangle:7,1,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="trans2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Relaciona cada vector traslación con sus componentes.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="false" image="trans2a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <ids>0 1 2 3</ids>
+   </cells>
+   <cells rows="4" cols="2" border="true" image="trans2b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+   </cells>
+   <cells rows="2" cols="2" border="false" image="trans2c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="trans3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Qué tipo de movimiento se ha realizado en cada caso para pasar de la figura A a la figura B?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="trans3a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <ids>0 1 2 3</ids>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="160.0" cellHeight="104.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>TRASLACIÓN</p>
+    </cell>
+    <cell>
+     <p>ROTACIÓN</p>
+    </cell>
+    <cell>
+     <p>SIMETRÍA  AXIAL</p>
+    </cell>
+    <cell>
+     <p>SIMETRÍA CENTRAL</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" border="true" image="trans3c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="trans4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Qué tipo de movimiento se ha realizado en cada caso para pasar de la figura A a la figura B?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="trans4a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <ids>0 1 2 3</ids>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="160.0" cellHeight="105.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>TRASLACIÓN</p>
+    </cell>
+    <cell>
+     <p>ROTACIÓN</p>
+    </cell>
+    <cell>
+     <p>SIMETRÍA  AXIAL</p>
+    </cell>
+    <cell>
+     <p>SIMETRÍA CENTRAL</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" border="true" image="trans4c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="trans6.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Haz clic en el sitio aproximado donde va a parar esta figura si se le aplica una traslación de vector (4,-2).</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="8" border="false" image="trans6a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="8" rows="4" showEnclosure="true" scaleX="8.0" scaleY="4.0">
+     <enclosing>
+      <shape>rectangle:0,0,8,4</shape>
+     </enclosing>
+     <shape>M:6,2|L:6,3|L:5,3|L:5,2|X|M:0,0|L:0,1|L:0,2|L:0,3|L:0,4|L:8,4|L:8,3|L:8,2|L:8,1|L:8,0|X</shape>
+     <shape>rectangle:5,2,1,1</shape>
+    </shaper>
+    <ids>0 1</ids>
+   </cells>
+   <cells rows="4" cols="8" border="false" image="trans6c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="8" rows="4" showEnclosure="true" scaleX="8.0" scaleY="4.0">
+     <enclosing>
+      <shape>rectangle:0,0,8,4</shape>
+     </enclosing>
+     <shape>M:6,2|L:6,3|L:5,3|L:5,2|X|M:0,0|L:0,1|L:0,2|L:0,3|L:0,4|L:8,4|L:8,3|L:8,2|L:8,1|L:8,0|X</shape>
+     <shape>rectangle:5,2,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="transl11.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Escribe el vector traslación que lleva el triángulo A sobre el triángulo B (pon los paréntesis y no pongas espacios en blanco).</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="false" image="transl1a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <cells rows="2" cols="2" cellWidth="100.0" cellHeight="70.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>(3,1)</p>
+    </cell>
+    <cell>
+     <p>(-4,5)</p>
+    </cell>
+    <cell>
+     <p>(-6,-4)</p>
+    </cell>
+    <cell>
+     <p>(8,-4)</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" border="false" image="transl1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="arbre1b.gif" file="arbre1b.gif" animated="false" />
+  <media name="claus1a.gif" file="claus1a.gif" animated="false" />
+  <media name="claus1c.gif" file="claus1c.gif" animated="false" />
+  <media name="claus3a.gif" file="claus3a.gif" animated="false" />
+  <media name="claus3b.gif" file="claus3b.gif" animated="false" />
+  <media name="claus3c.gif" file="claus3c.gif" animated="false" />
+  <media name="falg1b.gif" file="falg1b.gif" animated="false" />
+  <media name="gir1a.gif" file="gir1a.gif" animated="false" />
+  <media name="gir1c.gif" file="gir1c.gif" animated="false" />
+  <media name="gos2a.gif" file="gos2a.gif" animated="false" />
+  <media name="gos2c.gif" file="gos2c.gif" animated="false" />
+  <media name="hora1a.gif" file="hora1a.gif" animated="false" />
+  <media name="hora1b.gif" file="hora1b.gif" animated="false" />
+  <media name="hora1c.gif" file="hora1c.gif" animated="false" />
+  <media name="mans1b.gif" file="mans1b.gif" animated="false" />
+  <media name="portada1.gif" file="portada1.gif" animated="false" />
+  <media name="simax1a.gif" file="simax1a.gif" animated="false" />
+  <media name="simax1c.gif" file="simax1c.gif" animated="false" />
+  <media name="simax6a.gif" file="simax6a.gif" animated="false" />
+  <media name="simax6c.gif" file="simax6c.gif" animated="false" />
+  <media name="simax7a.gif" file="simax7a.gif" animated="false" />
+  <media name="simax7c.gif" file="simax7c.gif" animated="false" />
+  <media name="simcen1a.gif" file="simcen1a.gif" animated="false" />
+  <media name="simcen1c.gif" file="simcen1c.gif" animated="false" />
+  <media name="simeax3a.gif" file="simeax3a.gif" animated="false" />
+  <media name="simeax3c.gif" file="simeax3c.gif" animated="false" />
+  <media name="trans2a.gif" file="trans2a.gif" animated="false" />
+  <media name="trans2b.gif" file="trans2b.gif" animated="false" />
+  <media name="trans2c.gif" file="trans2c.gif" animated="false" />
+  <media name="trans3a.gif" file="trans3a.gif" animated="false" />
+  <media name="trans3c.gif" file="trans3c.gif" animated="false" />
+  <media name="trans4a.gif" file="trans4a.gif" animated="false" />
+  <media name="trans4c.gif" file="trans4c.gif" animated="false" />
+  <media name="trans6a.gif" file="trans6a.gif" animated="false" />
+  <media name="trans6c.gif" file="trans6c.gif" animated="false" />
+  <media name="transl1a.gif" file="transl1a.gif" animated="false" />
+  <media name="transl1c.gif" file="transl1c.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

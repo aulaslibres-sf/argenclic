@@ -1,0 +1,1259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="frutas" version="0.1.3">
+ <settings>
+  <title>Sense nom</title>
+  <revision description="created" date="5/30/05" />
+  <descriptors />
+ </settings>
+ <sequence>
+  <item id="frutas.pac" name="portada0.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="portada.ass" />
+  <item id="fruta.pac" name="manzav2.puz" />
+  <item name="naranja.puz" />
+  <item name="sandia.puz" />
+  <item name="uva.puz" />
+  <item name="fresas.puz" />
+  <item name="peras.puz" />
+  <item name="fruta2.puz" />
+  <item name="frutas1.puz" />
+  <item name="frutas3.puz" />
+  <item name="frutas.ass" />
+  <item name="frutas1.ass" />
+  <item name="frutas0.ass" />
+  <item name="frutas2.ass" />
+  <item name="frutas00.ass" />
+  <item name="frutas11.ass" />
+  <item name="arboles.ass" />
+  <item name="sopa1.sop" />
+  <item name="sopa2.sop" />
+  <item name="proble.ass" />
+  <item name="adivina1.ass" />
+  <item name="adivina2.ass" />
+  <item name="final.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.ComplexAssociation" name="adivina1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" />
+      <color foreground="0xFAFCA3" background="0x804040" inactive="0x804040" alternative="0x804040" />
+     </style>
+     <p>BUSCA LA RELACIÓN</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" />
+      <color foreground="0xFAFCA3" background="0x804040" inactive="0x804040" alternative="0x804040" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="sonidfin.wav" />
+     <p>¡¡ERES MUY LIST@!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFCFDCA">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFCFDCA" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="150.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color foreground="0x0000FF" background="0xFFFFFF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="0" image="uva.gif" />
+    <cell id="2" image="manzana.gif" />
+    <cell id="1" image="pera.gif" />
+   </cells>
+   <cells rows="3" cols="1" cellWidth="320.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color foreground="0x0000FF" background="0xFFFFFF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>CONMIGO HACEN EL VINO.</p>
+    </cell>
+    <cell>
+     <p>NAZCO DE UN PERAL.</p>
+    </cell>
+    <cell>
+     <p>CON MI ZUMO SE HACE LA SIDRA.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="adivina2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="34" bold="true" />
+      <color foreground="0x800000" background="0xFF9B37" inactive="0xFF9B37" alternative="0xFF9B37" />
+     </style>
+     <p>ADIVINANZA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="34" bold="true" />
+      <color foreground="0x800000" background="0xFF9B37" inactive="0xFF9B37" alternative="0xFF9B37" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="sonidfin.wav" />
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF9B37">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF9B37" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="400.0" cellHeight="300.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="19" />
+     <color foreground="0x008000" background="0xFFFFFF" inactive="0xFF0000" alternative="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <p>SOY PRIMA DE LA NARANJA, MI CAPA QUITAS CON FACILIDAD, CARGADA VOY DE VITAMINAS¿SABES MI NOMBRE YA?</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="140.0" cellHeight="150.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell image="mandarin.gif" />
+    <cell image="naranja.gif" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="400.0" cellHeight="300.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>LA MANDARINA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="arboles.ass" inverse="true">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="28" />
+      <color foreground="0x800000" background="0xFAFEA5" inactive="0xFAFEA5" alternative="0xFAFEA5" />
+     </style>
+     <p>UNE CADA ÁRBOL CON LA FRUTA QUE DA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="28" />
+      <color foreground="0x800000" background="0xFAFEA5" inactive="0xFAFEA5" alternative="0xFAFEA5" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="genial.wav" />
+     <p>¡¡GENIAL!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x808000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x808000" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="220.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" />
+     <color foreground="0xFF0000" background="0xFFFF9D" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell id="4">
+     <p>NARANJO</p>
+    </cell>
+    <cell id="1">
+     <p>MANZANO</p>
+    </cell>
+    <cell id="3">
+     <p>PERAL</p>
+    </cell>
+    <cell id="0">
+     <p>CIRUELO</p>
+    </cell>
+    <cell id="2">
+     <p>MELOCOTONERO</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="220.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="28" />
+     <color foreground="0xFF0000" background="0xFFFFFF" inactive="0xFAFEA5" alternative="0xFAFEA5" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell image="ciruela.gif" />
+    <cell image="manzana.gif" />
+    <cell image="meloc.gif" />
+    <cell image="pera.gif" />
+    <cell image="naranja.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="final.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0xFFFF00" background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0xFFFF00" background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" infoCmd="portada.pac" report="false">
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x000000" border="false" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="580.0" cellHeight="500.0" border="true">
+    <style>
+     <font family="Arial" size="53" />
+     <color foreground="0xFF0000" background="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>¡¡MUY BIEN!! HAS LLEGADO AL FINAL</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="fresas.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="29" bold="true" />
+      <color foreground="0x804040" background="0xFFFF80" inactive="0xFFFF80" alternative="0xFFFF80" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="29" bold="true" />
+      <color foreground="0x804040" background="0xFFFF80" inactive="0xFFFF80" alternative="0xFFFF80" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="sonidfin.wav" />
+     <p>FRESAS</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFF80" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="fresa2.gif">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="fruta2.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="19" />
+      <color foreground="0x800000" background="0xFFFF80" inactive="0xFFFF80" alternative="0xFFFF80" />
+     </style>
+     <p>ENCUENTRA LAS PAREJAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="19" />
+      <color foreground="0x800000" background="0xFFFF80" inactive="0xFFFF80" alternative="0xFFFF80" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="estupend.wav" />
+     <p>¡ESTUPENDO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x808000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x808000" border="true" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="140.0" cellHeight="200.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFBFDCC" alternative="0xFBFDCC" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="media.gif" />
+    <cell image="manzana.gif" />
+    <cell image="sandia.gif" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="frutas.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="28" />
+      <color foreground="0x800000" background="0xFAFEA5" inactive="0xFAFEA5" alternative="0xFAFEA5" />
+     </style>
+     <p>MIRA CÓMO SE LLAMAN ESTAS FRUTAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="28" />
+      <color foreground="0x800000" background="0xFAFEA5" inactive="0xFAFEA5" alternative="0xFAFEA5" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x808000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x808000" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="170.0" cellHeight="125.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFAFEA5" alternative="0xFAFEA5" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0" image="meloc.gif" />
+    <cell id="1" image="manzana.gif" />
+    <cell id="2" image="uva.gif" />
+    <cell id="3" image="fresa.gif" />
+    <cell id="4" image="sandia.gif" />
+    <cell id="5" image="naranja.gif" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="30" />
+     <color foreground="0x008000" background="0xFFFFFF" inactive="0xFAFEA5" alternative="0xFAFEA5" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>MELOCOTÓN</p>
+    </cell>
+    <cell>
+     <p>MANZANA</p>
+    </cell>
+    <cell>
+     <p>UVA</p>
+    </cell>
+    <cell>
+     <p>FRESA</p>
+    </cell>
+    <cell>
+     <p>SANDÍA</p>
+    </cell>
+    <cell>
+     <p>NARANJA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="frutas0.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="28" />
+      <color foreground="0x800000" background="0xFAFEA5" inactive="0xFAFEA5" alternative="0xFAFEA5" />
+     </style>
+     <p>MIRA CÓMO SE LLAMAN ESTAS FRUTAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="28" />
+      <color foreground="0x800000" background="0xFAFEA5" inactive="0xFAFEA5" alternative="0xFAFEA5" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x808000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x808000" border="true" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="170.0" cellHeight="150.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFAFEA5" alternative="0xFAFEA5" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="0" image="granada.gif" />
+    <cell id="1" image="higo.gif" />
+    <cell id="2" image="pi_a.gif" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="30" />
+     <color foreground="0x008000" background="0xFFFFFF" inactive="0xFAFEA5" alternative="0xFAFEA5" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>GRANADA</p>
+    </cell>
+    <cell>
+     <p>HIGO</p>
+    </cell>
+    <cell>
+     <p>PIÑA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="frutas00.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="28" />
+      <color foreground="0x800000" background="0xFAFEA5" inactive="0xFAFEA5" alternative="0xFAFEA5" />
+     </style>
+     <p>MIRA CÓMO SE LLAMAN ESTAS FRUTAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="28" />
+      <color foreground="0x800000" background="0xFAFEA5" inactive="0xFAFEA5" alternative="0xFAFEA5" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x808000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x808000" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="170.0" cellHeight="125.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFAFEA5" alternative="0xFAFEA5" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0" image="platano.gif" />
+    <cell id="1" image="ciruela.gif" />
+    <cell id="2" image="kiwi.gif" />
+    <cell id="3" image="pera.gif" />
+    <cell id="4" image="mandarin.gif" />
+    <cell id="5" image="melon.gif" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="30" />
+     <color foreground="0x008000" background="0xFFFFFF" inactive="0xFAFEA5" alternative="0xFAFEA5" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>PLÁTANO</p>
+    </cell>
+    <cell>
+     <p>CIRUELA</p>
+    </cell>
+    <cell>
+     <p>KIWI</p>
+    </cell>
+    <cell>
+     <p>PERA</p>
+    </cell>
+    <cell>
+     <p>MANDARINA</p>
+    </cell>
+    <cell>
+     <p>MELÓN</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="frutas1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="28" bold="true" />
+      <color foreground="0x800000" background="0xFAFEA5" inactive="0xFAFEA5" alternative="0xFAFEA5" />
+     </style>
+     <p>ESCRIBE EL NOMBRE DE ESTAS FRUTAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="28" bold="true" />
+      <color foreground="0x800000" background="0xFAFEA5" inactive="0xFAFEA5" alternative="0xFAFEA5" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="estupend.wav" />
+     <p>¡¡¡ESTUPENDO!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x808000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x808000" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="170.0" cellHeight="125.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="28" bold="true" />
+     <color foreground="0x800000" background="0xFFFFFF" inactive="0x800000" alternative="0x800000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="meloc.gif" />
+    <cell image="manzana.gif" />
+    <cell image="uva.gif" />
+    <cell image="fresa.gif" />
+    <cell image="sandia.gif" />
+    <cell image="naranja.gif" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="140.0" cellHeight="100.0" border="false" id="answers">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color foreground="0x008000" background="0xFFFFFF" inactive="0xFAFEA5" alternative="0xFAFEA5" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>melocotón|melocoton</p>
+    </cell>
+    <cell>
+     <p>manzana</p>
+    </cell>
+    <cell>
+     <p>uva</p>
+    </cell>
+    <cell>
+     <p>fresa</p>
+    </cell>
+    <cell>
+     <p>sandía|sandia</p>
+    </cell>
+    <cell>
+     <p>naranja</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="170.0" cellHeight="125.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>MELOCOTÓN</p>
+    </cell>
+    <cell>
+     <p>MANZANA</p>
+    </cell>
+    <cell>
+     <p>UVA</p>
+    </cell>
+    <cell>
+     <p>FRESA</p>
+    </cell>
+    <cell>
+     <p>SANDÍA</p>
+    </cell>
+    <cell>
+     <p>NARANJA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="frutas1.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="19" />
+      <color foreground="0x800000" background="0xFFFF9F" inactive="0xFFFF9F" alternative="0xFFFF9F" />
+     </style>
+     <p>ENCUENTRA LAS PAREJAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="19" />
+      <color foreground="0x800000" background="0xFFFF9F" inactive="0xFFFF9F" alternative="0xFFFF9F" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="estupend.wav" />
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x808000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x808000" border="true" />
+   </settings>
+   <cells rows="1" cols="5" cellWidth="110.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFBFDCC" alternative="0xFBFDCC" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell image="meloc.gif" />
+    <cell image="manzana.gif" />
+    <cell image="uva.gif" />
+    <cell image="fresa.gif" />
+    <cell image="sandia.gif" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="frutas11.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="28" bold="true" />
+      <color foreground="0x800000" background="0xFAFEA5" inactive="0xFAFEA5" alternative="0xFAFEA5" />
+     </style>
+     <p>ESCRIBE EL NOMBRE DE ESTAS FRUTAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="28" bold="true" />
+      <color foreground="0x800000" background="0xFAFEA5" inactive="0xFAFEA5" alternative="0xFAFEA5" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="estupend.wav" />
+     <p>¡¡¡ESTUPENDO!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x808000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x808000" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="170.0" cellHeight="125.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="28" bold="true" />
+     <color foreground="0x800000" background="0xFFFFFF" inactive="0x800000" alternative="0x800000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="platano.gif" />
+    <cell image="ciruela.gif" />
+    <cell image="kiwi.gif" />
+    <cell image="pera.gif" />
+    <cell image="mandarin.gif" />
+    <cell image="melon.gif" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="140.0" cellHeight="100.0" border="false" id="answers">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color foreground="0x008000" background="0xFFFFFF" inactive="0xFAFEA5" alternative="0xFAFEA5" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>PLÁTANO</p>
+    </cell>
+    <cell>
+     <p>CIRUELA</p>
+    </cell>
+    <cell>
+     <p>KIWI</p>
+    </cell>
+    <cell>
+     <p>PERA</p>
+    </cell>
+    <cell>
+     <p>MANDARINA</p>
+    </cell>
+    <cell>
+     <p>MELÓN</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="170.0" cellHeight="125.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>PLÁTANO</p>
+    </cell>
+    <cell>
+     <p>CIRUELA</p>
+    </cell>
+    <cell>
+     <p>KIWI</p>
+    </cell>
+    <cell>
+     <p>PERA</p>
+    </cell>
+    <cell>
+     <p>MANDARINA</p>
+    </cell>
+    <cell>
+     <p>MELÓN</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="frutas2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0x800000" background="0xFAFEA5" inactive="0xFAFEA5" alternative="0xFAFEA5" />
+     </style>
+     <p>ESCRIBE EL NOMBRE DE ESTAS FRUTAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0x800000" background="0xFAFEA5" inactive="0xFAFEA5" alternative="0xFAFEA5" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="estupend.wav" />
+     <p>¡¡¡ESTUPENDO!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x808000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x808000" border="true" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="170.0" cellHeight="125.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="28" bold="true" />
+     <color foreground="0x800000" background="0xFFFFFF" inactive="0x800000" alternative="0x800000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="granada.gif" />
+    <cell image="higo.gif" />
+    <cell image="pi_a.gif" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="140.0" cellHeight="100.0" border="false" id="answers">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color foreground="0x008000" background="0xFFFFFF" inactive="0xFAFEA5" alternative="0xFAFEA5" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>GRANADA</p>
+    </cell>
+    <cell>
+     <p>HIGO</p>
+    </cell>
+    <cell>
+     <p>PIÑA</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="170.0" cellHeight="125.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>GRANADA</p>
+    </cell>
+    <cell>
+     <p>HIGO</p>
+    </cell>
+    <cell>
+     <p>PIÑA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="frutas3.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="19" />
+      <color foreground="0x800000" background="0xFFFF9F" inactive="0xFFFF9F" alternative="0xFFFF9F" />
+     </style>
+     <p>ENCUENTRA LAS PAREJAS- ¡¡ES MUY DIFICIL!!</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="19" />
+      <color foreground="0x800000" background="0xFFFF9F" inactive="0xFFFF9F" alternative="0xFFFF9F" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x808000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x808000" border="true" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="110.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="15" />
+     <color background="0xFFFFFF" inactive="0xFBFDCC" alternative="0xFBFDCC" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell image="meloc.gif" />
+    <cell image="manzana.gif" />
+    <cell image="uva.gif" />
+    <cell image="fresa.gif" />
+    <cell image="sandia.gif" />
+    <cell image="naranja.gif" />
+    <cell image="platano.gif" />
+    <cell image="ciruela.gif" />
+    <cell image="kiwi.gif" />
+    <cell image="pera.gif" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="manzav2.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="29" bold="true" />
+      <color foreground="0x804040" background="0xFFFF80" inactive="0xFFFF80" alternative="0xFFFF80" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="29" bold="true" />
+      <color foreground="0x804040" background="0xFFFF80" inactive="0xFFFF80" alternative="0xFFFF80" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="sonidfin.wav" />
+     <p>MANZANA</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x000000" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="true" image="manzavr.gif">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0x80FF80" background="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="naranja.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="29" bold="true" />
+      <color foreground="0x804040" background="0xFF8000" inactive="0xFF8000" alternative="0xFF8000" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="29" bold="true" />
+      <color foreground="0x804040" background="0xFF8000" inactive="0xFF8000" alternative="0xFF8000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="sonidfin.wav" />
+     <p>NARANJA</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x000000" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="true" image="naranja2.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="peras.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="29" bold="true" />
+      <color foreground="0x804040" background="0xFFFF80" inactive="0xFFFF80" alternative="0xFFFF80" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="29" bold="true" />
+      <color foreground="0x804040" background="0xFFFF80" inactive="0xFFFF80" alternative="0xFFFF80" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="sonidfin.wav" />
+     <p>PERAS</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x808000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x808000" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="pera2.gif">
+    <style>
+     <color background="0xFBFDCC" inactive="0xFBFDCC" alternative="0xFBFDCC" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="portada.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="21" bold="true" />
+      <color foreground="0x804040" background="0xFFFF80" inactive="0xFFFF80" alternative="0xFFFF80" />
+     </style>
+     <p>JUEGA Y DESCUBRIRÁS MUCHAS FRUTAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="21" bold="true" />
+      <color foreground="0x804040" background="0xFFFF80" inactive="0xFFFF80" alternative="0xFFFF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFF80" border="false" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="700.0" cellHeight="500.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell image="fruteri2.gif" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="portada0.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="21" bold="true" />
+      <color foreground="0x804040" background="0xFFFF80" inactive="0xFFFF80" alternative="0xFFFF80" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="21" bold="true" />
+      <color foreground="0x804040" background="0xFFFF80" inactive="0xFFFF80" alternative="0xFFFF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFF80" border="false" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="650.0" cellHeight="475.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell image="portada0.gif" />
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="proble.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="19" />
+      <color background="0xFF0000" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <p>LEE EL PROBLEMA Y ELIGE LA RESPUESTA CORRECTA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="19" />
+      <color background="0xFF0000" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="sonidfin.wav" />
+     <p>¡¡ERES MUY LIST@!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <image name="fresa.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x000000" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="496.0" cellHeight="300.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="18" />
+     <color foreground="0x0000FF" background="0xFFFFFF" inactive="0x009D00" alternative="0x009D00" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="1">
+     <p>PROBLEMA:EN UN FRUTERO HABÍA 8 FRESAS.SI JUAN SE COMIÓ 3.¿CUÁNTAS FRESAS QUEDARON EN EL FRUTERO?</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="115.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="25" />
+     <color foreground="0xFF0000" background="0xFFFFFF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>8+3=11</p>
+    </cell>
+    <cell>
+     <p>8-3=5</p>
+    </cell>
+    <cell>
+     <p>5+3=8</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="496.0" cellHeight="300.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>QUEDARON 5 FRESAS</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="sandia.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="29" bold="true" />
+      <color background="0xFF0000" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="29" bold="true" />
+      <color background="0xFF0000" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="sonidfin.wav" />
+     <p>SANDÍA</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x000000" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="true" image="sandia2.gif">
+    <style>
+     <color background="0xFFFFFF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="sopa1.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0x0080FF" alternative="0x0080FF" />
+     </style>
+     <p>ENCUENTRA EL NOMBRE DE 6 FRUTAS QUE ESTÁN ESCONDIDOS EN LA SOPA DE LETRAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0x0080FF" alternative="0x0080FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="sonidfin.wav" />
+     <p>¡¡MUY, MUY BIEN!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x0080FF" border="false" />
+   </settings>
+   <textGrid rows="10" columns="5" cellWidth="50.0" cellHeight="50.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>MANZANA*F*</row>
+     <row>KIWI****RP</row>
+     <row>*U******EE</row>
+     <row>*V******SR</row>
+     <row>NARANJA*AA</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">MANZANA</clue>
+    <clue id="1">PERA</clue>
+    <clue id="2">NARANJA</clue>
+    <clue id="3">FRESA</clue>
+    <clue id="4">KIWI</clue>
+    <clue id="5">UVA</clue>
+   </clues>
+   <cells rows="6" cols="1" cellWidth="140.0" cellHeight="50.0" border="false" id="secondary">
+    <style>
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>MANZANA</p>
+    </cell>
+    <cell>
+     <p>PERA</p>
+    </cell>
+    <cell>
+     <p>NARANJA</p>
+    </cell>
+    <cell>
+     <p>FRESA</p>
+    </cell>
+    <cell>
+     <p>KIWI</p>
+    </cell>
+    <cell>
+     <p>UVA</p>
+    </cell>
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="sopa2.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0x0080FF" alternative="0x0080FF" />
+     </style>
+     <p>ENCUENTRA EL NOMBRE DE 6 FRUTAS QUE ESTÁN ESCONDIDOS EN LA SOPA DE LETRAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0x0080FF" alternative="0x0080FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="sonidfin.wav" />
+     <p>¡¡MUY, MUY BIEN!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x0080FF" border="false" />
+   </settings>
+   <textGrid rows="10" columns="6" cellWidth="50.0" cellHeight="50.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>MANDARINA*</row>
+     <row>H**PLATANO</row>
+     <row>I*CIRUELA*</row>
+     <row>G**Ñ******</row>
+     <row>O**A******</row>
+     <row>*MELOCOTON</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">MANDARINA</clue>
+    <clue id="1">MELOCOTON</clue>
+    <clue id="2">HIGO</clue>
+    <clue id="3">PIÑA</clue>
+    <clue id="4">CIRUELA</clue>
+    <clue id="5">PLATANO</clue>
+   </clues>
+   <cells rows="6" cols="1" cellWidth="140.0" cellHeight="50.0" border="false" id="secondary">
+    <style>
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>MANDARINA</p>
+    </cell>
+    <cell>
+     <p>MELOCOTÓN</p>
+    </cell>
+    <cell>
+     <p>HIGO</p>
+    </cell>
+    <cell>
+     <p>PIÑA</p>
+    </cell>
+    <cell>
+     <p>CIRUELA</p>
+    </cell>
+    <cell>
+     <p>PLÁTANO</p>
+    </cell>
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="uva.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="29" bold="true" />
+      <color background="0xFFFF80" inactive="0xFFFF80" alternative="0xFFFF80" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="29" bold="true" />
+      <color background="0xFFFF80" inactive="0xFFFF80" alternative="0xFFFF80" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="sonidfin.wav" />
+     <p>UVA</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x000000" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="true" image="uva2.gif">
+    <style>
+     <color background="0xFFFFFF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="ciruela.gif" file="ciruela.gif" />
+  <media name="fresa.gif" file="fresa.gif" />
+  <media name="fresa2.gif" file="fresa2.gif" />
+  <media name="fruteri2.gif" file="fruteri2.gif" />
+  <media name="granada.gif" file="granada.gif" />
+  <media name="higo.gif" file="higo.gif" />
+  <media name="kiwi.gif" file="kiwi.gif" />
+  <media name="mandarin.gif" file="mandarin.gif" />
+  <media name="manzana.gif" file="manzana.gif" />
+  <media name="manzavr.gif" file="manzavr.gif" />
+  <media name="media.gif" file="media.gif" />
+  <media name="meloc.gif" file="meloc.gif" />
+  <media name="melon.gif" file="melon.gif" />
+  <media name="naranja.gif" file="naranja.gif" />
+  <media name="naranja2.gif" file="naranja2.gif" />
+  <media name="pera.gif" file="pera.gif" />
+  <media name="pera2.gif" file="pera2.gif" />
+  <media name="pi_a.gif" file="pi_a.gif" />
+  <media name="platano.gif" file="platano.gif" />
+  <media name="portada0.gif" file="portada0.gif" />
+  <media name="sandia.gif" file="sandia.gif" />
+  <media name="sandia2.gif" file="sandia2.gif" />
+  <media name="uva.gif" file="uva.gif" />
+  <media name="uva2.gif" file="uva2.gif" />
+  <media name="estupend.wav" file="estupend.wav" />
+  <media name="genial.wav" file="genial.wav" />
+  <media name="muybien.wav" file="muybien.wav" />
+  <media name="sonidfin.wav" file="sonidfin.wav" />
+ </mediaBag>
+</JClicProject>
+

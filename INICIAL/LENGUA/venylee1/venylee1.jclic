@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="mirian" version="0.1.3">
+ <settings>
+  <title>Ven a leer 1, 2 y 3</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="10/7/02" />
+  <revision description="Conversión de Clic3 a JClic" date="12/18/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Rosa Ana Santiago Vicario" mail="rosv@wanadoo.es" />
+  <organization name="CP Marqués de Camarasa" city="Castrojeriz" state="Castilla y León" />
+  <language>español</language>
+  <description>
+   <p>Estas aplicaciones van dirigidas especialmente para niños y niñas de Educación Especial o que sin serlo, tengan ciertas dificultades en el aprendizaje de la técnica lecto-escritora. &lt;BR&gt;Así mismo pueden utilizarse en el último nivel de E.I. y 1º de E.P. como refuerzo a la lectura y escritura.</p>
+   <p>&lt;BR&gt;</p>
+   <p>Se pretende que los alumnos adquieran las siguientes destrezas repartidas en los tres paquetes de actividades:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Discriminación, identificación e interiorización de las sílabas directas: p, s, l, m, t, n, d, ll, h, b, v, ñ.</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area="Lenguas" level="Infantil, Primaria">aprendizaje de la lengua, lengua castellana</descriptors>
+ </settings>
+ <sequence>
+  <item id="mirian.pac" name="portada.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="arranque.ass">
+   <jump action="STOP" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="portada.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Edelfontmed" size="34" />
+      <color foreground="0xCB7A18" background="0xB0F7BB" />
+     </style>
+     <media type="PLAY_MIDI" level="2" file="blowing.mid" />
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Edelfontmed" size="34" />
+      <color foreground="0xCB7A18" background="0xB0F7BB" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="gusilu~1.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xAFF988" border="false" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="530.0" cellHeight="100.0" border="false">
+    <style>
+     <font family="Arial" size="37" />
+     <color foreground="0x004080" background="0xB0F7BB" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>¿QUIERES APRENDER A LEER?</p>
+    </cell>
+    <cell>
+     <p>¡VERÁS QUÉ DIVERTIDO!</p>
+    </cell>
+    <cell>
+     <p>Ven a leer - 1</p>
+    </cell>
+    <cell>
+     <p>C.P. Marqués de Camarasa (Castrojeriz-Burgos)</p>
+    </cell>
+    <cell />
+    <cell>
+     <p>Rosa Ana Santiago Vicario  rosana3@terra.es</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="arranque.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color background="0xF0F28A" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color background="0xF0F28A" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fontab~1.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="12" cols="1" cellWidth="700.0" cellHeight="40.0" border="false">
+    <style>
+     <font family="MeMima" size="37" bold="true" />
+     <color background="0xF0F28A" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="12" />
+    <cell>
+     <p>¿Con qué letra quieres trabajar?:</p>
+    </cell>
+    <cell>
+     <p> Elige una y...  ¡Adelante!</p>
+    </cell>
+    <cell>
+     <p>-------------</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="pe.pac" params="pe/pe.jclic" />
+     <p>p</p>
+    </cell>
+    <cell>
+     <p>-------------</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="ese.pac" params="ese/ese.jclic" />
+     <p>s</p>
+    </cell>
+    <cell>
+     <p>-------------</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="ele.pac" params="ele/ele.jclic" />
+     <p>l</p>
+    </cell>
+    <cell>
+     <p>-------------</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="eme.pac" params="eme/eme.jclic" />
+     <p>m</p>
+    </cell>
+    <cell>
+     <p>-------------</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="repaso.pac" params="repaso/repaso.jclic" />
+     <p>repaso</p>
+    </cell>
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="fontab~1.gif" file="fontab_1.gif" />
+  <media name="gusilu~1.gif" file="gusilu_1.gif" />
+  <media name="blowing.mid" file="blowing.mid" />
+ </mediaBag>
+</JClicProject>
+

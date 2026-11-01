@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="dictatio" version="0.1.3">
+ <settings>
+  <title>Comparatives and Superlatives</title>
+  <revision description="Creation of the package of activities using Clic 3.0" date="5/30/01" />
+  <revision description="Converted from Clic3 to JClic" date="6/19/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <organization name="Colegio Orvalle" mail="orvalle@orvalle.es" url="http://www.orvalle.es" city="Las Rozas" state="Madrid" />
+  <language>english</language>
+  <description>
+   <p>Clic activities about comparatives and superlatives in English. The application has three activities with ten different adjectives.</p>
+  </description>
+  <descriptors level="Secondary school">Aranese language, vocabulary</descriptors>
+  <meta_langs>english</meta_langs>
+  <descriptions>
+   <description language="english">
+    <p>Clic activities about comparatives and superlatives in English. The application has three activities with ten different adjectives.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="dictatio.pac" name="dictatio.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="dos.txa" />
+  <item name="tres.txa">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="dictatio.ass">
+   <description>
+    <p>Push the button, listen to and write down the dictation.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="53" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>When you finish, go on to the next page.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="53" />
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="1" cellWidth="358.0" cellHeight="500.0" border="true">
+    <style>
+     <font family="Arial" size="53" bold="true" />
+     <color foreground="0xFF00FF" background="0x80FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell>
+     <p>Comparatives and Superlatives</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="uno.wav" />
+     <p>Push here and write down the dictation which you are going to hear when you push the button.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.FillInBlanks" name="dos.txa">
+   <messages>
+    <cell type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="now.wav" />
+     <p>Check your work before you fill in the spaces.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="notbad.wav" />
+     <p>Not bad, you´re doing quite well.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x8080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <evaluator class="@ComplexEvaluator" />
+   <checkButton>Push here to see how well you have done.</checkButton>
+   <document>
+    <style name="default" family="Arial" bold="true" size="20" foreground="0xFFFFFF" background="0xFF80FF" italic="false" tabWidth="16" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xC0C0C0" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <text>Now, put the adjective in the comparative or in the superlative.</text>
+     </p>
+     <p />
+     <p>
+      <text>1.</text>
+      <target>
+       <answer>worse</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>worse</text>
+      </target>
+     </p>
+     <p>
+      <text>2.</text>
+      <target>
+       <answer>prettiest</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <text>prettiest</text>
+      </target>
+     </p>
+     <p>
+      <text>3.</text>
+      <target>
+       <answer>most expensive</answer>
+       <response fill="_" length="14" maxLength="14" />
+       <text>most expensive</text>
+      </target>
+     </p>
+     <p>
+      <text>4.</text>
+      <target>
+       <answer>most interesting</answer>
+       <response fill="_" length="16" maxLength="16" />
+       <text>most interesting</text>
+      </target>
+     </p>
+     <p>
+      <text>5.</text>
+      <target>
+       <answer>better</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text>better</text>
+      </target>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.FillInBlanks" name="tres.txa">
+   <messages>
+    <cell type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="above.wav" />
+     <p>Put the above in the comparative and in the superlative.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="PLAY_MIDI" level="2" file="ok.mid" />
+     <p>Wonderful!!! This music is for you!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x008080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF80" border="true">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <evaluator class="@ComplexEvaluator" />
+   <checkButton>Push here to see how well you have done.</checkButton>
+   <document>
+    <style name="default" family="Arial" bold="false" size="17" foreground="0x008040" background="0xFFFF80" italic="false" tabWidth="16" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xC0C0C0" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <text>thin   		</text>
+      <target>
+       <answer>thinner</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>thinner</text>
+      </target>
+      <text />
+      <target>
+       <answer>thinnest</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>thinnest</text>
+      </target>
+     </p>
+     <p>
+      <text>intelligent	</text>
+      <target>
+       <answer>more intelligent</answer>
+       <response fill="_" length="16" maxLength="16" />
+       <text>	more intelligent</text>
+      </target>
+      <text />
+      <target>
+       <answer>most intelligent</answer>
+       <response fill="_" length="16" maxLength="16" />
+       <text>most intelligent</text>
+      </target>
+     </p>
+     <p>
+      <text>clever		</text>
+      <target>
+       <answer>cleverer</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>cleverer</text>
+      </target>
+      <text />
+      <target>
+       <answer>cleverest</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <text>	cleverest</text>
+      </target>
+     </p>
+     <p>
+      <text>many		</text>
+      <target>
+       <answer>more</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>more</text>
+      </target>
+      <text />
+      <target>
+       <answer>most</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>most</text>
+      </target>
+     </p>
+     <p>
+      <text>much		</text>
+      <target>
+       <answer>more</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>more</text>
+      </target>
+      <text />
+      <target>
+       <answer>most</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>most</text>
+      </target>
+     </p>
+     <p>
+      <text>little		</text>
+      <target>
+       <answer>less</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>less</text>
+      </target>
+      <text />
+      <target>
+       <answer>least</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>least</text>
+      </target>
+     </p>
+     <p>
+      <text>thirsty		</text>
+      <target>
+       <answer>thirstier</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <text>thirstier</text>
+      </target>
+      <text />
+      <target>
+       <answer>thirstiest</answer>
+       <response fill="_" length="10" maxLength="10" />
+       <text>	thirstiest</text>
+      </target>
+     </p>
+     <p>
+      <text>few		</text>
+      <target>
+       <answer>fewer</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>fewer</text>
+      </target>
+      <text />
+      <target>
+       <answer>fewest</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text>fewest</text>
+      </target>
+     </p>
+     <p>
+      <text>big		</text>
+      <target>
+       <answer>bigger</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text>bigger</text>
+      </target>
+      <text />
+      <target>
+       <answer>biggest</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>biggest</text>
+      </target>
+     </p>
+     <p>
+      <text>boring		</text>
+      <target>
+       <answer>more boring</answer>
+       <response fill="_" length="11" maxLength="11" />
+       <text>more boring</text>
+      </target>
+      <text />
+      <target>
+       <answer>most boring</answer>
+       <response fill="_" length="11" maxLength="11" />
+       <text>most boring</text>
+      </target>
+     </p>
+     <p />
+     <p />
+    </section>
+   </document>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="ok.mid" file="ok.mid" />
+  <media name="above.wav" file="above.wav" />
+  <media name="notbad.wav" file="notbad.wav" />
+  <media name="now.wav" file="now.wav" />
+  <media name="uno.wav" file="uno.wav" />
+ </mediaBag>
+</JClicProject>
+

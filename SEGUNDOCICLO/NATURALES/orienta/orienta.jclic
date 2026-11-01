@@ -1,0 +1,1070 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="orienta" version="0.1.3">
+ <settings>
+  <title>La orientación</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="1/28/00" />
+  <revision description="Conversión de Clic3 a JClic" date="7/10/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Juan Antonio Arizcun Arizcun" mail="juanantonio.arizcun@wanadoo.es" />
+  <organization name="CP Monteagudo" state="Murcia" />
+  <language>es</language>
+  <description>
+   <p>Paquete de actividades de Clic sobre la orientación basado en el libro de texto "Conocimiento del medio" de 4º de primaria de la Editorial SC.  Las actividades intentan acercar al alumno al conocimiento de los diferentes elementos de orientación terrestre.  Se trabajan temas como los movimientos de rotación y translación, los puntos cardinales, los paralelos y meridianos, la brújula, etc.</p>
+  </description>
+  <descriptors area-codes="exp" level="Primaria">geografía, representación del espacio</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Paquete de actividades de Clic sobre la orientación basado en el libro de texto "Conocimiento del medio" de 4º de primaria de la Editorial SC.  Las actividades intentan acercar al alumno al conocimiento de los diferentes elementos de orientación terrestre.  Se trabajan temas como los movimientos de rotación y translación, los puntos cardinales, los paralelos y meridianos, la brújula, etc.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="orienta.pac" name="ori0.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="ori00.ass" />
+  <item name="ori1.txa" />
+  <item name="ori2.ass" />
+  <item name="ori3.ass" />
+  <item name="ori5.ass" />
+  <item name="ori6.txa" />
+  <item name="ori7.ass" />
+  <item name="ori8.txa" />
+  <item name="ori9.ass" />
+  <item name="ori10.puz" />
+  <item name="ori11.ass" />
+  <item name="ori12.txa" />
+  <item name="ori13.txa" />
+  <item name="ori14.ass" />
+  <item name="ori15.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="ori0.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial Black" size="50" />
+      <color foreground="0xFF0000" background="0x000080" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>La Orientación</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial Black" size="50" />
+      <color foreground="0xFF0000" background="0x000080" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x000080">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x000080" border="false" />
+   </settings>
+   <cells rows="1" columns="1" border="false" image="rosavien.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="ori00.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x000080">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" columns="1" border="true" image="portada2.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@text.FillInBlanks" name="ori1.txa">
+   <description>
+    <p>Rellenar los huecos en el texto</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Escribe las palabras que faltan. Pero atento a las tíldes.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Empiezas bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF8040">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000FF" border="true">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" background="0xFFFFFF" size="17" italic="false" foreground="0x000080" family="Arial" bold="false" tabWidth="16" />
+    <style name="target" base="default" background="0xC0C0C0" target="true" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text>A VER CUANTO TARDAS EN COMPLETAR LOS HUECOS</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>La tierra tiene forma </text>
+      <target>
+       <answer>esférica</answer>
+       <answer>redonda</answer>
+       <answer>de esfera</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <text>esférica</text>
+      </target>
+      <text>. Está ligeramente achatada por los </text>
+      <target>
+       <answer>polos</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>polos</text>
+      </target>
+      <text>, debido al movimiento de </text>
+      <target>
+       <answer>rotación</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>rotación</text>
+      </target>
+      <text> sobre su eje.</text>
+     </p>
+     <p>
+      <text>Para situar un lugar en las superficie terrestre nos valemos de unas líneas </text>
+      <target>
+       <answer>imaginarias</answer>
+       <response fill="_" length="11" maxLength="11" />
+       <text>imaginarias</text>
+      </target>
+      <text>. Estas líneas se representan en los planos,en los mapas y en la esfera </text>
+      <target>
+       <answer>terrestre</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <text>terrestre</text>
+      </target>
+      <text>.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" checkAccents="false" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="ori10.puz">
+   <description>
+    <p>Puzzle de la Rosa de los Vientos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Aquí tienes la Rosa de los Vientos para que la ordenes</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¿Es bonita verdad?</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFF8000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="5" columns="5" border="true" image="rosavien.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="5" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="ori11.ass">
+   <description>
+    <p>Señalar los puntos cardinales</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>¿A ver si localizas los puntos cardinales?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Muy bien. Ya puedes salir al monte</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF8080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="4" cellWidth="140.0" cellHeight="50.0" border="true" id="primary">
+    <style shadow="true">
+     <font family="Arial" size="20" bold="true" />
+     <color foreground="0xFF8000" background="0x80FFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell id="0">
+     <p>NORTE</p>
+    </cell>
+    <cell id="1">
+     <p>SUR</p>
+    </cell>
+    <cell id="2">
+     <p>ESTE</p>
+    </cell>
+    <cell id="3">
+     <p>OESTE</p>
+    </cell>
+    <cell id="4">
+     <p>NORDESTE</p>
+    </cell>
+    <cell id="5">
+     <p>SUDESTE</p>
+    </cell>
+    <cell id="6">
+     <p>NOROESTE</p>
+    </cell>
+    <cell id="7">
+     <p>SUDOESTE</p>
+    </cell>
+   </cells>
+   <cells rows="5" columns="3" border="false" image="rosavi~1.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="5" rows="3" showEnclosure="true" scaleX="5.0" scaleY="3.0">
+     <enclosing>
+      <shape>rectangle:0,0,5,3</shape>
+     </enclosing>
+     <shape>rectangle:2,0,1,1</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>rectangle:4,1,1,1</shape>
+     <shape>rectangle:0,1,1,1</shape>
+     <shape>rectangle:3,0,1,1</shape>
+     <shape>rectangle:3,2,1,1</shape>
+     <shape>rectangle:1,0,1,1</shape>
+     <shape>rectangle:1,2,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="ori12.txa">
+   <description>
+    <p>Rellenar texto con Norte, Sur...</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>A ver como vas de orientación campestre</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Muy bueno. Eres un gran aventurero</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x808000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="540" height="341" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" background="0xFFFFFF" size="17" italic="false" foreground="0x000080" family="Arial" bold="false" tabWidth="16" />
+    <style name="target" base="default" background="0xC0C0C0" target="true" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text>Podemos orientarnos por el Sol: El </text>
+      <target>
+       <answer>Sol</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>Sol</text>
+      </target>
+      <text> sale por el </text>
+      <target>
+       <answer>Este</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>Este</text>
+      </target>
+      <text> y se pone por el </text>
+      <target>
+       <answer>Oeste</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>Oeste</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <text>Al amanecer colócate con los brazos en cruz de tal manera que tu </text>
+      <target>
+       <answer>brazo</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>brazo</text>
+      </target>
+      <text> derecho señale el lugar por donde sale el Sol. Ya sabes que es el </text>
+      <target>
+       <answer>Este</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>Este</text>
+      </target>
+      <text>. El brazo izquierdo señala el </text>
+      <target>
+       <answer>Oeste</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>Oeste</text>
+      </target>
+      <text>, al frente está el </text>
+      <target>
+       <answer>Norte</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>Norte</text>
+      </target>
+      <text> y a tu espalda el </text>
+      <target>
+       <answer>Sur</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>Sur</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p>
+      <text>A mediodía el Sol se encuentra en el </text>
+      <target>
+       <answer>Sur</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>Sur</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <text>De noche podemos orientarnos por la Estrella </text>
+      <target>
+       <answer>Polar</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>Polar</text>
+      </target>
+      <text> que señala el </text>
+      <target>
+       <answer>Norte</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>Norte</text>
+      </target>
+      <text>. Esta estrella se encuentra en la constelación de la </text>
+      <target>
+       <answer>Osa</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>Osa</text>
+      </target>
+      <text> Menor.</text>
+     </p>
+     <p>
+      <text>Para encontrarla es mejor preguntar a la Osa </text>
+      <target>
+       <answer>Mayor</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>Mayor</text>
+      </target>
+      <text>, y las dos últimas estrellas del Carro señalan la </text>
+      <target>
+       <answer>Estrella</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>Estrella</text>
+      </target>
+      <text> Polar.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.Order" name="ori13.txa" type="orderWords" amongParagraphs="true">
+   <description>
+    <p>Colocar las palabras en su sitio</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Coloca cada palabra en su sitio</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Muy bien. Ya queda poco</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF0080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" background="0xFFFFFF" size="17" italic="false" foreground="0x000000" family="Arial" bold="false" tabWidth="16" />
+    <style name="target" base="default" background="0xC0C0C0" target="true" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text>El movimiento de la Tierra sobre si misma se llama de </text>
+      <target>rotación</target>
+      <text>.</text>
+     </p>
+     <p>
+      <text>La Tierra tarda 24 </text>
+      <target>horas</target>
+      <text> en realizarlo. A este tiempo se le llama </text>
+      <target>día</target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <text>La Tierra no tiene luz </text>
+      <target>propia</target>
+      <text>. La que tiene la recibe del </text>
+      <target>Sol</target>
+      <text>. Sin la luz del Sol </text>
+      <target>no</target>
+      <text> habría seres vivos.</text>
+     </p>
+     <p>
+      <text>Como la Tierra tiene forma </text>
+      <target>esférica</target>
+      <text>, el Sol ilumina sólo una parte de su </text>
+      <target>superficie</target>
+      <text>.</text>
+     </p>
+     <p>
+      <text>En la mitad iluminada es de </text>
+      <target>día</target>
+      <text> y en la que no está iluminada es de </text>
+      <target>noche</target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <text>El día y la noche no siempre duran lo mismo. En </text>
+      <target>verano</target>
+      <text> los días son más </text>
+      <target>largos</target>
+      <text> y las </text>
+      <target>noches</target>
+      <text> más cortas.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="ori14.ass">
+   <description>
+    <p>Relacionar sobre el movimiento de traslación</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Relaciona las casillas</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Fenómeno. Esto ya está casi, casi.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x000080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color foreground="0x000080" background="0xFF8000" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>Movimiento de la Tierra alrededor del Sol</p>
+    </cell>
+    <cell>
+     <p>Movimiento de la Tierra sobre su propio eje</p>
+    </cell>
+    <cell>
+     <p>El año normal tiene ______ días</p>
+    </cell>
+    <cell>
+     <p>El año bisiesto tiene ______días</p>
+    </cell>
+    <cell>
+     <p>Cuando los rayos de Sol llegan más perpendiculares</p>
+    </cell>
+    <cell>
+     <p>Cuando los rayos de Sol llegan más inclinados</p>
+    </cell>
+   </cells>
+   <cells rows="3" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color foreground="0x000080" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>traslación</p>
+    </cell>
+    <cell>
+     <p>rotación</p>
+    </cell>
+    <cell>
+     <p>365</p>
+    </cell>
+    <cell>
+     <p>366</p>
+    </cell>
+    <cell>
+     <p>hace más calor (verano)</p>
+    </cell>
+    <cell>
+     <p>hace más frio (invierno)</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="ori15.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x0000FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" columns="1" cellWidth="534.0" cellHeight="430.0" border="true">
+    <style>
+     <font family="Arial" size="28" />
+     <color foreground="0x000080" background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>¡Muy bien! Has trabajado estupendamente.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="ori2.ass">
+   <description>
+    <p>Relacionar las frases con su correspondiente línea imaginaria</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Une cada casilla con la correspondiente</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¿Esta fué fácil, verdad?</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x80FFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="3" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color foreground="0x000080" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell id="0">
+     <p>Rodean a la Tierra pasando por los polos</p>
+    </cell>
+    <cell id="0">
+     <p>Todas estas líneas imaginarias son iguales</p>
+    </cell>
+    <cell id="1">
+     <p>Son más pequeños a medida que se acercan a los polos</p>
+    </cell>
+    <cell id="1">
+     <p>El mayor de todos es el ecuador</p>
+    </cell>
+    <cell id="2">
+     <p>La Tierra gira entorno a él</p>
+    </cell>
+    <cell id="2">
+     <p>Atraviesa la tierra de norte a sur pasando por su centro</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="3" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style shadow="true">
+     <font family="Arial Black" size="37" />
+     <color foreground="0x00FF00" background="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>Meridianos</p>
+    </cell>
+    <cell>
+     <p>Paralelos</p>
+    </cell>
+    <cell>
+     <p>Eje de la Tierra</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="ori3.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Señala en el punto de color que corresponda</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Muy bien. Cuidado que se complica</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0000FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="4" cellWidth="140.0" cellHeight="50.0" border="true" id="primary">
+    <style>
+     <color foreground="0x000080" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell id="4">
+     <p>Meridianos</p>
+    </cell>
+    <cell id="3">
+     <p>Polo Norte</p>
+    </cell>
+    <cell id="6">
+     <p>Polo Sur</p>
+    </cell>
+    <cell id="5">
+     <p>Hemisferio Norte</p>
+    </cell>
+    <cell id="7">
+     <p>Hemisferio Sur</p>
+    </cell>
+    <cell id="0">
+     <p>Paralelos</p>
+    </cell>
+    <cell id="2">
+     <p>Ecuador</p>
+    </cell>
+    <cell id="1">
+     <p>Eje Terrestre</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="4" border="false" image="tierra31.gif" id="secondary">
+    <style>
+     <font family="Arial" size="25" />
+     <color foreground="0x000080" background="0x80FFFF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="ori5.ass">
+   <description>
+    <p>Asociación de momentos del día respecto al Sol</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Relaciona según corresponda</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Fué fácil verdad. ¡PREPARATE!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x808000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" columns="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style shadow="true">
+     <color foreground="0x000080" background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>Amanecer</p>
+    </cell>
+    <cell>
+     <p>Mediodía</p>
+    </cell>
+    <cell>
+     <p>Atardecer</p>
+    </cell>
+   </cells>
+   <cells rows="3" columns="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color foreground="0xFF8000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>El Sol empieza a iluminarnos</p>
+    </cell>
+    <cell>
+     <p>El Sol está en lo más alto</p>
+    </cell>
+    <cell>
+     <p>El Sol va dejando de iluminarnos poco a poco</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="ori6.txa">
+   <description>
+    <p>Completar el texto sobre el Sol</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Selecciona la palabra que corresponda</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Fenómeno. Sigue así.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0000FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="361" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" background="0xFFFFFF" size="17" italic="false" foreground="0x004080" family="Arial" bold="false" tabWidth="16" />
+    <style name="target" base="default" background="0xC0C0C0" target="true" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text>El Sol es la estrella más </text>
+      <target>
+       <answer>cercana</answer>
+       <optionList>
+        <option>lejana</option>
+        <option>cercana</option>
+        <option>amiga</option>
+       </optionList>
+       <text>cercana</text>
+      </target>
+      <text> a la Tierra, por eso la vemos más </text>
+      <target>
+       <answer>grande</answer>
+       <optionList>
+        <option>fea</option>
+        <option>pequeña</option>
+        <option>grande</option>
+        <option>bonita</option>
+       </optionList>
+       <text>grande</text>
+      </target>
+      <text> que las demás estrellas. Es la única que nos </text>
+      <target>
+       <answer>ilumina</answer>
+       <optionList>
+        <option>conoce</option>
+        <option>refleja</option>
+        <option>ilumina</option>
+       </optionList>
+       <text>ilumina</text>
+      </target>
+      <text> y nos da </text>
+      <target>
+       <answer>calor</answer>
+       <optionList>
+        <option>calor</option>
+        <option>frío</option>
+        <option>caramelos</option>
+       </optionList>
+       <text>calor</text>
+      </target>
+      <text>. Se encuentra a una distancia de        </text>
+      <target>
+       <answer>150.000.000</answer>
+       <optionList>
+        <option>150</option>
+        <option>150.000</option>
+        <option>150.000.000</option>
+        <option>15.000</option>
+       </optionList>
+       <text>150.000.000</text>
+      </target>
+      <text> km de la Tierra.</text>
+     </p>
+     <p />
+     <p>
+      <text>El Sol es mucho más </text>
+      <target>
+       <answer>grande</answer>
+       <optionList>
+        <option>grande</option>
+        <option>pequeño</option>
+        <option>valiente</option>
+        <option>elegante</option>
+       </optionList>
+       <text>grande</text>
+      </target>
+      <text> que la Tierra, pero no es </text>
+      <target>
+       <answer>sólido</answer>
+       <optionList>
+        <option>gaseoso</option>
+        <option>sólido</option>
+        <option>caliente</option>
+       </optionList>
+       <text>sólido</text>
+      </target>
+      <text>. Está formado por una mezcla de gases.</text>
+     </p>
+     <p />
+     <p>
+      <text>Como la luz que nos llega del Sol es tan </text>
+      <target>
+       <answer>intensa</answer>
+       <optionList>
+        <option>intensa</option>
+        <option>floja</option>
+        <option>amarilla</option>
+       </optionList>
+       <text>intensa</text>
+      </target>
+      <text>, nos impide ver otros </text>
+      <target>
+       <answer>astros</answer>
+       <optionList>
+        <option>soles</option>
+        <option>montes</option>
+        <option>astros</option>
+        <option>satélites</option>
+       </optionList>
+       <text>astros</text>
+      </target>
+      <text>. Por eso el único astro que vemos durante el día es el </text>
+      <target>
+       <answer>Sol</answer>
+       <optionList>
+        <option>planeta</option>
+        <option>Sol</option>
+        <option>meteoro</option>
+        <option>Butragueño</option>
+       </optionList>
+       <text>Sol</text>
+      </target>
+      <text>. A veces también vemos la Luna.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="ori7.ass">
+   <description>
+    <p>Relación de elementos del cielo</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Relaciona con cada una de las afirmaciones</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Muy bien. Esto marcha.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0000FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="3" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color foreground="0x004080" background="0xFFFFFF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell id="0">
+     <p>Lugar donde están los astros</p>
+    </cell>
+    <cell id="1">
+     <p>Tienen luz propia</p>
+    </cell>
+    <cell id="1">
+     <p>Forman grupos llamados constelaciones</p>
+    </cell>
+    <cell id="2">
+     <p>No tienen luz propia y no son satélites</p>
+    </cell>
+    <cell id="2">
+     <p>Giran alrededor de una estrella</p>
+    </cell>
+    <cell id="3">
+     <p>giran alrededor de los planetas</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style shadow="true">
+     <color foreground="0xFF8000" background="0x00FFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>Universo</p>
+    </cell>
+    <cell>
+     <p>Estrellas</p>
+    </cell>
+    <cell>
+     <p>Planetas</p>
+    </cell>
+    <cell>
+     <p>Satélites</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@text.Order" name="ori8.txa" type="orderWords">
+   <description>
+    <p>Colocar las palabras en su sitio</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Deberas colocar cada palabra en su sitio</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Muy bien. Puedes continuar</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x408080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" background="0xFFFFFF" size="17" italic="false" foreground="0x000000" family="Arial" bold="false" tabWidth="16" />
+    <style name="target" base="default" background="0xC0C0C0" target="true" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text>La Tierra es un </text>
+      <target>planeta</target>
+      <text> que gira alrededor del </text>
+      <target>Sol</target>
+      <text> y tiene un </text>
+      <target>satélite</target>
+      <text> que es la Luna.</text>
+     </p>
+     <p>
+      <text>La Luna es el </text>
+      <target>astro</target>
+      <text> que mejor vemos durante la </text>
+      <target>noche</target>
+      <text>. Algunas noches no se ve la </text>
+      <target>Luna</target>
+      <text> porque:</text>
+     </p>
+     <p>
+      <text>- Puede estar en el lado </text>
+      <target>opuesto</target>
+      <text> al nuestro.                                - La tierra se </text>
+      <target>interpone</target>
+      <text> entre el Sol y la </text>
+      <target>Luna</target>
+      <text> e impide que éste la </text>
+      <target>ilumine</target>
+      <text>.                                                                                      - El cielo puede estar </text>
+      <target>nublado</target>
+      <text> y las </text>
+      <target>nubes</target>
+      <text> nos impiden verla.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="ori9.ass">
+   <description>
+    <p>Simple información</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Aquí solo tienes que leer es texto</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x0000FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" columns="1" cellWidth="500.0" cellHeight="383.0" border="true">
+    <style>
+     <color foreground="0xFFFFFF" background="0x000080" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>AQUÍ TIENES ALGUNAS CURIOSIDADES PARA LEER </p>
+    </cell>
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="portada2.gif" file="portada2.gif" animated="false" />
+  <media name="rosavien.gif" file="rosavien.gif" animated="false" />
+  <media name="rosavi~1.gif" file="rosavi_1.gif" animated="false" />
+  <media name="tierra31.gif" file="tierra31.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="paquete4" version="0.1.3">
+ <settings>
+  <title>Trabajar en el laboratorio de química</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="6/16/03" />
+  <revision description="Conversión de Clic3 a JClic" date="6/18/03">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Olga Valiente Francés" mail="ovaliente@educa.aragon.es" />
+  <organization name="Centro de Profesores y Recursos de Andorra" mail="cprandorra@educa.aragon.es" url="http://www.educa.aragob.es/cprandor/" city="Andorra" state="Aragón" />
+  <language>es</language>
+  <description>
+   <p>Las actividades de esta aplicación están orientadas a que los alumnos conozcan el material básico que se utiliza en un laboratorio de química para realizar las diferentes prácticas. Sus objetivos son:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Conocer y cumplir las normas de seguridad para trabajar en un laboratorio escolar de química.</p>
+   <p>&lt;LI&gt;Descubrir el significado de los pictogramas que aparecen en las etiquetas de los productos químicos.</p>
+   <p>&lt;LI&gt;Familiarizarse con el modo de trabajar en el laboratorio.</p>
+   <p>&lt;LI&gt;Aprender que llevar a cabo experiencias químicas puede resultar peligroso si no se toman una serie de medidas de seguridad.</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area-codes="exp" level-codes="PRI, SEC">experimentación, química</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Las actividades de esta aplicación están orientadas a que los alumnos conozcan el material básico que se utiliza en un laboratorio de química para realizar las diferentes prácticas. Sus objetivos son:</p>
+    <p>&lt;UL&gt;</p>
+    <p>&lt;LI&gt;Conocer y cumplir las normas de seguridad para trabajar en un laboratorio escolar de química.</p>
+    <p>&lt;LI&gt;Descubrir el significado de los pictogramas que aparecen en las etiquetas de los productos químicos.</p>
+    <p>&lt;LI&gt;Familiarizarse con el modo de trabajar en el laboratorio.</p>
+    <p>&lt;LI&gt;Aprender que llevar a cabo experiencias químicas puede resultar peligroso si no se toman una serie de medidas de seguridad.</p>
+    <p>&lt;/UL&gt;</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="paquete4.pac" name="portadat.txa">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="texto1.txa" />
+  <item name="texto2.txa" />
+  <item name="texto3.txa" />
+  <item name="texto5.txa">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@text.FillInBlanks" name="portadat.txa">
+   <messages>
+    <cell type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="introdso.wav" />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="vasos.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="400" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" size="19" background="0x800040" family="Arial" bold="false" foreground="0xFFFFFF" italic="false" tabWidth="14" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text>                      </text>
+      <cell width="259" height="100" border="true">
+       <style>
+        <font family="Arial" size="53" bold="true" />
+        <color foreground="0x800040" background="0xFFFFFF" />
+       </style>
+       <p>NORMAS </p>
+       <p>DE</p>
+       <p>SEGURIDAD</p>
+      </cell>
+     </p>
+     <p />
+     <p>
+      <text>	Un laboratorio de Química es un lugar de trabajo con multitud de peligros potenciales.</text>
+     </p>
+     <p>
+      <text>	Para poder trabajar de la manera más adecuada, minimizando el riesgo de accidentes y optimizando el rendimiento de nuestra labor,es necesario seguir una serie de normas.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.Order" name="texto1.txa" type="orderWords" amongParagraphs="true">
+   <messages>
+    <cell type="previous">
+     <style>
+      <font family="Comic Sans MS" size="27" />
+      <color foreground="0xFFFFFF" background="0x008040" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="normas1.wav" />
+     <p>Lee atentamente y haz clic cuando termines     </p>
+    </cell>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="27" />
+      <color foreground="0xFFFFFF" background="0x008040" />
+     </style>
+     <p>Ordena las palabras en la frase correcta </p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="27" />
+      <color foreground="0xFFFFFF" background="0x008040" />
+     </style>
+     <p>¡ Lo lograste !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFF80">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true">
+     <size width="680" height="500" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <prevScreen maxTime="70" />
+   <document>
+    <style name="default" size="15" background="0x800040" family="Arial" bold="false" foreground="0xFFFFFF" italic="false" tabWidth="8" />
+    <style name="target" base="default" target="true" background="0xFFFFFF" foreground="0x008040" />
+    <style name="targetError" base="target" background="0x008000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text>   </text>
+     </p>
+     <p>
+      <text>  </text>
+      <cell width="162" height="114" border="true" image="erlenm.jpg">
+       <style>
+        <font family="Arial" size="53" bold="true" />
+        <color foreground="0x800040" background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text>            </text>
+      <cell width="140" height="75" border="true">
+       <style>
+        <font family="Arial" size="53" bold="true" />
+        <color foreground="0x800040" background="0xFFFFFF" />
+       </style>
+       <p>RECUERDA</p>
+      </cell>
+      <text>   </text>
+     </p>
+     <p />
+     <p>
+      <text>	* Antes de comenzar a </text>
+      <target>trabajar</target>
+      <text> debes estar seguro de lo que se pretende hacer, el material que se necesita...</text>
+     </p>
+     <p>
+      <text>	* Los </text>
+      <target>desplazamientos</target>
+      <text> dentro del laboratorio los realizarás </text>
+      <target>sin</target>
+      <text> </text>
+      <target>prisas</target>
+      <text> , procurando evitarlos al máximo si llevas material en las manos.</text>
+     </p>
+     <p>
+      <text>	* Las prendas de abrigo, los libros y cualquier material no imprescindible, debes dejarlos </text>
+      <target>fuera</target>
+      <text> del laboratorio o en aquellos lugares destinados al efecto.</text>
+     </p>
+     <p>
+      <text>	* Deberás utilizar guantes y </text>
+      <target>gafas</target>
+      <text> </text>
+      <target>protectoras</target>
+      <text> siempre que la manipulación de los productos así lo exija.</text>
+     </p>
+     <p>
+      <text>	* Los trabajos en los que intervengan sustancias </text>
+      <target>gaseosas</target>
+      <text> o susceptibles de producir gases, tienen que manipularse bajo la campana </text>
+      <target>extractora</target>
+      <text>.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="texto2.txa">
+   <messages>
+    <cell type="previous">
+     <style>
+      <font family="Comic Sans MS" size="27" />
+      <color foreground="0xFFFFFF" background="0x008040" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="normas2.wav" />
+     <p>Lee atentamente estas instruciones </p>
+    </cell>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="27" />
+      <color foreground="0xFFFFFF" background="0x008040" />
+     </style>
+     <p>Completa este texto con las palabras que faltan</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="27" />
+      <color foreground="0xFFFFFF" background="0x008040" />
+     </style>
+     <p>¡Enhorabuena!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFF80">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true">
+     <size width="700" height="500" />
+    </window>
+   </settings>
+   <prevScreen maxTime="60" />
+   <document>
+    <style name="default" size="15" background="0x800040" family="Arial" bold="false" foreground="0xFFFFFF" italic="false" tabWidth="16" />
+    <style name="target" base="default" target="true" background="0xFFFFFF" foreground="0x008040" />
+    <style name="targetError" base="target" background="0x008000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text>   </text>
+      <cell txtAlign="left,middle" imgAlign="left,middle" width="150" height="110" border="true" image="vasos.jpg">
+       <style>
+        <font family="Arial" size="53" bold="true" />
+        <color foreground="0x800040" background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text>                         </text>
+      <cell width="180" height="101" border="true">
+       <style>
+        <font family="Arial" size="53" bold="true" />
+        <color foreground="0x800040" background="0xFFFFFF" />
+       </style>
+       <p>RECUERDA</p>
+      </cell>
+     </p>
+     <p>
+      <text>                                                                  </text>
+     </p>
+     <p>
+      <text>	* Queda </text>
+      <target>
+       <answer>prohibida</answer>
+       <response fill="-" length="9" maxLength="9" />
+       <info>
+        <cell width="100" height="75">
+         <style>
+          <font family="Arial" size="16" bold="true" />
+          <color background="0xFFFFFF" />
+         </style>
+         <p>órden negativa</p>
+        </cell>
+       </info>
+       <text>prohibida</text>
+      </target>
+      <text> la manipulación de productos, materiales o aparatos eléctricos no autorizados.</text>
+     </p>
+     <p>
+      <text>	* Debes evitar el contacto de productos químicos con la piel, </text>
+      <target>
+       <answer>ojos</answer>
+       <response fill="-" length="4" maxLength="4" />
+       <info>
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="100" height="75">
+         <style>
+          <font family="Arial" size="16" bold="true" />
+          <color background="0xFFFFFF" />
+         </style>
+         <p>órgano de visión</p>
+        </cell>
+       </info>
+       <text>ojos</text>
+      </target>
+      <text> y mucosas, así como manejar aparatos eléctricos con las manos húmedas.</text>
+     </p>
+     <p>
+      <text>	* Deberás lavarte con abundante </text>
+      <target>
+       <answer>agua fría</answer>
+       <response fill="-" length="9" maxLength="9" />
+       <info>
+        <cell width="146" height="75">
+         <style>
+          <font family="Arial" size="16" bold="true" />
+          <color background="0xFFFFFF" />
+         </style>
+         <p>Líquido transparente</p>
+        </cell>
+       </info>
+       <text>agua fría</text>
+      </target>
+      <text> cualquier salpicadura sobre la piel.</text>
+     </p>
+     <p>
+      <text>	* Cuando calientes una sustancia en un tubo de ensayo, debes hacerlo por la parte </text>
+      <target>
+       <answer>superior</answer>
+       <response fill="-" length="8" maxLength="8" />
+       <info>
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="150" height="75">
+         <style>
+          <font family="Arial" size="16" bold="true" />
+          <color background="0xFFFFFF" />
+         </style>
+         <p>parte de arriba</p>
+        </cell>
+       </info>
+       <text>superior</text>
+      </target>
+      <text> del líquido, para evitar proyecciones del mismo. Igualmente nunca orientarás la boca del tubo hacia ninguna </text>
+      <target>
+       <answer>persona</answer>
+       <response fill=" " length="7" maxLength="7" />
+       <info>
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="196" height="75">
+         <style>
+          <font family="Arial" size="16" bold="true" />
+          <color background="0xFFFFFF" />
+         </style>
+         <p>ser vivo inteligente</p>
+        </cell>
+       </info>
+       <text>persona</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p>
+      <text>	* No debes probar ni oler ninguna </text>
+      <target>
+       <answer>sustancia</answer>
+       <response fill=" " length="9" maxLength="9" />
+       <info>
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="169" height="75">
+         <style>
+          <font family="Arial" size="16" bold="true" />
+          <color background="0xFFFFFF" />
+         </style>
+         <p>sinónimo de producto, reactivo</p>
+        </cell>
+       </info>
+       <text>sustancia</text>
+      </target>
+      <text> desconocida.</text>
+     </p>
+     <p>
+      <text>	* Cuando manejes sustancias </text>
+      <target>
+       <answer>inflamables</answer>
+       <response fill="_" length="11" maxLength="11" />
+       <info>
+        <cell width="150" height="75">
+         <style>
+          <font family="Arial" size="16" bold="true" />
+          <color background="0xFFFFFF" />
+         </style>
+         <p>Que se queman fácilmente</p>
+        </cell>
+       </info>
+       <text>inflamables</text>
+      </target>
+      <text> debes asegurarte de que no haya llamas ni fuentes de calor en las proximidades.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" checkSteps="1" />
+  </activity>
+  <activity class="@text.Complete" name="texto3.txa">
+   <messages>
+    <cell type="previous">
+     <style>
+      <font family="Comic Sans MS" size="27" />
+      <color foreground="0xFFFFFF" background="0x008040" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="normas3.wav" />
+     <p>Lee atentamente estas instruciones </p>
+    </cell>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="27" />
+      <color foreground="0xFFFFFF" background="0x008040" />
+     </style>
+     <p>Completa este texto con las palabras que faltan</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="27" />
+      <color foreground="0xFFFFFF" background="0x008040" />
+     </style>
+     <p>¡Enhorabuena!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFF80">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true">
+     <size width="700" height="500" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <prevScreen maxTime="60" />
+   <document>
+    <style name="default" size="15" background="0x800040" family="Arial" bold="false" foreground="0xFFFFFF" italic="false" tabWidth="16" />
+    <style name="target" base="default" target="true" background="0xFFFFFF" foreground="0x008040" />
+    <style name="targetError" base="target" background="0x008000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text>  </text>
+     </p>
+     <p>
+      <text>               </text>
+      <cell txtAlign="left,middle" imgAlign="left,middle" width="101" height="146" border="true" image="probetas.jpg">
+       <style>
+        <font family="Arial" size="53" bold="true" />
+        <color foreground="0x800040" background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text>                         </text>
+      <cell width="180" height="101" border="true">
+       <style>
+        <font family="Arial" size="53" bold="true" />
+        <color foreground="0x800040" background="0xFFFFFF" />
+       </style>
+       <p>RECUERDA</p>
+      </cell>
+     </p>
+     <p>
+      <text>                                                                  </text>
+     </p>
+     <p />
+     <p>
+      <text>	* Los </text>
+      <target>sólidos</target>
+      <text> inservibles y los </text>
+      <target>reactivos</target>
+      <text> insolubles en agua no debes arrojarlos a la pila del agua.</text>
+     </p>
+     <p>
+      <text>	* Cuando viertas un líquido en la pila del agua debes hacerlo con el grifo abierto para que se </text>
+      <target>diluya</target>
+      <text>. En ningún caso arrojarás ácidos concentrados, sustancias corrosivas o cualesquiera otras que puedan </text>
+      <target>dañar</target>
+      <text> las tuberías.</text>
+     </p>
+     <p>
+      <text>	* Los aparatos o materiales calientes has de manejarlos con </text>
+      <target>pinzas</target>
+      <text>.</text>
+     </p>
+     <p>
+      <text>	* En caso de heridas o quemaduras informarás inmediatamente al </text>
+      <target>profesor</target>
+      <text>. En caso de accidente grave o malestar deberá </text>
+      <target>consultarse</target>
+      <text> a un médico.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" checkSteps="1" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="texto5.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="39" />
+      <color foreground="0xFFFFFF" background="0x008040" />
+     </style>
+     <p>Haz este dictado pulsando en los altavoces.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="39" />
+      <color foreground="0xFFFFFF" background="0x008040" />
+     </style>
+     <p>¡¡ FELICIDADES!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFF80">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="700" height="500" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" size="16" background="0x800040" family="Arial" bold="true" foreground="0xFFFFFF" italic="false" tabWidth="16" />
+    <style name="target" base="default" target="true" background="0x800040" foreground="0xFFFFFF" />
+    <style name="targetError" base="target" background="0x008000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text>                                     </text>
+     </p>
+     <p>
+      <text>       </text>
+      <cell width="215" height="155" border="true" image="laborato.jpg">
+       <style>
+        <font family="Arial" size="33" />
+        <color foreground="0x800040" background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text>	        </text>
+      <cell width="160" height="78" border="true">
+       <style>
+        <font family="Arial" size="33" />
+        <color foreground="0x800040" background="0xFFFFFF" />
+       </style>
+       <p>DICTADO</p>
+      </cell>
+     </p>
+     <p />
+     <p>
+      <text>	* </text>
+      <cell width="30" height="20" border="true" image="altavoz.gif">
+       <style>
+        <font family="Arial" size="33" />
+        <color foreground="0x800040" background="0xFFFFFF" />
+       </style>
+       <media type="PLAY_AUDIO" level="1" file="dictado.wav" from="1142" to="7900" />
+       <p>  </p>
+      </cell>
+      <target>
+       <answer>Está prohibido comer, beber o fumar en el laboratorio</answer>
+       <response fill="_" length="65" maxLength="94" />
+       <text> Está prohibido comer, beber o fumar en el laboratorio</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p>
+      <text>	*</text>
+      <cell width="30" height="20" border="true" image="altavoz.gif">
+       <style>
+        <font family="Arial" size="33" />
+        <color foreground="0x800040" background="0xFFFFFF" />
+       </style>
+       <media type="PLAY_AUDIO" level="1" file="dictado.wav" from="7901" to="12545" />
+       <p> </p>
+      </cell>
+      <text> </text>
+      <target>
+       <answer>Los reactivos no utilizados no debes verterlos de nuevo en los frascos</answer>
+       <response fill="_" length="79" maxLength="90" />
+       <text>Los reactivos no utilizados no debes verterlos de nuevo en los frascos</text>
+      </target>
+      <cell width="30" height="20" border="true" image="altavoz.gif">
+       <style>
+        <font family="Arial" size="33" />
+        <color foreground="0x800040" background="0xFFFFFF" />
+       </style>
+       <media type="PLAY_AUDIO" level="1" file="dictado.wav" from="12533" to="18722" />
+       <p> </p>
+      </cell>
+      <text> </text>
+      <target>
+       <answer>puesto que todo el contenido puede contaminarse</answer>
+       <response fill="_" length="55" maxLength="56" />
+       <text>puesto que todo el contenido puede contaminarse</text>
+      </target>
+      <text>. </text>
+      <cell width="30" height="20" border="true" image="altavoz.gif">
+       <style>
+        <font family="Arial" size="33" />
+        <color foreground="0x800040" background="0xFFFFFF" />
+       </style>
+       <media type="PLAY_AUDIO" level="1" file="dictado.wav" from="18722" to="26965" />
+       <p> </p>
+      </cell>
+      <target>
+       <answer>Tampoco debes dejar los tapones de los frascos ni los residuos sobre las mesas</answer>
+       <response fill="_" length="91" maxLength="94" />
+       <text>Tampoco debes dejar los tapones de los frascos ni los residuos sobre las mesas</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p>
+      <text>	*</text>
+      <cell width="30" height="20" border="true" image="altavoz.gif">
+       <style>
+        <font family="Arial" size="33" />
+        <color foreground="0x800040" background="0xFFFFFF" />
+       </style>
+       <media type="PLAY_AUDIO" level="1" file="dictado.wav" from="26965" to="34188" />
+       <p> </p>
+      </cell>
+      <text> </text>
+      <target>
+       <answer>Antes de abandonar el laboratorio es necesario que te laves las manos</answer>
+       <response fill="_" length="159" maxLength="129" />
+       <text>Antes de abandonar el laboratorio es necesario que te laves las manos</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p>
+      <text>	*</text>
+      <cell width="30" height="20" border="true" image="altavoz.gif">
+       <style>
+        <font family="Arial" size="33" />
+        <color foreground="0x800040" background="0xFFFFFF" />
+       </style>
+       <media type="PLAY_AUDIO" level="1" file="dictado.wav" from="34118" to="40800" />
+       <p> </p>
+      </cell>
+      <text> </text>
+      <target>
+       <answer>Al finalizar el trabajo es necesario comprobar que todo está limpio</answer>
+       <response fill="_" length="74" maxLength="76" />
+       <text>Al finalizar el trabajo es necesario comprobar que todo está limpio</text>
+      </target>
+      <text> </text>
+      <cell width="30" height="20" border="true" image="altavoz.gif">
+       <style>
+        <font family="Arial" size="33" />
+        <color foreground="0x800040" background="0xFFFFFF" />
+       </style>
+       <media type="PLAY_AUDIO" level="1" file="dictado.wav" from="40801" to="50620" />
+       <p> </p>
+      </cell>
+      <target>
+       <answer> y en orden, los aparatos eléctricos desconectados y las llaves de la luz y el agua cerradas</answer>
+       <response fill="_" length="92" maxLength="92" />
+       <text> y en orden, los aparatos eléctricos desconectados y las llaves de la luz y el agua cerradas</text>
+      </target>
+      <text>.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" checkCase="true" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="altavoz.gif" file="altavoz.gif" animated="false" />
+  <media name="erlenm.jpg" file="erlenm.jpg" />
+  <media name="laborato.jpg" file="laborato.jpg" />
+  <media name="probetas.jpg" file="probetas.jpg" />
+  <media name="vasos.jpg" file="vasos.jpg" />
+  <media name="dictado.wav" file="dictado.wav" />
+  <media name="introdso.wav" file="introdso.wav" />
+  <media name="normas1.wav" file="normas1.wav" />
+  <media name="normas2.wav" file="normas2.wav" />
+  <media name="normas3.wav" file="normas3.wav" />
+ </mediaBag>
+</JClicProject>
+

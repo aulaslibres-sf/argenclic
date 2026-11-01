@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="secuen" version="0.1.3">
+ <settings>
+  <title>Secuencias</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="3/20/00" />
+  <revision description="Traducción Español" date="6/23/00">
+   <author name="Rafael Rodríguez Martín" mail="rrodri4@platea.pntic.mec.es" />
+  </revision>
+  <revision description="Conversión de Clic3 a JClic" date="7/26/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Ana Ansa" mail="sfermin@ikastola.net" />
+  <author name="Junkal Larrañaga" mail="sfermin@ikastola.net" />
+  <organization name="San Fermín Ikastola" url="http://www.sanferminikastola.com" city="Zizur Menor" state="Navarra" />
+  <language>Español</language>
+  <description>
+   <p>Paquete de actividades de Clic sobre secuencias.  Este paquete esta dividido en tres secciones que aumentan en complejidad.  En la primera se ordenan dibujos de tres partes.  En la segunda se aumenta el número de dibujos a cuatro y en la tercera sección hay que ordenar seis dibujos secuencialmente.  Las actividades cuentan con sonidos para que así puedan ser utilizadas por estudiantes que aún no saben leer.</p>
+  </description>
+  <descriptors area="Matemáticas" level="Infantil">fundamentos de las matemáticas</descriptors>
+ </settings>
+ <sequence>
+  <item id="secuen.pac" name="portada.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="secuen.ass">
+   <jump action="STOP" id="forward" />
+  </item>
+  <item id="secuen34.pac" name="secuen34/secuen34.ass" delay="3">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="secuen34/secu1-07.puz" delay="3" />
+  <item name="secuen34/secu1-08.puz" delay="3" />
+  <item name="secuen34/secu1-09.puz" delay="3" />
+  <item name="secuen34/secu1-13.puz" delay="3" />
+  <item name="secuen34/secu1-14.puz" delay="3" />
+  <item name="secuen34/secu1-15.puz" delay="3" />
+  <item name="secuen34/secu1-17.puz" delay="3" />
+  <item name="secuen34/secu1-18.puz" delay="3" />
+  <item name="secuen34/secu1-21.puz" delay="3" />
+  <item name="secuen34/secu1-22.puz" delay="3" />
+  <item name="secuen34/secu1-26.puz" delay="3">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="secuen56.pac" name="secuen56/secuen56.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="secuen56/secu2-02.puz" />
+  <item name="secuen56/secu2-03.puz" />
+  <item name="secuen56/secu2-04.puz" />
+  <item name="secuen56/secu2-05.puz" />
+  <item name="secuen56/secu2-07.puz">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="secuen78.pac" name="secuen78/secuen78.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="secuen78/secu2-09.puz" />
+  <item name="secuen78/secu3-01.puz" />
+  <item name="secuen78/secu3-02.puz" />
+  <item name="secuen78/secu3-04.puz">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="portada.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="false" image="portada.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@panels.Identify" name="secuen.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="190.0" cellHeight="190.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="0" image="secue34p.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="secuen34.pac" />
+    </cell>
+    <cell id="0" image="secue56p.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="secuen56.pac" />
+    </cell>
+    <cell id="0" image="secue78p.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="secuen78.pac" />
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="secuen34\secu1-07.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+     <p>De la escuela a casa.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="100.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="Courier New" size="30" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="secuen34\107a.jpg" />
+    <cell image="secuen34\107b.jpg" />
+    <cell image="secuen34\107c.jpg" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="secuen34\secu1-08.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+     <p>¡Qué rico está el pan!</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="100.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="Courier New" size="30" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="secuen34\108a.jpg" />
+    <cell image="secuen34\108b.jpg" />
+    <cell image="secuen34\108c.jpg" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="secuen34\secu1-09.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+     <p>Lavando la ropa.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="100.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="Courier New" size="30" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="secuen34\109a.jpg" />
+    <cell image="secuen34\109b.jpg" />
+    <cell image="secuen34\109c.jpg" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="secuen34\secu1-13.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+     <p>Jaime compra un globo.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="100.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="Courier New" size="30" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="secuen34\113a.jpg" />
+    <cell image="secuen34\113b.jpg" />
+    <cell image="secuen34\113c.jpg" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="secuen34\secu1-14.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+     <p>Lorena riega las plantas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="100.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="secuen34\114a.jpg" />
+    <cell image="secuen34\114b.jpg" />
+    <cell image="secuen34\114c.jpg" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="secuen34\secu1-15.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+     <p>Pedro juega con su perro.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="100.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="Courier New" size="30" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="secuen34\115a.jpg" />
+    <cell image="secuen34\115b.jpg" />
+    <cell image="secuen34\115c.jpg" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="secuen34\secu1-17.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+     <p>Semáforo en verde. ¡Adelante!</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="100.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="Courier New" size="30" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="secuen34\117a.jpg" />
+    <cell image="secuen34\117b.jpg" />
+    <cell image="secuen34\117c.jpg" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="secuen34\secu1-18.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+     <p>Infancia - Juventud - Madurez</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="100.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="Courier New" size="30" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="secuen34\118a.jpg" />
+    <cell image="secuen34\118b.jpg" />
+    <cell image="secuen34\118c.jpg" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="secuen34\secu1-21.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+     <p>Es hora de levantarse.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="100.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="Courier New" size="30" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell image="secuen34\121a.jpg" />
+    <cell image="secuen34\121b.jpg" />
+    <cell image="secuen34\121c.jpg" />
+    <cell image="secuen34\121d.jpg" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="secuen34\secu1-22.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+     <p>Después de levantarse, Pedro se ducha.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="100.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="Courier New" size="30" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell image="secuen34\122a.jpg" />
+    <cell image="secuen34\122b.jpg" />
+    <cell image="secuen34\122c.jpg" />
+    <cell image="secuen34\122d.jpg" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="secuen34\secu1-26.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+     <p>¡Hola! Ya estoy aquí.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="100.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="Courier New" size="30" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell image="secuen34\126a.jpg" />
+    <cell image="secuen34\126b.jpg" />
+    <cell image="secuen34\126c.jpg" />
+    <cell image="secuen34\126d.jpg" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="secuen34\secuen34.ass">
+   <description>
+    <p>Ordenar secuencias de 3 y 4 imágenes.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="false" image="secuen34\secuen34.gif">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="secuen56\secu2-02.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+     <p>Del árbol a la boca.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="5" cellWidth="100.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="Courier New" size="39" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell image="secuen56\202a.jpg" />
+    <cell image="secuen56\202b.jpg" />
+    <cell image="secuen56\202c.jpg" />
+    <cell image="secuen56\202d.jpg" />
+    <cell image="secuen56\202e.jpg" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="secuen56\secu2-03.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+     <p>¿Te gusta el queso?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="5" cellWidth="100.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="Courier New" size="39" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell image="secuen56\203a.jpg" />
+    <cell image="secuen56\203b.jpg" />
+    <cell image="secuen56\203c.jpg" />
+    <cell image="secuen56\203d.jpg" />
+    <cell image="secuen56\203e.jpg" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="secuen56\secu2-04.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+     <p>Juan trabaja en su trigal.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="5" cellWidth="100.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="Courier New" size="39" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell image="secuen56\204a.jpg" />
+    <cell image="secuen56\204b.jpg" />
+    <cell image="secuen56\204c.jpg" />
+    <cell image="secuen56\204d.jpg" />
+    <cell image="secuen56\204e.jpg" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="secuen56\secu2-05.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+     <p>Marta escribe a sus tíos.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="100.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="Courier New" size="39" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="secuen56\205a.jpg" />
+    <cell image="secuen56\205b.jpg" />
+    <cell image="secuen56\205c.jpg" />
+    <cell image="secuen56\205d.jpg" />
+    <cell image="secuen56\205e.jpg" />
+    <cell image="secuen56\205f.jpg" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="secuen56\secu2-07.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Courier New" size="33" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+     <p>¡Mamá! ¡Sale fuego de la cocina!</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Courier New" size="33" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="100.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="secuen56\207a.jpg" />
+    <cell image="secuen56\207b.jpg" />
+    <cell image="secuen56\207c.jpg" />
+    <cell image="secuen56\207d.jpg" />
+    <cell image="secuen56\207e.jpg" />
+    <cell image="secuen56\207f.jpg" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="secuen56\secuen56.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="false" image="secuen56\secuen56.gif">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="secuen78\secu2-09.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+     <p>Ha habido un accidente de tráfico.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="140.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="Courier New" size="30" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell image="secuen78\istripu.gif" />
+    <cell image="secuen78\209a.jpg" />
+    <cell image="secuen78\209b.jpg" />
+    <cell image="secuen78\209c.jpg" />
+    <cell image="secuen78\209d.jpg" />
+    <cell image="secuen78\209e.jpg" />
+    <cell image="secuen78\209f.jpg" />
+    <cell image="secuen78\209g.jpg" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="secuen78\secu3-01.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+     <p>Juan estrena su nueva casa.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="140.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="Courier New" size="30" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell image="secuen78\301a.jpg" />
+    <cell image="secuen78\301b.jpg" />
+    <cell image="secuen78\301c.jpg" />
+    <cell image="secuen78\301d.jpg" />
+    <cell image="secuen78\301e.jpg" />
+    <cell image="secuen78\301f.jpg" />
+    <cell image="secuen78\301g.jpg" />
+    <cell image="secuen78\301h.jpg" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="secuen78\secu3-02.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+     <p>De la viña a la mesa.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="140.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell image="secuen78\302a.jpg" />
+    <cell image="secuen78\302b.jpg" />
+    <cell image="secuen78\302c.jpg" />
+    <cell image="secuen78\302d.jpg" />
+    <cell image="secuen78\302e.jpg" />
+    <cell image="secuen78\302f.jpg" />
+    <cell image="secuen78\302g.jpg" />
+    <cell image="secuen78\302h.jpg" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="secuen78\secu3-04.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+     <p>Historia de la fruta.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Courier New" size="30" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="140.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell image="secuen78\304a.jpg" />
+    <cell image="secuen78\304b.jpg" />
+    <cell image="secuen78\304c.jpg" />
+    <cell image="secuen78\304d.jpg" />
+    <cell image="secuen78\304e.jpg" />
+    <cell image="secuen78\304f.jpg" />
+    <cell image="secuen78\304g.jpg" />
+    <cell image="secuen78\304h.jpg" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="secuen78\secuen78.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="false" image="secuen78\secuen78.gif">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="portada.gif" file="portada.gif" />
+  <media name="secue34p.gif" file="secue34p.gif" />
+  <media name="secue56p.gif" file="secue56p.gif" />
+  <media name="secue78p.gif" file="secue78p.gif" />
+  <media name="secuen34/secuen34.gif" file="secuen34_secuen34.gif" />
+  <media name="secuen56/secuen56.gif" file="secuen56_secuen56.gif" />
+  <media name="secuen78/istripu.gif" file="secuen78_istripu.gif" />
+  <media name="secuen78/secuen78.gif" file="secuen78_secuen78.gif" />
+  <media name="secuen34/107a.jpg" file="secuen34_107a.jpg" />
+  <media name="secuen34/107b.jpg" file="secuen34_107b.jpg" />
+  <media name="secuen34/107c.jpg" file="secuen34_107c.jpg" />
+  <media name="secuen34/108a.jpg" file="secuen34_108a.jpg" />
+  <media name="secuen34/108b.jpg" file="secuen34_108b.jpg" />
+  <media name="secuen34/108c.jpg" file="secuen34_108c.jpg" />
+  <media name="secuen34/109a.jpg" file="secuen34_109a.jpg" />
+  <media name="secuen34/109b.jpg" file="secuen34_109b.jpg" />
+  <media name="secuen34/109c.jpg" file="secuen34_109c.jpg" />
+  <media name="secuen34/113a.jpg" file="secuen34_113a.jpg" />
+  <media name="secuen34/113b.jpg" file="secuen34_113b.jpg" />
+  <media name="secuen34/113c.jpg" file="secuen34_113c.jpg" />
+  <media name="secuen34/114a.jpg" file="secuen34_114a.jpg" />
+  <media name="secuen34/114b.jpg" file="secuen34_114b.jpg" />
+  <media name="secuen34/114c.jpg" file="secuen34_114c.jpg" />
+  <media name="secuen34/115a.jpg" file="secuen34_115a.jpg" />
+  <media name="secuen34/115b.jpg" file="secuen34_115b.jpg" />
+  <media name="secuen34/115c.jpg" file="secuen34_115c.jpg" />
+  <media name="secuen34/117a.jpg" file="secuen34_117a.jpg" />
+  <media name="secuen34/117b.jpg" file="secuen34_117b.jpg" />
+  <media name="secuen34/117c.jpg" file="secuen34_117c.jpg" />
+  <media name="secuen34/118a.jpg" file="secuen34_118a.jpg" />
+  <media name="secuen34/118b.jpg" file="secuen34_118b.jpg" />
+  <media name="secuen34/118c.jpg" file="secuen34_118c.jpg" />
+  <media name="secuen34/121a.jpg" file="secuen34_121a.jpg" />
+  <media name="secuen34/121b.jpg" file="secuen34_121b.jpg" />
+  <media name="secuen34/121c.jpg" file="secuen34_121c.jpg" />
+  <media name="secuen34/121d.jpg" file="secuen34_121d.jpg" />
+  <media name="secuen34/122a.jpg" file="secuen34_122a.jpg" />
+  <media name="secuen34/122b.jpg" file="secuen34_122b.jpg" />
+  <media name="secuen34/122c.jpg" file="secuen34_122c.jpg" />
+  <media name="secuen34/122d.jpg" file="secuen34_122d.jpg" />
+  <media name="secuen34/126a.jpg" file="secuen34_126a.jpg" />
+  <media name="secuen34/126b.jpg" file="secuen34_126b.jpg" />
+  <media name="secuen34/126c.jpg" file="secuen34_126c.jpg" />
+  <media name="secuen34/126d.jpg" file="secuen34_126d.jpg" />
+  <media name="secuen56/202a.jpg" file="secuen56_202a.jpg" />
+  <media name="secuen56/202b.jpg" file="secuen56_202b.jpg" />
+  <media name="secuen56/202c.jpg" file="secuen56_202c.jpg" />
+  <media name="secuen56/202d.jpg" file="secuen56_202d.jpg" />
+  <media name="secuen56/202e.jpg" file="secuen56_202e.jpg" />
+  <media name="secuen56/203a.jpg" file="secuen56_203a.jpg" />
+  <media name="secuen56/203b.jpg" file="secuen56_203b.jpg" />
+  <media name="secuen56/203c.jpg" file="secuen56_203c.jpg" />
+  <media name="secuen56/203d.jpg" file="secuen56_203d.jpg" />
+  <media name="secuen56/203e.jpg" file="secuen56_203e.jpg" />
+  <media name="secuen56/204a.jpg" file="secuen56_204a.jpg" />
+  <media name="secuen56/204b.jpg" file="secuen56_204b.jpg" />
+  <media name="secuen56/204c.jpg" file="secuen56_204c.jpg" />
+  <media name="secuen56/204d.jpg" file="secuen56_204d.jpg" />
+  <media name="secuen56/204e.jpg" file="secuen56_204e.jpg" />
+  <media name="secuen56/205a.jpg" file="secuen56_205a.jpg" />
+  <media name="secuen56/205b.jpg" file="secuen56_205b.jpg" />
+  <media name="secuen56/205c.jpg" file="secuen56_205c.jpg" />
+  <media name="secuen56/205d.jpg" file="secuen56_205d.jpg" />
+  <media name="secuen56/205e.jpg" file="secuen56_205e.jpg" />
+  <media name="secuen56/205f.jpg" file="secuen56_205f.jpg" />
+  <media name="secuen56/207a.jpg" file="secuen56_207a.jpg" />
+  <media name="secuen56/207b.jpg" file="secuen56_207b.jpg" />
+  <media name="secuen56/207c.jpg" file="secuen56_207c.jpg" />
+  <media name="secuen56/207d.jpg" file="secuen56_207d.jpg" />
+  <media name="secuen56/207e.jpg" file="secuen56_207e.jpg" />
+  <media name="secuen56/207f.jpg" file="secuen56_207f.jpg" />
+  <media name="secuen78/209a.jpg" file="secuen78_209a.jpg" />
+  <media name="secuen78/209b.jpg" file="secuen78_209b.jpg" />
+  <media name="secuen78/209c.jpg" file="secuen78_209c.jpg" />
+  <media name="secuen78/209d.jpg" file="secuen78_209d.jpg" />
+  <media name="secuen78/209e.jpg" file="secuen78_209e.jpg" />
+  <media name="secuen78/209f.jpg" file="secuen78_209f.jpg" />
+  <media name="secuen78/209g.jpg" file="secuen78_209g.jpg" />
+  <media name="secuen78/301a.jpg" file="secuen78_301a.jpg" />
+  <media name="secuen78/301b.jpg" file="secuen78_301b.jpg" />
+  <media name="secuen78/301c.jpg" file="secuen78_301c.jpg" />
+  <media name="secuen78/301d.jpg" file="secuen78_301d.jpg" />
+  <media name="secuen78/301e.jpg" file="secuen78_301e.jpg" />
+  <media name="secuen78/301f.jpg" file="secuen78_301f.jpg" />
+  <media name="secuen78/301g.jpg" file="secuen78_301g.jpg" />
+  <media name="secuen78/301h.jpg" file="secuen78_301h.jpg" />
+  <media name="secuen78/302a.jpg" file="secuen78_302a.jpg" />
+  <media name="secuen78/302b.jpg" file="secuen78_302b.jpg" />
+  <media name="secuen78/302c.jpg" file="secuen78_302c.jpg" />
+  <media name="secuen78/302d.jpg" file="secuen78_302d.jpg" />
+  <media name="secuen78/302e.jpg" file="secuen78_302e.jpg" />
+  <media name="secuen78/302f.jpg" file="secuen78_302f.jpg" />
+  <media name="secuen78/302g.jpg" file="secuen78_302g.jpg" />
+  <media name="secuen78/302h.jpg" file="secuen78_302h.jpg" />
+  <media name="secuen78/304a.jpg" file="secuen78_304a.jpg" />
+  <media name="secuen78/304b.jpg" file="secuen78_304b.jpg" />
+  <media name="secuen78/304c.jpg" file="secuen78_304c.jpg" />
+  <media name="secuen78/304d.jpg" file="secuen78_304d.jpg" />
+  <media name="secuen78/304e.jpg" file="secuen78_304e.jpg" />
+  <media name="secuen78/304f.jpg" file="secuen78_304f.jpg" />
+  <media name="secuen78/304g.jpg" file="secuen78_304g.jpg" />
+  <media name="secuen78/304h.jpg" file="secuen78_304h.jpg" />
+ </mediaBag>
+</JClicProject>
+

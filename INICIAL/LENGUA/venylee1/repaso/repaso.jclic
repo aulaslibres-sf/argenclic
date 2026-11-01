@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="repaso" version="0.1.3">
+ <settings>
+  <title>Ven a leer 1, 2 y 3</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="10/7/02" />
+  <revision description="Conversión de Clic3 a JClic" date="12/18/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Rosa Ana Santiago Vicario" mail="rosv@wanadoo.es" />
+  <organization name="CP Marqués de Camarasa" city="Castrojeriz" state="Castilla y León" />
+  <language>español</language>
+  <description>
+   <p>Estas aplicaciones van dirigidas especialmente para niños y niñas de Educación Especial o que sin serlo, tengan ciertas dificultades en el aprendizaje de la técnica lecto-escritora. &lt;BR&gt;Así mismo pueden utilizarse en el último nivel de E.I. y 1º de E.P. como refuerzo a la lectura y escritura.</p>
+   <p>&lt;BR&gt;</p>
+   <p>Se pretende que los alumnos adquieran las siguientes destrezas repartidas en los tres paquetes de actividades:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Discriminación, identificación e interiorización de las sílabas directas: p, s, l, m, t, n, d, ll, h, b, v, ñ.</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area="Lenguas" level="Infantil, Primaria">aprendizaje de la lengua, lengua castellana</descriptors>
+ </settings>
+ <sequence>
+  <item id="repaso.pac" name="perro.puz">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="repaso1.ass" />
+  <item name="repaso2.ass" />
+  <item name="repaso3.ass" />
+  <item name="repaso4.ass" />
+  <item name="final.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@puzzles.ExchangePuzzle" name="perro.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_MIDI" level="2" file="daskling.mid" />
+     <p>Resuelve el puzzle...</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Tú ya me conoces...</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xF0FDA6">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="2" border="false" image="perro1~1.jpg">
+    <style>
+     <font family="MeMima" size="37" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.Explore" name="repaso1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="36" bold="true" />
+      <color background="0x88DB79" />
+     </style>
+     <p>Vamos a repasar...</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="36" bold="true" />
+      <color background="0x88DB79" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xF4CD8C">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xE888DE" border="false" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="140.0" cellHeight="100.0" border="false" id="primary">
+    <style>
+     <font family="MeMima" size="35" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0">
+     <p>aupa</p>
+    </cell>
+    <cell id="1">
+     <p>pepa</p>
+    </cell>
+    <cell id="2">
+     <p>sopa</p>
+    </cell>
+    <cell id="3">
+     <p>pisa</p>
+    </cell>
+    <cell id="4">
+     <p>mesa</p>
+    </cell>
+    <cell id="5">
+     <p>suma</p>
+    </cell>
+    <cell id="6">
+     <p>paloma</p>
+    </cell>
+    <cell id="7">
+     <p>lola</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="MeMima" size="37" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell image="aupa.gif" />
+    <cell image="pepa.gif" />
+    <cell image="sopa.gif" />
+    <cell image="pisa.gif" />
+    <cell image="mesa.gif" />
+    <cell image="suma.gif" />
+    <cell image="paloma.gif" />
+    <cell image="lola.gif" />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="repaso2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color background="0x91CFEA" />
+     </style>
+     <p>Seguimos repasando</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color background="0x91CFEA" />
+     </style>
+     <p>¡ Lo has hecho muy bien !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x80FFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="140.0" cellHeight="100.0" border="false" id="primary">
+    <style>
+     <font family="MeMima" size="37" bold="true" />
+     <color background="0x91CFEA" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell id="0">
+     <p>pupa</p>
+    </cell>
+    <cell id="1">
+     <p>pie</p>
+    </cell>
+    <cell id="2">
+     <p>oso</p>
+    </cell>
+    <cell id="3">
+     <p>susi</p>
+    </cell>
+    <cell id="4">
+     <p>asa</p>
+    </cell>
+    <cell id="5">
+     <p>ala</p>
+    </cell>
+    <cell id="6">
+     <p>ola</p>
+    </cell>
+    <cell id="7">
+     <p>lila</p>
+    </cell>
+    <cell id="8">
+     <p>lame</p>
+    </cell>
+    <cell id="9">
+     <p>muela</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="5" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="MeMima" size="37" bold="true" />
+     <color background="0x91CFEA" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell image="pupa.gif" />
+    <cell image="pie.gif" />
+    <cell image="oso.gif" />
+    <cell image="susi.gif" />
+    <cell image="asa.gif" />
+    <cell image="ala.gif" />
+    <cell image="ola.gif" />
+    <cell image="lila.gif" />
+    <cell image="lame.gif" />
+    <cell image="muela.gif" />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="repaso3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color background="0x80FF80" />
+     </style>
+     <p>¿Cómo se escriben?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color background="0x80FF80" />
+     </style>
+     <p>¡Bravo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="190.0" cellHeight="155.0" border="false" id="primary">
+    <style>
+     <font family="MeMima" size="37" bold="true" />
+     <color background="0x80FF80" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell image="suela.gif" />
+    <cell image="lio.gif" />
+    <cell image="ele.gif" />
+    <cell image="eme.gif" />
+    <cell image="pe.gif" />
+    <cell image="ese.gif" />
+    <cell image="pipi.gif" />
+    <cell image="sola.gif" />
+    <cell image="pelo.gif" />
+    <cell image="epi.gif" />
+   </cells>
+   <cells rows="2" cols="5" cellWidth="140.0" cellHeight="100.0" border="false" id="answers">
+    <style>
+     <font family="MeMima" size="37" bold="true" />
+     <color background="0x80FF80" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>suela</p>
+    </cell>
+    <cell>
+     <p>lio</p>
+    </cell>
+    <cell>
+     <p>ele</p>
+    </cell>
+    <cell>
+     <p>eme</p>
+    </cell>
+    <cell>
+     <p>pe</p>
+    </cell>
+    <cell>
+     <p>ese</p>
+    </cell>
+    <cell>
+     <p>pipi</p>
+    </cell>
+    <cell>
+     <p>sola</p>
+    </cell>
+    <cell>
+     <p>pelo</p>
+    </cell>
+    <cell>
+     <p>epi</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="repaso4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color background="0xFFFF80" />
+     </style>
+     <p>¿Te atreves con éstas?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color background="0xFFFF80" />
+     </style>
+     <p>¡¡¡ Genial!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="ala.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" border="false" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="140.0" cellHeight="100.0" border="false" id="primary">
+    <style>
+     <font family="MeMima" size="37" bold="true" />
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell image="muela.gif" />
+    <cell image="pisa.gif" />
+    <cell image="mulo.gif" />
+    <cell image="lola.gif" />
+    <cell image="solo.gif" />
+    <cell image="loma.gif" />
+    <cell image="paula.gif" />
+    <cell image="lima.gif" />
+    <cell image="peso.gif" />
+    <cell image="pepe.gif" />
+   </cells>
+   <cells rows="2" cols="5" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <font family="MeMima" size="37" bold="true" />
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>muela</p>
+    </cell>
+    <cell>
+     <p>pisa</p>
+    </cell>
+    <cell>
+     <p>mulo</p>
+    </cell>
+    <cell>
+     <p>lola</p>
+    </cell>
+    <cell>
+     <p>solo</p>
+    </cell>
+    <cell>
+     <p>loma</p>
+    </cell>
+    <cell>
+     <p>paula</p>
+    </cell>
+    <cell>
+     <p>lima</p>
+    </cell>
+    <cell>
+     <p>peso</p>
+    </cell>
+    <cell>
+     <p>pepe</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="final.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Edelfontmed" size="38" />
+      <color background="0xF7FB46" />
+     </style>
+     <media type="PLAY_MIDI" level="2" file="daskling.mid" />
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Edelfontmed" size="38" />
+      <color background="0xF7FB46" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="gusilu~1.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" transparent="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="530.0" cellHeight="120.0" border="false">
+    <style>
+     <font family="Arial" size="22" />
+     <color background="0xF7FB46" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>Ya hemos terminado y lo has hecho estupendamente.</p>
+    </cell>
+    <cell>
+     <p>¿VOLVERÁS PRONTO?</p>
+    </cell>
+    <cell>
+     <p>Las ACTIVIDADES están basadas en el Método para el aprendizaje de la lecto-escritura: Ven a Leer, Editorial Siglo XXI</p>
+    </cell>
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="ala.gif" file="ala.gif" />
+  <media name="asa.gif" file="asa.gif" />
+  <media name="aupa.gif" file="aupa.gif" />
+  <media name="ele.gif" file="ele.gif" />
+  <media name="eme.gif" file="eme.gif" />
+  <media name="epi.gif" file="epi.gif" />
+  <media name="ese.gif" file="ese.gif" />
+  <media name="gusilu~1.gif" file="gusilu_1.gif" />
+  <media name="lame.gif" file="lame.gif" />
+  <media name="lila.gif" file="lila.gif" />
+  <media name="lima.gif" file="lima.gif" />
+  <media name="lio.gif" file="lio.gif" />
+  <media name="lola.gif" file="lola.gif" />
+  <media name="loma.gif" file="loma.gif" />
+  <media name="mesa.gif" file="mesa.gif" />
+  <media name="muela.gif" file="muela.gif" />
+  <media name="mulo.gif" file="mulo.gif" />
+  <media name="ola.gif" file="ola.gif" />
+  <media name="oso.gif" file="oso.gif" />
+  <media name="paloma.gif" file="paloma.gif" />
+  <media name="paula.gif" file="paula.gif" />
+  <media name="pe.gif" file="pe.gif" />
+  <media name="pelo.gif" file="pelo.gif" />
+  <media name="pepa.gif" file="pepa.gif" />
+  <media name="pepe.gif" file="pepe.gif" />
+  <media name="peso.gif" file="peso.gif" />
+  <media name="pie.gif" file="pie.gif" />
+  <media name="pipi.gif" file="pipi.gif" />
+  <media name="pisa.gif" file="pisa.gif" />
+  <media name="pupa.gif" file="pupa.gif" />
+  <media name="sola.gif" file="sola.gif" />
+  <media name="solo.gif" file="solo.gif" />
+  <media name="sopa.gif" file="sopa.gif" />
+  <media name="suela.gif" file="suela.gif" />
+  <media name="suma.gif" file="suma.gif" />
+  <media name="susi.gif" file="susi.gif" />
+  <media name="perro1~1.jpg" file="perro1_1.jpg" />
+  <media name="daskling.mid" file="daskling.mid" />
+ </mediaBag>
+</JClicProject>
+

@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="interjec" version="0.1.3">
+ <settings>
+  <title>Partes invariables de la oración</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="6/13/03" />
+  <revision description="Conversión de Clic3 a JClic" date="5/12/03">
+   <author name="Equip Clic" mail="clic@xtec.cat" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Míriam Castillo Castillo" mail="jmcaro@ctcinternet.cl" />
+  <organization name="Escuela Cardenal José María Caro" url="http://www.ctio.noao.edu/AURA/redlaser/jmcaro/jmcaro.html" city="Coquimbo" country="Chile" />
+  <language>español</language>
+  <description>
+   <p>Paquetes de actividades sobre las partes invariables de la oración gramatical. La aplicación se estructura en cuatro partes:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Conjunciones</p>
+   <p>&lt;LI&gt;Adverbios</p>
+   <p>&lt;LI&gt;Preposiciones</p>
+   <p>&lt;LI&gt;Interjecciones</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area="Lenguas" level="Primaria">aprendizaje de la lengua, lengua castellana</descriptors>
+ </settings>
+ <sequence>
+  <item id="interjec.pac" name="interj.ass" delay="5">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="emocion.ass" delay="5" />
+  <item name="expresa.ass" delay="5" />
+  <item name="masemoc.ass" delay="5" />
+  <item name="tinterj.txa" delay="5">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.SimpleAssociation" name="emocion.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0x800080" background="0xFFFFFF" />
+     </style>
+     <p>Obrseva el dibujo.¿Qué expresan?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0x800080" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7EEFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x8000FF" border="true" />
+   </settings>
+   <cells rows="4" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Courier New" size="18" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell image="interay.gif" />
+    <cell image="caramba.gif" />
+    <cell image="puf.gif" />
+    <cell image="oh.gif" />
+    <cell image="bravo.gif" />
+    <cell image="cuidado.gif" />
+    <cell image="huy.gif" />
+    <cell image="hurra.gif" />
+   </cells>
+   <cells rows="4" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Courier New" size="18" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <p>¡ay!</p>
+    </cell>
+    <cell>
+     <p>¡caramba!</p>
+    </cell>
+    <cell>
+     <p>¡puf!</p>
+    </cell>
+    <cell>
+     <p>¡oh!</p>
+    </cell>
+    <cell>
+     <p>¡bravo!</p>
+    </cell>
+    <cell>
+     <p>¡cuidado!</p>
+    </cell>
+    <cell>
+     <p>¡huy!</p>
+    </cell>
+    <cell>
+     <p>¡hurra!</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell image="interay.gif">
+     <p>¡ay!</p>
+    </cell>
+    <cell image="caramba.gif">
+     <p>¡caramba!</p>
+    </cell>
+    <cell image="puf.gif">
+     <p>¡puf!</p>
+    </cell>
+    <cell image="oh.gif">
+     <p>¡oh!</p>
+    </cell>
+    <cell image="bravo.gif">
+     <p>¡bravo!</p>
+    </cell>
+    <cell image="cuidado.gif">
+     <p>¡cuidado!</p>
+    </cell>
+    <cell image="huy.gif">
+     <p>¡huy!</p>
+    </cell>
+    <cell image="hurra.gif">
+     <p>¡hurra!</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="expresa.ass">
+   <description>
+    <p>Actividad de respuesta escrita</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x0000FF" background="0xFFFFFF" />
+     </style>
+     <p>Según lo que exprese el dibujo debes escribir ¡ay!, ¡caramba!, ¡puf! ó ¡hurra!.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x0000FF" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="genial.wav" />
+     <p>¡Genial!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFCE">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x008040" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="120.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="33" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="interay.gif" />
+    <cell image="caramba.gif" />
+    <cell image="puf.gif" />
+    <cell image="hurra.gif" />
+   </cells>
+   <cells rows="2" cols="2" cellWidth="120.0" cellHeight="120.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="33" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>¡ay!</p>
+    </cell>
+    <cell>
+     <p>¡caramba!</p>
+    </cell>
+    <cell>
+     <p>¡puf!</p>
+    </cell>
+    <cell>
+     <p>¡hurra!</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="interj.ass">
+   <description>
+    <p>Pantalla de información</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Times New Roman" size="30" bold="true" />
+      <color foreground="0x800040" background="0xFFFFD0" />
+     </style>
+     <p>Lee atentamente, copia o imprime.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Times New Roman" size="30" bold="true" />
+      <color foreground="0x800040" background="0xFFFFD0" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFF8080">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="700.0" cellHeight="500.0" border="true">
+    <style>
+     <font family="Times New Roman" size="30" bold="true" />
+     <color foreground="0x800040" background="0xFFFFD0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>LA INTERJECCIÓN: Sirve para expresar sentimientos, emociones o impresiones repentinas, súbitas o inesperadas.                        Las interjecciones más comunes son: ¡ay! - ¡ea! - ¡hurra! - ¡bah! - ¡puf! - ¡caramba! - ¡ah! - ¡oh! - ¡huy! - ¡bravo! - ¡cuidado! - ¡Dios mío! - ¡por Dios! - ¡Santo cielo! - ¡Virgen santísima!, etc.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.WrittenAnswer" name="masemoc.ass">
+   <description>
+    <p>Actividad de respuesta escrita</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>Obsrvas bien los dibujos y debes escribir ¡oh!, ¡bravo!, ¡cuidado!, ó ¡huy!</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="tepasas.wav" />
+     <p>¡Te pasaste!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="120.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="33" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="oh.gif" />
+    <cell image="bravo.gif" />
+    <cell image="cuidado.gif" />
+    <cell image="huy.gif" />
+   </cells>
+   <cells rows="1" cols="4" cellWidth="120.0" cellHeight="120.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="33" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>¡oh!</p>
+    </cell>
+    <cell>
+     <p>¡bravo!</p>
+    </cell>
+    <cell>
+     <p>¡cuidado!</p>
+    </cell>
+    <cell>
+     <p>¡huy!</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.Identify" name="tinterj.txa" type="identifyWords">
+   <description>
+    <p>Actividad con evaluación final</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x800080" background="0xFFFFFF" />
+     </style>
+     <p>Marca todas las interjecciones que encuentres en este trozo.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x800080" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="grande.wav" />
+     <p>¡Grandioso!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xD9FFB3">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="520" height="346" />
+    </window>
+   </settings>
+   <checkButton>Corregir el ejercicio</checkButton>
+   <document>
+    <style name="default" size="15" background="0xFFFFFF" family="Arial" bold="true" foreground="0x0000A0" italic="false" tabWidth="13" />
+    <style name="target" base="default" target="true" background="0xFFFFFF" foreground="0xFF80FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <cell width="490" height="50" border="true">
+       <style>
+        <font family="Times New Roman" size="27" bold="true" />
+        <color foreground="0xFFFFFF" background="0x0000A0" inactive="0x000000" alternative="0x000000" />
+       </style>
+       <p>Encuentra en este trozo  interjecciones.</p>
+      </cell>
+     </p>
+     <p>
+      <text>           </text>
+     </p>
+     <p>
+      <text>                                           </text>
+      <target>¡Oh!</target>
+      <text> ¡qué horror!</text>
+     </p>
+     <p>
+      <text>              Juanita y su hermano menor estaban solos esa mañana en casa, ya que sus padres tenían que trabajar. Los dos hermanitos estaban jugando, cuando de repente Juanita muy asustada grita </text>
+      <target>¡oh!</target>
+      <text> se está incendiando la casa. Juanita toma a su hermanito en brazos, pero los dos caen </text>
+      <target>¡cuidado!</target>
+      <text> dice una vecina que se acercaba a socorrerlos en ese momento. </text>
+      <target>¡Dios</target>
+      <text> </text>
+      <target>mío!</target>
+      <text>, sálgan murmuraba otra de las vecinas. </text>
+     </p>
+     <p>
+      <text>Con mucho esfuerzo lograron salir de la casa en llamas, los niños y una de las vecinas. Por suerte llegaron pronto los bomberos y no hubieron mayores daños en la vivienda. </text>
+      <target>¡Bravo!</target>
+      <text> coreaban todas laspersonas que habían llegado al lugar. Juanita y su hermanito estaban a salvos </text>
+      <target>¡hurra!</target>
+      <text>. </text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>-</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>           </text>
+     </p>
+     <p />
+     <p />
+    </section>
+   </document>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="bravo.gif" file="bravo.gif" animated="false" />
+  <media name="caramba.gif" file="caramba.gif" animated="false" />
+  <media name="cuidado.gif" file="cuidado.gif" animated="false" />
+  <media name="hurra.gif" file="hurra.gif" animated="false" />
+  <media name="huy.gif" file="huy.gif" animated="false" />
+  <media name="interay.gif" file="interay.gif" animated="false" />
+  <media name="oh.gif" file="oh.gif" animated="false" />
+  <media name="puf.gif" file="puf.gif" animated="false" />
+  <media name="genial.wav" file="genial.wav" />
+  <media name="grande.wav" file="grande.wav" />
+  <media name="muybien.wav" file="muybien.wav" />
+  <media name="tepasas.wav" file="tepasas.wav" />
+ </mediaBag>
+</JClicProject>
+

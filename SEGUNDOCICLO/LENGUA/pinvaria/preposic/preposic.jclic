@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="preposic" version="0.1.3">
+ <settings>
+  <title>Partes invariables de la oración</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="6/13/03" />
+  <revision description="Conversión de Clic3 a JClic" date="5/12/03">
+   <author name="Equip Clic" mail="clic@xtec.cat" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Míriam Castillo Castillo" mail="jmcaro@ctcinternet.cl" />
+  <organization name="Escuela Cardenal José María Caro" url="http://www.ctio.noao.edu/AURA/redlaser/jmcaro/jmcaro.html" city="Coquimbo" country="Chile" />
+  <language>español</language>
+  <description>
+   <p>Paquetes de actividades sobre las partes invariables de la oración gramatical. La aplicación se estructura en cuatro partes:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Conjunciones</p>
+   <p>&lt;LI&gt;Adverbios</p>
+   <p>&lt;LI&gt;Preposiciones</p>
+   <p>&lt;LI&gt;Interjecciones</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area="Lenguas" level="Primaria">aprendizaje de la lengua, lengua castellana</descriptors>
+ </settings>
+ <sequence>
+  <item id="preposic.pac" name="preposic.ass" delay="5">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="escripre.ass" delay="5" />
+  <item name="prepabc.sop" delay="5" />
+  <item name="prepdhe.sop" delay="5" />
+  <item name="prepspt.sop" delay="5" />
+  <item name="faltprep.ass" delay="5" />
+  <item name="trozprep.txa" delay="5">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@text.WrittenAnswer" name="escripre.ass">
+   <description>
+    <p>Actividad de respuesta escrita</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Times New Roman" size="30" bold="true" />
+      <color background="0xDBDBFF" />
+     </style>
+     <p>Completa la oración con la preposición que falta. (desde -  hasta - de -  por - hacia).</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Times New Roman" size="30" bold="true" />
+      <color background="0xDBDBFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="120.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Times New Roman" size="30" bold="true" />
+     <color background="0xDBDBFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>Viajaron .... avión .... Punta Arenas.</p>
+    </cell>
+    <cell>
+     <p>Traje un pastel .... manzanas.</p>
+    </cell>
+    <cell>
+     <p>.... este lugar, diviso el mar.</p>
+    </cell>
+    <cell>
+     <p>Llegaremos .... la cima de ese cerro.</p>
+    </cell>
+    <cell>
+     <p>Iremos al centro .... auto.</p>
+    </cell>
+    <cell>
+     <p>La reina es famosa .... su belleza.</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="120.0" cellHeight="120.0" border="true" id="answers">
+    <style>
+     <font family="Times New Roman" size="30" bold="true" />
+     <color background="0xDBDBFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>en hacia</p>
+    </cell>
+    <cell>
+     <p>de</p>
+    </cell>
+    <cell>
+     <p>Desde</p>
+    </cell>
+    <cell>
+     <p>hasta</p>
+    </cell>
+    <cell>
+     <p>en</p>
+    </cell>
+    <cell>
+     <p>por</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="faltprep.ass">
+   <description>
+    <p>Actividad de respuesta escrita</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x400080" background="0xFFFFFF" />
+     </style>
+     <p>¿Qué preposiciones faltan en las oraciones? Escríbelas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x400080" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFD7FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0080" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="120.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="33" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="cigcon.gif" />
+    <cell image="cantpara.gif" />
+    <cell image="hombtele.gif" />
+    <cell image="baila.gif" />
+    <cell image="lanzar.gif" />
+    <cell image="velerhas.gif" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="120.0" cellHeight="120.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="33" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>Desde con</p>
+    </cell>
+    <cell>
+     <p>para</p>
+    </cell>
+    <cell>
+     <p>por</p>
+    </cell>
+    <cell>
+     <p>con</p>
+    </cell>
+    <cell>
+     <p>hacia</p>
+    </cell>
+    <cell>
+     <p>hasta</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="prepabc.sop">
+   <description>
+    <p>Sopa con nombres de compositores</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Book Antiqua" size="29" bold="true" />
+      <color foreground="0x800040" background="0xC4FFD2" />
+     </style>
+     <p>Encuentra preposiciones que comienzan con a - b -  c</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Book Antiqua" size="29" bold="true" />
+      <color foreground="0x800040" background="0xC4FFD2" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="perfec.wav" />
+     <p>¡Perfecto!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x008080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="13" columns="8" cellWidth="30.0" cellHeight="30.0" border="true">
+    <style>
+     <font family="Book Antiqua" size="29" bold="true" />
+     <color foreground="0x800040" background="0xC4FFD2" />
+    </style>
+    <text>
+     <row>A*********C**</row>
+     <row>N***A*****O**</row>
+     <row>T*********N**</row>
+     <row>E*********T**</row>
+     <row>**********R**</row>
+     <row>BAJO******A**</row>
+     <row>*************</row>
+     <row>**********CON</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">ANTE</clue>
+    <clue id="1">BAJO</clue>
+    <clue id="2">CON</clue>
+    <clue id="3">CONTRA</clue>
+   </clues>
+  </activity>
+  <activity class="@textGrid.WordSearch" name="prepdhe.sop">
+   <description>
+    <p>Sopa con nombres de compositores</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Book Antiqua" size="29" bold="true" />
+      <color foreground="0x800040" background="0xFFBFBF" />
+     </style>
+     <p>Encuentra preposiciones que comienzan con d -  h -  e</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Book Antiqua" size="29" bold="true" />
+      <color foreground="0x800040" background="0xFFBFBF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="genial.wav" />
+     <p>¡Genial!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF8080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="13" columns="8" cellWidth="30.0" cellHeight="30.0" border="true">
+    <style>
+     <font family="Book Antiqua" size="29" bold="true" />
+     <color foreground="0x800040" background="0xFFBFBF" />
+    </style>
+    <text>
+     <row>D*****D*****H</row>
+     <row>E*****E*****A</row>
+     <row>S***********C</row>
+     <row>D*******E***I</row>
+     <row>E*******N***A</row>
+     <row>*************</row>
+     <row>HASTA********</row>
+     <row>*****ENTRE***</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">DE</clue>
+    <clue id="1">DESDE</clue>
+    <clue id="2">HASTA</clue>
+    <clue id="3">HACIA</clue>
+    <clue id="4">ENTRE</clue>
+   </clues>
+  </activity>
+  <activity class="@panels.InformationScreen" name="preposic.ass">
+   <description>
+    <p>Pantalla de información</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Times New Roman" size="27" bold="true" />
+      <color foreground="0xFFFFFF" background="0x400080" />
+     </style>
+     <p>Lee y escribe.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Times New Roman" size="27" bold="true" />
+      <color foreground="0xFFFFFF" background="0x400080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="700.0" cellHeight="500.0" border="true">
+    <style>
+     <font family="Times New Roman" size="27" bold="true" />
+     <color foreground="0xFFFFFF" background="0x400080" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>LAS PREPOSICIONES: Son partes invariables de la oración gramatical que tienen la función de relacionar palabras. Las más usuales son: a - ante - bajo - con - contra - de - desde - en - entre - hacia - hasta - para - por - según - sin - sobre - tras.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@textGrid.WordSearch" name="prepspt.sop">
+   <description>
+    <p>Sopa con nombres de compositores</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Book Antiqua" size="29" bold="true" />
+      <color foreground="0xFFFFFF" background="0x800080" />
+     </style>
+     <p>Encuentra preposiciones que comienzan con p - s - t</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Book Antiqua" size="29" bold="true" />
+      <color foreground="0xFFFFFF" background="0x800080" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="grande.wav" />
+     <p>¡Grandioso!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="13" columns="8" cellWidth="30.0" cellHeight="30.0" border="true">
+    <style>
+     <font family="Book Antiqua" size="29" bold="true" />
+     <color foreground="0xFFFFFF" background="0x800080" />
+    </style>
+    <text>
+     <row>PARA********S</row>
+     <row>******POR***O</row>
+     <row>*TRAS*******B</row>
+     <row>********S***R</row>
+     <row>********E***E</row>
+     <row>********G****</row>
+     <row>********U****</row>
+     <row>*SIN****N****</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">PARA</clue>
+    <clue id="1">POR</clue>
+    <clue id="2">SEGUN</clue>
+    <clue id="3">SIN</clue>
+    <clue id="4">SOBRE</clue>
+    <clue id="5">TRAS</clue>
+   </clues>
+  </activity>
+  <activity class="@text.Identify" name="trozprep.txa" type="identifyWords">
+   <description>
+    <p>Actividad con evaluación final</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x800080" background="0xFFFFFF" />
+     </style>
+     <p>Marca todas las preposiciones que encuentres en este trozo.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x800080" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="perfec.wav" />
+     <p>¡Perfecto!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00EAEA">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="520" height="346" />
+    </window>
+   </settings>
+   <checkButton>Corregir el ejercicio</checkButton>
+   <document>
+    <style name="default" size="15" background="0xFFFFFF" family="Arial" bold="true" foreground="0x000000" italic="false" tabWidth="12" />
+    <style name="target" base="default" target="true" background="0xFFFFFF" foreground="0xFF80FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <cell width="490" height="50" border="true">
+       <style>
+        <color foreground="0xFFFFFF" background="0x008080" inactive="0x000000" alternative="0x000000" />
+       </style>
+       <p>Encuentra en este trozo preposiciones.</p>
+      </cell>
+     </p>
+     <p>
+      <text>            María va </text>
+      <target>con</target>
+      <text> su prima Elena al cico. Allí se entretienen bastante </text>
+      <target>con</target>
+      <text> los payasos.También les llama mucha la atención los perritos que pasan </text>
+      <target>por</target>
+      <text> debajo </text>
+      <target>de</target>
+      <text> una rueda </text>
+      <target>con</target>
+      <text> fuego. </text>
+      <target>Desde</target>
+      <text> su butaca miran </text>
+      <target>hacia</target>
+      <text> arriba donde están los trapecistas, quienes realizan una serie </text>
+      <target>de</target>
+      <text> ejercicios muy difíciles, parece que el trapecio llegara </text>
+      <target>hasta</target>
+      <text> el techo </text>
+      <target>de</target>
+      <text> la carpa. Elena mira </text>
+      <target>para</target>
+      <text> atrás y observa </text>
+      <target>a</target>
+      <text> unos monitos que vienen </text>
+      <target>sobre</target>
+      <text> el lomo </text>
+      <target>de</target>
+      <text> los elefantes. ¡Qué gracioso!. Al terminar la función las niñas se dirigen felices </text>
+      <target>hacia</target>
+      <text> sus hogares.</text>
+     </p>
+     <p />
+     <p />
+    </section>
+   </document>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="baila.gif" file="baila.gif" animated="false" />
+  <media name="cantpara.gif" file="cantpara.gif" animated="false" />
+  <media name="cigcon.gif" file="cigcon.gif" animated="false" />
+  <media name="hombtele.gif" file="hombtele.gif" animated="false" />
+  <media name="lanzar.gif" file="lanzar.gif" animated="false" />
+  <media name="velerhas.gif" file="velerhas.gif" animated="false" />
+  <media name="genial.wav" file="genial.wav" />
+  <media name="grande.wav" file="grande.wav" />
+  <media name="muybien.wav" file="muybien.wav" />
+  <media name="perfec.wav" file="perfec.wav" />
+ </mediaBag>
+</JClicProject>
+

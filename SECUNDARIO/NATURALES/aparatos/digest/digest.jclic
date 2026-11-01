@@ -1,0 +1,1196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="digest" version="0.1.3">
+ <settings>
+  <title>Aparatos del cuerpo humano</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="4/4/00" />
+  <revision description="Traducción Español" date="4/4/00">
+   <author name="Aurelio Salvador Baselga" mail="asalvado@roble.pntic.mec.es" />
+  </revision>
+  <revision description="Conversión de Clic3 a JClic" date="7/11/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Ferran Estruch Mascarell" mail="46002842@centres.cult.gva.es" />
+  <organization name="CP Verge del Remei" mail="46002842@centres.cult.gva.es" city="Castelló de Rugat" state="País Valencià" />
+  <language>es</language>
+  <description>
+   <p>Paquete de actividades de Clic sobre los diferentes aparatos del cuerpo humano.  Dividido en seis secciones, una por cada aparato:</p>
+   <p>&lt;LI&gt;Aparato digestivo</p>
+   <p>&lt;LI&gt;Aparato circulatorio</p>
+   <p>&lt;LI&gt;Aparato locomotor</p>
+   <p>&lt;LI&gt;Aparato respiratorio</p>
+   <p>&lt;LI&gt;Aparato excretor</p>
+   <p>&lt;LI&gt;Aparato reproductor</p>
+  </description>
+  <descriptors area-codes="exp" level="Secundaria">anatomía</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Paquete de actividades de Clic sobre los diferentes aparatos del cuerpo humano.  Dividido en seis secciones, una por cada aparato:</p>
+    <p>&lt;LI&gt;Aparato digestivo</p>
+    <p>&lt;LI&gt;Aparato circulatorio</p>
+    <p>&lt;LI&gt;Aparato locomotor</p>
+    <p>&lt;LI&gt;Aparato respiratorio</p>
+    <p>&lt;LI&gt;Aparato excretor</p>
+    <p>&lt;LI&gt;Aparato reproductor</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="digest.pac" name="digest/apdigpre.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="digest/apdig.puz" />
+  <item name="digest/apdigexp.ass" />
+  <item name="digest/apdig3.ass" />
+  <item name="digest/apdig.sop" />
+  <item name="digest/apdig1.puz" />
+  <item name="digest/apdig1.sop" />
+  <item name="digest/funapdig.ass" />
+  <item name="digest/sucs.ass" />
+  <item name="digest/apdigs1.ass" />
+  <item name="digest/apdigs2.ass" />
+  <item name="digest/dentad0.ass" />
+  <item name="digest/dents.ass" />
+  <item name="digest/dents.sop" />
+  <item name="digest/dents1.ass" />
+  <item name="digest/alimdef.ass" />
+  <item name="digest/rodalim.ass" />
+  <item name="digest/aliment.ass" />
+  <item name="digest/aliment1.ass" />
+  <item name="digest/higiene.ass" />
+  <item name="digest/higiene1.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.SimpleAssociation" name="digest\alimdef.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFF00" background="0x804040" />
+     </style>
+     <p>DEFINE CADA UNO DE LOS GRUPOS DE ALIMENTOS</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFF00" background="0x804040" />
+     </style>
+     <p>¡ MUY BIEN !. ES NECESARIO QUE COMAS DE LOS TRES.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xBC7A7A">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xDDBBBB" border="true" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="200.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFC1A4" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>Los alimentos CONSTRUCTORES: </p>
+    </cell>
+    <cell>
+     <p>Los alimentos ENERGÉTICOS:</p>
+    </cell>
+    <cell>
+     <p>Los alimentos REGULADORES:</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="200.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFB5" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>construyen nuestro cuerpo y renuevan los tejidos dañados.</p>
+    </cell>
+    <cell>
+     <p>nos proporcionan la energía necesaria para vivir.</p>
+    </cell>
+    <cell>
+     <p>regulan el buen funcionamiento y protegen el organismo.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="digest\aliment.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0x005329" />
+     </style>
+     <p>¿ A QUÉ GRUPO PERTENECE CADA UNO DE LOS ALIMENTOS ?</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0x005329" />
+     </style>
+     <p>¡ BUEN PROVECHO !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xBDFFDE">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00C663" border="true" />
+   </settings>
+   <cells rows="4" cols="4" border="true" image="digest\aliment1.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <ids>1 0 2 0 2 1 2 1 2 0 1 1 0 2 0 2</ids>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="180.0" cellHeight="50.0" border="true" id="secondary">
+    <style shadow="true">
+     <color foreground="0xFF8040" background="0x008040" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>CONSTRUCTORES</p>
+    </cell>
+    <cell>
+     <p>ENERGÉTICOS</p>
+    </cell>
+    <cell>
+     <p>REGULADORES</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="digest\aliment1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x232347" />
+     </style>
+     <p>ENCUENTRA A CUAL DE LOS TRES GRUPOS PERTENECE CADA UNO DE LOS ALIMENTOS.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x232347" />
+     </style>
+     <p>NUEVAMENTE: ¡ BUEN PROVECHO !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x8080C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xD1D1E9" border="true" />
+   </settings>
+   <cells rows="4" cols="4" border="true" image="digest\aliment2.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <ids>1 1 1 0 2 1 2 1 0 0 1 2 0 2 0 2</ids>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="200.0" cellHeight="50.0" border="true" id="secondary">
+    <style shadow="true">
+     <color foreground="0xFFFF80" background="0x4A4A97" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>CONSTRUCTORES</p>
+    </cell>
+    <cell>
+     <p>ENERGÉTICOS</p>
+    </cell>
+    <cell>
+     <p>REGULADORES</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="digest\apdig.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x009525" />
+     </style>
+     <p>MUEVE LAS PIEZAS Y TENDRÁS EL APARATO DIGESTIVO HUMANO.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x009525" />
+     </style>
+     <p>MUY BIEN. RECUERDA LOS NOMBRES.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xD0FFDC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x62FF89" border="true" />
+   </settings>
+   <cells rows="4" cols="2" border="true" image="digest\apdig2.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="digest\apdig.sop">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color background="0x94AD2E" />
+     </style>
+     <p>LOCALIZA LAS 5 PARTES DEL APARATO DIGESTIVO.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color background="0x94AD2E" />
+     </style>
+     <p>CONTINUA ...</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xD7E092">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xA9CA35" border="true" />
+   </settings>
+   <textGrid rows="17" columns="7" cellWidth="30.0" cellHeight="30.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>****************E</row>
+     <row>**BOCA**********S</row>
+     <row>****************Ó</row>
+     <row>INTESTINODELGADOF</row>
+     <row>****************A</row>
+     <row>*INTESTINOGRUESOG</row>
+     <row>*********ESTÓMAGO</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">BOCA</clue>
+    <clue id="1">ESÓFAGO</clue>
+    <clue id="2">ESTÓMAGO</clue>
+    <clue id="3">INTESTINODELGADO</clue>
+    <clue id="4">INTESTINOGRUESO</clue>
+   </clues>
+   <cells rows="5" cols="1" border="false" image="digest\apdig0.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="digest\apdig1.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x8080C0" />
+     </style>
+     <p>ORDENA LOS ÓRGANOS POR DONDE PASAN LOS ALIMENTOS.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x8080C0" />
+     </style>
+     <p>¡ MUY BIEN !</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xE0E0EF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xB9B9DD" border="true" />
+   </settings>
+   <cells rows="1" cols="6" border="true" image="digest\apdig6.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="digest\apdig1.sop">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0x336666" />
+     </style>
+     <p>ENCUENTRA LOS NOMBRES DE 8 ÓRGANOS O GLÁNDULAS DEL APARATO DIGESTIVO.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0x336666" />
+     </style>
+     <p>GRACIAS A ELLOS HACEMOS LA DIGESTIÓN DE LOS ALIMENTOS.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0E0E0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x6FB7B7" border="true" />
+   </settings>
+   <textGrid rows="17" columns="9" cellWidth="30.0" cellHeight="30.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>S*ESÓFAGO********</row>
+     <row>A***APÉNDICE*****</row>
+     <row>L*********O******</row>
+     <row>I*********L****H*</row>
+     <row>V*********O****Í*</row>
+     <row>A*ESTÓMAGON****G*</row>
+     <row>R**PÁNCREAS****A*</row>
+     <row>EINTESTINODELGADO</row>
+     <row>S**************O*</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">SALIVARES</clue>
+    <clue id="1">ESÓFAGO</clue>
+    <clue id="2">ESTÓMAGO</clue>
+    <clue id="3">HÍGADO</clue>
+    <clue id="4">PÁNCREAS</clue>
+    <clue id="5">INTESTINODELGADO</clue>
+    <clue id="6">COLON</clue>
+    <clue id="7">APÉNDICE</clue>
+   </clues>
+   <cells rows="4" cols="2" border="false" image="digest\apdig4.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="digest\apdig3.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFF00" background="0x56621E" />
+     </style>
+     <p>LOCALIZA CADA UNO DE LOS ÓRGANOS DEL APARATO DIGESTIVO.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFF00" background="0x56621E" />
+     </style>
+     <p>¡ SABES UN MONTÓN !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE0EAB9">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xB7CA5B" border="true" />
+   </settings>
+   <cells rows="5" cols="2" border="false" image="digest\apdig3.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <ids>0 1 2 3 4 5 6 7 8 9</ids>
+   </cells>
+   <cells rows="5" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>BOCA</p>
+    </cell>
+    <cell>
+     <p>GLÁNDULAS SALIVARES</p>
+    </cell>
+    <cell>
+     <p>FARINGE</p>
+    </cell>
+    <cell>
+     <p>ESÓFAGO</p>
+    </cell>
+    <cell>
+     <p>HÍGADO</p>
+    </cell>
+    <cell>
+     <p>ESTÓMAGO</p>
+    </cell>
+    <cell>
+     <p>INTESTINO DELGADO</p>
+    </cell>
+    <cell>
+     <p>PÁNCREAS</p>
+    </cell>
+    <cell>
+     <p>RECTO</p>
+    </cell>
+    <cell>
+     <p>INTESTINO GRUESO</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="2" border="false" image="digest\apdig2.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="5" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@panels.Explore" name="digest\apdigexp.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color background="0x80BB2F" />
+     </style>
+     <p>HAZ CLIC SOBRE LOS CUADROS Y RESPASA LOS NOMBRES DE LOS ÓRGANOS DEL APARATO DIGESTIVO.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color background="0x80BB2F" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCFECA8">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x9EDE58" border="true" />
+   </settings>
+   <cells rows="5" cols="2" border="false" image="digest\apdig3.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <ids>0 1 2 3 4 5 6 7 8 9</ids>
+   </cells>
+   <cells rows="5" cols="2" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>BOCA</p>
+    </cell>
+    <cell>
+     <p>GLÁNDULAS SALIVARES</p>
+    </cell>
+    <cell>
+     <p>FARINGE</p>
+    </cell>
+    <cell>
+     <p>ESÓFAGO</p>
+    </cell>
+    <cell>
+     <p>HÍGADO</p>
+    </cell>
+    <cell>
+     <p>ESTÓMAGO</p>
+    </cell>
+    <cell>
+     <p>INTESTINO DELGADO</p>
+    </cell>
+    <cell>
+     <p>PÁNCREAS</p>
+    </cell>
+    <cell>
+     <p>RECTO</p>
+    </cell>
+    <cell>
+     <p>INTESTINO GRUESO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="digest\apdigpre.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x8D8DC7">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="digest\digprese.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@text.WrittenAnswer" name="digest\apdigs1.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color background="0x0080C0" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>ESCRIBE EL NOMBRE DE CADA ÓRGANO.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color background="0x0080C0" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN. ES IMPORTANTE QUE CONOZCAS TU CUERPO.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xB7E8FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x73D1FF" border="true" />
+   </settings>
+   <cells rows="1" cols="3" border="true" image="digest\apdigs1.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>ESTÓMAGO|ESTOMAGO</p>
+    </cell>
+    <cell>
+     <p>INTESTINO GRUESO|INTESTINO GRUESO</p>
+    </cell>
+    <cell>
+     <p>INTESTINO DELGADO|INTESTINO DELGADO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="digest\apdigs2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFF8000" />
+     </style>
+     <p>ESCRIBE EL NOMBRE DE CADA ÓRGANO </p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFF8000" />
+     </style>
+     <p>¡ MUY BIEN !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFEFDF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFBC79" border="true" />
+   </settings>
+   <cells rows="1" cols="3" border="true" image="digest\apdigs2.gif" id="primary">
+    <style>
+     <color background="0xDB6D00" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>ESÓFAGO|ESOFAGO	</p>
+    </cell>
+    <cell>
+     <p>BOCA</p>
+    </cell>
+    <cell>
+     <p>INTESTINO DELGADO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="digest\dentad0.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>HAZ CLIC E INFÓRMATE DE LA DENTADURA DE UN ADULTO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x8F8F8F" border="true" />
+   </settings>
+   <cells rows="20" cols="20" border="false" image="digest\dentad0.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="20" rows="20" showEnclosure="true" scaleX="20.0" scaleY="20.0">
+     <enclosing>
+      <shape>rectangle:0,0,20,20</shape>
+     </enclosing>
+     <shape>M:6,3|L:6,4|L:6,5|L:7,5|L:7,4|L:7,3|X</shape>
+     <shape>rectangle:7,3,6,1</shape>
+     <shape>M:13,3|L:13,4|L:13,5|L:14,5|L:14,4|L:14,3|X</shape>
+     <shape>M:5,4|L:5,5|L:4,5|L:4,6|L:7,6|L:7,5|L:6,5|L:6,4|X</shape>
+     <shape>M:14,4|L:14,5|L:13,5|L:13,6|L:15,6|L:15,5|L:15,4|X</shape>
+     <shape>M:4,6|L:4,7|L:4,8|L:6,8|L:6,7|L:6,6|X</shape>
+     <shape>M:14,6|L:14,7|L:14,8|L:15,8|L:15,9|L:16,9|L:16,8|L:16,7|L:16,6|X</shape>
+     <shape>M:3,12|L:3,13|L:3,14|L:4,14|L:4,15|L:6,15|L:6,14|L:5,14|L:5,13|L:5,12|X</shape>
+     <shape>M:14,13|L:14,14|L:14,15|L:16,15|L:16,14|L:16,13|X</shape>
+     <shape>M:5,15|L:5,16|L:5,17|L:6,17|L:6,16|L:7,16|L:7,15|X</shape>
+     <shape>M:13,15|L:13,16|L:13,17|L:14,17|L:14,16|L:15,16|L:15,15|X</shape>
+     <shape>rectangle:6,16,2,1</shape>
+     <shape>rectangle:8,16,4,1</shape>
+     <shape>rectangle:12,16,1,1</shape>
+    </shaper>
+    <ids>1 0 1 2 2 3 3 3 3 2 2 1 0 1</ids>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="181.0" cellHeight="122.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>INCISIVOS (8)</p>
+    </cell>
+    <cell>
+     <p>CANINOS (4)</p>
+    </cell>
+    <cell>
+     <p>PREMOLARES (8)</p>
+    </cell>
+    <cell>
+     <p>MOLARES (12)</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="digest\dents.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x004080" />
+     </style>
+     <p>OBSERVA LA FORMA E INFÓRMATE DE CADA UNA DE LAS CLASES DE DIENTES.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x004080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xB3D9FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x4DA6FF" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="digest\dents.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@textGrid.WordSearch" name="digest\dents.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0x0000A0" background="0xAE8751" inactive="0xFFFFCE" alternative="0xFFFFCE" />
+     </style>
+     <p>ESTA SOPA CONTIENE EL NOMBRE DE LOS DIENTES. MASTICA  POCO A POCO Y ENCUÉNTRALOS. ¡ BUEN PROVECHO !</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0x0000A0" background="0xAE8751" inactive="0xFFFFCE" alternative="0xFFFFCE" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xF0DC80">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xCDB132" border="true" />
+   </settings>
+   <textGrid rows="10" columns="9" cellWidth="30.0" cellHeight="30.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>C********I</row>
+     <row>*A*******N</row>
+     <row>**N******C</row>
+     <row>***I*****I</row>
+     <row>****N****S</row>
+     <row>*****O***I</row>
+     <row>MOLARES**V</row>
+     <row>*********O</row>
+     <row>PREMOLARES</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">INCISIVOS</clue>
+    <clue id="1">CANINOS</clue>
+    <clue id="2">PREMOLARES</clue>
+    <clue id="3">MOLARES</clue>
+   </clues>
+   <cells rows="2" cols="2" cellWidth="160.0" cellHeight="160.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="digest\incisiv.gif" />
+    <cell image="digest\canin.gif" />
+    <cell image="digest\premol.gif" />
+    <cell image="digest\molar.gif" />
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="digest\dents1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFD3A8" background="0x2B2B2B" />
+     </style>
+     <p>AHORA ESCRIBE TÚ EL NOMBRE DE CADA UNO DE LOS DIENTES.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFD3A8" background="0x2B2B2B" />
+     </style>
+     <p>SIGUE ADELANTE Y TEN CUIDADO DE LA DENTADURA.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xF2E4AC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xEECE93" border="true" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="140.0" cellHeight="170.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="digest\incisiv.gif" />
+    <cell image="digest\canin.gif" />
+    <cell image="digest\premol.gif" />
+    <cell image="digest\molar.gif" />
+   </cells>
+   <cells rows="1" cols="4" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>incisivos|incisiva</p>
+    </cell>
+    <cell>
+     <p>caninos|canina</p>
+    </cell>
+    <cell>
+     <p>premolares|premolar</p>
+    </cell>
+    <cell>
+     <p>molares|molar</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="4" cellWidth="140.0" cellHeight="170.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>Al morder, los 8 dientes incisivos cortan el alimento.</p>
+    </cell>
+    <cell>
+     <p>Los 4 caninos no tienen una función especial.</p>
+    </cell>
+    <cell>
+     <p>Los 8 premolares sirven para romper el alimento.</p>
+    </cell>
+    <cell>
+     <p>Los 12 molares deshacen y trituran el alimento.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="digest\funapdig.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFF8000" />
+     </style>
+     <p>RELACIONA CADA FUNCIÓN DEL APARATO DIGESTIVO CON EL ÓRGANO CORRESPONDIENTE</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFF8000" />
+     </style>
+     <p>¡ ERES FANTÁSTICO !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFDECE">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFC184" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="280.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>MASTICACIÓN E INSALIVACIÓN</p>
+    </cell>
+    <cell>
+     <p>DEGLUCIÓN</p>
+    </cell>
+    <cell>
+     <p>TRANSFORMACIÓN</p>
+    </cell>
+    <cell>
+     <p>ABSORCIÓN DE SUBSTANCIAS NUTRITIVAS</p>
+    </cell>
+    <cell>
+     <p>ABSORCIÓN DE AGUA</p>
+    </cell>
+    <cell>
+     <p>DEFECACIÓN</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="2" border="false" image="digest\apdig5.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="digest\higiene.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x535300" />
+     </style>
+     <p>¿ QUÉ HAY QUE HACER Y QUÉ NO HAY QUE HACER PARA CONSERVAR LA DENTADURA SANA?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x535300" />
+     </style>
+     <p>¡ MUY BIEN !, TEN CUIDADO DE TUS DIENTES.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFBD">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xBBBB00" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="240.0" cellHeight="80.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell id="1">
+     <p>LIMPIARSE LOS DIENTES DESPUÉS DE COMER.</p>
+    </cell>
+    <cell id="1">
+     <p>VISITAR REGULARMENTE AL DENTISTA.</p>
+    </cell>
+    <cell id="0">
+     <p>COMER GOLOSINAS Y DULCES A CUALQUIER HORA.</p>
+    </cell>
+    <cell id="0">
+     <p>LIMPIARSE LOS DIENTES CON UN PALILLO DESPUÉS DE COMER.</p>
+    </cell>
+    <cell id="0">
+     <p>ROMPER OBJETOS CON LOS DIENTES.</p>
+    </cell>
+    <cell id="0">
+     <p>MORDER OBJETOS DUROS.</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="140.0" cellHeight="130.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell image="digest\stop.gif" />
+    <cell image="digest\si1.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="digest\higiene1.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0x790079" />
+     </style>
+     <p>¿ QUÉ MEDIDAS DEBEMOS MANTENER Y CUÁLES NO DEBEMOS SEGUIR PARA QUE FUNCIONE BIEN EL APARATO DIGESTIVO ?</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0x790079" />
+     </style>
+     <p>¡ MUY BIEN !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFAAFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xD000D0" border="true" />
+   </settings>
+   <cells rows="6" cols="2" cellWidth="250.0" cellHeight="60.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFF0000" alternative="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="6" />
+    <cell id="1">
+     <p>COMER Y BEBER ABUNDANTEMENTE.</p>
+    </cell>
+    <cell id="0">
+     <p>MASTICAR Y ENSALIVAR BIEN LOS ALIMENTOS.</p>
+    </cell>
+    <cell id="1">
+     <p>COMER A TODAS HORAS.</p>
+    </cell>
+    <cell id="1">
+     <p>HACER EJERCICIOS VIOLENTOS DESPUÉS DE COMER.</p>
+    </cell>
+    <cell id="0">
+     <p>EVITAR LAS PREOCUPACIONES, DISGUSTOS Y ENFADOS DURANTE LAS COMIDAS.</p>
+    </cell>
+    <cell id="1">
+     <p>TOMAR LA LECHE Y LOS ALIMENTOS MUY CALIENTES.</p>
+    </cell>
+    <cell id="0">
+     <p>COMER FRUTAS Y VERDURAS.</p>
+    </cell>
+    <cell id="1">
+     <p>COMER GOLOSINAS A TODAS HORAS.</p>
+    </cell>
+    <cell id="1">
+     <p>DUCHARSE O NADAR DESPUÉS DE COMER.</p>
+    </cell>
+    <cell id="1">
+     <p>COMER ALIMENTOS SALADOS O RICOS EN GRASAS.</p>
+    </cell>
+    <cell id="0">
+     <p>COMER CON UNA DIETA VARIADA Y EQUILIBRADA.</p>
+    </cell>
+    <cell id="0">
+     <p>LIMPIARSE LOS DIENTES DESPUÉS DE COMER.</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="140.0" cellHeight="140.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell image="digest\si.gif" />
+    <cell image="digest\no.gif" />
+   </cells>
+   <cells rows="6" cols="2" cellWidth="250.0" cellHeight="60.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="6" />
+    <cell>
+     <p>Es más higiénico quedarse siempre con un poco de hambre.</p>
+    </cell>
+    <cell>
+     <p>Si masticas y ensalivas bien los alimentos le facilitas el trabajo al estómago.</p>
+    </cell>
+    <cell>
+     <p>Debes comer a horas fijas, dejando tiempo entre una comida y otra.</p>
+    </cell>
+    <cell>
+     <p>Los ejercicios violentos quitan sangre del aparato digestivo y la desvían a los músculos.</p>
+    </cell>
+    <cell>
+     <p>Estar alegre y reirse favorece la digestión.</p>
+    </cell>
+    <cell>
+     <p>Los alimentos muy calientes queman la lengua y quitan el sentido del gusto.</p>
+    </cell>
+    <cell>
+     <p>La fibra de las frutas y verduras evita enfermedades en el aparato digestivo.</p>
+    </cell>
+    <cell>
+     <p>Las golosinas quitan las ganas de comer.</p>
+    </cell>
+    <cell>
+     <p>Es peligroso nadar cuando estamos haciendo la digestión de los alimentos.</p>
+    </cell>
+    <cell>
+     <p>La sal y las grasas excesivas pueden producir enfermedades graves.</p>
+    </cell>
+    <cell>
+     <p>Una buena dieta favorece el buen funcionamiento de nuestro cuerpo.</p>
+    </cell>
+    <cell>
+     <p>Una buena higiene bucal evita infecciones y conserva sana la dentadura.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="digest\rodalim.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0xFF661C" />
+     </style>
+     <p>¿ A QUÉ GRUPO PERTENECE CADA GRUPO DE ALIMENTOS ?</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0xFF661C" />
+     </style>
+     <p>¡ QUE APROVECHE !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFAD86">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFD7C4" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="digest\rodalim.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <ids>0 1 2 2</ids>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="200.0" cellHeight="80.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFAD5B" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>REGULADORES</p>
+    </cell>
+    <cell>
+     <p>ENERGÉTICOS</p>
+    </cell>
+    <cell>
+     <p>CONSTRUCTORES</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="digest\sucs.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFF00" background="0x41496B" />
+     </style>
+     <p>ASOCIA CADA UNO DE LOS JUGOS DE LA DIGESTIÓN A LA GLÁNDULA QUE LO PRODUCE.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFF00" background="0x41496B" />
+     </style>
+     <p>¡ ERES UN FENÓMENO !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xBABCCB">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x6A79A6" border="true" />
+   </settings>
+   <cells rows="1" cols="5" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>SALIVA</p>
+    </cell>
+    <cell>
+     <p>JUGOS GÁSTRICOS</p>
+    </cell>
+    <cell>
+     <p>BILIS</p>
+    </cell>
+    <cell>
+     <p>JUGO  PANCREÁTICO</p>
+    </cell>
+    <cell>
+     <p>JUGO   INTESTINAL</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="5" border="true" image="digest\apdig7.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="digest/aliment1.gif" file="digest_aliment1.gif" animated="false" />
+  <media name="digest/aliment2.gif" file="digest_aliment2.gif" animated="false" />
+  <media name="digest/apdig0.gif" file="digest_apdig0.gif" animated="false" />
+  <media name="digest/apdig2.gif" file="digest_apdig2.gif" animated="false" />
+  <media name="digest/apdig3.gif" file="digest_apdig3.gif" animated="false" />
+  <media name="digest/apdig4.gif" file="digest_apdig4.gif" animated="false" />
+  <media name="digest/apdig5.gif" file="digest_apdig5.gif" animated="false" />
+  <media name="digest/apdig6.gif" file="digest_apdig6.gif" animated="false" />
+  <media name="digest/apdig7.gif" file="digest_apdig7.gif" animated="false" />
+  <media name="digest/apdigs1.gif" file="digest_apdigs1.gif" animated="false" />
+  <media name="digest/apdigs2.gif" file="digest_apdigs2.gif" animated="false" />
+  <media name="digest/canin.gif" file="digest_canin.gif" animated="false" />
+  <media name="digest/dentad0.gif" file="digest_dentad0.gif" animated="false" />
+  <media name="digest/dents.gif" file="digest_dents.gif" animated="false" />
+  <media name="digest/digprese.gif" file="digest_digprese.gif" animated="false" />
+  <media name="digest/incisiv.gif" file="digest_incisiv.gif" animated="false" />
+  <media name="digest/molar.gif" file="digest_molar.gif" animated="false" />
+  <media name="digest/no.gif" file="digest_no.gif" animated="false" />
+  <media name="digest/premol.gif" file="digest_premol.gif" animated="false" />
+  <media name="digest/rodalim.gif" file="digest_rodalim.gif" animated="false" />
+  <media name="digest/si.gif" file="digest_si.gif" animated="false" />
+  <media name="digest/si1.gif" file="digest_si1.gif" animated="false" />
+  <media name="digest/stop.gif" file="digest_stop.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

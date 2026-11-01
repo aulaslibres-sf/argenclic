@@ -1,0 +1,1964 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="rockcast4" version="0.1.3">
+ <settings>
+  <title>El rock</title>
+  <revision description="created" date="4/1/11" />
+  <revision description="Publicación en la zonaClic (http://clic.xtec.cat)" date="10/31/13">
+   <author name="Equip Clic" mail="clic@xtec.cat" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Ramon Llanes Bordes" mail="rllanes@xtec.cat" />
+  <organization name="Institut Manuel de Montsuar" mail="c5006513@xtec.cat" url="http://www.xtec.cat/centres/c5006513" city="Lleida" state="Catalunya" />
+  <language>español</language>
+  <description>
+   <p>Este JClic tiene la intención de mostrar una panorámica general de la música rock, especialmente de los orígenes y de las primeras décadas. Son casi 100 actividades repartidas en cuatro proyectos diferentes.</p>
+   <p>&lt;ul&gt;</p>
+   <p>&lt;li&gt;La historia</p>
+   <p>&lt;li&gt;Audiciones</p>
+   <p>&lt;li&gt;Ejercicios</p>
+   <p>&lt;li&gt;Repaso auditivo</p>
+   <p>&lt;/ul&gt;</p>
+  </description>
+  <descriptors area="Música" level="Secundaria (12-16)">aprendizaje de la música, audición musical, rock</descriptors>
+  <eventSounds>
+   <sound id="start" enabled="false" />
+   <sound id="click" enabled="false" />
+   <sound id="actionOk" enabled="false" />
+   <sound id="finishedError" enabled="false" />
+  </eventSounds>
+  <skin file="@default.xml" />
+ </settings>
+ <sequence>
+  <item id="start" name="Portada 4">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="Resum 1 (cançons - autor-a/grup)" />
+  <item name="Resum 2 (cançons - autor-a/grup)" />
+  <item name="Resum 3 (cançons - autor-a/grup)" />
+  <item name="Resum 4 (cançons - autor-a/grup)" />
+  <item name="Resum 5 (cançons - autor-a/grup)" />
+  <item name="Resum 6 (cançons - autor-a/grup)" />
+  <item name="Resum 7 (cançons - autor-a/grup)" />
+  <item name="Resum 8 (cançons - autor-a/grup)" />
+  <item name="Resum 9 (cançons - autor-a/grup)" />
+  <item name="Resum 10 (cançons - autor-a/grup)" />
+  <item name="Resum 11 (cançons - autor-a/grup)" />
+  <item name="Resum 12 (cançons - autor-a/grup)" />
+  <item name="Resum 13 (cançons - autor-a/grup)" />
+  <item name="Resum 14 (cançons - autor-a/grup)" />
+  <item name="Resum 15 (cançons - autor-a/grup)" />
+  <item name="Resum final (1)" />
+  <item name="Resum final (2)" />
+  <item name="Final 4">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="Final 4" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>1. Clica JClic para consultar los resultados. 2. MENÚ PRINCIPAL (imagen o flecha)</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="5" cols="1" border="false" image="Portada2.jpg">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell />
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="menu" params="rockcast.jclic" />
+    </cell>
+    <cell />
+    <cell>
+     <style borderStroke="10.0" markerStroke="2.7">
+      <font family="Calibri" size="48" bold="true" />
+      <color background="0xFFFFFF" shadow="0xCCCCCC" border="0xCCCCCC" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="menu" params="rockcast.jclic" />
+     <p>¡Larga vida al rock! (y 4)</p>
+    </cell>
+    <cell txtAlign="middle,top">
+     <style borderStroke="10.0" markerStroke="5.0">
+      <font family="Calibri" size="28" italic="true" />
+      <color background="0xFFFFFF" shadow="0xCCCCCC" border="0xCCCCCC" />
+     </style>
+     <p>rllanes@xtec.cat</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="Portada 4" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Hola! ¿Un repaso final? Haz clic, escucha y relaciona las 100 audiciones siguientes:</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="5" cols="1" border="false" image="Portada rock2.jpg">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell />
+    <cell />
+    <cell />
+    <cell>
+     <style borderStroke="10.0" markerStroke="5.0">
+      <font family="Calibri" size="26" />
+      <color background="0xFFFFFF" shadow="0xCCCCCC" border="0xCCCCCC" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Chuck Berry - INTRO Johnny B. Goode (58).mp3" autoStart="true" />
+     <p>Ramon Llanes Bordes</p>
+    </cell>
+    <cell txtAlign="middle,top">
+     <style borderStroke="10.0" markerStroke="5.0">
+      <font family="Calibri" size="48" />
+      <color background="0xFFFFFF" shadow="0xCCCCCC" border="0xCCCCCC" />
+     </style>
+     <p>El rock (y 4) · Repaso auditivo</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Resum 1 (cançons - autor-a/grup)" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Escucha y relaciona (1):</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Empezamos bien!</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="Beatles - Sgt.Pepper's Lonely Hearts Club Band (67).mp3" />
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="Rolling Stones - Paint In Black.mp3" />
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="Byrds, The - Mr. Tambourine Man (65).mp3" />
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="Beach Boys - Surfin'USA (63).mp3" />
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="Oasis  - Wonderwall (95).mp3" />
+    </cell>
+    <cell id="5">
+     <media type="PLAY_AUDIO" level="1" file="U2 - With Or Without You (87).mp3" />
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Calibri" size="28" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>The Beatles</p>
+    </cell>
+    <cell>
+     <p>The Rolling Stones</p>
+    </cell>
+    <cell>
+     <p>The Byrds</p>
+    </cell>
+    <cell>
+     <p>The Beach Boys</p>
+    </cell>
+    <cell>
+     <p>Oasis</p>
+    </cell>
+    <cell>
+     <p>U2</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>"Sgt.Pepper's Lonely Hearts Club Band" (1967)</p>
+    </cell>
+    <cell>
+     <p>"Paint in black" (1966)</p>
+    </cell>
+    <cell>
+     <p>"Mr. Tambourine man" (1965)</p>
+    </cell>
+    <cell>
+     <p>"Surfin'USA" (1963)</p>
+    </cell>
+    <cell>
+     <p>"Wonderwall" (1995)</p>
+    </cell>
+    <cell>
+     <p>"With or without you" (1987)</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Resum 10 (cançons - autor-a/grup)" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Escucha y relaciona (10):</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Vamos, más!</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="AC-DC - Highway to Hell (79).mp3" />
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="Queen - We Are The Champions (77).mp3" />
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="Deep Purple - Smoke on the water (72).mp3" />
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="Moody Blues, The - Nights In White Satin (67).mp3" />
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="Police, The - Every Breath You Take (83).mp3" />
+    </cell>
+    <cell id="5">
+     <media type="PLAY_AUDIO" level="1" file="Metallica - INICI Entern Sadman.mp3" />
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Calibri" size="28" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>AC/DC</p>
+    </cell>
+    <cell>
+     <p>Queen</p>
+    </cell>
+    <cell>
+     <p>Deep Purple</p>
+    </cell>
+    <cell>
+     <p>The Moody Blues</p>
+    </cell>
+    <cell>
+     <p>The Police</p>
+    </cell>
+    <cell>
+     <p>Metallica</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>"Highway to hell" (1979)</p>
+    </cell>
+    <cell>
+     <p>"We are the champions" (1977)</p>
+    </cell>
+    <cell>
+     <p>"Smoke on the water" (1972)</p>
+    </cell>
+    <cell>
+     <p>"Nights in white satin" (1967)</p>
+    </cell>
+    <cell>
+     <p>"Every breath you take" (1983)</p>
+    </cell>
+    <cell>
+     <p>"Entern sandman" (1991)</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Resum 11 (cançons - autor-a/grup)" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Escucha y relaciona (11):</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Bien, bien... ya queda menos.</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="Bob Dylan - Like A Rolling Stone (65).mp3" />
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="Neil Young - Harvest (72).mp3" />
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="Otis Redding - (sitting on) The Dock of The Bay.mp3" />
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="Chuck Berry - Johnny B. Goode Tema A.mp3" />
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="Everly Brothers, The - Bye, bye, love (58).mp3" />
+    </cell>
+    <cell id="5">
+     <media type="PLAY_AUDIO" level="1" file="Eric Clapton - Layla.mp3" />
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Calibri" size="28" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Bob Dylan</p>
+    </cell>
+    <cell>
+     <p>Neil Young</p>
+    </cell>
+    <cell>
+     <p>Otis Redding</p>
+    </cell>
+    <cell>
+     <p>Chuck Berry</p>
+    </cell>
+    <cell>
+     <p>The Everly Brothers</p>
+    </cell>
+    <cell>
+     <p>Eric Clapton</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>"Like a rolling stone" (1965)</p>
+    </cell>
+    <cell>
+     <p>"Harvest" (1972)</p>
+    </cell>
+    <cell>
+     <p>"(sitting on) The dock of the bay" (1968)</p>
+    </cell>
+    <cell>
+     <p>"Johnny B. Goode" (1958)</p>
+    </cell>
+    <cell>
+     <p>"Bye, bye, love" (1958)</p>
+    </cell>
+    <cell>
+     <p>"Layla" (1971)</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Resum 12 (cançons - autor-a/grup)" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Escucha y relaciona (12):</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Lo estás haciendo muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="Michael Jackson - Thriller (82).mp3" />
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="Marvin Gaye - Ain't No Mountain High Enough.mp3" />
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="Clash, The - London Calling (77).mp3" />
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="Bill Haley &amp; The Comets -12 comp Rock Around The Cock (55).mp3" />
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="Los Bravos - Black is black.mp3" />
+    </cell>
+    <cell id="5">
+     <media type="PLAY_AUDIO" level="1" file="Sopa de Cabra - L'Empordà.mp3" />
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Calibri" size="28" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Michael Jackson</p>
+    </cell>
+    <cell>
+     <p>Marvin Gaye</p>
+    </cell>
+    <cell>
+     <p>The Clash</p>
+    </cell>
+    <cell>
+     <p>Bill Haley</p>
+    </cell>
+    <cell>
+     <p>Los Bravos</p>
+    </cell>
+    <cell>
+     <p>Sopa de Cabra</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>"Thriller" (1982)</p>
+    </cell>
+    <cell>
+     <p>"Ain't no mountain high enough" (1970)</p>
+    </cell>
+    <cell>
+     <p>"London calling" (1977)</p>
+    </cell>
+    <cell>
+     <p>"Rock around the clock" (1954)</p>
+    </cell>
+    <cell>
+     <p>"Black is black" (1966)</p>
+    </cell>
+    <cell>
+     <p>"L'Empordà" (1989)</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Resum 13 (cançons - autor-a/grup)" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Escucha y relaciona (13):</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Vamos, vamos!</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="Bruce Springsteen - Born in the USA (84).mp3" />
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="Chuck Berry - School Days (57).mp3" />
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="Jimi Hendrix - INICI Little Wing.mp3" />
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="Eric Clapton - Tears in Heaven.mp3" />
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="Elvis Presley - Jailhouse Rock (57).mp3" />
+    </cell>
+    <cell id="5">
+     <media type="PLAY_AUDIO" level="1" file="Lou Reed - Take A Walk On The Wild Side (72).mp3" />
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Calibri" size="28" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Bruce Springsteen</p>
+    </cell>
+    <cell>
+     <p>Chuck Berry</p>
+    </cell>
+    <cell>
+     <p>Jimi Hendrix</p>
+    </cell>
+    <cell>
+     <p>Eric Clapton</p>
+    </cell>
+    <cell>
+     <p>Elvis Presley</p>
+    </cell>
+    <cell>
+     <p>Lou Reed</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>"Born in the USA" (1984)</p>
+    </cell>
+    <cell>
+     <p>"School days" (1957)</p>
+    </cell>
+    <cell>
+     <p>"Little wing" (1967)</p>
+    </cell>
+    <cell>
+     <p>"Tears in heaven" (1992)</p>
+    </cell>
+    <cell>
+     <p>"Jailhouse rock" (1957)</p>
+    </cell>
+    <cell>
+     <p>"Take a walk on the wild side" (1972)</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Resum 14 (cançons - autor-a/grup)" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Escucha y relaciona (14):</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Eres un/a experto/a en rock!</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="Red Hot Chili Peppers - By The Way (02).mp3" />
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="Platters, The - Only you (55).mp3" />
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="Guns'n'Roses - Welcome to the jungle (87).mp3" />
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="Bee Gees - Stayin' Alive (78).mp3" />
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="Led Zeppelin - INICI Stairway To Heaven (71).mp3" />
+    </cell>
+    <cell id="5">
+     <media type="PLAY_AUDIO" level="1" file="Nirvana - Smells Like Teen Spirit (91).mp3" />
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Calibri" size="28" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Red Hot Chili Peppers</p>
+    </cell>
+    <cell>
+     <p>The Platters</p>
+    </cell>
+    <cell>
+     <p>Guns'n'roses</p>
+    </cell>
+    <cell>
+     <p>Bee Gees</p>
+    </cell>
+    <cell>
+     <p>Led Zeppelin</p>
+    </cell>
+    <cell>
+     <p>Nirvana</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>"By the way" (2002)</p>
+    </cell>
+    <cell>
+     <p>"Only you" (1955)</p>
+    </cell>
+    <cell>
+     <p>"Welcome to the jungle" (1987)</p>
+    </cell>
+    <cell>
+     <p>"Stayin' alive" (1978)</p>
+    </cell>
+    <cell>
+     <p>"Stairway to heaven" (1971)</p>
+    </cell>
+    <cell>
+     <p>"Smells like teen spirit" (1991)</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Resum 15 (cançons - autor-a/grup)" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Escucha y relaciona (y 15):</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>La última de la serie...</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="Who, The - My Generation (65).mp3" />
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="Rolling Stones - Sympathy for the Devil (67).mp3" />
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="Beatles - A hard day's night (64).mp3" />
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="AC-DC - Back in black (80).mp3" />
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="Lynyrd Skynyrd - Sweet Home Alabama (74).mp3" />
+    </cell>
+    <cell id="5">
+     <media type="PLAY_AUDIO" level="1" file="Eagles - Hotel California (76).mp3" />
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Calibri" size="28" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>The Who</p>
+    </cell>
+    <cell>
+     <p>The Rolling Stones</p>
+    </cell>
+    <cell>
+     <p>The Beatles</p>
+    </cell>
+    <cell>
+     <p>AC/DC</p>
+    </cell>
+    <cell>
+     <p>Lynyrd Skynyrd</p>
+    </cell>
+    <cell>
+     <p>Eagles</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>"My generation" (1965)</p>
+    </cell>
+    <cell>
+     <p>"Sympathy for the Devil" (1967)</p>
+    </cell>
+    <cell>
+     <p>"A hard day's night" (1964)</p>
+    </cell>
+    <cell>
+     <p>"Back in black" (1980)</p>
+    </cell>
+    <cell>
+     <p>"Sweet home Alabama" (1974)</p>
+    </cell>
+    <cell>
+     <p>"Hotel California" (1976)</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Resum 2 (cançons - autor-a/grup)" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Escucha y relaciona (2):</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Adelante!</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="Kraftwerk - Autobahn (75).mp3" />
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="Gloria Gaynor - I Will Survive (79).mp3" />
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="Madonna - Like A Prayer (89).mp3" />
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="Doors, The - Light my fire (67).mp3" />
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="Tina Turner - What's love got to do whith it (84).mp3" />
+    </cell>
+    <cell id="5">
+     <media type="PLAY_AUDIO" level="1" file="Emerson, Lake &amp; Palmer - Peter Gunn (79).mp3" />
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Calibri" size="28" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Kraftwerk</p>
+    </cell>
+    <cell>
+     <p>Gloria Gaynor</p>
+    </cell>
+    <cell>
+     <p>Madonna</p>
+    </cell>
+    <cell>
+     <p>The Doors</p>
+    </cell>
+    <cell>
+     <p>Tina Turner</p>
+    </cell>
+    <cell>
+     <p>Emerson, Lake &amp; Palmer</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>"Autobahn" (1975)</p>
+    </cell>
+    <cell>
+     <p>"I will survive" (1979)</p>
+    </cell>
+    <cell>
+     <p>"Like a prayer" (1989)</p>
+    </cell>
+    <cell>
+     <p>"Light my fire" (1967)</p>
+    </cell>
+    <cell>
+     <p>"What's love got to do with it" (1984)</p>
+    </cell>
+    <cell>
+     <p>"Peter Gunn" (1979)</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Resum 3 (cançons - autor-a/grup)" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Escucha y relaciona (3):</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Bien, bien...</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="Jerry Lee Lewis - Great balls of fire (57).mp3" />
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="James Taylor - You've Got A Friend (71).mp3" />
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="Ben E. King - Stand By Me (62).mp3" />
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="Buddy Holly - Peggy Sue (57).mp3" />
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="Prince - Purple Rain (84).mp3" />
+    </cell>
+    <cell id="5">
+     <media type="PLAY_AUDIO" level="1" file="Elvis Presley- Thats All Right Mama - SUN Records.mp3" />
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Calibri" size="28" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Jerry Lee Lewis</p>
+    </cell>
+    <cell>
+     <p>James Taylor</p>
+    </cell>
+    <cell>
+     <p>Ben E. King</p>
+    </cell>
+    <cell>
+     <p>Buddy Holly</p>
+    </cell>
+    <cell>
+     <p>Prince</p>
+    </cell>
+    <cell>
+     <p>Elvis Presley</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>"Great balls of fire" (1957)</p>
+    </cell>
+    <cell>
+     <p>"You've got a friend" (1971)</p>
+    </cell>
+    <cell>
+     <p>"Stand by me" (1962)</p>
+    </cell>
+    <cell>
+     <p>"Peggy Sue" (1957)</p>
+    </cell>
+    <cell>
+     <p>"Purple rain" (1984)</p>
+    </cell>
+    <cell>
+     <p>"Thats all right mama" (1955)</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Resum 4 (cançons - autor-a/grup)" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Escucha y relaciona (4):</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Fantástico!</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="Bob Dylan - Knockin' On Heaven's Door (73).mp3" />
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="David Bowie - Ziggy Stardust (72).mp3" />
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="Dire Straits - Sultans of Swing (79).mp3" />
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="Little Richard - Tutti frutti (56).mp3" />
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="REM - Losing My Religion (91).mp3" />
+    </cell>
+    <cell id="5">
+     <media type="PLAY_AUDIO" level="1" file="Buggles - Video Killed The Radio Star (93).mp3" />
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Calibri" size="28" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Bob Dylan</p>
+    </cell>
+    <cell>
+     <p>David Bowie</p>
+    </cell>
+    <cell>
+     <p>Dire Straits</p>
+    </cell>
+    <cell>
+     <p>Little Richard</p>
+    </cell>
+    <cell>
+     <p>REM</p>
+    </cell>
+    <cell>
+     <p>Buggles</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>"Knockin' on heaven's door" (1973)</p>
+    </cell>
+    <cell>
+     <p>"Ziggy Stardust" (1972)</p>
+    </cell>
+    <cell>
+     <p>"Sultans of swing" (1979)</p>
+    </cell>
+    <cell>
+     <p>"Tutti frutti" (1956)</p>
+    </cell>
+    <cell>
+     <p>"Losing my religion" (1991)</p>
+    </cell>
+    <cell>
+     <p>"Video killed the radio star" (1979)</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Resum 5 (cançons - autor-a/grup)" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Escucha y relaciona (5):</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Buen oído!</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="Bon Jovi - Livin' On A Prayer (86).mp3" />
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="Animals, The - The house of the rising sun (64).mp3" />
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="James Brown - I Feel Good (70).mp3" />
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="Fats Domino - Blueberry  Hill (56).mp3" />
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="Stevie Wonder - You Are The Sunshine Of My Life (73).mp3" />
+    </cell>
+    <cell id="5">
+     <media type="PLAY_AUDIO" level="1" file="Mike Oldfield - Tubular Bells 1.mp3" />
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Calibri" size="28" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Bon Jovi</p>
+    </cell>
+    <cell>
+     <p>The Animals</p>
+    </cell>
+    <cell>
+     <p>James Brown</p>
+    </cell>
+    <cell>
+     <p>Fats Domino</p>
+    </cell>
+    <cell>
+     <p>Stevie Wonder</p>
+    </cell>
+    <cell>
+     <p>Mike Oldfield</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>"Livin' on a prayer" (1986)</p>
+    </cell>
+    <cell>
+     <p>"The house of the rising sun" (1964)</p>
+    </cell>
+    <cell>
+     <p>"I feel good" (1970)</p>
+    </cell>
+    <cell>
+     <p>"Blueberry Hill" (1956)</p>
+    </cell>
+    <cell>
+     <p>"You are the sunshine of my life" (1966)</p>
+    </cell>
+    <cell>
+     <p>"Tubular Bells" (1973)</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Resum 6 (cançons - autor-a/grup)" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Escucha y relaciona (6):</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¿Vaya mezclas, no?</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="Eminem - Lose Yourself (02).mp3" />
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="Sugar Hill Gang - Rappers Delight.mp3" />
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="Eurythmics - Sweet Dreams (84).mp3" />
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="Carl Perkins - Blue Suede Shoes (55).mp3" />
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="Elvis Presley - Heartbreak Hotel (56).mp3" />
+    </cell>
+    <cell id="5">
+     <media type="PLAY_AUDIO" level="1" file="Supertramp - The logical song (79).mp3" />
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Calibri" size="28" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Eminem</p>
+    </cell>
+    <cell>
+     <p>Sugar Hill Gang</p>
+    </cell>
+    <cell>
+     <p>Eurythmics</p>
+    </cell>
+    <cell>
+     <p>Carl Perkins</p>
+    </cell>
+    <cell>
+     <p>Elvis Presley</p>
+    </cell>
+    <cell>
+     <p>Supertramp</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>"Lose yourself" (2002)</p>
+    </cell>
+    <cell>
+     <p>"Rapper's delight" (1979)</p>
+    </cell>
+    <cell>
+     <p>"Sweet dreams" (1984)</p>
+    </cell>
+    <cell>
+     <p>"Blue suede shoes" (1955)</p>
+    </cell>
+    <cell>
+     <p>"Heartbreak hotel" (1956)</p>
+    </cell>
+    <cell>
+     <p>"The logical song" (1979)</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Resum 7 (cançons - autor-a/grup)" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Escucha y relaciona (7):</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Continuemos...</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="Paul Anka - Diana.mp3" />
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="Bo Diddley - Bo Diddley.mp3" />
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="Aretha Franklin - Think (68).mp3" />
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="Donna Summer - Hot Stuff (79).mp3" />
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="Michael Jackson - Billie Jean.mp3" />
+    </cell>
+    <cell id="5">
+     <media type="PLAY_AUDIO" level="1" file="Eric Clapton - Tears in Heaven.mp3" />
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Calibri" size="28" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Paul Anka</p>
+    </cell>
+    <cell>
+     <p>Bo Diddley</p>
+    </cell>
+    <cell>
+     <p>Aretha Franklin</p>
+    </cell>
+    <cell>
+     <p>Donna Summer</p>
+    </cell>
+    <cell>
+     <p>Michael Jackson</p>
+    </cell>
+    <cell>
+     <p>Eric Clapton</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>"Diana" (1957)</p>
+    </cell>
+    <cell>
+     <p>"Hey Bo Diddley" (1958)</p>
+    </cell>
+    <cell>
+     <p>"Think" (1968)</p>
+    </cell>
+    <cell>
+     <p>"Hot Stuff" (1979)</p>
+    </cell>
+    <cell>
+     <p>"Billie Jean" (1983)</p>
+    </cell>
+    <cell>
+     <p>"Tears in Heaven" (1992)</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Resum 8 (cançons - autor-a/grup)" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Escucha y relaciona (8):</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Buena intuición!</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="Metallica - Nothing Else Matters.mp3" />
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="Greenday - Basket Case (rock-00).mp3" />
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="Creedence Clearwater Revival - Proud Mary (70).mp3" />
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="Pink Floyd - Another brick in the wall (part 2) (79).mp3" />
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="Free - RIFF All Right Now (70).mp3" />
+    </cell>
+    <cell id="5">
+     <media type="PLAY_AUDIO" level="1" file="Procol Harum - A Whiter Shade Of Pale (67).mp3" />
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Calibri" size="28" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Metallica</p>
+    </cell>
+    <cell>
+     <p>Green Day</p>
+    </cell>
+    <cell>
+     <p>Creedence Clearwater Revival</p>
+    </cell>
+    <cell>
+     <p>Pink Floyd</p>
+    </cell>
+    <cell>
+     <p>Free</p>
+    </cell>
+    <cell>
+     <p>Procol Harum</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>"Nothing else matters" (1991)</p>
+    </cell>
+    <cell>
+     <p>"Basket case" (1994)</p>
+    </cell>
+    <cell>
+     <p>"Proud Mary" (1970)</p>
+    </cell>
+    <cell>
+     <p>"Another brick in the wall" (1979)</p>
+    </cell>
+    <cell>
+     <p>"All right now" (1970)</p>
+    </cell>
+    <cell>
+     <p>"A whiter shade of pale" (1967)</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Resum 9 (cançons - autor-a/grup)" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Escucha y relaciona (9):</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Ya hemos superado la mitad de pantallas!</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="24" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="Percy Sledge - When a Man Loves a Woman (motown).mp3" />
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="Jackson Five - Abc (Motown).mp3" />
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="Chubby Checker - The Twist.mp3" />
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="Mamas &amp; The Papas, The - California Dreamin' (66).mp3" />
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="Elton John - Candle in the Wind.mp3" />
+    </cell>
+    <cell id="5">
+     <media type="PLAY_AUDIO" level="1" file="Peter, Paul &amp; Mary - Puff The Magic Dragon.mp3" />
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Calibri" size="28" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Percy Sledge</p>
+    </cell>
+    <cell>
+     <p>The Jackson 5</p>
+    </cell>
+    <cell>
+     <p>Chubby Checker</p>
+    </cell>
+    <cell>
+     <p>The Mamas &amp; the Papas</p>
+    </cell>
+    <cell>
+     <p>Elton John</p>
+    </cell>
+    <cell>
+     <p>Peter, Paul &amp; Mary</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>"When a man loves a woman" (1966)</p>
+    </cell>
+    <cell>
+     <p>"Abc" (1970)</p>
+    </cell>
+    <cell>
+     <p>"The twist" (1960)</p>
+    </cell>
+    <cell>
+     <p>"California dreamin'" (1966)</p>
+    </cell>
+    <cell>
+     <p>"Candle in the wind" (1973)</p>
+    </cell>
+    <cell>
+     <p>"Puff, the magic dragon" (1963)</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Resum final (1)" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Resumen final (1). Identifica las audiciones (instrumentales) con la canción correspondiente:</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="200.0" cellHeight="200.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="26" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>"The house of the rising sun" </p>
+    </cell>
+    <cell>
+     <p>"Is this love" </p>
+    </cell>
+    <cell>
+     <p>"Let it be" </p>
+    </cell>
+    <cell>
+     <p>"Stayin' alive" </p>
+    </cell>
+    <cell>
+     <p>"Sweet home Alabama" </p>
+    </cell>
+    <cell>
+     <p>The Police "Every breath you take" </p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="200.0" cellHeight="200.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Calibri" size="22" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="Animals, The - INICI The house of the rising sun (64).mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="Bob Marley - INICI Is this love (78).mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="Beatles - INICI Let it Be (70).mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="Bee Gees - INICI Stayin' Alive (78).mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="Lynyrd Skynyrd - INICI Sweet Home Alabama (74).mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="Police, The - INICI Every Breath You Take (83).mp3" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell txtAlign="middle,bottom" image="animals2.jpg">
+     <p>The Animals </p>
+    </cell>
+    <cell txtAlign="middle,top" image="Bob Marley 2.jpg">
+     <p>Bob Marley</p>
+    </cell>
+    <cell txtAlign="middle,bottom" image="beatles2.jpg">
+     <p>The Beatles</p>
+    </cell>
+    <cell txtAlign="middle,top" image="Bee Gees2.jpg">
+     <p>Bee Gees</p>
+    </cell>
+    <cell image="Lynyrd.jpg">
+     <p>Lynyrd Skynyrd</p>
+    </cell>
+    <cell txtAlign="middle,top" image="Police3.jpg">
+     <p>The Police</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Resum final (2)" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Resumen final (y 2). Identifica las audiciones (instrumentales) con la canción correspondiente:</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Calibri" size="24" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Enhorabuena! ¡Has superado las 100 audiciones! El rock ya no tiene secretos para ti.</p>
+    </cell>
+   </messages>
+   <settings margin="20" report="true" reportActions="false">
+    <container bgColor="0xE0E1DD">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xE0E1DD" border="false" />
+    <eventSounds enabled="false" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="200.0" cellHeight="200.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Calibri" size="26" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>"Highway to hell" </p>
+    </cell>
+    <cell>
+     <p>"Smells like teen spirit" </p>
+    </cell>
+    <cell>
+     <p>"God save the Queen" </p>
+    </cell>
+    <cell>
+     <p>"I can't get no (Satisfaction)" </p>
+    </cell>
+    <cell>
+     <p>"Hot Stuff" </p>
+    </cell>
+    <cell>
+     <p>"Johnny B. Goode" </p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="200.0" cellHeight="200.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Calibri" size="22" />
+     <color background="0xE0E1DD" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="AC-DC - Highway to Hell (79).mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="Nirvana - INICI Smells Like Teen Spirit (91).mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="Sex Pistols - INICI God Save the Queen (77).mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="Rolling Stones - INICI I Can't Get No (Satisfaction) (65).mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="Donna Summer - INICI Hot Stuff (79).mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="Chuck Berry - INTRO Johnny B. Goode (58).mp3" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="Acdc2.jpg">
+     <p>AC/DC</p>
+    </cell>
+    <cell txtAlign="left,bottom" image="Nirvana.jpg">
+     <p>Nirvana</p>
+    </cell>
+    <cell txtAlign="middle,bottom" image="Sex Pistols 7.jpg">
+     <p>Sex Pistols</p>
+    </cell>
+    <cell txtAlign="middle,bottom" image="rolling-stones8.jpg">
+     <p>Rolling Stones</p>
+    </cell>
+    <cell txtAlign="middle,bottom" image="Donna Summer 77.jpg">
+     <p>Donna Summer</p>
+    </cell>
+    <cell txtAlign="middle,top" image="chuck-berry5.jpg">
+     <p>Chuck Berry</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BA" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="Acdc2.jpg" file="acdc2.jpg" />
+  <media name="animals2.jpg" file="animals2.jpg" />
+  <media name="beatles2.jpg" file="beatles2.jpg" />
+  <media name="Bee Gees2.jpg" file="bee_gees2.jpg" />
+  <media name="Bob Marley 2.jpg" file="bob_marley_2.jpg" />
+  <media name="chuck-berry5.jpg" file="chuck_berry5.jpg" />
+  <media name="Donna Summer 77.jpg" file="donna_summer_77.jpg" />
+  <media name="Lynyrd.jpg" file="lynyrd.jpg" />
+  <media name="Nirvana.jpg" file="nirvana.jpg" />
+  <media name="Police3.jpg" file="police3.jpg" />
+  <media name="Portada rock2.jpg" file="portada_rock2.jpg" />
+  <media name="Portada2.jpg" file="i01_portada2.jpg" />
+  <media name="rolling-stones8.jpg" file="rolling_stones8.jpg" />
+  <media name="Sex Pistols 7.jpg" file="sex_pistols_7.jpg" />
+  <media name="AC-DC - Back in black (80).mp3" file="ac_dc___back_in_black__80_.mp3" />
+  <media name="AC-DC - Highway to Hell (79).mp3" file="ac_dc___highway_to_hell__79_.mp3" />
+  <media name="Animals, The - INICI The house of the rising sun (64).mp3" file="animals__the___inici_the_house_of_the_rising_sun__64_.mp3" />
+  <media name="Animals, The - The house of the rising sun (64).mp3" file="animals__the___the_house_of_the_rising_sun__64_.mp3" />
+  <media name="Aretha Franklin - Think (68).mp3" file="aretha_franklin___think__68_.mp3" />
+  <media name="Beach Boys - Surfin'USA (63).mp3" file="beach_boys___surfin_usa__63_.mp3" />
+  <media name="Beatles - A hard day's night (64).mp3" file="beatles___a_hard_day_s_night__64_.mp3" />
+  <media name="Beatles - INICI Let it Be (70).mp3" file="beatles___inici_let_it_be__70_.mp3" />
+  <media name="Beatles - Sgt.Pepper's Lonely Hearts Club Band (67).mp3" file="beatles___sgt.pepper_s_lonely_hearts_club_band__67_.mp3" />
+  <media name="Bee Gees - INICI Stayin' Alive (78).mp3" file="bee_gees___inici_stayin__alive__78_.mp3" />
+  <media name="Bee Gees - Stayin' Alive (78).mp3" file="bee_gees___stayin__alive__78_.mp3" />
+  <media name="Ben E. King - Stand By Me (62).mp3" file="ben_e._king___stand_by_me__62_.mp3" />
+  <media name="Bill Haley &amp; The Comets -12 comp Rock Around The Cock (55).mp3" file="bill_haley___the_comets__12_comp_rock_around_the_cock__55_.mp3" />
+  <media name="Bo Diddley - Bo Diddley.mp3" file="bo_diddley___bo_diddley.mp3" />
+  <media name="Bob Dylan - Knockin' On Heaven's Door (73).mp3" file="bob_dylan___knockin__on_heaven_s_door__73_.mp3" />
+  <media name="Bob Dylan - Like A Rolling Stone (65).mp3" file="bob_dylan___like_a_rolling_stone__65_.mp3" />
+  <media name="Bob Marley - INICI Is this love (78).mp3" file="bob_marley___inici_is_this_love__78_.mp3" />
+  <media name="Bon Jovi - Livin' On A Prayer (86).mp3" file="bon_jovi___livin__on_a_prayer__86_.mp3" />
+  <media name="Bruce Springsteen - Born in the USA (84).mp3" file="bruce_springsteen___born_in_the_usa__84_.mp3" />
+  <media name="Buddy Holly - Peggy Sue (57).mp3" file="buddy_holly___peggy_sue__57_.mp3" />
+  <media name="Buggles - Video Killed The Radio Star (93).mp3" file="buggles___video_killed_the_radio_star__93_.mp3" />
+  <media name="Byrds, The - Mr. Tambourine Man (65).mp3" file="byrds__the___mr._tambourine_man__65_.mp3" />
+  <media name="Carl Perkins - Blue Suede Shoes (55).mp3" file="carl_perkins___blue_suede_shoes__55_.mp3" />
+  <media name="Chubby Checker - The Twist.mp3" file="chubby_checker___the_twist.mp3" />
+  <media name="Chuck Berry - INTRO Johnny B. Goode (58).mp3" file="chuck_berry___intro_johnny_b._goode__58_.mp3" />
+  <media name="Chuck Berry - Johnny B. Goode Tema A.mp3" file="chuck_berry___johnny_b._goode_tema_a.mp3" />
+  <media name="Chuck Berry - School Days (57).mp3" file="chuck_berry___school_days__57_.mp3" />
+  <media name="Clash, The - London Calling (77).mp3" file="clash__the___london_calling__77_.mp3" />
+  <media name="Creedence Clearwater Revival - Proud Mary (70).mp3" file="creedence_clearwater_revival___proud_mary__70_.mp3" />
+  <media name="David Bowie - Ziggy Stardust (72).mp3" file="david_bowie___ziggy_stardust__72_.mp3" />
+  <media name="Deep Purple - Smoke on the water (72).mp3" file="deep_purple___smoke_on_the_water__72_.mp3" />
+  <media name="Dire Straits - Sultans of Swing (79).mp3" file="dire_straits___sultans_of_swing__79_.mp3" />
+  <media name="Donna Summer - Hot Stuff (79).mp3" file="donna_summer___hot_stuff__79_.mp3" />
+  <media name="Donna Summer - INICI Hot Stuff (79).mp3" file="donna_summer___inici_hot_stuff__79_.mp3" />
+  <media name="Doors, The - Light my fire (67).mp3" file="doors__the___light_my_fire__67_.mp3" />
+  <media name="Eagles - Hotel California (76).mp3" file="eagles___hotel_california__76_.mp3" />
+  <media name="Elton John - Candle in the Wind.mp3" file="elton_john___candle_in_the_wind.mp3" />
+  <media name="Elvis Presley - Heartbreak Hotel (56).mp3" file="elvis_presley___heartbreak_hotel__56_.mp3" />
+  <media name="Elvis Presley - Jailhouse Rock (57).mp3" file="elvis_presley___jailhouse_rock__57_.mp3" />
+  <media name="Elvis Presley- Thats All Right Mama - SUN Records.mp3" file="elvis_presley__thats_all_right_mama___sun_records.mp3" />
+  <media name="Emerson, Lake &amp; Palmer - Peter Gunn (79).mp3" file="emerson__lake___palmer___peter_gunn__79_.mp3" />
+  <media name="Eminem - Lose Yourself (02).mp3" file="eminem___lose_yourself__02_.mp3" />
+  <media name="Eric Clapton - Layla.mp3" file="eric_clapton___layla.mp3" />
+  <media name="Eric Clapton - Tears in Heaven.mp3" file="eric_clapton___tears_in_heaven.mp3" />
+  <media name="Eurythmics - Sweet Dreams (84).mp3" file="eurythmics___sweet_dreams__84_.mp3" />
+  <media name="Everly Brothers, The - Bye, bye, love (58).mp3" file="everly_brothers__the___bye__bye__love__58_.mp3" />
+  <media name="Fats Domino - Blueberry  Hill (56).mp3" file="fats_domino___blueberry__hill__56_.mp3" />
+  <media name="Free - RIFF All Right Now (70).mp3" file="free___riff_all_right_now__70_.mp3" />
+  <media name="Gloria Gaynor - I Will Survive (79).mp3" file="gloria_gaynor___i_will_survive__79_.mp3" />
+  <media name="Greenday - Basket Case (rock-00).mp3" file="greenday___basket_case__rock_00_.mp3" />
+  <media name="Guns'n'Roses - Welcome to the jungle (87).mp3" file="guns_n_roses___welcome_to_the_jungle__87_.mp3" />
+  <media name="Jackson Five - Abc (Motown).mp3" file="jackson_five___abc__motown_.mp3" />
+  <media name="James Brown - I Feel Good (70).mp3" file="james_brown___i_feel_good__70_.mp3" />
+  <media name="James Taylor - You've Got A Friend (71).mp3" file="james_taylor___you_ve_got_a_friend__71_.mp3" />
+  <media name="Jerry Lee Lewis - Great balls of fire (57).mp3" file="jerry_lee_lewis___great_balls_of_fire__57_.mp3" />
+  <media name="Jimi Hendrix - INICI Little Wing.mp3" file="jimi_hendrix___inici_little_wing.mp3" />
+  <media name="Kraftwerk - Autobahn (75).mp3" file="kraftwerk___autobahn__75_.mp3" />
+  <media name="Led Zeppelin - INICI Stairway To Heaven (71).mp3" file="led_zeppelin___inici_stairway_to_heaven__71_.mp3" />
+  <media name="Little Richard - Tutti frutti (56).mp3" file="little_richard___tutti_frutti__56_.mp3" />
+  <media name="Los Bravos - Black is black.mp3" file="los_bravos___black_is_black.mp3" />
+  <media name="Lou Reed - Take A Walk On The Wild Side (72).mp3" file="lou_reed___take_a_walk_on_the_wild_side__72_.mp3" />
+  <media name="Lynyrd Skynyrd - INICI Sweet Home Alabama (74).mp3" file="lynyrd_skynyrd___inici_sweet_home_alabama__74_.mp3" />
+  <media name="Lynyrd Skynyrd - Sweet Home Alabama (74).mp3" file="lynyrd_skynyrd___sweet_home_alabama__74_.mp3" />
+  <media name="Madonna - Like A Prayer (89).mp3" file="madonna___like_a_prayer__89_.mp3" />
+  <media name="Mamas &amp; The Papas, The - California Dreamin' (66).mp3" file="mamas___the_papas__the___california_dreamin___66_.mp3" />
+  <media name="Marvin Gaye - Ain't No Mountain High Enough.mp3" file="marvin_gaye___ain_t_no_mountain_high_enough.mp3" />
+  <media name="Metallica - INICI Entern Sadman.mp3" file="metallica___inici_entern_sadman.mp3" />
+  <media name="Metallica - Nothing Else Matters.mp3" file="metallica___nothing_else_matters.mp3" />
+  <media name="Michael Jackson - Billie Jean.mp3" file="michael_jackson___billie_jean.mp3" />
+  <media name="Michael Jackson - Thriller (82).mp3" file="michael_jackson___thriller__82_.mp3" />
+  <media name="Mike Oldfield - Tubular Bells 1.mp3" file="mike_oldfield___tubular_bells_1.mp3" />
+  <media name="Moody Blues, The - Nights In White Satin (67).mp3" file="moody_blues__the___nights_in_white_satin__67_.mp3" />
+  <media name="Neil Young - Harvest (72).mp3" file="neil_young___harvest__72_.mp3" />
+  <media name="Nirvana - INICI Smells Like Teen Spirit (91).mp3" file="nirvana___inici_smells_like_teen_spirit__91_.mp3" />
+  <media name="Nirvana - Smells Like Teen Spirit (91).mp3" file="nirvana___smells_like_teen_spirit__91_.mp3" />
+  <media name="Oasis  - Wonderwall (95).mp3" file="oasis____wonderwall__95_.mp3" />
+  <media name="Otis Redding - (sitting on) The Dock of The Bay.mp3" file="otis_redding____sitting_on__the_dock_of_the_bay.mp3" />
+  <media name="Paul Anka - Diana.mp3" file="paul_anka___diana.mp3" />
+  <media name="Percy Sledge - When a Man Loves a Woman (motown).mp3" file="percy_sledge___when_a_man_loves_a_woman__motown_.mp3" />
+  <media name="Peter, Paul &amp; Mary - Puff The Magic Dragon.mp3" file="peter__paul___mary___puff_the_magic_dragon.mp3" />
+  <media name="Pink Floyd - Another brick in the wall (part 2) (79).mp3" file="pink_floyd___another_brick_in_the_wall__part_2___79_.mp3" />
+  <media name="Platters, The - Only you (55).mp3" file="platters__the___only_you__55_.mp3" />
+  <media name="Police, The - Every Breath You Take (83).mp3" file="police__the___every_breath_you_take__83_.mp3" />
+  <media name="Police, The - INICI Every Breath You Take (83).mp3" file="police__the___inici_every_breath_you_take__83_.mp3" />
+  <media name="Prince - Purple Rain (84).mp3" file="prince___purple_rain__84_.mp3" />
+  <media name="Procol Harum - A Whiter Shade Of Pale (67).mp3" file="procol_harum___a_whiter_shade_of_pale__67_.mp3" />
+  <media name="Queen - We Are The Champions (77).mp3" file="queen___we_are_the_champions__77_.mp3" />
+  <media name="Red Hot Chili Peppers - By The Way (02).mp3" file="red_hot_chili_peppers___by_the_way__02_.mp3" />
+  <media name="REM - Losing My Religion (91).mp3" file="rem___losing_my_religion__91_.mp3" />
+  <media name="Rolling Stones - INICI I Can't Get No (Satisfaction) (65).mp3" file="rolling_stones___inici_i_can_t_get_no__satisfaction___65_.mp3" />
+  <media name="Rolling Stones - Paint In Black.mp3" file="rolling_stones___paint_in_black.mp3" />
+  <media name="Rolling Stones - Sympathy for the Devil (67).mp3" file="rolling_stones___sympathy_for_the_devil__67_.mp3" />
+  <media name="Sex Pistols - INICI God Save the Queen (77).mp3" file="sex_pistols___inici_god_save_the_queen__77_.mp3" />
+  <media name="Sopa de Cabra - L'Empordà.mp3" file="sopa_de_cabra___l_emporda.mp3" />
+  <media name="Stevie Wonder - You Are The Sunshine Of My Life (73).mp3" file="stevie_wonder___you_are_the_sunshine_of_my_life__73_.mp3" />
+  <media name="Sugar Hill Gang - Rappers Delight.mp3" file="sugar_hill_gang___rappers_delight.mp3" />
+  <media name="Supertramp - The logical song (79).mp3" file="supertramp___the_logical_song__79_.mp3" />
+  <media name="Tina Turner - What's love got to do whith it (84).mp3" file="tina_turner___what_s_love_got_to_do_whith_it__84_.mp3" />
+  <media name="U2 - With Or Without You (87).mp3" file="u2___with_or_without_you__87_.mp3" />
+  <media name="Who, The - My Generation (65).mp3" file="who__the___my_generation__65_.mp3" />
+ </mediaBag>
+</JClicProject>
+

@@ -1,0 +1,1162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="inicio" version="0.1.3">
+ <settings>
+  <title>Las partes de la computadora</title>
+  <revision description="created" date="1/2/05" />
+  <author name="María Eugenia Núñez - Ciudad de Buenos Aires, Argentina" mail="eugenunez@yahoo.com.ar" organization="&quot;Proyecto ArgenClic&quot;" />
+  <organization name="Esc. 20 D.E. 2 &quot;Rosario Vera Peñaloza&quot;" city="Ciudad de Buenos Aires" country="Argentina" />
+  <language>es</language>
+  <description>
+   <p>Paquete desarrollado con el objetivo de introducir a los niños en el uso del vocabulario específico. Nociones de funciones básicas de las partes de una computadora.</p>
+  </description>
+  <descriptors area="Informática" level="EGB1" />
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Paquete desarrollado con el objetivo de introducir a los niños en el uso del vocabulario específico. Nociones de funciones básicas de las partes de una computadora.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="inicio.pac" name="argen.ass" delay="4" navButtons="none">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="argen1.ass" delay="4" navButtons="none">
+   <jump tag="compu.pac" id="forward" />
+  </item>
+  <item id="compu.pac" name="01.puz">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="01.ass" />
+  <item name="02.ass" />
+  <item name="03.ass" />
+  <item name="04.ass" />
+  <item name="05.ass" />
+  <item name="06.ass" />
+  <item name="07.ass" />
+  <item name="08.ass" />
+  <item name="09.ass" />
+  <item name="10.ass" />
+  <item name="17.ass" />
+  <item name="11.ass" />
+  <item name="12.ass" />
+  <item name="13.ass" />
+  <item name="14.ass" />
+  <item name="16.ass" />
+  <item name="15.ass" />
+  <item name="02.puz" />
+  <item name="fin.ass">
+   <jump action="STOP" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.Explore" name="01.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>Las partes de la computadora. Hacé CLIC en cada imagen</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFDFFF">
+     <gradient source="0xFFCCFF" dest="0xFFFFFF" angle="108" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="150.0" cellHeight="150.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="4" image="ESCANER.PNG" />
+    <cell id="5" image="GABINETE.PNG" />
+    <cell id="0" image="IMPRE.PNG" />
+    <cell id="3" image="MOUSE.PNG" />
+    <cell id="2" image="MONITOR.PNG" />
+    <cell id="1" image="PARLA.PNG" />
+    <cell id="6" image="DISQUERA.PNG" />
+    <cell id="7" image="LECTO.PNG" />
+    <cell id="8" image="TECLADO.png" />
+   </cells>
+   <cells rows="3" cols="3" cellWidth="150.0" cellHeight="150.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="20" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>impresora</p>
+    </cell>
+    <cell>
+     <p>parlantes</p>
+    </cell>
+    <cell>
+     <p>monitor</p>
+    </cell>
+    <cell>
+     <p>mouse</p>
+    </cell>
+    <cell>
+     <p>escaner</p>
+    </cell>
+    <cell>
+     <p>gabinete</p>
+    </cell>
+    <cell>
+     <p>disquetera</p>
+    </cell>
+    <cell>
+     <p>lectora</p>
+    </cell>
+    <cell>
+     <p>teclado</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="01.puz" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>Armá el rompecabezas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>¡Bienvenido al gabinete de Informática!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFDFFF">
+     <gradient source="0xFFCCFF" dest="0xFFFFFF" angle="108" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="FOTO.PNG">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="02.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>Relacioná</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFDFFF">
+     <gradient source="0xFFCCFF" dest="0xFFFFFF" angle="108" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="150.0" cellHeight="150.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="20" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="4" image="escaner.gif" />
+    <cell id="5" image="gabinete.gif" />
+    <cell id="0" image="impre.gif" />
+    <cell id="3" image="mouse.gif" />
+    <cell id="2" image="monitor.gif" />
+    <cell id="1" image="parla.gif" />
+    <cell id="6" image="DISQUERA.PNG" />
+    <cell id="7" image="LECTO.PNG" />
+    <cell id="8" image="TECLADO.png" />
+   </cells>
+   <cells rows="3" cols="3" cellWidth="150.0" cellHeight="150.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="20" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>impresora</p>
+    </cell>
+    <cell>
+     <p>parlantes</p>
+    </cell>
+    <cell>
+     <p>monitor</p>
+    </cell>
+    <cell>
+     <p>mouse</p>
+    </cell>
+    <cell>
+     <p>escaner</p>
+    </cell>
+    <cell>
+     <p>gabinete</p>
+    </cell>
+    <cell>
+     <p>disquetera</p>
+    </cell>
+    <cell>
+     <p>lectora</p>
+    </cell>
+    <cell>
+     <p>teclado</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="02.puz" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>Ya llegamos al final</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>Hasta la próxima!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFDFFF">
+     <gradient source="0xFFCCFF" dest="0xFFFFFF" angle="108" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="2" border="false" image="AVESTRUZ.PNG">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.Identify" name="03.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>¿Cuál es el escaner?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>¡Bárbaro!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFDFFF">
+     <gradient source="0xFFCCFF" dest="0xFFFFFF" angle="108" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="150.0" cellHeight="150.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="1" image="ESCANER.PNG" />
+    <cell id="0" image="GABINETE.PNG" />
+    <cell id="0" image="IMPRE.PNG" />
+    <cell id="0" image="MOUSE.PNG" />
+    <cell id="0" image="MONITOR.PNG" />
+    <cell id="0" image="PARLA.PNG" />
+    <cell id="0" image="DISQUERA.PNG" />
+    <cell id="0" image="LECTO.PNG" />
+    <cell id="0" image="TECLADO.png" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="04.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>¿Cuál es el gabinete?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>¡Buenísimo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFDFFF">
+     <gradient source="0xFFCCFF" dest="0xFFFFFF" angle="108" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="150.0" cellHeight="150.0" border="false" id="primary">
+    <style>
+     <color foreground="0x008000" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="0" image="ESCANER.PNG" />
+    <cell id="1" image="GABINETE.PNG" />
+    <cell id="0" image="IMPRE.PNG" />
+    <cell id="0" image="MOUSE.PNG" />
+    <cell id="0" image="MONITOR.PNG" />
+    <cell id="0" image="PARLA.PNG" />
+    <cell id="0" image="DISQUERA.PNG" />
+    <cell id="0" image="LECTO.PNG" />
+    <cell id="0" image="TECLADO.png" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="05.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>¿Cuál es la impresora?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>¡Genial!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFDFFF">
+     <gradient source="0xFFCCFF" dest="0xFFFFFF" angle="108" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="150.0" cellHeight="150.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="0" image="ESCANER.PNG" />
+    <cell id="0" image="GABINETE.PNG" />
+    <cell id="1" image="IMPRE.PNG" />
+    <cell id="0" image="MOUSE.PNG" />
+    <cell id="0" image="MONITOR.PNG" />
+    <cell id="0" image="PARLA.PNG" />
+    <cell id="0" image="DISQUERA.PNG" />
+    <cell id="0" image="LECTO.PNG" />
+    <cell id="0" image="TECLADO.png" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="06.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>¿Cuál es el mouse?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>¡Bárbaro!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFDFFF">
+     <gradient source="0xFFCCFF" dest="0xFFFFFF" angle="108" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="150.0" cellHeight="150.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="0" image="ESCANER.PNG" />
+    <cell id="0" image="GABINETE.PNG" />
+    <cell id="0" image="IMPRE.PNG" />
+    <cell id="1" image="MOUSE.PNG" />
+    <cell id="0" image="MONITOR.PNG" />
+    <cell id="0" image="PARLA.PNG" />
+    <cell id="0" image="DISQUERA.PNG" />
+    <cell id="0" image="LECTO.PNG" />
+    <cell id="0" image="TECLADO.png" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="07.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>¿Cuál es el monitor?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>¡Buenísimo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFDFFF">
+     <gradient source="0xFFCCFF" dest="0xFFFFFF" angle="108" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="150.0" cellHeight="150.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="0" image="ESCANER.PNG" />
+    <cell id="0" image="GABINETE.PNG" />
+    <cell id="0" image="IMPRE.PNG" />
+    <cell id="0" image="MOUSE.PNG" />
+    <cell id="1" image="MONITOR.PNG" />
+    <cell id="0" image="PARLA.PNG" />
+    <cell id="0" image="DISQUERA.PNG" />
+    <cell id="0" image="LECTO.PNG" />
+    <cell id="0" image="TECLADO.png" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="08.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>¿Cuáles son los parlantes?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFDFFF">
+     <gradient source="0xFFCCFF" dest="0xFFFFFF" angle="108" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="150.0" cellHeight="150.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="0" image="ESCANER.PNG" />
+    <cell id="0" image="GABINETE.PNG" />
+    <cell id="0" image="IMPRE.PNG" />
+    <cell id="0" image="MOUSE.PNG" />
+    <cell id="0" image="MONITOR.PNG" />
+    <cell id="1" image="PARLA.PNG" />
+    <cell id="0" image="DISQUERA.PNG" />
+    <cell id="0" image="LECTO.PNG" />
+    <cell id="0" image="TECLADO.png" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="09.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>¿Cuál es la disquetera?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>¡Bárbaro!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFDFFF">
+     <gradient source="0xFFCCFF" dest="0xFFFFFF" angle="108" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="150.0" cellHeight="150.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="0" image="ESCANER.PNG" />
+    <cell id="0" image="GABINETE.PNG" />
+    <cell id="0" image="IMPRE.PNG" />
+    <cell id="0" image="MOUSE.PNG" />
+    <cell id="0" image="MONITOR.PNG" />
+    <cell id="0" image="PARLA.PNG" />
+    <cell id="1" image="DISQUERA.PNG" />
+    <cell id="0" image="LECTO.PNG" />
+    <cell id="0" image="TECLADO.png" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="10.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>¿Cuál es el teclado?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>¡Muy Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFDFFF">
+     <gradient source="0xFFCCFF" dest="0xFFFFFF" angle="108" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="150.0" cellHeight="150.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="0" image="ESCANER.PNG" />
+    <cell id="0" image="GABINETE.PNG" />
+    <cell id="0" image="IMPRE.PNG" />
+    <cell id="0" image="MOUSE.PNG" />
+    <cell id="0" image="MONITOR.PNG" />
+    <cell id="0" image="PARLA.PNG" />
+    <cell id="0" image="DISQUERA.PNG" />
+    <cell id="0" image="LECTO.PNG" />
+    <cell id="1" image="TECLADO.png" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Explore" name="11.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>Hacé CLIC en las imágenes y aprenderás para qué sirven</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFDFFF">
+     <gradient source="0xFFCCFF" dest="0xFFFFFF" angle="108" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="200.0" cellHeight="200.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="0" image="ESCANER.PNG" />
+    <cell id="1" image="GABINETE.PNG" />
+    <cell id="2" image="IMPRE.PNG" />
+   </cells>
+   <cells rows="3" cols="4" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="20" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>Sirve para digitalizar imágenes</p>
+    </cell>
+    <cell>
+     <p>Protege las partes más importantes de la computadora</p>
+    </cell>
+    <cell>
+     <p>Imprime lo que vemos en pantalla en un papel</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="12.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>Hacé CLIC en las imágenes y aprenderás para qué sirven</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFDFFF">
+     <gradient source="0xFFCCFF" dest="0xFFFFFF" angle="108" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="200.0" cellHeight="200.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="0" image="MOUSE.PNG" />
+    <cell id="1" image="MONITOR.PNG" />
+    <cell id="2" image="PARLA.PNG" />
+   </cells>
+   <cells rows="3" cols="4" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="20" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>Para algunas cosas, sustituye al teclado</p>
+    </cell>
+    <cell>
+     <p>Nos permite ver lo que estamos haciendo</p>
+    </cell>
+    <cell>
+     <p>Con ellos escuchamos los sonidos</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="13.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>Hacé CLIC en las imágenes y aprenderás para qué sirven</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFDFFF">
+     <gradient source="0xFFCCFF" dest="0xFFFFFF" angle="108" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="200.0" cellHeight="200.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="0" image="DISQUERA.PNG" />
+    <cell id="1" image="LECTO.PNG" />
+    <cell id="2" image="TECLADO.png" />
+   </cells>
+   <cells rows="3" cols="4" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="20" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>Lee la información grabada en disquetes</p>
+    </cell>
+    <cell>
+     <p>Lee la información grabada en CD</p>
+    </cell>
+    <cell>
+     <p>Sirve para ingresar información a la computadora</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="14.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>Relacioná cada función con la imagen que corresponda</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>¡Brillante!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFDFFF">
+     <gradient source="0xFFCCFF" dest="0xFFFFFF" angle="108" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="440.0" cellHeight="500.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="0" image="ESCANER.PNG" />
+    <cell id="1" image="GABINETE.PNG" />
+    <cell id="2" image="IMPRE.PNG" />
+    <cell id="3" image="MOUSE.PNG" />
+    <cell id="4" image="MONITOR.PNG" />
+    <cell id="5" image="PARLA.PNG" />
+    <cell id="6" image="DISQUERA.PNG" />
+    <cell id="7" image="LECTO.PNG" />
+    <cell id="8" image="TECLADO.png" />
+   </cells>
+   <cells rows="9" cols="1" cellWidth="700.0" cellHeight="170.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="20" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="9" />
+    <cell>
+     <p>Sirve para digitalizar imágenes</p>
+    </cell>
+    <cell>
+     <p>Protege las partes más importantes de la computadora</p>
+    </cell>
+    <cell>
+     <p>Imprime lo que vemos en pantalla en un papel</p>
+    </cell>
+    <cell>
+     <p>Para algunas cosas, sustituye al teclado</p>
+    </cell>
+    <cell>
+     <p>Nos permite ver lo que estamos haciendo</p>
+    </cell>
+    <cell>
+     <p>Con ellos escuchamos los sonidos</p>
+    </cell>
+    <cell>
+     <p>Lee la información grabada en disquetes</p>
+    </cell>
+    <cell>
+     <p>Lee la información grabada en CD</p>
+    </cell>
+    <cell>
+     <p>Sirve para ingresar información a la computadora</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@panels.Identify" name="15.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>Hacé CLIC sobre las cosas que si podés hacer en la sala de Informática</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" />
+     </style>
+     <p>Lo que quedó es lo que no debemos hacer. No lo olvides.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFDFFF">
+     <gradient source="0xFFCCFF" dest="0xFFFFFF" angle="108" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="2" cellWidth="360.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="20" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell id="0">
+     <p>Tomar gaseosas.</p>
+    </cell>
+    <cell id="0">
+     <p>Correr de un lado a otro.</p>
+    </cell>
+    <cell id="0">
+     <p>Comer golosinas.</p>
+    </cell>
+    <cell id="0">
+     <p>No escuchar las consignas.</p>
+    </cell>
+    <cell id="1">
+     <p>Ser buenos compañeros.</p>
+    </cell>
+    <cell id="1">
+     <p>Cuidar las máquinas.</p>
+    </cell>
+    <cell id="1">
+     <p>Trabajar de manera organizada.</p>
+    </cell>
+    <cell id="1">
+     <p>Pedir información.</p>
+    </cell>
+    <cell id="1">
+     <p>Ayudar a quienes lo necesitan.</p>
+    </cell>
+    <cell id="0">
+     <p>Encender las computadoras.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="16.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFDFFF">
+     <gradient source="0xFFCCFF" dest="0xFFFFFF" angle="108" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="700.0" cellHeight="500.0" border="false">
+    <style>
+     <font family="Arial" size="20" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>La sala de Informática es el un lugar muy delicado y todos los aparatos que encontrarás aquí son sumamente costosos. Es nuestro deber cuidarlos. Veamos si te acordás qué cosas se pueden hacer aquí y cuáles no.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.WrittenAnswer" name="17.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Escribí el nombre que corresponda</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xA800A8" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>¡Excelente!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFDFFF">
+     <gradient source="0xFFCCFF" dest="0xFFFFFF" angle="108" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="200.0" cellHeight="200.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="20" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell image="ESCANER.PNG" />
+    <cell image="GABINETE.PNG" />
+    <cell image="IMPRE.PNG" />
+    <cell image="MOUSE.PNG" />
+    <cell image="MONITOR.PNG" />
+    <cell image="PARLA.PNG" />
+    <cell image="DISQUERA.PNG" />
+    <cell image="LECTO.PNG" />
+    <cell image="TECLADO.png" />
+   </cells>
+   <cells rows="3" cols="3" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="20" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>escaner</p>
+    </cell>
+    <cell>
+     <p>gabinete</p>
+    </cell>
+    <cell>
+     <p>impresora</p>
+    </cell>
+    <cell>
+     <p>mouse</p>
+    </cell>
+    <cell>
+     <p>monitor</p>
+    </cell>
+    <cell>
+     <p>parlantes</p>
+    </cell>
+    <cell>
+     <p>disquetera</p>
+    </cell>
+    <cell>
+     <p>lectora</p>
+    </cell>
+    <cell>
+     <p>teclado</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="argen.ass" code="">
+   <description />
+   <messages>
+    <cell image="blanco.gif" type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="redoble.wav" />
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="ARGEN.PNG">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="argen1.ass" code="">
+   <description />
+   <messages>
+    <cell image="blanco.gif" type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="redoble.wav" />
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="700.0" cellHeight="160.0" border="false">
+    <style>
+     <font family="Arial" size="23" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="TAPA.PNG" />
+    <cell>
+     <p>Autora: María Eugenia Núñez eugenunez@arnet.com.ar</p>
+    </cell>
+    <cell image="ARGEN2.PNG" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="fin.ass" code="">
+   <description />
+   <messages>
+    <cell image="blanco.gif" type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="redoble.wav" />
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="700.0" cellHeight="160.0" border="false">
+    <style>
+     <font family="Arial" size="23" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="CONTRA.PNG" />
+    <cell>
+     <p>Autora: María Eugenia Núñez eugenunez@yahoo.com.ar</p>
+    </cell>
+    <cell image="ARGEN2.PNG" />
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="blanco.gif" file="blanco.gif" animated="false" />
+  <media name="escaner.gif" file="escaner.gif" animated="false" />
+  <media name="gabinete.gif" file="gabinete.gif" animated="false" />
+  <media name="impre.gif" file="impre.gif" animated="false" />
+  <media name="monitor.gif" file="monitor.gif" animated="false" />
+  <media name="mouse.gif" file="mouse.gif" animated="false" />
+  <media name="parla.gif" file="parla.gif" animated="false" />
+  <media name="ARGEN.PNG" file="argen.png" />
+  <media name="ARGEN2.PNG" file="argen2.png" />
+  <media name="AVESTRUZ.PNG" file="avestruz.png" />
+  <media name="CONTRA.PNG" file="contra.png" />
+  <media name="DISQUERA.PNG" file="disquera.png" />
+  <media name="ESCANER.PNG" file="escaner.png" />
+  <media name="FOTO.PNG" file="foto.png" />
+  <media name="GABINETE.PNG" file="gabinete.png" />
+  <media name="IMPRE.PNG" file="impre.png" />
+  <media name="LECTO.PNG" file="lecto.png" />
+  <media name="MONITOR.PNG" file="monitor.png" />
+  <media name="MOUSE.PNG" file="mouse.png" />
+  <media name="PARLA.PNG" file="parla.png" />
+  <media name="TAPA.PNG" file="tapa.png" />
+  <media name="TECLADO.png" file="teclado.png" />
+  <media name="redoble.wav" file="redoble.wav" />
+ </mediaBag>
+</JClicProject>
+

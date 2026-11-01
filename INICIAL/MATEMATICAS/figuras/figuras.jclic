@@ -1,0 +1,1899 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="figuras" version="0.1.3">
+ <settings>
+  <title>Figuras</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="1/17/06" />
+  <revision description="Conversión de Clic3 a JClic" date="1/17/06">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="César Bardillo Ramos" mail="cbardillo2@hotmail.com" />
+  <organization name="CP María Díaz de Muñoz" mail="cp.maria.diaz.de.munoz@centros3.pntic.mec.es" url="http://centros3.pntic.mec.es/cp.maria.diaz.de.munoz" city="Béjar - Salamanca" state="Castilla y León" />
+  <language>español</language>
+  <description>
+   <p>Actividades de reconocimiento de figuras básicas (círculo, rectángulo, cuadrado y triángulo) asociando dicho reconocimiento a los colores básicos (rojo, amarillo, verde y azul).</p>
+  </description>
+  <descriptors area="Matemáticas" level="Infantil (3-6), Primaria (6-12)">geometría</descriptors>
+ </settings>
+ <sequence>
+  <item id="start" name="Portada">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="colores" />
+  <item name="Señala todas las figuras de color rojo" delay="4" />
+  <item name="puzzle tomate" delay="4" />
+  <item name="Señala todas las figuras azules" delay="4" />
+  <item name="puzzle azulejo" delay="4" />
+  <item name="Señala todas las figuras verdes" delay="4" />
+  <item name="puzzle pera" delay="4" />
+  <item name="Señala todas las figuras amarillas" delay="4" />
+  <item name="puzzle plátano" delay="4" />
+  <item name="triángulo.cuadrado" />
+  <item name="reconoce el cuadrado" delay="4" />
+  <item name="reconoce el triángulo" delay="4" />
+  <item name="puzzle cartabón" delay="4" />
+  <item name="reconoce el círculo" delay="4" />
+  <item name="puzzle prohibido" delay="4" />
+  <item name="reconoce el rectángulo" delay="4" />
+  <item name="Asocia cada figura a su sonido" delay="4" />
+  <item name="Memoriza y asocia_2" delay="4" />
+  <item name="Identifica triángulos" delay="4" />
+  <item name="Identifica cuadrados" delay="4" />
+  <item name="Identifica rectángulos" delay="4" />
+  <item name="Identifica círculos" delay="4" />
+  <item name="Memoriza y asocia" delay="4" />
+  <item name="Memoriza y asocia cua" delay="4" />
+  <item name="Señala los cuadrados rojos" delay="4" />
+  <item name="Señala los cuadrados azules" delay="4" />
+  <item name="Señala los cuadrados verdes" delay="4" />
+  <item name="Señala los cuadrados amarillos" delay="4" />
+  <item name="Memoriza y asocia tri" delay="4" />
+  <item name="Señala los triángulos rojos" delay="4" />
+  <item name="Señala los triángulos azules" delay="4" />
+  <item name="Señala los triángulos verdes" delay="4" />
+  <item name="Señala los triángulos amarillos" delay="4" />
+  <item name="puzzle triángulo señal" delay="4" />
+  <item name="Memoriza y asocia rec" delay="4" />
+  <item name="Señala los rectángulos rojos" delay="4" />
+  <item name="Señala los rectángulos azules" delay="4" />
+  <item name="Señala los rectángulos verdes" delay="4" />
+  <item name="Señala los rectángulos amarillos" delay="4" />
+  <item name="Memoriza y asocia cir" delay="4" />
+  <item name="Señala los círculos rojos" delay="4" />
+  <item name="Señala los círculos azules" delay="4" />
+  <item name="Señala los círculos verdes" delay="4" />
+  <item name="Señala los círculos amarillos" delay="4" />
+  <item name="puzzle rueda" delay="4" />
+  <item name="Despedida">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.SimpleAssociation" name="Asocia cada figura a su sonido">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="pulsaaltavoz.WAV" />
+     <p>Busca la figura que se te indica</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x33FF00" dest="0xFFFFFF" angle="43" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x99FF99" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="circulo.WAV" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="recta.WAV" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="triangulo2.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cuadrado2.WAV" />
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="107.0" cellHeight="107.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell image="circulorojo" />
+    <cell image="rectaazul" />
+    <cell image="triaamarillo" />
+    <cell image="cuadradoverde" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="Despedida" code="">
+   <description />
+   <messages>
+    <cell image="cara alegre.GIF" type="initial">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="0" report="false">
+    <container bgColor="0xFFFFFF">
+     <gradient source="0x0066FF" dest="0x99CCFF" angle="188" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x00C0C0C0" transparent="true" border="false">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="0" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="800.0" cellHeight="300.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell image="Entrada.jpg">
+     <style shadow="true" transparent="true" margin="7" borderStroke="0.0" markerStroke="2.7">
+      <font family="Arial Black" size="26" />
+      <color foreground="0xFF9900" shadow="0xFFFFFF" border="0x00000000" />
+     </style>
+     <p>HAS TERMINADO TODO, ERES UN GENIO!!!!!</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.Identify" name="Identifica cuadrados">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="señalacuadrados.WAV" />
+     <p>Señala los cuadrados</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x3333FF" dest="0xFFFFFF" angle="182" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000FF" border="true" />
+   </settings>
+   <cells rows="4" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="1" image="cuadradoamarillo" />
+    <cell id="1" image="cuadradoazul" />
+    <cell id="0" image="trianguloverde" />
+    <cell id="0" image="círculo amarillo.JPG" />
+    <cell id="1" image="cuadradorojo" />
+    <cell id="1" image="cuadradoverde" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="0" image="rectarojo" />
+    <cell id="0" image="círculo azul.JPG" />
+    <cell id="0" image="trianrojo" />
+    <cell id="0" image="circuloverde" />
+    <cell id="0" image="circulorojo" />
+    <cell id="0" image="rectaverde" />
+    <cell id="0" image="rectaazul" />
+    <cell id="0" image="trianazul" />
+    <cell id="0" image="triaamarillo" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="Identifica círculos">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="señalacírculos.WAV" />
+     <p>Señala los círculos</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x3333FF" dest="0xFFFFFF" angle="182" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000FF" border="true" />
+   </settings>
+   <cells rows="4" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="0" image="cuadradoazul" />
+    <cell id="0" image="trianguloverde" />
+    <cell id="1" image="círculo amarillo.JPG" />
+    <cell id="0" image="cuadradorojo" />
+    <cell id="0" image="cuadradoverde" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="0" image="rectarojo" />
+    <cell id="1" image="círculo azul.JPG" />
+    <cell id="0" image="trianrojo" />
+    <cell id="1" image="circuloverde" />
+    <cell id="1" image="circulorojo" />
+    <cell id="0" image="rectaverde" />
+    <cell id="0" image="rectaazul" />
+    <cell id="0" image="trianazul" />
+    <cell id="0" image="triaamarillo" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="Identifica rectángulos">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="señalarectangulos.WAV" />
+     <p>Señala los rectángulos</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x3333FF" dest="0xFFFFFF" angle="182" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000FF" border="true" />
+   </settings>
+   <cells rows="4" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="0" image="cuadradoazul" />
+    <cell id="0" image="trianguloverde" />
+    <cell id="0" image="círculo amarillo.JPG" />
+    <cell id="0" image="cuadradorojo" />
+    <cell id="0" image="cuadradoverde" />
+    <cell id="1" image="rectamarillo" />
+    <cell id="1" image="rectarojo" />
+    <cell id="0" image="círculo azul.JPG" />
+    <cell id="0" image="trianrojo" />
+    <cell id="0" image="circuloverde" />
+    <cell id="0" image="circulorojo" />
+    <cell id="1" image="rectaverde" />
+    <cell id="1" image="rectaazul" />
+    <cell id="0" image="trianazul" />
+    <cell id="0" image="triaamarillo" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="Identifica triángulos">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="señalatriangulos.WAV" />
+     <p>Señala los triángulos</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x3333FF" dest="0xFFFFFF" angle="182" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000FF" border="true" />
+   </settings>
+   <cells rows="4" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="0" image="cuadradoazul" />
+    <cell id="1" image="trianguloverde" />
+    <cell id="0" image="círculo amarillo.JPG" />
+    <cell id="0" image="cuadradorojo" />
+    <cell id="0" image="cuadradoverde" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="0" image="rectarojo" />
+    <cell id="0" image="círculo azul.JPG" />
+    <cell id="1" image="trianrojo" />
+    <cell id="0" image="circuloverde" />
+    <cell id="0" image="circulorojo" />
+    <cell id="0" image="rectaverde" />
+    <cell id="0" image="rectaazul" />
+    <cell id="1" image="trianazul" />
+    <cell id="1" image="triaamarillo" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="Memoriza y asocia">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="figurasiguales.WAV" />
+     <p>Busca las figuras iguales</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x999900" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x999900" border="true">
+     <gradient source="0x999900" dest="0xFFFFFF" angle="285" />
+    </window>
+   </settings>
+   <cells rows="1" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="rectaverde" />
+    <cell image="círculo amarillo.JPG" />
+    <cell image="trianazul" />
+    <cell image="cuadradorojo" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="Memoriza y asocia cir">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="circuigucolor" />
+     <p>Busca los círculos de igual color</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x999900" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x999900" border="true">
+     <gradient source="0x999900" dest="0xFFFFFF" angle="285" />
+    </window>
+   </settings>
+   <cells rows="1" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="circuloverde" />
+    <cell image="círculo amarillo.JPG" />
+    <cell image="círculo azul.JPG" />
+    <cell image="circulorojo" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="Memoriza y asocia cua">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="cuadrados del mismo color.WAV" />
+     <p>Busca los cuadrados de igual color</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x999900" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x999900" border="true">
+     <gradient source="0x999900" dest="0xFFFFFF" angle="285" />
+    </window>
+   </settings>
+   <cells rows="1" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="cuadradoverde" />
+    <cell image="cuadradorojo" />
+    <cell image="cuadradoazul" />
+    <cell image="cuadradoamarillo" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="Memoriza y asocia rec">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="rectmismocolor.WAV" />
+     <p>Busca los rectángulos de igual color</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x999900" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x999900" border="true">
+     <gradient source="0x999900" dest="0xFFFFFF" angle="285" />
+    </window>
+   </settings>
+   <cells rows="1" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="rectamarillo" />
+    <cell image="rectarojo" />
+    <cell image="rectaazul" />
+    <cell image="rectaverde" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="Memoriza y asocia tri">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="trianmismocolor.WAV" />
+     <p>Busca los triángulos de igual color</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x999900" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x999900" border="true">
+     <gradient source="0x999900" dest="0xFFFFFF" angle="285" />
+    </window>
+   </settings>
+   <cells rows="1" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="triaamarillo" />
+    <cell image="trianazul" />
+    <cell image="trianrojo" />
+    <cell image="trianguloverde" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="Memoriza y asocia_2">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="figurasiguales.WAV" />
+     <p>Busca las figuras iguales</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x999900" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x999900" border="true">
+     <gradient source="0x999900" dest="0xFFFFFF" angle="285" />
+    </window>
+   </settings>
+   <cells rows="1" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="rectarojo" />
+    <cell image="círculo azul.JPG" />
+    <cell image="trianguloverde" />
+    <cell image="cuadradoamarillo" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="Portada" code="">
+   <description />
+   <messages />
+   <settings margin="0" report="false">
+    <container bgColor="0xFFFFFF">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="188" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x00C0C0C0" transparent="true" border="false">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="0" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="800.0" cellHeight="300.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell image="Entrada.jpg">
+     <style shadow="true" transparent="true" margin="7" borderStroke="0.0" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0x0000CC" shadow="0xFFFFFF" border="0x00000000" />
+     </style>
+     <p>CPC MARÍA DÍAZ DE MUÑOZ, BÉJAR-SALAMANCA</p>
+     <p>Actividades de reconocimiento de figuras y colores básicos.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.Identify" name="Señala los cuadrados amarillos">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="cuadrados de color amarillo.WAV" />
+     <p>Señala los cuadrados amarillos</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="285" />
+    </window>
+   </settings>
+   <cells rows="4" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="1" image="cuadradoamarillo" />
+    <cell id="0" image="cuadradoazul" />
+    <cell id="1" image="cuadradoamarillo" />
+    <cell id="0" image="círculo amarillo.JPG" />
+    <cell id="0" image="cuadradorojo" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="0" image="rectaverde" />
+    <cell id="0" image="cuadradoverde" />
+    <cell id="0" image="circuloverde" />
+    <cell id="0" image="cuadradorojo" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="0" image="triaamarillo" />
+    <cell id="1" image="cuadradoamarillo" />
+    <cell id="0" image="trianazul" />
+    <cell id="0" image="trianazul" />
+    <cell id="1" image="cuadradoamarillo" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="Señala los cuadrados azules">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="cuadrados azules.WAV" />
+     <p>Señala los cuadrados azules</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="285" />
+    </window>
+   </settings>
+   <cells rows="4" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="1" image="cuadradoazul" />
+    <cell id="0" image="cuadradorojo" />
+    <cell id="0" image="circulorojo" />
+    <cell id="0" image="cuadradorojo" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="0" image="rectaazul" />
+    <cell id="1" image="cuadradoazul" />
+    <cell id="0" image="circuloverde" />
+    <cell id="1" image="cuadradoazul" />
+    <cell id="0" image="rectarojo" />
+    <cell id="0" image="triaamarillo" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="0" image="trianazul" />
+    <cell id="0" image="trianazul" />
+    <cell id="1" image="cuadradoazul" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="Señala los cuadrados rojos">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="cuadrados rojos.WAV" />
+     <p>Señala los cuadrados rojos</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="285" />
+    </window>
+   </settings>
+   <cells rows="4" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="0" image="cuadradoazul" />
+    <cell id="1" image="cuadradorojo" />
+    <cell id="0" image="circulorojo" />
+    <cell id="1" image="cuadradorojo" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="0" image="rectaverde" />
+    <cell id="0" image="cuadradoverde" />
+    <cell id="0" image="circuloverde" />
+    <cell id="1" image="cuadradorojo" />
+    <cell id="0" image="rectarojo" />
+    <cell id="0" image="triaamarillo" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="0" image="trianazul" />
+    <cell id="0" image="trianazul" />
+    <cell id="1" image="cuadradorojo" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="Señala los cuadrados verdes">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="cuadrados verde.WAV" />
+     <p>Señala los cuadrados verdes</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="285" />
+    </window>
+   </settings>
+   <cells rows="4" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="0" image="cuadradoazul" />
+    <cell id="1" image="cuadradoverde" />
+    <cell id="0" image="circulorojo" />
+    <cell id="1" image="cuadradoverde" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="0" image="rectaverde" />
+    <cell id="0" image="cuadradorojo" />
+    <cell id="0" image="circuloverde" />
+    <cell id="0" image="cuadradorojo" />
+    <cell id="0" image="rectarojo" />
+    <cell id="0" image="triaamarillo" />
+    <cell id="1" image="cuadradoverde" />
+    <cell id="0" image="trianazul" />
+    <cell id="0" image="trianazul" />
+    <cell id="0" image="cuadradorojo" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="Señala los círculos amarillos">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="circulosamarillo.WAV" />
+     <p>Señala los círculos amarillos</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="285" />
+    </window>
+   </settings>
+   <cells rows="4" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="1" image="círculo amarillo.JPG" />
+    <cell id="1" image="círculo amarillo.JPG" />
+    <cell id="0" image="trianrojo" />
+    <cell id="0" image="círculo azul.JPG" />
+    <cell id="0" image="circulorojo" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="0" image="circulorojo" />
+    <cell id="1" image="círculo amarillo.JPG" />
+    <cell id="0" image="circuloverde" />
+    <cell id="0" image="cuadradorojo" />
+    <cell id="1" image="círculo amarillo.JPG" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="0" image="trianazul" />
+    <cell id="0" image="trianrojo" />
+    <cell id="0" image="cuadradorojo" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="Señala los círculos azules">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="circuazul.WAV" />
+     <p>Señala los círculos azules</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="285" />
+    </window>
+   </settings>
+   <cells rows="4" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="0" image="círculo amarillo.JPG" />
+    <cell id="0" image="cuadradoazul" />
+    <cell id="0" image="trianrojo" />
+    <cell id="1" image="círculo azul.JPG" />
+    <cell id="0" image="circulorojo" />
+    <cell id="1" image="círculo azul.JPG" />
+    <cell id="0" image="circulorojo" />
+    <cell id="0" image="circulorojo" />
+    <cell id="0" image="circuloverde" />
+    <cell id="0" image="cuadradorojo" />
+    <cell id="1" image="círculo azul.JPG" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="0" image="trianazul" />
+    <cell id="0" image="trianrojo" />
+    <cell id="0" image="cuadradorojo" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="Señala los círculos rojos">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="circurojos.WAV" />
+     <p>Señala los círculos rojos</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="285" />
+    </window>
+   </settings>
+   <cells rows="4" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="0" image="círculo amarillo.JPG" />
+    <cell id="0" image="cuadradoazul" />
+    <cell id="0" image="trianrojo" />
+    <cell id="0" image="círculo azul.JPG" />
+    <cell id="1" image="circulorojo" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="1" image="circulorojo" />
+    <cell id="1" image="circulorojo" />
+    <cell id="0" image="circuloverde" />
+    <cell id="0" image="cuadradorojo" />
+    <cell id="0" image="rectaazul" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="0" image="trianazul" />
+    <cell id="0" image="trianrojo" />
+    <cell id="0" image="cuadradorojo" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="Señala los círculos verdes">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="circuverde.WAV" />
+     <p>Señala los círculos verdes</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="285" />
+    </window>
+   </settings>
+   <cells rows="4" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="0" image="círculo amarillo.JPG" />
+    <cell id="0" image="cuadradoazul" />
+    <cell id="0" image="trianrojo" />
+    <cell id="0" image="círculo azul.JPG" />
+    <cell id="0" image="circulorojo" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="1" image="circuloverde" />
+    <cell id="0" image="circulorojo" />
+    <cell id="1" image="circuloverde" />
+    <cell id="0" image="cuadradorojo" />
+    <cell id="1" image="circuloverde" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="0" image="trianguloverde" />
+    <cell id="0" image="trianrojo" />
+    <cell id="0" image="cuadradorojo" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="Señala los rectángulos amarillos">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="rectaamarillos.WAV" />
+     <p>Señala los rectángulos amarillos</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="285" />
+    </window>
+   </settings>
+   <cells rows="4" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="0" image="cuadradoazul" />
+    <cell id="1" image="rectamarillo" />
+    <cell id="0" image="circuloverde" />
+    <cell id="0" image="trianrojo" />
+    <cell id="1" image="rectamarillo" />
+    <cell id="1" image="rectamarillo" />
+    <cell id="1" image="rectamarillo" />
+    <cell id="0" image="circuloverde" />
+    <cell id="0" image="cuadradorojo" />
+    <cell id="0" image="rectarojo" />
+    <cell id="0" image="triaamarillo" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="0" image="trianazul" />
+    <cell id="0" image="triaamarillo" />
+    <cell id="0" image="cuadradorojo" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="Señala los rectángulos azules">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="rectaazul.WAV" />
+     <p>Señala los rectángulos azules</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="285" />
+    </window>
+   </settings>
+   <cells rows="4" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="0" image="cuadradoazul" />
+    <cell id="0" image="trianrojo" />
+    <cell id="0" image="círculo azul.JPG" />
+    <cell id="1" image="rectaazul" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="1" image="rectaazul" />
+    <cell id="0" image="trianrojo" />
+    <cell id="0" image="circuloverde" />
+    <cell id="0" image="cuadradorojo" />
+    <cell id="1" image="rectaazul" />
+    <cell id="1" image="rectaazul" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="0" image="trianazul" />
+    <cell id="0" image="trianazul" />
+    <cell id="0" image="cuadradorojo" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="Señala los rectángulos rojos">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="rectarojos.WAV" />
+     <p>Señala los rectángulos rojos</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="285" />
+    </window>
+   </settings>
+   <cells rows="4" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="0" image="cuadradoazul" />
+    <cell id="1" image="rectarojo" />
+    <cell id="0" image="circulorojo" />
+    <cell id="1" image="rectarojo" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="0" image="trianrojo" />
+    <cell id="1" image="rectarojo" />
+    <cell id="0" image="circuloverde" />
+    <cell id="0" image="cuadradorojo" />
+    <cell id="1" image="rectarojo" />
+    <cell id="0" image="triaamarillo" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="0" image="trianrojo" />
+    <cell id="0" image="trianazul" />
+    <cell id="0" image="cuadradorojo" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="Señala los rectángulos verdes">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="rectaverdes.WAV" />
+     <p>Señala los rectángulos verdes</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="285" />
+    </window>
+   </settings>
+   <cells rows="4" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="1" image="rectaverde" />
+    <cell id="0" image="trianrojo" />
+    <cell id="0" image="circuloverde" />
+    <cell id="0" image="trianguloverde" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="1" image="rectaverde" />
+    <cell id="0" image="trianguloverde" />
+    <cell id="0" image="circuloverde" />
+    <cell id="0" image="cuadradorojo" />
+    <cell id="0" image="rectarojo" />
+    <cell id="0" image="triaamarillo" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="0" image="trianazul" />
+    <cell id="1" image="rectaverde" />
+    <cell id="1" image="rectaverde" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="Señala los triángulos amarillos">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="triaam.WAV" />
+     <p>Señala los triángulos amarillos</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="285" />
+    </window>
+   </settings>
+   <cells rows="4" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="0" image="cuadradoazul" />
+    <cell id="1" image="triaamarillo" />
+    <cell id="0" image="círculo amarillo.JPG" />
+    <cell id="1" image="triaamarillo" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="1" image="triaamarillo" />
+    <cell id="0" image="trianrojo" />
+    <cell id="0" image="circuloverde" />
+    <cell id="0" image="cuadradorojo" />
+    <cell id="0" image="rectarojo" />
+    <cell id="0" image="trianazul" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="0" image="trianazul" />
+    <cell id="0" image="trianazul" />
+    <cell id="0" image="cuadradorojo" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="Señala los triángulos azules">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="triaaz.WAV" />
+     <p>Señala los triángulos azules</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="285" />
+    </window>
+   </settings>
+   <cells rows="4" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="0" image="cuadradoazul" />
+    <cell id="1" image="trianazul" />
+    <cell id="0" image="circulorojo" />
+    <cell id="0" image="trianrojo" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="0" image="trianrojo" />
+    <cell id="1" image="trianazul" />
+    <cell id="0" image="circuloverde" />
+    <cell id="0" image="cuadradorojo" />
+    <cell id="0" image="rectaazul" />
+    <cell id="0" image="triaamarillo" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="1" image="trianazul" />
+    <cell id="1" image="trianazul" />
+    <cell id="0" image="cuadradoazul" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="Señala los triángulos rojos">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="triarojo.WAV" />
+     <p>Señala los triángulos rojos</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="285" />
+    </window>
+   </settings>
+   <cells rows="4" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="0" image="cuadradoazul" />
+    <cell id="1" image="trianrojo" />
+    <cell id="0" image="circulorojo" />
+    <cell id="1" image="trianrojo" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="1" image="trianrojo" />
+    <cell id="1" image="trianrojo" />
+    <cell id="0" image="circuloverde" />
+    <cell id="0" image="cuadradorojo" />
+    <cell id="0" image="rectarojo" />
+    <cell id="0" image="triaamarillo" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="0" image="trianazul" />
+    <cell id="0" image="trianazul" />
+    <cell id="0" image="cuadradorojo" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="Señala los triángulos verdes">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="triavers.WAV" />
+     <p>Señala los triángulos verdes</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0xCC99FF" dest="0xFFFFFF" angle="285" />
+    </window>
+   </settings>
+   <cells rows="4" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="1" image="trianguloverde" />
+    <cell id="0" image="trianrojo" />
+    <cell id="0" image="circulorojo" />
+    <cell id="0" image="trianrojo" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="1" image="trianguloverde" />
+    <cell id="1" image="trianguloverde" />
+    <cell id="0" image="circuloverde" />
+    <cell id="0" image="cuadradorojo" />
+    <cell id="0" image="rectaverde" />
+    <cell id="0" image="triaamarillo" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="1" image="trianguloverde" />
+    <cell id="0" image="trianazul" />
+    <cell id="0" image="cuadradoverde" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="Señala todas las figuras amarillas">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="figurasamarillo.WAV" />
+     <p>Señala todas las figuras de color amarillo</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Fantástico!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x009999" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0x009999" dest="0xFFFFFF" angle="285" />
+    </window>
+   </settings>
+   <cells rows="4" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="0" image="cuadradoverde" />
+    <cell id="1" image="círculo amarillo.JPG" />
+    <cell id="0" image="circuloverde" />
+    <cell id="1" image="cuadradoamarillo" />
+    <cell id="0" image="trianguloverde" />
+    <cell id="0" image="trianrojo" />
+    <cell id="1" image="triaamarillo" />
+    <cell id="1" image="rectamarillo" />
+    <cell id="0" image="círculo azul.JPG" />
+    <cell id="0" image="triangulo" />
+    <cell id="0" image="rectarojo" />
+    <cell id="0" image="circulorojo" />
+    <cell id="0" image="cuadradoazul" />
+    <cell id="0" image="rectaazul" />
+    <cell id="0" image="cuadradorojo" />
+    <cell id="0" image="trianazul" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="Señala todas las figuras azules">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="figurasazul.WAV" />
+     <p>Señala todas las figuras de color azul</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Fantástico!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x009999" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0x009999" dest="0xFFFFFF" angle="285" />
+    </window>
+   </settings>
+   <cells rows="4" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="0" image="cuadradoverde" />
+    <cell id="0" image="círculo amarillo.JPG" />
+    <cell id="0" image="circuloverde" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="0" image="trianguloverde" />
+    <cell id="0" image="trianrojo" />
+    <cell id="0" image="triaamarillo" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="1" image="círculo azul.JPG" />
+    <cell id="0" image="triangulo" />
+    <cell id="0" image="rectarojo" />
+    <cell id="0" image="circulorojo" />
+    <cell id="1" image="cuadradoazul" />
+    <cell id="1" image="rectaazul" />
+    <cell id="0" image="cuadradorojo" />
+    <cell id="1" image="trianazul" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="Señala todas las figuras de color rojo">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="figurasrojo.WAV" />
+     <p>Señala todas las figuras de color rojo</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Fantástico!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x009999" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0x009999" dest="0xFFFFFF" angle="285" />
+    </window>
+   </settings>
+   <cells rows="4" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="0" image="cuadradoverde" />
+    <cell id="0" image="círculo amarillo.JPG" />
+    <cell id="0" image="circuloverde" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="0" image="trianguloverde" />
+    <cell id="1" image="trianrojo" />
+    <cell id="0" image="triaamarillo" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="0" image="círculo azul.JPG" />
+    <cell id="0" image="triangulo" />
+    <cell id="1" image="rectarojo" />
+    <cell id="1" image="circulorojo" />
+    <cell id="0" image="cuadradoazul" />
+    <cell id="0" image="rectaazul" />
+    <cell id="1" image="cuadradorojo" />
+    <cell id="0" image="trianazul" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="Señala todas las figuras verdes">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="figurasverde.WAV" />
+     <p>Señala todas las figuras de color verde</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Fantástico!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x009999" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0x009999" dest="0xFFFFFF" angle="285" />
+    </window>
+   </settings>
+   <cells rows="4" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="1" image="cuadradoverde" />
+    <cell id="0" image="círculo amarillo.JPG" />
+    <cell id="1" image="circuloverde" />
+    <cell id="0" image="cuadradoamarillo" />
+    <cell id="1" image="trianguloverde" />
+    <cell id="0" image="trianrojo" />
+    <cell id="0" image="triaamarillo" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="0" image="círculo azul.JPG" />
+    <cell id="0" image="triangulo" />
+    <cell id="0" image="rectarojo" />
+    <cell id="0" image="circulorojo" />
+    <cell id="0" image="cuadradoazul" />
+    <cell id="1" image="rectaverde" />
+    <cell id="0" image="cuadradorojo" />
+    <cell id="0" image="trianazul" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="colores">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="CONOCCOLO.WAV" />
+     <p>Vamos a aprender....</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <p>Ya conoces los colores!!!!</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="caraalegre.GIF" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="107.0" cellHeight="81.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="rojo">
+     <media type="PLAY_AUDIO" level="1" file="rojo.WAV" />
+    </cell>
+    <cell image="verde.JPG">
+     <media type="PLAY_AUDIO" level="1" file="verde.WAV" />
+    </cell>
+    <cell image="amarillo">
+     <media type="PLAY_AUDIO" level="1" file="amarillo.WAV" />
+    </cell>
+    <cell image="azul">
+     <media type="PLAY_AUDIO" level="1" file="azul.WAV" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puzzle azulejo">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="ordenapuzzle.WAV" />
+     <p>¡Vamos a hacer este puzzle!</p>
+    </cell>
+    <cell imgAlign="right,middle" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Fantástico!</p>
+    </cell>
+   </messages>
+   <settings margin="0" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFCC00">
+     <gradient source="0xFFCC00" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF9933" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="azulejo">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puzzle cartabón">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="ordenapuzzle.WAV" />
+     <p>¡Vamos a hacer este puzzle!</p>
+    </cell>
+    <cell imgAlign="right,middle" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Fantástico!</p>
+    </cell>
+   </messages>
+   <settings margin="0" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFCC00">
+     <gradient source="0xFFCC00" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF9933" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="cartab.GIF">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puzzle pera">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="ordenapuzzle.WAV" />
+     <p>¡Vamos a hacer este puzzle!</p>
+    </cell>
+    <cell imgAlign="right,middle" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Fantástico!</p>
+    </cell>
+   </messages>
+   <settings margin="0" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFCC00">
+     <gradient source="0xFFCC00" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF9933" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="pera.JPG">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puzzle plátano">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="ordenapuzzle.WAV" />
+     <p>¡Vamos a hacer este puzzle!</p>
+    </cell>
+    <cell imgAlign="right,middle" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Fantástico!</p>
+    </cell>
+   </messages>
+   <settings margin="0" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFCC00">
+     <gradient source="0xFFCC00" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF9933" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="platano.JPG">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puzzle prohibido" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="ordenapuzzle.WAV" />
+     <p>¡Vamos a hacer este puzzle!</p>
+    </cell>
+    <cell imgAlign="right,middle" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Fantástico!</p>
+    </cell>
+   </messages>
+   <settings margin="0" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFCC00">
+     <gradient source="0xFFCC00" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF9933" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="prohibido2.jpg">
+    <style />
+    <shaper class="@JigSaw" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puzzle rueda">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="ordenapuzzle.WAV" />
+     <p>¡Vamos a hacer este puzzle!</p>
+    </cell>
+    <cell imgAlign="right,middle" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Fantástico!</p>
+    </cell>
+   </messages>
+   <settings margin="0" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFCC00">
+     <gradient source="0xFFCC00" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF9933" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="rueda.GIF">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puzzle tomate">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="ordenapuzzle.WAV" />
+     <p>¡Vamos a hacer este puzzle!</p>
+    </cell>
+    <cell imgAlign="right,middle" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Fantástico!</p>
+    </cell>
+   </messages>
+   <settings margin="0" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFCC00">
+     <gradient source="0xFFCC00" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF9933" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="tomate.JPG">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puzzle triángulo señal">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="ordenapuzzle.WAV" />
+     <p>¡Vamos a hacer este puzzle!</p>
+    </cell>
+    <cell imgAlign="right,middle" image="caraalegre.GIF" type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="aplaudir.wav" />
+     <p>¡Fantástico!</p>
+    </cell>
+   </messages>
+   <settings margin="0" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFCC00">
+     <gradient source="0xFFCC00" dest="0xFFFFFF" angle="188" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF9933" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="triansenal">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.Identify" name="reconoce el cuadrado">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="señalacuadrado.WAV" />
+     <p>Señala el cuadrado</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell id="0" image="círculo azul.JPG" />
+    <cell id="1" image="cuadradoverde" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="0" image="trianrojo" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="reconoce el círculo">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="señalacirculo.WAV" />
+     <p>Señala el círculo</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell id="1" image="círculo azul.JPG" />
+    <cell id="0" image="cuadradoverde" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="0" image="trianrojo" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="reconoce el rectángulo">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="señalarectangulo.WAV" />
+     <p>Señala el rectángulo</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell id="0" image="círculo azul.JPG" />
+    <cell id="0" image="cuadradoverde" />
+    <cell id="1" image="rectamarillo" />
+    <cell id="0" image="trianrojo" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="reconoce el triángulo">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="señalatriangulo.WAV" />
+     <p>Señala el triángulo</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="107.0" cellHeight="107.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell id="0" image="círculo azul.JPG" />
+    <cell id="0" image="cuadradoverde" />
+    <cell id="0" image="rectamarillo" />
+    <cell id="1" image="trianrojo" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="triángulo.cuadrado">
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="cara.GIF" type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="CONOCFIGURAS.WAV" />
+     <p>Vamos a aprender....</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="caraalegre.GIF" type="final">
+     <style />
+     <p>Ya conoces las figuras</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="caraalegre.GIF" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00ECE9D8" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="107.0" cellHeight="107.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="cuadrado">
+     <media type="PLAY_AUDIO" level="1" file="cuadrado2.WAV" />
+    </cell>
+    <cell image="triangulo">
+     <media type="PLAY_AUDIO" level="1" file="triangulo.WAV" />
+    </cell>
+    <cell image="recta">
+     <media type="PLAY_AUDIO" level="1" file="rectangulo2.WAV" />
+    </cell>
+    <cell image="circulo">
+     <media type="PLAY_AUDIO" level="1" file="circulo2.WAV" />
+    </cell>
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="amarillo" file="amarillo.gif" />
+  <media name="azul" file="azul.gif" />
+  <media name="azulejo" file="azulejocopia.gif" />
+  <media name="cara alegre.GIF" file="cara_alegre.gif" />
+  <media name="cara.GIF" file="cara.gif" />
+  <media name="caraalegre.GIF" file="caraalegre.gif" />
+  <media name="cartab.GIF" file="cartaboncopia.gif" />
+  <media name="circulo" file="circulo.gif" />
+  <media name="circulorojo" file="circulorojo.gif" />
+  <media name="circuloverde" file="circuloverde.gif" />
+  <media name="cuadrado" file="cuadrado.gif" />
+  <media name="cuadradoamarillo" file="cuadradoamarillo.gif" />
+  <media name="cuadradoazul" file="cuaazul.gif" />
+  <media name="cuadradorojo" file="cuarojo.gif" />
+  <media name="cuadradoverde" file="cuaverde.gif" />
+  <media name="círculo amarillo.JPG" file="circuloama.gif" />
+  <media name="círculo azul.JPG" file="circuloazul.gif" />
+  <media name="pera.JPG" file="pera.gif" />
+  <media name="platano.JPG" file="platano.gif" />
+  <media name="recta" file="rectangulo.gif" />
+  <media name="rectaazul" file="rectazul.gif" />
+  <media name="rectamarillo" file="rectangamarill.gif" />
+  <media name="rectarojo" file="rectarojo.gif" />
+  <media name="rectaverde" file="rectaverde.gif" />
+  <media name="rojo" file="rojo.gif" />
+  <media name="rueda.GIF" file="rueda.gif" />
+  <media name="tomate.JPG" file="tomate.gif" />
+  <media name="triaamarillo" file="trianama.gif" />
+  <media name="trianazul" file="trianazul.gif" />
+  <media name="triangulo" file="triangulo.gif" />
+  <media name="trianguloverde" file="trianguloverde.gif" />
+  <media name="trianrojo" file="trianrojo.gif" />
+  <media name="triansenal" file="triansenal.gif" />
+  <media name="verde.JPG" file="verde.gif" />
+  <media name="Entrada.jpg" file="entrada.jpg" />
+  <media name="prohibido2.jpg" file="prohibido2.jpg" />
+  <media name="amarillo.WAV" file="amarillo.wav" />
+  <media name="aplaudir.wav" file="aplaudir.wav" />
+  <media name="azul.WAV" file="azul.wav" />
+  <media name="circuazul.WAV" file="circuazul.wav" />
+  <media name="circuigucolor" file="circuligucolor.wav" />
+  <media name="circulo.WAV" file="circulo.wav" />
+  <media name="circulo2.WAV" file="circulo2.wav" />
+  <media name="circulosamarillo.WAV" file="circuama.wav" />
+  <media name="circurojos.WAV" file="circurojos.wav" />
+  <media name="circuverde.WAV" file="circuverde.wav" />
+  <media name="CONOCCOLO.WAV" file="conoccolo.wav" />
+  <media name="CONOCFIGURAS.WAV" file="conocfiguras.wav" />
+  <media name="cuadrado2.WAV" file="cua.wav" />
+  <media name="cuadrados azules.WAV" file="cuaazu.wav" />
+  <media name="cuadrados de color amarillo.WAV" file="cuaam.wav" />
+  <media name="cuadrados del mismo color.WAV" file="cuadradmismcolor.wav" />
+  <media name="cuadrados rojos.WAV" file="cuadradosrojos.wav" />
+  <media name="cuadrados verde.WAV" file="cuadradosverde.wav" />
+  <media name="figurasamarillo.WAV" file="figurasamarillas.wav" />
+  <media name="figurasazul.WAV" file="figurasazul.wav" />
+  <media name="figurasiguales.WAV" file="figurasiguales.wav" />
+  <media name="figurasrojo.WAV" file="figurasrojo.wav" />
+  <media name="figurasverde.WAV" file="figurasverdes.wav" />
+  <media name="ordenapuzzle.WAV" file="ordenapuzzle.wav" />
+  <media name="pulsaaltavoz.WAV" file="pulsaaltavoz2.wav" />
+  <media name="recta.WAV" file="rectangulo.wav" />
+  <media name="rectaamarillos.WAV" file="rectaamarillos.wav" />
+  <media name="rectaazul.WAV" file="rectaazules.wav" />
+  <media name="rectangulo2.WAV" file="rectangulo2.wav" />
+  <media name="rectarojos.WAV" file="rectarojos.wav" />
+  <media name="rectaverdes.WAV" file="rectaverdes.wav" />
+  <media name="rectmismocolor.WAV" file="rctangulosigucolor.wav" />
+  <media name="rojo.WAV" file="rojo.wav" />
+  <media name="señalacirculo.WAV" file="senalacirc.wav" />
+  <media name="señalacuadrado.WAV" file="senalacu.wav" />
+  <media name="señalacuadrados.WAV" file="senalacus.wav" />
+  <media name="señalacírculos.WAV" file="senalacircus.wav" />
+  <media name="señalarectangulo.WAV" file="senalarect.wav" />
+  <media name="señalarectangulos.WAV" file="senalarects.wav" />
+  <media name="señalatriangulo.WAV" file="senalatri.wav" />
+  <media name="señalatriangulos.WAV" file="senalatris.wav" />
+  <media name="triaam.WAV" file="triaam.wav" />
+  <media name="triaaz.WAV" file="triaaz.wav" />
+  <media name="triangulo.WAV" file="triangulo.wav" />
+  <media name="triangulo2.wav" file="triangulo2.wav" />
+  <media name="trianmismocolor.WAV" file="triaigualcolor.wav" />
+  <media name="triarojo.WAV" file="triarojo.wav" />
+  <media name="triavers.WAV" file="triaver.wav" />
+  <media name="verde.WAV" file="verde.wav" />
+ </mediaBag>
+</JClicProject>
+

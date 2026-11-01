@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="c" version="0.1.3">
+ <settings>
+  <title>Vamos a leer</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="6/1/01" />
+  <revision description="Conversión de Clic3 a JClic" date="7/22/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="José Pedro Roda Martínez" mail="03010247@centres.cult.gva.es" />
+  <organization name="CP Santo Negro" city="Elda" state="País Valencià" />
+  <language>Español</language>
+  <description>
+   <p>Paquete de actividades para el aprendizaje de la lectura. El paquete está dividido en 14 partes con 14 consonantes diferentes: &lt;I&gt;&lt;B&gt;p, s, l, m, t, n, d, ll, b/v, ñ, c/q, f, r/rr, ch&lt;/B&gt;&lt;/I&gt;. Para cada consonante hay una lista de palabras que los niños/as deben asociar, a veces con el sonido, otras con la imagen.</p>
+  </description>
+  <descriptors level="Infantil, Primaria">lengua castellana, lectura</descriptors>
+ </settings>
+ <sequence>
+  <item id="c.pac" name="silabasc.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="sonidsic.ass" />
+  <item name="palabc.ass" />
+  <item name="paladibc.ass" />
+  <item name="silapabc.ass" />
+  <item name="palabesc.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.SimpleAssociation" name="palabc.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Une las palabras iguales</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="47" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="casa.wav" />
+     <p>casa</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="saco.wav" />
+     <p>saco</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="vaca.wav" />
+     <p>vaca</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cubo.wav" />
+     <p>cubo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="queso.wav" />
+     <p>queso</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="equipo.wav" />
+     <p>equipo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="paquete.wav" />
+     <p>paquete</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="maquina.wav" />
+     <p>máquina</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="25" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="casa.wav" />
+     <p>casa</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="saco.wav" />
+     <p>saco</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="vaca.wav" />
+     <p>vaca</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cubo.wav" />
+     <p>cubo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="queso.wav" />
+     <p>queso</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="equipo.wav" />
+     <p>equipo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="paquete.wav" />
+     <p>paquete</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="maquina.wav" />
+     <p>máquina</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell image="casa.gif" />
+    <cell image="saco.gif" />
+    <cell image="vaca.gif" />
+    <cell image="cubo.gif" />
+    <cell image="queso.gif" />
+    <cell image="equipo.gif" />
+    <cell image="paquete.gif" />
+    <cell image="maquina.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="palabesc.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Escribe el nombre de cada dibujo</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Fantástico!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell image="casa.gif" />
+    <cell image="saco.gif" />
+    <cell image="vaca.gif" />
+    <cell image="cubo.gif" />
+    <cell image="queso.gif" />
+    <cell image="equipo.gif" />
+    <cell image="paquete.gif" />
+    <cell image="maquina.gif" />
+   </cells>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>casa</p>
+    </cell>
+    <cell>
+     <p>saco</p>
+    </cell>
+    <cell>
+     <p>vaca</p>
+    </cell>
+    <cell>
+     <p>cubo</p>
+    </cell>
+    <cell>
+     <p>queso</p>
+    </cell>
+    <cell>
+     <p>equipo</p>
+    </cell>
+    <cell>
+     <p>paquete</p>
+    </cell>
+    <cell>
+     <p>máquina</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="casa.wav" />
+     <p>casa</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="saco.wav" />
+     <p>saco</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="vaca.wav" />
+     <p>vaca</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cubo.wav" />
+     <p>cubo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="queso.wav" />
+     <p>queso</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="equipo.wav" />
+     <p>equipo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="paquete.wav" />
+     <p>paquete</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="maquina.wav" />
+     <p>máquina</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="paladibc.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Une cada palabra con su dibujo</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Estupendo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="47" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>casa</p>
+    </cell>
+    <cell>
+     <p>saco</p>
+    </cell>
+    <cell>
+     <p>vaca</p>
+    </cell>
+    <cell>
+     <p>cubo</p>
+    </cell>
+    <cell>
+     <p>queso</p>
+    </cell>
+    <cell>
+     <p>equipo</p>
+    </cell>
+    <cell>
+     <p>paquete</p>
+    </cell>
+    <cell>
+     <p>máquina</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell image="casa.gif" />
+    <cell image="saco.gif" />
+    <cell image="vaca.gif" />
+    <cell image="cubo.gif" />
+    <cell image="queso.gif" />
+    <cell image="equipo.gif" />
+    <cell image="paquete.gif" />
+    <cell image="maquina.gif" />
+   </cells>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="casa.wav" />
+     <p>casa</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="saco.wav" />
+     <p>saco</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="vaca.wav" />
+     <p>vaca</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cubo.wav" />
+     <p>cubo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="queso.wav" />
+     <p>queso</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="equipo.wav" />
+     <p>equipo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="paquete.wav" />
+     <p>paquete</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="maquina.wav" />
+     <p>máquina</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="silabasc.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Une las sílabas iguales</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="47" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="ca.wav" />
+     <p>ca</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="co.wav" />
+     <p>co</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cu.wav" />
+     <p>cu</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="que.wav" />
+     <p>que</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="qui.wav" />
+     <p>qui</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="ca.wav" />
+     <p>ca</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="co.wav" />
+     <p>co</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="qui.wav" />
+     <p>qui</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="25" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="ca.wav" />
+     <p>ca</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="co.wav" />
+     <p>co</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cu.wav" />
+     <p>cu</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="que.wav" />
+     <p>que</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="qui.wav" />
+     <p>qui</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="ca.wav" />
+     <p>ca</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="co.wav" />
+     <p>co</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="qui.wav" />
+     <p>qui</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="ca.wav" />
+     <p>ca</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="co.wav" />
+     <p>co</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cu.wav" />
+     <p>cu</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="que.wav" />
+     <p>que</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="qui.wav" />
+     <p>qui</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="ca.wav" />
+     <p>ca</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="co.wav" />
+     <p>co</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="qui.wav" />
+     <p>qui</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="silapabc.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Une las sílabas para formar palabras</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Enhorabuena!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="47" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>ca</p>
+    </cell>
+    <cell>
+     <p>sa</p>
+    </cell>
+    <cell>
+     <p>va</p>
+    </cell>
+    <cell>
+     <p>cu</p>
+    </cell>
+    <cell>
+     <p>que</p>
+    </cell>
+    <cell>
+     <p>equi</p>
+    </cell>
+    <cell>
+     <p>paque</p>
+    </cell>
+    <cell>
+     <p>máqui</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="47" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>sa</p>
+    </cell>
+    <cell>
+     <p>co</p>
+    </cell>
+    <cell>
+     <p>ca</p>
+    </cell>
+    <cell>
+     <p>bo</p>
+    </cell>
+    <cell>
+     <p>so</p>
+    </cell>
+    <cell>
+     <p>po</p>
+    </cell>
+    <cell>
+     <p>te</p>
+    </cell>
+    <cell>
+     <p>na</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="casa.wav" />
+     <p>casa</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="saco.wav" />
+     <p>saco</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="vaca.wav" />
+     <p>vaca</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cubo.wav" />
+     <p>cubo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="queso.wav" />
+     <p>queso</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="equipo.wav" />
+     <p>equipo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="paquete.wav" />
+     <p>paquete</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="maquina.wav" />
+     <p>máquina</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="sonidsic.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Escucha y relaciona</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Fantástico!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="ca.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="co.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cu.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="que.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="qui.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="ca.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="co.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="qui.wav" />
+    </cell>
+   </cells>
+   <cells rows="2" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="47" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="ca.wav" />
+     <p>ca</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="co.wav" />
+     <p>co</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cu.wav" />
+     <p>cu</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="que.wav" />
+     <p>que</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="qui.wav" />
+     <p>qui</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="ca.wav" />
+     <p>ca</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="co.wav" />
+     <p>co</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="qui.wav" />
+     <p>qui</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="ca.wav" />
+     <p>ca</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="co.wav" />
+     <p>co</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cu.wav" />
+     <p>cu</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="que.wav" />
+     <p>que</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="qui.wav" />
+     <p>qui</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="ca.wav" />
+     <p>ca</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="co.wav" />
+     <p>co</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="qui.wav" />
+     <p>qui</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="casa.gif" file="casa.gif" />
+  <media name="cubo.gif" file="cubo.gif" />
+  <media name="equipo.gif" file="equipo.gif" />
+  <media name="maquina.gif" file="maquina.gif" />
+  <media name="paquete.gif" file="paquete.gif" />
+  <media name="queso.gif" file="queso.gif" />
+  <media name="saco.gif" file="saco.gif" />
+  <media name="vaca.gif" file="vaca.gif" />
+  <media name="ca.wav" file="ca.wav" />
+  <media name="casa.wav" file="casa.wav" />
+  <media name="co.wav" file="co.wav" />
+  <media name="cu.wav" file="cu.wav" />
+  <media name="cubo.wav" file="cubo.wav" />
+  <media name="equipo.wav" file="equipo.wav" />
+  <media name="maquina.wav" file="maquina.wav" />
+  <media name="paquete.wav" file="paquete.wav" />
+  <media name="que.wav" file="que.wav" />
+  <media name="queso.wav" file="queso.wav" />
+  <media name="qui.wav" file="qui.wav" />
+  <media name="saco.wav" file="saco.wav" />
+  <media name="vaca.wav" file="vaca.wav" />
+ </mediaBag>
+</JClicProject>
+

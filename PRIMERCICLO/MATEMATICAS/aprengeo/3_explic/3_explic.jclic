@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="3_explic" version="0.1.3">
+ <settings>
+  <title>Aprengeo</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="2/23/06" />
+  <revision description="Conversión de Clic3 a JClic" date="3/27/06">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Nieves M. Vílchez" mail="nieves59@cantv.net" />
+  <language>español</language>
+  <description>
+   <p>Paquete de actividades para el aprendizaje de la geometría en educación primaria. Este extenso proyecto tiene 6 partes:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Preguntas y respuestas</p>
+   <p>&lt;LI&gt;Actividad dirigida</p>
+   <p>&lt;LI&gt;Explicación</p>
+   <p>&lt;LI&gt;Actividad libre</p>
+   <p>&lt;LI&gt;Ahora aprendemos</p>
+   <p>&lt;LI&gt;Saber más de...</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area="Matemáticas" level="Primaria (6-12)">geometría</descriptors>
+ </settings>
+ <sequence>
+  <item id="3_explic.pac" name="3_objet.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="puerta1.ass" />
+  <item name="3_acti2.txa" />
+  <item name="3_acti4.txa" />
+  <item name="3_acti5.txa" />
+  <item name="3_acti6.txa" />
+  <item name="3_acti7.txa">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@text.FillInBlanks" name="3_acti2.txa" code="">
+   <description>
+    <p>IDENTIFICAR  TAPAS, ESQUINAS y LINEAS..</p>
+   </description>
+   <messages>
+    <cell type="previous">
+     <style>
+      <font family="Comic Sans MS" size="40" bold="true" />
+      <color foreground="0xFF0000" background="0x0000FF" />
+     </style>
+     <p>Haz  CLIC en el TEXTO  </p>
+    </cell>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="40" bold="true" />
+      <color foreground="0xFF0000" background="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="r_corre.wav" />
+     <p>ESCOGE  LA RESPUESTA  CORRECTA.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="40" bold="true" />
+      <color foreground="0xFF0000" background="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡  Muy  Bien !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="elemento.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <position x="49" y="2" />
+     <size width="700" height="251" />
+    </window>
+   </settings>
+   <prevScreen maxTime="30" />
+   <document>
+    <style name="default" background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" tabWidth="14" foreground="0x000000" bold="true" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">Cada CUBO tiene  TAPAS, LÍNEAS y ESQUINAS.</text>
+     </p>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">El Cubo  tiene:</text>
+     </p>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000"> 6 </text>
+      <target>
+       <answer>tapas</answer>
+       <optionList>
+        <option>esquinas</option>
+        <option>lineas</option>
+        <option>tapas</option>
+       </optionList>
+       <text>tapas</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">, 12 </text>
+      <target>
+       <answer>líneas</answer>
+       <optionList>
+        <option>tapas</option>
+        <option>esquinas</option>
+        <option>líneas</option>
+       </optionList>
+       <text>líneas</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">  y  </text>
+      <target>
+       <answer>8</answer>
+       <optionList>
+        <option>6</option>
+        <option>8</option>
+        <option>10</option>
+        <option>12</option>
+       </optionList>
+       <text>8</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000"> esquinas.</text>
+     </p>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="3_acti4.txa" code="">
+   <description>
+    <p>IDENTIFICAR  FORMA DE CARAS, RECTAS y ESQUINAS</p>
+   </description>
+   <messages>
+    <cell type="previous">
+     <style>
+      <font family="Comic Sans MS" size="40" bold="true" />
+      <color foreground="0xFF0000" background="0x0000FF" />
+     </style>
+     <p>Haz  CLIC en el TEXTO  </p>
+    </cell>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="40" bold="true" />
+      <color foreground="0xFF0000" background="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="r_corre.wav" />
+     <p>ESCOGE  LA RESPUESTA  CORRECTA.</p>
+    </cell>
+    <cell image="mano1.gif" type="final">
+     <style>
+      <font family="Comic Sans MS" size="40" bold="true" />
+      <color foreground="0xFF0000" background="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="elemento.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <position x="49" y="2" />
+     <size width="700" height="278" />
+    </window>
+   </settings>
+   <prevScreen maxTime="30" />
+   <document>
+    <style name="default" background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" tabWidth="14" foreground="0x000000" bold="true" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">-Las Tapas del CUBO son </text>
+      <target>
+       <answer>CUADRADOS</answer>
+       <optionList>
+        <option>SEGMENTOS</option>
+        <option>PUNTOS</option>
+        <option>CUADRADOS</option>
+       </optionList>
+       <text>CUADRADOS</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000"> iguales,</text>
+     </p>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">-Las Líneas del CUBO son </text>
+      <target>
+       <answer>SEGMENTOS</answer>
+       <optionList>
+        <option>SEGMENTOS</option>
+        <option>PUNTOS</option>
+        <option>CUADRADOS</option>
+       </optionList>
+       <text>SEGMENTOS</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">  de igual tamaño y</text>
+     </p>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">-Las esquinas son </text>
+      <target>
+       <answer>PUNTOS</answer>
+       <optionList>
+        <option>SEGMENTOS</option>
+        <option>PUNTOS</option>
+        <option>CUADRADOS</option>
+       </optionList>
+       <text>PUNTOS</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000"> donde llegan dos líneas.</text>
+     </p>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="3_acti5.txa" code="">
+   <description>
+    <p>IDENTIFICAR  PARTES DE LA ESFERA</p>
+   </description>
+   <messages>
+    <cell type="previous">
+     <style>
+      <font family="Comic Sans MS" size="40" bold="true" />
+      <color foreground="0xFF0000" background="0x0000FF" />
+     </style>
+     <p>Haz  CLIC en el TEXTO  </p>
+    </cell>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="40" bold="true" />
+      <color foreground="0xFF0000" background="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="r_corre.wav" />
+     <p>ESCOGE  LA RESPUESTA  CORRECTA.</p>
+    </cell>
+    <cell image="si.gif" type="final">
+     <style>
+      <font family="Comic Sans MS" size="40" bold="true" />
+      <color foreground="0xFF0000" background="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="fin.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="pize3.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <position x="170" y="2" />
+     <size width="570" height="231" />
+    </window>
+   </settings>
+   <prevScreen maxTime="30" />
+   <document>
+    <style name="default" background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" tabWidth="14" foreground="0x000000" bold="true" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">La ESFERA  es  </text>
+      <target>
+       <answer>REDONDA</answer>
+       <optionList>
+        <option>REDONDA</option>
+        <option>CUADRADA</option>
+       </optionList>
+       <text>REDONDA</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">.</text>
+     </p>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">La </text>
+      <target>
+       <answer>ESFERA</answer>
+       <optionList>
+        <option>PIRÁMIDE</option>
+        <option>ESFERA</option>
+       </optionList>
+       <text>ESFERA</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000"> tiene CENTRO y RADIO  </text>
+     </p>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="3_acti6.txa" code="">
+   <description>
+    <p>Explicar CENTRO  y RADIO</p>
+   </description>
+   <messages>
+    <cell type="previous">
+     <style>
+      <font family="Comic Sans MS" size="40" bold="true" />
+      <color foreground="0xFF0000" background="0x0000FF" />
+     </style>
+     <p>Haz  CLIC en el TEXTO  </p>
+    </cell>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="40" bold="true" />
+      <color foreground="0xFF0000" background="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="r_corre.wav" />
+     <p>ESCOGE  LA RESPUESTA  CORRECTA.</p>
+    </cell>
+    <cell image="si.gif" type="final">
+     <style>
+      <font family="Comic Sans MS" size="40" bold="true" />
+      <color foreground="0xFF0000" background="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="fin.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="pize3.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <position x="160" y="0" />
+     <size width="580" height="266" />
+    </window>
+   </settings>
+   <prevScreen maxTime="30" />
+   <document>
+    <style name="default" background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" tabWidth="1" foreground="0x000000" bold="true" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">El CENTRO de la esfera es un </text>
+      <target>
+       <answer>punto</answer>
+       <optionList>
+        <option>punto</option>
+        <option>cuadrado</option>
+       </optionList>
+       <text>punto</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">. </text>
+     </p>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">RADIO es la </text>
+      <target>
+       <answer>distancia</answer>
+       <optionList>
+        <option>distancia</option>
+        <option>recta</option>
+       </optionList>
+       <text>distancia</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000"> del CENTRO   a  cualquier punto de la esfera.</text>
+     </p>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="3_acti7.txa" code="">
+   <description>
+    <p>Explicar PIRAMIDE</p>
+   </description>
+   <messages>
+    <cell type="previous">
+     <style>
+      <font family="Comic Sans MS" size="40" bold="true" />
+      <color foreground="0xFF0000" background="0x0000FF" />
+     </style>
+     <p>Haz  CLIC en el TEXTO  </p>
+    </cell>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="40" bold="true" />
+      <color foreground="0xFF0000" background="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="r_corre.wav" />
+     <p>ESCOGE  LA RESPUESTA  CORRECTA.</p>
+    </cell>
+    <cell image="si.gif" type="final">
+     <style>
+      <font family="Comic Sans MS" size="40" bold="true" />
+      <color foreground="0xFF0000" background="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="fin.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="pizapi.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <position x="160" y="10" />
+     <size width="580" height="223" />
+    </window>
+   </settings>
+   <prevScreen maxTime="30" />
+   <document>
+    <style name="default" background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" tabWidth="1" foreground="0x000000" bold="true" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">La PIRÁMIDE  tiene:</text>
+     </p>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">
+      <target>
+       <answer>TAPAS</answer>
+       <optionList>
+        <option>TAPAS</option>
+        <option>PELOTAS</option>
+        <option>SOMBRERO</option>
+       </optionList>
+       <text>TAPAS</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000">,  LÍNEAS y  ESQUINAS.</text>
+     </p>
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Comic Sans MS" size="28" italic="false" bold="true" foreground="0x000000" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="3_objet.ass">
+   <description>
+    <p>3-OBJETIVOS DE LA FASE 3.
+</p>
+    <p>NIVEL 0.Visualizacion.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="dialog" size="32" bold="true" />
+      <color foreground="0xFF0000" background="0x0000FF" />
+     </style>
+     <p>EXPLIQUEMOS  ....</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="dialog" size="32" bold="true" />
+      <color foreground="0xFF0000" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x004000">
+     <image name="pizarra.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="665.0" cellHeight="95.0" border="false">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>NIVEL  0: VISUALIZACIÓN    y    NIVEL  1: ANÁLISIS</p>
+    </cell>
+    <cell>
+     <p>FASE  3.  NOS PR0PONEMOS:</p>
+    </cell>
+    <cell>
+     <p>- Con los conocimientos previos del alumno, discutir y analizar los objetos presentados en la FASE 2.</p>
+    </cell>
+    <cell>
+     <p>- Ayudar con el uso del  LENGUAJE  apropiado. </p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="puerta1.ass">
+   <description>
+    <p>propuesta-portada 1</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFFFFFF" background="0xFF0000" />
+     </style>
+     <media type="PLAY_MIDI" level="2" file="music1.mid" />
+     <p>COMIENZAN  TUS   ACTIVIDADES</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFFFFFF" background="0xFF0000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x008000">
+     <image name="rompe.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFF00" border="false" />
+   </settings>
+   <cells rows="4" cols="1" border="false" image="por_alu.gif">
+    <style>
+     <font family="Comic Sans MS" size="33" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="elemento.gif" file="elemento.gif" />
+  <media name="mano1.gif" file="mano1.gif" />
+  <media name="pizapi.gif" file="pizapi.gif" />
+  <media name="pizarra.gif" file="pizarra.gif" />
+  <media name="pize3.gif" file="pize3.gif" />
+  <media name="por_alu.gif" file="por_alu.gif" />
+  <media name="rompe.gif" file="rompe.gif" />
+  <media name="si.gif" file="si.gif" />
+  <media name="music1.mid" file="music1.mid" />
+  <media name="fin.wav" file="fin.wav" />
+  <media name="muybien.wav" file="muybien.wav" />
+  <media name="r_corre.wav" file="r_corre.wav" />
+ </mediaBag>
+</JClicProject>
+

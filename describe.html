@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Biblioteca Proyecto ArgenClic - Aulas Libres</title>
+  
+  <link rel="icon" href="recursos/favicon.ico" type="image/x-icon">
+  
+  <script>
+    // Precarga de imágenes
+    const jugar     = new Image(180, 60);   jugar.src     = "recursos/jugar1.png";
+    const jugarOn   = new Image(180, 60);   jugarOn.src   = "recursos/jugar2.png";
+    const tecnicas  = new Image(150, 110);  tecnicas.src  = "recursos/tecnicas1.png";
+    const tecnicasOn= new Image(150, 110);  tecnicasOn.src= "recursos/tecnicas2.png";
+    const jclic     = new Image(300, 110);  jclic.src     = "recursos/jclicque1.png";
+    const jclicOn   = new Image(300, 110);  jclicOn.src   = "recursos/jclicque2.png";
+    const descargar = new Image(225, 30);   descargar.src = "recursos/descargar.png";
+    const descargarOn=new Image(225, 30);   descargarOn.src="recursos/descargar2.png";
+
+    // Función genérica
+    function activarHover(id, normal, hover) {
+      const img = document.getElementById(id);
+      if (!img) return;
+      img.addEventListener("mouseover", () => img.src = hover.src);
+      img.addEventListener("mouseout",  () => img.src = normal.src);
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      activarHover("btnJugar", jugar, jugarOn);
+      activarHover("btnDescargar", descargar, descargarOn);
+      activarHover("btnJClic", jclic, jclicOn);
+      activarHover("btnTecnicas", tecnicas, tecnicasOn);
+    });
+  </script>
+</head>
+<body>
+
+<div style="background-color:#003366; text-align:center; padding:8px; font-family:Helvetica,Arial,sans-serif;">
+  <a href="index.html" style="color:white; font-weight:bold; margin:0 12px; text-decoration:none;">Inicio</a> |
+  <a href="niveles.html" style="color:white; font-weight:bold; margin:0 12px; text-decoration:none;">Jugar</a> |
+  <a href="proyecto.html" style="color:white; font-weight:bold; margin:0 12px; text-decoration:none;">Proyecto</a> |
+  <a href="tecnica.html" style="color:white; font-weight:bold; margin:0 12px; text-decoration:none;">Técnica</a> |
+  <a href="descarga.html" style="color:white; font-weight:bold; margin:0 12px; text-decoration:none;">Descarga</a> |
+  <a href="creditos.html" style="color:white; font-weight:bold; margin:0 12px; text-decoration:none;">Créditos</a>
+</div>
+
+<div align="center"><br><br>
+<table style="border-collapse: collapse; text-align: left; margin:auto; background-color: white; width: 96%;" border="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <td style="height:50px; width:50px;"></td>
+      <td style="background:url(recursos/lineaHS.png) repeat-x; height:50px;"></td>
+      <td style="height:50px; width:50px; background:url(recursos/esquina_SD.png) no-repeat;"></td>
+    </tr>
+    <tr>
+      <td style="background:url(recursos/lineaVI.png) repeat-y; width:50px;"></td>
+      <td style="background:white; text-align:center;">
+
+        <!-- MENÚ CENTRAL -->
+        <table style="background:url(recursos/menu1.png) no-repeat; width:760px; height:220px; margin:auto;">
+          <tr>
+            <td style="width:15%;"></td>
+            <td style="width:35%; text-align:center;vertical-align: top;">
+              <a href="niveles.html">
+                <img id="btnJugar" src="recursos/jugar1.png" alt="Jugar" width="180" height="60" border="0">
+              </a>
+            </td>
+            <td style="width:35%; text-align:center;vertical-align: top;">
+              <a href="descarga.html">
+                <img id="btnDescargar" src="recursos/descargar.png" alt="Descargar" width="225" height="30" border="0">
+              </a>
+            </td>
+            <td style="width:15%;"></td>
+          </tr>
+        </table>
+
+        <table style="background:url(recursos/pizarra1.png) repeat; width:760px; height:130px; margin:auto; text-align:center;">
+          <tr>
+            <td>
+              <a href="proyecto.html">
+                <img id="btnJClic" src="recursos/jclicque1.png" alt="JClic" width="300" height="110" border="0">
+              </a>
+            </td>
+            <td>
+              <a href="tecnica.html">
+                <img id="btnTecnicas" src="recursos/tecnicas1.png" alt="Características" width="150" height="110" border="0">
+              </a>
+            </td>
+          </tr>
+        </table>
+
+      </td>
+      <td style="background:url(recursos/lineaVD.png) repeat-y; width:50px;"></td>
+    </tr>
+    <tr>
+      <td style="height:50px; width:50px; background:url(recursos/esquina_II.png) no-repeat;"></td>
+      <td style="background:url(recursos/lineaHI.png) repeat-x; height:50px;"></td>
+      <td style="height:50px; width:50px;"></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div style="text-align:center; background-color:black; color:white; padding:10px; font-family:Helvetica,Arial,sans-serif; font-size:small;">
+  <a href="index.html" style="color:white; margin:0 10px;">Inicio</a> |
+  <a href="descarga.html" style="color:white; margin:0 10px;">Descarga</a> |
+  <a href="creditos.html" style="color:white; margin:0 10px;">Créditos</a> 
+  <br><br>
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
+    <img alt="Licencia de Creative Commons" src="recursos/cc.png" style="border:0; width:88px; height:31px;">
+  </a>
+  <br>
+  Esta obra está licenciada bajo <a style="color:white;" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">Creative Commons Atribución-NoComercial-CompartirIgual 2.5 Argentina</a>
+</div>
+
+</body>
+</html>
+

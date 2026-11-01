@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="evaluar" version="0.1.3">
+ <settings>
+  <title>El folklore musical de Chile</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="11/21/00" />
+  <revision description="Conversión de Clic3 a JClic" date="11/17/05">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Míriam Castillo Castillo" mail="jmcaro@ctcinternet.cl" />
+  <organization name="Escuela Cardenal José María Caro" url="http://www.ctio.noao.edu/AURA/redlaser/jmcaro/jmcaro.html" city="Coquimbo" country="Xile" />
+  <language>es</language>
+  <description>
+   <p>En este paquete de actividades se presentan las formas musicales del folklore Chileno organizadas por zonas: Zona norte, zona central, zona sur y zona insular (isla de Pascua).&lt;BR&gt;</p>
+   <p>Entre otras se trabajan la cueca, el trote, el cachimbo el taquirari, la tonada, el corrido, el vals, la música araucana mapuche, la pericona y los cantos de origen polinesio.&lt;BR&gt;</p>
+   <p>También se presentan algunos de los instrumentos populares utilizados para interpretar la música.</p>
+  </description>
+  <descriptors area-codes="mus" level-codes="PRI, SEC">audición musical</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>En este paquete de actividades se presentan las formas musicales del folklore Chileno organizadas por zonas: Zona norte, zona central, zona sur y zona insular (isla de Pascua).&lt;BR&gt;</p>
+    <p>Entre otras se trabajan la cueca, el trote, el cachimbo el taquirari, la tonada, el corrido, el vals, la música araucana mapuche, la pericona y los cantos de origen polinesio.&lt;BR&gt;</p>
+    <p>También se presentan algunos de los instrumentos populares utilizados para interpretar la música.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="evaluar.pac" name="evalinst.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="evalbail.ass" />
+  <item name="2instrum.ass" />
+  <item name="4danzas.ass" />
+  <item name="cacharpa.ass" />
+  <item name="clasific.ass" />
+  <item name="danzason.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@text.WrittenAnswer" name="2instrum.ass">
+   <description>
+    <p>Actividad de respuesta escrita</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0xFFFFFF" background="0x800040" />
+     </style>
+     <p>¿Cómo se llaman estos instrumentos?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0xFFFFFF" background="0x800040" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="perfec.wav" />
+     <p>¡Perfecto!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFA4A4">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="1" border="true" image="musica.bmp" id="primary">
+    <style>
+     <font family="dialog" size="33" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <ids>0 1</ids>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="120.0" cellHeight="120.0" border="true" id="answers">
+    <style>
+     <font family="dialog" size="33" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>arpa</p>
+    </cell>
+    <cell>
+     <p>violín    </p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="120.0" cellHeight="120.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>arpa</p>
+    </cell>
+    <cell>
+     <p>violín    </p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="4danzas.ass">
+   <description>
+    <p>Asociación sonora</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color background="0xFF0080" />
+     </style>
+     <p>  Relaciona la danza con el contenido</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color background="0xFF0080" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="perfec.wav" />
+     <p>¡Perfecto!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFB3D9">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="150.0" cellHeight="75.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="15" bold="true" />
+     <color background="0xFFFFFF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell id="0">
+     <p>cueca</p>
+    </cell>
+    <cell id="1">
+     <p>cachimbo</p>
+    </cell>
+    <cell id="2">
+     <p>vals</p>
+    </cell>
+    <cell id="3">
+     <p>corrido</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="150.0" cellHeight="150.0" border="false" id="secondary">
+    <style shadow="true">
+     <font family="Arial" size="18" bold="true" />
+     <color foreground="0x800080" background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>Es nuestro baile nacional</p>
+    </cell>
+    <cell>
+     <p>Es un baile recreativo de la zona norte</p>
+    </cell>
+    <cell>
+     <p>Es un baile de la zona central</p>
+    </cell>
+    <cell>
+     <p>Corriendo, corridito, lo bailan rapidito</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="cacharpa.ass">
+   <description>
+    <p>Actividad de respuesta escrita</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color background="0xFF7171" />
+     </style>
+     <p>ESTE BAILE SE LLAMA LA CACHARPALLA ¿DE QUÉ ZONA ES?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color background="0xFF7171" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bién!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFACAC">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF2F2F" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="cacharpa.bmp" id="primary">
+    <style>
+     <font family="dialog" size="33" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <ids>0</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="120.0" cellHeight="120.0" border="true" id="answers">
+    <style>
+     <font family="dialog" size="33" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>NORTE</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="120.0" cellHeight="120.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>NORTE</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="clasific.ass">
+   <description>
+    <p>Actividad de respuesta escrita</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Verdana" size="32" bold="true" />
+      <color background="0xFFA2D0" />
+     </style>
+     <p>Escribe el nombre según su clasificación (aerófono, membranófono,cordófono o idiófono.)</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Verdana" size="32" bold="true" />
+      <color background="0xFFA2D0" />
+     </style>
+     <p>¡muy bién!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x8080C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="120.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Verdana" size="32" bold="true" />
+     <color background="0xFFA2D0" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell id="0">
+     <p>Quena</p>
+    </cell>
+    <cell id="1">
+     <p>Arpa</p>
+    </cell>
+    <cell id="2">
+     <p>Bombo</p>
+    </cell>
+    <cell id="3">
+     <p>Matraca</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="4" cellWidth="120.0" cellHeight="120.0" border="true" id="answers">
+    <style>
+     <font family="Verdana" size="32" bold="true" />
+     <color background="0xFFA2D0" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>aerófono</p>
+    </cell>
+    <cell>
+     <p>cordófono</p>
+    </cell>
+    <cell>
+     <p>membranófono</p>
+    </cell>
+    <cell>
+     <p>idiófono</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="4" cellWidth="120.0" cellHeight="120.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>Quena Aerófono</p>
+    </cell>
+    <cell>
+     <p>Arpa Cordófono</p>
+    </cell>
+    <cell>
+     <p>Bombo Membranófono</p>
+    </cell>
+    <cell>
+     <p>Matraca Idiófono</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="danzason.ass">
+   <description>
+    <p>Asociación sonora</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0xFFFFFF" background="0xD94600" />
+     </style>
+     <p>Esta es una asociación sonora: Escucha y relaciona</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0xFFFFFF" background="0xD94600" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="genial.wav" />
+     <p>¡Genial!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFB895">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF8040" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="150.0" cellHeight="75.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="15" bold="true" />
+     <color background="0xFFFFFF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="trote.wav" />
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="cueca.wav" />
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="vals.wav" />
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="corrido.wav" />
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="150.0" cellHeight="150.0" border="false" id="secondary">
+    <style shadow="true">
+     <font family="Arial" size="18" bold="true" />
+     <color foreground="0x800080" background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>Danza nortina</p>
+    </cell>
+    <cell>
+     <p>Nuestra danza nacional</p>
+    </cell>
+    <cell>
+     <p>Danza de la Zona Sur</p>
+    </cell>
+    <cell>
+     <p>danza de la Zona Central</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="evalbail.ass">
+   <description>
+    <p>Actividad de respuesta escrita</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Times New Roman" size="30" bold="true" />
+      <color foreground="0x400040" background="0xFFDBB7" />
+     </style>
+     <p>¿A qué Zona de nuestro país, pertenecen estos bailes?.(Norte, Central, Sur e Insular)</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Times New Roman" size="30" bold="true" />
+      <color foreground="0x400040" background="0xFFDBB7" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="genial.wav" />
+     <p>¡Genial! </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFD1BB">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="120.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Times New Roman" size="30" bold="true" />
+     <color foreground="0x0000A4" background="0xFFDBB7" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0">
+     <p>Cachimbo</p>
+    </cell>
+    <cell id="1">
+     <p>Sajuriana</p>
+    </cell>
+    <cell id="2">
+     <p>Machitún</p>
+    </cell>
+    <cell id="3">
+     <p>Trastrasera</p>
+    </cell>
+    <cell id="4">
+     <p>Opa opa</p>
+    </cell>
+    <cell id="5">
+     <p>Trote</p>
+    </cell>
+    <cell id="6">
+     <p>Refalosa</p>
+    </cell>
+    <cell id="7">
+     <p>Rin</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="120.0" cellHeight="120.0" border="true" id="answers">
+    <style>
+     <font family="Times New Roman" size="30" bold="true" />
+     <color foreground="0x400040" background="0xFFDBB7" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Norte</p>
+    </cell>
+    <cell>
+     <p>Central</p>
+    </cell>
+    <cell>
+     <p>Sur</p>
+    </cell>
+    <cell>
+     <p>Sur</p>
+    </cell>
+    <cell>
+     <p>Insular</p>
+    </cell>
+    <cell>
+     <p>Norte</p>
+    </cell>
+    <cell>
+     <p>Central</p>
+    </cell>
+    <cell>
+     <p>Sur</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="120.0" cellHeight="120.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Norte</p>
+    </cell>
+    <cell>
+     <p>Central</p>
+    </cell>
+    <cell>
+     <p>Sur</p>
+    </cell>
+    <cell>
+     <p>Sur</p>
+    </cell>
+    <cell>
+     <p>Insular</p>
+    </cell>
+    <cell>
+     <p>Norte</p>
+    </cell>
+    <cell>
+     <p>Central</p>
+    </cell>
+    <cell>
+     <p>Sur</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="evalinst.ass">
+   <description>
+    <p>Actividad de respuesta escrita</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Times New Roman" size="30" bold="true" />
+      <color foreground="0x004000" background="0xFFB3B3" />
+     </style>
+     <p>¿A qué Zona de nuestro país, pertenecen estos instrumentos? (Norte, Central, Sur, Insular).</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Times New Roman" size="30" bold="true" />
+      <color foreground="0x004000" background="0xFFB3B3" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bién!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFCAE4">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="120.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Times New Roman" size="30" bold="true" />
+     <color foreground="0x004000" background="0xFFD2D2" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0">
+     <p>Zampoña</p>
+    </cell>
+    <cell id="1">
+     <p>Arpa</p>
+    </cell>
+    <cell id="2">
+     <p>Rabel</p>
+    </cell>
+    <cell id="3">
+     <p>Trutruka</p>
+    </cell>
+    <cell id="4">
+     <p>Ukelele</p>
+    </cell>
+    <cell id="5">
+     <p>Pitos</p>
+    </cell>
+    <cell id="6">
+     <p>Tormento</p>
+    </cell>
+    <cell id="7">
+     <p>Acordeón</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="120.0" cellHeight="120.0" border="true" id="answers">
+    <style>
+     <font family="Times New Roman" size="30" bold="true" />
+     <color foreground="0x004000" background="0xFFB3B3" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Norte </p>
+    </cell>
+    <cell>
+     <p>Central </p>
+    </cell>
+    <cell>
+     <p>Sur</p>
+    </cell>
+    <cell>
+     <p>Sur</p>
+    </cell>
+    <cell>
+     <p>Insular</p>
+    </cell>
+    <cell>
+     <p>Norte </p>
+    </cell>
+    <cell>
+     <p>Central </p>
+    </cell>
+    <cell>
+     <p>Sur</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="120.0" cellHeight="120.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Norte </p>
+    </cell>
+    <cell>
+     <p>Central </p>
+    </cell>
+    <cell>
+     <p>Sur</p>
+    </cell>
+    <cell>
+     <p>Sur</p>
+    </cell>
+    <cell>
+     <p>Insular</p>
+    </cell>
+    <cell>
+     <p>Norte </p>
+    </cell>
+    <cell>
+     <p>Central </p>
+    </cell>
+    <cell>
+     <p>Sur</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="cacharpa.bmp" file="cacharpa.bmp" />
+  <media name="musica.bmp" file="musica.bmp" />
+  <media name="corrido.wav" file="corrido.wav" />
+  <media name="cueca.wav" file="cueca.wav" />
+  <media name="genial.wav" file="genial.wav" />
+  <media name="muybien.wav" file="muybien.wav" />
+  <media name="perfec.wav" file="perfec.wav" />
+  <media name="trote.wav" file="trote.wav" />
+  <media name="vals.wav" file="vals.wav" />
+ </mediaBag>
+</JClicProject>
+

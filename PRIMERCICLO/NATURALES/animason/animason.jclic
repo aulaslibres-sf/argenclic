@@ -1,0 +1,2834 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="inicio" version="0.1.3">
+ <settings>
+  <title>Sonidos de animales</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="7/11/01" />
+  <revision description="Conversión de Clic3 a JClic" date="5/2/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Carlos Gutierrez" mail="cgua0001@enebro.pntic.mec.es" />
+  <author name="Lucía Serrano Vera" />
+  <author name="Purificación Sancho Caballero" />
+  <organization name="IES Ramón y Cajal" mail="iesryczaragoza@educa.aragob.es" city="Zaragoza" state="Aragón" />
+  <language>es</language>
+  <description>
+   <p>Paquete de actividades de discriminación auditiva que se organiza en dos partes:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Escucha el sonido de todos los animales</p>
+   <p>&lt;LI&gt;Ahora juega a adivinar quien habla</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area-codes="exp" level="Primaria, Secundaria">sonidos de animales</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Paquete de actividades de discriminación auditiva que se organiza en dos partes:</p>
+    <p>&lt;UL&gt;</p>
+    <p>&lt;LI&gt;Escucha el sonido de todos los animales</p>
+    <p>&lt;LI&gt;Ahora juega a adivinar quien habla</p>
+    <p>&lt;/UL&gt;</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="inicio.pac" name="portada.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="inicio.ass">
+   <jump action="STOP" id="forward" />
+  </item>
+  <item id="anima01.pac" name="1.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="111.ass" />
+  <item name="11.sop" />
+  <item name="1.puz" />
+  <item name="2.ass" />
+  <item name="211.ass" />
+  <item name="22.sop" />
+  <item name="2.puz" />
+  <item name="3.ass" />
+  <item name="311.ass" />
+  <item name="33.sop" />
+  <item name="3.puz" />
+  <item name="4.ass" />
+  <item name="411.ass" />
+  <item name="44.sop" />
+  <item name="4.puz">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="anima02.pac" name="111o1.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="211o1.ass" />
+  <item name="311o1.ass" />
+  <item name="411o1.ass" />
+  <item name="111o2.ass" />
+  <item name="211o2.ass" />
+  <item name="411o2.ass" />
+  <item name="111o3.ass" />
+  <item name="211o3.ass" />
+  <item name="311o3.ass" />
+  <item name="411o3.ass" />
+  <item name="111o4.ass" />
+  <item name="311o4.ass" />
+  <item name="411o4.ass" />
+  <item name="111o5.ass" />
+  <item name="211o5.ass" />
+  <item name="311o5.ass" />
+  <item name="411o5.ass" />
+  <item name="111o6.ass" />
+  <item name="211o6.ass" />
+  <item name="311o6.ass" />
+  <item name="411o6.ass" />
+  <item name="211o7.ass" />
+  <item name="311o7.ass" />
+  <item name="411o7.ass" />
+  <item name="111o8.ass" />
+  <item name="411o8.ass" />
+  <item name="111o9.ass" />
+  <item name="311o9.ass" />
+  <item name="411o9.ass" />
+  <item name="5.puz">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.Explore" name="1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x8000FF" background="0xFFFFFF" />
+     </style>
+     <p>Pulsa encima de cada animal y conocerás su nombre y su sonido</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x8000FF" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x8080FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x8080FF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="111.jpg" id="primary">
+    <style>
+     <color foreground="0x8000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>0 1 2 3 4 5 6 7 8</ids>
+   </cells>
+   <cells rows="9" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0xFF0080" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="9" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="79116" to="82800" />
+     <p>Oveja</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="29629" to="33629" />
+     <p>Grillo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="6484" to="11634" />
+     <p>Gorila</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="21331" to="25631" />
+     <p>Pato</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="0" to="6485" />
+     <p>Lechuza</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="73217" to="79117" />
+     <p>León</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="107358" to="112500" />
+     <p>Serpiente cascabel</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="40926" to="44726" />
+     <p>Perro</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="66419" to="69419" />
+     <p>Ganso</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="1.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xDDC9A4" background="0xFFFFFF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>Si me ordenas, verás como galopo</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xDDC9A4" background="0xFFFFFF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="animales.wav" from="11633" to="15633" />
+     <p>Lo has hecho muy bien, escucha como RELINCHO</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xDDC9A4">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="4" cols="4" border="false" image="caballog.jpg">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="11.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x80FFFF">
+     <image name="02cebra.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <textGrid rows="10" columns="10" cellWidth="70.0" cellHeight="70.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>LCASCABEL*</row>
+     <row>EO***L****</row>
+     <row>C*S**I****</row>
+     <row>H**N*R***P</row>
+     <row>U***AOVEJA</row>
+     <row>ZP**LG***T</row>
+     <row>AE*LEON**O</row>
+     <row>*RI*******</row>
+     <row>*R********</row>
+     <row>GO********</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">OVEJA</clue>
+    <clue id="1">GRILLO</clue>
+    <clue id="2">GORILA</clue>
+    <clue id="3">PATO</clue>
+    <clue id="4">LECHUZA</clue>
+    <clue id="5">LEON</clue>
+    <clue id="6">CASCABEL</clue>
+    <clue id="7">PERRO</clue>
+    <clue id="8">GANSO</clue>
+   </clues>
+   <cells rows="9" cols="1" cellWidth="300.0" cellHeight="93.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="9" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="79116" to="82800" />
+     <p>oveja</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="29629" to="33629" />
+     <p>grillo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="6484" to="11634" />
+     <p>gorila</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="21331" to="25631" />
+     <p>pato</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="0" to="6485" />
+     <p>lechuza</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="73217" to="79117" />
+     <p>león</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="107358" to="112500" />
+     <p>serpiente cascabel</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="40926" to="44726" />
+     <p>perro</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="66419" to="69419" />
+     <p>ganso</p>
+    </cell>
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="111.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="27" bold="true" />
+      <color foreground="0xFF80C0" background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>UNE EL NOMBRE DE CADA ANIMAL CON SU FOTOGRAFIA</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="27" bold="true" />
+      <color foreground="0xFF80C0" background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF80C0">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF80C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="140.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0080FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="79116" to="82800" />
+     <p>Oveja</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="29629" to="33629" />
+     <p>Grillo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="6484" to="11634" />
+     <p>Gorila</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="21331" to="25631" />
+     <p>Pato</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="0" to="6485" />
+     <p>Lechuza</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="73217" to="79117" />
+     <p>León</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="107358" to="112500" />
+     <p>Serpiente cascabel</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="40926" to="44726" />
+     <p>Perro</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="66419" to="69419" />
+     <p>Ganso</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="111.jpg" id="secondary">
+    <style>
+     <font family="Arial" size="27" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <cells rows="3" cols="3" cellWidth="140.0" cellHeight="120.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="79116" to="82800" />
+     <p>Oveja</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="29629" to="33629" />
+     <p>Grillo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="6484" to="11634" />
+     <p>Gorila</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="21331" to="25631" />
+     <p>Pato</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="0" to="6485" />
+     <p>Lechuza</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="73217" to="79117" />
+     <p>León</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="107358" to="112500" />
+     <p>Serpiente cascabel</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="40926" to="44726" />
+     <p>Perro</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="66419" to="69419" />
+     <p>Ganso</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="111o1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="111.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>-1 -1 -1 -1 0 -1 -1 -1 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="0" to="6485" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="111.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="111o2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz clic en el altavoz y asocia con el animal correspondiente</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="111.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>-1 -1 -1 0 -1 -1 -1 -1 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="21331" to="25631" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="111.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="111o3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="111.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>-1 -1 -1 -1 -1 -1 -1 0 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="40926" to="44726" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="111.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="111o4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="111.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>-1 -1 -1 -1 -1 0 -1 -1 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="73217" to="79117" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="111.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="111o5.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="111.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>0 -1 -1 -1 -1 -1 -1 -1 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="79116" to="83116" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="111.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="111o6.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="111.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>-1 0 -1 -1 -1 -1 -1 -1 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="29629" to="33629" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="111.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="111o8.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="111.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>-1 -1 -1 -1 -1 -1 0 -1 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="107358" to="112500" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="111.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="111o9.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="111.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>-1 -1 -1 -1 -1 -1 -1 -1 0</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="66419" to="69419" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="111.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x8000FF" background="0xFFFFFF" />
+     </style>
+     <p>Pulsa encima de cada animal y conocerás su nombre y su sonido</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x8000FF" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x8080FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x8080FF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="211.jpg" id="primary">
+    <style>
+     <color foreground="0x8000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>0 1 2 3 4 5 6 7 8</ids>
+   </cells>
+   <cells rows="9" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0xFF0080" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="9" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="97561" to="100200" />
+     <p>RANA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="103859" to="107000" />
+     <p>PAVO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="51723" to="55200" />
+     <p>GATO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="0" to="6485" />
+     <p>LECHUZA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="6484" to="11634" />
+     <p>GORILA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="83115" to="87000" />
+     <p>PÁJARO CARPINTERO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="11633" to="15633" />
+     <p>CABALLO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="87314" to="91000" />
+     <p>FOCA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="15632" to="21332" />
+     <p>ELEFANTE</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="2.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x0080C0" background="0x80FFFF" />
+     </style>
+     <p>Ordena estas piezas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x0080C0" background="0x80FFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="animales.wav" from="118256" to="123504" />
+     <p>Escucha como chillo de alegría</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="4" border="false" image="delfing.jpg">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="211.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="27" bold="true" />
+      <color foreground="0xFF80C0" background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>UNE EL NOMBRE DE CADA ANIMAL CON SU FOTOGRAFIA</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="27" bold="true" />
+      <color foreground="0xFF80C0" background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF80C0">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF80C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="140.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color foreground="0x0080FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="97561" to="100200" />
+     <p>RANA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="103859" to="107000" />
+     <p>PAVO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="51723" to="55200" />
+     <p>GATO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="0" to="6485" />
+     <p>LECHUZA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="6484" to="11634" />
+     <p>GORILA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="83115" to="87000" />
+     <p>PÁJARO CARPINTERO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="11633" to="15633" />
+     <p>CABALLO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="87314" to="91000" />
+     <p>FOCA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="15632" to="21332" />
+     <p>ELEFANTE</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="211.jpg" id="secondary">
+    <style>
+     <font family="Arial" size="27" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <cells rows="3" cols="3" cellWidth="140.0" cellHeight="120.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="97561" to="100200" />
+     <p>RANA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="103859" to="107000" />
+     <p>PAVO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="51723" to="55200" />
+     <p>GATO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="0" to="6485" />
+     <p>LECHUZA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="6484" to="11634" />
+     <p>GORILA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="83115" to="87000" />
+     <p>PÁJARO CARPINTERO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="11633" to="15633" />
+     <p>CABALLO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="87314" to="91000" />
+     <p>FOCA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="15632" to="21332" />
+     <p>ELEFANTE</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="211o1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="211.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>0 -1 -1 -1 -1 -1 -1 -1 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="97561" to="100200" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="211.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="211o2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="211.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>-1 0 -1 -1 -1 -1 -1 -1 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="103859" to="107000" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="211.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="211o3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="211.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>-1 -1 0 -1 -1 -1 -1 -1 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="51723" to="55200" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="211.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="211o5.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="211.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>-1 -1 -1 -1 0 -1 -1 -1 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="6484" to="11634" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="211.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="211o6.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="211.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>-1 -1 -1 -1 -1 0 -1 -1 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="83115" to="87000" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="211.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="211o7.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="211.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>-1 -1 -1 -1 -1 -1 0 -1 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="11633" to="15633" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="211.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="22.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x80FFFF">
+     <image name="03cebra.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <textGrid rows="10" columns="10" cellWidth="70.0" cellHeight="70.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>GORILA***O</row>
+     <row>*****ANART</row>
+     <row>*******E*A</row>
+     <row>O*****TL*G</row>
+     <row>L****N*E**</row>
+     <row>L***I**F**</row>
+     <row>A**P*OVAP*</row>
+     <row>B*R****N**</row>
+     <row>AACOF**T**</row>
+     <row>C*AZUHCEL*</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">RANA</clue>
+    <clue id="1">PAVO</clue>
+    <clue id="2">GATO</clue>
+    <clue id="3">LECHUZA</clue>
+    <clue id="4">GORILA</clue>
+    <clue id="5">CARPINTERO</clue>
+    <clue id="6">CABALLO</clue>
+    <clue id="7">FOCA</clue>
+    <clue id="8">ELEFANTE</clue>
+   </clues>
+   <cells rows="9" cols="1" cellWidth="300.0" cellHeight="93.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFFFF80" alternative="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="9" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="97561" to="100200" />
+     <p>RANA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="103859" to="107000" />
+     <p>PAVO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="51723" to="55200" />
+     <p>GATO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="0" to="6485" />
+     <p>LECHUZA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="6484" to="11634" />
+     <p>GORILA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="83115" to="87000" />
+     <p>PÁJARO CARPINTERO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="11633" to="15633" />
+     <p>CABALLO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="87314" to="91000" />
+     <p>FOCA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="15632" to="21332" />
+     <p>ELEFANTE</p>
+    </cell>
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x8000FF" background="0xFFFFFF" />
+     </style>
+     <p>Pulsa encima de cada animal y conocerás su nombre y su sonido</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x8000FF" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x8080FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x8080FF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="311.jpg" id="primary">
+    <style>
+     <color foreground="0x8000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>0 1 2 3 4 5 6 7 8</ids>
+   </cells>
+   <cells rows="9" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0xFF0080" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="9" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="49124" to="51724" />
+     <p>Cerdo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="21331" to="25631" />
+     <p>Pato</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="62020" to="66220" />
+     <p>Abeja</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="15632" to="21332" />
+     <p>Elefante</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="118256" to="123000" />
+     <p>Delfín</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="69418" to="73000" />
+     <p>Paloma</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="59321" to="61900" />
+     <p>Faisán</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="37227" to="40927" />
+     <p>Vaca</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="100460" to="103600" />
+     <p>Mono</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="3.puz">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Me he caído del árbol y me he hecho trozos, vuelve a hacerme</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="animales.wav" from="0" to="6485" />
+     <p>Escucha el ULULAR de la lechuza</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="4" border="false" image="lechuzag.jpg">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="311.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="27" bold="true" />
+      <color foreground="0xFF80C0" background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>UNE EL NOMBRE DE CADA ANIMAL CON SU FOTOGRAFIA</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="27" bold="true" />
+      <color foreground="0xFF80C0" background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF80C0">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF80C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="140.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0080FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="49124" to="51724" />
+     <p>Cerdo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="21331" to="25631" />
+     <p>Pato</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="62020" to="66220" />
+     <p>Abeja</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="15632" to="21332" />
+     <p>Elefante</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="118256" to="123000" />
+     <p>Delfín</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="69418" to="73000" />
+     <p>Paloma</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="59321" to="61900" />
+     <p>Faisán</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="37227" to="40927" />
+     <p>Vaca</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="100460" to="103600" />
+     <p>Mono</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="311.jpg" id="secondary">
+    <style>
+     <font family="Arial" size="27" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <cells rows="3" cols="3" cellWidth="140.0" cellHeight="120.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="49124" to="51724" />
+     <p>Cerdo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="21331" to="25631" />
+     <p>Pato</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="62020" to="66220" />
+     <p>Abeja</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="15632" to="21332" />
+     <p>Elefante</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="118256" to="123000" />
+     <p>Delfín</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="69418" to="73000" />
+     <p>Paloma</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="59321" to="61900" />
+     <p>Faisán</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="37227" to="40927" />
+     <p>Vaca</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="100460" to="103600" />
+     <p>Mono</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="311o1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="311.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>0 -1 -1 -1 -1 -1 -1 -1 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="49124" to="51724" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="311.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="311o3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="311.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>-1 -1 0 -1 -1 -1 -1 -1 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="62020" to="66200" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="311.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="311o4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="311.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>-1 -1 -1 0 -1 -1 -1 -1 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="15632" to="21332" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="311.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="311o5.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="311.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>-1 -1 -1 -1 0 -1 -1 -1 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="118256" to="123000" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="311.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="311o6.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="311.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>-1 -1 -1 -1 -1 0 -1 -1 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="69418" to="73000" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="311.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="311o7.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="311.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>-1 -1 -1 -1 -1 -1 0 -1 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="59321" to="61900" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="311.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="311o9.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="311.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>-1 -1 -1 -1 -1 -1 -1 -1 0</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="100460" to="103600" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="311.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="33.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x80FFFF">
+     <image name="04cebra.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <textGrid rows="10" columns="10" cellWidth="70.0" cellHeight="70.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>E****D***P</row>
+     <row>*L***EACAV</row>
+     <row>**E**L*TJ*</row>
+     <row>***F*FO*E*</row>
+     <row>***AAI**B*</row>
+     <row>***IMN**AO</row>
+     <row>***SOOT**D</row>
+     <row>***AL*NE*R</row>
+     <row>***NA**O*E</row>
+     <row>****P****C</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">CERDO</clue>
+    <clue id="1">PATO</clue>
+    <clue id="2">ABEJA</clue>
+    <clue id="3">ELEFANTE</clue>
+    <clue id="4">DELFIN</clue>
+    <clue id="5">PALOMA</clue>
+    <clue id="6">FAISAN</clue>
+    <clue id="7">VACA</clue>
+    <clue id="8">MONO</clue>
+   </clues>
+   <cells rows="9" cols="1" cellWidth="300.0" cellHeight="93.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xF9CCFB" alternative="0xF9CCFB" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="9" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="49124" to="51724" />
+     <p>CERDO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="21331" to="25631" />
+     <p>PATO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="62020" to="66200" />
+     <p>ABEJA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="15632" to="21332" />
+     <p>ELEFANTE</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="118256" to="123000" />
+     <p>DELFÍN</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="69418" to="73000" />
+     <p>PALOMA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="59321" to="61900" />
+     <p>FAISÁN</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="37227" to="40927" />
+     <p>VACA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="100460" to="103600" />
+     <p>MONO</p>
+    </cell>
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x8000FF" background="0xFFFFFF" />
+     </style>
+     <p>Pulsa encima de cada animal y conocerás su nombre y su sonido</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x8000FF" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x8080FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x8080FF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="411.jpg" id="primary">
+    <style>
+     <color foreground="0x8000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>0 1 2 3 4 5 6 7 8</ids>
+   </cells>
+   <cells rows="9" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0xFF0080" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="9" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="25630" to="29630" />
+     <p>CUCO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="37227" to="40927" />
+     <p>VACA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="91213" to="93063" />
+     <p>GALLO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="44725" to="49125" />
+     <p>HIENA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="33628" to="37228" />
+     <p>RATÓN</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="112857" to="117900" />
+     <p>LOBO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="87314" to="91000" />
+     <p>FOCA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="93362" to="97262" />
+     <p>BURRO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="55322" to="59222" />
+     <p>GAVIOTA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="4.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xEA9C55" background="0xFFFFFF" />
+     </style>
+     <p>Ordena mis trocitos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xEA9C55" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="animales.wav" from="40926" to="44726" />
+     <p>lo has hecho muy bien, oye qué contento estoy </p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xD0A76F">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="4" border="false" image="perrog.jpg">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="411.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="27" bold="true" />
+      <color foreground="0xFF80C0" background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>UNE EL NOMBRE DE CADA ANIMAL CON SU FOTOGRAFIA</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="27" bold="true" />
+      <color foreground="0xFF80C0" background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF80C0">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF80C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="140.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0080FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="25630" to="29630" />
+     <p>CUCO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="37227" to="40927" />
+     <p>VACA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="91213" to="93063" />
+     <p>GALLO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="44725" to="49125" />
+     <p>HIENA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="33628" to="37228" />
+     <p>RATÓN</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="112857" to="117900" />
+     <p>LOBO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="87314" to="91000" />
+     <p>FOCA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="93362" to="97262" />
+     <p>BURRO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="55322" to="59222" />
+     <p>GAVIOTA</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="411.jpg" id="secondary">
+    <style>
+     <font family="Arial" size="27" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <cells rows="3" cols="3" cellWidth="140.0" cellHeight="120.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="25630" to="29630" />
+     <p>CUCO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="37227" to="40927" />
+     <p>VACA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="91213" to="93063" />
+     <p>GALLO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="44725" to="49125" />
+     <p>HIENA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="33628" to="37228" />
+     <p>RATÓN</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="112857" to="117900" />
+     <p>LOBO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="87314" to="91000" />
+     <p>FOCA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="93362" to="97262" />
+     <p>BURRO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="55322" to="59222" />
+     <p>GAVIOTA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="411o1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="411.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>0 -1 -1 -1 -1 -1 -1 -1 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="25630" to="29630" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="411.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="411o2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="411.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>-1 0 -1 -1 -1 -1 -1 -1 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="37227" to="40927" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="411.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="411o3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="411.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>-1 -1 0 -1 -1 -1 -1 -1 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="91213" to="93063" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="411.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="411o4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="411.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>-1 -1 -1 0 -1 -1 -1 -1 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="44725" to="49125" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="411.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="411o5.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="411.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>-1 -1 -1 -1 0 -1 -1 -1 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="33628" to="37228" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="411.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="411o6.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="411.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>-1 -1 -1 -1 -1 0 -1 -1 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="112857" to="117900" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="411.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="411o7.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="411.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>-1 -1 -1 -1 -1 -1 0 -1 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="87314" to="91000" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="411.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="411o8.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="411.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>-1 -1 -1 -1 -1 -1 -1 0 -1</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="93362" to="97262" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="411.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="411o9.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>Haz CLIC en el altavoz, y relaciona con el animal</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x808040" background="0xFFFFFF" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xE3D99D">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="411.jpg" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>-1 -1 -1 -1 -1 -1 -1 -1 0</ids>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="55322" to="59222" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="false" image="411.jpg" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="44.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x80FFFF">
+     <image name="06cebra.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <textGrid rows="10" columns="10" cellWidth="70.0" cellHeight="70.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>RATON*****</row>
+     <row>**C*******</row>
+     <row>***ORRUB**</row>
+     <row>CUCOF***A*</row>
+     <row>**BH****T*</row>
+     <row>*O*I****O*</row>
+     <row>LL*E****I*</row>
+     <row>*L*N****V*</row>
+     <row>VACA****A*</row>
+     <row>*G******G*</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">CUCO</clue>
+    <clue id="1">VACA</clue>
+    <clue id="2">GALLO</clue>
+    <clue id="3">HIENA</clue>
+    <clue id="4">RATON</clue>
+    <clue id="5">LOBO</clue>
+    <clue id="6">FOCA</clue>
+    <clue id="7">BURRO</clue>
+    <clue id="8">GAVIOTA</clue>
+   </clues>
+   <cells rows="9" cols="1" cellWidth="300.0" cellHeight="93.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xD2D3FD" alternative="0xD2D3FD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="9" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="25630" to="29630" />
+     <p>CUCO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="37227" to="40927" />
+     <p>VACA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="91213" to="93063" />
+     <p>GALLO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="44725" to="49125" />
+     <p>HIENA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="33628" to="37228" />
+     <p>RATÓN</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="112857" to="117900" />
+     <p>LOBO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="87314" to="91000" />
+     <p>FOCA</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="93362" to="97262" />
+     <p>BURRO</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="animales.wav" from="55322" to="59222" />
+     <p>GAVIOTA</p>
+    </cell>
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="5.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x8080C0" background="0xFFFFFF" />
+     </style>
+     <p>Después de tanto sonido, relájate con esta cebra, PERO CUIDA CON LAS RAYAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x8080C0" background="0xFFFFFF" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="01cebra.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="false" image="zebra.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="inicio.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0x8F84FB" background="0xFFFFFF" />
+     </style>
+     <p>Haz clic siguiendo el orden</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0x8F84FB" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x8080FF">
+     <image name="05cebra.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="2" cellWidth="220.0" cellHeight="220.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="inicio1.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="anima01.pac" />
+    </cell>
+    <cell image="inicio2.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="anima02.pac" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="portada.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFBD">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="portada.gif">
+    <style>
+     <color background="0xFFFFBD" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="01cebra.gif" file="01cebra.gif" animated="false" />
+  <media name="02cebra.gif" file="02cebra.gif" animated="false" />
+  <media name="03cebra.gif" file="03cebra.gif" animated="false" />
+  <media name="04cebra.gif" file="04cebra.gif" animated="false" />
+  <media name="05cebra.gif" file="05cebra.gif" animated="false" />
+  <media name="06cebra.gif" file="06cebra.gif" animated="false" />
+  <media name="inicio1.gif" file="inicio1.gif" animated="false" />
+  <media name="inicio2.gif" file="inicio2.gif" animated="false" />
+  <media name="portada.gif" file="portada.gif" animated="false" />
+  <media name="zebra.gif" file="zebra.gif" animated="false" />
+  <media name="111.jpg" file="111.jpg" />
+  <media name="211.jpg" file="211.jpg" />
+  <media name="311.jpg" file="311.jpg" />
+  <media name="411.jpg" file="411.jpg" />
+  <media name="caballog.jpg" file="caballog.jpg" />
+  <media name="delfing.jpg" file="delfing.jpg" />
+  <media name="lechuzag.jpg" file="lechuzag.jpg" />
+  <media name="perrog.jpg" file="perrog.jpg" />
+  <media name="animales.wav" file="animales.wav" />
+ </mediaBag>
+</JClicProject>
+

@@ -1,0 +1,1796 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="SANMART" version="0.1.3">
+ <settings>
+  <title>José de San Martín</title>
+  <revision description="Adaptación para JClic" date="1/4/05">
+   <author name="María Eugenia Núñez" mail="eugenunez@yahoo.com.ar" organization="&quot;Proyecto ArgenClic&quot;" />
+  </revision>
+  <author name="Alumnos del curso &quot;La informática como recurso didáctico&quot; dictado por el Prof. Fernando Pelillo en agosto de 2002." mail="fernandopelillo@yahoo.com.ar" organization="&quot;Proyecto ArgenClic&quot;" />
+  <language>es</language>
+  <description>
+   <p>Conjunto de actividades dirigidas a EGB en las que se desarrollan contenidos relacionados con la bandera nacional y Manuel Belgrano, su creador.</p>
+  </description>
+  <descriptors area="Ciencias Sociales" level="EGB2" />
+  <skin file="@blue.xml" />
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Conjunto de actividades dirigidas a EGB en las que se desarrollan contenidos relacionados con la bandera nacional y Manuel Belgrano, su creador.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="sanmart.pac" name="inicio.ass" delay="8">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="portada.ass" delay="8" />
+  <item name="marti.puz" delay="8" />
+  <item name="marti1.puz" delay="8" />
+  <item name="mapa.puz" delay="8" />
+  <item name="txt1.txa" delay="8" />
+  <item name="yapeyu.ass" delay="8" />
+  <item name="samartin.ass" delay="8" />
+  <item name="txt2.txa" delay="8" />
+  <item name="cabral.txa" delay="8" />
+  <item name="martu0.ass" delay="8" />
+  <item name="martu.ass" delay="8" />
+  <item name="argen.ass" delay="8" />
+  <item name="chile.ass" delay="8" />
+  <item name="peru.ass" delay="8" />
+  <item name="andes.ass" delay="8" />
+  <item name="escudo.puz" delay="8" />
+  <item name="simbol.ass" delay="8" />
+  <item name="simbol1.ass" delay="8" />
+  <item name="simbol2.ass" delay="8" />
+  <item name="memo.puz" delay="8" />
+  <item name="simbol3.ass" delay="8" />
+  <item name="simbol4.ass" delay="8" />
+  <item name="txt3.txa" delay="8" />
+  <item name="maximas.txa" delay="8" />
+  <item name="triunfo.sop" delay="8" />
+  <item name="fin.ass" delay="8">
+   <jump action="STOP" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="andes.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>La Bandera del Ejército de los Andes</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="andes300.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="bandand.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.Identify" name="argen.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>¿Cuál es el país coloreado?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <image name="latinarg.gif" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <position x="0" y="0" />
+    </window>
+   </settings>
+   <cells rows="3" cols="1" cellWidth="120.0" cellHeight="150.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="1" image="argentin.gif" />
+    <cell id="0" image="chile.gif" />
+    <cell id="0" image="peru.gif" />
+   </cells>
+   <cells rows="3" cols="1" cellWidth="120.0" cellHeight="150.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>Argentina</p>
+    </cell>
+    <cell>
+     <p>Chile</p>
+    </cell>
+    <cell>
+     <p>Perú</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="cabral.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Courier New" size="18" bold="true" italic="true" />
+      <color foreground="0x0000FF" background="0x80FFFF" />
+     </style>
+     <p>Completa con el verbo correspondiente</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Courier New" size="18" bold="true" italic="true" />
+      <color foreground="0x0000FF" background="0x80FFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="cabral.wav" />
+     <p>¡Qué inteligente eres!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="600" height="466" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" size="16" background="0x80FFFF" italic="true" foreground="0x0000FF" tabWidth="16" bold="false" family="Courier New" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p size="16" background="0x80FFFF" italic="true" foreground="0x0000FF" bold="false" family="Courier New">
+      <cell width="330" height="100" border="false">
+       <style borderStroke="0.7" markerStroke="5.0">
+        <font family="Courier New" size="20" bold="true" italic="true" />
+        <color foreground="0xFF0080" background="0x80FFFF" />
+       </style>
+       <p>EL COMBATE DE SAN LORENZO</p>
+      </cell>
+     </p>
+     <p size="16" background="0x80FFFF" italic="true" foreground="0x0000FF" bold="false" family="Courier New">
+      <text size="18" background="0x80FFFF" italic="true" foreground="0x0000FF" bold="false" family="Courier New">El 3 de febrero de 1813 los españoles </text>
+      <target>
+       <answer>desembarcaron</answer>
+       <optionList>
+        <option>desembarcaron</option>
+        <option>aterrizaron</option>
+        <option>huyeron</option>
+       </optionList>
+       <text>desembarcaron</text>
+      </target>
+      <text size="18" background="0x80FFFF" italic="true" foreground="0x0000FF" bold="false" family="Courier New">. </text>
+      <target>
+       <answer>Eran</answer>
+       <optionList>
+        <option>Eran</option>
+        <option>Estaban</option>
+        <option>Parecían </option>
+       </optionList>
+       <text>Eran</text>
+      </target>
+      <text size="18" background="0x80FFFF" italic="true" foreground="0x0000FF" bold="false" family="Courier New"> un total de 250 hombres. A una orden de San Martín los granaderos, sable en mano, </text>
+      <target>
+       <answer>surgieron</answer>
+       <optionList>
+        <option>aparecieron</option>
+        <option>surgieron</option>
+        <option>se fueron</option>
+       </optionList>
+       <text>surgieron</text>
+      </target>
+      <text size="18" background="0x80FFFF" italic="true" foreground="0x0000FF" bold="false" family="Courier New"> desde ambos lados del convento, sorprendiendo a los españoles. El combate no </text>
+      <target>
+       <answer>duró</answer>
+       <optionList>
+        <option>llegó</option>
+        <option>bastó</option>
+        <option>duró</option>
+       </optionList>
+       <text>duró</text>
+      </target>
+      <text size="18" background="0x80FFFF" italic="true" foreground="0x0000FF" bold="false" family="Courier New"> más de 3 minutos, pero bastó para que los realistas </text>
+      <target>
+       <answer>perdieran</answer>
+       <optionList>
+        <option>ganaran</option>
+        <option>perdieran</option>
+        <option>obtuvieran</option>
+       </optionList>
+       <text>perdieran</text>
+      </target>
+      <text size="18" background="0x80FFFF" italic="true" foreground="0x0000FF" bold="false" family="Courier New"> muchos hombres y armas, y se retiraran vencidos hacia sus embarcaciones. </text>
+     </p>
+     <p size="16" background="0x80FFFF" italic="true" foreground="0x0000FF" bold="false" family="Courier New">
+      <text size="18" background="0x80FFFF" italic="true" foreground="0x0000FF" bold="false" family="Courier New">Durante la lucha el caballo de San Martín </text>
+      <target>
+       <answer>rodó</answer>
+       <optionList>
+        <option>voló</option>
+        <option>comió</option>
+        <option>rodó</option>
+       </optionList>
+       <text>rodó</text>
+      </target>
+      <text size="18" background="0x80FFFF" italic="true" foreground="0x0000FF" bold="false" family="Courier New">, apretándole una pierna. Le </text>
+      <target>
+       <answer>salvó</answer>
+       <optionList>
+        <option>salvó</option>
+        <option>quitó</option>
+        <option>perjudicó</option>
+       </optionList>
+       <text>salvó</text>
+      </target>
+      <text size="18" background="0x80FFFF" italic="true" foreground="0x0000FF" bold="false" family="Courier New"> la vida el sargento de granaderos Juan Bautista Cabral, quien </text>
+      <target>
+       <answer>murió</answer>
+       <optionList>
+        <option>vivió</option>
+        <option>se enfermó</option>
+        <option>murió</option>
+       </optionList>
+       <text>murió</text>
+      </target>
+      <text size="18" background="0x80FFFF" italic="true" foreground="0x0000FF" bold="false" family="Courier New"> en la acción al interponerse entre San Martín y la bayoneta de un soldado español.</text>
+     </p>
+     <p size="16" background="0x80FFFF" italic="true" foreground="0x0000FF" bold="false" family="Courier New" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.Identify" name="chile.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>¿Cuál es el país coloreado?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <image name="latinchi.gif" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <position x="0" y="0" />
+    </window>
+   </settings>
+   <cells rows="3" cols="1" cellWidth="120.0" cellHeight="150.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="0" image="argentin.gif" />
+    <cell id="1" image="chile.gif" />
+    <cell id="0" image="peru.gif" />
+   </cells>
+   <cells rows="3" cols="1" cellWidth="120.0" cellHeight="150.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>Argentina</p>
+    </cell>
+    <cell>
+     <p>Chile</p>
+    </cell>
+    <cell>
+     <p>Perú</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="escudo.puz" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>ARMA el ESCUDO de la BANDERA de los ANDES</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="estro1.wav" />
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="vejezsm.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="nacion1.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="fin.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="intro.wav" />
+     <p>HASTA LA PRÓXIMA</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0x0080FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="andes300.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="150.0" border="false">
+    <style shadow="true">
+     <font family="Arial" size="18" />
+     <color foreground="0xFFFFFF" background="0x0080FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>Este es el final de la actividad. Espero que te haya sido útil para aprender. Buena Suerte!!!</p>
+    </cell>
+    <cell image="gral2.gif" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="inicio.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0x0000FF" background="0xFFFFFF" shadow="0x0080FF" inactive="0x0080FF" alternative="0x0080FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="intro.wav" />
+     <p>Para conocer a Don José de San Martín</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0x0000FF" background="0xFFFFFF" shadow="0x0080FF" inactive="0x0080FF" alternative="0x0080FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="inicio.gif">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="mapa.puz" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" inactive="0x800040" alternative="0x800040" />
+     </style>
+     <p>ARMA EL SITIO QUE SAN MARTÍN DESEABA VER LIBRE </p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0080FF" inactive="0x800040" alternative="0x800040" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="estro1.wav" />
+     <p>¡ES AMÉRICA DEL SUR!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x008040" border="true" />
+   </settings>
+   <cells rows="4" cols="4" border="true" image="amsur.gif">
+    <style>
+     <color foreground="0xFFFFFF" background="0x0080FF" inactive="0x800040" alternative="0x800040" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="marti.puz" code="">
+   <description>
+    <p>Armá la oración que hace referencia a la personaje</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>Armá la oración que hace referencia al personaje.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="estro1.wav" from="18900" />
+     <p>Buen trabajo.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="jose.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="1" cols="5" cellWidth="140.0" cellHeight="100.0" border="false">
+    <style shadow="true">
+     <font family="Times New Roman" size="26" />
+     <color foreground="0x79FFFF" background="0x0000D2" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>EL</p>
+    </cell>
+    <cell>
+     <p>SANTO</p>
+    </cell>
+    <cell>
+     <p>DE</p>
+    </cell>
+    <cell>
+     <p>LA</p>
+    </cell>
+    <cell>
+     <p>ESPADA</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="marti1.puz" code="">
+   <description>
+    <p>Armá la oración que hace referencia a la personaje</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>VUELVE A HACERLO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="estro1.wav" from="28000" />
+     <p>Buen trabajo.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="jose.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="1" cols="5" cellWidth="140.0" cellHeight="100.0" border="false">
+    <style shadow="true">
+     <font family="Times New Roman" size="26" bold="true" />
+     <color foreground="0x79FFFF" background="0x0000D2" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>EL</p>
+    </cell>
+    <cell>
+     <p>PADRE</p>
+    </cell>
+    <cell>
+     <p>DE</p>
+    </cell>
+    <cell>
+     <p>LA</p>
+    </cell>
+    <cell>
+     <p>PATRIA</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="martu.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>Ubicá los 3 países que San Martín libertó</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="yalli.wav" from="7000" />
+     <p>Buen trabajo.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xB0B000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF9866" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="18" bold="true" italic="true" />
+     <color foreground="0xFF661C" background="0xFFFF5E" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="4">
+     <p>ARGENTINA</p>
+    </cell>
+    <cell id="3">
+     <p>CHILE</p>
+    </cell>
+    <cell id="0">
+     <p>PERU</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" border="false" image="amsur.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <cells rows="3" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>ARGENTINA</p>
+    </cell>
+    <cell>
+     <p>CHILE</p>
+    </cell>
+    <cell>
+     <p>PERU</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="martu0.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" />
+     </style>
+     <p>Marca los países liberados por San Martín</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="ynuestr.wav" />
+     <p>Buen trabajo.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xB0B000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF9866" border="true" />
+   </settings>
+   <cells rows="4" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="18" bold="true" italic="true" />
+     <color foreground="0xFF661C" background="0xFFFF5E" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell id="1">
+     <p>Argentina</p>
+    </cell>
+    <cell id="1">
+     <p>Chile</p>
+    </cell>
+    <cell id="1">
+     <p>Perú</p>
+    </cell>
+    <cell id="0">
+     <p>Brasil</p>
+    </cell>
+    <cell id="0">
+     <p>Bolivia</p>
+    </cell>
+    <cell id="0">
+     <p>Paraguay</p>
+    </cell>
+    <cell id="0">
+     <p>Venezuela</p>
+    </cell>
+    <cell id="0">
+     <p>Ecuador</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <p>ARGENTINA</p>
+    </cell>
+    <cell>
+     <p>CHILE</p>
+    </cell>
+    <cell>
+     <p>PERU</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="maximas.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color background="0xFFFF80" inactive="0x8080FF" alternative="0x8080FF" />
+     </style>
+     <p>Busca las palabras correctas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color background="0xFFFF80" inactive="0x8080FF" alternative="0x8080FF" />
+     </style>
+     <p>Lo lograste</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="gral2.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x800040" border="false">
+     <size width="571" height="530" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" size="17" background="0xFFFF80" italic="false" foreground="0x000000" tabWidth="16" bold="false" family="Arial" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">      </text>
+      <cell width="140" height="100" border="false" image="vejezsm.gif">
+       <style>
+        <font family="Arial Black" size="37" />
+        <color background="0xFFFF80" />
+       </style>
+      </cell>
+      <cell width="350" height="100" border="true">
+       <style>
+        <font family="Arial Black" size="37" />
+        <color background="0xFFFF80" />
+       </style>
+       <p>MÁXIMAS PARA MI HIJA MERCEDITAS</p>
+      </cell>
+     </p>
+     <p size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial" />
+     <p size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">En 1825, el general José de San Martín decidió escribir una serie de normas para dirigir la educación de su hija Merceditas. En ellas se encuentran las virtudes civiles del Libertador, y se puede advertir el amor, respeto hacia el prójimo, etc.</text>
+     </p>
+     <p size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial" />
+     <p size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">Humanizar el carácter y hacerlo sensible, aún con los </text>
+      <target>
+       <answer>insectos</answer>
+       <optionList>
+        <option>pajaros</option>
+        <option>perros</option>
+        <option>insectos</option>
+       </optionList>
+       <text>insectos</text>
+      </target>
+      <text size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial"> que nos perjudican. </text>
+     </p>
+     <p size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">Inspirarle amor a la verdad y odio a la </text>
+      <target>
+       <answer>mentira</answer>
+       <optionList>
+        <option>justicia</option>
+        <option>mentira</option>
+        <option>verdad</option>
+       </optionList>
+       <text>mentira</text>
+      </target>
+      <text size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">. </text>
+     </p>
+     <p size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">Inspirarle gran confianza y amistad, pero uniendo el respeto. </text>
+     </p>
+     <p size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">Estimular en</text>
+      <target>
+       <answer>Mercedes</answer>
+       <optionList>
+        <option>susana</option>
+        <option>Mercedes</option>
+        <option>catalina</option>
+       </optionList>
+       <text> Mercedes</text>
+      </target>
+      <text size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial"> la caridad a los </text>
+      <target>
+       <answer>pobres</answer>
+       <optionList>
+        <option>pobres</option>
+        <option>poderosos</option>
+        <option>ricos</option>
+       </optionList>
+       <text>pobres</text>
+      </target>
+      <text size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">. </text>
+     </p>
+     <p size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">Respeto hacia la propiedad ajena. </text>
+     </p>
+     <p size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">Acostumbrarla a guardar un </text>
+      <target>
+       <answer>secreto</answer>
+       <optionList>
+        <option>invento</option>
+        <option>secreto</option>
+        <option>chimento</option>
+       </optionList>
+       <text>secreto</text>
+      </target>
+      <text size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">. </text>
+     </p>
+     <p size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">Inspirarle sentimiento de respeto hacia todas las religiones. </text>
+     </p>
+     <p size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">Duilzura con los criados, pobres y viejos. </text>
+     </p>
+     <p size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">Que hable </text>
+      <target>
+       <answer>poco</answer>
+       <optionList>
+        <option>mucho</option>
+        <option>poco</option>
+        <option>bien</option>
+       </optionList>
+       <text>poco</text>
+      </target>
+      <text size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial"> y lo preciso. </text>
+     </p>
+     <p size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">Acostumbrarla a estar formal en la mesa. </text>
+     </p>
+     <p size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">Amar el aseo y desprecio al lujo. </text>
+     </p>
+     <p size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="17" background="0xFFFF80" italic="false" foreground="0x000000" bold="false" family="Arial"> </text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="memo.puz" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>ENCUENTRA LAS PAREJAS DE IMÁGENES </p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>QUÉ GENIO</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="argentin.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="frigio.gif" />
+    <cell image="laurel.gif" />
+    <cell image="pica.gif" />
+    <cell image="manos.gif" />
+    <cell image="sol.gif" />
+    <cell image="ovalo.gif" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="peru.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>¿Cuál es el país coloreado?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <image name="latinper.gif" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <position x="0" y="0" />
+    </window>
+   </settings>
+   <cells rows="3" cols="1" cellWidth="120.0" cellHeight="150.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="0" image="argentin.gif" />
+    <cell id="0" image="chile.gif" />
+    <cell id="1" image="peru.gif" />
+   </cells>
+   <cells rows="3" cols="1" cellWidth="120.0" cellHeight="150.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>Argentina</p>
+    </cell>
+    <cell>
+     <p>Chile</p>
+    </cell>
+    <cell>
+     <p>Perú</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="portada.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial Black" size="37" />
+      <color background="0xFFFF80" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="intro.wav" from="8000" />
+     <p>CURSO AGOSTO 2002</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial Black" size="37" />
+      <color background="0xFFFF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x004080">
+     <image name="relieve1.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFF00" border="false">
+     <position x="800" y="600" />
+    </window>
+   </settings>
+   <cells rows="9" cols="1" cellWidth="650.0" cellHeight="58.0" border="false">
+    <style>
+     <font family="Verdana" size="32" bold="true" />
+     <color foreground="0xFF0000" background="0xEBF084" inactive="0x0000FF" alternative="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="9" />
+    <cell>
+     <p>Está actividad la realizamos:</p>
+    </cell>
+    <cell>
+     <p>BALDI, MARÍA LAURA</p>
+    </cell>
+    <cell>
+     <p>GUTIÉRREZ,MARTA</p>
+    </cell>
+    <cell>
+     <p>JERONIMO,ANDREA</p>
+    </cell>
+    <cell>
+     <p>MC CARGO,MABEL</p>
+    </cell>
+    <cell>
+     <p>MARTINEZ,GABRIELA</p>
+    </cell>
+    <cell>
+     <p>SGRECCIA,NATALIA</p>
+    </cell>
+    <cell>
+     <p>TOMASI,NELIA LILIANA</p>
+    </cell>
+    <cell>
+     <p>MOREYRA,SABINA-ROMERO,BEATRIZ-TAMAGNO,VERONICA</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="samartin.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="18" bold="true" />
+      <color background="0xFFFF80" shadow="0xFF8080" inactive="0xFF8080" alternative="0xFF8080" />
+     </style>
+     <p>UNE EL NOMBRE CON EL PARENTEZCO</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="18" bold="true" />
+      <color background="0xFFFF80" shadow="0xFF8080" inactive="0xFF8080" alternative="0xFF8080" />
+     </style>
+     <p>BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF80C0">
+     <image name="jose.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x800040" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="350.0" cellHeight="100.0" border="false" id="primary">
+    <style shadow="true">
+     <font family="Arial" size="18" bold="true" />
+     <color background="0xFFFF80" shadow="0xFF8080" inactive="0xFF8080" alternative="0xFF8080" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>DON JUAN DE SAN MARTÍN</p>
+    </cell>
+    <cell>
+     <p>DOÑA GREGORIA MATORRAS DE SAN MARTÍN</p>
+    </cell>
+    <cell>
+     <p>MARÍA DE LOS REMEDIOS DE ESCALADA</p>
+    </cell>
+    <cell>
+     <p>MERCEDES TOMASA SAN MARTÍN</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style shadow="true">
+     <font family="Arial" size="18" bold="true" />
+     <color background="0xFFFF80" shadow="0xFF8080" inactive="0xFF8080" alternative="0xFF8080" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>PADRE</p>
+    </cell>
+    <cell>
+     <p>MADRE</p>
+    </cell>
+    <cell>
+     <p>ESPOSA</p>
+    </cell>
+    <cell>
+     <p>HIJA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="simbol.ass" code="" inverse="true">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFF80" background="0x4870A6" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Une cada parte con su nombre</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFF80" background="0x4870A6" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="estro1.wav" from="8700" />
+     <p>Sos imbatible!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="relieve1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="6" cols="5" border="false" image="nacion1.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="5" rows="6" scaleX="5.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,5,6</shape>
+     </enclosing>
+     <shape>M:1,0|L:1,1|L:1,2|L:4,2|L:4,1|L:4,0|X</shape>
+     <shape>M:0,1|L:0,2|L:0,3|L:0,4|L:0,5|L:1,5|L:1,4|L:1,3|L:1,2|L:1,1|X</shape>
+     <shape>M:4,1|L:4,2|L:4,3|L:4,4|L:4,5|L:5,5|L:5,4|L:5,3|L:5,2|L:5,1|X</shape>
+     <shape>M:1,2|L:1,3|L:1,4|L:2,4|L:2,3|L:2,2|X</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>M:3,2|L:3,3|L:3,4|L:4,4|L:4,3|L:4,2|X</shape>
+     <shape>rectangle:2,3,1,1</shape>
+     <shape>rectangle:1,4,3,1</shape>
+     <shape>rectangle:1,5,3,1</shape>
+    </shaper>
+    <ids>4 1 1 5 0 5 2 3 1</ids>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="18" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>GORRO FRIGIO</p>
+    </cell>
+    <cell>
+     <p>LAURELES</p>
+    </cell>
+    <cell>
+     <p>PICA</p>
+    </cell>
+    <cell>
+     <p>MANOS ENLAZADAS</p>
+    </cell>
+    <cell>
+     <p>SOL</p>
+    </cell>
+    <cell>
+     <p>OVALO</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="5" border="false" image="nacion1.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="5" rows="6" scaleX="5.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,5,6</shape>
+     </enclosing>
+     <shape>M:1,0|L:1,1|L:1,2|L:4,2|L:4,1|L:4,0|X</shape>
+     <shape>M:0,1|L:0,2|L:0,3|L:0,4|L:0,5|L:1,5|L:1,4|L:1,3|L:1,2|L:1,1|X</shape>
+     <shape>M:4,1|L:4,2|L:4,3|L:4,4|L:4,5|L:5,5|L:5,4|L:5,3|L:5,2|L:5,1|X</shape>
+     <shape>M:1,2|L:1,3|L:1,4|L:2,4|L:2,3|L:2,2|X</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>M:3,2|L:3,3|L:3,4|L:4,4|L:4,3|L:4,2|X</shape>
+     <shape>rectangle:2,3,1,1</shape>
+     <shape>rectangle:1,4,3,1</shape>
+     <shape>rectangle:1,5,3,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="simbol1.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>Une cada nombre con lo que simboliza</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="estro1.wav" from="18500" />
+     <p>Bravo</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="frigio.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="140.0" cellHeight="90.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="18" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>GORRO FRIGIO</p>
+    </cell>
+    <cell>
+     <p>LAURELES</p>
+    </cell>
+    <cell>
+     <p>PICA</p>
+    </cell>
+    <cell>
+     <p>MANOS ENLAZADAS</p>
+    </cell>
+    <cell>
+     <p>SOL</p>
+    </cell>
+    <cell>
+     <p>OVALO</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="480.0" cellHeight="90.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="18" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Simboliza la igualdad</p>
+    </cell>
+    <cell>
+     <p>Simboliza el triunfo</p>
+    </cell>
+    <cell>
+     <p>Simboliza la defensa de la libertad</p>
+    </cell>
+    <cell>
+     <p>Simboliza la unión de los pueblos americanos</p>
+    </cell>
+    <cell>
+     <p>Simboliza el nacimiento de una nueva Nación</p>
+    </cell>
+    <cell>
+     <p>Contiene los colores de la Bandera</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="simbol2.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>UNE CON SU IMAGEN</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>BUEN TRABAJO, CHE!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="relieve1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="18" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>GORRO FRIGIO</p>
+    </cell>
+    <cell>
+     <p>LAURELES</p>
+    </cell>
+    <cell>
+     <p>PICA</p>
+    </cell>
+    <cell>
+     <p>MANOS ENLAZADAS</p>
+    </cell>
+    <cell>
+     <p>SOL</p>
+    </cell>
+    <cell>
+     <p>OVALO</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="frigio.gif" />
+    <cell image="laurel.gif" />
+    <cell image="pica.gif" />
+    <cell image="manos.gif" />
+    <cell image="sol.gif" />
+    <cell image="ovalo.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="simbol3.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>¿Y AHORA?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>ESPECTACULAR</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="relieve1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="frigio.gif" />
+    <cell image="laurel.gif" />
+    <cell image="pica.gif" />
+    <cell image="manos.gif" />
+    <cell image="sol.gif" />
+    <cell image="ovalo.gif" />
+   </cells>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="18" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>Simboliza la igualdad</p>
+    </cell>
+    <cell>
+     <p>Simboliza el triunfo</p>
+    </cell>
+    <cell>
+     <p>Simboliza la defensa de la libertad</p>
+    </cell>
+    <cell>
+     <p>Simboliza la unión de los pueblos americanos</p>
+    </cell>
+    <cell>
+     <p>Simboliza el nacimiento de una nueva Nación</p>
+    </cell>
+    <cell>
+     <p>Contiene los colores de la Bandera</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="simbol4.ass" code="" inverse="true">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFF80" background="0x4870A6" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Une cada parte con su nombre</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFF80" background="0x4870A6" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Sos imbatible!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="relieve1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="6" cols="5" border="false" image="nacion1.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="5" rows="6" scaleX="5.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,5,6</shape>
+     </enclosing>
+     <shape>M:1,0|L:1,1|L:1,2|L:4,2|L:4,1|L:4,0|X</shape>
+     <shape>M:0,1|L:0,2|L:0,3|L:0,4|L:0,5|L:1,5|L:1,4|L:1,3|L:1,2|L:1,1|X</shape>
+     <shape>M:4,1|L:4,2|L:4,3|L:4,4|L:4,5|L:5,5|L:5,4|L:5,3|L:5,2|L:5,1|X</shape>
+     <shape>M:1,2|L:1,3|L:1,4|L:2,4|L:2,3|L:2,2|X</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>M:3,2|L:3,3|L:3,4|L:4,4|L:4,3|L:4,2|X</shape>
+     <shape>rectangle:2,3,1,1</shape>
+     <shape>rectangle:1,4,3,1</shape>
+     <shape>rectangle:1,5,3,1</shape>
+    </shaper>
+    <ids>4 1 1 5 0 5 2 3 1</ids>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="frigio.gif" />
+    <cell image="laurel.gif" />
+    <cell image="pica.gif" />
+    <cell image="manos.gif" />
+    <cell image="sol.gif" />
+    <cell image="ovalo.gif" />
+   </cells>
+   <cells rows="6" cols="5" border="false" image="nacion1.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="5" rows="6" scaleX="5.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,5,6</shape>
+     </enclosing>
+     <shape>M:1,0|L:1,1|L:1,2|L:4,2|L:4,1|L:4,0|X</shape>
+     <shape>M:0,1|L:0,2|L:0,3|L:0,4|L:0,5|L:1,5|L:1,4|L:1,3|L:1,2|L:1,1|X</shape>
+     <shape>M:4,1|L:4,2|L:4,3|L:4,4|L:4,5|L:5,5|L:5,4|L:5,3|L:5,2|L:5,1|X</shape>
+     <shape>M:1,2|L:1,3|L:1,4|L:2,4|L:2,3|L:2,2|X</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>M:3,2|L:3,3|L:3,4|L:4,4|L:4,3|L:4,2|X</shape>
+     <shape>rectangle:2,3,1,1</shape>
+     <shape>rectangle:1,4,3,1</shape>
+     <shape>rectangle:1,5,3,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="triunfo.sop" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>BUSCA LOS 3 TRIUNFOS MILITARES Y LOS 3 PAÍSES LIBERADOS POR SAN MARTÍN</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="estro1.wav" from="28000" />
+     <p>IMPRESIONANTE</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="andes300.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <textGrid rows="10" columns="10" cellWidth="38.0" cellHeight="35.0" border="true">
+    <style shadow="true">
+     <font family="Arial" size="18" bold="true" />
+     <color foreground="0xFFFFFF" background="0x0080FF" shadow="0xFFFF80" inactive="0xFFFF80" alternative="0xFFFF80" />
+    </style>
+    <text>
+     <row>*C********</row>
+     <row>**H*******</row>
+     <row>***A***M**</row>
+     <row>***PC**A**</row>
+     <row>**E*HA*I**</row>
+     <row>*R**I*BP**</row>
+     <row>U***L**U**</row>
+     <row>****E***C*</row>
+     <row>SANLORENZO</row>
+     <row>*ANITNEGRA</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">SANLORENZO</clue>
+    <clue id="1">CHACABUCO</clue>
+    <clue id="2">MAIPU</clue>
+    <clue id="3">ARGENTINA</clue>
+    <clue id="4">CHILE</clue>
+    <clue id="5">PERU</clue>
+   </clues>
+   <cells rows="3" cols="2" border="false" image="gral2.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="txt1.txa" code="" autoJump="true">
+   <description />
+   <messages>
+    <cell type="previous">
+     <style />
+     <p>Lee atentamente y haz clic en el texto</p>
+    </cell>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>Completa el texto</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <prevScreen maxTime="30" />
+   <document>
+    <style name="default" size="17" background="0xFFFFFF" italic="false" foreground="0x000000" tabWidth="16" bold="false" family="Arial" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">Jose de San Martín nación en </text>
+      <target>
+       <answer>Yapeyú</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text>Yapeyú</text>
+      </target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">, provincia de </text>
+      <target>
+       <answer>Corrientes</answer>
+       <optionList>
+        <option>Misiones</option>
+        <option>Santa Cruz</option>
+        <option>Corrientes</option>
+        <option>Santa Fe</option>
+       </optionList>
+       <text>Corrientes</text>
+      </target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">. Tenía 5 hemanos y pasaba los días de su niñez jugando con los indiecitos </text>
+      <target>
+       <answer>guaraníes</answer>
+       <optionList>
+        <option>mocovíes</option>
+        <option>tobas</option>
+        <option>charrúas</option>
+        <option>guaraníes</option>
+       </optionList>
+       <text>guaraníes</text>
+      </target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">. Sus padres se trasladaron a Buenos Aires primero y a </text>
+      <target>
+       <answer>España</answer>
+       <optionList>
+        <option>Brasil</option>
+        <option>España</option>
+        <option>Argentina</option>
+        <option>Chile</option>
+        <option>Perú</option>
+       </optionList>
+       <text>España</text>
+      </target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> después, para que sus hijos se educaran. Allí estudió mucho y siguió la carrera </text>
+      <target>
+       <answer>militar</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>militar</text>
+      </target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">. </text>
+     </p>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">Cuando se enteró que aquí, en sus tierras, los </text>
+      <target>
+       <answer>criollos</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>criollos</text>
+      </target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> habían armado la </text>
+      <target>
+       <answer>Revolución</answer>
+       <optionList>
+        <option>Revolución</option>
+        <option>Batalla</option>
+        <option>Fiesta</option>
+       </optionList>
+       <text>Revolución</text>
+      </target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> de Mayo, volvió. </text>
+     </p>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" checkPunctuation="false" />
+  </activity>
+  <activity class="@text.Order" name="txt2.txa" code="" type="orderWords" amongParagraphs="true">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>Ordena las palabras resaltadas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="avanza.wav" />
+     <p>Excelente</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="relieve1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="250" />
+    </window>
+   </settings>
+   <checkButton>CUANDO TERMINES, COMPRUEBA AQUÍ</checkButton>
+   <document>
+    <style name="default" size="17" background="0xFFFFFF" italic="false" foreground="0x000000" tabWidth="16" bold="false" family="Arial" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="true" family="Arial">Formó el cuerpo de </text>
+      <target>Granaderos</target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="true" family="Arial"> a </text>
+      <target>Caballo</target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="true" family="Arial"> para defender estas tierras de los españoles y lograr la </text>
+      <target>Independencia</target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="true" family="Arial">. El bautismo de fuego de los granaderos fue en el combate de San </text>
+      <target>Lorenzo</target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="true" family="Arial">, donde el Sargento </text>
+      <target>Cabral</target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="true" family="Arial"> le salva la vida al máximo procer de nuestra patria. Se casó con </text>
+      <target>Remedios</target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="true" family="Arial"> de Escalada y tuvieron una hija a la que llamaron </text>
+      <target>Mercedes</target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="true" family="Arial">.</text>
+     </p>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial" />
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@text.Identify" name="txt3.txa" code="" type="identifyWords">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>Marca los sustantivos propios</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+     </style>
+     <p>Qué buen trabajo!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="andes300.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" size="17" background="0xFFFFFF" italic="false" foreground="0x000000" tabWidth="16" bold="false" family="Arial" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">Organizó el </text>
+      <target>Ejército</target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> de los </text>
+      <target>Andes</target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> en </text>
+      <target>Plumerillo</target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">, para cruzar la cordillera y derrotar a los españoles que ocupaban </text>
+      <target>Chile</target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">. Allí vence en las batallas de </text>
+      <target>Chacabuco</target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> y </text>
+      <target>Maipú</target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> y se embarca con destino a </text>
+      <target>Perú</target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">, para liberar también a ese país del dominio español.</text>
+     </p>
+     <p size="17" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">Luego de un encuentro con </text>
+      <target>Simón</target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> </text>
+      <target>Bolívar</target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> en </text>
+      <target>Guayaquil</target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">, en 1822, cansado y triste por la muerte de su esposa, decide entregar el mando y regresar a </text>
+      <target>Europa</target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> para no participar de las guerras internas de nuestro país. Allí escribe las máximas para </text>
+      <target>Merceditas</target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">, un puñado de consejos para la educación de su hija que demuestran todas sus virtudes. Pasa su vejez en </text>
+      <target>Francia</target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">, rodeado de sus nietas y fallece en </text>
+      <target>Boulogne</target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> </text>
+      <target>Sur</target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial"> </text>
+      <target>Mer</target>
+      <text size="18" background="0xFFFFFF" italic="false" foreground="0x000000" bold="false" family="Arial">, un 17 de agosto de 1850.</text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="yapeyu.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>UBICA EL LUGAR DONDE NACIÓN JOSÉ</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="18" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <p>YAPEYÚ, PROVINCIA DE CORRIENTES</p>
+    </cell>
+   </cells>
+   <cells rows="7" cols="4" border="false" image="argbue.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="4" rows="7" scaleX="4.0" scaleY="7.0">
+     <enclosing>
+      <shape>rectangle:0,0,4,7</shape>
+     </enclosing>
+     <shape>rectangle:2,1,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="amsur.gif" file="amsur.gif" animated="false" />
+  <media name="andes300.gif" file="andes300.gif" animated="false" />
+  <media name="argbue.gif" file="argbue.gif" animated="false" />
+  <media name="argentin.gif" file="argentin.gif" animated="false" />
+  <media name="bandand.gif" file="bandand.gif" animated="false" />
+  <media name="chile.gif" file="chile.gif" animated="false" />
+  <media name="frigio.gif" file="frigio.gif" animated="false" />
+  <media name="gral2.gif" file="gral2.gif" animated="false" />
+  <media name="inicio.gif" file="inicio.gif" animated="false" />
+  <media name="jose.gif" file="jose.gif" animated="false" />
+  <media name="latinarg.gif" file="latinarg.gif" animated="false" />
+  <media name="latinchi.gif" file="latinchi.gif" animated="false" />
+  <media name="latinper.gif" file="latinper.gif" animated="false" />
+  <media name="laurel.gif" file="laurel.gif" animated="false" />
+  <media name="manos.gif" file="manos.gif" animated="false" />
+  <media name="nacion1.gif" file="nacion1.gif" animated="false" />
+  <media name="ovalo.gif" file="ovalo.gif" animated="false" />
+  <media name="peru.gif" file="peru.gif" animated="false" />
+  <media name="pica.gif" file="pica.gif" animated="false" />
+  <media name="relieve1.gif" file="relieve1.gif" animated="false" />
+  <media name="sol.gif" file="sol.gif" animated="false" />
+  <media name="vejezsm.gif" file="vejezsm.gif" animated="false" />
+  <media name="avanza.wav" file="avanza.wav" />
+  <media name="cabral.wav" file="cabral.wav" />
+  <media name="estro1.wav" file="estro1.wav" />
+  <media name="intro.wav" file="intro.wav" />
+  <media name="yalli.wav" file="yalli.wav" />
+  <media name="ynuestr.wav" file="ynuestr.wav" />
+ </mediaBag>
+</JClicProject>
+

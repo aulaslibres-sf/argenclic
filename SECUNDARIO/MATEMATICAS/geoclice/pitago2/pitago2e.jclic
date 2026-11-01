@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="pitago2e" version="0.1.3">
+ <settings>
+  <title>pitago2e</title>
+  <revision description="created" date="5/31/02" />
+  <descriptors />
+ </settings>
+ <sequence>
+  <item id="pitago2e.pac" name="paq27int.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="pitago0.ass" />
+  <item name="pitago2.ass" />
+  <item name="pitago3.ass" />
+  <item name="pitago4.ass" />
+  <item name="altura1.ass" />
+  <item name="altura2.ass" />
+  <item name="catet1.ass" />
+  <item name="detot1.ass" />
+  <item name="pitag12.ass" />
+  <item name="pitag10.ass" />
+  <item name="paq27fi.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.ComplexAssociation" name="altura1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Todos estos triángulos son rectángulos. Aplica el TEOREMA DE LA ALTURA para calcular las altures señaladas con un interrogante.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" border="true" image="altura1a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <ids>0 1 2 3 4 5</ids>
+   </cells>
+   <cells rows="10" cols="4" border="false" image="altura1b.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="4" rows="10" showEnclosure="true" scaleX="4.0" scaleY="10.0">
+     <enclosing>
+      <shape>rectangle:0,0,4,10</shape>
+     </enclosing>
+     <shape>rectangle:0,3,1,1</shape>
+     <shape>rectangle:1,5,1,1</shape>
+     <shape>rectangle:3,5,1,1</shape>
+     <shape>rectangle:0,8,1,1</shape>
+     <shape>rectangle:1,7,1,1</shape>
+     <shape>rectangle:2,9,1,1</shape>
+    </shaper>
+   </cells>
+   <cells rows="3" cols="2" border="true" image="altura1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="altura2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Todos estos triángulos son rectángulos. Aplica el TEOREMA DE LA ALTURA para calcular las altures señaladas con un interrogante.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="altura2a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <ids>0 1 2 3</ids>
+   </cells>
+   <cells rows="10" cols="4" border="false" image="altura1b.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="4" rows="10" showEnclosure="true" scaleX="4.0" scaleY="10.0">
+     <enclosing>
+      <shape>rectangle:0,0,4,10</shape>
+     </enclosing>
+     <shape>rectangle:2,4,1,1</shape>
+     <shape>rectangle:1,1,1,1</shape>
+     <shape>rectangle:3,9,1,1</shape>
+     <shape>rectangle:1,5,1,1</shape>
+    </shaper>
+   </cells>
+   <cells rows="2" cols="2" border="true" image="altura2c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="catet1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Todos estos triángulos son rectángulos. Aplica el TEOREMA DEL CATETO para calcular los catetos señalados con interrogantes.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" border="true" image="catet1a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <ids>0 1 2 3 4 5</ids>
+   </cells>
+   <cells rows="10" cols="4" border="false" image="altura1b.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="4" rows="10" showEnclosure="true" scaleX="4.0" scaleY="10.0">
+     <enclosing>
+      <shape>rectangle:0,0,4,10</shape>
+     </enclosing>
+     <shape>rectangle:0,9,1,1</shape>
+     <shape>rectangle:0,8,1,1</shape>
+     <shape>rectangle:2,0,1,1</shape>
+     <shape>rectangle:1,5,1,1</shape>
+     <shape>rectangle:3,5,1,1</shape>
+     <shape>rectangle:2,6,1,1</shape>
+    </shaper>
+   </cells>
+   <cells rows="3" cols="2" border="true" image="catet1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="detot1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Aplica el TEOREMA de la ALTURA para calcular las alturas y después el de PITÁGORAS o el del CATETO para calcular los catetos de estos triángulos rectángulos.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="6" border="false" image="detot1a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="6" rows="3" showEnclosure="true" scaleX="6.0" scaleY="3.0">
+     <enclosing>
+      <shape>rectangle:0,0,6,3</shape>
+     </enclosing>
+     <shape>rectangle:2,0,1,1</shape>
+     <shape>rectangle:3,0,1,1</shape>
+     <shape>rectangle:4,0,1,1</shape>
+     <shape>rectangle:2,1,1,1</shape>
+     <shape>rectangle:3,1,1,1</shape>
+     <shape>rectangle:4,1,1,1</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>rectangle:3,2,1,1</shape>
+     <shape>rectangle:4,2,1,1</shape>
+    </shaper>
+    <ids>0 1 2 3 4 3 5 6 1</ids>
+   </cells>
+   <cells rows="10" cols="8" border="false" image="altura2b.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="8" rows="10" showEnclosure="true" scaleX="8.0" scaleY="10.0">
+     <enclosing>
+      <shape>rectangle:0,0,8,10</shape>
+     </enclosing>
+     <shape>rectangle:6,9,1,1</shape>
+     <shape>rectangle:0,5,1,1</shape>
+     <shape>rectangle:0,9,1,1</shape>
+     <shape>rectangle:3,9,1,1</shape>
+     <shape>rectangle:1,4,1,1</shape>
+     <shape>rectangle:3,7,1,1</shape>
+     <shape>rectangle:0,1,1,1</shape>
+    </shaper>
+   </cells>
+   <cells rows="3" cols="6" border="false" image="detot1c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="6" rows="3" showEnclosure="true" scaleX="6.0" scaleY="3.0">
+     <enclosing>
+      <shape>rectangle:0,0,6,3</shape>
+     </enclosing>
+     <shape>rectangle:2,0,1,1</shape>
+     <shape>rectangle:3,0,1,1</shape>
+     <shape>rectangle:4,0,1,1</shape>
+     <shape>rectangle:2,1,1,1</shape>
+     <shape>rectangle:3,1,1,1</shape>
+     <shape>rectangle:4,1,1,1</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>rectangle:3,2,1,1</shape>
+     <shape>rectangle:4,2,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="paq27fi.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic sobre la flecha de la derecha para volver al menú        &gt;&gt;&gt;</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="portada1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="60.0" border="false">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>FIN DEL PAQUETE 27</p>
+    </cell>
+    <cell>
+     <p>T. PITÁGORAS, DE LA ALTURA Y DEL CATETO: APLICACIONES</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="paq27int.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic sobre la flecha para iniciar el paquete de actividades         &gt;&gt;&gt;</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="portada1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="60.0" border="false">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>GEOCLIC - PAQUETE 27</p>
+    </cell>
+    <cell>
+     <p>T. PITÁGORAS, DE LA ALTURA Y DEL CATETO: APLICACIONES</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="pitag10.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Este poliedro es un ortoedro. Calcula primero la longitud de la DIAGONAL DE LA CARA ABCD i después la longitud de la DIAGONAL DE TODO EL ORTOEDRO.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="6" cols="14" border="false" image="pitag10a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="14" rows="6" showEnclosure="true" scaleX="14.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,14,6</shape>
+     </enclosing>
+     <shape>rectangle:7,2,1,1</shape>
+     <shape>rectangle:3,3,1,1</shape>
+    </shaper>
+    <ids>24 8</ids>
+   </cells>
+   <cells rows="15" cols="2" cellWidth="50.0" cellHeight="29.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="15" />
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>1.5</p>
+    </cell>
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>2.5</p>
+    </cell>
+    <cell>
+     <p>3</p>
+    </cell>
+    <cell>
+     <p>3.5</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>4.5</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>5.5</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>6.5</p>
+    </cell>
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>7.5</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>8.5</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>9.5</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>10.5</p>
+    </cell>
+    <cell>
+     <p>11</p>
+    </cell>
+    <cell>
+     <p>11.5</p>
+    </cell>
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>12.5</p>
+    </cell>
+    <cell>
+     <p>13</p>
+    </cell>
+    <cell>
+     <p>13.5</p>
+    </cell>
+    <cell>
+     <p>14</p>
+    </cell>
+    <cell>
+     <p>14.5</p>
+    </cell>
+    <cell>
+     <p>15</p>
+    </cell>
+    <cell>
+     <p>15.5</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="14" border="false" image="pitag10c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="14" rows="6" showEnclosure="true" scaleX="14.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,14,6</shape>
+     </enclosing>
+     <shape>rectangle:7,2,1,1</shape>
+     <shape>rectangle:3,3,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="pitag12.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Cuánto miden los segmentos señalados con interrogantes?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="14" cols="14" border="false" image="pitag12a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="14" rows="14" showEnclosure="true" scaleX="14.0" scaleY="14.0">
+     <enclosing>
+      <shape>rectangle:0,0,14,14</shape>
+     </enclosing>
+     <shape>rectangle:4,2,1,1</shape>
+     <shape>rectangle:5,2,1,1</shape>
+     <shape>rectangle:3,3,1,1</shape>
+     <shape>rectangle:6,3,1,1</shape>
+     <shape>rectangle:2,4,1,1</shape>
+     <shape>rectangle:2,5,1,1</shape>
+     <shape>rectangle:2,6,1,1</shape>
+     <shape>rectangle:10,6,1,1</shape>
+     <shape>rectangle:3,7,1,1</shape>
+     <shape>rectangle:9,7,1,1</shape>
+     <shape>rectangle:4,8,1,1</shape>
+     <shape>rectangle:5,8,1,1</shape>
+     <shape>rectangle:6,8,1,1</shape>
+     <shape>rectangle:7,8,1,1</shape>
+     <shape>rectangle:8,8,1,1</shape>
+    </shaper>
+    <ids>0 1 2 3 4 5 6 7 8 9 10 11 12 13 14</ids>
+   </cells>
+   <cells rows="10" cols="2" border="true" image="pitag12b.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="2" rows="10" showEnclosure="true" scaleX="2.0" scaleY="10.0">
+     <enclosing>
+      <shape>rectangle:0,0,2,10</shape>
+     </enclosing>
+     <shape>rectangle:0,3,1,1</shape>
+     <shape>rectangle:0,2,1,1</shape>
+     <shape>rectangle:0,4,1,1</shape>
+     <shape>rectangle:0,1,1,1</shape>
+     <shape>rectangle:0,5,1,1</shape>
+     <shape>rectangle:0,6,1,1</shape>
+     <shape>rectangle:0,7,1,1</shape>
+     <shape>rectangle:1,5,1,1</shape>
+     <shape>rectangle:0,8,1,1</shape>
+     <shape>rectangle:1,4,1,1</shape>
+     <shape>rectangle:0,9,1,1</shape>
+     <shape>rectangle:1,0,1,1</shape>
+     <shape>rectangle:1,1,1,1</shape>
+     <shape>rectangle:1,2,1,1</shape>
+     <shape>rectangle:1,3,1,1</shape>
+    </shaper>
+   </cells>
+   <cells rows="14" cols="14" border="false" image="pitag12c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="14" rows="14" showEnclosure="true" scaleX="14.0" scaleY="14.0">
+     <enclosing>
+      <shape>rectangle:0,0,14,14</shape>
+     </enclosing>
+     <shape>rectangle:4,2,1,1</shape>
+     <shape>rectangle:5,2,1,1</shape>
+     <shape>rectangle:3,3,1,1</shape>
+     <shape>rectangle:6,3,1,1</shape>
+     <shape>rectangle:2,4,1,1</shape>
+     <shape>rectangle:2,5,1,1</shape>
+     <shape>rectangle:2,6,1,1</shape>
+     <shape>rectangle:10,6,1,1</shape>
+     <shape>rectangle:3,7,1,1</shape>
+     <shape>rectangle:9,7,1,1</shape>
+     <shape>rectangle:4,8,1,1</shape>
+     <shape>rectangle:5,8,1,1</shape>
+     <shape>rectangle:6,8,1,1</shape>
+     <shape>rectangle:7,8,1,1</shape>
+     <shape>rectangle:8,8,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="pitago0.ass">
+   <description>
+    <p>Càlcul de la hipotenusa d'un triangle rectangle coneixent el catets</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Cómo calcularías la hipotenusa de cada triángulo rectángulo?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="2" border="true" image="pitago0a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+   </cells>
+   <cells rows="4" cols="2" border="true" image="pitago0b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="pitago2.ass">
+   <description>
+    <p>Càlcul de la hipotenusa d'un triangle rectangle coneixent el catets</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Aplica el TEOREMA DE PITÁGORAS y calcula las hipotenusas de estos triángulos rectángulos.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="2" border="true" image="pitago2a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <ids>0 1 2 3 4 5 6 7</ids>
+   </cells>
+   <cells rows="10" cols="4" border="true" image="altura1b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="4" rows="10" showEnclosure="true" scaleX="4.0" scaleY="10.0">
+     <enclosing>
+      <shape>rectangle:0,0,4,10</shape>
+     </enclosing>
+     <shape>rectangle:0,9,1,1</shape>
+     <shape>rectangle:2,8,1,1</shape>
+     <shape>rectangle:3,9,1,1</shape>
+     <shape>rectangle:2,4,1,1</shape>
+     <shape>rectangle:1,2,1,1</shape>
+     <shape>rectangle:1,9,1,1</shape>
+     <shape>rectangle:3,3,1,1</shape>
+     <shape>rectangle:3,1,1,1</shape>
+    </shaper>
+   </cells>
+   <cells rows="4" cols="2" border="true" image="pitago2c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="4" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="pitago3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Busca triángulos rectángulos en estas tres figures y aplica el TEOREMA de PITÁGORAS para calcular las longitudes de los segmentos señalados con interrogantes.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" border="true" image="pitago3a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <ids>7 11 9 4 11 12</ids>
+   </cells>
+   <cells rows="15" cols="1" cellWidth="60.0" cellHeight="30.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="15" />
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>3</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>11</p>
+    </cell>
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>13</p>
+    </cell>
+    <cell>
+     <p>14</p>
+    </cell>
+    <cell>
+     <p>15</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="2" border="true" image="pitago3c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="pitago4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Busca triángulos rectángulos en estas tres figures y aplica el TEOREMA de PITÁGORAS para calcular las longitudes de los segmentos señalados con interrogantes.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" border="true" image="pitago4a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <ids>0 1 2 3 4 5</ids>
+   </cells>
+   <cells rows="10" cols="4" border="true" image="altura1b.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="4" rows="10" showEnclosure="true" scaleX="4.0" scaleY="10.0">
+     <enclosing>
+      <shape>rectangle:0,0,4,10</shape>
+     </enclosing>
+     <shape>rectangle:1,1,1,1</shape>
+     <shape>rectangle:3,3,1,1</shape>
+     <shape>rectangle:1,2,1,1</shape>
+     <shape>rectangle:1,7,1,1</shape>
+     <shape>rectangle:1,9,1,1</shape>
+     <shape>rectangle:3,1,1,1</shape>
+    </shaper>
+   </cells>
+   <cells rows="3" cols="2" border="true" image="pitago4c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="altura1a.gif" file="altura1a.gif" animated="false" />
+  <media name="altura1b.gif" file="altura1b.gif" animated="false" />
+  <media name="altura1c.gif" file="altura1c.gif" animated="false" />
+  <media name="altura2a.gif" file="altura2a.gif" animated="false" />
+  <media name="altura2b.gif" file="altura2b.gif" animated="false" />
+  <media name="altura2c.gif" file="altura2c.gif" animated="false" />
+  <media name="catet1a.gif" file="catet1a.gif" animated="false" />
+  <media name="catet1c.gif" file="catet1c.gif" animated="false" />
+  <media name="detot1a.gif" file="detot1a.gif" animated="false" />
+  <media name="detot1c.gif" file="detot1c.gif" animated="false" />
+  <media name="pitag10a.gif" file="pitag10a.gif" animated="false" />
+  <media name="pitag10c.gif" file="pitag10c.gif" animated="false" />
+  <media name="pitag12a.gif" file="pitag12a.gif" animated="false" />
+  <media name="pitag12b.gif" file="pitag12b.gif" animated="false" />
+  <media name="pitag12c.gif" file="pitag12c.gif" animated="false" />
+  <media name="pitago0a.gif" file="pitago0a.gif" animated="false" />
+  <media name="pitago0b.gif" file="pitago0b.gif" animated="false" />
+  <media name="pitago2a.gif" file="pitago2a.gif" animated="false" />
+  <media name="pitago2c.gif" file="pitago2c.gif" animated="false" />
+  <media name="pitago3a.gif" file="pitago3a.gif" animated="false" />
+  <media name="pitago3c.gif" file="pitago3c.gif" animated="false" />
+  <media name="pitago4a.gif" file="pitago4a.gif" animated="false" />
+  <media name="pitago4c.gif" file="pitago4c.gif" animated="false" />
+  <media name="portada1.gif" file="portada1.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

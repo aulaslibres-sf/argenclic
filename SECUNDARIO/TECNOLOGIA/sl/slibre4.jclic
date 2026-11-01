@@ -1,0 +1,1829 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="slibre4" version="0.1.3">
+ <settings>
+  <title>SL</title>
+  <revision description="created" date="2/17/09" />
+  <author name="Fernando Pelillo" mail="fernandopelillo@gmail.com" url="www.argenclic.org.ar" />
+  <description>
+   <p>Introducciòn al Software Libre</p>
+  </description>
+  <descriptors />
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Introducciòn al Software Libre</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="start" name="inicio" delay="20" navButtons="fwd" />
+  <item id="star" name="00compartir" delay="3" />
+  <item id="01" name="0101_lenguaje" navButtons="fwd" />
+  <item id="01" name="0102_lenguaje" />
+  <item id="01" name="0103_lenguaje" />
+  <item id="01" name="0104_lenguaje" />
+  <item id="01" name="0105_codigo" />
+  <item id="01" name="0106_codigo" />
+  <item id="01" name="0107_codigo" />
+  <item id="01" name="0108_CODIGO" />
+  <item id="01" name="0109_codigo" />
+  <item id="01" name="0110_codigo" />
+  <item id="01" name="0111_SO" />
+  <item id="01" name="0112_SO" />
+  <item id="01" name="0120_SL" />
+  <item id="01" name="C_001" />
+  <item id="01" name="C_002" />
+  <item id="01" name="C_003" />
+  <item id="H" name="H_001" />
+  <item id="H" name="H_002" />
+  <item id="H" name="H_003" />
+  <item id="01" name="0113_SO" />
+  <item id="01" name="0114_SO" />
+  <item name="0115" />
+  <item name="0116" />
+  <item name="0117" />
+  <item name="0118" />
+  <item name="0119" />
+  <item name="0120" />
+  <item id="lic" name="licencia">
+   <jump action="EXIT" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@puzzles.ExchangePuzzle" name="00compartir">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Dialog" size="36" />
+      <gradient source="0x920063FF" dest="0xFFFFFF" angle="90" cycles="2" />
+     </style>
+     <p>ENCUENTRA EL MENSAJE OCULTO</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Dialog" size="36" />
+      <color foreground="0xC2FF25" shadow="0x190909" />
+      <gradient source="0x920063FF" dest="0xFFFFFF" angle="90" cycles="2" />
+     </style>
+     <p>AHORA PODÉS COMPARTIRLO</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <image name="fondo.png" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="true" image="GNU LINUX 2.jpg">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Dialog" size="17" />
+     <color border="0x07FD1C" />
+    </style>
+    <shaper class="@ClassicJigSaw" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.Explore" name="0101_lenguaje" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="wikipedia-logo.jpg" type="initial">
+     <style shadow="true" borderStroke="0.7" markerStroke="10.0">
+      <font family="Dialog" size="17" bold="true" />
+      <color background="0xFFFFFF" shadow="0xB4E3FE05" />
+     </style>
+     <p>Definiciones extraídas de WIKIPEDIA   http://es.wikipedia.org</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="fondo.png" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="233.0" cellHeight="50.0" border="false" id="primary">
+    <style shadow="true" transparent="true">
+     <font family="Dialog" size="24" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="0">
+     <p>Computadora</p>
+    </cell>
+    <cell id="1">
+     <p>Programa</p>
+    </cell>
+    <cell id="2">
+     <p>Lenguaje de programación</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="750.0" cellHeight="550.0" border="false" id="secondary">
+    <style transparent="true">
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <style transparent="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Dialog" size="22" bold="true" />
+      <color background="0xFFFFFF" shadow="0xCCFFCC" />
+     </style>
+     <p>Una computadora, también denominada ordenador o computador, es una máquina electrónica que recibe y procesa datos para convertirlos en información útil. Una computadora es una colección de circuitos integrados y otros componentes relacionados que puede ejecutar con exactitud, rapidez, y de acuerdo a lo indicado por un usuario o automáticamente por otro programa, una gran variedad de secuencias o rutinas de instrucciones que son ordenadas, organizadas y sistematizadas en función a una amplia gama de aplicaciones prácticas y precisamente determinadas, proceso al cual se le ha denominado con el nombre de programación y al que lo realiza se le llama programador.</p>
+    </cell>
+    <cell>
+     <style transparent="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Dialog" size="22" bold="true" />
+      <color background="0xFFFFFF" shadow="0xCCFFCC" />
+     </style>
+     <p>Un programa, o también llamado programa informático, programa de computación o programa de ordenador, es simplemente un conjunto de instrucciones para una computadora. Las computadoras necesitan de los programas para funcionar, y un programa no hace nada a menos que sus instrucciones sean ejecutadas por el procesador. Un programa se puede referir tanto a un programa ejecutable como a su código fuente, el cual es transformado en un ejecutable cuando es compilado.</p>
+    </cell>
+    <cell>
+     <style transparent="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Dialog" size="22" bold="true" />
+      <color background="0xFFFFFF" shadow="0xCCFFCC" />
+     </style>
+     <p>Son un conjunto de vocablos, sintaxis y reglas semánticas que definen los programas del computador. </p>
+     <p>En las antiguas secuencias de posiciones de llaves para obtener una acción, una llave conectada era 1 y una desconectada, 0. </p>
+     <p>Una sucesión definía una secuencia de ceros y unos (por ej: 010011010011101...) que representaba una instrucción o un conjunto de ellas (programa) para la computadora y se la denominaba lenguaje máquina o código máquina.</p>
+     <p>La necesidad de recordar secuencias de programación llevó a denominarlas con nombres fáciles de memorizar y asociar: ADD (sumar), MUL (multiplicar), CALL (ejecutar subrutina), etc. </p>
+     <p>A esta secuencia de posiciones se le denominó "instrucciones", y a este conjunto de instrucciones se le llamó lenguaje ensamblador.</p>
+     <p>Posteriormente aparecieron diferentes lenguajes de programación, con una estructura sintáctica similar a los lenguajes escritos por los humanos.</p>
+     <p> Cuando el programador trabaja, elige un lenguaje de programación por las funciones a cumplir por el programa. Como cuando quien domina varios idiomas, elige para comunicarse el que se habla en el país a donde llega.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="0102_lenguaje" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true" borderStroke="0.7" markerStroke="2.7">
+      <font family="Dialog" size="22" bold="true" />
+      <color background="0xFFFFFF" shadow="0x82F6F501" />
+     </style>
+     <p>¿Cuál es la definición de COMPUTADORA?</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Dialog" size="28" bold="true" />
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <p>muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <image name="fondo.png" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="650.0" cellHeight="110.0" border="true" id="primary">
+    <style transparent="true">
+     <font family="Arial" size="18" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="1">
+     <p>Es una máquina electrónica que recibe y procesa datos para convertirlos en información útil. Una colección de circuitos integrados y otros componentes relacionados que puede ejecutar con exactitud, rapidez, instrucciones indicadas por un usuario o automáticamente por un programa.</p>
+    </cell>
+    <cell id="0">
+     <p>Es un conjunto de instrucciones para una computadora.</p>
+    </cell>
+    <cell id="0">
+     <p>Son un conjunto de vocablos, sintaxis y reglas semánticas que definen los programas de la computadora.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="0103_lenguaje" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true" borderStroke="0.7" markerStroke="2.7">
+      <font family="Dialog" size="22" bold="true" />
+      <color background="0xFFFFFF" shadow="0x82F6F501" />
+     </style>
+     <p>Ordena la definición de PROGRAMA</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Dialog" size="28" bold="true" />
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <p>Podés ampliar el tema en http://es.wikipedia.org/wiki/Programa_(computación)</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <image name="fondo.png" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="200.0" cellHeight="50.0" border="true">
+    <style shadow="true">
+     <font family="Arial" size="18" bold="true" />
+     <color foreground="0xE8E8E8" background="0x524B4B" shadow="0xACACAC" />
+    </style>
+    <shaper class="@TriangularJigSaw" cols="4" rows="2" toothHeightFactor="0.1" />
+    <cell>
+     <p>Es</p>
+    </cell>
+    <cell>
+     <p>un</p>
+    </cell>
+    <cell>
+     <p>conjunto</p>
+    </cell>
+    <cell>
+     <p>de</p>
+    </cell>
+    <cell>
+     <p>instrucciones</p>
+    </cell>
+    <cell>
+     <p>para</p>
+    </cell>
+    <cell>
+     <p>una</p>
+    </cell>
+    <cell>
+     <p>computadora.</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="0104_lenguaje" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true" borderStroke="0.7" markerStroke="2.7">
+      <font family="Dialog" size="22" bold="true" />
+      <color background="0xFFFFFF" shadow="0x82F6F501" />
+     </style>
+     <p>Elige las opciones para definir un LENGUAJE DE PROGRAMACIÓN</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Dialog" size="28" bold="true" />
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <p>BRAVO</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <image name="fondo.png" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="400" height="200" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" italic="false" bold="false" background="0xFFFFFF" family="Dialog" tabWidth="12" size="13" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p Alignment="1" background="0xFFFFFF" family="Dialog" />
+     <p Alignment="1" background="0xFFFFFF" family="Dialog" />
+     <p Alignment="1" background="0xFFFFFF" family="Dialog">
+      <text size="24">Son un </text>
+      <target>
+       <answer>conjunto</answer>
+       <optionList>
+        <option>montón</option>
+        <option>puñado</option>
+        <option>conjunto</option>
+        <option>rejunte</option>
+       </optionList>
+       <text>conjunto</text>
+      </target>
+      <text size="24"> de vocablos, sintaxis y reglas </text>
+      <target>
+       <answer>semánticas</answer>
+       <optionList>
+        <option>ortográficas</option>
+        <option>semánticas</option>
+        <option>lógicas</option>
+        <option>de juego</option>
+       </optionList>
+       <text>semánticas</text>
+      </target>
+      <text size="24"> que definen los </text>
+      <target>
+       <answer>programas</answer>
+       <optionList>
+        <option>robots</option>
+        <option>programas</option>
+        <option>circuitos</option>
+       </optionList>
+       <text>programas</text>
+      </target>
+      <text size="24"> de la </text>
+      <target>
+       <answer>computadora</answer>
+       <response fill="_" length="11" maxLength="11" />
+       <info mode="onError">
+        <cell width="100" height="40">
+         <p>aparato para computar</p>
+        </cell>
+       </info>
+       <text>computadora</text>
+      </target>
+      <text size="24">.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="0105_codigo" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true" transparent="true">
+      <font family="Dialog" size="28" bold="true" />
+      <color shadow="0x3FFD08" />
+     </style>
+     <p>CÓDIGO FUENTE</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <image name="codigo.png" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="500.0" cellHeight="200.0" border="true">
+    <style transparent="true">
+     <font family="Dialog" size="17" bold="true" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell imgAlign="right,middle" avoidOverlapping="true">
+     <style shadow="true">
+      <font family="FreeMono" size="20" bold="true" />
+      <color foreground="0xFFFFFF" background="0x6D6D6D" shadow="0x000000" />
+     </style>
+     <p>El código fuente es texto simple, capaz de ser leído por cualquier editor de textos y lo que es más importante, comprensible por cualquier programador que conozca el "idioma" utilizado. En él están escritas las instrucciones que deberá realizar la computadora, según la sintaxis de un lenguaje de programación.</p>
+    </cell>
+    <cell>
+     <style shadow="true">
+      <font family="FreeSans" size="28" bold="true" />
+      <color shadow="0x6CFD6E" />
+     </style>
+     <p>Conocer el código fuente es imprescindible si se quiere estudiar o modificar o saber cuáles son las reales funciones de un programa de computación.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="0106_codigo" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Dialog" size="36" bold="true" />
+      <color background="0xFFFFFF" shadow="0x570199FE" />
+     </style>
+     <p>COMPILADOR</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Excelente</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="codigo_objeto.png" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="7" cols="1" cellWidth="720.0" cellHeight="80.0" border="false">
+    <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+     <font family="SansSerif" size="26" />
+     <color background="0x37756F60" shadow="0xFEFEFE" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell>
+     <p> El lenguaje de programación utilizado para la redacción del código fuente es lo que se denomina un lenguaje de alto nivel, esto es, </p>
+    </cell>
+    <cell>
+     <p>un lenguaje en que el programador puede expresarse con cierta facilidad por ser el más próximo al lenguaje natural. Pero... hay un problema:</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Dialog" size="28" italic="true" />
+     </style>
+     <p>La máquina no lo entiende.</p>
+    </cell>
+    <cell>
+     <p>La máquina sólo comprende el lenguaje de máquina, un "idioma" en el que los humanos no podemos expresarnos.</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Dialog" size="28" italic="true" />
+     </style>
+     <p>Este desentendimiento lo resuelve un programa-herramienta: el compilador.</p>
+    </cell>
+    <cell>
+     <p>Comparando su actuación con la de un ser humano, un compilador equivale a un traductor profesional que, a partir de un texto, redacta otro, independiente, plasmado en un ejemplar nuevo traducido a otra lengua.</p>
+    </cell>
+    <cell>
+     <p>Nuestro programador echará mano al compilador y, teniendo como base los archivos en código fuente por él desarrollados, generará otro "código": el código objeto.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="0107_codigo" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Dialog" size="36" bold="true" />
+      <color shadow="0xCE4545" />
+     </style>
+     <p>CÓDIGO OBJETO</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="28" bold="true" />
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <p>Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="codigo_objeto.png" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="800.0" cellHeight="300.0" border="true">
+    <style>
+     <font family="Dialog" size="26" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <style transparent="true">
+      <font family="Dialog" size="26" />
+      <color foreground="0x010101" shadow="0x190909" />
+     </style>
+     <p>CÓDIGO OBJETO: archivo que resulta de compilar el archivo del código fuente.</p>
+     <p>Está expresado en el único "idioma" que entienden las computadoras, </p>
+     <p>que trabajan internamente con dos niveles de voltaje,  lo que se representa simbólicamente con: "1", voltaje más alto; "0", voltaje más bajo. Esto es el código binario que permite a la máquina ejecutar las instrucciones que el programador escribió en forma de "código fuente."</p>
+     <p>Por lo dicho, el archivo código objeto se denomina también archivo binario o archivo ejecutable.</p>
+     <p>Si intentamos abrir un archivo binario, la máquina tratará de mostrarlo y lo que veremos será más o menos lo que se ve como fondo</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.FillInBlanks" name="0108_CODIGO" code="" autoJump="true">
+   <description />
+   <messages>
+    <cell type="previous">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+     </style>
+     <p>Lee con cuidado y haz clic en el texto al finalizar...</p>
+    </cell>
+    <cell type="initial">
+     <style>
+      <font family="Dialog" size="28" />
+     </style>
+     <p>escribe el nombre de cada definición</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="24" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>textos extraìdos de www.casanas.com.ar</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="codigo_objeto.png" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xCCFFCC" border="true">
+     <size width="700" height="500" />
+    </window>
+   </settings>
+   <prevScreen maxTime="30" />
+   <document>
+    <style name="default" italic="false" bold="false" background="0xFEFEFE" family="DialogInput" foreground="0x6D6D6D" tabWidth="4" size="14" />
+    <style name="target" base="default" background="0xFFFFFF" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p Alignment="1" background="0xFFFFFF" family="Dialog">
+      <text italic="true" bold="false" background="0xFFFFFF" family="Fenice BT" foreground="0x676767" size="18">El</text>
+      <text italic="true" bold="false" background="0xFFFFFF" family="Fenice BT" foreground="0x339900" size="18"> </text>
+      <target>
+       <answer>código fuente</answer>
+       <optionList>
+        <option>compilador</option>
+        <option>código fuente</option>
+        <option>lenguaje de programación</option>
+        <option>código objeto</option>
+       </optionList>
+       <text>código fuente</text>
+      </target>
+      <text italic="true" bold="false" background="0xFFFFFF" family="Fenice BT" foreground="0x339900" size="18"> </text>
+      <text italic="true" bold="false" background="0xFFFFFF" family="Fenice BT" foreground="0x676767" size="18">es texto simple, capaz de ser leído por cualquier editor de textos y lo que es más importante, comprensible por cualquier programador que conozca el "idioma" utilizado. En él están escritas las instrucciones que deberá realizar la computadora, según la sintaxis de un</text>
+      <text italic="true" bold="false" background="0xFFFFFF" family="Fenice BT" foreground="0x339900" size="16"> </text>
+      <target>
+       <answer>lenguaje de programación</answer>
+       <optionList>
+        <option>compilador  </option>
+        <option>código fuente  </option>
+        <option>lenguaje de programación</option>
+        <option>código objeto  </option>
+       </optionList>
+       <text>lenguaje de programación</text>
+      </target>
+      <text italic="true" bold="false" background="0xFFFFFF" family="Fenice BT" foreground="0x339900" size="16">.</text>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Dialog">
+      <text italic="true" bold="false" background="0xFFFFFF" family="Fenice BT" foreground="0x676767" size="18">Un </text>
+      <target>
+       <answer>compilador</answer>
+       <optionList>
+        <option>compilador</option>
+        <option>código fuente  </option>
+        <option>lenguaje de programación </option>
+        <option>código objeto  </option>
+       </optionList>
+       <text>compilador</text>
+      </target>
+      <text italic="true" bold="false" background="0xFFFFFF" family="Fenice BT" foreground="0x676767" size="18"> es un programa que permite traducir el </text>
+      <target>
+       <answer>código fuente</answer>
+       <optionList>
+        <option>compilador </option>
+        <option>código fuente</option>
+        <option>lenguaje de programación </option>
+        <option>código objeto  </option>
+       </optionList>
+       <text>código fuente</text>
+      </target>
+      <text italic="true" bold="false" background="0xFFFFFF" family="Fenice BT" foreground="0x676767" size="18"> de un programa en lenguaje de alto nivel, a otro lenguaje de nivel inferior (típicamente lenguaje máquina). De esta manera un programador puede diseñar un programa en un lenguaje mucho más cercano a como piensa un ser humano, para luego compilarlo a un programa más manejable por una computadora.</text>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Dialog">
+      <text italic="true" bold="false" background="0xFFFFFF" family="Fenice BT" foreground="0x676767" size="18">El</text>
+      <text italic="true" bold="false" background="0xFFFFFF" family="Fenice BT" foreground="0x676767" size="16"> </text>
+      <target>
+       <answer>código objeto</answer>
+       <optionList>
+        <option>compilador  </option>
+        <option>código fuente </option>
+        <option>lenguaje de programación </option>
+        <option>código objeto</option>
+       </optionList>
+       <text>código objeto</text>
+      </target>
+      <text italic="true" bold="false" background="0xFFFFFF" family="Fenice BT" foreground="0x676767" size="16"> </text>
+      <text italic="true" bold="false" background="0xFFFFFF" family="Fenice BT" foreground="0x676767" size="18">es el  archivo que resulta de compilar el archivo del </text>
+      <target>
+       <answer>código fuente</answer>
+       <optionList>
+        <option>compilador  </option>
+        <option>código fuente</option>
+        <option>lenguaje de programación </option>
+        <option>código objeto  </option>
+       </optionList>
+       <text>código fuente</text>
+      </target>
+      <text italic="true" bold="false" background="0xFFFFFF" family="Fenice BT" foreground="0x676767" size="18">.</text>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Dialog">
+      <text italic="true" bold="false" background="0xFFFFFF" family="Fenice BT" foreground="0x676767" size="18">Está expresado en el único "idioma" que entienden las computadoras, que trabajan internamente con dos niveles de voltaje,  lo que se representa simbólicamente con: "1", voltaje más alto; "0", voltaje más bajo. </text>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Dialog" />
+     <p Alignment="1" background="0xFFFFFF" family="Dialog">
+      <text italic="true" bold="false" background="0xFFFFFF" family="Fenice BT" foreground="0x676767" size="18">Esto es el código binario que permite a la máquina ejecutar las instrucciones que el programador escribió en forma de "</text>
+      <target>
+       <answer>código fuente</answer>
+       <optionList>
+        <option>compilador</option>
+        <option>código fuente</option>
+        <option>lenguaje de programación</option>
+        <option>código objeto  </option>
+       </optionList>
+       <text>código fuente</text>
+      </target>
+      <text italic="true" bold="false" background="0xFFFFFF" family="Fenice BT" foreground="0x676767" size="18">."</text>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Dialog">
+      <text italic="true" bold="false" background="0xFFFFFF" family="Fenice BT" foreground="0x676767" size="18">Por lo dicho, el archivo </text>
+      <target>
+       <answer>código objeto</answer>
+       <optionList>
+        <option>compilador  </option>
+        <option>código fuente</option>
+        <option>lenguaje de programación </option>
+        <option>código objeto</option>
+       </optionList>
+       <text>código objeto</text>
+      </target>
+      <text italic="true" bold="false" background="0xFFFFFF" family="Fenice BT" foreground="0x676767" size="18"> se denomina también archivo binario o archivo ejecutable.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.Identify" name="0109_codigo" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Dialog" size="28" />
+     </style>
+     <p>Clic donde se describen características del CÓDIGO FUENTE</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="26" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>¡¡¡Ya puedes aprender a programar!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="codigo_objeto.png" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xCCFFCC" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="350.0" cellHeight="150.0" border="true" id="primary">
+    <style shadow="true">
+     <font family="Arial" size="22" bold="true" />
+     <color shadow="0xD6D6D6" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell id="0">
+     <p>Sólo lo entienden las máquinas. Sucesión de ceros y unos.</p>
+    </cell>
+    <cell id="1">
+     <p>Imprescindible para saber lo que hace un programa.</p>
+    </cell>
+    <cell id="1">
+     <p>Escrito en lenguaje de programación por un programador humano.</p>
+    </cell>
+    <cell id="0">
+     <p>Conjunto de vocablos, sintaxis y reglas semánticas que definen los programas.</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>CÓDIGO OBJETO O BINARIO</p>
+    </cell>
+    <cell>
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x00010101" />
+     </style>
+     <p>CÓDIGO FUENTE</p>
+    </cell>
+    <cell>
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x00010101" />
+     </style>
+     <p>CÓDIGO FUENTE</p>
+    </cell>
+    <cell>
+     <p>LENGUAJE DE PROGRAMACIÓN</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="0110_codigo" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFEFEFE" />
+     </style>
+     <p>Une cada término con su definición.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="24" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>ok, pasemos a otro tema...</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <image name="fondo.png" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="120.0" cellHeight="100.0" border="true" id="primary">
+    <style shadow="true">
+     <font family="Arial" size="16" bold="true" />
+     <color foreground="0x089E0D" background="0xBFFEBF" shadow="0xA5FD81" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>Lenguaje de programación</p>
+    </cell>
+    <cell>
+     <p>código fuente</p>
+    </cell>
+    <cell>
+     <p>compilador</p>
+    </cell>
+    <cell>
+     <p>código objeto (binario)</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="650.0" cellHeight="100.0" border="true" id="secondary">
+    <style shadow="true">
+     <font family="Arial" size="16" bold="true" />
+     <color foreground="0xFFFFFF" background="0x089BBF" shadow="0x9F9B5C" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>Son un conjunto de vocablos, sintaxis y reglas semánticas que definen los programas de la computadora.</p>
+    </cell>
+    <cell>
+     <p>Escrito en lenguaje de programación por un programador humano. Imprescindible para saber qué hace un programa.</p>
+    </cell>
+    <cell>
+     <p>Programa que permite traducir el código fuente de un programa en lenguaje de alto nivel, a otro lenguaje de nivel inferior (típicamente lenguaje máquina).</p>
+    </cell>
+    <cell>
+     <p>El código binario que permite a la máquina ejecutar las instrucciones que el programador escribió en forma de código fuente. Se denomina también archivo binario o archivo ejecutable.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="0111_SO" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" shadow="0xFFFFCC" />
+     </style>
+     <p>LEÉ Y PASÁ A LA SIGUIENTE ACTIVIDAD</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="maxlinuxpenguin.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="300.0" border="false">
+    <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color background="0xFFFFFF" shadow="0xFFFFCC" />
+     <gradient source="0x6EA3F6" dest="0xFFFFFF" angle="90" cycles="2" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell imgAlign="right,middle" avoidOverlapping="true">
+     <p>SISTEMA OPERATIVO</p>
+     <p>Conjunto de programas o software destinado a permitir la comunicación del usuario con la computadora y gestionar sus recursos de hardware de manera cómoda y eficiente.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.Explore" name="0112_SO" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="22" bold="true" />
+      <color background="0xFFFFFF" shadow="0xFFFFCC" />
+     </style>
+     <p>DIFERENTES SISTEMAS OPERATIVOS (clic en cada imagen para conocerlos)</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="fondo.png" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="150.0" cellHeight="150.0" border="false" id="primary">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell id="0" image="MicrosoftW.jpg" />
+    <cell id="1" image="sun-solaris-logo.jpg" />
+    <cell id="2" image="MacLogo1.JPG" />
+    <cell id="3" image="GNUTUX.png" />
+   </cells>
+   <cells rows="4" cols="1" cellWidth="400.0" cellHeight="500.0" border="false" id="secondary">
+    <style transparent="true">
+     <font family="Arial" size="24" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>Conjunto de Sistemas Operativos Windows.</p>
+     <p>Pertenecen a la empresa Microsoft, por lo que son software privativo.</p>
+     <p>Algunos de ellos:</p>
+     <p>95  -  98  -  NT  -  2000  -  Milenium  -  XP  -  Vista</p>
+    </cell>
+    <cell>
+     <p>Solaris es un sistema operativo de tipo Unix desarrollado por Sun Microsystems desde 1992 como sucesor de SunOS. Es un sistema Unix. Funciona para servidores y estaciones de trabajo.</p>
+     <p>Aunque Solaris fue desarrollado como software privativo, la mayor parte de su código se ha liberado como proyecto de software libre denominado OpenSolaris. </p>
+    </cell>
+    <cell>
+     <p>MacOS, abreviatura de Macintosh Operating System (Sistema Operativo de Macintosh), es el nombre del primer sistema operativo de Apple para los ordenadores Macintosh. El Mac OS original fue el primer sistema operativo con una interfaz gráfica de usuario en tener éxito.</p>
+     <p>Pertenece a la empresa Apple y es software privativo.</p>
+    </cell>
+    <cell>
+     <p>GNU/Linux refiere a sistemas operativos similares a Unix basados en el núcleo de Linux y componentes del Proyecto GNU. Su desarrollo es fundamental para el software libre. Su código fuente puede ser utilizado, modificado y redistribuido libremente por cualquiera bajo los términos de la Licencia Pública General de GNU (GNU GPL) y otras licencias libres.</p>
+     <p>Las variantes de estos sistemas se llaman distribuciones de GNU/Linux y su objetivo es ofrecer alternativas a las necesidades de determinado grupo de usuarios. </p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="0120" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="26" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>Clic en la mascota (se llama TUX) para visitar el sitio de la FSF en América Latina. (requiere conexión a Internet)</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFEFEFE">
+     <image name="fondo.png" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="500.0" cellHeight="200.0" border="false" id="primary">
+    <style shadow="true" transparent="true" borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="18" bold="true" />
+     <color shadow="0xD9D9D9" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell id="0" imgAlign="right,bottom" avoidOverlapping="true" image="GNUTUX.png">
+     <style shadow="true" transparent="true">
+      <font family="Arial" size="28" bold="true" />
+      <color shadow="0xC3C3C3" />
+     </style>
+     <media type="URL" level="1" file="http://www.fsfla.org/svnwiki/" />
+     <p>Para saber más</p>
+     <p>visita la FSF</p>
+    </cell>
+    <cell id="0">
+     <media type="URL" level="1" file="http://www.fsfla.org/svnwiki/" />
+     <p>La Fundación para el software libre (FSF) se dedica a eliminar las restricciones sobre la copia, redistribución, entendimiento, y modificación de programas de computadoras. Con este objeto, promociona el desarrollo y uso del software libre en todas las áreas de la computación, pero muy particularmente, ayudando a desarrollar el sistema operativo GNU.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@panels.Explore" name="0113_SO" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color background="0xFFFFFF" shadow="0xFFFFCC" />
+     </style>
+     <p>CONOCE SISTEMAS OPERATIVOS Y PROGRAMAS LIBRES</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="fondo.png" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="5" border="false" image="adhesivos-gnu.jpg" id="primary">
+    <style shadow="true" transparent="true" borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="18" />
+     <color shadow="0xFFFFCC" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="3" />
+    <ids>0 1 2 3 4 5 6 7 8 9 10 11 12 13 14</ids>
+   </cells>
+   <cells rows="3" cols="5" cellWidth="200.0" cellHeight="100.0" border="true" id="secondary">
+    <style shadow="true" margin="0">
+     <font family="Dialog" size="18" bold="true" />
+     <color foreground="0x0066FF" background="0xFFFFFF" shadow="0xFFFFCC" inactive="0xFFFFFF" alternative="0x9999FF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="3" />
+    <cell>
+     <p>GNU-Linux</p>
+     <p>Sistema Operativo</p>
+    </cell>
+    <cell>
+     <p>"No es Unix"</p>
+     <p>Fundación software libre</p>
+    </cell>
+    <cell>
+     <p>Debian</p>
+     <p>Sistema Operativo</p>
+    </cell>
+    <cell>
+     <p>./Bash</p>
+     <p>Interprete de comandos</p>
+    </cell>
+    <cell>
+     <p>GNOME</p>
+     <p>Entorno de escritorio</p>
+    </cell>
+    <cell>
+     <p>GIMP</p>
+     <p>Dibujo con mapa de bits</p>
+    </cell>
+    <cell>
+     <p>KDE</p>
+     <p>Entorno de escritorio</p>
+    </cell>
+    <cell>
+     <p>SUSE</p>
+     <p>Sistema operativo</p>
+    </cell>
+    <cell>
+     <p>MONO </p>
+     <p>compilador</p>
+    </cell>
+    <cell>
+     <p>BLENDER</p>
+     <p>Dibujo vectorial tridimensional</p>
+    </cell>
+    <cell>
+     <p>INKSCAPE</p>
+     <p>Dibujo vectorial</p>
+    </cell>
+    <cell>
+     <p>FEDORA</p>
+     <p>Sistema operativo</p>
+    </cell>
+    <cell>
+     <p>AMAROK</p>
+     <p>Reproductor multimedia</p>
+    </cell>
+    <cell>
+     <p>PYTHON</p>
+     <p>Lenguaje de programación</p>
+    </cell>
+    <cell>
+     <p>DRUPAL</p>
+     <p>Sistema de gestión de contenidos web</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="0114_SO" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color background="0xFFFFFF" shadow="0xFFFFCC" />
+     </style>
+     <p>IDENTIFICA LOS  Sistemas Operativos entre estos programas y sistemas libres</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="24" />
+      <color background="0xFFFFFF" />
+      <gradient source="0x0063FF" dest="0xFFFFFF" angle="90" cycles="2" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <image name="fondo.png" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="3" cols="5" border="false" image="adhesivos-gnu.jpg" id="primary">
+    <style transparent="true">
+     <font family="Arial" size="17" bold="true" />
+     <color inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="3" />
+    <ids>1 0 1 0 0 0 0 1 0 0 0 1 0 0 0</ids>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@panels.Explore" name="0115" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>Conoce sobre grandes programas libres haciendo clic sobre sus logotipos</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFEFEFE">
+     <image name="fondo.png" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="200.0" cellHeight="160.0" border="false" id="primary">
+    <style transparent="true" borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFEFEFE" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="0" image="120px-logo_de_lihuen.png" />
+    <cell id="1" image="amsn9.png" />
+    <cell id="2" image="firefox-logo.jpg" />
+    <cell id="3" image="openoffice_logo.jpg" />
+    <cell id="4" image="thunderbird-bloqueado.jpg" />
+    <cell id="5" image="ututo.png" />
+    <cell id="6" image="ubuntu-resized.jpg" />
+    <cell id="7" image="Tuquito.JPG" />
+    <cell id="8" image="wikipedia-logo.jpg" />
+   </cells>
+   <cells rows="3" cols="3" cellWidth="600.0" cellHeight="100.0" border="true" id="secondary">
+    <style shadow="true">
+     <font family="Arial" size="18" bold="true" />
+     <color foreground="0xFEFEFE" background="0x010101" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>Lihuen (GNU/Linux de la Universidad de La Plata)</p>
+    </cell>
+    <cell>
+     <p>AMSN - Mensajería instantánea</p>
+    </cell>
+    <cell>
+     <p>Firefox - Navegador Web</p>
+    </cell>
+    <cell>
+     <p>OpenOffice.org - Programas de Ofimática</p>
+    </cell>
+    <cell>
+     <p>Thunderbird - Organizador de correo</p>
+    </cell>
+    <cell>
+     <p>Ututo- GNU/Linux de la Universidad de Salta</p>
+    </cell>
+    <cell>
+     <p>Ubuntu - Distro de GNU/Linux más difundida</p>
+    </cell>
+    <cell>
+     <p>Tuquito - GNU/Linux de Tucumán</p>
+    </cell>
+    <cell>
+     <p>Wikipedia - La enciclopedia libre</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="0116" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>Averigua para qué sirven estos programas</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondo.png" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="200.0" cellHeight="200.0" border="false" id="primary">
+    <style transparent="true">
+     <font family="Arial" size="18" bold="true" />
+     <color background="0x010101" inactive="0x010101" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="1" image="openoffice_logo.jpg" />
+    <cell id="1" image="firefox-logo.jpg" />
+    <cell id="1" image="amsn9.png" />
+    <cell id="1" image="thunderbird-bloqueado.jpg" />
+    <cell id="1" image="devede-icon.png" />
+    <cell id="1" image="brasero.png" />
+    <cell id="1" image="imagination-logo.png" />
+    <cell id="1" image="gimp.png" />
+    <cell id="1" image="inkscape.gif" />
+   </cells>
+   <cells rows="3" cols="3" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>Procesardor de texto, planilla de cálculo, presentador de diapositivas y otras herramientas para trabajo de oficina.</p>
+    </cell>
+    <cell>
+     <p>Navegador Web seguro y confiable.</p>
+    </cell>
+    <cell>
+     <p>Programa de mensajería instantánea para las cuentas de un servicio que usa una sigla similar.</p>
+    </cell>
+    <cell>
+     <p>Organizador de correo electrónico</p>
+    </cell>
+    <cell>
+     <p>DeVeDe: Creador de CD y DVD de video. Permite generar menú y añadir diferentes opciones.</p>
+    </cell>
+    <cell>
+     <p>Brasero: Grabador de CD y DVD (para "quemar los discos")</p>
+    </cell>
+    <cell>
+     <p>Imagination: Creador de pases de fotografías con fondo musical y efectos.</p>
+    </cell>
+    <cell>
+     <p>El GIMP: Potente herramienta para dibujo y retoque fotográfico.</p>
+    </cell>
+    <cell>
+     <p>Inkscape: Potente herramienta de dibujo vectorial.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="0117" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>Identifica programas para dibujar</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>Bravo (averigua la diferencia entre mapa de bits y gráfico vectorial)</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondo.png" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="200.0" cellHeight="200.0" border="false" id="primary">
+    <style transparent="true">
+     <font family="Arial" size="18" bold="true" />
+     <color background="0x010101" inactive="0x010101" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="0" image="openoffice_logo.jpg" />
+    <cell id="0" image="firefox-logo.jpg" />
+    <cell id="0" image="amsn9.png" />
+    <cell id="0" image="thunderbird-bloqueado.jpg" />
+    <cell id="0" image="devede-icon.png" />
+    <cell id="0" image="brasero.png" />
+    <cell id="0" image="imagination-logo.png" />
+    <cell id="1" image="gimp.png" />
+    <cell id="1" image="inkscape.gif" />
+   </cells>
+   <cells rows="3" cols="3" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>Procesardor de texto, planilla de cálculo, presentador de diapositivas y otras herramientas para trabajo de oficina.</p>
+    </cell>
+    <cell>
+     <p>Navegador Web seguro y confiable.</p>
+    </cell>
+    <cell>
+     <p>Programa de mensajería instantánea para las cuentas de un servicio que usa una sigla similar.</p>
+    </cell>
+    <cell>
+     <p>Organizador de correo electrónico</p>
+    </cell>
+    <cell>
+     <p>Devede: Creador de CD y DVD de video. Permite generar menú y añadir diferentes opciones.</p>
+    </cell>
+    <cell>
+     <p>Brasero: Grabador de CD y DVD (para "quemar los discos")</p>
+    </cell>
+    <cell>
+     <p>Imagination: Creador de pases de fotografías con fondo musical y efectos.</p>
+    </cell>
+    <cell>
+     <p>El GIMP: Potente herramienta para dibujo y retoque fotográfico.</p>
+    </cell>
+    <cell>
+     <p>Inkscape: Potente herramienta de dibujo vectorial.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@text.Identify" name="0118" code="" type="identifyWords">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>Lee con atención y pasa a la siguiente actividad</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFEFEFE">
+     <image name="fondo.png" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="400" height="600" />
+    </window>
+   </settings>
+   <document>
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="default" italic="false" bold="false" background="0xFFFFFF" family="Arial" tabWidth="12" size="13" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p background="0xFFFFFF" family="Arial" name="default" tabWidth="12">
+      <cell width="400" height="60">
+       <style shadow="true">
+        <font family="Arial" size="26" bold="true" />
+        <color foreground="0xFEFEFE" background="0x010101" />
+       </style>
+       <p>Entorno de escritorio</p>
+      </cell>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Arial" tabWidth="12" name="default">
+      <text background="0x00FFFFFF" family="Arial" size="18">Un entorno de escritorio es un conjunto de software  para ofrecer al usuario de una computadora  una interacción amigable y cómoda. El software es una solución  completa de interfaz gráfica de usuario ofrece iconos, barras de herramientas, e integración entre aplicaciones con habilidades como, arrastrar y soltar</text>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Arial" tabWidth="12" name="default" />
+     <p Alignment="1" background="0xFFFFFF" family="Arial" tabWidth="12" name="default">
+      <text background="0x00FFFFFF" family="Arial" size="18">En general cada entorno de escritorio se distingue por su aspecto y comportamiento particulares, aunque algunos tienden a imitar características de escritorios ya existentes. El primer entorno moderno de escritorio que se comercializó fue desarrollado por Xerox en los años 80. Actualmente el entorno más conocido es el ofrecido por la familia Windows aunque existen otros como los de Macintosh (Classic y Cocoa) y de código abierto (o software libre) como GNOME, KDE, CDE, Xfce o LXDE.</text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@panels.Identify" name="0119" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>Identifica entornos de escritorio libres</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0xD5D5D5" background="0x010101" shadow="0xFEFEFE" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFEFEFE">
+     <image name="fondo.png" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="200.0" cellHeight="200.0" border="false" id="primary">
+    <style transparent="true">
+     <font family="Arial" size="17" bold="true" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="1" image="kde.jpg" />
+    <cell id="1" image="gnome.png" />
+    <cell id="0" image="MacLogo1.JPG" />
+    <cell id="0" image="MicrosoftW.jpg" />
+    <cell id="0" image="gimp.png" />
+    <cell id="0" image="brasero.png" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Explore" name="0120_SL" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFEFEFE" />
+     </style>
+     <p>Algunas preguntas que nos debemos hacer...</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="fondo.png" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="350.0" cellHeight="60.0" border="true" id="primary">
+    <style shadow="true">
+     <font family="Arial" size="16" bold="true" />
+     <color foreground="0x089E0D" background="0xBFFEBF" shadow="0xA5FD81" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell id="0">
+     <p>¿QUÉ ES EL SOFTWARE?</p>
+    </cell>
+    <cell id="3">
+     <p>¿QUÉ SON LAS LICENCIAS?</p>
+    </cell>
+    <cell id="2">
+     <p>¿QUÉ ES EL SOFTWARE PRIVATIVO?</p>
+    </cell>
+    <cell id="1">
+     <p>¿QUÉ ES EL SOFTWARE LIBRE?</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="700.0" cellHeight="350.0" border="true" id="secondary">
+    <style shadow="true">
+     <font family="Dialog" size="16" bold="true" />
+     <color foreground="0xFFFFFF" background="0x089BBF" shadow="0x9F9B5C" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>Es el conjunto de los programas de cómputo, procedimientos, reglas, documentación y datos asociados que forman parte de las operaciones de un sistema de computación.</p>
+     <p>Extraído del estándar 729 del IEEE. </p>
+     <p>Bajo esta definición, el concepto de software va más allá de los programas de cómputo en sus distintos estados: código fuente, binario o ejecutable; también su documentación, datos a procesar e información de usuario es parte del software: es decir, abarca todo lo intangible, todo lo "no físico" relacionado.</p>
+    </cell>
+    <cell>
+     <p>Es la denominación del software que brinda libertad a los usuarios sobre su producto. Una vez obtenido, puede ser usado, copiado, estudiado, modificado y redistribuido libremente. Según la Free Software Foundation, el software libre se refiere a la libertad de los usuarios para ejecutar, copiar, distribuir, estudiar, cambiar y mejorar el software;  las cuatro libertades de los usuarios del software: la libertad de usar el programa, con cualquier propósito; de estudiar el funcionamiento del programa, y adaptarlo a las necesidades; de distribuir copias, con lo que puede ayudar a otros; de mejorar el programa y hacer públicas las mejoras, de modo que toda la comunidad se beneficie (para la segunda y última libertad, el acceso al código fuente es un requisito previo).</p>
+    </cell>
+    <cell>
+     <p>Se refiere a cualquier programa informático en el que los usuarios tienen limitadas las posibilidades de usarlo, modificarlo o redistribuirlo (con o sin modificaciones), o cuyo código fuente no está disponible o el acceso a éste se encuentra restringido. (también llamado software propietario, software no libre, software privado, software con propietario o software de propiedad)</p>
+    </cell>
+    <cell>
+     <p>Es un contrato entre el titular del derecho de autor (propietario) y el usuario del programa informático (usuario final), para utilizar éste en una forma determinada y de conformidad con unas condiciones determinadas.</p>
+     <p>Las licencias de software pueden establecer entre otras cosas: la cesión de determinados derechos del propietario al usuario final sobre una o varias copias del programa informático, los límites en la responsabilidad por fallos, el plazo de cesión de los derechos, el ámbito geográfico de validez del contrato e incluso pueden establecer determinados compromisos del usuario final hacia el propietario, tales como la no cesión del programa a terceros o la no reinstalación del programa en equipos distintos al que se instaló originalmente.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="C_001" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Dialog" size="18" bold="true" />
+      <color foreground="0x838080" background="0xFFFFFF" shadow="0xD3D3D3" />
+     </style>
+     <p>Mapa conceptual del Software Libre - René Mérou - CC by sa</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="mapa1-resized.jpg" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="10.0" cellHeight="10.0" border="false">
+    <style transparent="true" />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <style shadow="true" transparent="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Dialog" size="18" bold="true" />
+      <color foreground="0x838080" background="0xFFFFFF" shadow="0xD3D3D3" />
+     </style>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="C_002" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Dialog" size="24" bold="true" />
+      <color foreground="0x838080" background="0xFFFFFF" shadow="0xD3D3D3" />
+     </style>
+     <p>Ordena el mapa conceptual</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true" borderStroke="0.7" markerStroke="2.7">
+      <font family="Dialog" size="24" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" shadow="0xD4CFCF" />
+     </style>
+     <p>Buen trabajo</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <image name="fondo.png" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <gradient source="0xBCBABA" dest="0xFFFFFF" angle="0" cycles="10" />
+    </window>
+   </settings>
+   <cells rows="3" cols="3" border="true" image="mapa1-resized.jpg">
+    <style borderStroke="2.7" markerStroke="2.7">
+     <font family="Dialog" size="17" bold="true" />
+     <color border="0xABAE05" />
+    </style>
+    <shaper class="@JigSaw" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.Identify" name="C_003" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Dialog" size="18" bold="true" />
+      <color foreground="0x838080" background="0xFFFFFF" shadow="0xD3D3D3" />
+     </style>
+     <p>Conoce las 4 libertades del Software Libre y algunas restricciones que las garantizan</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Dialog" size="22" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" shadow="0xD4CFCF" />
+     </style>
+     <p>Vas en camino hacia la libertad</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <image name="fondo.png" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <gradient source="0xBCBABA" dest="0xFFFFFF" angle="0" cycles="10" />
+    </window>
+   </settings>
+   <cells rows="4" cols="2" cellWidth="250.0" cellHeight="100.0" border="false" id="primary">
+    <style transparent="true">
+     <font family="Dialog" size="17" bold="true" />
+     <color border="0x0BE625" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell id="1">
+     <p>Usar con cualquier propósito</p>
+    </cell>
+    <cell id="1">
+     <p>Adaptar a las necesidades</p>
+    </cell>
+    <cell id="1">
+     <p>Redistribuir intacto o adaptado</p>
+    </cell>
+    <cell id="1">
+     <p>Publicar mejoras bajo las mismas condiciones</p>
+    </cell>
+    <cell id="1">
+     <p>Impedir que otros lo estudien</p>
+    </cell>
+    <cell id="1">
+     <p>Prohibir su copia a las malas personas</p>
+    </cell>
+    <cell id="1">
+     <p>Ocultar el código fuente para que no pueda ser estudiado</p>
+    </cell>
+    <cell id="1">
+     <p>Cambiar el nombre del autor (plagiar)</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <p>Llamada "Libertad 0"</p>
+    </cell>
+    <cell>
+     <p>"Libertad 1"</p>
+    </cell>
+    <cell>
+     <p>"Libertad 2"</p>
+    </cell>
+    <cell>
+     <p>"Libertad 3"</p>
+    </cell>
+    <cell>
+     <p>Su licencia lo impide claramente para garantizar las libertades</p>
+    </cell>
+    <cell>
+     <p>Su licencia lo impide claramente para garantizar las libertades</p>
+    </cell>
+    <cell>
+     <p>Su licencia lo impide claramente para garantizar las libertades</p>
+    </cell>
+    <cell>
+     <p>Su licencia lo impide claramente para garantizar las libertades</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="H_001" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="22" bold="true" />
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <p>Adaptación del artículo homónimo de Wikipedia en español</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFEFEFE">
+     <image name="fondo.png" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="660.0" cellHeight="460.0" border="false">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell txtAlign="middle,bottom" imgAlign="middle,top" image="stallman.jpg">
+     <style shadow="true" transparent="true">
+      <font family="Arial" size="36" bold="true" />
+      <color foreground="0x03A402" background="0x000000" shadow="0xC7C7C7" />
+     </style>
+     <p>Historia del </p>
+     <p>software libre </p>
+     <p>y de código abierto</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.Complete" name="H_002" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="20" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>http://es.wikipedia.org/wiki/Historia_del_software_libre_y_de_código_abierto</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFEFEFE">
+     <image name="fondo.png" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false">
+     <size width="660" height="560" />
+    </window>
+   </settings>
+   <checkButton />
+   <document>
+    <style name="default" italic="false" bold="false" background="0x00FFFFFF" family="Arial" tabWidth="12" size="16" />
+    <style name="target" base="default" background="0xFFFFFF" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p Alignment="1" background="0xFFFFFF" family="Arial" />
+     <p Alignment="1" background="0xFFFFFF" family="Arial">
+      <text italic="true" bold="false" background="0x00FFFFFF" family="Fenice BT" foreground="0x656565" size="18">La historia del software libre y de código abierto como lo conocemos actualmente, se remonta a inicios de los años 1980, época en la que la mayoría de software era privativo y surgió la necesidad, por parte de algunos programadores, de crear proyectos que impulsaran la creación de software libre. </text>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Arial">
+      <text italic="true" bold="false" background="0x00FFFFFF" family="Fenice BT" foreground="0x656565" size="18">Cabe mencionar que antes, cuando las primeras computadoras nacieron (y por ende los primeros programas informáticos), el software tenía un modelo de desarrollo cooperativo, similar al de otras ciencias como la física; esto empezó a cambiar en los años 1960 y los años 1970, cuando nacieron las primeras compañías que "privatizaron" su código.</text>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Arial" />
+     <p Alignment="1" background="0xFFFFFF" family="Arial">
+      <text italic="true" bold="false" background="0x00FFFFFF" family="Fenice BT" foreground="0x656565" size="18">Es importante señalar que el software libre y de código abierto, no debe ser confundido con el llamado "freeware"; el software libre y de código abierto suele ser gratuito, lo que puede llevar a confusión. El FOSS (acrónimo en inglés para free and open source software) también puede ser comprado y vendido. La confusión es aún mayor en países de habla inglesa por la ambigüedad de la palabra free que significa tanto libertad, como gratuidad.</text>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Arial" />
+     <p Alignment="1" background="0xFFFFFF" family="Arial">
+      <text italic="true" bold="false" background="0x00FFFFFF" family="Fenice BT" foreground="0x646464" size="18">Estos son algunos fragmentos sobre cómo el software libre y de código abierto ha existido y evolucionado desde su concepción.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" checkAccents="false" checkPunctuation="false" detail="false" />
+  </activity>
+  <activity class="@text.Complete" name="H_003" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="26" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>Origen de las ideas</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFEFEFE">
+     <image name="fondo.png" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="740" height="600" />
+    </window>
+   </settings>
+   <checkButton />
+   <document>
+    <style name="default" italic="false" bold="false" background="0x00FFFFFF" family="Arial" tabWidth="12" size="16" />
+    <style name="target" base="default" background="0xFFFFFF" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p Alignment="1" background="0xFFFFFF" family="Arial">
+      <text background="0x00FFFFFF" family="Arial" size="18">Los conceptos de </text>
+      <cell width="140" height="26">
+       <style shadow="true">
+        <font family="Arial" size="22" bold="true" />
+        <color foreground="0xFEFEFE" background="0x010101" />
+       </style>
+       <p>"código abierto"</p>
+      </cell>
+      <text background="0x00FFFFFF" family="Arial" size="18"> (fuente abierta) y de </text>
+      <cell width="380" height="26">
+       <style shadow="true">
+        <font family="Arial" size="22" bold="true" />
+        <color foreground="0xFEFEFE" background="0x010101" />
+       </style>
+       <p>"compartición libre de información tecnológica"</p>
+      </cell>
+      <text background="0x00FFFFFF" family="Arial" size="18"> existen desde mucho antes de la existencia de computadoras y del software. </text>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Arial">
+      <text background="0x00FFFFFF" family="Arial" size="18">En los primeros años del desarrollo automotriz , la ALAM, un grupo de monopolizadores de capital, eran propietarios de los derechos de la patente de un motor de gasolina de dos tiempos archivada por George B. Selden. Con el control de esta patente, fueron capaces de monopolizar la industria e intentaron forzar a los fabricantes de automóviles a construir vehículos de acuerdo con sus especificaciones (automóviles pesados, lujosos y caros; diseñados para la gente adinerada). Los fabricantes a quienes otorgaban una licencia, tenían que pagarles una comisión, así como un porcentaje de las ganancias brutas. </text>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Arial">
+      <text background="0x00FFFFFF" family="Arial" size="18">En 1909, Henry Ford apeló la medida, ganándo en 1911. La resolución fue que la patente , para motores de 2 tiempos, no cubría los motores utilizados por la mayoría de fabricantes (de cuatro tiempos, basados en el diseño de N. Otto). La patente quedó sin ningún valor y la ALAM dio paso a una nueva Asociación de Fabricantes de Vehículos a Motor,  que entabló un nuevo acuerdo de licencia múltiple entre todos los fabricantes de automóviles de EE. UU.: aunque cada compañía desarrollaría tecnologías y presentaría patentes, estas patentes serían compartidas abiertamente y sin intercambio monetario alguno entre todos los fabricantes. Hasta el momento de la participación de EE. UU. en la segunda guerra mundial, 92 patentes de Ford fueron utilizadas libremente por otros fabricantes y a su vez fueron usadas 515 patentes de otras compañías, todo sin demandas legales o intercambio monetario de ningún tipo.</text>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Arial" />
+     <p Alignment="1" background="0xFFFFFF" family="Arial">
+      <text background="0x00FFFFFF" family="Arial" size="18">Algunos de los </text>
+      <cell width="380" height="27">
+       <style shadow="true">
+        <font family="Arial" size="26" />
+        <color foreground="0xFEFEFE" background="0x010101" />
+       </style>
+       <p>principios fundamentales del software libre</p>
+      </cell>
+      <text background="0x00FFFFFF" family="Arial" size="18">, surgieron de filosofías de cooperación y sinceridad, ampliamente establecidas en los campos académicos y de la investigación científica (en este caso, ciencia computacional).</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" checkAccents="false" checkPunctuation="false" detail="false" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="inicio" code="">
+   <description>
+    <p>Presentación</p>
+   </description>
+   <messages>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="88x31.png" type="initial">
+     <style shadow="true" borderStroke="4.2" markerStroke="5.0">
+      <font family="Dialog" size="22" bold="true" />
+      <color background="0xFFFFFF" shadow="0xABFB0A" border="0xFF0000" />
+     </style>
+     <p>Introducción al Software Libre</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="fondo.png" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="3" border="false" image="GNUTUX.png">
+    <style transparent="true">
+     <font family="Dialog" size="22" bold="true" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell txtAlign="left,bottom">
+     <p>Software Libre--&gt;</p>
+    </cell>
+    <cell txtAlign="middle,bottom">
+     <p>Cultura Libre--&gt;</p>
+    </cell>
+    <cell txtAlign="right,bottom">
+     <style shadow="true" transparent="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Dialog" size="22" bold="true" />
+      <color background="0xFFFFFF" shadow="0xCCFFCC" />
+     </style>
+     <p>Personas Libres</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="licencia" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Dialog" size="24" bold="true" />
+      <color foreground="0x019701" shadow="0xF7FE22" />
+      <gradient source="0x1E15FE" dest="0xFFFFFF" angle="90" cycles="2" />
+     </style>
+     <p>Recursos para compartir con JClic</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="20080728_espacio_cc.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="10" cols="1" cellWidth="500.0" cellHeight="49.0" border="false">
+    <style>
+     <font family="FreeMono" size="24" bold="true" />
+     <color background="0xFFFFFF" shadow="0x696969" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="10" />
+    <cell imgAlign="left,top">
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Dialog" size="22" bold="true" />
+      <color foreground="0xFEFEFE" background="0x010101" shadow="0x838383" />
+     </style>
+     <media type="URL" level="1" file="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_AR" />
+     <p>Creative Commons by/nc/sa 3.0 unported</p>
+    </cell>
+    <cell txtAlign="left,top">
+     <style transparent="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Dialog" size="22" bold="true" />
+      <color background="0xFFFFFF" shadow="0xCCFFCC" />
+     </style>
+     <p>Usted tiene libertad para:</p>
+    </cell>
+    <cell imgAlign="left,top">
+     <p>copiar, distribuir, exhibir, y ejecutar esta obra</p>
+    </cell>
+    <cell>
+     <p>hacer obras derivadas</p>
+    </cell>
+    <cell txtAlign="left,top">
+     <style transparent="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Dialog" size="22" bold="true" />
+      <color background="0xFFFFFF" shadow="0xCCFFCC" />
+     </style>
+     <p>Bajo las siguientes condiciones:</p>
+    </cell>
+    <cell>
+     <media type="URL" level="1" file="http://www.argenclic.org.ar" />
+     <p>Citar a www.argenclic.org.ar como autor</p>
+    </cell>
+    <cell>
+     <p>No tener fines comerciales</p>
+    </cell>
+    <cell>
+     <p>Mantener estas condiciones en la licencia de las obras derivadas que realice.</p>
+    </cell>
+    <cell image="88x31.png" />
+    <cell txtAlign="middle,bottom" imgAlign="middle,bottom">
+     <style shadow="true">
+      <font family="Arial" size="20" />
+      <color foreground="0xFEFEFE" background="0x010101" />
+     </style>
+     <p>Envíe comentarios y sugerencias a fernando@gleducar.org.ar</p>
+    </cell>
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="inkscape.gif" file="inkscape.gif" animated="false" />
+  <media name="20080728_espacio_cc.jpg" file="20080728_espacio_cc.jpg" />
+  <media name="adhesivos-gnu.jpg" file="adhesivos-gnu.jpg" />
+  <media name="firefox-logo.jpg" file="firefox-logo.jpg" />
+  <media name="GNU LINUX 2.jpg" file="gnu_linux_2.jpg" />
+  <media name="kde.jpg" file="kde.jpg" />
+  <media name="MacLogo1.JPG" file="maclogo1.jpg" />
+  <media name="mapa1-resized.jpg" file="mapa1-resized.jpg" />
+  <media name="maxlinuxpenguin.jpg" file="maxlinuxpenguin.jpg" />
+  <media name="MicrosoftW.jpg" file="microsoftw.jpg" />
+  <media name="openoffice_logo.jpg" file="openoffice_logo.jpg" />
+  <media name="stallman.jpg" file="stallman.jpg" />
+  <media name="sun-solaris-logo.jpg" file="sun-solaris-logo.jpg" />
+  <media name="thunderbird-bloqueado.jpg" file="thunderbird-bloqueado.jpg" />
+  <media name="Tuquito.JPG" file="tuquito.jpg" />
+  <media name="ubuntu-resized.jpg" file="ubuntu-resized.jpg" />
+  <media name="wikipedia-logo.jpg" file="wikipedia-logo.jpg" />
+  <media name="120px-logo_de_lihuen.png" file="120px-logo_de_lihuen.png" />
+  <media name="88x31.png" file="somerights20.png" />
+  <media name="amsn9.png" file="amsn9.png" />
+  <media name="brasero.png" file="brasero.png" />
+  <media name="codigo.png" file="codigo1.png" />
+  <media name="codigo_objeto.png" file="codigo_objeto1.png" />
+  <media name="devede-icon.png" file="devede-icon.png" />
+  <media name="fondo.png" file="02fondonuevo.png" />
+  <media name="gimp.png" file="gimp.png" />
+  <media name="gnome.png" file="gnome.png" />
+  <media name="GNUTUX.png" file="gnutux.png" />
+  <media name="imagination-logo.png" file="imagination-logo.png" />
+  <media name="ututo.png" file="logo.png" />
+ </mediaBag>
+</JClicProject>
+

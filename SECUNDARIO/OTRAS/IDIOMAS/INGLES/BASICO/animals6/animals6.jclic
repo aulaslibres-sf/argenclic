@@ -1,0 +1,1689 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="animals6" version="0.1.3">
+ <settings>
+  <title>The animals</title>
+  <revision description="Creation of the package of activities using Clic 3.0" date="10/22/08" />
+  <revision description="Converted from Clic3 to JClic" date="10/22/08">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Carmen Peña Atta" mail="capeat@msn.com" />
+  <organization name="IES Valsequillo" mail="35009841@gobiernodecanarias.org" url="http://https://www.iesvalsequillo.org/" city="Valsequillo - Las Palmas" state="Canarias" />
+  <language>english</language>
+  <description>
+   <p>JClic project activities for the area of English language about wild animals. The project has 16 different types of activities: associations, word order, scrambled lyrics, crossword puzzles, and so on.</p>
+  </description>
+  <descriptors area-codes="lleng" level-codes="PRI">English language, animales</descriptors>
+  <skin file="@orange.xml" />
+  <meta_langs>english</meta_langs>
+  <descriptions>
+   <description language="english">
+    <p>JClic project activities for the area of English language about wild animals. The project has 16 different types of activities: associations, word order, scrambled lyrics, crossword puzzles, and so on.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="start" name="Animals" />
+  <item id="menu" name="Choose the activity">
+   <jump action="STOP" id="forward" />
+   <jump action="STOP" id="back" />
+  </item>
+  <item id="memory" name="Memory">
+   <jump tag="menu" id="forward" />
+   <jump tag="menu" id="back" />
+  </item>
+  <item id="memory2" name="memory2">
+   <jump tag="menu" id="forward" />
+   <jump tag="menu" id="back" />
+  </item>
+  <item id="memory3" name="memory3">
+   <jump tag="menu" id="forward" />
+   <jump tag="menu" id="back" />
+  </item>
+  <item id="exploration" name="exploration">
+   <jump tag="menu" id="forward" />
+   <jump tag="menu" id="back" />
+  </item>
+  <item id="wordsearch" name="wordsearch">
+   <jump tag="menu" id="forward" />
+   <jump tag="menu" id="back" />
+  </item>
+  <item id="wordsearch2" name="wordsearch2">
+   <jump tag="menu" id="forward" />
+   <jump tag="menu" id="back" />
+  </item>
+  <item id="associate" name="associate">
+   <jump tag="menu" id="forward" />
+   <jump tag="menu" id="back" />
+  </item>
+  <item id="association2" name="association2">
+   <jump tag="menu" id="forward" />
+   <jump tag="menu" id="back" />
+  </item>
+  <item id="identify" name="identify">
+   <jump tag="menu" id="forward" />
+   <jump tag="menu" id="back" />
+  </item>
+  <item id="fill in the gaps" name="fill in the gaps">
+   <jump tag="menu" id="forward" />
+   <jump tag="menu" id="back" />
+  </item>
+  <item id="order" name="Order">
+   <jump tag="menu" id="forward" />
+   <jump tag="menu" id="back" />
+  </item>
+  <item id="crossword" name="Crossword">
+   <jump tag="menu" id="forward" />
+   <jump tag="menu" id="back" />
+  </item>
+  <item id="crossword2" name="Crossword 2">
+   <jump tag="menu" id="forward" />
+   <jump tag="menu" id="back" />
+  </item>
+  <item id="fill in 2" name="Fill in 2">
+   <jump tag="menu" id="forward" />
+   <jump tag="menu" id="back" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="Animals" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" bold="true" />
+      <color foreground="0x0000CC" background="0xFFCCCC" />
+     </style>
+     <p>Click on the image if you want to choose one activity or go on</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFCCCC">
+     <gradient source="0x99FFFF" dest="0x009999" angle="0" cycles="2" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF6666" border="true">
+     <gradient source="0xCCFFCC" dest="0x99FFCC" angle="0" />
+    </window>
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="2" cellWidth="209.0" cellHeight="176.0" border="true">
+    <style>
+     <font family="Comic Sans MS" size="22" />
+     <color foreground="0x990099" background="0x66FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="cerdo.jpg">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="Choose the activity" />
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x0000CC" background="0xFFCCCC" />
+     </style>
+     <p>JClic Animals</p>
+     <p>Carmen Peña Atta</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="Choose the activity" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x3300CC" background="0x99FFFF" />
+     </style>
+     <p>Choose one activity</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x9999FF">
+     <gradient source="0xCCFFCC" dest="0xCCCCFF" angle="0" cycles="5" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF6666" border="true">
+     <gradient source="0xFF99FF" dest="0x009999" angle="15" cycles="3" />
+    </window>
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="14" cols="1" cellWidth="299.0" cellHeight="30.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="14" />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x3300CC" background="0x99FFFF" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="memory" />
+     <p>Memory</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x3300CC" background="0x99FFFF" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="order" />
+     <p>Order</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x3300CC" background="0x99FFFF" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="associate" />
+     <p>Associate</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x3300CC" background="0x99FFFF" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="association2" />
+     <p>Association</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x3300CC" background="0x99FFFF" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="exploration" />
+     <p>Explore</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x3300CC" background="0x99FFFF" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="fill in the gaps" />
+     <p>Fill in</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x3300CC" background="0x99FFFF" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="fill in 2" />
+     <p>Fill in 2</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x3300CC" background="0x99FFFF" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="crossword2" />
+     <p>Crossword 2</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x3300CC" background="0x99FFFF" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="identify" />
+     <p>Identify</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x3300CC" background="0x99FFFF" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="memory2" />
+     <p>Memory 2</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x3300CC" background="0x99FFFF" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="memory3" />
+     <p>Memory 3</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x3300CC" background="0x99FFFF" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="wordsearch" />
+     <p>Wordsearch</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x3300CC" background="0x99FFFF" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="wordsearch2" />
+     <p>Wordsearch 2</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x3300CC" background="0x99FFFF" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="crossword" />
+     <p>Crossword</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@textGrid.CrossWord" name="Crossword" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" bold="true" />
+      <color foreground="0x000099" background="0xFF66FF" />
+     </style>
+     <p>Write the words</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color foreground="0xCC00CC" background="0xCCCC00" />
+     </style>
+     <p>Cool!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x66FFFF">
+     <gradient source="0x99FFFF" dest="0x009999" angle="0" cycles="2" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF9999" border="true">
+     <gradient source="0xCCFFCC" dest="0x99FFCC" angle="0" />
+    </window>
+    <skin file="@green.xml" />
+   </settings>
+   <textGrid rows="9" columns="8" cellWidth="36.0" cellHeight="36.0" border="true">
+    <style>
+     <font family="Comic Sans MS" size="17" />
+     <color foreground="0xFF00CC" background="0xFFFFCC" />
+    </style>
+    <text>
+     <row>*Z**DOG*S</row>
+     <row>*E*****RP</row>
+     <row>*B*CAT*AI</row>
+     <row>MR*****BD</row>
+     <row>OAHORSEBE</row>
+     <row>U******IR</row>
+     <row>S**COW*T*</row>
+     <row>E*GOAT***</row>
+    </text>
+   </textGrid>
+   <cells rows="1" cols="3" cellWidth="200.0" cellHeight="60.0" border="true" id="acrossClues">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="5" item="2" />
+    <cell id="5" item="0" />
+    <cell id="5" item="1" />
+    <cell id="3" item="2" />
+    <cell id="3" item="0" />
+    <cell id="3" item="1" />
+    <cell id="2" item="3" />
+    <cell id="2" item="2" />
+    <cell id="1" item="2" />
+    <cell id="1" item="1" />
+    <cell id="1" item="0" />
+    <cell id="7" item="2" />
+    <cell id="7" item="0" />
+    <cell id="7" item="1">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0xCC00CC" background="0xCCCC00" />
+     </style>
+     <p>It gives milk and it is not a cow</p>
+    </cell>
+    <cell id="6" item="3" />
+    <cell id="6" item="2" />
+    <cell id="6" item="0" />
+    <cell id="6" item="1">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color foreground="0xCC00CC" background="0xCCCC00" />
+     </style>
+     <p>It gives milk</p>
+    </cell>
+    <cell id="4" item="0">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0xCC00CC" background="0xCCCC00" />
+     </style>
+     <p>One of them is called Pegasus</p>
+    </cell>
+    <cell id="4" item="0" />
+    <cell id="2" item="1">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color foreground="0xCC00CC" background="0xCCCC00" />
+     </style>
+     <p>It has got whiskers and hates mice</p>
+    </cell>
+    <cell id="2" item="0" />
+    <cell id="0" item="3" />
+    <cell id="0" item="2" />
+    <cell id="0" item="1">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0xCC00CC" background="0xCCCC00" />
+     </style>
+     <p>It barks and hates cats</p>
+    </cell>
+    <cell id="0" item="0" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="200.0" cellHeight="60.0" border="true" id="downClues">
+    <style />
+    <cell id="2" item="0" />
+    <cell id="2" item="0" />
+    <cell id="1" item="1" />
+    <cell id="1" item="0">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0xCC00CC" background="0xCCCC00" />
+     </style>
+     <p>It has got white and black stripes</p>
+    </cell>
+    <cell id="0" item="1" />
+    <cell id="8" item="1" />
+    <cell id="8" item="0">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color foreground="0xCC00CC" background="0xCCCC00" />
+     </style>
+     <p>It has got eight legs</p>
+    </cell>
+    <cell id="2" item="5" />
+    <cell id="2" item="4" />
+    <cell id="2" item="3" />
+    <cell id="3" item="3" />
+    <cell id="3" item="2" />
+    <cell id="3" item="1" />
+    <cell id="3" item="0" />
+    <cell id="7" item="1" />
+    <cell id="7" item="0">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0xCC00CC" background="0xCCCC00" />
+     </style>
+     <p>One very famous is Bugs Bunny and eats carrots</p>
+    </cell>
+    <cell id="6" item="2" />
+    <cell id="6" item="1" />
+    <cell id="6" item="0" />
+    <cell id="5" item="4" />
+    <cell id="5" item="3" />
+    <cell id="5" item="2" />
+    <cell id="5" item="1" />
+    <cell id="5" item="0" />
+    <cell id="4" item="4" />
+    <cell id="4" item="3" />
+    <cell id="4" item="2" />
+    <cell id="4" item="1" />
+    <cell id="4" item="0" />
+    <cell id="0" item="0">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0xCC00CC" background="0xCCCC00" />
+     </style>
+     <p>One of them is called Mickey</p>
+    </cell>
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+   </cells>
+   <layout position="AB" wildTransparent="true" />
+  </activity>
+  <activity class="@textGrid.CrossWord" name="Crossword 2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Century Gothic" size="22" bold="true" />
+      <color foreground="0xCC00CC" background="0xCCCCFF" />
+     </style>
+     <p>Do the crossword</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color foreground="0x006666" background="0xCCFFCC" />
+     </style>
+     <p>You are fantastic!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x99FFFF">
+     <gradient source="0x99FFFF" dest="0x009999" angle="0" cycles="2" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF6666" border="true">
+     <gradient source="0xCCFFCC" dest="0x99FFCC" angle="0" />
+    </window>
+    <skin file="@orange.xml" />
+   </settings>
+   <textGrid rows="11" columns="11" cellWidth="36.0" cellHeight="36.0" border="true">
+    <style>
+     <font family="Comic Sans MS" size="18" />
+     <color foreground="0x660066" background="0xFFCCFF" />
+    </style>
+    <text>
+     <row>****PIG***B</row>
+     <row>TIGER*****I</row>
+     <row>******L***R</row>
+     <row>******I*B*D</row>
+     <row>SNAKE*O*E**</row>
+     <row>******N*A*W</row>
+     <row>MONKEY**R*O</row>
+     <row>ELEPHANT**L</row>
+     <row>**********F</row>
+     <row>GUEPARD****</row>
+     <row>*GIRAFFE***</row>
+    </text>
+   </textGrid>
+   <cells rows="1" cols="3" cellWidth="200.0" cellHeight="60.0" border="true" id="acrossClues">
+    <style>
+     <font family="Comic Sans MS" size="18" />
+     <color foreground="0x990099" background="0xFFCCCC" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="10" item="1" />
+    <cell id="10" item="0">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0x006666" background="0xCCFFCC" />
+     </style>
+     <p>It is the tallest animal</p>
+    </cell>
+    <cell id="9" item="1" />
+    <cell id="9" item="0">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color foreground="0x006666" background="0xCCFFCC" />
+     </style>
+     <p>It runs very very fast</p>
+    </cell>
+    <cell id="8" item="1" />
+    <cell id="8" item="0" />
+    <cell id="6" item="3" />
+    <cell id="6" item="0">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color foreground="0x006666" background="0xCCFFCC" />
+     </style>
+     <p>It lives in trees and eats bananas</p>
+    </cell>
+    <cell id="6" item="2" />
+    <cell id="7" item="2" />
+    <cell id="7" item="1" />
+    <cell id="7" item="0">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0x006666" background="0xCCFFCC" />
+     </style>
+     <p>Dumbo is one</p>
+    </cell>
+    <cell id="6" item="1" />
+    <cell id="6" item="1" />
+    <cell id="5" item="3" />
+    <cell id="5" item="2" />
+    <cell id="5" item="1" />
+    <cell id="5" item="0" />
+    <cell id="4" item="3" />
+    <cell id="4" item="2" />
+    <cell id="4" item="0">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0x006666" background="0xCCFFCC" />
+     </style>
+     <p>Its venom is very dangerous</p>
+    </cell>
+    <cell id="4" item="1" />
+    <cell id="3" item="3" />
+    <cell id="3" item="1" />
+    <cell id="3" item="0" />
+    <cell id="3" item="2" />
+    <cell id="2" item="1" />
+    <cell id="2" item="0" />
+    <cell id="2" item="1" />
+    <cell id="1" item="2" />
+    <cell id="1" item="1" />
+    <cell id="1" item="0">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color foreground="0x006666" background="0xCCFFCC" />
+     </style>
+     <p>It has got yellow stripes</p>
+    </cell>
+    <cell id="0" item="1" />
+    <cell id="0" item="0">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0x006666" background="0xCCFFCC" />
+     </style>
+     <p>It is pink</p>
+    </cell>
+    <cell id="0" item="0" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="200.0" cellHeight="60.0" border="true" id="downClues">
+    <style>
+     <font family="Comic Sans MS" size="18" />
+     <color foreground="0x990099" background="0xFFCCCC" />
+    </style>
+    <cell id="9" item="0" />
+    <cell id="8" item="1" />
+    <cell id="8" item="0">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color foreground="0x006666" background="0xCCFFCC" />
+     </style>
+     <p>It can be polar or brown</p>
+    </cell>
+    <cell id="2" item="4" />
+    <cell id="2" item="3" />
+    <cell id="2" item="2" />
+    <cell id="2" item="1" />
+    <cell id="1" item="4" />
+    <cell id="1" item="3" />
+    <cell id="1" item="2" />
+    <cell id="1" item="1" />
+    <cell id="3" item="4" />
+    <cell id="3" item="3" />
+    <cell id="3" item="2" />
+    <cell id="3" item="1" />
+    <cell id="3" item="0" />
+    <cell id="2" item="0" />
+    <cell id="1" item="0" />
+    <cell id="0" item="4" />
+    <cell id="0" item="3" />
+    <cell id="0" item="2" />
+    <cell id="0" item="1" />
+    <cell id="10" item="2" />
+    <cell id="10" item="1">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0x006666" background="0xCCFFCC" />
+     </style>
+     <p>It is a type of dog but wild</p>
+    </cell>
+    <cell id="10" item="0">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color foreground="0x006666" background="0xCCFFCC" />
+     </style>
+     <p>It has got wings and can fly</p>
+    </cell>
+    <cell id="7" item="2" />
+    <cell id="7" item="1" />
+    <cell id="7" item="0" />
+    <cell id="6" item="4" />
+    <cell id="6" item="3" />
+    <cell id="6" item="2" />
+    <cell id="6" item="1">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0x006666" background="0xCCFFCC" />
+     </style>
+     <p>It is the king of the jungle</p>
+    </cell>
+    <cell id="6" item="0" />
+    <cell id="5" item="3" />
+    <cell id="5" item="2" />
+    <cell id="5" item="1" />
+    <cell id="5" item="0" />
+    <cell id="4" item="4" />
+    <cell id="4" item="3" />
+    <cell id="4" item="2" />
+    <cell id="4" item="1" />
+    <cell id="4" item="0" />
+    <cell id="0" item="0" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+   </cells>
+   <layout position="AB" wildTransparent="true" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="Fill in 2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0xCC00CC" background="0xFF9999" />
+     </style>
+     <p>Choose the suitable word</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Courier New" size="22" bold="true" italic="true" />
+      <color foreground="0x990099" background="0x99F433" />
+     </style>
+     <p>Fantastic!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x9999FF">
+     <gradient source="0xCCCCFF" dest="0xFF9966" angle="0" cycles="2" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x6666FF" border="true">
+     <size width="701" height="300" />
+    </window>
+    <skin file="@green.xml" />
+   </settings>
+   <document>
+    <style name="default" size="20" tabWidth="12" background="0xFFFFFF" italic="false" bold="false" family="Comic Sans MS" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p background="0xFFFFFF" family="Arial">
+      <text background="0xFFFFFF" family="Arial">There are many animals in the world. I like </text>
+      <target>
+       <answer>birds</answer>
+       <optionList>
+        <option>birds</option>
+        <option>dogs</option>
+        <option>cats</option>
+       </optionList>
+       <text>birds</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial"> because they have got wings and can fly. I don't like </text>
+      <target>
+       <answer>spiders</answer>
+       <optionList>
+        <option>elephants</option>
+        <option>spiders</option>
+        <option>dolphins</option>
+       </optionList>
+       <text>spiders</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial"> because they have got eight legs. I love </text>
+      <target>
+       <answer>dogs</answer>
+       <optionList>
+        <option>tigers</option>
+        <option>lions</option>
+        <option>dogs</option>
+       </optionList>
+       <text>dogs</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial"> because they are the best friend of men. I like </text>
+      <target>
+       <answer>cats</answer>
+       <optionList>
+        <option>cats</option>
+        <option>horses</option>
+        <option>guepards</option>
+       </optionList>
+       <text>cats</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial"> because they are so independent. I admire </text>
+      <target>
+       <answer>giraffes</answer>
+       <optionList>
+        <option>mice</option>
+        <option>giraffes</option>
+        <option>lions</option>
+       </optionList>
+       <text>giraffes</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial"> because they have got such a long neck. </text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="Memory" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Bookman Old Style" size="22" bold="true" />
+      <color foreground="0xFF0000" background="0xCC9900" />
+     </style>
+     <p>Test your memory</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="22" bold="true" />
+      <color foreground="0xFF00CC" background="0x00FF99" />
+     </style>
+     <p>Fantastic</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x33CCFF">
+     <gradient source="0x99FFFF" dest="0x009999" angle="0" cycles="2" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF00" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="131.0" cellHeight="99.0" border="true" id="primary">
+    <style shadow="true">
+     <font family="Comic Sans MS" size="28" />
+     <color foreground="0xFF0033" background="0xFFFFFF" shadow="0x3333FF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="araña.jpg" />
+    <cell image="caballo.jpg" />
+    <cell image="cabra.jpg" />
+    <cell image="cebra.jpg" />
+    <cell image="cerdo.jpg" />
+    <cell image="conejo.jpg" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="50.0" cellHeight="30.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <style>
+      <font family="Arial" size="22" bold="true" />
+      <color foreground="0xFF00CC" background="0x00FF99" />
+     </style>
+     <p>Spider</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="22" bold="true" />
+      <color foreground="0xFF00CC" background="0x00FF99" />
+     </style>
+     <p>horse</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="22" bold="true" />
+      <color foreground="0xFF00CC" background="0x00FF99" />
+     </style>
+     <p>goat</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="22" bold="true" />
+      <color foreground="0xFF00CC" background="0x00FF99" />
+     </style>
+     <p>zebra</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="22" bold="true" />
+      <color foreground="0xFF00CC" background="0x00FF99" />
+     </style>
+     <p>pig</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="22" bold="true" />
+      <color foreground="0xFF00CC" background="0x00FF99" />
+     </style>
+     <p>rabbit</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.Order" name="Order" code="" type="orderWords" amongParagraphs="true">
+   <description />
+   <messages>
+    <cell type="previous">
+     <style>
+      <color foreground="0x6633FF" background="0xCCCCFF" />
+     </style>
+     <p>Read this text first</p>
+    </cell>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="DialogInput" size="22" />
+      <color foreground="0x0000CC" background="0xFF66CC" />
+     </style>
+     <p>Put the words in their correct order</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0xFF0099" background="0xFFFF00" />
+     </style>
+     <p>Fantastic!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x3300FF">
+     <gradient source="0x99FFFF" dest="0x009999" angle="0" cycles="2" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0099" border="true">
+     <size width="465" height="304" />
+    </window>
+    <skin file="@orange.xml" />
+   </settings>
+   <checkButton>Check your answers</checkButton>
+   <prevScreen>
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Century Gothic" size="18" />
+     <color foreground="0xFF00FF" background="0xCCCCFF" />
+    </style>
+    <p>     Piranhas
+</p>
+    <p>Piranhas are a very special type of fish. They are usually small, about 5 to 10 centimetres long. Their natural habitat is the Amazon River. People think piranhas are always aggressive and eat everything they find but this is not true. They can be dangerous and have lots of sharp teeth, so you mustn't put your fingers near a piranha's mouth.</p>
+   </prevScreen>
+   <document>
+    <style name="default" size="16" tabWidth="12" background="0xFFFFFF" italic="false" bold="false" family="Comic Sans MS" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p background="0xFFFFFF" family="Arial">
+      <text background="0xFFFFFF" family="Arial">                               </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text background="0xFFFFFF" family="Arial">                                         </text>
+      <text background="0xFFFFFF" bold="true" family="Arial">Piranhas</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text background="0xFFFFFF" family="Comic Sans MS">Piranhas </text>
+      <target>are</target>
+      <text background="0xFFFFFF" family="Comic Sans MS"> a very special type of fish. They are </text>
+      <target>usually</target>
+      <text background="0xFFFFFF" family="Comic Sans MS"> small, about 5 to 10 centimetres </text>
+      <target>long.</target>
+      <text background="0xFFFFFF" family="Comic Sans MS"> Their natural </text>
+      <target>habitat</target>
+      <text background="0xFFFFFF" family="Comic Sans MS"> is the Amazon River. People think piranhas are </text>
+      <target>always</target>
+      <text background="0xFFFFFF" family="Comic Sans MS"> aggressive and eat everything they find but this is </text>
+      <target>not</target>
+      <text background="0xFFFFFF" family="Comic Sans MS"> true. They can be dangerous and have lots of </text>
+      <target>sharp</target>
+      <text background="0xFFFFFF" family="Comic Sans MS"> teeth, so you mustn't put your fingers near a piranha's mouth.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="associate" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Bookman Old Style" size="22" bold="true" />
+      <color foreground="0xCC00CC" background="0xFF9933" />
+     </style>
+     <p>Match the word to the picture</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" bold="true" />
+      <color foreground="0x3333FF" background="0xFFFF00" />
+     </style>
+     <p>Cool!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x6666FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF3333" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="101.0" cellHeight="101.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="26" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFF33" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>dog</p>
+    </cell>
+    <cell>
+     <p>cat</p>
+    </cell>
+    <cell>
+     <p>bear</p>
+    </cell>
+    <cell>
+     <p>pig</p>
+    </cell>
+    <cell>
+     <p>mouse</p>
+    </cell>
+    <cell>
+     <p>horse</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="132.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="perro2.jpg" />
+    <cell image="gato.jpg" />
+    <cell image="oso.jpg" />
+    <cell image="cochino.jpg" />
+    <cell image="ratón.jpg">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell image="caballo.jpg" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="association2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Book Antiqua" size="22" bold="true" />
+      <color foreground="0xFF3399" background="0xCCFFFF" />
+     </style>
+     <p>Match</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x3333FF" background="0xFFCCCC" />
+     </style>
+     <p>That's right!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x9966FF">
+     <gradient source="0x99FFFF" dest="0x009999" angle="0" cycles="2" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x660066" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="10" cols="1" cellWidth="202.0" cellHeight="51.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="10" />
+    <cell id="1">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x3333FF" background="0xFF9999" />
+     </style>
+     <p>cat</p>
+    </cell>
+    <cell id="0">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x3333FF" background="0xFF9999" />
+     </style>
+     <p>tiger</p>
+    </cell>
+    <cell id="1">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x3333FF" background="0xFF9999" />
+     </style>
+     <p>dog</p>
+    </cell>
+    <cell id="1">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x3333FF" background="0xFF9999" />
+     </style>
+     <p>mouse</p>
+    </cell>
+    <cell id="0">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x3333FF" background="0xFF9999" />
+     </style>
+     <p>lion</p>
+    </cell>
+    <cell id="0">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x3333FF" background="0xFF9999" />
+     </style>
+     <p>snake</p>
+    </cell>
+    <cell id="1">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x3333FF" background="0xFF9999" />
+     </style>
+     <p>cow</p>
+    </cell>
+    <cell id="1">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x3333FF" background="0xFF9999" />
+     </style>
+     <p>goat</p>
+    </cell>
+    <cell id="0">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x3333FF" background="0xFF9999" />
+     </style>
+     <p>bear</p>
+    </cell>
+    <cell id="1">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x3333FF" background="0xFF9999" />
+     </style>
+     <p>rabbit</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="213.0" cellHeight="119.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x3333FF" background="0xFF9999" />
+     </style>
+     <p>Wild animals</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x3333FF" background="0xFF9999" />
+     </style>
+     <p>Pets</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="exploration" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial Black" size="22" bold="true" />
+      <color foreground="0xFF3333" background="0x00CCCC" />
+     </style>
+     <p>Click on the parts of the body to see the words</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="26" />
+      <color foreground="0xFF00FF" background="0x00FF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFF66">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x33FF66" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="gato.jpg" id="primary">
+    <style />
+    <shaper class="@Holes" cols="3" rows="2">
+     <shape comment="0">rectangle:0.248175,0.045307,0.160584,0.174757</shape>
+     <shape comment="1">rectangle:0.248175,0.365696,0.189781,0.161812</shape>
+     <shape comment="2">rectangle:0.372263,0.572816,0.131387,0.07767</shape>
+     <shape comment="3">rectangle:0.335766,0.68932,0.175182,0.145631</shape>
+     <shape comment="4">rectangle:0.080292,0.582524,0.248175,0.252427</shape>
+     <shape comment="5">rectangle:0.532847,0.805825,0.182482,0.184466</shape>
+    </shaper>
+    <ids>0 1 2 3 4 5</ids>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="115.0" cellHeight="41.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="26" bold="true" />
+     <color foreground="0xFF00FF" background="0x33FF00" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>ear</p>
+    </cell>
+    <cell>
+     <p>eye</p>
+    </cell>
+    <cell>
+     <p>nose</p>
+    </cell>
+    <cell>
+     <p>mouth</p>
+    </cell>
+    <cell>
+     <p>whiskers</p>
+    </cell>
+    <cell>
+     <p>leg</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="fill in the gaps" code="">
+   <description />
+   <messages>
+    <cell type="previous">
+     <style>
+      <font family="Courier New" size="26" />
+      <color foreground="0xFF0099" background="0x33FFFF" />
+     </style>
+     <p>Read this text first and then click on the text and do the exercise</p>
+    </cell>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="26" />
+      <color foreground="0x6600FF" background="0xFFCCCC" />
+     </style>
+     <p>Fill in the gaps with a suitable word</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Book Antiqua" size="26" />
+      <color foreground="0x0000FF" background="0xFF66CC" />
+     </style>
+     <p>Fantastic!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x9999FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00FF33" border="true">
+     <size width="685" height="199" />
+    </window>
+    <skin file="@blue.xml" />
+   </settings>
+   <prevScreen />
+   <document>
+    <style name="default" size="18" tabWidth="12" background="0xFFFFFF" italic="false" bold="false" family="Comic Sans MS" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p background="0xFFFFFF" family="Arial">
+      <text background="0xFFFFFF" family="Arial">				Polar bears</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text background="0xFFFFFF" family="Arial">Polar bears </text>
+      <target>
+       <answer>live</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>live</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial"> in the Arctic. They </text>
+      <target>
+       <answer>are</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>are</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial"> usually white and their long hair protect them from the </text>
+      <target>
+       <answer>cold</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>cold</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial">. Polar bears </text>
+      <target>
+       <answer>are</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>are</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial"> omnivores. They </text>
+      <target>
+       <answer>eat</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>eat</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial"> fish but they prefer seals. They sometimes hunt walruses and white whales. A polar </text>
+      <target>
+       <answer>bear</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>bear</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial"> makes holes in the ice and wait for a fish or a seal. In winter they make holes in the </text>
+      <target>
+       <answer>snow</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>snow</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial"> and hibernate. The baby </text>
+      <target>
+       <answer>polar</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>polar</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial"> bears only weigh 1 kilo.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.Identify" name="identify" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0x0000FF" background="0xFFFF00" />
+     </style>
+     <p>Which are mammals?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Courier New" size="26" />
+      <color foreground="0xFF0000" background="0xFFCC66" />
+     </style>
+     <p>Great!!!!!!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF3333">
+     <gradient source="0xFFCCFF" dest="0x009999" angle="0" cycles="2" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00FFCC" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="312.0" cellHeight="201.0" border="true" id="primary">
+    <style>
+     <color foreground="0x0033FF" background="0xFFFFFF" border="0x009999" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="1" image="cabra.jpg" />
+    <cell id="1" image="araña.jpg" />
+    <cell id="1" image="pájaro.jpg" />
+    <cell id="1" image="elefante.jpg" />
+    <cell id="1" image="girafa.jpg" />
+    <cell id="1" image="serpiente.jpg" />
+    <cell id="1" image="guepardo.jpg" />
+    <cell id="1" image="pero.jpg" />
+    <cell id="1" image="ratón.jpg" />
+   </cells>
+   <cells rows="3" cols="3" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell imgAlign="middle,top" avoidOverlapping="true" image="cabra.jpg">
+     <style>
+      <font family="Courier New" size="22" />
+      <color foreground="0x990099" background="0xFFCC66" />
+     </style>
+     <p>the goat </p>
+     <p>is a mammal</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell imgAlign="right,bottom" avoidOverlapping="true" image="elefante.jpg">
+     <style>
+      <font family="Courier New" size="26" />
+      <color foreground="0xFF0000" background="0xFFCC33" />
+     </style>
+     <p>the elephant is a mammal</p>
+    </cell>
+    <cell imgAlign="left,bottom" avoidOverlapping="true" image="girafa.jpg">
+     <style>
+      <font family="Courier New" size="22" />
+      <color foreground="0x3333FF" background="0xFFFF99" />
+     </style>
+     <p>the giraffe is a mammal</p>
+    </cell>
+    <cell />
+    <cell imgAlign="right,bottom" avoidOverlapping="true" image="guepardo.jpg">
+     <style>
+      <font family="Courier New" size="26" />
+      <color foreground="0xCC00CC" background="0xFFFF00" />
+     </style>
+     <p>the guepard is a mammal</p>
+    </cell>
+    <cell imgAlign="right,bottom" avoidOverlapping="true" image="perrito.jpg">
+     <style>
+      <font family="Courier New" size="26" />
+      <color foreground="0xFF0000" background="0x99FF00" />
+     </style>
+     <p>the dog is a mammal</p>
+    </cell>
+    <cell imgAlign="right,bottom" avoidOverlapping="true" image="ratón.jpg">
+     <style>
+      <font family="Courier New" size="26" />
+      <color foreground="0x0000FF" background="0x33FFFF" />
+     </style>
+     <p>the mouse is a mammal</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="memory2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color foreground="0x3300CC" background="0x999900" />
+     </style>
+     <p>Match the pairs</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Century Gothic" size="24" bold="true" />
+      <color foreground="0x3333FF" background="0xFF66FF" />
+     </style>
+     <p>Great!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00FF33">
+     <gradient source="0xFFCCFF" dest="0xFFFF00" angle="0" cycles="2" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF33CC" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="131.0" cellHeight="116.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="28" bold="true" />
+     <color foreground="0xFF0033" background="0xFFFF66" shadow="0xFF0033" alternative="0x999900" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="lobo.jpg" />
+    <cell image="elefante.jpg" />
+    <cell image="gato.jpg" />
+    <cell image="girafa.jpg" />
+    <cell image="guepardo.jpg" />
+    <cell image="león.jpg" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="50.0" cellHeight="30.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <style>
+      <font family="Century Gothic" size="24" />
+      <color foreground="0x3333FF" background="0xFF66FF" border="0xFFFFFF" />
+     </style>
+     <p>wolf</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Century Gothic" size="24" bold="true" />
+      <color foreground="0x3333FF" background="0xFF66FF" border="0xFFFFFF" />
+     </style>
+     <p>elephant</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Century Gothic" size="24" bold="true" />
+      <color foreground="0x3333FF" background="0xFF66FF" border="0xFFFFFF" />
+     </style>
+     <p>cat</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Century Gothic" size="24" bold="true" />
+      <color foreground="0x3333FF" background="0xFF66FF" border="0xFFFFFF" />
+     </style>
+     <p>giraffe</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Century Gothic" size="24" bold="true" />
+      <color foreground="0x3333FF" background="0xFF66FF" border="0xFFFFFF" />
+     </style>
+     <p>guepard</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Century Gothic" size="24" bold="true" />
+      <color foreground="0x3333FF" background="0xFF66FF" border="0xFFFFFF" />
+     </style>
+     <p>lion</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="memory3" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="24" />
+      <color foreground="0x3333FF" background="0xFFCCCC" />
+     </style>
+     <p>Match</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="26" bold="true" />
+      <color foreground="0xFF00FF" background="0xFFFF33" />
+     </style>
+     <p>cool!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x33FFFF">
+     <gradient source="0xFFCCFF" dest="0xFFFF00" angle="0" cycles="2" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00FF33" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="131.0" cellHeight="100.0" border="true" id="primary">
+    <style shadow="true">
+     <font family="Comic Sans MS" size="28" />
+     <color foreground="0xFF0000" background="0xCCFFFF" shadow="0x00FFFF" border="0xFF0033" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell image="mono.jpg" />
+    <cell image="oso.jpg" />
+    <cell image="perro.jpg" />
+    <cell image="pájaro.jpg" />
+    <cell image="ratón.jpg" />
+    <cell image="serpiente.jpg" />
+    <cell image="tigre.jpg" />
+    <cell image="vaca.jpg" />
+    <cell image="araña.jpg" />
+   </cells>
+   <cells rows="3" cols="3" cellWidth="50.0" cellHeight="30.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>monkey</p>
+    </cell>
+    <cell>
+     <p>bear</p>
+    </cell>
+    <cell>
+     <p>dog</p>
+    </cell>
+    <cell>
+     <p>bird</p>
+    </cell>
+    <cell>
+     <p>mouse</p>
+    </cell>
+    <cell>
+     <p>snake</p>
+    </cell>
+    <cell>
+     <p>tiger</p>
+    </cell>
+    <cell>
+     <p>cow</p>
+    </cell>
+    <cell>
+     <p>spider</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="wordsearch" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial Narrow" size="24" bold="true" />
+      <color foreground="0x3333FF" background="0xFF33FF" />
+     </style>
+     <p>Look for animals</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0x3333FF" background="0xFFFF66" />
+     </style>
+     <p>Fantastic</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x00FF00">
+     <gradient source="0xCCFFCC" dest="0x66FF66" angle="0" cycles="2" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF9999" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <textGrid rows="10" columns="10" cellWidth="39.0" cellHeight="37.0" border="false">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>ABCDOG****</row>
+     <row>DEF*******</row>
+     <row>GCAT**BEAR</row>
+     <row>R*********</row>
+     <row>A**PIG**HB</row>
+     <row>B*******OI</row>
+     <row>BMOUSE**RR</row>
+     <row>I*******SD</row>
+     <row>T*GOAT**E*</row>
+     <row>****COW***</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">DOG</clue>
+    <clue id="1">CAT</clue>
+    <clue id="2">BEAR</clue>
+    <clue id="3">PIG</clue>
+    <clue id="4">MOUSE</clue>
+    <clue id="5">HORSE</clue>
+    <clue id="6">BIRD</clue>
+    <clue id="7">RABBIT</clue>
+    <clue id="8">GOAT</clue>
+    <clue id="9">COW</clue>
+   </clues>
+   <cells rows="5" cols="2" cellWidth="121.0" cellHeight="101.0" border="false" id="secondary">
+    <style>
+     <color background="0xCCCC00" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell image="pero.jpg" />
+    <cell image="gato.jpg" />
+    <cell image="oso.jpg" />
+    <cell image="cochino.jpg" />
+    <cell image="ratón.jpg" />
+    <cell image="caballo.jpg" />
+    <cell image="pájaro.jpg" />
+    <cell image="conejo.jpg" />
+    <cell image="cabra.jpg" />
+    <cell image="vaca.jpg" />
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="wordsearch2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Bookman Old Style" size="26" />
+      <color foreground="0x3300FF" background="0xFF6666" />
+     </style>
+     <p>look for more animals</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Book Antiqua" size="26" />
+      <color foreground="0x3333FF" background="0xCCCCFF" />
+     </style>
+     <p>You are great!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x3333FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF66" border="true" />
+    <skin file="@green.xml" />
+   </settings>
+   <textGrid rows="10" columns="10" cellWidth="49.0" cellHeight="46.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>ABCWOLF*T*</row>
+     <row>DLION*S*IC</row>
+     <row>GHI***N*GH</row>
+     <row>******A*EE</row>
+     <row>SPIDERK*RE</row>
+     <row>******E**T</row>
+     <row>ELEPHANT*A</row>
+     <row>**MONKEY*H</row>
+     <row>ZEBRA*****</row>
+     <row>**GIRAFFE*</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">WOLF</clue>
+    <clue id="1">TIGER</clue>
+    <clue id="2">LION</clue>
+    <clue id="3">SNAKE</clue>
+    <clue id="4">ELEPHANT</clue>
+    <clue id="5">CHEETAH</clue>
+    <clue id="6">MONKEY</clue>
+    <clue id="7">SPIDER</clue>
+    <clue id="8">ZEBRA</clue>
+    <clue id="9">GIRAFFE</clue>
+   </clues>
+   <cells rows="5" cols="2" cellWidth="79.0" cellHeight="72.0" border="false" id="secondary">
+    <style>
+     <color foreground="0x0000CC" background="0x66FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell image="lobo.jpg" />
+    <cell image="tigre.jpg" />
+    <cell image="león.jpg" />
+    <cell image="serpiente.jpg" />
+    <cell image="elefante.jpg" />
+    <cell image="guepardo.jpg" />
+    <cell image="mono.jpg" />
+    <cell image="araña.jpg" />
+    <cell image="cebra.jpg" />
+    <cell image="girafa.jpg" />
+   </cells>
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="araña.jpg" file="arana.jpg" />
+  <media name="caballo.jpg" file="caballo.jpg" />
+  <media name="cabra.jpg" file="cabra.jpg" />
+  <media name="cebra.jpg" file="cebra.jpg" />
+  <media name="cerdo.jpg" file="cerdo.jpg" />
+  <media name="cochino.jpg" file="cochino.jpg" />
+  <media name="conejo.jpg" file="conejo.jpg" />
+  <media name="elefante.jpg" file="elefante.jpg" />
+  <media name="gato.jpg" file="gato.jpg" />
+  <media name="girafa.jpg" file="girafa.jpg" />
+  <media name="guepardo.jpg" file="guepardo.jpg" />
+  <media name="león.jpg" file="leon.jpg" />
+  <media name="lobo.jpg" file="lobo.jpg" />
+  <media name="mono.jpg" file="mono.jpg" />
+  <media name="oso.jpg" file="oso.jpg" />
+  <media name="pero.jpg" file="pero.jpg" />
+  <media name="perrito.jpg" file="perrito.jpg" />
+  <media name="perro.jpg" file="perro.jpg" />
+  <media name="perro2.jpg" file="perro2.jpg" />
+  <media name="pájaro.jpg" file="pajaro.jpg" />
+  <media name="ratón.jpg" file="raton.jpg" />
+  <media name="serpiente.jpg" file="serpiente.jpg" />
+  <media name="tigre.jpg" file="tigre.jpg" />
+  <media name="vaca.jpg" file="vaca.jpg" />
+ </mediaBag>
+</JClicProject>
+

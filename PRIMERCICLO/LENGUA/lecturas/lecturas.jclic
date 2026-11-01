@@ -1,0 +1,874 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="lecturas" version="0.1.3">
+ <settings>
+  <title>Lecturas: El vieto y el sol</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="1/21/05" />
+  <revision description="Conversión de Clic3 a JClic" date="11/8/04">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Míriam Castillo Castillo" mail="jmcaro@ctcinternet.cl" />
+  <organization name="Escuela Cardenal José María Caro" url="http://www.ctio.noao.edu/AURA/redlaser/jmcaro/jmcaro.html" city="Coquimbo" country="Chile" />
+  <language>español</language>
+  <description>
+   <p>Con esta actividad se trebaja la comprensión lectora a partir de la fábula "El viento y el sol"</p>
+  </description>
+  <descriptors area="Lenguas" level="Primaria">comprensión escrita, cuento</descriptors>
+ </settings>
+ <sequence>
+  <item id="lecturas.pac" name="inicia.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="viento1.ass" />
+  <item name="secuenci.puz" />
+  <item name="personaj.sop" />
+  <item name="alternat.txa" />
+  <item name="nombres.sop" />
+  <item name="adjetiv.txa" />
+  <item name="antonim.txa" />
+  <item name="verbos.txa" />
+  <item name="fabula.ass" />
+  <item name="fabula1.puz" />
+  <item name="solvient.puz" />
+  <item name="termino.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@text.Identify" name="adjetiv.txa" code="" type="identifyWords">
+   <description>
+    <p>Identificar letras</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Marca las cualidades (Adjetivos)</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="perfec.wav" />
+     <p>¡Perfecto!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="nuvols.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="493" height="416" />
+    </window>
+   </settings>
+   <checkButton>Corregir el ejercicio</checkButton>
+   <document>
+    <style name="default" foreground="0x800040" bold="false" italic="false" size="25" tabWidth="12" background="0xFFFFFF" family="Times New Roman" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman">
+      <cell txtAlign="left,middle" imgAlign="left,middle" width="450" height="60" border="true">
+       <style>
+        <color foreground="0xFFFFFF" background="0x008080" inactive="0x000000" alternative="0x000000" />
+       </style>
+       <p>Identifica las cualidades que aparecen en el trozo.</p>
+      </cell>
+     </p>
+     <p foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman" />
+     <p foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman">
+      <text foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman">   El sol </text>
+      <target>radiante</target>
+      <text foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman"> y </text>
+      <target>astuto</target>
+      <text foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman"> sugirió la apuesta</text>
+     </p>
+     <p foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman">
+      <text foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman">   El </text>
+      <target>fuerte</target>
+      <text foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman"> viento soplaba y aullaba.</text>
+     </p>
+     <p foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman">
+      <text foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman">   El sol deshizo las </text>
+      <target>blancas</target>
+      <text foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman"> y </text>
+      <target>suaves</target>
+      <text foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman"> nubes. </text>
+     </p>
+     <p foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman">
+      <text foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman">   El </text>
+      <target>pobre</target>
+      <text foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman"> hombre se aferraba a su capa </text>
+      <target>azul</target>
+      <text foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman">. </text>
+     </p>
+     <p foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman">
+      <text foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman">   El </text>
+      <target>frondoso</target>
+      <text foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman"> árbol donde se cobijó el hombre era </text>
+      <target>grande</target>
+      <text foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman">.</text>
+     </p>
+     <p foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman">
+      <text foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman">   El sol tiene rayos  </text>
+      <target>fuertes</target>
+      <text foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman"> y </text>
+      <target>luminosos</target>
+      <text foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman">.</text>
+     </p>
+     <p foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman">
+      <text foreground="0x800040" italic="false" bold="false" size="25" background="0xFFFFFF" family="Times New Roman">    </text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.FillInBlanks" name="alternat.txa" code="" autoJump="true" forceOkToAdvance="true">
+   <description>
+    <p>Actividad con progresión limitada a aciertos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+     </style>
+     <p>Elige una alternativa</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="tepasas.wav" />
+     <p>¡Te pasaste!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="viento.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true">
+     <size width="620" height="449" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" foreground="0x000000" bold="false" italic="false" size="15" tabWidth="12" background="0xFFFFFF" family="Arial" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p foreground="0x000000" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">
+      <cell width="380" height="60" border="false">
+       <style>
+        <font family="Arial" size="20" bold="true" />
+        <color foreground="0xFF0000" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+       </style>
+       <p>Contesta, marcando la alternativa correcta.</p>
+      </cell>
+     </p>
+     <p foreground="0x000000" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial" />
+     <p foreground="0x000000" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">
+      <text foreground="0x000000" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">  •  El viento y el sol es: </text>
+      <target>
+       <answer>Fábula</answer>
+       <optionList>
+        <option>Poema</option>
+        <option>Fábula</option>
+        <option>Cuento</option>
+        <option>Novela</option>
+       </optionList>
+       <text>Fábula</text>
+      </target>
+      <text foreground="0x000000" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial"> </text>
+     </p>
+     <p foreground="0x000000" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial" />
+     <p foreground="0x000000" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">
+      <text foreground="0x000000" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">  •  ¿Quién se creía más fuerte? </text>
+      <target>
+       <answer>El Viento y el Sol</answer>
+       <optionList>
+        <option>El Sol</option>
+        <option>El Viento</option>
+        <option>El Viento y el Sol</option>
+       </optionList>
+       <text>El viento y el Sol</text>
+      </target>
+      <text foreground="0x000000" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">.</text>
+     </p>
+     <p foreground="0x000000" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial" />
+     <p foreground="0x000000" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">
+      <text foreground="0x000000" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">  • ¿Quién sugirió la prueba?  </text>
+      <target>
+       <answer>El Sol</answer>
+       <optionList>
+        <option>El Viento</option>
+        <option>El Sol</option>
+        <option>El Hombre </option>
+       </optionList>
+       <text>El Sol</text>
+      </target>
+      <text foreground="0x000000" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">.</text>
+     </p>
+     <p foreground="0x000000" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial" />
+     <p foreground="0x000000" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">
+      <text foreground="0x000000" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">  • ¿Qué hacía el hombre cuando soplaba el viento? </text>
+      <target>
+       <answer>Sujetaba más su capa</answer>
+       <optionList>
+        <option>Sujetaba más su capa</option>
+        <option>Soltó su capa</option>
+        <option>Se escondía detrás de un árbol</option>
+       </optionList>
+       <text>Sujetaba más su capa.</text>
+      </target>
+     </p>
+     <p foreground="0x000000" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial" />
+     <p foreground="0x000000" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">
+      <text foreground="0x000000" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">  • ¿Quién ganó la apuesta? </text>
+      <target>
+       <answer>El Sol</answer>
+       <optionList>
+        <option>El Hombre</option>
+        <option>El Viento</option>
+        <option>El Sol</option>
+       </optionList>
+       <text>El Sol</text>
+      </target>
+     </p>
+     <p foreground="0x000000" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial" />
+     <p foreground="0x000000" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">
+      <text foreground="0x000000" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">    ¿Qué conclusión sacamos? </text>
+      <target>
+       <answer>No siempre gana el que mete más ruido</answer>
+       <optionList>
+        <option>El que más habla siempre gana</option>
+        <option>No siempre gana el que mete más ruido</option>
+        <option>El ganador siempre es el avaro</option>
+       </optionList>
+       <text>No siempre gana el que mete más ruido</text>
+      </target>
+     </p>
+     <p foreground="0x000000" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="antonim.txa" code="">
+   <description>
+    <p>Actividad de llenar huecos con ventanas de ayuda</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+     </style>
+     <p>Escribe un antónimo </p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bién!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFCEFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="560" height="330" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" foreground="0x800080" bold="false" italic="false" size="23" tabWidth="2" background="0xFFFFFF" family="Times New Roman" />
+    <style name="target" base="default" foreground="0x0000A0" target="true" background="0xC0C0C0" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p foreground="0x800080" italic="false" bold="false" size="23" background="0xFFFFFF" family="Times New Roman">
+      <cell width="500" height="100" border="true">
+       <style>
+        <font family="Arial" size="18" bold="true" />
+        <color foreground="0xFFFFFF" background="0x800080" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+       </style>
+       <p>Escribe una palabra que sea lo contrario (Antónimo)</p>
+      </cell>
+     </p>
+     <p foreground="0x800080" italic="false" bold="false" size="23" background="0xFFFFFF" family="Times New Roman">
+      <text foreground="0x800080" italic="false" bold="false" size="23" background="0xFFFFFF" family="Times New Roman">•  Yo soy más </text>
+      <target>
+       <answer>fuerte</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <info>
+        <cell width="80" height="30">
+         <style shadow="true">
+          <font family="Arial" size="13" bold="true" />
+          <color foreground="0xFFFFFF" background="0x0000FF" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+         </style>
+         <p>débil</p>
+        </cell>
+       </info>
+       <text>fuerte</text>
+      </target>
+      <text foreground="0x800080" italic="false" bold="false" size="23" background="0xFFFFFF" family="Times New Roman"> que tú, expresó el viento .</text>
+     </p>
+     <p foreground="0x800080" italic="false" bold="false" size="23" background="0xFFFFFF" family="Times New Roman" />
+     <p foreground="0x800080" italic="false" bold="false" size="23" background="0xFFFFFF" family="Times New Roman">
+      <text foreground="0x800080" italic="false" bold="false" size="23" background="0xFFFFFF" family="Times New Roman">•  El sol </text>
+      <target>
+       <answer>ganó</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <info>
+        <cell width="80" height="30">
+         <style shadow="true">
+          <font family="Arial" size="13" bold="true" />
+          <color foreground="0xFFFFFF" background="0x0000FF" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+         </style>
+         <p>perdió</p>
+        </cell>
+       </info>
+       <text>perdió</text>
+      </target>
+      <text foreground="0x800080" italic="false" bold="false" size="23" background="0xFFFFFF" family="Times New Roman"> la apuesta.</text>
+     </p>
+     <p foreground="0x800080" italic="false" bold="false" size="23" background="0xFFFFFF" family="Times New Roman" />
+     <p foreground="0x800080" italic="false" bold="false" size="23" background="0xFFFFFF" family="Times New Roman">
+      <text foreground="0x800080" italic="false" bold="false" size="23" background="0xFFFFFF" family="Times New Roman">•  El hombre se cobijó bajo la sombra de un </text>
+      <target>
+       <answer>gran</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <info>
+        <cell width="80" height="30">
+         <style shadow="true">
+          <font family="Arial" size="13" bold="true" />
+          <color foreground="0xFFFFFF" background="0x0000FF" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+         </style>
+         <p>pequeño</p>
+        </cell>
+       </info>
+       <text>pequeño</text>
+      </target>
+      <text foreground="0x800080" italic="false" bold="false" size="23" background="0xFFFFFF" family="Times New Roman"> árbol.</text>
+     </p>
+     <p foreground="0x800080" italic="false" bold="false" size="23" background="0xFFFFFF" family="Times New Roman" />
+     <p foreground="0x800080" italic="false" bold="false" size="23" background="0xFFFFFF" family="Times New Roman">
+      <text foreground="0x800080" italic="false" bold="false" size="23" background="0xFFFFFF" family="Times New Roman">•  Las nubes se </text>
+      <target>
+       <answer>deshicieron</answer>
+       <response fill="_" length="11" maxLength="11" />
+       <info>
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="140" height="100">
+         <style shadow="true">
+          <font family="Arial" size="13" bold="true" />
+          <color foreground="0xFFFFFF" background="0x0000FF" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+         </style>
+         <p>hicieron</p>
+        </cell>
+       </info>
+       <text>hicieron</text>
+      </target>
+      <text foreground="0x800080" italic="false" bold="false" size="23" background="0xFFFFFF" family="Times New Roman"> por los rayos del sol.</text>
+     </p>
+     <p foreground="0x800080" italic="false" bold="false" size="23" background="0xFFFFFF" family="Times New Roman" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="fabula.ass" code="">
+   <description>
+    <p>Pantalla de información</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Times New Roman" size="28" />
+      <color foreground="0xFFFFFF" background="0x008040" />
+     </style>
+     <p>Lee esta información atentamente.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Times New Roman" size="28" />
+      <color foreground="0xFFFFFF" background="0x008040" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFBD">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="350.0" border="true">
+    <style>
+     <font family="Times New Roman" size="28" />
+     <color foreground="0xFFFFFF" background="0x008040" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>Las Fábulas pertenecen al Género Narrativo y se caracterizan por personificar a los animales y seres inanimados. Toda fábula nos deja una moraleja o enseñanza.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="fabula1.puz" code="">
+   <description>
+    <p>Puzzle con un texto</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Times New Roman" size="31" />
+      <color foreground="0xFFFFFF" background="0x800080" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Ordena esta información.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Times New Roman" size="31" />
+      <color foreground="0xFFFFFF" background="0x800080" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="grande.wav" />
+     <p>Grandioso</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="4" cellWidth="150.0" cellHeight="90.0" border="true">
+    <style>
+     <font family="Times New Roman" size="31" />
+     <color foreground="0xFFFFFF" background="0x800080" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>Las fábulas</p>
+    </cell>
+    <cell>
+     <p>pertenecen al</p>
+    </cell>
+    <cell>
+     <p>Género Narrativo.</p>
+    </cell>
+    <cell>
+     <p>Personifican</p>
+    </cell>
+    <cell>
+     <p>a los</p>
+    </cell>
+    <cell>
+     <p>animales</p>
+    </cell>
+    <cell>
+     <p>y seres</p>
+    </cell>
+    <cell>
+     <p>inanimados.</p>
+    </cell>
+    <cell>
+     <p>Siempre</p>
+    </cell>
+    <cell>
+     <p>nos entregan</p>
+    </cell>
+    <cell>
+     <p>una moraleja</p>
+    </cell>
+    <cell>
+     <p>o enseñanza.</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="inicia.ass" code="">
+   <description>
+    <p>Pantalla de información</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="395.0" cellHeight="270.0" border="true">
+    <style>
+     <font family="Monotype Corsiva" size="27" italic="true" />
+     <color foreground="0xFFFFFF" background="0x800080" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>&lt;html&gt;</p>
+     <p>Comprensión de lectura.&lt;BR&gt;</p>
+     <p>Profesora:Miriam Castillo Castillo.&lt;bR&gt;</p>
+     <p>País:Chile&lt;BR&gt;</p>
+     <p>Ciudad:Coquimbo&lt;BR&gt;</p>
+     <p>Año:2003</p>
+     <p>&lt;/html&gt;</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@textGrid.WordSearch" name="nombres.sop" code="">
+   <description>
+    <p>Sopa con nombres de compositores</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p> Encuentra más nombres aparecidos en la lectura.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="genial.wav" />
+     <p>¡Genial!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x800080">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <textGrid rows="10" columns="6" cellWidth="50.0" cellHeight="38.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>C**RAYOS*N</row>
+     <row>*A**R****U</row>
+     <row>**P*B****B</row>
+     <row>***AO****E</row>
+     <row>****L****S</row>
+     <row>CUERPO****</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">CAPA</clue>
+    <clue id="1">NUBES</clue>
+    <clue id="2">CUERPO</clue>
+    <clue id="3">RAYOS</clue>
+    <clue id="4">ARBOL</clue>
+   </clues>
+  </activity>
+  <activity class="@textGrid.WordSearch" name="personaj.sop">
+   <description>
+    <p>Sopa con nombres de compositores</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Times New Roman" size="27" />
+      <color background="0xFFFF80" />
+     </style>
+     <p>Encuentra los personajes del cuento.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Times New Roman" size="27" />
+      <color background="0xFFFF80" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="perfec.wav" />
+     <p>¡Perfecto!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFD0D0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF8080" border="true" />
+   </settings>
+   <textGrid rows="10" columns="6" cellWidth="85.0" cellHeight="74.0" border="true">
+    <style>
+     <font family="Times New Roman" size="25" />
+     <color background="0xFFFF80" />
+    </style>
+    <text>
+     <row>V*********</row>
+     <row>*I***SOL**</row>
+     <row>**E*HOMBRE</row>
+     <row>***N******</row>
+     <row>****T*****</row>
+     <row>*****O****</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">HOMBRE</clue>
+    <clue id="1">SOL</clue>
+    <clue id="2">VIENTO</clue>
+   </clues>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="secuenci.puz" code="">
+   <description>
+    <p>Ordenación de fragmentos musicales</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Times New Roman" size="28" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Ordena este cuento.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Times New Roman" size="28" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy Bien!              </p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <image name="viento.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x8080FF" border="true" />
+   </settings>
+   <cells rows="7" cols="1" cellWidth="281.0" cellHeight="82.0" border="true">
+    <style>
+     <font family="Times New Roman" size="28" />
+     <color foreground="0xFFFFFF" background="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell>
+     <p>-¡Yo soy más fuerte que tú! , dijo el viento al sol-.</p>
+    </cell>
+    <cell>
+     <p>-Estás equivocado, ¡yo soy el más fuerte!, respondió el sol-.</p>
+    </cell>
+    <cell>
+     <p>Una vez vieron a un hombre caminando con una capa.</p>
+    </cell>
+    <cell>
+     <p>-¡Hagamos una prueba!, dijo radiante el sol, aquel que sea más fuerte le sacará la capa-.</p>
+    </cell>
+    <cell>
+     <p>El viento comenzó a soplar con fuerza sobre la capa del hombre,pero no pudo sacársela.</p>
+    </cell>
+    <cell>
+     <p>El sol deshizo las nubes y lanzó sus rayos sobre el hombre.</p>
+    </cell>
+    <cell>
+     <p>El hombre sintió tanto calor que se quitó la capa. Así el sol ganó la apuesta. </p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="solvient.puz" code="">
+   <description>
+    <p>Puzzle del tipo "doble"</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Resuelve este rompecabezas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="genial.wav" />
+     <p>¡¡Genial!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x0000FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="solvent.gif">
+    <style>
+     <font family="Arial" size="21" />
+    </style>
+    <shaper class="@ClassicJigSaw" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="termino.ass" code="">
+   <description>
+    <p>Pantalla de información</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="21" bold="true" />
+      <color foreground="0x804000" background="0xFFFF80" />
+     </style>
+     <p>Haz clic en la puerta para terminar el Programa.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="21" bold="true" />
+      <color foreground="0x804000" background="0xFFFF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFF8080">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="400.0" cellHeight="300.0" border="true">
+    <style>
+     <font family="Arial" size="21" bold="true" />
+     <color foreground="0x804000" background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>¿Te gustó la Fábula? Te invito a que leas muchas más.¡Felicitaciones!</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.Identify" name="verbos.txa" code="" type="identifyWords">
+   <description>
+    <p>Identificar palabras</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Identifica los verbos.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bién! </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="solvent.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="530" height="397" />
+    </window>
+   </settings>
+   <checkButton>Corregir el ejercicio</checkButton>
+   <document>
+    <style name="default" foreground="0x008080" bold="false" italic="false" size="15" tabWidth="12" background="0xFFFFFF" family="Arial" />
+    <style name="target" base="default" foreground="0xFF0080" target="true" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0x800040" />
+    <section>
+     <p foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">
+      <cell width="450" height="60" border="true">
+       <style>
+        <color foreground="0xFFFFFF" background="0x008080" inactive="0x000000" alternative="0x000000" />
+       </style>
+       <p>Marca las acciones que aparecen en el trozo.</p>
+      </cell>
+     </p>
+     <p foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial" />
+     <p foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">
+      <text foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">El viento y el sol </text>
+      <target>conversaban</target>
+      <text foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial"> sobre una apuesta.</text>
+     </p>
+     <p foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">
+      <text foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">    </text>
+     </p>
+     <p foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">
+      <text foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">Una vez </text>
+      <target>vieron</target>
+      <text foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial"> a un hombre, </text>
+      <target>cubierto</target>
+      <text foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial"> con una capa.</text>
+     </p>
+     <p foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial" />
+     <p foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">
+      <text foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">El sol se </text>
+      <target>escondió</target>
+      <text foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial"> detrás de una nubes.</text>
+     </p>
+     <p foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial" />
+     <p foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">
+      <text foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">El viento </text>
+      <target>soplaba</target>
+      <text foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial"> y </text>
+      <target>aullaba</target>
+      <text foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial"> muy fuerte.</text>
+     </p>
+     <p foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial" />
+     <p foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">
+      <text foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">El hombre </text>
+      <target>sujetaba</target>
+      <text foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial"> mucho más la capa a su cuerpo.</text>
+     </p>
+     <p foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">
+      <text foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">. </text>
+     </p>
+     <p foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">
+      <text foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">El sol </text>
+      <target>deshizo</target>
+      <text foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial"> las nubes y  </text>
+      <target>lanzó</target>
+      <text foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial"> sus rayos con fuerza.</text>
+     </p>
+     <p foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial" />
+     <p foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">
+      <text foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial">El sol </text>
+      <target>ganó</target>
+      <text foreground="0x008080" italic="false" bold="false" size="15" background="0xFFFFFF" family="Arial"> la apuesta.</text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@panels.InformationScreen" name="viento1.ass" code="">
+   <description>
+    <p>Pantalla de información</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Times New Roman" size="27" />
+      <color foreground="0xFFFFFF" background="0x008040" />
+     </style>
+     <p>Lee atentamente esta lectura.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Times New Roman" size="27" />
+      <color foreground="0xFFFFFF" background="0x008040" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFD0">
+     <image name="solvent.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="700.0" cellHeight="500.0" border="true">
+    <style>
+     <font family="Times New Roman" size="27" />
+     <color foreground="0xFFFFFF" background="0x008040" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>El viento y el sol.                                                                                     -Yo soy más fuerte que tú le dijo una vez el viento al sol. -Estás equivocado, yo soy el más fuerte, respondió el sol. A partir de entonces, todos los días discutían siempre lo mismo. Una vez vieron a un hombre caminando cubierto con una capa. -Tengo una buena idea. ¡Hagamos una prueba! -dijo radiante el sol, aquel que sea el más fuerte será capaz de sacarle la capa a ese hombre. -¡Comienza tú! El sol se escondió detrás de unas nubes y el viento empezó a soplar con toda fuerza sobre la capa del hombre. Pero mientras más fuerte soplaba y aullaba, más sujetaba el hombre la capa a su cuerpo. Por fin, el viento muy agotado de soplar, se dio por vencido. Entonces salió el sol de su escondite. Primero deshizo las nubes traídas por el viento, y luego lanzó sus rayos sobre el caminante. El hombre sintió tanto, tanto calor, que se quitó la capa y se protegió rápidamente, bajo la sombra de un gran árbol. Y así fue como el sol ganó la apuesta. ¡No siempre gana el que mete más ruido!.</p>
+    </cell>
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="nuvols.gif" file="nuvols.gif" />
+  <media name="solvent.gif" file="solvent.gif" />
+  <media name="viento.gif" file="viento.gif" />
+  <media name="genial.wav" file="genial.wav" />
+  <media name="grande.wav" file="grande.wav" />
+  <media name="muybien.wav" file="muybien.wav" />
+  <media name="perfec.wav" file="perfec.wav" />
+  <media name="tepasas.wav" file="tepasas.wav" />
+ </mediaBag>
+</JClicProject>
+

@@ -1,0 +1,1619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="circula" version="0.1.3">
+ <settings>
+  <title>Aparatos del cuerpo humano</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="4/4/00" />
+  <revision description="Traducción Español" date="4/4/00">
+   <author name="Aurelio Salvador Baselga" mail="asalvado@roble.pntic.mec.es" />
+  </revision>
+  <revision description="Conversión de Clic3 a JClic" date="7/11/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Ferran Estruch Mascarell" mail="46002842@centres.cult.gva.es" />
+  <organization name="CP Verge del Remei" mail="46002842@centres.cult.gva.es" city="Castelló de Rugat" state="País Valencià" />
+  <language>es</language>
+  <description>
+   <p>Paquete de actividades de Clic sobre los diferentes aparatos del cuerpo humano.  Dividido en seis secciones, una por cada aparato:</p>
+   <p>&lt;LI&gt;Aparato digestivo</p>
+   <p>&lt;LI&gt;Aparato circulatorio</p>
+   <p>&lt;LI&gt;Aparato locomotor</p>
+   <p>&lt;LI&gt;Aparato respiratorio</p>
+   <p>&lt;LI&gt;Aparato excretor</p>
+   <p>&lt;LI&gt;Aparato reproductor</p>
+  </description>
+  <descriptors area-codes="exp" level="Secundaria">anatomía</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Paquete de actividades de Clic sobre los diferentes aparatos del cuerpo humano.  Dividido en seis secciones, una por cada aparato:</p>
+    <p>&lt;LI&gt;Aparato digestivo</p>
+    <p>&lt;LI&gt;Aparato circulatorio</p>
+    <p>&lt;LI&gt;Aparato locomotor</p>
+    <p>&lt;LI&gt;Aparato respiratorio</p>
+    <p>&lt;LI&gt;Aparato excretor</p>
+    <p>&lt;LI&gt;Aparato reproductor</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="circula.pac" name="circul/cirpres.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="circul/cor0.ass" />
+  <item name="circul/cor1.ass" />
+  <item name="circul/cor.ass" />
+  <item name="circul/funcor.ass" />
+  <item name="circul/funcor1.ass" />
+  <item name="circul/funcor2.ass" />
+  <item name="circul/funcor3.ass" />
+  <item name="circul/circor.ass" />
+  <item name="circul/apcircul.ass" />
+  <item name="circul/apacirc1.ass" />
+  <item name="circul/cirmeno.txa" />
+  <item name="circul/cirmeno1.txa" />
+  <item name="circul/celsang.ass" />
+  <item name="circul/celsang1.ass" />
+  <item name="circul/ferida.puz" />
+  <item name="circul/circula.ass" />
+  <item name="circul/circula1.ass" />
+  <item name="circul/funsang.ass" />
+  <item name="circul/vassang.ass" />
+  <item name="circul/circula.sop" />
+  <item name="circul/compsang.sop">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.SimpleAssociation" name="circul\apacirc1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xF0C691" />
+     </style>
+     <p>ENCUENTRA CADA UNO DE LOS ÓRGANOS DEL APARATO CIRCULATORIO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xF0C691" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="circul\..\test8.wav" />
+     <p>FANTÁSTICO</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF4DDF4">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="5" cols="2" border="false" image="circul\apcirc1.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+   </cells>
+   <cells rows="5" cols="2" cellWidth="100.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>VENA CAVA SUPERIOR</p>
+    </cell>
+    <cell>
+     <p>ARTERIA AORTA</p>
+    </cell>
+    <cell>
+     <p>ARTERIA PULMONAR</p>
+    </cell>
+    <cell>
+     <p>PULMÓN</p>
+    </cell>
+    <cell>
+     <p>VENA CAVA INFERIOR</p>
+    </cell>
+    <cell>
+     <p>CORAZÓN</p>
+    </cell>
+    <cell>
+     <p>CAPILARES</p>
+    </cell>
+    <cell>
+     <p>ARTERIAS</p>
+    </cell>
+    <cell>
+     <p>SANGRE CON CO2</p>
+    </cell>
+    <cell>
+     <p>SANGRE CON O2</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="2" border="false" image="circul\apcirc2.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="5" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="circul\apcircul.ass">
+   <description>
+    <p>Activitat d'exploració de l'aparell circulatori.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x005B5B" />
+     </style>
+     <p>Haz clic en cada número e infórmate de los órganos que intervienen en el aparato circulatorio y de su función.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x005B5B" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x00ECEC">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x00BBBB" border="true" />
+   </settings>
+   <cells rows="5" cols="5" border="false" image="circul\apcircu1.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="5" rows="5" showEnclosure="true" scaleX="5.0" scaleY="5.0">
+     <enclosing>
+      <shape>rectangle:0,0,5,5</shape>
+     </enclosing>
+     <shape>rectangle:0,0,2,1</shape>
+     <shape>rectangle:2,0,1,1</shape>
+     <shape>rectangle:3,0,2,1</shape>
+     <shape>rectangle:0,1,1,1</shape>
+     <shape>rectangle:1,1,1,1</shape>
+     <shape>rectangle:2,1,1,1</shape>
+     <shape>M:3,1|L:3,2|L:3,3|L:4,3|L:4,2|L:4,1|X</shape>
+     <shape>rectangle:4,1,1,1</shape>
+     <shape>M:0,2|L:0,3|L:0,4|L:0,5|L:2,5|L:2,4|L:3,4|L:3,5|L:5,5|L:5,4|L:5,3|L:5,2|L:4,2|L:4,3|L:1,3|L:1,2|X</shape>
+     <shape>rectangle:1,2,1,1</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>rectangle:2,4,1,1</shape>
+    </shaper>
+    <ids>9 0 9 1 8 2 3 4 9 6 5 7</ids>
+   </cells>
+   <cells rows="4" cols="3" cellWidth="200.0" cellHeight="170.0" border="false" id="secondary">
+    <style>
+     <color foreground="0xFFFFFF" background="0x009191" inactive="0xFF8040" alternative="0xFF8040" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="4" />
+    <cell>
+     <p>1.CAPILAPES (la sangre deja O2 y recoge CO2).</p>
+    </cell>
+    <cell>
+     <p>2.PULMÓN DERECHO: circulación menor. Intercambio de gases.</p>
+    </cell>
+    <cell>
+     <p>3.Art. PULMONAR: circulación pulmonar o menor. Transporta sangre con CO2 hacia los pulmones.</p>
+    </cell>
+    <cell>
+     <p>4.Art. AORTA: circulación mayor. Transporta sangre con O2 para las células de todo el cuerpo.</p>
+    </cell>
+    <cell>
+     <p>5.PULMÓN IZQUIERDO: circulación menor. Intercambio de gases.</p>
+    </cell>
+    <cell>
+     <p>6.CORAZÓN: bombea la sangre con CO2 hacia los pulmones y con O2 para todo el cuerpo.</p>
+    </cell>
+    <cell>
+     <p>7.VENA CAVA INFERIOR: circulación mayor. Transporta sangre con CO2 hacia el corazón.</p>
+    </cell>
+    <cell>
+     <p>8.CAPILARES (la sangre deja O2 y recoge CO2).</p>
+    </cell>
+    <cell>
+     <p>9.VENA CAVA SUPERIOR: circulación mayor. Transporta sangre con CO2 hacia el corazón.</p>
+    </cell>
+    <cell>
+     <p>HAZ CLIC SÓLAMENTE SOBRE LOS NÚMEROS</p>
+    </cell>
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="circul\celsang.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0xFF0000" />
+     </style>
+     <p>INFÓRMATE SOBRE ESTAS CÉLULAS Y CUÁLES SON DE LA SANGRE.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0xFF0000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFF8A8A">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF2D2D" border="true" />
+   </settings>
+   <cells rows="3" cols="2" border="false" image="circul\celules.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <ids>0 1 2 3 4 5</ids>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="231.0" cellHeight="120.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>GLÓBULO ROJO: componente de la sangre que transporta el oxígeno y recoge el dióxido de carbono. No tienen núcleo.</p>
+    </cell>
+    <cell>
+     <p>ESPERMATOZOIDE: célula reproductora masculina.</p>
+    </cell>
+    <cell>
+     <p>PLAQUETAS: componentes de la sangre que taponan las heridas para evitar hemorragias. No tienen núcleo.</p>
+    </cell>
+    <cell>
+     <p>ÓVULO: célula reproductora femenina.</p>
+    </cell>
+    <cell>
+     <p>CÉLULA MUSCULAR: facilita el movimiento del esqueleto.</p>
+    </cell>
+    <cell>
+     <p>GLÓBULO BLANCO: componente de la sangre que protege al organismo del ataque de virus y bacterias. Tienen núcleo.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="circul\celsang1.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFF0000" background="0xFFFF8C" shadow="0xDBDB00" inactive="0xDBDB00" alternative="0xDBDB00" />
+     </style>
+     <p>IDENTIFICA LAS CÉLULAS DE LA SANGRE.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFF0000" background="0xFFFF8C" shadow="0xDBDB00" inactive="0xDBDB00" alternative="0xDBDB00" />
+     </style>
+     <p>MUY BIEN. CUANDO TENGAS EDAD SUFICIENTE HAZTE DONANTE.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFC8">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" border="true" image="circul\celules.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <ids>1 0 1 0 0 1</ids>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>GLÓBULOS ROJOS: transportan el oxígeno y el dióxido de carbono.</p>
+    </cell>
+    <cell />
+    <cell>
+     <p>PLAQUETAS: taponan las heridas para evitar hemorragias.</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell>
+     <p>GLÓBULOS BLANCOS: defienden al organismo de virus y bacterias.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="circul\circor.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0xE10071" />
+     </style>
+     <p>ORDENA EL CAMINO QUE LLEVA LA SANGRE POR DENTRO DEL CORAZÓN.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0xE10071" />
+     </style>
+     <p>MUY BIEN, ¡ ADELANTE !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFDBED">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF9FCF" border="true" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="170.0" cellHeight="180.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="circul\1.gif" />
+    <cell image="circul\2.gif" />
+    <cell image="circul\3.gif" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="160.0" cellHeight="110.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>La sangre que viene del cuerpo y de los pulmones entra en las aurículas.</p>
+    </cell>
+    <cell>
+     <p>La sangre pasa a los ventrículos.</p>
+    </cell>
+    <cell>
+     <p>La sangre sale para ir a los pulmones y a todo el cuerpo.</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="170.0" cellHeight="180.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="circul\cor00.gif" />
+    <cell image="circul\cor001.gif" />
+    <cell image="circul\cor002.gif" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="circul\circula.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000A0" />
+     </style>
+     <p>¿ SON VERDADERAS O FALSAS LAS SIGUIENTES AFIRMACIONES ?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000A0" />
+     </style>
+     <p>SI LO HACES MEJORARÁS TU SALUD.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xD2F0FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x8EC7FF" border="true" />
+   </settings>
+   <cells rows="4" cols="2" cellWidth="230.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color foreground="0xFF0000" background="0xF4FED8" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell id="0">
+     <p>Beber diariamente suficiente líquido.</p>
+    </cell>
+    <cell id="1">
+     <p>Los alimentos salados facilitan la circulación.</p>
+    </cell>
+    <cell id="0">
+     <p>Es conveniente realizar ejercicios de calentamiento antes de un ejercicio intenso.</p>
+    </cell>
+    <cell id="0">
+     <p>Si te encuentras mareado, siéntate con la cabeza entre las piernas.</p>
+    </cell>
+    <cell id="0">
+     <p>La ducha ayuda a activar la circulación.</p>
+    </cell>
+    <cell id="1">
+     <p>El alcohol y el tabaco ayudan a mejorar la circulación.</p>
+    </cell>
+    <cell id="0">
+     <p>Llevar la ropa ajustada perjudica la buena circulación.</p>
+    </cell>
+    <cell id="1">
+     <p>El ejercicio diario fatiga el corazón y produce infartos.</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style shadow="true">
+     <color foreground="0xFFFFFF" background="0x0080C0" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>VERDADERO</p>
+    </cell>
+    <cell>
+     <p>FALSO</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="2" cellWidth="230.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <p>Es necesario beber el líquido suficiente para asegurar la cantidad y fluidez de la sangre.</p>
+    </cell>
+    <cell>
+     <p>El exceso de sal produce a la larga la "hipertensión arterial".</p>
+    </cell>
+    <cell>
+     <p>El ejercicio de calentamiento ayuda al corazón y al aparato circulatorio a adaptarse.</p>
+    </cell>
+    <cell>
+     <p>El mareo se produce por la falta de sangre en el cerebro.</p>
+    </cell>
+    <cell>
+     <p>Limpiar la piel y estimularla con masajes, mejora la circulación.</p>
+    </cell>
+    <cell>
+     <p>El alcohol y el tabaco PERJUDICAN seriamente la salud. El tabaco produce cáncer e infartos.</p>
+    </cell>
+    <cell>
+     <p>La ropa ajustada DIFICULTA que la sangre circule por el cuerpo.</p>
+    </cell>
+    <cell>
+     <p>El ejercicio mejora el rendimiento del corazón y la circulación.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="circul\circula.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x1111FF" />
+     </style>
+     <p>ENCUENTRA EL NOMBRE DE 7 ÓRGANOS Y COMPONENTES DE LA SANGRE</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x1111FF" />
+     </style>
+     <p>¡ MUY BIEN !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x7BBDFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="11" columns="9" cellWidth="30.0" cellHeight="30.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>C*******C**</row>
+     <row>*AORTA**O*P</row>
+     <row>*RPLASMAR*L</row>
+     <row>*T*I****A*A</row>
+     <row>*E**L***Z*Q</row>
+     <row>*R***A**Ó*U</row>
+     <row>*I****R*N*E</row>
+     <row>*A**VENA**T</row>
+     <row>**********A</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">CORAZÓN</clue>
+    <clue id="1">CAPILAR</clue>
+    <clue id="2">AORTA</clue>
+    <clue id="3">PLASMA</clue>
+    <clue id="4">ARTERIA</clue>
+    <clue id="5">VENA</clue>
+    <clue id="6">PLAQUETA</clue>
+   </clues>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="circul\circula1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x008080" />
+     </style>
+     <p>ASOCIA CADA DEFINICIÓN CON EL ÓRGANO CORRESPONDIENTE.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x008080" />
+     </style>
+     <p>¡ SABES UN MONTÓN !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00A2A2">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00CACA" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="200.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFACAC" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>ÓRGANO QUE BOMBEA LA SANGRE</p>
+    </cell>
+    <cell>
+     <p>TEJIDO LÍQUIDO QUE CIRCULA POR TODO EL CUERPO</p>
+    </cell>
+    <cell>
+     <p>CONDUCTOS POR LOS QUE CIRCULA LA SANGRE HACIA EL CORAZÓN</p>
+    </cell>
+    <cell>
+     <p>CONDUCTOS POR LOS QUE LA SANGRE SALE DEL CORAZÓN</p>
+    </cell>
+    <cell>
+     <p>LOS VASOS SANGUÍNEOS MÁS FINOS</p>
+    </cell>
+    <cell>
+     <p>VASOS SANGUÍNEOS QUE ENVUELVEN EL CORAZÓN</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="130.0" cellHeight="80.0" border="true" id="secondary">
+    <style>
+     <color background="0xBBFFDD" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>CORAZÓN</p>
+    </cell>
+    <cell>
+     <p>SANGRE</p>
+    </cell>
+    <cell>
+     <p>VENAS</p>
+    </cell>
+    <cell>
+     <p>ARTERIAS</p>
+    </cell>
+    <cell>
+     <p>CAPILARES</p>
+    </cell>
+    <cell>
+     <p>ARTERIAS CORONARIAS</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="circul\cirmeno.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFF0000" background="0xFFB5FF" />
+     </style>
+     <p>Este texto ha perdido todas las "i" y las "a". ¡ Escríbelas !</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFF0000" background="0xFFB5FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="circul\..\fenom.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFD9FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="260" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" background="0xFFFFFF" bold="false" foreground="0x000000" family="Arial" size="17" italic="false" tabWidth="10" />
+    <style name="target" base="default" background="0xC0C0C0" target="true" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text />
+      <cell width="310" height="53" border="true">
+       <style shadow="true">
+        <color background="0xFFBFFF" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+       </style>
+       <p>COMPLETA ESTE INFORME SOBRE LA CIRCULACIÓN MENOR</p>
+      </cell>
+     </p>
+     <p />
+     <p>
+      <text>L</text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text> s</text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text>ngre con d</text>
+      <target>
+       <answer>i</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>i</text>
+      </target>
+      <text>óx</text>
+      <target>
+       <answer>i</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>i</text>
+      </target>
+      <text>do de c</text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text>rbono s</text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text>le, desde el ventr</text>
+      <target>
+       <answer>í</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>í</text>
+      </target>
+      <text>culo derecho del cor</text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text>zón, h</text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text>c</text>
+      <target>
+       <answer>ia</answer>
+       <response fill="_" length="1" maxLength="2" />
+       <text>ia</text>
+      </target>
+      <text> los pulmones, </text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text> tr</text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text>vés de l</text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text />
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text>rter</text>
+      <target>
+       <answer>ia</answer>
+       <response fill="_" length="1" maxLength="2" />
+       <text>ia</text>
+      </target>
+      <text> pulmon</text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text>r. Cu</text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text>ndo lleg</text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text />
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text> los pulmones, l</text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text> s</text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text>ngre dej</text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text> el d</text>
+      <target>
+       <answer>i</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>i</text>
+      </target>
+      <text>óx</text>
+      <target>
+       <answer>i</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>i</text>
+      </target>
+      <text>do de c</text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text>rbono y recoge el ox</text>
+      <target>
+       <answer>í</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>í</text>
+      </target>
+      <text>geno.</text>
+     </p>
+     <p>
+      <text>L</text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text> s</text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text>ngre con ox</text>
+      <target>
+       <answer>í</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>í</text>
+      </target>
+      <text>geno regres</text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text />
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text>l cor</text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text>zón, </text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text> l</text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text />
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text>ur</text>
+      <target>
+       <answer>í</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>í</text>
+      </target>
+      <text>cul</text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text />
+      <target>
+       <answer>i</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>i</text>
+      </target>
+      <text>zqu</text>
+      <target>
+       <answer>i</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>i</text>
+      </target>
+      <text>erd</text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text>, </text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text> tr</text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text>vés de les ven</text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text>s pulmon</text>
+      <target>
+       <answer>a</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>a</text>
+      </target>
+      <text>res.</text>
+     </p>
+     <p />
+     <p />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.Order" name="circul\cirmeno1.txa" type="orderParagraphs">
+   <messages>
+    <cell type="previous">
+     <style shadow="true">
+      <color background="0xAEAE5E" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell type="initial">
+     <style shadow="true">
+      <color background="0xAEAE5E" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color background="0xAEAE5E" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>¡ MUY BIEN !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xD0D0A2">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="560" height="400" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <prevScreen maxTime="60">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <p>LEE ESTE TEXTO ATENTAMENTE:</p>
+    <p>La sangre con dióxido de carbono sale del corazón hacia los pulmones.</p>
+    <p>En la inspiración, el aire con oxígeno entra a los pulmones.</p>
+    <p>Al llegar la sangre a los pulmones, deja el dióxido de carbono y recoge el oxígeno.</p>
+    <p>En la espiración, el aire con dióxido de carbono sale de los pulmones. </p>
+    <p>SI HAS ACABADO,  HAZ CLIC CON EL RATÓN Y COMIENZA LA ACTIVIDAD.</p>
+   </prevScreen>
+   <document>
+    <style name="default" background="0xFFFFFF" bold="false" foreground="0x000000" family="Arial" size="17" italic="false" tabWidth="16" />
+    <style name="target" base="default" background="0xFFFFFF" target="true" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text />
+      <cell width="350" height="45" border="true">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+       <p>ORDENA LAS FRASES SIGUIENTES</p>
+      </cell>
+     </p>
+     <p />
+     <p>
+      <target>La sangre con dióxido de carbono sale del corazón hacia los pulmones.</target>
+     </p>
+     <p />
+     <p>
+      <target>En la inspiración, el aire con oxígeno entra a los pulmones.</target>
+     </p>
+     <p />
+     <p>
+      <target>Al llegar la sangre a los pulmones, deja el dióxido de carbono y recoge el oxígeno.</target>
+     </p>
+     <p />
+     <p>
+      <target>En la espiración, el aire con dióxido de carbono sale de los pulmones.</target>
+     </p>
+     <p>
+      <text />
+      <cell hAlign="left" width="140" height="100" border="false" image="circul\cor01.bmp">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="circul\cirpres.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFA4A4">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="circul\cirpres.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@textGrid.WordSearch" name="circul\compsang.sop">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0xEC0000" />
+     </style>
+     <p>ENCUENTRA EL NOMBRE DE LOS 4 COMPONENTES DE LA SANGRE</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0xEC0000" />
+     </style>
+     <p>¡MUY BIEN!. CUANDO SEAS MAYOR, HAZTE DONANTE.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFDB">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFDF0AA" border="true" />
+   </settings>
+   <textGrid rows="16" columns="9" cellWidth="30.0" cellHeight="30.0" border="true">
+    <style shadow="true">
+     <font family="Arial" size="19" />
+     <color foreground="0xFFFFFF" background="0xFF0000" />
+    </style>
+    <text>
+     <row>P*AMARILLOS****P</row>
+     <row>GLÓBULOSBLANCOSL</row>
+     <row>PLÁSTICOS******A</row>
+     <row>VITAMINAS******Q</row>
+     <row>GLÓBULOSROJOS**U</row>
+     <row>*****ROJOS*****E</row>
+     <row>BLANCOS********T</row>
+     <row>FERRAN*ERES****A</row>
+     <row>CATAPLASMA*****S</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">PLAQUETAS</clue>
+    <clue id="1">GLÓBULOSROJOS</clue>
+    <clue id="2">GLÓBULOSBLANCOS</clue>
+    <clue id="3">PLASMA</clue>
+   </clues>
+   <cells rows="4" cols="1" border="false" image="circul\globsan.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="circul\cor.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0xFF0080" />
+     </style>
+     <p>ENCUENTRA EL NOMBRE DE CADA UNA DE LAS CAVIDADES DEL CORAZÓN Y DE LOS VASOS SANGUÍNEOS</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0xFF0080" />
+     </style>
+     <p>¡ MUY BIEN !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF7D7D">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0202" border="true" />
+   </settings>
+   <cells rows="5" cols="2" border="false" image="circul\cor01.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+   </cells>
+   <cells rows="5" cols="2" cellWidth="100.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFF0080" background="0xFFFFE1" inactive="0xFF0080" alternative="0xFF0080" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>VENA CAVA SUPERIOR</p>
+    </cell>
+    <cell>
+     <p>ARTERIA AORTA</p>
+    </cell>
+    <cell>
+     <p>ARTERIA PULMONAR</p>
+    </cell>
+    <cell>
+     <p>VENAS PULMONARES</p>
+    </cell>
+    <cell>
+     <p>AURÍCULA DERECHA</p>
+    </cell>
+    <cell>
+     <p>AURÍCULA IZQUIERDA</p>
+    </cell>
+    <cell>
+     <p>VÁLVULA CARDÍACA</p>
+    </cell>
+    <cell>
+     <p>VENTRÍCULO IZQUIERDO</p>
+    </cell>
+    <cell>
+     <p>VENA CAVA INFERIOR</p>
+    </cell>
+    <cell>
+     <p>VENTRÍCULO DERECHO</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="2" border="false" image="circul\cor02.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="5" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="circul\cor0.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFAC" />
+     </style>
+     <p>HAZ CLIC SOBRE EL CORAZÓN PARA RECORDAR EL NOMBRE DE CADA ÓRGANO.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFAC" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFDB">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xD2D200" border="true" />
+   </settings>
+   <cells rows="11" cols="10" border="false" image="circul\cor0.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="10" rows="11" showEnclosure="true" scaleX="10.0" scaleY="11.0">
+     <enclosing>
+      <shape>rectangle:0,0,10,11</shape>
+     </enclosing>
+     <shape>M:0,0|L:0,1|L:0,2|L:0,3|L:1,3|L:1,2|L:1,1|L:7,1|L:7,2|L:8,2|L:8,3|L:10,3|L:10,2|L:9,2|L:9,1|L:10,1|L:10,0|X</shape>
+     <shape>M:1,1|L:1,2|L:1,3|L:2,3|L:2,4|L:1,4|L:1,5|L:3,5|L:3,4|L:3,3|L:3,2|L:4,2|L:4,1|X</shape>
+     <shape>M:4,1|L:4,2|L:3,2|L:3,3|L:3,4|L:5,4|L:5,3|L:8,3|L:8,2|L:7,2|L:7,1|X</shape>
+     <shape>rectangle:9,1,1,1</shape>
+     <shape>rectangle:0,3,2,1</shape>
+     <shape>M:5,3|L:5,4|L:4,4|L:4,5|L:6,5|L:6,4|L:9,4|L:9,3|X</shape>
+     <shape>rectangle:9,3,1,1</shape>
+     <shape>M:0,4|L:0,5|L:0,6|L:0,7|L:0,8|L:0,9|L:0,10|L:0,11|L:10,11|L:10,10|L:10,9|L:10,8|L:10,7|L:10,6|L:10,5|L:10,4|L:9,4|L:9,5|L:8,5|L:8,6|L:8,7|L:8,8|L:8,9|L:7,9|L:7,10|L:4,10|L:4,9|L:3,9|L:3,10|L:1,10|L:1,9|L:1,8|L:2,8|L:2,7|L:1,7|L:1,6|L:1,5|L:1,4|X</shape>
+     <shape>M:3,4|L:3,5|L:3,6|L:3,7|L:4,7|L:4,6|L:5,6|L:5,7|L:5,8|L:6,8|L:6,7|L:6,6|L:6,5|L:4,5|L:4,4|X</shape>
+     <shape>M:6,4|L:6,5|L:6,6|L:7,6|L:7,5|L:7,4|X</shape>
+     <shape>M:7,4|L:7,5|L:7,6|L:8,6|L:8,5|L:8,4|X</shape>
+     <shape>rectangle:8,4,1,1</shape>
+     <shape>M:1,5|L:1,6|L:1,7|L:3,7|L:3,6|L:3,5|X</shape>
+     <shape>M:4,6|L:4,7|L:2,7|L:2,8|L:3,8|L:3,9|L:4,9|L:4,10|L:7,10|L:7,9|L:6,9|L:6,8|L:5,8|L:5,7|L:5,6|X</shape>
+     <shape>M:6,6|L:6,7|L:6,8|L:7,8|L:7,9|L:8,9|L:8,8|L:8,7|L:8,6|X</shape>
+     <shape>M:1,8|L:1,9|L:1,10|L:3,10|L:3,9|L:2,9|L:2,8|X</shape>
+     <shape>rectangle:2,8,1,1</shape>
+     <shape>rectangle:6,8,1,1</shape>
+    </shaper>
+    <ids>9 0 1 8 2 2 8 9 9 1 4 7 3 5 6 8 9 9</ids>
+   </cells>
+   <cells rows="3" cols="4" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color foreground="0x400040" background="0xFFFFAC" inactive="0x8080FF" alternative="0x8080FF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>VENA CAVA SUPERIOR</p>
+    </cell>
+    <cell>
+     <p>ARTERIA AORTA</p>
+    </cell>
+    <cell>
+     <p>ARTERIA PULMONAR</p>
+    </cell>
+    <cell>
+     <p>AURÍCULA DERECHA</p>
+    </cell>
+    <cell>
+     <p>AURÍCULA IZQUIERDA</p>
+    </cell>
+    <cell>
+     <p>VENTRÍCULO DERECHO</p>
+    </cell>
+    <cell>
+     <p>VENTRÍCULO IZQUIERDO</p>
+    </cell>
+    <cell>
+     <p>VENAS PULMONARES</p>
+    </cell>
+    <cell>
+     <p>VENA CAVA INFERIOR</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="circul\cor1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFF0080" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>HAZ CLIC SOBRE CADA UNO DE LOS SIGNOS ? PARA REPASAR LOS NOMBRES DE LAS CAVIDADES DEL CORAZÓN Y DE LOS VASOS SANGUÍNEOS.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFF0080" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFF9DFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCEFF" border="true" />
+   </settings>
+   <cells rows="5" cols="3" border="false" image="circul\cor1.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="3" rows="5" showEnclosure="true" scaleX="3.0" scaleY="5.0">
+     <enclosing>
+      <shape>rectangle:0,0,3,5</shape>
+     </enclosing>
+     <shape>rectangle:0,0,1,1</shape>
+     <shape>M:1,0|L:1,1|L:1,2|L:1,3|L:1,4|L:1,5|L:2,5|L:2,4|L:2,3|L:2,2|L:2,1|L:2,0|X</shape>
+     <shape>rectangle:2,0,1,1</shape>
+     <shape>rectangle:0,1,1,1</shape>
+     <shape>rectangle:2,1,1,1</shape>
+     <shape>rectangle:0,2,1,1</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>rectangle:0,3,1,1</shape>
+     <shape>rectangle:2,3,1,1</shape>
+     <shape>rectangle:0,4,1,1</shape>
+     <shape>rectangle:2,4,1,1</shape>
+    </shaper>
+    <ids>0 10 1 2 3 4 5 6 7 8 9</ids>
+   </cells>
+   <cells rows="4" cols="3" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFE6FF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="4" />
+    <cell>
+     <p>ARTERIA PULMONAR</p>
+    </cell>
+    <cell>
+     <p>ARTERIA AORTA</p>
+    </cell>
+    <cell>
+     <p>VENA CAVA SUPERIOR</p>
+    </cell>
+    <cell>
+     <p>VENAS PULMONARES</p>
+    </cell>
+    <cell>
+     <p>AURÍCULA DERECHA</p>
+    </cell>
+    <cell>
+     <p>AURÍCULA IZQUIERDA</p>
+    </cell>
+    <cell>
+     <p>VÁLVULA CARDÍACA</p>
+    </cell>
+    <cell>
+     <p>VENTRÍCULO IZQUIERDO</p>
+    </cell>
+    <cell>
+     <p>VENA CAVA INFERIOR</p>
+    </cell>
+    <cell>
+     <p>VENTRÍCULO DERECHO</p>
+    </cell>
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="circul\ferida.puz">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0xD90000" />
+     </style>
+     <p>ORDENA EL PROCESO CUANDO SE PRODUCE UNA HERIDA.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0xD90000" />
+     </style>
+     <p>¡ GRACIAS QUE HABÍA SUFICIENTES PLAQUETAS !</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xED85B9">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="398.0" cellHeight="80.0" border="true">
+    <style>
+     <color background="0xFDD9ED" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>Nos cortamos con un objeto y se produce UNA HERIDA.</p>
+    </cell>
+    <cell>
+     <p>Los GLÓBULOS BLANCOS acuden en defensa del organismo contra posibles infecciones.</p>
+    </cell>
+    <cell>
+     <p>Las PLAQUETAS cierran la herida.</p>
+    </cell>
+    <cell>
+     <p>Se forma la CORTEZA. La herida se ha cerrado.</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="circul\funcor.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFC5A8" />
+     </style>
+     <p>SIGUE ADELANTE E INFÓRMATE.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFC5A8" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFD5BF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFAA55" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="circul\cor.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="circul\funcor1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFC184" />
+     </style>
+     <p>LEE E INFÓRMATE.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFC184" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFE2C6">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="circul\cor10.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="circul\funcor2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCB97" />
+     </style>
+     <p>LEE E INFÓRMATE.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFCB97" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFE3C8">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="circul\cor2.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="circul\funcor3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFC68C" />
+     </style>
+     <p>LEE E INFÓRMATE.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFC68C" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFE2C6">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="false" image="circul\cor3.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@panels.Identify" name="circul\funsang.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xD2D2FF" />
+     </style>
+     <p>ENCUENTRA LAS SEIS FUNCIONES DE LA SANGRE.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xD2D2FF" />
+     </style>
+     <p>Las otras funciones NO las hace la sangre. ¡ SIGUE ADELANTE !.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFD0FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="160.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="1">
+     <p>TRANSPORTA E INTERCAMBIA LOS GASES</p>
+    </cell>
+    <cell id="1">
+     <p>TRANSPORTA LOS ALIMENTOS A LAS CÉLULAS</p>
+    </cell>
+    <cell id="1">
+     <p>TRANSPORTA LOS RESIDUOS LÍQUIDOS</p>
+    </cell>
+    <cell id="1">
+     <p>DEFIENDE EL ORGANISMO</p>
+    </cell>
+    <cell id="1">
+     <p>CONTROLA EL NIVEL DE AGUA DE LA SANGRE</p>
+    </cell>
+    <cell id="1">
+     <p>CONTROLA LA TEMPERATURA CORPORAL</p>
+    </cell>
+    <cell id="0">
+     <p>HACE QUE SE REALICE MEJOR LA DIGESTIÓN</p>
+    </cell>
+    <cell id="0">
+     <p>FORTALECE LOS HUESOS</p>
+    </cell>
+    <cell id="0">
+     <p>CONTROLA EL CRECIMIENTO</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" cellWidth="160.0" cellHeight="120.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell image="circul\funcres.gif" />
+    <cell image="circul\tranalim.gif" />
+    <cell image="circul\orina.gif" />
+    <cell image="circul\defens.gif" />
+    <cell image="circul\aigua.gif" />
+    <cell image="circul\contemp.gif" />
+    <cell />
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="circul\vassang.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color background="0x00BD5F" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>UNE CADA ÓRGANO CON SU FUNCIÓN</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color background="0x00BD5F" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>¡ MUY BIEN !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xBDFFDE">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00F77B" border="true" />
+   </settings>
+   <cells rows="1" cols="5" cellWidth="120.0" cellHeight="80.0" border="true" id="primary">
+    <style shadow="true">
+     <color foreground="0xFF0000" background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>VENA</p>
+    </cell>
+    <cell>
+     <p>ARTERIA</p>
+    </cell>
+    <cell>
+     <p>CAPILAR</p>
+    </cell>
+    <cell>
+     <p>AURÍCULA</p>
+    </cell>
+    <cell>
+     <p>VENTRÍCULO</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="5" cellWidth="120.0" cellHeight="130.0" border="true" id="secondary">
+    <style>
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>Vaso sanguíneo que retorna la sangre al corazón.</p>
+    </cell>
+    <cell>
+     <p>Vaso sanguíneo que saca la sangre del corazón.</p>
+    </cell>
+    <cell>
+     <p>Vaso sanguíneo que une las venas y las arterias.</p>
+    </cell>
+    <cell>
+     <p>Cavidad superior del corazón.</p>
+    </cell>
+    <cell>
+     <p>Cavidad inferior del corazón.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="circul/cor01.bmp" file="circul_cor01.bmp" />
+  <media name="circul/1.gif" file="circul_1.gif" animated="false" />
+  <media name="circul/2.gif" file="circul_2.gif" animated="false" />
+  <media name="circul/3.gif" file="circul_3.gif" animated="false" />
+  <media name="circul/aigua.gif" file="circul_aigua.gif" animated="false" />
+  <media name="circul/apcirc1.gif" file="circul_apcirc1.gif" animated="false" />
+  <media name="circul/apcirc2.gif" file="circul_apcirc2.gif" animated="false" />
+  <media name="circul/apcircu1.gif" file="circul_apcircu1.gif" animated="false" />
+  <media name="circul/celules.gif" file="circul_celules.gif" animated="false" />
+  <media name="circul/cirpres.gif" file="circul_cirpres.gif" animated="false" />
+  <media name="circul/contemp.gif" file="circul_contemp.gif" animated="false" />
+  <media name="circul/cor.gif" file="circul_cor.gif" animated="false" />
+  <media name="circul/cor0.gif" file="circul_cor0.gif" animated="false" />
+  <media name="circul/cor00.gif" file="circul_cor00.gif" animated="false" />
+  <media name="circul/cor001.gif" file="circul_cor001.gif" animated="false" />
+  <media name="circul/cor002.gif" file="circul_cor002.gif" animated="false" />
+  <media name="circul/cor01.gif" file="circul_cor01.gif" animated="false" />
+  <media name="circul/cor02.gif" file="circul_cor02.gif" animated="false" />
+  <media name="circul/cor1.gif" file="circul_cor1.gif" animated="false" />
+  <media name="circul/cor10.gif" file="circul_cor10.gif" animated="false" />
+  <media name="circul/cor2.gif" file="circul_cor2.gif" animated="false" />
+  <media name="circul/cor3.gif" file="circul_cor3.gif" animated="false" />
+  <media name="circul/defens.gif" file="circul_defens.gif" animated="false" />
+  <media name="circul/funcres.gif" file="circul_funcres.gif" animated="false" />
+  <media name="circul/globsan.gif" file="circul_globsan.gif" animated="false" />
+  <media name="circul/orina.gif" file="circul_orina.gif" animated="false" />
+  <media name="circul/tranalim.gif" file="circul_tranalim.gif" animated="false" />
+  <media name="fenom.wav" file="fenom.wav" />
+  <media name="test8.wav" file="test8.wav" />
+ </mediaBag>
+</JClicProject>
+

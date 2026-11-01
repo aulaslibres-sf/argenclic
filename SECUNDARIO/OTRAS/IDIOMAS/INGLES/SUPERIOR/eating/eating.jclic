@@ -1,0 +1,3809 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="eating" version="0.1.3">
+ <settings>
+  <title>Eating Out</title>
+  <revision description="Creation of the package of activities using Clic 3.0" date="6/5/09" />
+  <revision description="Converted from Clic3 to JClic" date="6/5/09">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Maria Tarragona i Sala" mail="mtarra2@xtec.cat" />
+  <language>english</language>
+  <description>
+   <p>Project of activities in English addressed to frits course of secondary education. The project has four different parts:</p>
+   <p>&lt;ul&gt;</p>
+   <p>&lt;li&gt;Learning about food</p>
+   <p>&lt;li&gt;Set the table</p>
+   <p>&lt;li&gt;The men</p>
+   <p>&lt;li&gt;Learning to cook</p>
+   <p>&lt;/ul&gt;</p>
+  </description>
+  <descriptors area-codes="lleng" level-codes="SEC">English language</descriptors>
+  <meta_langs>english</meta_langs>
+  <descriptions>
+   <description language="english">
+    <p>Project of activities in English addressed to frits course of secondary education. The project has four different parts:</p>
+    <p>&lt;ul&gt;</p>
+    <p>&lt;li&gt;Learning about food</p>
+    <p>&lt;li&gt;Set the table</p>
+    <p>&lt;li&gt;The men</p>
+    <p>&lt;li&gt;Learning to cook</p>
+    <p>&lt;/ul&gt;</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="start" name="cover">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item id="start" name="Eating out">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="food" name="countables/uncountables">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="Countables/Uncountables" />
+  <item name="fruits" />
+  <item name="a/an" />
+  <item name="vegetables" />
+  <item name="fruitandveg" />
+  <item name="foodcategories" />
+  <item name="nutritionalpyramid2" />
+  <item name="nutritionalpyramid" />
+  <item name="meatandanimal" />
+  <item name="thereis/are" />
+  <item name="thereis/areexercise" />
+  <item name="fastfood" />
+  <item name="translation" />
+  <item name="fastfood/healthyfood">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="table" name="Set the table">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="set the table2" />
+  <item name="set the table3">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="menu" name="The menu">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="English Breakfast" />
+  <item name="peopleeating2" />
+  <item name="reservation" />
+  <item name="listening" />
+  <item name="breakfast" />
+  <item name="peopleating" />
+  <item name="themenu2" />
+  <item name="lunch" />
+  <item name="minidialogues" />
+  <item name="listening2">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="cook" name="ingredients" />
+  <item name="cooking pasta" />
+  <item name="cookingverbs" />
+  <item name="a recipe" />
+  <item name="cookingverbs2">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.ComplexAssociation" name="Countables/Uncountables" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Dialog" size="17" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>Match the food with the category</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="final">
+     <style>
+      <font family="Dialog" size="17" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>Well done!</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="finalError">
+     <style>
+      <font family="Dialog" size="17" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>Try again!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="240" countDownTime="true" maxActions="12" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF66FF" border="true" />
+   </settings>
+   <cells rows="4" cols="3" cellWidth="101.0" cellHeight="101.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Trebuchet MS" size="22" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="4" />
+    <cell id="0" image="strawberry.jpg">
+     <p>strawberry</p>
+    </cell>
+    <cell id="1" image="juice.jpg">
+     <p>juice</p>
+    </cell>
+    <cell id="0" image="cupoftea.jpg">
+     <p>cup of tea</p>
+    </cell>
+    <cell id="0" image="lettuce.jpg">
+     <p>head of lettuce</p>
+    </cell>
+    <cell id="1" image="bread.jpg">
+     <p>bread</p>
+    </cell>
+    <cell id="0" image="toast.jpg">
+     <p>toast</p>
+    </cell>
+    <cell id="0" image="cawliflower.jpg">
+     <p>cawliflower</p>
+    </cell>
+    <cell id="1" image="sugar.jpg">
+     <p>sugar</p>
+    </cell>
+    <cell id="0" image="ice-cream.jpg">
+     <p>ice-cream</p>
+    </cell>
+    <cell id="1" image="ham.jpg">
+     <p>ham</p>
+    </cell>
+    <cell id="0" image="egg.jpg">
+     <p>egg</p>
+    </cell>
+    <cell id="0" image="glasswine.jpg">
+     <p>glass of wine</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="151.0" cellHeight="151.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Trebuchet MS" size="26" bold="true" />
+     <color background="0xFFFF00" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>countable</p>
+    </cell>
+    <cell>
+     <p>uncountable</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="Eating out" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Eras Light ITC" size="17" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Choose an option</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCC0099">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF99FF" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="701.0" cellHeight="130.0" border="true">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Comic Sans MS" size="18" bold="true" />
+     <color background="0xFF99FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <style>
+      <font family="Berlin Sans FB" size="20" bold="true" />
+      <color background="0xFF6699" />
+      <gradient source="0xFF6699" dest="0xFFFFFF" angle="0" cycles="3" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="food" />
+     <p>Learning about food</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Berlin Sans FB" size="20" bold="true" />
+      <color background="0xFF6699" />
+      <gradient source="0x99FF00" dest="0xFFFFFF" angle="0" cycles="3" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="table" />
+     <p>Set the table</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Berlin Sans FB" size="20" bold="true" />
+      <color background="0x00CCCC" />
+      <gradient source="0x00CCCC" dest="0xFFFFFF" angle="0" cycles="3" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="menu" />
+     <p>The menu</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Berlin Sans FB" size="20" bold="true" />
+      <color background="0xFF9900" />
+      <gradient source="0xFF9900" dest="0xFFFFFF" angle="0" cycles="3" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="cook" />
+     <p>Learning to cook</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.Identify" name="English Breakfast" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Dialog" size="17" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>Find 8 typical ingredients of an English Breakfast.</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="final">
+     <style>
+      <font family="Dialog" size="17" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>Are you hungry? Good!</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="finalError">
+     <style>
+      <font family="Dialog" size="17" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>Sure?</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="120" countDownTime="true" maxActions="8" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0xCC00CC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF66FF" border="true" />
+   </settings>
+   <cells rows="4" cols="4" cellWidth="126.0" cellHeight="126.0" border="true" id="primary">
+    <style>
+     <font family="Trebuchet MS" size="18" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="1" image="sausages.jpg">
+     <p>sausages</p>
+    </cell>
+    <cell id="1" image="juice.jpg">
+     <p>orange juice</p>
+    </cell>
+    <cell id="0" image="milk.jpg" />
+    <cell id="0" image="corn flakes.jpg" />
+    <cell id="1" image="bacon.jpg">
+     <style>
+      <font family="Trebuchet MS" size="20" bold="true" />
+      <color foreground="0xFFFFFF" background="0xFFFFFF" />
+     </style>
+     <p>bacon</p>
+    </cell>
+    <cell id="0" image="beer.jpg">
+     <p>beer</p>
+    </cell>
+    <cell id="1" image="bread.jpg">
+     <p>bread</p>
+    </cell>
+    <cell id="1" image="cupoftea.jpg">
+     <p>tea</p>
+    </cell>
+    <cell id="0" image="pastry.jpg">
+     <style>
+      <font family="Dialog" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0xFFFFFF" />
+     </style>
+     <p>pastry</p>
+    </cell>
+    <cell id="1" image="egg.jpg">
+     <p>eggs</p>
+    </cell>
+    <cell id="0" image="yoghurt.jpg">
+     <p>yoghurt</p>
+    </cell>
+    <cell id="1" image="vegetables.jpg">
+     <style>
+      <font family="Trebuchet MS" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xFFFFFF" />
+     </style>
+     <p>vegetables</p>
+    </cell>
+    <cell id="0" image="butter.jpg">
+     <p>butter</p>
+    </cell>
+    <cell id="0" image="cookies.jpg">
+     <style>
+      <font family="Trebuchet MS" size="20" bold="true" />
+      <color foreground="0xFFFFFF" background="0xFFFFFF" />
+     </style>
+     <p>cookies</p>
+    </cell>
+    <cell id="1" image="mushrooms.jpg">
+     <p>mushrooms</p>
+    </cell>
+    <cell id="0" image="jam.jpg">
+     <p>strawberry jam</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Set the table" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Eras Light ITC" size="17" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>Match the names with the pictures</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="final">
+     <style>
+      <font family="Eras Light ITC" size="17" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>Good!</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="finalError">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>Ooops...try again!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="180" countDownTime="true" maxActions="20" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0xCC0099">
+     <counters time="true" actions="true" score="false" />
+    </container>
+    <window bgColor="0xFF99FF" border="true" />
+   </settings>
+   <cells rows="4" cols="4" cellWidth="101.0" cellHeight="101.0" border="false" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell>
+     <style>
+      <font family="Eras Light ITC" size="17" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>knife</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Eras Light ITC" size="17" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>fork</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Eras Light ITC" size="17" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>spoon</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Eras Light ITC" size="17" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>cutlery</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Eras Light ITC" size="17" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>crockery</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Eras Light ITC" size="17" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>cup</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Eras Light ITC" size="17" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>saucer</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Eras Light ITC" size="17" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>plate</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Eras Light ITC" size="17" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>bowl</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Eras Light ITC" size="17" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>glass</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Eras Light ITC" size="17" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>tray</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Eras Light ITC" size="17" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>tablecloth</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Eras Light ITC" size="17" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>napkin</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Eras Light ITC" size="17" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>saucepan</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Eras Light ITC" size="17" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>pot</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Eras Light ITC" size="17" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>waiter</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="4" cellWidth="101.0" cellHeight="101.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell image="knife.jpg" />
+    <cell image="fork.jpg" />
+    <cell image="spoon.jpg" />
+    <cell image="cutlery.jpg" />
+    <cell image="crockery.jpg" />
+    <cell image="cup.jpg" />
+    <cell image="saucer.jpg" />
+    <cell image="plate.jpg" />
+    <cell image="bowl.jpg" />
+    <cell image="glass.jpg" />
+    <cell image="tray.jpg" />
+    <cell image="tablecloth.jpg" />
+    <cell image="napkin.jpg" />
+    <cell image="saucepan.jpg" />
+    <cell image="pot.jpg" />
+    <cell image="waiter.jpg" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="The menu" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Eras Light ITC" size="17" bold="true" />
+      <color background="0x00CCCC" />
+     </style>
+     <p>Listen to the parts of a menu</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="180" countDownTime="true" maxActions="10" countDownActions="true" report="false">
+    <container bgColor="0xCC0099">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF99FF" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="126.0" cellHeight="126.0" border="true" id="primary">
+    <style>
+     <font family="Trebuchet MS" size="22" bold="true" />
+     <color foreground="0xFFFF00" background="0x00CCCC" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0">
+     <style>
+      <font family="Trebuchet MS" size="22" bold="true" />
+      <color foreground="0xFFFF00" background="0x00CCCC" />
+     </style>
+     <p>Aperitif</p>
+    </cell>
+    <cell id="1">
+     <p>Starter</p>
+    </cell>
+    <cell id="2">
+     <p>Main </p>
+     <p>Course</p>
+    </cell>
+    <cell id="3">
+     <style>
+      <font family="Trebuchet MS" size="22" bold="true" />
+      <color foreground="0xFFFF00" background="0x00CCCC" />
+     </style>
+     <p>Dessert</p>
+    </cell>
+    <cell id="4">
+     <style>
+      <font family="Trebuchet MS" size="22" bold="true" />
+      <color foreground="0xFFFF00" background="0x00CCCC" />
+     </style>
+     <p>Beverages</p>
+    </cell>
+    <cell id="5">
+     <style>
+      <font family="Trebuchet MS" size="22" bold="true" />
+      <color foreground="0xFFFF00" background="0x00CCCC" />
+     </style>
+     <p>Snacks</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="101.0" cellHeight="101.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0x00CCCC" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell image="aperitif.jpg">
+     <media type="PLAY_AUDIO" level="1" file="aperitif.mp3" />
+    </cell>
+    <cell image="starter.jpg">
+     <media type="PLAY_AUDIO" level="1" file="starter.mp3" />
+    </cell>
+    <cell image="maincourse.jpg">
+     <media type="PLAY_AUDIO" level="1" file="maincourse.mp3" />
+    </cell>
+    <cell image="dessert.jpg">
+     <media type="PLAY_AUDIO" level="1" file="dessert.mp3" />
+    </cell>
+    <cell image="beverages.jpg">
+     <media type="PLAY_AUDIO" level="1" file="beverages.mp3" />
+    </cell>
+    <cell image="snacks.jpg">
+     <media type="PLAY_AUDIO" level="1" file="snacks.mp3" />
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.Identify" name="a recipe" code="" type="identifyWords">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Dialog" size="17" />
+      <color background="0x009999" />
+     </style>
+     <p>Find 10 imperatives in this recipe.</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="final">
+     <style>
+      <font family="Dialog" size="17" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Well done!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="90" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="true" actions="false" score="true" />
+    </container>
+    <window bgColor="0x00CCCC" border="true">
+     <size width="601" height="501" />
+    </window>
+   </settings>
+   <checkButton>Test yourself!</checkButton>
+   <document>
+    <style name="default" bold="false" italic="false" background="0xFFFFFF" tabWidth="12" size="18" family="Trebuchet MS" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="true" size="18" family="Trebuchet MS">INGREDIENTS</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="18" family="Trebuchet MS">1 (16 ounce) package penne pasta </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="18" family="Trebuchet MS">6 slices bacon </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="18" family="Trebuchet MS">1/2 teaspoon chopped garlic </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="18" family="Trebuchet MS">1 red onion, chopped </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="18" family="Trebuchet MS">2 tablespoons olive oil </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="18" family="Trebuchet MS">3 tomatoes, chopped </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="18" family="Trebuchet MS">1 green chile peppers, diced </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="18" family="Trebuchet MS">1/2 cup grated Parmesan cheese </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="18" family="Trebuchet MS">4 leaves fresh basil </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="18" family="Trebuchet MS">2 tablespoons grated Parmesan cheese </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="true" size="18" family="Trebuchet MS">DIRECTIONS</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="18" family="Trebuchet MS">In a large pot with boiling salted water </text>
+      <target>cook</target>
+      <text size="18" family="Trebuchet MS"> pasta until "al dente".</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="18" family="Trebuchet MS">Meanwhile, </text>
+      <target>cook</target>
+      <text size="18" family="Trebuchet MS"> the bacon strips until mostly cooked, but not crisp. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <target>Remove</target>
+      <text size="18" family="Trebuchet MS"> from pan, </text>
+      <target>break</target>
+      <text size="18" family="Trebuchet MS"> into bite size pieces. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <target>Return</target>
+      <text size="18" family="Trebuchet MS"> cooked bacon to pan, </text>
+      <target>add</target>
+      <text size="18" family="Trebuchet MS"> minced garlic, chopped red onion, olive oil and chili pepper. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <target>Add</target>
+      <text size="18" family="Trebuchet MS"> chopped tomatoes, 1/2 cup of grated Parmesan cheese and fresh basil. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <target>Pour</target>
+      <text size="18" family="Trebuchet MS"> ingredients into a large bowl. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <target>Add</target>
+      <text size="18" family="Trebuchet MS"> additional grated Parmesan cheese to top and </text>
+      <target>serve</target>
+      <text size="18" family="Trebuchet MS"> immediately over cooked and drained pasta. </text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.FillInBlanks" name="a/an" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Dialog" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Choose the correct option.</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="final">
+     <style>
+      <font family="Dialog" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Good!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="120" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="true" actions="false" score="true" />
+    </container>
+    <window bgColor="0x00CCCC" border="true">
+     <size width="801" height="501" />
+    </window>
+   </settings>
+   <checkButton>Test yourself!</checkButton>
+   <document>
+    <style name="default" bold="false" italic="false" background="0xFFFFFF" tabWidth="12" size="20" family="Comic Sans MS" />
+    <style name="target" base="default" foreground="0x0000FF" background="0xFFFFFF" target="true" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text background="0xFFFFFF" family="Comic Sans MS">There is </text>
+      <target>
+       <answer>some</answer>
+       <optionList>
+        <option>a</option>
+        <option>an</option>
+        <option>some</option>
+        <option>any</option>
+       </optionList>
+       <text>some</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS"> milk in the fridge.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text background="0xFFFFFF" family="Comic Sans MS">There isn't </text>
+      <target>
+       <answer>any</answer>
+       <optionList>
+        <option>a</option>
+        <option>an</option>
+        <option>some</option>
+        <option>any</option>
+       </optionList>
+       <text>any</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS"> sugar for the coffee.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text background="0xFFFFFF" family="Comic Sans MS">I always eat </text>
+      <target>
+       <answer>a</answer>
+       <optionList>
+        <option>a</option>
+        <option>an</option>
+        <option>some</option>
+        <option>any</option>
+       </optionList>
+       <text>a</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS"> salad for starter and </text>
+      <target>
+       <answer>an</answer>
+       <optionList>
+        <option>a</option>
+        <option>an</option>
+        <option>some</option>
+        <option>any</option>
+       </optionList>
+       <text>an</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS"> ice-cream for dessert. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text background="0xFFFFFF" family="Comic Sans MS">The baby can not have </text>
+      <target>
+       <answer>any</answer>
+       <optionList>
+        <option>a</option>
+        <option>an</option>
+        <option>some</option>
+        <option>any</option>
+       </optionList>
+       <text>any</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS"> fruit yet.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text background="0xFFFFFF" family="Comic Sans MS">He drinks </text>
+      <target>
+       <answer>some</answer>
+       <optionList>
+        <option>a</option>
+        <option>an</option>
+        <option>some</option>
+        <option>any</option>
+       </optionList>
+       <text>some</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS"> wine at weekend.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text background="0xFFFFFF" family="Comic Sans MS">My Mum is buying </text>
+      <target>
+       <answer>a</answer>
+       <optionList>
+        <option>a</option>
+        <option>an</option>
+        <option>some</option>
+        <option>any</option>
+       </optionList>
+       <text>a</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS"> cawliflower and </text>
+      <target>
+       <answer>some</answer>
+       <optionList>
+        <option>a</option>
+        <option>an</option>
+        <option>some</option>
+        <option>any</option>
+       </optionList>
+       <text>some</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS"> potatoes.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text background="0xFFFFFF" family="Comic Sans MS">Is there </text>
+      <target>
+       <answer>any</answer>
+       <optionList>
+        <option>a</option>
+        <option>an</option>
+        <option>some</option>
+        <option>any</option>
+       </optionList>
+       <text>any</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS"> strawberry yoghurt? No, but there is </text>
+      <target>
+       <answer>some</answer>
+       <optionList>
+        <option>a</option>
+        <option>an</option>
+        <option>some</option>
+        <option>any</option>
+       </optionList>
+       <text>some</text>
+      </target>
+      <text background="0xFFFFFF" family="Comic Sans MS"> chocolate cake. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="breakfast" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="previous">
+     <style>
+      <font family="Dialog" size="17" />
+      <color background="0xFFFF00" />
+     </style>
+     <p>Read the text carefully. When you finish, click on it.</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Dialog" size="17" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Fill in the missing words.</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="final">
+     <style>
+      <font family="Dialog" size="17" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Good memory!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="90" countDownTime="true" maxActions="6" countDownActions="false" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="true" actions="true" score="false" />
+    </container>
+    <window bgColor="0xFF99FF" border="true">
+     <size width="601" height="601" />
+    </window>
+   </settings>
+   <checkButton>Test yourself!</checkButton>
+   <prevScreen maxTime="60">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Trebuchet MS" size="22" />
+     <color background="0xCC99FF" />
+     <gradient source="0x990099" dest="0xCC99FF" angle="0" cycles="4" />
+    </style>
+    <p>AT THE RESTAURANT: Having a typical English Breakfast.
+</p>
+    <p>______________________________________________
+</p>
+    <p>
+</p>
+    <p>Waitress: — Good morning. Are you ready to order? 
+</p>
+    <p>
+</p>
+    <p>Bill Nichols: — Yes, I am, thank you. I´ll have three scrambled eggs with country ham, sausages and bread, please. 
+</p>
+    <p>
+</p>
+    <p>Waitress: — Would you like anything to drink? 
+</p>
+    <p>
+</p>
+    <p>Bill Nichols: — I´ll have a beer.
+</p>
+    <p>
+</p>
+    <p>Waitress: — Anything else? 
+</p>
+    <p>
+</p>
+    <p>Bill Nichols: — Could I have a slice of pumpkin pie? 
+</p>
+    <p>
+</p>
+    <p>Waitress: — Sure. Enjoy your meal. 
+</p>
+    <p>
+</p>
+    <p>Bill Nichols: -Thank you.
+</p>
+    <p> 
+</p>
+    <p> 
+</p>
+    <p>
+</p>
+    <p>
+</p>
+    <p>
+</p>
+   </prevScreen>
+   <document>
+    <style name="default" bold="false" italic="false" background="0xFFFFFF" tabWidth="12" size="16" family="Eras Light ITC" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="true" size="22" family="Trebuchet MS">At the restaurant:</text>
+      <text size="22" family="Trebuchet MS"> "</text>
+      <text bold="true" italic="true" size="22" family="Trebuchet MS">Having a typical English Breakfast</text>
+      <text bold="true" size="22" family="Trebuchet MS">"</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="22" family="Trebuchet MS">________________________________________________</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text foreground="0xFF6666" size="22" family="Trebuchet MS">Waitress</text>
+      <text size="22" family="Trebuchet MS">: — Good morning. Are you ready to </text>
+      <target>
+       <answer>order</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>order</text>
+      </target>
+      <text size="22" family="Trebuchet MS">? </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text foreground="0x99FF33" size="22" family="Trebuchet MS">Bill Nichols</text>
+      <text size="22" family="Trebuchet MS">: — Yes, I am, thank you. I´ll have three scrambled </text>
+      <target>
+       <answer>eggs</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>eggs</text>
+      </target>
+      <text size="22" family="Trebuchet MS"> with country ham, </text>
+      <target>
+       <answer>sausages</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>sausages</text>
+      </target>
+      <text size="22" family="Trebuchet MS">, and bread please. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text foreground="0xFF6666" size="22" family="Trebuchet MS">Waitress</text>
+      <text size="22" family="Trebuchet MS">: — Would you like anything to </text>
+      <target>
+       <answer>drink</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>drink</text>
+      </target>
+      <text size="22" family="Trebuchet MS">? </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text foreground="0x99FF33" size="22" family="Trebuchet MS">Bill Nichols</text>
+      <text size="22" family="Trebuchet MS">: — I´ll have a beer.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text foreground="0xFF6666" size="22" family="Trebuchet MS">Waitress</text>
+      <text size="22" family="Trebuchet MS">: — </text>
+      <target>
+       <answer>Anything</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>Anything</text>
+      </target>
+      <text size="22" family="Trebuchet MS"> else? </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text foreground="0x99FF33" size="22" family="Trebuchet MS">Bill Nichols</text>
+      <text size="22" family="Trebuchet MS">: — Could I have a </text>
+      <target>
+       <answer>slice</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>slice</text>
+      </target>
+      <text size="22" family="Trebuchet MS"> of pumpkin pie? </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text foreground="0xFF6666" size="22" family="Trebuchet MS">Waitress</text>
+      <text size="22" family="Trebuchet MS">: — Sure. Enjoy your </text>
+      <target>
+       <answer>meal</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>meal</text>
+      </target>
+      <text size="22" family="Trebuchet MS">.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text foreground="0x99FF33" size="22" family="Trebuchet MS">Bill Nichols</text>
+      <text size="22" family="Trebuchet MS">: — Thank you.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" Alignment="1" family="Arial">
+      <cell imgAlign="middle,top" width="64" height="105" image="waiter2.jpg" />
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text size="22" family="Eras Light ITC"> </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text size="22" family="Eras Light ITC"> </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.Order" name="cooking pasta" code="" type="orderParagraphs">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" type="previous">
+     <style>
+      <font family="Dialog" size="17" bold="true" />
+      <color background="0xFFFF00" />
+     </style>
+     <p>Read this recipe carefully. When finished, click on it.</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Dialog" size="17" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Put the text in the correct order.</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="final">
+     <style>
+      <font family="Dialog" size="17" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Very Good!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="120" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0x00CCCC" border="true">
+     <size width="701" height="600" />
+    </window>
+   </settings>
+   <checkButton>Test yourself!</checkButton>
+   <prevScreen maxTime="60">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Trebuchet MS" size="22" bold="true" />
+     <color background="0xCC99FF" />
+    </style>
+    <p>PASTA WITH VEGETABLES AND BACON
+</p>
+    <p>
+</p>
+    <p>DIRECTIONS
+</p>
+    <p>
+</p>
+    <p>In a large pot with boiling salted water cook pasta until "al dente".
+</p>
+    <p>
+</p>
+    <p>Meanwhile, cook the bacon strips until mostly cooked, but not crisp. 
+</p>
+    <p>
+</p>
+    <p>Remove from pan, break into bite size pieces. 
+</p>
+    <p> 
+</p>
+    <p>Return cooked bacon to pan, add minced garlic, chopped red onion, olive oil and chili pepper. 
+</p>
+    <p> 
+</p>
+    <p>Add chopped tomatoes, 1/2 cup of grated Parmesan cheese and fresh basil. 
+</p>
+    <p>
+</p>
+    <p>Pour ingredients into a large bowl. 
+</p>
+    <p>
+</p>
+    <p>Add additional grated Parmesan cheese to top and serve immediately over cooked and drained pasta. </p>
+   </prevScreen>
+   <document>
+    <style name="default" bold="false" italic="false" background="0xFFFFFF" tabWidth="12" size="22" family="Trebuchet MS" />
+    <style name="target" base="default" foreground="0x0000FF" background="0xFFFFFF" target="true" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p background="0xFFFFFF" Alignment="1" family="Arial">
+      <text bold="true" background="0xFFFFFF" size="24" family="Trebuchet MS">PASTA WITH VEGETABLES AND BACON</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <target>In a large pot with boiling salted water cook pasta until "al dente".</target>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <target>Meanwhile, cook the bacon strips until mostly cooked, but not crisp. </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <target>Remove from pan, break into bite size pieces. </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <target>Return cooked bacon to pan, add minced garlic, chopped red onion, olive oil and chili pepper. </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <target>Add chopped tomatoes, 1/2 cup of grated Parmesan cheese and fresh basil.</target>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <target>Pour ingredients into a large bowl. </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <target>Add additional grated Parmesan cheese to top and serve immediately over cooked and drained pasta. </target>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" Alignment="1" family="Arial">
+      <cell width="200" height="200" image="farfalle.jpg" />
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="cookingverbs" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Match the Verb to its meaning</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="final">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>You are a good chef!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00CCCC" border="true" />
+   </settings>
+   <cells rows="13" cols="1" cellWidth="201.0" cellHeight="51.0" border="true" id="primary">
+    <style>
+     <font family="Trebuchet MS" size="22" />
+     <color background="0xFFCC00" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="13" />
+    <cell>
+     <p>cook</p>
+    </cell>
+    <cell>
+     <p>fry</p>
+    </cell>
+    <cell>
+     <p>chop</p>
+    </cell>
+    <cell>
+     <p>mince</p>
+    </cell>
+    <cell>
+     <p>cut</p>
+    </cell>
+    <cell>
+     <p>dice</p>
+    </cell>
+    <cell>
+     <p>boil</p>
+    </cell>
+    <cell>
+     <p>add</p>
+    </cell>
+    <cell>
+     <p>mix</p>
+    </cell>
+    <cell>
+     <p>stir</p>
+    </cell>
+    <cell>
+     <p>remove</p>
+    </cell>
+    <cell>
+     <p>pour</p>
+    </cell>
+    <cell>
+     <p>serve</p>
+    </cell>
+   </cells>
+   <cells rows="13" cols="1" cellWidth="201.0" cellHeight="51.0" border="true" id="secondary">
+    <style>
+     <font family="Trebuchet MS" size="22" />
+     <color background="0xFFCC00" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="13" />
+    <cell>
+     <p>coure</p>
+    </cell>
+    <cell>
+     <p>fregir</p>
+    </cell>
+    <cell>
+     <p>trossejar</p>
+    </cell>
+    <cell>
+     <p>esmicolar</p>
+    </cell>
+    <cell>
+     <p>tallar</p>
+    </cell>
+    <cell>
+     <p>tallar a daus</p>
+    </cell>
+    <cell>
+     <p>bullir</p>
+    </cell>
+    <cell>
+     <p>afegir</p>
+    </cell>
+    <cell>
+     <p>barrejar</p>
+    </cell>
+    <cell>
+     <p>remenar</p>
+    </cell>
+    <cell>
+     <p>treure</p>
+    </cell>
+    <cell>
+     <p>abocar</p>
+    </cell>
+    <cell>
+     <p>servir</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="cookingverbs2" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Find 10 cooking verbs</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="final">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Very good!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="300" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="true" actions="false" score="true" />
+    </container>
+    <window bgColor="0x00CCCC" border="true" />
+   </settings>
+   <textGrid rows="14" columns="12" cellWidth="51.0" cellHeight="51.0" border="true">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFF00" />
+    </style>
+    <text>
+     <row>ABC**MIX******</row>
+     <row>DEF*******DICE</row>
+     <row>GHI**B********</row>
+     <row>***CHOP*******</row>
+     <row>*****I*****ADD</row>
+     <row>*****L**R*****</row>
+     <row>**FRY***E*****</row>
+     <row>********MINCE*</row>
+     <row>********O*****</row>
+     <row>**C*****V*****</row>
+     <row>**U*SERVE*****</row>
+     <row>**T***********</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">SERVE</clue>
+    <clue id="1">MINCE</clue>
+    <clue id="2">CUT</clue>
+    <clue id="3">DICE</clue>
+    <clue id="4">MIX</clue>
+    <clue id="5">CHOP</clue>
+    <clue id="6">ADD</clue>
+    <clue id="7">REMOVE</clue>
+    <clue id="8">FRY</clue>
+    <clue id="9">BOIL</clue>
+   </clues>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="countables/uncountables" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Expressing Quantity:</p>
+     <p>Match the two columns.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x990099">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x00CCCC" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="301.0" cellHeight="101.0" border="true" id="primary">
+    <style>
+     <font family="Berlin Sans FB" size="17" />
+     <color foreground="0xFF6699" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <style>
+      <font family="Berlin Sans FB" size="24" />
+      <color background="0xFFFF00" />
+     </style>
+     <p>A </p>
+     <p>(UN/UNA)</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Berlin Sans FB" size="24" />
+      <color background="0xFF6699" />
+     </style>
+     <p>AN </p>
+     <p>(UN/UNA)</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Berlin Sans FB" size="24" />
+      <color background="0x00CC99" />
+     </style>
+     <p>A LOT OF </p>
+     <p>(BASTANT)</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Berlin Sans FB" size="24" />
+      <color background="0x99FF00" />
+     </style>
+     <p>SOME</p>
+     <p>(ALGUNS/UNA MICA)</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Berlin Sans FB" size="24" />
+      <color background="0xCCCCCC" />
+     </style>
+     <p>ANY (CAP/GENS)</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="301.0" cellHeight="101.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <style>
+      <font family="Berlin Sans FB" size="24" />
+      <color background="0xFFFF00" />
+     </style>
+     <p>A STRAWBERRY</p>
+     <p>(una maduixa)</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Berlin Sans FB" size="24" />
+      <color background="0xFF6699" />
+     </style>
+     <p>AN ORANGE</p>
+     <p>(una taronja)</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Berlin Sans FB" size="24" />
+      <color background="0x00CC99" />
+     </style>
+     <p>A LOT OF ORANGES</p>
+     <p>(bastantes taronges)</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Berlin Sans FB" size="24" />
+      <color background="0x99FF00" />
+     </style>
+     <p>SOME STRAWBERRIES</p>
+     <p>(algunes maduixes)</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Berlin Sans FB" size="24" />
+      <color background="0xCCCCCC" />
+     </style>
+     <p>ANY ORANGE</p>
+     <p>(cap taronja)</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="cover" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Verdana" size="22" bold="true" />
+      <color background="0x99FF00" />
+     </style>
+     <p>Let's go!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x990099">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x00CCCC" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="portada.jpg">
+    <style>
+     <font family="Berlin Sans FB" size="17" />
+     <color foreground="0xFF6699" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell txtAlign="middle,top" imgAlign="right,middle" />
+   </cells>
+  </activity>
+  <activity class="@panels.Identify" name="fastfood" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>What of the following is fast food?</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="final">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Remember not to eat so much fast food!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="61" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="true" actions="false" score="true" />
+    </container>
+    <window bgColor="0x00CCCC" border="true" />
+   </settings>
+   <cells rows="4" cols="4" border="true" image="mcdonalds.bmp" id="primary">
+    <style shadow="true" borderStroke="2.2" markerStroke="2.7">
+     <font family="Trebuchet MS" size="72" bold="true" />
+     <color foreground="0x66FF00" background="0xFFFFFF" shadow="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="1">
+     <p>hamburger</p>
+    </cell>
+    <cell id="1">
+     <p>bacon</p>
+    </cell>
+    <cell id="0">
+     <p>salad</p>
+    </cell>
+    <cell id="0">
+     <p>ice-cream</p>
+    </cell>
+    <cell id="1">
+     <p>hot-dog</p>
+    </cell>
+    <cell id="0">
+     <p>prawn cocktail</p>
+    </cell>
+    <cell id="1">
+     <p>french fries</p>
+    </cell>
+    <cell id="0">
+     <p>melon</p>
+    </cell>
+    <cell id="0">
+     <p>pop corn</p>
+    </cell>
+    <cell id="1">
+     <p>sandwich</p>
+    </cell>
+    <cell id="1">
+     <p>cola</p>
+    </cell>
+    <cell id="1">
+     <p>chicken wings</p>
+    </cell>
+    <cell id="1">
+     <p>onion rings</p>
+    </cell>
+    <cell id="0">
+     <p>cherries</p>
+    </cell>
+    <cell id="1">
+     <p>doughnuts</p>
+    </cell>
+    <cell id="0">
+     <p>cheese</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="fastfood/healthyfood" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Match the two columns.</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="final">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Very good!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="121" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0x00CCCC" border="true" />
+   </settings>
+   <cells rows="4" cols="3" cellWidth="190.0" cellHeight="93.0" border="true" id="primary">
+    <style>
+     <font family="Trebuchet MS" size="18" bold="true" />
+     <color background="0xFF0066" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="4" />
+    <cell id="0">
+     <p>HOT DOG</p>
+    </cell>
+    <cell id="1">
+     <p>SALAD</p>
+    </cell>
+    <cell id="0">
+     <p>FISH AND CHIPS</p>
+    </cell>
+    <cell id="1">
+     <p>SOUP</p>
+    </cell>
+    <cell id="0">
+     <p>ICE-CREAM</p>
+    </cell>
+    <cell id="0">
+     <p>PASTRY</p>
+    </cell>
+    <cell id="1">
+     <p>BEEF STEAK</p>
+    </cell>
+    <cell id="1">
+     <p>PRAWN COCKTAIL</p>
+    </cell>
+    <cell id="1">
+     <p>FRIED EGGS</p>
+    </cell>
+    <cell id="1">
+     <p>FRUIT</p>
+    </cell>
+    <cell id="1">
+     <p>VEGETABLES</p>
+    </cell>
+    <cell id="0">
+     <p>HAMBURGUER</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="201.0" cellHeight="57.0" border="true" id="secondary">
+    <style>
+     <font family="Trebuchet MS" size="22" />
+     <color background="0xFFCC00" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>FAST FOOD</p>
+    </cell>
+    <cell>
+     <p>HEALTHY FOOD</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="foodcategories" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Match the two columns.</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="final">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Very good!</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="finalError">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Sure??</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="121" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00CCCC" border="true" />
+   </settings>
+   <cells rows="4" cols="3" cellWidth="101.0" cellHeight="101.0" border="true" id="primary">
+    <style>
+     <font family="Trebuchet MS" size="18" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="4" />
+    <cell id="0" image="lettuce.jpg">
+     <p>lettuce</p>
+    </cell>
+    <cell id="1" image="strawberry.jpg">
+     <p>strawberry</p>
+    </cell>
+    <cell id="2" image="sausages.jpg">
+     <p>sausage</p>
+    </cell>
+    <cell id="3" image="milk.jpg" />
+    <cell id="4" image="sole.jpg">
+     <p>sole</p>
+    </cell>
+    <cell id="5" image="corn flakes.jpg">
+     <p>corn flakes</p>
+    </cell>
+    <cell id="3" image="i01-butter.jpg">
+     <p>butter</p>
+    </cell>
+    <cell id="5" image="bread.jpg">
+     <p>bread</p>
+    </cell>
+    <cell id="4" image="squids.jpg">
+     <p>squids</p>
+    </cell>
+    <cell id="1" image="juice.jpg">
+     <p>orange juice</p>
+    </cell>
+    <cell id="0" image="fries.jpg">
+     <p>french fries</p>
+    </cell>
+    <cell id="5" image="corn.jpg">
+     <p>corn</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="101.0" cellHeight="101.0" border="true" id="secondary">
+    <style>
+     <font family="Trebuchet MS" size="22" />
+     <color background="0xFFCC00" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>vegetables</p>
+    </cell>
+    <cell>
+     <p>fruit</p>
+    </cell>
+    <cell>
+     <p>meat</p>
+    </cell>
+    <cell>
+     <p>dairy products</p>
+    </cell>
+    <cell>
+     <p>fish</p>
+    </cell>
+    <cell>
+     <p>cereal</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.CrossWord" name="fruitandveg" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Do you know these fruits and vegetables?</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="final">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Excellent!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="181" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0xCC00CC">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF66FF" border="true" />
+   </settings>
+   <textGrid rows="15" columns="15" cellWidth="35.0" cellHeight="35.0" border="true">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>STRAWBERRY*****</row>
+     <row>*O*P***********</row>
+     <row>*M*PEAR********</row>
+     <row>*A*L**A**C*****</row>
+     <row>*T*E**D**A*****</row>
+     <row>*O****I**R*****</row>
+     <row>******S**R*****</row>
+     <row>***MUSHROOM****</row>
+     <row>***E*****T*****</row>
+     <row>***LEMON*******</row>
+     <row>***O**R********</row>
+     <row>CORN**A********</row>
+     <row>******N********</row>
+     <row>******G********</row>
+     <row>*****PEPPER****</row>
+    </text>
+   </textGrid>
+   <cells rows="1" cols="3" cellWidth="201.0" cellHeight="202.0" border="true" id="acrossClues">
+    <style>
+     <font family="Comic Sans MS" size="26" bold="true" />
+     <color foreground="0xCC0066" background="0xFFFF66" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="13" item="1" />
+    <cell id="13" item="0" />
+    <cell id="12" item="1" />
+    <cell id="12" item="0" />
+    <cell id="11" item="2" />
+    <cell id="11" item="1" />
+    <cell id="11" item="0" image="corn.jpg" />
+    <cell id="11" item="0" />
+    <cell id="10" item="2" />
+    <cell id="10" item="1" />
+    <cell id="10" item="0" />
+    <cell id="9" item="1" />
+    <cell id="9" item="0" image="lemon.jpg" />
+    <cell id="8" item="2" />
+    <cell id="8" item="0" />
+    <cell id="8" item="1" />
+    <cell id="7" item="1" />
+    <cell id="7" item="0" image="mushrooms.jpg" />
+    <cell id="6" item="2" />
+    <cell id="6" item="1" />
+    <cell id="6" item="0" />
+    <cell id="5" item="3" />
+    <cell id="5" item="2" />
+    <cell id="5" item="1" />
+    <cell id="5" item="0" />
+    <cell id="14" item="1" />
+    <cell id="14" item="0" image="pepper.jpg" />
+    <cell id="4" item="4" />
+    <cell id="4" item="3" />
+    <cell id="4" item="2" />
+    <cell id="4" item="0" />
+    <cell id="4" item="1" />
+    <cell id="3" item="2" />
+    <cell id="3" item="3" />
+    <cell id="3" item="4" />
+    <cell id="3" item="0" />
+    <cell id="3" item="1" />
+    <cell id="2" item="1" image="pear.jpg" />
+    <cell id="2" item="0" />
+    <cell id="1" item="1" />
+    <cell id="1" item="0" />
+    <cell id="0" item="0" image="strawberry.jpg" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="201.0" cellHeight="202.0" border="true" id="downClues">
+    <style>
+     <font family="Comic Sans MS" size="26" bold="true" />
+     <color foreground="0xCC0066" background="0xFFFF66" />
+    </style>
+    <cell id="1" item="2" />
+    <cell id="1" item="1" />
+    <cell id="3" item="2" />
+    <cell id="3" item="1" image="melon.jpg" />
+    <cell id="0" item="2" />
+    <cell id="0" item="1" />
+    <cell id="13" item="0" />
+    <cell id="12" item="0" />
+    <cell id="9" item="3" />
+    <cell id="9" item="2" />
+    <cell id="9" item="1" image="carrot.jpg" />
+    <cell id="8" item="3" />
+    <cell id="8" item="2" />
+    <cell id="8" item="1" />
+    <cell id="2" item="0" />
+    <cell id="2" item="1" />
+    <cell id="7" item="4" />
+    <cell id="7" item="3" />
+    <cell id="7" item="2" />
+    <cell id="7" item="1" />
+    <cell id="6" item="3" />
+    <cell id="6" item="2" image="orange.jpg" />
+    <cell id="6" item="1" image="radish.jpg" />
+    <cell id="5" item="5" />
+    <cell id="5" item="4" />
+    <cell id="5" item="3" />
+    <cell id="5" item="2" />
+    <cell id="5" item="1" />
+    <cell id="8" item="0" />
+    <cell id="14" item="0" />
+    <cell id="11" item="0" />
+    <cell id="10" item="2" />
+    <cell id="10" item="1" />
+    <cell id="10" item="0" />
+    <cell id="9" item="0" />
+    <cell id="7" item="0" />
+    <cell id="5" item="0" />
+    <cell id="6" item="0" />
+    <cell id="2" item="2" />
+    <cell id="1" item="0" image="tomato.jpg" />
+    <cell id="4" item="4" />
+    <cell id="4" item="3" />
+    <cell id="4" item="2" />
+    <cell id="4" item="1" />
+    <cell id="4" item="0" />
+    <cell id="3" item="0" image="apple.jpg" />
+    <cell id="0" item="0" />
+    <cell id="10" />
+    <cell id="9" />
+    <cell id="9" />
+    <cell id="8" />
+    <cell id="8" />
+    <cell id="7" />
+    <cell id="7" />
+    <cell id="6" />
+    <cell id="6" />
+    <cell id="5" />
+    <cell id="5" />
+    <cell id="4" />
+    <cell id="4" />
+    <cell id="3" />
+    <cell id="3" />
+    <cell id="2" />
+    <cell id="1" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="fruits" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Fruit</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCC00CC">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF66FF" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="fruits.bmp">
+    <style>
+     <font family="Trebuchet MS" size="18" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@text.Order" name="ingredients" code="" type="orderWords" amongParagraphs="true">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" type="previous">
+     <style>
+      <font family="Dialog" size="17" bold="true" />
+      <color background="0xFFFF00" />
+     </style>
+     <p>Read the ingredients carefully. When finish, click on the text.</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Dialog" size="17" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Put the words in the correct place.</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="final">
+     <style>
+      <font family="Dialog" size="17" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Well done!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="120" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0xCC0099">
+     <counters time="true" actions="false" score="true" />
+    </container>
+    <window bgColor="0x009999" border="true">
+     <size width="601" height="602" />
+    </window>
+   </settings>
+   <checkButton>Test yourself!</checkButton>
+   <prevScreen>
+    <style>
+     <font family="Dialog" size="18" bold="true" />
+     <color background="0xCC99FF" />
+    </style>
+    <p>INGREDIENTS (Nutrition)
+</p>
+    <p>
+</p>
+    <p>2 cups chopped fresh basil 
+</p>
+    <p>1 can diced tomatoes 
+</p>
+    <p>2 teaspoons minced garlic 
+</p>
+    <p>1 can sliced black olives 
+</p>
+    <p>1/2 cup olive oil 
+</p>
+    <p>1 teaspoon salt 
+</p>
+    <p>1 teaspoon ground black pepper 
+</p>
+    <p>1/2 cup chopped sun-dried tomatoes 
+</p>
+    <p>1 teaspoon crushed red pepper flakes 
+</p>
+    <p>1 teaspoon goat cheese 
+</p>
+    <p>2 packages farfalle pasta </p>
+   </prevScreen>
+   <document>
+    <style name="default" bold="false" italic="false" background="0xFFFFFF" tabWidth="12" size="14" family="Comic Sans MS" />
+    <style name="target" base="default" foreground="0x0000FF" background="0xFFFFFF" target="true" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p background="0xFFFFFF" Alignment="1" family="Arial">
+      <text bold="true" size="18" family="Trebuchet MS">FRESH PASTA</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" Alignment="1" family="Arial">
+      <text bold="true" size="18" family="Trebuchet MS">INGREDIENTS</text>
+     </p>
+     <p background="0xFFFFFF" Alignment="1" family="Arial" />
+     <p background="0xFFFFFF" Alignment="1" family="Arial">
+      <text bold="false" size="18" family="Trebuchet MS">2 </text>
+      <target>cups</target>
+      <text bold="false" size="18" family="Trebuchet MS"> chopped fresh </text>
+      <target>basil</target>
+      <text bold="false" size="18" family="Trebuchet MS"> </text>
+     </p>
+     <p background="0xFFFFFF" Alignment="1" family="Arial">
+      <text bold="false" size="18" family="Trebuchet MS">1 can </text>
+      <target>diced</target>
+      <text bold="false" size="18" family="Trebuchet MS"> tomatoes </text>
+     </p>
+     <p background="0xFFFFFF" Alignment="1" family="Arial">
+      <text bold="false" size="18" family="Trebuchet MS">2 teaspoons minced </text>
+      <target>garlic</target>
+      <text bold="false" size="18" family="Trebuchet MS"> </text>
+     </p>
+     <p background="0xFFFFFF" Alignment="1" family="Arial">
+      <text bold="false" size="18" family="Trebuchet MS">1 can sliced black olives </text>
+     </p>
+     <p background="0xFFFFFF" Alignment="1" family="Arial">
+      <text bold="false" size="18" family="Trebuchet MS">1/2 cup </text>
+      <target>olive</target>
+      <text bold="false" size="18" family="Trebuchet MS"> oil </text>
+     </p>
+     <p background="0xFFFFFF" Alignment="1" family="Arial">
+      <text bold="false" size="18" family="Trebuchet MS">1 </text>
+      <target>teaspoon</target>
+      <text bold="false" size="18" family="Trebuchet MS"> salt </text>
+     </p>
+     <p background="0xFFFFFF" Alignment="1" family="Arial">
+      <text bold="false" size="18" family="Trebuchet MS">1 teaspoon ground </text>
+      <target>black</target>
+      <text bold="false" size="18" family="Trebuchet MS"> pepper </text>
+     </p>
+     <p background="0xFFFFFF" Alignment="1" family="Arial">
+      <text bold="false" size="18" family="Trebuchet MS">1/2 cup chopped sun-dried tomatoes </text>
+     </p>
+     <p background="0xFFFFFF" Alignment="1" family="Arial">
+      <text bold="false" size="18" family="Trebuchet MS">1 teaspoon crushed </text>
+      <target>red</target>
+      <text bold="false" size="18" family="Trebuchet MS"> pepper </text>
+     </p>
+     <p background="0xFFFFFF" Alignment="1" family="Arial">
+      <text bold="false" size="18" family="Trebuchet MS">1 </text>
+      <target>teaspoon</target>
+      <text bold="false" size="18" family="Trebuchet MS"> goat </text>
+      <target>cheese</target>
+      <text bold="false" size="18" family="Trebuchet MS"> </text>
+     </p>
+     <p background="0xFFFFFF" Alignment="1" family="Arial">
+      <text bold="false" size="18" family="Trebuchet MS">2 </text>
+      <target>packages</target>
+      <text bold="false" size="18" family="Trebuchet MS"> farfalle pasta </text>
+     </p>
+     <p background="0xFFFFFF" Alignment="1" family="Arial" />
+     <p background="0xFFFFFF" Alignment="1" family="Arial">
+      <cell width="100" height="100" image="pasta.jpg" />
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@panels.Identify" name="listening" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Click on the listening.</p>
+     <p>When finished, choose what you hear.</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="final">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Well done!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00CCCC" border="true" />
+   </settings>
+   <cells rows="4" cols="4" cellWidth="100.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="0">
+     <style>
+      <color background="0xFFFF33" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="at the restaurant.mp3" />
+    </cell>
+    <cell id="1" image="prawn.jpg" />
+    <cell id="0" image="bacon.jpg" />
+    <cell id="1" image="starter.jpg" />
+    <cell id="1" image="glass.jpg" />
+    <cell id="0" image="juice.jpg" />
+    <cell id="1" image="tomatosoup.jpg" />
+    <cell id="0" image="sole.jpg" />
+    <cell id="1" image="omelette.jpg" />
+    <cell id="0" image="strawberry.jpg" />
+    <cell id="1" image="beefsteak.jpg" />
+    <cell id="0" image="salt&amp;pepper.jpg" />
+    <cell id="1" image="sausages.jpg" />
+    <cell id="0" image="oil&amp;vinegar.jpg" />
+    <cell id="1" image="croquettes.jpg" />
+    <cell id="0" image="mushrooms.jpg" />
+   </cells>
+   <cells rows="4" cols="4" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <cell />
+    <cell>
+     <p>prawn</p>
+    </cell>
+    <cell />
+    <cell>
+     <p>salad</p>
+    </cell>
+    <cell>
+     <p>wine</p>
+    </cell>
+    <cell />
+    <cell>
+     <p>tomato soup</p>
+    </cell>
+    <cell />
+    <cell>
+     <p>omelette</p>
+    </cell>
+    <cell />
+    <cell>
+     <p>beef steak</p>
+    </cell>
+    <cell />
+    <cell>
+     <p>sausages</p>
+    </cell>
+    <cell />
+    <cell>
+     <p>croquettes</p>
+    </cell>
+    <cell />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="listening2" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Dialog" size="17" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Choose the correct option.</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="final">
+     <style>
+      <font family="Dialog" size="17" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Very good!</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="finalError">
+     <style>
+      <font family="Dialog" size="17" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Try again!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="60" countDownTime="false" maxActions="5" countDownActions="false" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x00CCCC" border="true">
+     <size width="701" height="601" />
+    </window>
+   </settings>
+   <checkButton>Test yourself!</checkButton>
+   <document>
+    <style name="default" bold="false" italic="false" background="0xFFFFFF" tabWidth="12" size="14" family="Berlin Sans FB" />
+    <style name="target" base="default" foreground="0x000000" target="true" />
+    <style name="targetError" base="target" foreground="0x000000" />
+    <section>
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" size="22" family="Trebuchet MS">AT THE RESTAURANT: "Having lunch" </text>
+      <cell width="100" height="40">
+       <style borderStroke="0.7" markerStroke="5.0">
+        <color background="0xFFFFFF" />
+       </style>
+       <media type="PLAY_AUDIO" level="1" file="at the restaurant.mp3" />
+      </cell>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" size="18" family="Trebuchet MS">________________________________________</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0xFF6666" size="18" family="Trebuchet MS">Waiter</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — Are you ready to </text>
+      <target>
+       <answer>order</answer>
+       <optionList>
+        <option>order</option>
+        <option>ask</option>
+        <option>ask for</option>
+       </optionList>
+       <text>order</text>
+      </target>
+      <text bold="false" size="18" family="Trebuchet MS">, sir? </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0x99FF33" size="18" family="Trebuchet MS">Mr Ryefield</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — Yes. I´ll have the </text>
+      <target>
+       <answer>prawn</answer>
+       <optionList>
+        <option>potato</option>
+        <option>salad</option>
+        <option>prawn</option>
+       </optionList>
+       <text>prawn</text>
+      </target>
+      <text bold="false" size="18" family="Trebuchet MS"> cocktail for </text>
+      <target>
+       <answer>starter</answer>
+       <optionList>
+        <option>dessert</option>
+        <option>starter</option>
+        <option>main course</option>
+       </optionList>
+       <text>starter</text>
+      </target>
+      <text bold="false" size="18" family="Trebuchet MS"> and my wife would like tomato soup. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0xFF6666" size="18" family="Trebuchet MS">Waiter</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — One prawn cocktail and one </text>
+      <target>
+       <answer>tomato soup</answer>
+       <optionList>
+        <option>chicken soup</option>
+        <option>fish soup</option>
+        <option>tomato soup</option>
+       </optionList>
+       <text>tomato soup</text>
+      </target>
+      <text bold="false" size="18" family="Trebuchet MS">. What would you like for the </text>
+      <target>
+       <answer>main course</answer>
+       <optionList>
+        <option>starter</option>
+        <option>dessert</option>
+        <option>main course</option>
+       </optionList>
+       <text>main course</text>
+      </target>
+      <text bold="false" size="18" family="Trebuchet MS">? </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0x99FF33" size="18" family="Trebuchet MS">Mr Ryefield</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — I´ll have the Beef Steak and my wife would like the Spanish omelette with croquettes.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0xFF6666" size="18" family="Trebuchet MS">Waiter</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — I´m afraid the </text>
+      <target>
+       <answer>croquettes</answer>
+       <optionList>
+        <option>snacks</option>
+        <option>cornflakes</option>
+        <option>croquettes</option>
+       </optionList>
+       <text>croquettes</text>
+      </target>
+      <text bold="false" size="18" family="Trebuchet MS"> are off. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0x990099" size="18" family="Trebuchet MS">Mrs Ryefield</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — Oh dear. Err... What else do you recommend? </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0xFF6666" size="18" family="Trebuchet MS">Waiter</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — The </text>
+      <target>
+       <answer>sausages</answer>
+       <optionList>
+        <option>spices</option>
+        <option>sausages</option>
+        <option>strawberries</option>
+       </optionList>
+       <text>sausages</text>
+      </target>
+      <text bold="false" size="18" family="Trebuchet MS"> are very good. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0x990099" size="18" family="Trebuchet MS">Mrs Ryefield</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — OK. I´ll have that. Do you have any coleslaw? </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0xFF6666" size="18" family="Trebuchet MS">Waiter</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — No, I´m sorry, we don´t. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0x990099" size="18" family="Trebuchet MS">Mrs Ryefield</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — Just give me a </text>
+      <target>
+       <answer>small</answer>
+       <optionList>
+        <option>small</option>
+        <option>normal</option>
+        <option>big</option>
+       </optionList>
+       <text>small</text>
+      </target>
+      <text bold="false" size="18" family="Trebuchet MS"> mixed salad then. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0x99FF33" size="18" family="Trebuchet MS">Mr Ryefield</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — Same for me. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0xFF6666" size="18" family="Trebuchet MS">Waiter</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — Ok (...) Would you like something to </text>
+      <target>
+       <answer>drink</answer>
+       <optionList>
+        <option>drink</option>
+        <option>have</option>
+        <option>eat</option>
+       </optionList>
+       <text>drink</text>
+      </target>
+      <text bold="false" size="18" family="Trebuchet MS">? </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0x99FF33" size="18" family="Trebuchet MS">Mr Ryefield</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — Yes, please. May I see the </text>
+      <target>
+       <answer>wine</answer>
+       <optionList>
+        <option>beer</option>
+        <option>water</option>
+        <option>wine</option>
+       </optionList>
+       <text>wine</text>
+      </target>
+      <text bold="false" size="18" family="Trebuchet MS"> list? </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0xFF6666" size="18" family="Trebuchet MS">Waiter:</text>
+      <text bold="false" size="18" family="Trebuchet MS"> — Certainly. Here you are.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" detail="false" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="lunch" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Dialog" size="17" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Choose the correct option.</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="final">
+     <style>
+      <font family="Dialog" size="17" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Very good!</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="finalError">
+     <style>
+      <font family="Dialog" size="17" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Try again!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="60" countDownTime="true" maxActions="5" countDownActions="false" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="true" actions="true" score="false" />
+    </container>
+    <window bgColor="0x00CCCC" border="true">
+     <size width="701" height="601" />
+    </window>
+   </settings>
+   <checkButton>Test yourself!</checkButton>
+   <document>
+    <style name="default" bold="false" italic="false" background="0xFFFFFF" tabWidth="12" size="14" family="Eras Light ITC" />
+    <style name="target" base="default" foreground="0x000000" target="true" />
+    <style name="targetError" base="target" foreground="0x000000" />
+    <section>
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" size="22" family="Trebuchet MS">AT THE RESTAURANT: "Having lunch"</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" size="18" family="Trebuchet MS">________________________________________</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0xFF6666" size="18" family="Trebuchet MS">Waiter</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — Are you ready to </text>
+      <target>
+       <answer>order</answer>
+       <optionList>
+        <option>order</option>
+        <option>ask</option>
+        <option>ask for</option>
+       </optionList>
+       <text>order</text>
+      </target>
+      <text bold="false" size="18" family="Trebuchet MS">, sir? </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0x99FF33" size="18" family="Trebuchet MS">Mr Ryefield</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — Yes. I´ll have the </text>
+      <target>
+       <answer>prawn</answer>
+       <optionList>
+        <option>potato</option>
+        <option>salad</option>
+        <option>prawn</option>
+       </optionList>
+       <text>prawn</text>
+      </target>
+      <text bold="false" size="18" family="Trebuchet MS"> cocktail for </text>
+      <target>
+       <answer>starter</answer>
+       <optionList>
+        <option>dessert</option>
+        <option>starter</option>
+        <option>main course</option>
+       </optionList>
+       <text>starter</text>
+      </target>
+      <text bold="false" size="18" family="Trebuchet MS"> and my wife would like tomato soup. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0xFF6666" size="18" family="Trebuchet MS">Waiter</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — One prawn cocktail and one tomato soup. What would you like for the </text>
+      <target>
+       <answer>main course</answer>
+       <optionList>
+        <option>starter</option>
+        <option>dessert</option>
+        <option>main course</option>
+       </optionList>
+       <text>main course</text>
+      </target>
+      <text bold="false" size="18" family="Trebuchet MS">? </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0x99FF33" size="18" family="Trebuchet MS">Mr Ryefield</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — I´ll have the Beef Steak and my wife would like the Spanish omelette with croquettes.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0xFF6666" size="18" family="Trebuchet MS">Waiter</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — I´m afraid the croquettes are off. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0x990099" size="18" family="Trebuchet MS">Mrs Ryefield</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — Oh dear. Err... What else do you recommend? </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0xFF6666" size="18" family="Trebuchet MS">Waiter</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — The sausages are very good. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0x990099" size="18" family="Trebuchet MS">Mrs Ryefield</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — OK. I´ll have that. Do you have any coleslaw? </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0xFF6666" size="18" family="Trebuchet MS">Waiter</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — No, I´m sorry, we don´t. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0x990099" size="18" family="Trebuchet MS">Mrs Ryefield</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — Just give me a small mixed salad then. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0x99FF33" size="18" family="Trebuchet MS">Mr Ryefield</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — Same for me. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0xFF6666" size="18" family="Trebuchet MS">Waiter</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — Ok (...) Would you like something to </text>
+      <target>
+       <answer>drink</answer>
+       <optionList>
+        <option>drink</option>
+        <option>have</option>
+        <option>eat</option>
+       </optionList>
+       <text>drink</text>
+      </target>
+      <text bold="false" size="18" family="Trebuchet MS">? </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0x99FF33" size="18" family="Trebuchet MS">Mr Ryefield</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — Yes, please. May I see the </text>
+      <target>
+       <answer>wine</answer>
+       <optionList>
+        <option>beer</option>
+        <option>water</option>
+        <option>wine</option>
+       </optionList>
+       <text>wine</text>
+      </target>
+      <text bold="false" size="18" family="Trebuchet MS"> list? </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0xFF6666" size="18" family="Trebuchet MS">Waiter:</text>
+      <text bold="false" size="18" family="Trebuchet MS"> — Certainly. Here you are.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0x99FF33" size="18" family="Trebuchet MS">Mr Ryefield</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — A bottle of white Lambrusco, please. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" foreground="0xFF6666" size="18" family="Trebuchet MS">Waiter</text>
+      <text bold="false" size="18" family="Trebuchet MS">: — Excellent choice! </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" detail="false" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="meatandanimal" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Match the animal with the name of its meat</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="final">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Good!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00CCCC" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="151.0" cellHeight="151.0" border="true" id="primary">
+    <style shadow="true">
+     <font family="Trebuchet MS" size="18" />
+     <color background="0xFFCC00" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell id="0">
+     <p>beef </p>
+    </cell>
+    <cell id="1">
+     <p>chicken </p>
+    </cell>
+    <cell id="2">
+     <p>pork </p>
+    </cell>
+    <cell id="3">
+     <p>lamb</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="151.0" cellHeight="151.0" border="true" id="secondary">
+    <style>
+     <font family="Trebuchet MS" size="22" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell txtAlign="middle,top" image="cow.jpg">
+     <p>cow</p>
+    </cell>
+    <cell txtAlign="middle,top" image="hen.jpg">
+     <p>hen</p>
+    </cell>
+    <cell txtAlign="middle,top" image="pig.jpg">
+     <p>pig</p>
+    </cell>
+    <cell txtAlign="middle,top" image="sheep.jpg">
+     <p>sheep</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="minidialogues" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Put the dialogue in the correct order.</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="final">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Very good!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" maxTime="121" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="true" actions="true" score="false" />
+    </container>
+    <window bgColor="0x00CCCC" border="true" />
+   </settings>
+   <cells rows="3" cols="4" cellWidth="151.0" cellHeight="71.0" border="true">
+    <style>
+     <font family="Comic Sans MS" size="18" />
+     <color background="0xFFFF33" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>Hello,</p>
+    </cell>
+    <cell>
+     <p>can I</p>
+    </cell>
+    <cell>
+     <p>have a</p>
+    </cell>
+    <cell>
+     <p>coffee, please?</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="18" />
+      <color background="0x66FF00" />
+     </style>
+     <p>Yes, of</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="18" />
+      <color background="0x66FF00" />
+     </style>
+     <p>course.</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="18" />
+      <color background="0x66FF00" />
+     </style>
+     <p>Anything</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="18" />
+      <color background="0x66FF00" />
+     </style>
+     <p>else?</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="18" />
+      <color background="0xCC0099" />
+     </style>
+     <p>Yes, a</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="18" />
+      <color background="0xCC0099" />
+     </style>
+     <p>doughnut</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="18" />
+      <color background="0xCC0099" />
+     </style>
+     <p>and a</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="18" />
+      <color background="0xCC0099" />
+     </style>
+     <p>chocolate muffin.</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="nutritionalpyramid" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>A nutritional pyramid</p>
+     <p>Listen to the explanation</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x990099">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0x00CCCC" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="550.0" cellHeight="487.0" border="true">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell image="food-guide-pyramid.jpg">
+     <media type="PLAY_AUDIO" level="1" file="pyramid.mp3" autoStart="true" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="nutritionalpyramid2" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Do the puzzle. </p>
+     <p>What is it?</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="final">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>A nutritional pyramid!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" maxTime="121" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0x00CCCC" border="true" />
+   </settings>
+   <cells rows="4" cols="4" border="true" image="food-guide-pyramid.jpg">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@ClassicJigSaw" cols="4" rows="4" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.Identify" name="peopleating" code="" type="identifyWords">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Dialog" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>True or false?</p>
+     <p>Choose the true sentences!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="121" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0x00CCCC" border="true">
+     <size width="801" height="501" />
+    </window>
+   </settings>
+   <checkButton>Test Yourself!</checkButton>
+   <document>
+    <style name="default" bold="false" italic="false" background="0xFFFFFF" tabWidth="12" size="18" family="Comic Sans MS" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p background="0xFFFFFF" Alignment="1" family="Arial">
+      <cell width="370" height="250" image="people eating.jpg" />
+     </p>
+     <p background="0xFFFFFF" Alignment="1" family="Arial">
+      <target>The family is eating pasta in a restaurant.</target>
+     </p>
+     <p background="0xFFFFFF" Alignment="1" family="Arial">
+      <target>There is some bread in the table.</target>
+     </p>
+     <p background="0xFFFFFF" Alignment="1" family="Arial">
+      <text background="0xFFFFFF" family="Comic Sans MS">There isn't any olive oil.</text>
+     </p>
+     <p background="0xFFFFFF" Alignment="1" family="Arial">
+      <text background="0xFFFFFF" family="Comic Sans MS">The children are drinking some water.</text>
+     </p>
+     <p background="0xFFFFFF" Alignment="1" family="Arial">
+      <target>There are four plates with vegetables.</target>
+     </p>
+     <p background="0xFFFFFF" Alignment="1" family="Arial">
+      <text background="0xFFFFFF" family="Comic Sans MS">The father drinks some beer.</text>
+     </p>
+     <p background="0xFFFFFF" Alignment="1" family="Arial">
+      <text background="0xFFFFFF" family="Comic Sans MS">The tablecloth is black.</text>
+     </p>
+     <p background="0xFFFFFF" Alignment="1" family="Arial" />
+     <p background="0xFFFFFF" family="Arial" />
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.Complete" name="peopleeating2" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Dialog" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Click on the picture to listen to the text.</p>
+     <p>Complete the text with the missing words.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0x00CCCC" border="true">
+     <size width="801" height="601" />
+    </window>
+   </settings>
+   <checkButton>Test Yourself!</checkButton>
+   <document>
+    <style name="default" bold="false" italic="false" background="0xFFFFFF" tabWidth="12" size="18" family="Comic Sans MS" />
+    <style name="target" base="default" foreground="0x0000FF" background="0xFFFFFF" target="true" />
+    <style name="targetError" base="target" background="0xFFFFFF" foreground="0xFF0000" />
+    <section>
+     <p background="0xFFFFFF" Alignment="1" family="Arial">
+      <cell width="440" height="300" image="people eating.jpg">
+       <media type="PLAY_AUDIO" level="1" file="at the restaurant2.mp3" autoStart="true" />
+      </cell>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="false" italic="false" background="0xFFFFFF" size="22" family="Comic Sans MS">The Smiths family is eating out in a </text>
+      <target>restaurant</target>
+      <text bold="false" italic="false" background="0xFFFFFF" size="22" family="Comic Sans MS">. The four of them are eating </text>
+      <target>pasta</target>
+      <text bold="false" italic="false" background="0xFFFFFF" size="22" family="Comic Sans MS">. They like it very much. The parents drink </text>
+      <target>water</target>
+      <text bold="false" italic="false" background="0xFFFFFF" size="22" family="Comic Sans MS"> and the children drink </text>
+      <target>orange</target>
+      <text bold="false" italic="false" background="0xFFFFFF" size="22" family="Comic Sans MS"> </text>
+      <target>juice</target>
+      <text bold="false" italic="false" background="0xFFFFFF" size="22" family="Comic Sans MS">. On the table, there is a bottle of </text>
+      <target>olive</target>
+      <text bold="false" italic="false" background="0xFFFFFF" size="22" family="Comic Sans MS"> </text>
+      <target>oil</target>
+      <text bold="false" italic="false" background="0xFFFFFF" size="22" family="Comic Sans MS">, pepper and salt. There is also a bowl with some </text>
+      <target>bread</target>
+      <text bold="false" italic="false" background="0xFFFFFF" size="22" family="Comic Sans MS">. There are four small plates with some </text>
+      <target>lettuce</target>
+      <text bold="false" italic="false" background="0xFFFFFF" size="22" family="Comic Sans MS">. They are having a great time!</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="reservation" code="" autoJump="true">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Dialog" size="17" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Complete the text with the correct words.</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="final">
+     <style>
+      <font family="Dialog" size="17" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Good!</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="finalError">
+     <style>
+      <font family="Dialog" size="17" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Sure?</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="120" countDownTime="true" maxActions="5" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0x00CCCC" border="true">
+     <size width="501" height="501" />
+    </window>
+   </settings>
+   <checkButton>Test yourself!</checkButton>
+   <document>
+    <style name="default" bold="false" italic="false" background="0xFFFFFF" tabWidth="12" size="22" family="Trebuchet MS" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="true" size="20" family="Trebuchet MS">AT THE RESTAURANT: "Making a reservation"</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="true" size="20" family="Trebuchet MS">________________________________</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="true" size="20" family="Trebuchet MS">W: Good evening. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="true" size="20" family="Trebuchet MS">C: A </text>
+      <target>
+       <answer>table</answer>
+       <response fill="_" length="1" maxLength="5" show="t" />
+       <info mode="onError">
+        <cell width="100" height="40" image="table.jpg" />
+       </info>
+       <text>table</text>
+      </target>
+      <text bold="true" size="20" family="Trebuchet MS"> for two please. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="true" size="20" family="Trebuchet MS">W: Certainly. Just here, sir. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="true" size="20" family="Trebuchet MS">C: Could we sit by the </text>
+      <target>
+       <answer>window</answer>
+       <response fill="_" length="1" maxLength="6" show="w" />
+       <info mode="onError">
+        <cell width="100" height="40" image="window.jpg" />
+       </info>
+       <text>window</text>
+      </target>
+      <text bold="true" size="20" family="Trebuchet MS">? </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="true" size="20" family="Trebuchet MS">W: I'm sorry. The window tables are all </text>
+      <target>
+       <answer>reserved</answer>
+       <response fill="_" length="1" maxLength="8" show="r" />
+       <text>reserved</text>
+      </target>
+      <text bold="true" size="20" family="Trebuchet MS">.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="true" size="20" family="Trebuchet MS">(...)</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="true" size="20" family="Trebuchet MS">W: Are you ready to order, sir? </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="true" size="20" family="Trebuchet MS">C: Yes. I'll have tomato soup for starters and my wife would like prawn cocktail. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="true" size="20" family="Trebuchet MS">W: One tomato soup and one prawn cocktail. What would you like for main course? </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="true" size="20" family="Trebuchet MS">C: I'll have the tunafish and my wife would like the shepherd's pie. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="true" size="20" family="Trebuchet MS">W: I'm afraid the tunafish is off. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="true" size="20" family="Trebuchet MS">C: Oh dear. What do you recommend? </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="true" size="20" family="Trebuchet MS">W: The beefsteak is very good. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="true" size="20" family="Trebuchet MS">C: OK I'll have that. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="true" size="20" family="Trebuchet MS">W: Would you like </text>
+      <target>
+       <answer>anything</answer>
+       <response fill="_" length="1" maxLength="8" show="a" />
+       <text>anything</text>
+      </target>
+      <text bold="true" size="20" family="Trebuchet MS"> to drink? </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+     <p background="0xFFFFFF" family="Arial">
+      <text bold="true" size="20" family="Trebuchet MS">C: Yes, a bottle of red wine please. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" detail="false" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="set the table2" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Find pairs!</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="final">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Good memory!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="181" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="true" actions="false" score="true" />
+    </container>
+    <window bgColor="0x00CCCC" border="true" />
+   </settings>
+   <cells rows="4" cols="3" cellWidth="101.0" cellHeight="101.0" border="true" id="primary">
+    <style>
+     <font family="Berlin Sans FB" size="17" />
+     <color foreground="0xFF6699" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="4" />
+    <cell>
+     <p>fork</p>
+    </cell>
+    <cell>
+     <p>knife</p>
+    </cell>
+    <cell>
+     <p>spoon</p>
+    </cell>
+    <cell>
+     <p>glass</p>
+    </cell>
+    <cell>
+     <p>plate</p>
+    </cell>
+    <cell>
+     <p>napkin</p>
+    </cell>
+    <cell>
+     <p>tablecloth</p>
+    </cell>
+    <cell>
+     <p>salt and pepper</p>
+    </cell>
+    <cell>
+     <p>oil and vinegar</p>
+    </cell>
+    <cell>
+     <p>crockery</p>
+    </cell>
+    <cell>
+     <p>cutlery</p>
+    </cell>
+    <cell>
+     <p>bowl</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="3" cellWidth="50.0" cellHeight="30.0" border="true" id="secondary">
+    <style />
+    <cell image="fork.jpg" />
+    <cell image="knife.jpg" />
+    <cell image="spoon.jpg" />
+    <cell image="glass.jpg" />
+    <cell image="plate.jpg" />
+    <cell image="napkin.jpg" />
+    <cell image="tablecloth.jpg" />
+    <cell image="salt&amp;pepper.jpg" />
+    <cell image="oil&amp;vinegar.jpg" />
+    <cell image="crockery.jpg" />
+    <cell image="cutlery.jpg" />
+    <cell image="bowl.jpg" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="set the table3" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Match the word to the picture</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="final">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Well done!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="121" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="true" actions="false" score="true" />
+    </container>
+    <window bgColor="0x00CCCC" border="true" />
+   </settings>
+   <cells rows="5" cols="3" cellWidth="101.0" cellHeight="101.0" border="true" id="primary">
+    <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+     <font family="Berlin Sans FB" size="17" />
+     <color background="0xFFFF00" shadow="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="5" />
+    <cell>
+     <p>fork</p>
+    </cell>
+    <cell>
+     <p>spoon</p>
+    </cell>
+    <cell>
+     <p>knife</p>
+    </cell>
+    <cell>
+     <p>glass</p>
+    </cell>
+    <cell>
+     <p>napkin</p>
+    </cell>
+    <cell>
+     <p>plate</p>
+    </cell>
+    <cell>
+     <p>bowl</p>
+    </cell>
+    <cell>
+     <p>tablecloth</p>
+    </cell>
+    <cell>
+     <p>tray</p>
+    </cell>
+    <cell>
+     <p>crockery</p>
+    </cell>
+    <cell>
+     <p>cutlery</p>
+    </cell>
+    <cell>
+     <p>waiter</p>
+    </cell>
+    <cell>
+     <p>oil &amp; vinegar</p>
+    </cell>
+    <cell>
+     <p>salt &amp; pepper</p>
+    </cell>
+    <cell>
+     <p>saucer</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="3" cellWidth="101.0" cellHeight="101.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="5" />
+    <cell image="fork.jpg" />
+    <cell image="spoon.jpg" />
+    <cell image="knife.jpg" />
+    <cell image="glass.jpg" />
+    <cell image="napkin.jpg" />
+    <cell image="plate.jpg" />
+    <cell image="bowl.jpg" />
+    <cell image="tablecloth.jpg" />
+    <cell image="tray.jpg" />
+    <cell image="crockery.jpg" />
+    <cell image="cutlery.jpg" />
+    <cell image="waiter.jpg" />
+    <cell image="oil&amp;vinegar.jpg" />
+    <cell image="salt&amp;pepper.jpg" />
+    <cell image="saucer.jpg" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="themenu2" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Dialog" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Click on the image.</p>
+     <p>Complete the sentences.</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="final">
+     <style>
+      <font family="Dialog" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Well done!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x00CCCC" border="true">
+     <size width="628" height="751" />
+    </window>
+   </settings>
+   <checkButton>Test Yourself!</checkButton>
+   <document>
+    <style name="default" bold="false" italic="false" background="0xFFFFFF" tabWidth="12" size="22" family="Trebuchet MS" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p background="0xFFFFFF" family="Arial">
+      <cell width="100" height="100" image="aperitif.jpg">
+       <media type="PLAY_AUDIO" level="1" file="aperitif.mp3" />
+      </cell>
+      <text bold="false" italic="false" background="0xFFFFFF" size="18" family="Trebuchet MS"> </text>
+      <target>
+       <answer>Aperitif</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>Aperitif</text>
+      </target>
+      <text bold="false" italic="false" background="0xFFFFFF" size="18" family="Trebuchet MS">: Alcoholic drink that people have before a meal.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <cell width="100" height="100" image="starter.jpg">
+       <media type="PLAY_AUDIO" level="1" file="starter.mp3" />
+      </cell>
+      <target>
+       <answer>Starter</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>Starter</text>
+      </target>
+      <text bold="false" italic="false" background="0xFFFFFF" size="18" family="Trebuchet MS">:A small amount of food you eat before the meal.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <cell width="100" height="100" image="maincourse.jpg">
+       <media type="PLAY_AUDIO" level="1" file="maincourse.mp3" />
+      </cell>
+      <target>
+       <answer>Main course</answer>
+       <response fill="_" length="11" maxLength="11" />
+       <text>Main course</text>
+      </target>
+      <text bold="false" italic="false" background="0xFFFFFF" size="18" family="Trebuchet MS">:The most important part of the meal.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <cell width="99" height="100" image="dessert.jpg">
+       <media type="PLAY_AUDIO" level="1" file="dessert.mp3" />
+      </cell>
+      <target>
+       <answer>Dessert</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>Dessert</text>
+      </target>
+      <text bold="false" italic="false" background="0xFFFFFF" size="18" family="Trebuchet MS">: Sweet food after the meal.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial">
+      <cell width="100" height="100" image="beverages.jpg">
+       <media type="PLAY_AUDIO" level="1" file="beverages.mp3" />
+      </cell>
+      <target>
+       <answer>Beverages</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <text>Beverages</text>
+      </target>
+      <text bold="false" italic="false" background="0xFFFFFF" size="18" family="Trebuchet MS">: Drinks.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="thereis/are" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>There is/There are</p>
+     <p>Put the grammar box in the correct order.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Very good!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" maxTime="120" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0xCC00CC">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF66FF" border="true" />
+   </settings>
+   <cells rows="4" cols="3" cellWidth="213.0" cellHeight="90.0" border="true">
+    <style>
+     <font family="Trebuchet MS" size="18" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="4" />
+    <cell>
+     <style>
+      <font family="Berlin Sans FB" size="20" />
+      <color background="0x000000" />
+     </style>
+    </cell>
+    <cell>
+     <style>
+      <font family="Berlin Sans FB" size="20" />
+      <color background="0xFF6699" />
+     </style>
+     <p>Singular</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Berlin Sans FB" size="20" />
+      <color background="0xFF6699" />
+     </style>
+     <p>Plural</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Berlin Sans FB" size="20" />
+      <color background="0xFFFF66" />
+     </style>
+     <p>AFFIRMATIVE</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Berlin Sans FB" size="20" />
+      <color background="0xFFFF66" />
+     </style>
+     <p>THERE IS </p>
+     <p>"There is a pizza"</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Berlin Sans FB" size="20" />
+      <color background="0xFFFF66" />
+     </style>
+     <p>THERE ARE</p>
+     <p>"There are two pizzas"</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Berlin Sans FB" size="20" />
+      <color background="0xCC00FF" />
+     </style>
+     <p>NEGATIVE</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Berlin Sans FB" size="20" />
+      <color background="0xCC00FF" />
+     </style>
+     <p>THERE ISN'T </p>
+     <p>"There isn't any pizza"</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Berlin Sans FB" size="20" />
+      <color background="0xCC00FF" />
+     </style>
+     <p>THERE AREN'T</p>
+     <p>"There aren't pizzas"</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Berlin Sans FB" size="20" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>INTERROGATIVE</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Berlin Sans FB" size="20" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>IS THERE...?</p>
+     <p>"Is there any pizza?"</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Berlin Sans FB" size="20" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>ARE THERE...?</p>
+     <p>"Are there pizzas?"</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="thereis/areexercise">
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Match the two halves of the sentences.</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="final">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Good!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCC00CC">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF66FF" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="201.0" cellHeight="81.0" border="true" id="primary">
+    <style>
+     <font family="Trebuchet MS" size="18" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>There is</p>
+    </cell>
+    <cell>
+     <p>Is there</p>
+    </cell>
+    <cell>
+     <p>There aren't</p>
+    </cell>
+    <cell>
+     <p>There are</p>
+    </cell>
+    <cell>
+     <p>There isn't</p>
+    </cell>
+    <cell>
+     <p>Are there</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="201.0" cellHeight="81.0" border="true" id="secondary">
+    <style>
+     <font family="Berlin Sans FB" size="18" />
+     <color background="0xFFCC00" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>an onion.</p>
+    </cell>
+    <cell>
+     <p>any banana?</p>
+    </cell>
+    <cell>
+     <p>any peaches.</p>
+    </cell>
+    <cell>
+     <p>some mushrooms.</p>
+    </cell>
+    <cell>
+     <p>any salt.</p>
+    </cell>
+    <cell>
+     <p>sausages?</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="translation" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Translate the following sentences.</p>
+    </cell>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="final">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Perfect!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="301" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="true" actions="false" score="true" />
+    </container>
+    <window bgColor="0x00CCCC" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="501.0" cellHeight="101.0" border="false" id="primary">
+    <style borderStroke="0.7" markerStroke="2.4">
+     <font family="Comic Sans MS" size="17" bold="true" />
+     <color background="0xCCFF00" />
+     <gradient source="0xCCFF00" dest="0xFFFFFF" angle="0" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0">
+     <p>Hi ha algunes taronges a la nevera.</p>
+    </cell>
+    <cell id="1">
+     <p>El meu pare beu una mica de cervesa.</p>
+    </cell>
+    <cell id="2">
+     <p>Jo menjo una amanida per dinar.</p>
+    </cell>
+    <cell id="3">
+     <p>Jo vull un gelat de postres.</p>
+    </cell>
+    <cell id="4">
+     <p>No hi ha cap plàtan.</p>
+    </cell>
+    <cell id="5">
+     <p>Hi ha alguna salsitxa?</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="501.0" cellHeight="101.0" border="true" id="answers">
+    <style>
+     <font family="Comic Sans MS" size="17" />
+     <color background="0xFF6666" />
+     <gradient source="0xFF6699" dest="0xFFFFFF" angle="0" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>There are some oranges in the fridge.</p>
+    </cell>
+    <cell>
+     <p>My father drinks some beer.</p>
+    </cell>
+    <cell>
+     <p>I eat a salad for lunch.</p>
+    </cell>
+    <cell>
+     <p>I want an ice-cream for dessert.</p>
+    </cell>
+    <cell>
+     <p>There isn't any banana.</p>
+    </cell>
+    <cell>
+     <p>Is there any sausage?</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="vegetables" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="restaurant.jpg" type="initial">
+     <style>
+      <font family="Eras Light ITC" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>Vegetables</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCC00CC">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF66FF" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="verdures.bmp">
+    <style>
+     <font family="Trebuchet MS" size="18" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="fruits.bmp" file="fruits.gif" animated="false" />
+  <media name="mcdonalds.bmp" file="mcdonalds.gif" animated="false" />
+  <media name="verdures.bmp" file="verdures.gif" animated="false" />
+  <media name="aperitif.jpg" file="aperitif.jpg" />
+  <media name="apple.jpg" file="apple.jpg" />
+  <media name="bacon.jpg" file="bacon.jpg" />
+  <media name="beefsteak.jpg" file="beefsteak.jpg" />
+  <media name="beer.jpg" file="beer.jpg" />
+  <media name="beverages.jpg" file="beverages.jpg" />
+  <media name="bowl.jpg" file="bowl.jpg" />
+  <media name="bread.jpg" file="bread.jpg" />
+  <media name="butter.jpg" file="butter.jpg" />
+  <media name="carrot.jpg" file="carrot.jpg" />
+  <media name="cawliflower.jpg" file="cawliflower.jpg" />
+  <media name="cookies.jpg" file="cookies.jpg" />
+  <media name="corn flakes.jpg" file="corn_flakes.jpg" />
+  <media name="corn.jpg" file="corn.jpg" />
+  <media name="cow.jpg" file="cow.jpg" />
+  <media name="crockery.jpg" file="crockery.jpg" />
+  <media name="croquettes.jpg" file="croquettes.jpg" />
+  <media name="cup.jpg" file="cup.jpg" />
+  <media name="cupoftea.jpg" file="cupoftea.jpg" />
+  <media name="cutlery.jpg" file="cutlery.jpg" />
+  <media name="dessert.jpg" file="dessert.jpg" />
+  <media name="egg.jpg" file="egg.jpg" />
+  <media name="farfalle.jpg" file="farfalle.jpg" />
+  <media name="food-guide-pyramid.jpg" file="food-guide-pyramid.jpg" />
+  <media name="fork.jpg" file="fork.jpg" />
+  <media name="fries.jpg" file="fries.jpg" />
+  <media name="glass.jpg" file="glass.jpg" />
+  <media name="glasswine.jpg" file="glasswine.jpg" />
+  <media name="ham.jpg" file="ham.jpg" />
+  <media name="hen.jpg" file="hen.jpg" />
+  <media name="i01-butter.jpg" file="i01-butter.jpg" />
+  <media name="ice-cream.jpg" file="ice-cream.jpg" />
+  <media name="jam.jpg" file="jam.jpg" />
+  <media name="juice.jpg" file="juice.jpg" />
+  <media name="knife.jpg" file="knife.jpg" />
+  <media name="lemon.jpg" file="lemon.jpg" />
+  <media name="lettuce.jpg" file="lettuce.jpg" />
+  <media name="maincourse.jpg" file="maincourse.jpg" />
+  <media name="melon.jpg" file="melon.jpg" />
+  <media name="milk.jpg" file="milk.jpg" />
+  <media name="mushrooms.jpg" file="mushrooms.jpg" />
+  <media name="napkin.jpg" file="napkin.jpg" />
+  <media name="oil&amp;vinegar.jpg" file="oil_vinegar.jpg" />
+  <media name="omelette.jpg" file="omelette.jpg" />
+  <media name="orange.jpg" file="orange.jpg" />
+  <media name="pasta.jpg" file="pasta.jpg" />
+  <media name="pastry.jpg" file="pastry.jpg" />
+  <media name="pear.jpg" file="pear.jpg" />
+  <media name="people eating.jpg" file="people_eating.jpg" />
+  <media name="pepper.jpg" file="pepper.jpg" />
+  <media name="pig.jpg" file="pig.jpg" />
+  <media name="plate.jpg" file="plate.jpg" />
+  <media name="portada.jpg" file="portada.jpg" />
+  <media name="pot.jpg" file="pot.jpg" />
+  <media name="prawn.jpg" file="prawn.jpg" />
+  <media name="radish.jpg" file="radish.jpg" />
+  <media name="restaurant.jpg" file="restaurant.jpg" />
+  <media name="salt&amp;pepper.jpg" file="salt_pepper.jpg" />
+  <media name="saucepan.jpg" file="saucepan.jpg" />
+  <media name="saucer.jpg" file="saucer.jpg" />
+  <media name="sausages.jpg" file="sausages.jpg" />
+  <media name="sheep.jpg" file="sheep.jpg" />
+  <media name="snacks.jpg" file="snacks.jpg" />
+  <media name="sole.jpg" file="sole.jpg" />
+  <media name="spoon.jpg" file="spoon.jpg" />
+  <media name="squids.jpg" file="squids.jpg" />
+  <media name="starter.jpg" file="starter.jpg" />
+  <media name="strawberry.jpg" file="strawberry.jpg" />
+  <media name="sugar.jpg" file="sugar.jpg" />
+  <media name="table.jpg" file="table.jpg" />
+  <media name="tablecloth.jpg" file="tablecloth.jpg" />
+  <media name="toast.jpg" file="toast.jpg" />
+  <media name="tomato.jpg" file="tomato.jpg" />
+  <media name="tomatosoup.jpg" file="tomatosoup.jpg" />
+  <media name="tray.jpg" file="tray.jpg" />
+  <media name="vegetables.jpg" file="vegetables.jpg" />
+  <media name="waiter.jpg" file="waiter.jpg" />
+  <media name="waiter2.jpg" file="waiter2.jpg" />
+  <media name="window.jpg" file="window.jpg" />
+  <media name="yoghurt.jpg" file="yoghurt.jpg" />
+  <media name="aperitif.mp3" file="aperitif.mp3" />
+  <media name="at the restaurant.mp3" file="at_the_restaurant.mp3" />
+  <media name="at the restaurant2.mp3" file="at_the_restaurant2.mp3" />
+  <media name="beverages.mp3" file="beverages.mp3" />
+  <media name="dessert.mp3" file="dessert.mp3" />
+  <media name="maincourse.mp3" file="maincourse.mp3" />
+  <media name="pyramid.mp3" file="pyramid.mp3" />
+  <media name="snacks.mp3" file="snacks.mp3" />
+  <media name="starter.mp3" file="starter.mp3" />
+ </mediaBag>
+</JClicProject>
+

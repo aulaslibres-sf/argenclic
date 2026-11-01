@@ -1,0 +1,1825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="lafrance" version="0.1.3">
+ <settings>
+  <title>La France, activités de Français</title>
+  <revision description="Creation of the package of activities using Clic 3.0" date="12/9/05" />
+  <revision description="Converted from Clic3 to JClic" date="12/9/05">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Carmen Lamuedra Mato" mail="mlamuerd@xtec.net" />
+  <organization name="CEIP Elvira Cuyàs" mail="a8034783@centres.xtec.es" url="http://www.xtec.es/centres/a8034783" city="Montcada i Reixac (Sant Pere de Reixac)" state="Catalunya" />
+  <language>french</language>
+  <description>
+   <p>Package of French activities addressed to primary school. The project contains simple activities of vocabulary (numbers, days of the week, months of the year, animals...).</p>
+  </description>
+  <descriptors area-codes="lleng" level-codes="PRI">French language</descriptors>
+  <skin file="@green.xml" />
+  <meta_langs>french</meta_langs>
+  <descriptions>
+   <description language="french">
+    <p>Package of French activities addressed to primary school. The project contains simple activities of vocabulary (numbers, days of the week, months of the year, animals...).</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="start" name="portada">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="puzmapa" />
+  <item name="nombres" />
+  <item name="sons" />
+  <item name="numeros" />
+  <item name="sopamesos" />
+  <item name="estacions" />
+  <item name="animals" />
+  <item name="animaux" />
+  <item name="cança2" />
+  <item name="carta" />
+  <item name="questions" />
+  <item name="articles" />
+  <item name="nombres2" />
+  <item name="materies" />
+  <item name="material" />
+  <item name="articles2" />
+  <item name="setmana" />
+  <item name="charlieinformacio" />
+  <item name="charlie">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.SimpleAssociation" name="animals" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0xFFFFFF" background="0x0033FF" />
+     </style>
+     <p>Associe les animaux</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0x0000CC" background="0x33FF00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="super.wav" />
+     <p>Super !!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCCCCFF" dest="0x99FF99" angle="56" cycles="12" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+    <skin file="@green.xml" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="148.0" cellHeight="119.0" border="false" id="primary">
+    <style transparent="true">
+     <color background="0xFFFFFF" inactive="0x9999FF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell imgAlign="middle,bottom" image="cavall.jpg" />
+    <cell imgAlign="middle,bottom" image="conil.jpg" />
+    <cell image="gat.jpg" />
+    <cell image="eatoli.jpg" />
+    <cell imgAlign="middle,bottom" image="hamsyer.jpg" />
+    <cell image="serp.jpg" />
+    <cell imgAlign="middle,bottom" image="peix.jpg" />
+    <cell image="lloro.jpg" />
+   </cells>
+   <cells rows="2" cols="4" cellWidth="154.0" cellHeight="41.0" border="true" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="22" />
+     <color foreground="0xFFFFFF" background="0x3333FF" inactive="0xCCCCFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Cheval</p>
+    </cell>
+    <cell>
+     <p>Lapin</p>
+    </cell>
+    <cell>
+     <p>Chat</p>
+    </cell>
+    <cell>
+     <p>Hamster</p>
+    </cell>
+    <cell>
+     <p>Souris</p>
+    </cell>
+    <cell>
+     <p>Serpent</p>
+    </cell>
+    <cell>
+     <p>Poisson rouge</p>
+    </cell>
+    <cell>
+     <p>Perroquet</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="animaux" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0xFFFFFF" background="0x3333FF" />
+     </style>
+     <p>Trouve huit animaux dans la grille</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0x0000FF" background="0x33FF00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="tres bien.wav" />
+     <p>Très bien !</p>
+    </cell>
+   </messages>
+   <settings margin="4" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCCCCFF" dest="0x99FF99" angle="56" cycles="12" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0033FF" transparent="true" border="false" />
+    <skin file="@green.xml" />
+   </settings>
+   <textGrid rows="10" columns="10" cellWidth="52.0" cellHeight="54.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>PERROQUET*</row>
+     <row>*******RN*</row>
+     <row>CHIEN*E*E*</row>
+     <row>H****T**P*</row>
+     <row>E*C*S***R*</row>
+     <row>V*HM****E*</row>
+     <row>A*A*****S*</row>
+     <row>LHT*******</row>
+     <row>*NOSSIOP**</row>
+     <row>****LAPIN*</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">HAMSTER</clue>
+    <clue id="1">LAPIN</clue>
+    <clue id="2">CHEVAL</clue>
+    <clue id="3">CHIEN</clue>
+    <clue id="4">CHAT</clue>
+    <clue id="5">PERROQUET</clue>
+    <clue id="6">SERPENT</clue>
+    <clue id="7">POISSON</clue>
+   </clues>
+   <cells rows="4" cols="2" cellWidth="118.0" cellHeight="133.0" border="false" id="secondary">
+    <style transparent="true">
+     <color background="0xFFFFFF" inactive="0x66FF33" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell image="eatoli.jpg" />
+    <cell imgAlign="middle,bottom" image="conil.jpg" />
+    <cell image="cavall.jpg" />
+    <cell image="Imagen3.jpg" />
+    <cell imgAlign="middle,bottom" image="gat.jpg" />
+    <cell imgAlign="middle,bottom" image="lloro.jpg" />
+    <cell imgAlign="middle,bottom" image="serp.jpg" />
+    <cell image="peix.jpg" />
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="articles" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0xFFFFFF" background="0x0033FF" />
+     </style>
+     <p>Complète avec un, une ou des</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0x0000FF" background="0x33FF33" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="tres bien.wav" />
+     <p>Très bien !!</p>
+    </cell>
+   </messages>
+   <settings margin="6" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCCCCFF" dest="0x99FF99" angle="56" cycles="12" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x33FF00" border="true">
+     <size width="507" height="352" />
+    </window>
+    <skin file="@green.xml" />
+   </settings>
+   <checkButton>Évalue tes activités</checkButton>
+   <document>
+    <style name="default" family="Comic Sans MS" size="20" tabWidth="12" bold="false" foreground="0x66FF66" background="0x3333FF" italic="false" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p family="Comic Sans MS" size="20" foreground="0x66FF66" background="0x3333FF">
+      <text family="Comic Sans MS" size="20" foreground="0x66FF66" background="0x3333FF"> </text>
+     </p>
+     <p family="Comic Sans MS" size="20" foreground="0x66FF66" background="0x3333FF">
+      <cell width="490" height="40">
+       <style>
+        <font family="Comic Sans MS" size="20" />
+        <color foreground="0x3300FF" background="0xFFFFFF" />
+       </style>
+       <p>Complète avec LES ARTICLES INDÉFINIS</p>
+      </cell>
+     </p>
+     <p family="Comic Sans MS" size="20" foreground="0x66FF66" background="0x3333FF" />
+     <p family="Comic Sans MS" size="20" foreground="0x66FF66" background="0x3333FF">
+      <text family="Comic Sans MS" size="20" foreground="0x66FF66" background="0x3333FF">  J'ai </text>
+      <target>
+       <answer>un</answer>
+       <response fill="-" length="2" maxLength="2" />
+       <text>un</text>
+      </target>
+      <text family="Comic Sans MS" size="20" foreground="0x66FF66" background="0x3333FF"> frère et </text>
+      <target>
+       <answer>une</answer>
+       <response fill="-" length="3" maxLength="3" />
+       <text>une</text>
+      </target>
+      <text family="Comic Sans MS" size="20" foreground="0x66FF66" background="0x3333FF"> soeur</text>
+     </p>
+     <p family="Comic Sans MS" size="20" foreground="0x66FF66" background="0x3333FF">
+      <text family="Comic Sans MS" size="20" foreground="0x66FF66" background="0x3333FF">  Nathalie a </text>
+      <target>
+       <answer>un</answer>
+       <response fill="-" length="2" maxLength="2" />
+       <text>un</text>
+      </target>
+      <text family="Comic Sans MS" size="20" foreground="0x66FF66" background="0x3333FF">  chien</text>
+     </p>
+     <p family="Comic Sans MS" size="20" foreground="0x66FF66" background="0x3333FF">
+      <text family="Comic Sans MS" size="20" foreground="0x66FF66" background="0x3333FF">  J'ai </text>
+      <target>
+       <answer>des</answer>
+       <response fill="-" length="3" maxLength="3" />
+       <text>des</text>
+      </target>
+      <text family="Comic Sans MS" size="20" foreground="0x66FF66" background="0x3333FF">  cassettes</text>
+     </p>
+     <p family="Comic Sans MS" size="20" foreground="0x66FF66" background="0x3333FF">
+      <text family="Comic Sans MS" size="20" foreground="0x66FF66" background="0x3333FF">  Tu as </text>
+      <target>
+       <answer>un</answer>
+       <response fill="-" length="2" maxLength="2" />
+       <text>un</text>
+      </target>
+      <text family="Comic Sans MS" size="20" foreground="0x66FF66" background="0x3333FF">  animal?</text>
+     </p>
+     <p family="Comic Sans MS" size="20" foreground="0x66FF66" background="0x3333FF">
+      <text family="Comic Sans MS" size="20" foreground="0x66FF66" background="0x3333FF">  Tu as </text>
+      <target>
+       <answer>des</answer>
+       <response fill="-" length="3" maxLength="3" />
+       <text>des</text>
+      </target>
+      <text family="Comic Sans MS" size="20" foreground="0x66FF66" background="0x3333FF">  poissons rouges?</text>
+     </p>
+     <p family="Comic Sans MS" size="20" foreground="0x66FF66" background="0x3333FF">
+      <text family="Comic Sans MS" size="20" foreground="0x66FF66" background="0x3333FF">  Mon frère Sebastian a </text>
+      <target>
+       <answer>une</answer>
+       <response fill="-" length="3" maxLength="3" />
+       <text>une</text>
+      </target>
+      <text family="Comic Sans MS" size="20" foreground="0x66FF66" background="0x3333FF">  perruche et </text>
+      <target>
+       <answer>un</answer>
+       <response fill="-" length="2" maxLength="2" />
+       <text>un</text>
+      </target>
+      <text family="Comic Sans MS" size="20" foreground="0x66FF66" background="0x3333FF">  lapin</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="articles2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Relie les mots avec l'article</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0x0000FF" background="0x33FF00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="tres bien.wav" />
+     <p>Très bien !!!</p>
+    </cell>
+   </messages>
+   <settings margin="6" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCCCCFF" dest="0x99FF99" angle="56" cycles="12" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+    <skin file="@green.xml" />
+   </settings>
+   <cells rows="6" cols="2" cellWidth="194.0" cellHeight="59.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="22" />
+     <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xCCCCFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="6" />
+    <cell id="0">
+     <p>café</p>
+    </cell>
+    <cell id="1">
+     <p>ville</p>
+    </cell>
+    <cell id="1">
+     <p>piscine</p>
+    </cell>
+    <cell id="0">
+     <p>parc</p>
+    </cell>
+    <cell id="0">
+     <p>centre sportif</p>
+    </cell>
+    <cell id="1">
+     <p>plage</p>
+    </cell>
+    <cell id="1">
+     <p>salle des sports</p>
+    </cell>
+    <cell id="0">
+     <p>cinéma</p>
+    </cell>
+    <cell id="1">
+     <p>crêperie</p>
+    </cell>
+    <cell id="1">
+     <p>bibliothèque</p>
+    </cell>
+    <cell id="0">
+     <p>club de jeunes</p>
+    </cell>
+    <cell id="0">
+     <p>collège</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="108.0" cellHeight="64.0" border="true" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="26" />
+     <color foreground="0x3333FF" background="0x00FF00" inactive="0x66FF66" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell>
+     <p>le</p>
+    </cell>
+    <cell>
+     <p>la</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="cança2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0xFFFFFF" background="0x3333FF" />
+     </style>
+     <p>Complète le texte avec les animaux</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0x0000FF" background="0x66FF00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="tres bien.wav" />
+     <p>Très bien !!</p>
+    </cell>
+   </messages>
+   <settings margin="16" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCCCCFF" dest="0x99FF99" angle="56" cycles="12" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xCCCCFF" transparent="true" border="false">
+     <size width="350" height="557" />
+    </window>
+    <skin file="@green.xml" />
+   </settings>
+   <checkButton>Évalue tes activités</checkButton>
+   <document>
+    <style name="default" family="Comic Sans MS" size="14" tabWidth="12" bold="false" foreground="0x3333FF" background="0x66FF66" italic="false" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xCCFFCC" />
+    <style name="targetError" base="target" foreground="0xFF0000" background="0x99FF66" />
+    <section>
+     <p family="Comic Sans MS" size="14" foreground="0x3333FF" background="0x66FF66">
+      <cell imgAlign="right,middle" width="350" height="40" image="hamsyer.jpg">
+       <style>
+        <font family="Comic Sans MS" size="22" />
+        <color foreground="0xFFFFFF" background="0x3300FF" />
+       </style>
+       <p>Tu as un animal?</p>
+      </cell>
+     </p>
+     <p Alignment="1" family="Arial" background="0xFFFFFF">
+      <text size="14" foreground="0x330033">Tu as un animal?</text>
+     </p>
+     <p Alignment="1" family="Arial" background="0xFFFFFF">
+      <text size="14" foreground="0x330033">Un animal? un animal?</text>
+     </p>
+     <p Alignment="1" family="Arial" background="0xFFFFFF">
+      <text size="14" foreground="0x330033">Tu as un animal chez toi?</text>
+     </p>
+     <p Alignment="1" family="Arial" background="0xFFFFFF" />
+     <p Alignment="1" family="Arial" background="0xFFFFFF">
+      <text size="14" foreground="0x330033">Oui, j'ai un </text>
+      <target>
+       <answer>chat</answer>
+       <optionList>
+        <option>livre</option>
+        <option>chat</option>
+        <option>ciseaux</option>
+       </optionList>
+       <text>chat</text>
+      </target>
+      <text size="14" foreground="0x330033">,</text>
+     </p>
+     <p Alignment="1" family="Arial" background="0xFFFFFF">
+      <text size="14" foreground="0x330033">Un </text>
+      <target>
+       <answer>chat</answer>
+       <optionList>
+        <option>cahier</option>
+        <option>chat</option>
+        <option>livre</option>
+       </optionList>
+       <text>chat</text>
+      </target>
+      <text size="14" foreground="0x330033">, un chat, un </text>
+      <target>
+       <answer>chat</answer>
+       <optionList>
+        <option>frère</option>
+        <option>chat</option>
+        <option>cahier</option>
+       </optionList>
+       <text>chat</text>
+      </target>
+      <text family="Arial" background="0xFFFFFF">.</text>
+     </p>
+     <p Alignment="1" family="Arial" background="0xFFFFFF">
+      <text size="14" foreground="0x330033">Oui, j'ai un chat chez moi.</text>
+     </p>
+     <p Alignment="1" family="Arial" background="0xFFFFFF" />
+     <p Alignment="1" family="Arial" background="0xFFFFFF">
+      <text size="14" foreground="0x330033">Oui, j'ai un </text>
+      <target>
+       <answer>chien</answer>
+       <optionList>
+        <option>chien</option>
+        <option>calculette</option>
+        <option>stylo</option>
+       </optionList>
+       <text>chien</text>
+      </target>
+      <text size="14" foreground="0x330033">,</text>
+     </p>
+     <p Alignment="1" family="Arial" background="0xFFFFFF">
+      <text size="14" foreground="0x330033">un</text>
+      <text family="Comic Sans MS" size="14" foreground="0x330033" background="0x66FF66"> </text>
+      <text family="Arial" size="14" foreground="0x330033" background="0x66FF66">chien</text>
+      <text size="14" foreground="0x330033">, un </text>
+      <target>
+       <answer>chien</answer>
+       <optionList>
+        <option>cahier</option>
+        <option>cassette</option>
+        <option>chien</option>
+       </optionList>
+       <text>chien</text>
+      </target>
+      <text size="14" foreground="0x330033">, un </text>
+      <target>
+       <answer>chien</answer>
+       <optionList>
+        <option>classeur</option>
+        <option>chien</option>
+        <option>tennis</option>
+       </optionList>
+       <text>chien</text>
+      </target>
+      <text size="14" foreground="0x330033">.</text>
+     </p>
+     <p Alignment="1" family="Arial" background="0xFFFFFF">
+      <text size="14" foreground="0x330033">Oui, j'ai un chien chez moi.</text>
+     </p>
+     <p Alignment="1" family="Arial" background="0xFFFFFF" />
+     <p Alignment="1" family="Arial" background="0xFFFFFF">
+      <text size="14" foreground="0x330033">Oui, j'ai des </text>
+      <target>
+       <answer>poissons</answer>
+       <optionList>
+        <option>tennis</option>
+        <option>poissons</option>
+        <option>ciseaux</option>
+       </optionList>
+       <text>poissons</text>
+      </target>
+      <text size="14" foreground="0x330033">,</text>
+     </p>
+     <p Alignment="1" family="Arial" background="0xFFFFFF">
+      <text size="14" foreground="0x330033">Des poissons, des poissons, des </text>
+      <target>
+       <answer>poissons</answer>
+       <optionList>
+        <option>tennis</option>
+        <option>cahiers</option>
+        <option>poissons</option>
+       </optionList>
+       <text>poissons</text>
+      </target>
+      <text size="14" foreground="0x330033">.</text>
+     </p>
+     <p Alignment="1" family="Arial" background="0xFFFFFF">
+      <text size="14" foreground="0x330033">Oui, j'ai des poissons rouges chez moi.</text>
+     </p>
+     <p Alignment="1" family="Arial" background="0xFFFFFF" />
+     <p Alignment="1" family="Arial" background="0xFFFFFF">
+      <text size="14" foreground="0x330033">Je n'ai pas d'animal,</text>
+     </p>
+     <p Alignment="1" family="Arial" background="0xFFFFFF">
+      <text size="14" foreground="0x330033">Oh non ! Je n'ai pas d'animal.</text>
+     </p>
+     <p Alignment="1" family="Arial" background="0xFFFFFF">
+      <text size="14" foreground="0x330033">Je n'ai pas d'animal chez moi.</text>
+     </p>
+     <p family="Comic Sans MS" size="14" foreground="0x3333FF" background="0x66FF66" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.Order" name="carta" code="" type="orderWords">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0xFFFFFF" background="0x0033FF" />
+     </style>
+     <p>Lis et ordonne la lettre de Pascale</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0x0033FF" background="0x66FF33" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="tres bien.wav" />
+     <p>Très bien !!!</p>
+    </cell>
+   </messages>
+   <settings margin="18" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCCCCFF" dest="0x99FF99" angle="56" cycles="12" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false">
+     <size width="644" height="538" />
+    </window>
+    <skin file="@green.xml" />
+   </settings>
+   <checkButton>Évalue tes résultats</checkButton>
+   <document>
+    <style name="default" family="Comic Sans MS" size="16" tabWidth="12" bold="false" foreground="0xFFFFFF" background="0x0000FF" italic="false" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFF0000" background="0xFF0066" />
+    <section>
+     <p family="Comic Sans MS" size="16" foreground="0xFFFFFF" background="0x0000FF" />
+     <p family="Comic Sans MS" size="16" foreground="0xFFFFFF" background="0x0000FF">
+      <text family="Comic Sans MS" size="18">   Cher Luc,</text>
+     </p>
+     <p family="Comic Sans MS" size="16" foreground="0xFFFFFF" background="0x0000FF" />
+     <p family="Comic Sans MS" size="16" foreground="0xFFFFFF" background="0x0000FF">
+      <text family="Comic Sans MS" size="18">   Je m'appelle </text>
+      <target>Pascale</target>
+      <text family="Comic Sans MS" size="18"> et je suis ta </text>
+      <target>nouvelle</target>
+      <text family="Comic Sans MS" size="18"> correspondante.</text>
+     </p>
+     <p family="Comic Sans MS" size="16" foreground="0xFFFFFF" background="0x0000FF" />
+     <p family="Comic Sans MS" size="16" foreground="0xFFFFFF" background="0x0000FF">
+      <text family="Comic Sans MS" size="18">   J'habite à </text>
+      <target>París,</target>
+      <text family="Comic Sans MS" size="18"> j'ai </text>
+      <target>douze</target>
+      <text family="Comic Sans MS" size="18"> ans. J'adore les </text>
+      <target>animaux;</target>
+      <text family="Comic Sans MS" size="18"> j'ai un </text>
+      <target>chien</target>
+      <text family="Comic Sans MS" size="18"> </text>
+     </p>
+     <p family="Comic Sans MS" size="16" foreground="0xFFFFFF" background="0x0000FF" />
+     <p family="Comic Sans MS" size="16" foreground="0xFFFFFF" background="0x0000FF">
+      <text family="Comic Sans MS" size="18">   et deux </text>
+      <target>chats.</target>
+      <text family="Comic Sans MS" size="18"> Mon frère </text>
+      <target>Sébastien</target>
+      <text family="Comic Sans MS" size="18"> a un </text>
+      <target>lapin</target>
+      <text family="Comic Sans MS" size="16" foreground="0xFFFFFF" background="0x0000FF">, et ma </text>
+      <target>soeur</target>
+      <text family="Comic Sans MS" size="16" foreground="0xFFFFFF" background="0x0000FF"> </text>
+     </p>
+     <p family="Comic Sans MS" size="16" foreground="0xFFFFFF" background="0x0000FF" />
+     <p family="Comic Sans MS" size="16" foreground="0xFFFFFF" background="0x0000FF">
+      <text family="Comic Sans MS" size="16" foreground="0xFFFFFF" background="0x0000FF">   Isabelle a un hamster.</text>
+     </p>
+     <p family="Comic Sans MS" size="16" foreground="0xFFFFFF" background="0x0000FF" />
+     <p family="Comic Sans MS" size="16" foreground="0xFFFFFF" background="0x0000FF">
+      <text family="Comic Sans MS" size="18">	Et </text>
+      <target>toi,</target>
+      <text family="Comic Sans MS" size="18"> tu as </text>
+      <target>des</target>
+      <text family="Comic Sans MS" size="18"> animaux?</text>
+     </p>
+     <p family="Comic Sans MS" size="16" foreground="0xFFFFFF" background="0x0000FF" />
+     <p family="Comic Sans MS" size="16" foreground="0xFFFFFF" background="0x0000FF">
+      <text family="Comic Sans MS" size="18">		   Amitiés </text>
+     </p>
+     <p family="Comic Sans MS" size="16" foreground="0xFFFFFF" background="0x0000FF">
+      <text family="Comic Sans MS" size="18">						Pascale</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="charlie" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Fais le puzzle de Charlie</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0x0000CC" background="0x33FF33" />
+     </style>
+     <p>Super !!</p>
+    </cell>
+   </messages>
+   <settings margin="6" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCCCCFF" dest="0x99FF99" angle="56" cycles="12" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x3333FF" transparent="true" border="true" />
+    <skin file="@green.xml" />
+   </settings>
+   <cells rows="4" cols="4" border="true" image="charlie.gif">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <color inactive="0x66FF66" />
+    </style>
+    <shaper class="@ClassicJigSaw" cols="4" rows="4" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="charlieinformacio" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0xFFFFFF" background="0x3333FF" />
+     </style>
+     <p>Observe et lis Charlie le Chat</p>
+    </cell>
+   </messages>
+   <settings margin="4" report="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCCCCFF" dest="0x99FF99" angle="56" cycles="12" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000FF" border="true" />
+    <skin file="@green.xml" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="charlie.gif">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="estacions" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Associe les mois de l'année à chaque saison</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0x3333FF" background="0x33FF33" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="tres bien.wav" />
+     <p>Très bien !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCCCCFF" dest="0x99FF99" angle="56" cycles="12" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+    <skin file="@green.xml" />
+   </settings>
+   <cells rows="12" cols="1" cellWidth="208.0" cellHeight="35.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="18" />
+     <color foreground="0xFFFFFF" background="0x0033FF" inactive="0xCCCCFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="12" />
+    <cell id="2">
+     <p>JANVIER</p>
+    </cell>
+    <cell id="2">
+     <p>FÉVRIER</p>
+    </cell>
+    <cell id="0">
+     <p>MARS</p>
+    </cell>
+    <cell id="0">
+     <p>AVRIL</p>
+    </cell>
+    <cell id="0">
+     <p>MAI</p>
+    </cell>
+    <cell id="3">
+     <p>JUIN</p>
+    </cell>
+    <cell id="3">
+     <p>JUILLET</p>
+    </cell>
+    <cell id="3">
+     <p>AÔUT</p>
+    </cell>
+    <cell id="1">
+     <p>SEPTEMBRE</p>
+    </cell>
+    <cell id="1">
+     <p>OCTOBRE</p>
+    </cell>
+    <cell id="1">
+     <p>NOVENBRE</p>
+    </cell>
+    <cell id="2">
+     <p>DÉCEMBRE</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="208.0" cellHeight="102.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell txtAlign="left,middle" imgAlign="right,middle" image="primavera.gif">
+     <style>
+      <font family="Comic Sans MS" size="20" />
+      <color foreground="0xFFFFFF" background="0x339900" inactive="0x99FF66" />
+     </style>
+     <p>Printemps</p>
+    </cell>
+    <cell txtAlign="left,middle" imgAlign="right,middle" image="tardor.gif">
+     <style>
+      <font family="Comic Sans MS" size="20" />
+      <color foreground="0xFFFFFF" background="0x339900" inactive="0x99FF66" />
+     </style>
+     <p>Automne</p>
+    </cell>
+    <cell txtAlign="right,middle" imgAlign="left,middle" image="hivern.gif">
+     <style>
+      <font family="Comic Sans MS" size="20" />
+      <color foreground="0xFFFFFF" background="0x339900" inactive="0x99FF66" />
+     </style>
+     <p>Hiver</p>
+    </cell>
+    <cell txtAlign="right,middle" imgAlign="left,middle" image="estiu.gif">
+     <style>
+      <font family="Comic Sans MS" size="20" />
+      <color foreground="0xFFFFFF" background="0x339900" inactive="0x99FF66" />
+     </style>
+     <p>Été</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="material" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Trouve le mot à chaque dessin</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0x0000FF" background="0x33FF00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="tres bien.wav" />
+     <p>Très bien !!</p>
+    </cell>
+   </messages>
+   <settings margin="7" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCCCCFF" dest="0x99FF99" angle="56" cycles="12" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+    <skin file="@green.xml" />
+   </settings>
+   <cells rows="7" cols="1" cellWidth="128.0" cellHeight="81.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xCCCCFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell image="cinema.jpg" />
+    <cell image="futbol.jpg" />
+    <cell image="lectura.jpg" />
+    <cell image="musica2.jpg" />
+    <cell image="ordinador2.jpg" />
+    <cell image="piscina.gif" />
+    <cell image="planche.gif" />
+   </cells>
+   <cells rows="7" cols="1" cellWidth="256.0" cellHeight="81.0" border="true" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="22" />
+     <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xCCCCFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell>
+     <p>Le cinéma</p>
+    </cell>
+    <cell>
+     <p>Le football</p>
+    </cell>
+    <cell>
+     <p>La lecture</p>
+    </cell>
+    <cell>
+     <p>La musique</p>
+    </cell>
+    <cell>
+     <p>L'informatique</p>
+    </cell>
+    <cell>
+     <p>La natation</p>
+    </cell>
+    <cell>
+     <p>La planche à roulettes</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="materies" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Trouve le nom de dix matières dans la grille</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0x0000CC" background="0x33FF00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="tres bien.wav" />
+     <p>Très bien !!</p>
+    </cell>
+   </messages>
+   <settings margin="6" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCCCCFF" dest="0x99FF99" angle="56" cycles="12" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x33FF33" transparent="true" border="true" />
+    <skin file="@green.xml" />
+   </settings>
+   <textGrid rows="10" columns="10" cellWidth="52.0" cellHeight="50.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>DBIOLOGIE*</row>
+     <row>EESPAGNOL*</row>
+     <row>SH*****S*E</row>
+     <row>SI****I**U</row>
+     <row>IS**MATHSQ</row>
+     <row>NT**Ç***PI</row>
+     <row>*O*N****OS</row>
+     <row>SIALGNA*RY</row>
+     <row>*R******TH</row>
+     <row>FEMUSIQUEP</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">MUSIQUE</clue>
+    <clue id="1">MATHS</clue>
+    <clue id="2">HISTOIRE</clue>
+    <clue id="3">ANGLAIS</clue>
+    <clue id="4">FRANÇAIS</clue>
+    <clue id="5">ESPAGNOL</clue>
+    <clue id="6">SPORT</clue>
+    <clue id="7">DESSIN</clue>
+    <clue id="8">BIOLOGIE</clue>
+    <clue id="9">PHYSIQUE</clue>
+   </clues>
+  </activity>
+  <activity class="@memory.MemoryGame" name="nombres" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Cherche le nombre</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0x0000FF" background="0x00FF00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="super.wav" />
+     <p>Super !!</p>
+    </cell>
+   </messages>
+   <settings margin="4" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCCCCFF" dest="0x99FF99" angle="56" cycles="12" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x3333FF" border="true" />
+    <skin file="@green.xml" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="142.0" cellHeight="149.0" border="true" id="primary">
+    <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+     <font family="Comic Sans MS" size="22" />
+     <color foreground="0xFFFFFF" background="0x0033CC" inactive="0x99FF99" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell image="un.gif" />
+    <cell image="dos.gif" />
+    <cell image="tres.gif" />
+    <cell image="quatre.gif" />
+    <cell image="cinc.gif" />
+    <cell image="sis.gif" />
+    <cell image="set.gif" />
+    <cell image="vuit.gif" />
+    <cell image="nou.gif" />
+    <cell image="deu.gif" />
+   </cells>
+   <cells rows="2" cols="5" cellWidth="50.0" cellHeight="30.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>Un</p>
+    </cell>
+    <cell>
+     <p>Deux</p>
+    </cell>
+    <cell>
+     <p>Trois</p>
+    </cell>
+    <cell>
+     <p>Quatre</p>
+    </cell>
+    <cell>
+     <p>Cinq</p>
+    </cell>
+    <cell>
+     <p>Six</p>
+    </cell>
+    <cell>
+     <p>Sept</p>
+    </cell>
+    <cell>
+     <p>Huit</p>
+    </cell>
+    <cell>
+     <p>Neuf</p>
+    </cell>
+    <cell>
+     <p>Dix</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="nombres2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0xFFFFFF" background="0x0000CC" />
+     </style>
+     <p>Écoute les nombres et répète</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCCCCFF" dest="0x99FF99" angle="56" cycles="12" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+    <skin file="@green.xml" />
+   </settings>
+   <cells rows="11" cols="1" cellWidth="139.0" cellHeight="35.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="24" />
+     <color foreground="0xFFFFFF" background="0x0000CC" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="11" />
+    <cell id="0">
+     <p>20</p>
+    </cell>
+    <cell id="1">
+     <p>21</p>
+    </cell>
+    <cell id="2">
+     <p>22</p>
+    </cell>
+    <cell id="3">
+     <p>23</p>
+    </cell>
+    <cell id="4">
+     <p>24</p>
+    </cell>
+    <cell id="5">
+     <p>25</p>
+    </cell>
+    <cell id="6">
+     <p>26</p>
+    </cell>
+    <cell id="7">
+     <p>27</p>
+    </cell>
+    <cell id="8">
+     <p>28</p>
+    </cell>
+    <cell id="9">
+     <p>29</p>
+    </cell>
+    <cell id="10">
+     <p>30</p>
+    </cell>
+   </cells>
+   <cells rows="11" cols="1" cellWidth="55.0" cellHeight="51.0" border="true" id="secondary">
+    <style>
+     <color foreground="0xFFFFFF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="11" />
+    <cell image="musica2.jpg">
+     <media type="PLAY_AUDIO" level="1" file="vintg.wav" />
+    </cell>
+    <cell image="musica2.jpg">
+     <media type="PLAY_AUDIO" level="1" file="21.wav" />
+    </cell>
+    <cell image="musica2.jpg">
+     <media type="PLAY_AUDIO" level="1" file="22.wav" />
+    </cell>
+    <cell image="musica2.jpg">
+     <media type="PLAY_AUDIO" level="1" file="23.wav" />
+    </cell>
+    <cell image="musica2.jpg">
+     <media type="PLAY_AUDIO" level="1" file="24.wav" />
+    </cell>
+    <cell image="musica2.jpg">
+     <media type="PLAY_AUDIO" level="1" file="25.wav" />
+    </cell>
+    <cell image="musica2.jpg">
+     <media type="PLAY_AUDIO" level="1" file="26.wav" />
+    </cell>
+    <cell image="musica2.jpg">
+     <media type="PLAY_AUDIO" level="1" file="27.wav" />
+    </cell>
+    <cell image="musica2.jpg">
+     <media type="PLAY_AUDIO" level="1" file="28.wav" />
+    </cell>
+    <cell image="musica2.jpg">
+     <media type="PLAY_AUDIO" level="1" file="29.wav" />
+    </cell>
+    <cell image="musica2.jpg">
+     <media type="PLAY_AUDIO" level="1" file="30.wav" />
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="numeros" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0xFFFFFF" background="0x3333FF" />
+     </style>
+     <p>Trouve les nombres</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0x3333FF" background="0x33FF00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="super.wav" />
+     <p>Super !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCCCCFF" dest="0x99FF99" angle="56" cycles="12" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+    <skin file="@green.xml" />
+   </settings>
+   <cells rows="10" cols="2" cellWidth="131.0" cellHeight="39.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="26" />
+     <color foreground="0xFFFFFF" background="0x3333FF" inactive="0xCCCCFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="10" />
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>3</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0xFFFFFF" background="0x3333FF" inactive="0xCCCCFF" />
+     </style>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>11</p>
+    </cell>
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>13</p>
+    </cell>
+    <cell>
+     <p>14</p>
+    </cell>
+    <cell>
+     <p>15</p>
+    </cell>
+    <cell>
+     <p>16</p>
+    </cell>
+    <cell>
+     <p>17</p>
+    </cell>
+    <cell>
+     <p>18</p>
+    </cell>
+    <cell>
+     <p>19</p>
+    </cell>
+    <cell>
+     <p>20</p>
+    </cell>
+   </cells>
+   <cells rows="10" cols="2" cellWidth="131.0" cellHeight="39.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="10" />
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x333300" background="0x33FF33" inactive="0x66FF66" />
+     </style>
+     <p>Un</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x333300" background="0x33FF33" inactive="0x66FF66" />
+     </style>
+     <p>Deux</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x333300" background="0x33FF33" inactive="0x66FF66" />
+     </style>
+     <p>Trois</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x333300" background="0x33FF33" inactive="0x66FF66" />
+     </style>
+     <p>Quatre</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x333300" background="0x33FF33" inactive="0x66FF66" />
+     </style>
+     <p>Cinq</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x333300" background="0x33FF33" inactive="0x66FF66" />
+     </style>
+     <p>Six</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x333300" background="0x33FF33" inactive="0x66FF66" />
+     </style>
+     <p>Sept</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x333300" background="0x33FF33" inactive="0x66FF66" />
+     </style>
+     <p>Huit</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x333300" background="0x33FF33" inactive="0x66FF66" />
+     </style>
+     <p>Neuf</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x333300" background="0x33FF33" inactive="0x66FF66" />
+     </style>
+     <p>Dix</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x333300" background="0x33FF33" inactive="0x66FF66" />
+     </style>
+     <p>Onze</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x333300" background="0x33FF33" inactive="0x66FF66" />
+     </style>
+     <p>Douze</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x333300" background="0x33FF33" inactive="0x66FF66" />
+     </style>
+     <p>Treize</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x333300" background="0x33FF33" inactive="0x66FF66" />
+     </style>
+     <p>Quatorze</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x333300" background="0x33FF33" inactive="0x66FF66" />
+     </style>
+     <p>Quinze</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x333300" background="0x33FF33" inactive="0x66FF66" />
+     </style>
+     <p>Seize</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x333300" background="0x33FF33" inactive="0x66FF66" />
+     </style>
+     <p>Dix-sept</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x333300" background="0x33FF33" inactive="0x66FF66" />
+     </style>
+     <p>Dix-huit</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x333300" background="0x33FF33" inactive="0x66FF66" />
+     </style>
+     <p>Dix-neuf</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x333300" background="0x33FF33" inactive="0x66FF66" />
+     </style>
+     <p>Vingt</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="portada" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0xFFFFFF" background="0x3366FF" />
+     </style>
+     <p>Commence!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCCCCFF" dest="0x99FF99" angle="56" cycles="12" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+    <skin file="@green.xml" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="portada3.gif">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="puzmapa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Fais le puzzle de la France</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0x0000FF" background="0x00FF00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="super.wav" />
+     <p>Super !!</p>
+    </cell>
+   </messages>
+   <settings margin="6" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCCCCFF" dest="0x99FF99" angle="56" cycles="12" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+    <skin file="@green.xml" />
+   </settings>
+   <cells rows="4" cols="5" border="true" image="franpuzz.gif">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <color inactive="0x99FF99" />
+    </style>
+    <shaper class="@JigSaw" cols="5" rows="4" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="questions" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0xFFFFFF" background="0x0033CC" />
+     </style>
+     <p>Trouve la question</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0x0000CC" background="0x33FF33" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="tres bien.wav" />
+     <p>Très bien !!</p>
+    </cell>
+   </messages>
+   <settings margin="9" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCCCCFF" dest="0x99FF99" angle="56" cycles="12" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+    <skin file="@green.xml" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="310.0" cellHeight="45.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <style>
+      <font family="Arial" size="18" />
+      <color foreground="0xFFFFFF" background="0x3333FF" inactive="0x9999FF" alternative="0x9999FF" />
+     </style>
+     <p>Comment tu t'appelles?</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="18" />
+      <color foreground="0xFFFFFF" background="0x3333FF" inactive="0x9999FF" alternative="0x9999FF" />
+     </style>
+     <p>Tu as quel âge?</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="18" />
+      <color foreground="0xFFFFFF" background="0x3333FF" inactive="0x9999FF" alternative="0x9999FF" />
+     </style>
+     <p>C'est quand ton anniversaire?</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="18" />
+      <color foreground="0xFFFFFF" background="0x3333FF" inactive="0x9999FF" alternative="0x9999FF" />
+     </style>
+     <p>Tu habites où?</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="18" />
+      <color foreground="0xFFFFFF" background="0x3333FF" inactive="0x9999FF" alternative="0x9999FF" />
+     </style>
+     <p>Tu as des animaux?</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="18" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0x9999FF" alternative="0x9999FF" />
+     </style>
+     <p>Tu aimes la natation?</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="310.0" cellHeight="45.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <style>
+      <font family="Arial" size="18" />
+      <color foreground="0x003366" background="0x33FF00" inactive="0x66FF66" alternative="0x9999FF" />
+     </style>
+     <p>Je m'appelle Marie</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="18" />
+      <color foreground="0x003366" background="0x33FF00" inactive="0x66FF66" alternative="0x9999FF" />
+     </style>
+     <p>J'ai douze ans</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="18" />
+      <color foreground="0x003366" background="0x33FF00" inactive="0x66FF66" alternative="0x9999FF" />
+     </style>
+     <p>Mon anniversaire c'est le 10 juin</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="18" />
+      <color foreground="0x003366" background="0x33FF00" inactive="0x66FF66" alternative="0x9999FF" />
+     </style>
+     <p>J'habite, 16 rue des Lilas à Nantes</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="18" />
+      <color foreground="0x003366" background="0x33FF00" inactive="0x66FF66" alternative="0x9999FF" />
+     </style>
+     <p>J'ai un chien et deux chats</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="18" />
+      <color foreground="0x003366" background="0x00FF00" inactive="0x66FF66" alternative="0x9999FF" />
+     </style>
+     <p>Oui, j'aime ça</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="setmana" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0xFFFFFF" background="0x0033CC" />
+     </style>
+     <p>Trouve les jours de la semaine dans la grille</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0x0000CC" background="0x33FF00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="super.wav" />
+     <p>Super !!!</p>
+    </cell>
+   </messages>
+   <settings margin="6" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCCCCFF" dest="0x99FF99" angle="56" cycles="12" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00FF00" transparent="true" border="true" />
+    <skin file="@green.xml" />
+   </settings>
+   <textGrid rows="10" columns="10" cellWidth="68.0" cellHeight="57.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>*********M</row>
+     <row>*LUNDID**E</row>
+     <row>******I**R</row>
+     <row>**IDRAM**C</row>
+     <row>******A**R</row>
+     <row>*****IN**E</row>
+     <row>SAMEDIC**D</row>
+     <row>***U**H**I</row>
+     <row>**E***E***</row>
+     <row>*JIDERDNEV</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">LUNDI</clue>
+    <clue id="1">MARDI</clue>
+    <clue id="2">MERCREDI</clue>
+    <clue id="3">JEUDI</clue>
+    <clue id="4">VENDREDI</clue>
+    <clue id="5">SAMEDI</clue>
+    <clue id="6">DIMANCHE</clue>
+   </clues>
+  </activity>
+  <activity class="@panels.Explore" name="sons" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0xFFFFFF" background="0x3333FF" />
+     </style>
+     <p>Écoute les nombres et répète</p>
+    </cell>
+   </messages>
+   <settings margin="6" report="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCCCCFF" dest="0x99FF99" angle="56" cycles="12" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x33FF00" border="true" />
+    <skin file="@green.xml" />
+   </settings>
+   <cells rows="7" cols="1" cellWidth="197.0" cellHeight="57.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0xFFFFFF" background="0x6633FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell id="0">
+     <p>13</p>
+    </cell>
+    <cell id="1">
+     <p>4</p>
+    </cell>
+    <cell id="2">
+     <p>15</p>
+    </cell>
+    <cell id="3">
+     <p>7</p>
+    </cell>
+    <cell id="4">
+     <p>16</p>
+    </cell>
+    <cell id="5">
+     <p>11</p>
+    </cell>
+    <cell id="6">
+     <p>14</p>
+    </cell>
+   </cells>
+   <cells rows="7" cols="1" cellWidth="52.0" cellHeight="55.0" border="true" id="secondary">
+    <style>
+     <color background="0x66FF66" inactive="0x66FF66" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell image="un.gif">
+     <media type="PLAY_AUDIO" level="1" file="tretze.wav" />
+    </cell>
+    <cell image="un.gif">
+     <media type="PLAY_AUDIO" level="1" file="quatre.wav" />
+    </cell>
+    <cell image="un.gif">
+     <media type="PLAY_AUDIO" level="1" file="quinze.wav" />
+    </cell>
+    <cell image="un.gif">
+     <media type="PLAY_AUDIO" level="1" file="set.wav" />
+    </cell>
+    <cell image="un.gif">
+     <media type="PLAY_AUDIO" level="1" file="setze.wav" />
+    </cell>
+    <cell image="un.gif">
+     <media type="PLAY_AUDIO" level="1" file="onze.wav" />
+    </cell>
+    <cell image="un.gif">
+     <media type="PLAY_AUDIO" level="1" file="quatorce.wav" />
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="sopamesos" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0xFFFFFF" background="0x0033FF" />
+     </style>
+     <p>Trouve le nom des douze mois de l'année</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color foreground="0x0033FF" background="0x33FF00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="super.wav" />
+     <p>Super !!</p>
+    </cell>
+   </messages>
+   <settings margin="6" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCCCCFF" dest="0x99FF99" angle="56" cycles="12" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000FF" border="true" />
+    <skin file="@green.xml" />
+   </settings>
+   <textGrid rows="14" columns="10" cellWidth="35.0" cellHeight="40.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>N**JANVIER**S*</row>
+     <row>O**U*DOCTOBRE*</row>
+     <row>V*II*É******P*</row>
+     <row>EA*N*CJUILLET*</row>
+     <row>M****E******E*</row>
+     <row>B****M***SRAM*</row>
+     <row>R****B*****VB*</row>
+     <row>E*FÉVRIER**RR*</row>
+     <row>*****E*****IE*</row>
+     <row>AOÛT*MAI***L**</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">MAI</clue>
+    <clue id="1">JANVIER</clue>
+    <clue id="2">FÉVRIER</clue>
+    <clue id="3">MARS</clue>
+    <clue id="4">AVRIL</clue>
+    <clue id="5">MAI</clue>
+    <clue id="6">JUIN</clue>
+    <clue id="7">JUILLET</clue>
+    <clue id="8">AOÛT</clue>
+    <clue id="9">SEPTEMBRE</clue>
+    <clue id="10">OCTOBRE</clue>
+    <clue id="11">NOVEMBRE</clue>
+    <clue id="12">DÉCEMBRE</clue>
+   </clues>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="charlie.gif" file="charlie.gif" animated="false" />
+  <media name="cinc.gif" file="cinc.gif" animated="false" />
+  <media name="deu.gif" file="deu.gif" animated="false" />
+  <media name="dos.gif" file="dos.gif" animated="false" />
+  <media name="estiu.gif" file="estiu.gif" animated="false" />
+  <media name="franpuzz.gif" file="franpuzz.gif" animated="false" />
+  <media name="hivern.gif" file="hivern.gif" animated="false" />
+  <media name="nou.gif" file="nou.gif" animated="false" />
+  <media name="piscina.gif" file="piscina.gif" animated="false" />
+  <media name="planche.gif" file="planche.gif" animated="false" />
+  <media name="portada3.gif" file="portada3.gif" animated="false" />
+  <media name="primavera.gif" file="primavera.gif" animated="false" />
+  <media name="quatre.gif" file="quatre.gif" animated="false" />
+  <media name="set.gif" file="set.gif" animated="false" />
+  <media name="sis.gif" file="sis.gif" animated="false" />
+  <media name="tardor.gif" file="tardor.gif" animated="false" />
+  <media name="tres.gif" file="tres.gif" animated="false" />
+  <media name="un.gif" file="un.gif" animated="false" />
+  <media name="vuit.gif" file="vuit.gif" animated="false" />
+  <media name="cavall.jpg" file="cavall.jpg" />
+  <media name="cinema.jpg" file="cinema.jpg" />
+  <media name="conil.jpg" file="conil.jpg" />
+  <media name="eatoli.jpg" file="eatoli.jpg" />
+  <media name="futbol.jpg" file="futbol.jpg" />
+  <media name="gat.jpg" file="gat.jpg" />
+  <media name="hamsyer.jpg" file="hamsyer.jpg" />
+  <media name="Imagen3.jpg" file="imagen3.jpg" />
+  <media name="lectura.jpg" file="lectura.jpg" />
+  <media name="lloro.jpg" file="lloro.jpg" />
+  <media name="musica2.jpg" file="musica2.jpg" />
+  <media name="ordinador2.jpg" file="ordinador2.jpg" />
+  <media name="peix.jpg" file="peix.jpg" />
+  <media name="serp.jpg" file="serp.jpg" />
+  <media name="21.wav" file="21.wav" />
+  <media name="22.wav" file="22.wav" />
+  <media name="23.wav" file="23.wav" />
+  <media name="24.wav" file="24.wav" />
+  <media name="25.wav" file="25.wav" />
+  <media name="26.wav" file="26.wav" />
+  <media name="27.wav" file="27.wav" />
+  <media name="28.wav" file="28.wav" />
+  <media name="29.wav" file="29.wav" />
+  <media name="30.wav" file="30.wav" />
+  <media name="onze.wav" file="onze.wav" />
+  <media name="quatorce.wav" file="quatorce.wav" />
+  <media name="quatre.wav" file="quatre.wav" />
+  <media name="quinze.wav" file="quinze.wav" />
+  <media name="set.wav" file="set.wav" />
+  <media name="setze.wav" file="setze.wav" />
+  <media name="super.wav" file="super.wav" />
+  <media name="tres bien.wav" file="tres_bien.wav" />
+  <media name="tretze.wav" file="tretze.wav" />
+  <media name="vintg.wav" file="vintg.wav" />
+ </mediaBag>
+</JClicProject>
+

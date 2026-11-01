@@ -1,0 +1,2740 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="mozart" version="0.1.3">
+ <settings>
+  <title>Homenaje a Mozart</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="11/30/06" />
+  <revision description="Conversión de Clic3 a JClic" date="1/19/07">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Carlos Medina Viedma" mail="carlos.medina.b@teleline.es" />
+  <organization name="Escuelas profesionales SA.FA - Alcalá de los Gazules" mail="alcalagazules@safa.edu" url="http://www.safa.edu/" city="Alcalá de los Gazules -  Cádiz" state="Andalucía" />
+  <language>es</language>
+  <description>
+   <p>Proyecto de actividades sobre la vida y obra de Mozart. Encontramos cuatro partes:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Biografía</p>
+   <p>&lt;LI&gt;Pasatiempos</p>
+   <p>&lt;LI&gt;Instrumentos musicales</p>
+   <p>&lt;LI&gt;Conceptos musicales</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area-codes="mus" level-codes="PRI">Mozart</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Proyecto de actividades sobre la vida y obra de Mozart. Encontramos cuatro partes:</p>
+    <p>&lt;UL&gt;</p>
+    <p>&lt;LI&gt;Biografía</p>
+    <p>&lt;LI&gt;Pasatiempos</p>
+    <p>&lt;LI&gt;Instrumentos musicales</p>
+    <p>&lt;LI&gt;Conceptos musicales</p>
+    <p>&lt;/UL&gt;</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="start" name="INICIO">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="MENÚ">
+   <jump action="STOP" id="forward" />
+  </item>
+  <item id="pasatiempos" name="PUZZLE">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="PUZZLE 2" />
+  <item name="PUZZLE 3" />
+  <item name="PUZZLE 4" />
+  <item name="PUZZLE 5" />
+  <item name="SOPA DE LETRAS" />
+  <item name="MEMORIA" />
+  <item name="CRUCIGRAMA">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="instrumentos" name="INSTRUMENTOS DE CUERDA">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="INSTRUMENTOS DE VIENTO">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="conceptos musicales" name="CONCEPTOS MUSICALES 1">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="CONCEPTOS MUSICALES 2">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="vida y obra" name="BIOGRAFÍA">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="BIOGRAFÍA 2" />
+  <item name="BIOGRAFÍA 3" />
+  <item name="FAMILIA" />
+  <item name="VIAJES" />
+  <item name="VIAJES 2" />
+  <item name="OBRA" />
+  <item name="OBRA 2" />
+  <item name="OBRA 3" />
+  <item name="OBRA 4" />
+  <item name="OBRA 5" />
+  <item name="CRONOLOGÍA" />
+  <item name="OBRA 6">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@text.WrittenAnswer" name="BIOGRAFÍA" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="18" />
+      <color background="0xFFCC00" />
+     </style>
+     <p>Responde a estas preguntas </p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial Black" size="18" />
+      <color background="0x009933" />
+     </style>
+     <p>Ya veo que sabes mucho sobre Mozart</p>
+    </cell>
+    <cell type="finalError">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial Narrow" size="18" bold="true" />
+      <color background="0xCC0066" />
+     </style>
+     <p>No te desanimes. Un poco de atención... y todo solucionado</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="120" countDownTime="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF0066">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00CC66" border="true" />
+    <skin file="@default.xml" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="154.0" cellHeight="62.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <color background="0xFF9933" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell id="0">
+     <p>Ciudad de nacimiento</p>
+    </cell>
+    <cell id="1">
+     <p>Año de nacimiento</p>
+    </cell>
+    <cell id="2">
+     <p>Año de su muerte</p>
+    </cell>
+    <cell id="3">
+     <p>Instrumento que tocaba a los 4 años</p>
+    </cell>
+    <cell id="4">
+     <p>Nombre del padre</p>
+    </cell>
+    <cell id="5">
+     <p>Nombre de la esposa</p>
+    </cell>
+    <cell id="6">
+     <p>Número de hijos que sobrevieron</p>
+    </cell>
+    <cell id="7">
+     <p>Todos los días se empolvaba la...</p>
+    </cell>
+    <cell>
+     <p>Cuando viajaba, Mozart se comunicaba con su familia a través de ...</p>
+    </cell>
+    <cell>
+     <p>Enfermedad contagiosa que afectó gravemente a la vista de Mozart.</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="5" cellWidth="156.0" cellHeight="60.0" border="true" id="answers">
+    <style>
+     <font family="Arial Black" size="17" />
+     <color background="0x66FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>Salzburgo</p>
+    </cell>
+    <cell>
+     <p>1756</p>
+    </cell>
+    <cell>
+     <p>1791</p>
+    </cell>
+    <cell>
+     <p>piano</p>
+    </cell>
+    <cell>
+     <p>Leopold</p>
+    </cell>
+    <cell>
+     <p>Constanze</p>
+    </cell>
+    <cell>
+     <p>dos</p>
+    </cell>
+    <cell>
+     <p>peluca</p>
+    </cell>
+    <cell>
+     <p>cartas</p>
+    </cell>
+    <cell>
+     <p>viruela</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="BIOGRAFÍA 2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Lucida Sans" size="18" />
+      <color background="0x339900" />
+     </style>
+     <p>¿VERDADERO O FALSO?</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial Black" size="18" />
+      <color background="0x33FFFF" />
+     </style>
+     <p>EXCELENTE</p>
+    </cell>
+    <cell type="finalError">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial Black" size="18" />
+      <color background="0xFF3300" />
+     </style>
+     <p>¡CUIDADÍN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="90" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0x00FF66">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true">
+     <size width="784" height="580" />
+    </window>
+    <skin file="@orange.xml" />
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="16" italic="false" tabWidth="12" background="0xFFFFFF" bold="false" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text size="12"> 1. Mozart era un niño muy curioso y le gustaban los juegos</text>
+      <text family="Arial" size="12" background="0xFFFFFF">. </text>
+      <target>
+       <answer>VERDADERO</answer>
+       <optionList>
+        <option>VERDADERO</option>
+        <option>FALSO</option>
+       </optionList>
+       <text>VERDADERO</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" size="12" background="0xFFFFFF"> 2. Con ocho años compuso su primera sinfonía. </text>
+      <target>
+       <answer>VERDADERO</answer>
+       <optionList>
+        <option>VERDADERO</option>
+        <option>FALSO</option>
+       </optionList>
+       <text>VERDADERO</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" size="12" background="0xFFFFFF"> 3. Mozart odiaba el sonido de la flauta. </text>
+      <target>
+       <answer>VERDADERO</answer>
+       <optionList>
+        <option>VERDADERO</option>
+        <option>FALSO</option>
+       </optionList>
+       <text>VERDADERO</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" size="12" background="0xFFFFFF"> 4. Con su hermana Nannerl tenía una mala relación. </text>
+      <target>
+       <answer>FALSO</answer>
+       <optionList>
+        <option>VERDADERO</option>
+        <option>FALSO</option>
+       </optionList>
+       <text>FALSO</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" size="12" background="0xFFFFFF"> 5. Era capaz de tocar el piano vuelto de espaldas. </text>
+      <target>
+       <answer>VERDADERO</answer>
+       <optionList>
+        <option>VERDADERO</option>
+        <option>FALSO</option>
+       </optionList>
+       <text>VERDADERO</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" size="12" background="0xFFFFFF"> 6. Con el dinero que recaudó en su primer concierto le compró a su madre un vestido de gala.  </text>
+      <target>
+       <answer>FALSO</answer>
+       <optionList>
+        <option>VERDADERO</option>
+        <option>FALSO</option>
+       </optionList>
+       <text>FALSO</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFFFF"> 7. </text>
+      <text family="Arial" size="12" background="0xFFFFFF">Aunque era un buen músico, las Matemáticas se le daban mal.</text>
+      <text family="Arial" background="0xFFFFFF"> </text>
+      <target>
+       <answer>FALSO</answer>
+       <optionList>
+        <option>VERDADERO</option>
+        <option>FALSO</option>
+       </optionList>
+       <text>FALSO</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" size="12" background="0xFFFFFF"> 8. Tenía un pájaro estornino que podía cantar parte del concierto para piano nº 17</text>
+      <text family="Arial" background="0xFFFFFF">. </text>
+      <target>
+       <answer>VERDADERO</answer>
+       <optionList>
+        <option>VERDADERO</option>
+        <option>FALSO</option>
+       </optionList>
+       <text>VERDADERO</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFFFF"> </text>
+      <text family="Arial" size="12" background="0xFFFFFF">9. Viajó por varios continentes ofreciendo su música: Europa, América y Asia.</text>
+      <text family="Arial" background="0xFFFFFF">  </text>
+      <target>
+       <answer>FALSO</answer>
+       <optionList>
+        <option>FALSO</option>
+        <option>VERDADERO</option>
+       </optionList>
+       <text>FALSO</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" size="12" background="0xFFFFFF">10. Estuvo a punto de perder la vista por causa de la viruela. </text>
+      <target>
+       <answer>VERDADERO</answer>
+       <optionList>
+        <option>VERDADERO</option>
+        <option>FALSO</option>
+       </optionList>
+       <text>VERDADERO</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" size="12" background="0xFFFFFF">11. Mozart era más bien alto y un poco gordo.</text>
+      <text family="Arial" background="0xFFFFFF"> </text>
+      <target>
+       <answer>FALSO</answer>
+       <optionList>
+        <option>VERDADERO</option>
+        <option>FALSO</option>
+       </optionList>
+       <text>FALSO</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" size="12" background="0xFFFFFF">12. En Viena daba clases de piano</text>
+      <text family="Arial" background="0xFFFFFF">. </text>
+      <target>
+       <answer>VERDADERO</answer>
+       <optionList>
+        <option>VERDADERO</option>
+        <option>FALSO</option>
+       </optionList>
+       <text>VERDADERO</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" size="12" background="0xFFFFFF">13. Era capaz de hablar varios idiomas</text>
+      <text family="Arial" background="0xFFFFFF">. </text>
+      <target>
+       <answer>VERDADERO</answer>
+       <optionList>
+        <option>VERDADERO</option>
+        <option>FALSO</option>
+       </optionList>
+       <text>VERDADERO</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" size="12" background="0xFFFFFF">14. Murió el 5 de diciembre de 1791 en duelo de espadas.</text>
+      <text family="Arial" background="0xFFFFFF"> </text>
+      <target>
+       <answer>FALSO</answer>
+       <optionList>
+        <option>VERDADERO</option>
+        <option>FALSO</option>
+       </optionList>
+       <text>FALSO</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" size="12" background="0xFFFFFF">15. No se sabe con exactitud dónde se encuentran sus restos</text>
+      <text family="Arial" background="0xFFFFFF">. </text>
+      <target>
+       <answer>VERDADERO</answer>
+       <optionList>
+        <option>VERDADERO</option>
+        <option>FALSO</option>
+       </optionList>
+       <text>VERDADERO</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" size="12" background="0xFFFFFF">16. En total compuso unas 626 obras musicales.</text>
+      <text family="Arial" background="0xFFFFFF"> </text>
+      <target>
+       <answer>VERDADERO</answer>
+       <optionList>
+        <option>VERDADERO</option>
+        <option>FALSO</option>
+       </optionList>
+       <text>VERDADERO</text>
+      </target>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="BIOGRAFÍA 3" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial Black" size="18" />
+      <color foreground="0xFFFFFF" background="0x009933" />
+     </style>
+     <p>Señala la respuesta correcta en cada caso</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial Black" size="18" />
+      <color foreground="0xCC0066" background="0x009999" />
+     </style>
+     <p>Se nota que sabes mucho de Mozart</p>
+    </cell>
+    <cell type="finalError">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Lucida Sans" size="18" bold="true" />
+      <color background="0xFF0066" />
+     </style>
+     <p>PRUEBA OTRA VEZ</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="90" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0xCC0099">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x66FF66" border="true">
+     <size width="801" height="394" />
+    </window>
+    <skin file="@default.xml" />
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="12" italic="false" tabWidth="12" background="0xFFFFFF" bold="false" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="14"> 1. ¿Cuál es la fecha de nacimiento de Mozart? </text>
+      <target>
+       <answer>27 enero 1756</answer>
+       <optionList>
+        <option>1 enero 1756</option>
+        <option>27 enero 1756</option>
+        <option>no se sabe con exactitud</option>
+        <option>17 enero 1765</option>
+       </optionList>
+       <text>27 enero 1756</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" size="14" background="0xFFFFFF"> </text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" size="14" background="0xFFFFFF"> 2. ¿En qué ciudad nació?</text>
+      <target>
+       <answer>Salzburgo</answer>
+       <optionList>
+        <option>Salzburgo</option>
+        <option>Viena</option>
+        <option>Hamburgo</option>
+        <option>París</option>
+       </optionList>
+       <text>Salzburgo   </text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" size="14" background="0xFFFFFF"> </text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" size="14" background="0xFFFFFF"> 3. ¿En qué país se encuentra esta ciudad? </text>
+      <target>
+       <answer>Austria</answer>
+       <optionList>
+        <option>Francia</option>
+        <option>Italia</option>
+        <option>Alemania</option>
+        <option>Austria</option>
+       </optionList>
+       <text>Austria</text>
+      </target>
+      <text family="Arial" size="14" background="0xFFFFFF"> </text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" size="14" background="0xFFFFFF"> </text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" size="14" background="0xFFFFFF"> 4. Su apellido es Mozart. Pero... ¿con qué nombre lo bautizaron? </text>
+      <target>
+       <answer>Joannes Chrysostomus Wolfgangus Theofilus</answer>
+       <optionList>
+        <option>Joannes Chrysostomus Wolfgangus Theofilus</option>
+        <option>Wolfgang Amadeus</option>
+        <option>Amadeus</option>
+        <option>Philip Mozart</option>
+       </optionList>
+       <text>Joannes Chrysostomus Wolfgangus Theofilus</text>
+      </target>
+      <text family="Arial" size="14" background="0xFFFFFF">                            </text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" size="14" background="0xFFFFFF"> 5. El último nombre de Mozart, "THEOFILUS" es de origen griego y significa   </text>
+      <target>
+       <answer>Amado de Dios</answer>
+       <optionList>
+        <option>Genio de la música</option>
+        <option>Niño superdotado</option>
+        <option>Amante de la música</option>
+        <option>Amado de Dios</option>
+       </optionList>
+       <text>Amado de Dios</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text size="14"> 6. En 1767 la familia Mozart abandonó su ciudad natal y se estableció en </text>
+      <target>
+       <answer>Viena</answer>
+       <optionList>
+        <option>Roma</option>
+        <option>Viena</option>
+        <option>Londres</option>
+        <option>París</option>
+       </optionList>
+       <text>Viena</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text size="14"> 7. En el año 1782 se casó con </text>
+      <target>
+       <answer>Constanze Weber</answer>
+       <optionList>
+        <option>Constanze Weber</option>
+        <option>Eloisa Weber</option>
+        <option>La infanta de Austria</option>
+        <option>Simone Boviur</option>
+       </optionList>
+       <text>Constanze Weber</text>
+      </target>
+      <text size="14">.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text size="14"> 8. Mozart tuvo seis hijos, pero sólo dos sobrevivieron: Carl Thomas y </text>
+      <target>
+       <answer>Franz Xaver</answer>
+       <optionList>
+        <option>Giovanni </option>
+        <option>Sebastian</option>
+        <option>Franz Xaver</option>
+        <option>Leopold</option>
+       </optionList>
+       <text>Franz Xaver</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text size="14"> 9. La última obra de Mozart, que dejó inacabada, se llama </text>
+      <target>
+       <answer>Requiem</answer>
+       <optionList>
+        <option>El rapto del Serrallo</option>
+        <option>Don Giovanni</option>
+        <option>Requiem</option>
+        <option>La flauta mágica</option>
+       </optionList>
+       <text>Requiem</text>
+      </target>
+      <text size="14">.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text size="14">10. Mozart murió el 5 de diciembre de </text>
+      <target>
+       <answer>1791</answer>
+       <optionList>
+        <option>1780</option>
+        <option>1785</option>
+        <option>1791</option>
+        <option>1798</option>
+       </optionList>
+       <text>1791</text>
+      </target>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="CONCEPTOS MUSICALES 1" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Book Antiqua" size="20" bold="true" />
+      <color foreground="0xFF3300" background="0xFFFF00" />
+     </style>
+     <p>INDICA EL NOMBRE DE CADA UNO DE ESTOS CONCEPTOS  MUSICALES</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="22" bold="true" />
+      <color foreground="0xFF3300" background="0xFFCC00" />
+     </style>
+     <p>ERES UN GRAN MELÓMANO</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" bold="true" />
+      <color foreground="0x33FF33" background="0xCC00CC" />
+     </style>
+     <p>PRUEBA DE NUEVO</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="90" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0xFF3399">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00CCCC" border="true">
+     <size width="695" height="404" />
+    </window>
+    <skin file="@orange.xml" />
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="18" italic="false" tabWidth="12" background="0xFFFFFF" bold="false" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>ARIA</answer>
+       <optionList>
+        <option>ARIA</option>
+        <option>ÓPERA</option>
+        <option>CONCIERTO</option>
+        <option>SINFONÍA</option>
+       </optionList>
+       <text>ARIA</text>
+      </target>
+      <text size="18">  es una pieza musical perteneciente a una obra, cantada por una voz a la que puede unirse el coro.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>CONCIERTO</answer>
+       <optionList>
+        <option>CONCIERTO</option>
+        <option>ANDANTE</option>
+        <option>ARIA</option>
+        <option>FUGA</option>
+       </optionList>
+       <text>CONCIERTO</text>
+      </target>
+      <text size="18">: es una forma musical para orquesta compuesta normalmente por tres movimientos: allegro, adagio, allegro.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>DA CAPO</answer>
+       <optionList>
+        <option>ALLEGRO</option>
+        <option>DO MAYOR</option>
+        <option>DA CAPO</option>
+        <option>RONDÓ</option>
+       </optionList>
+       <text>DA CAPO</text>
+      </target>
+      <text size="18">: es la repetición de un fragmento musical completo.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>FUGA</answer>
+       <optionList>
+        <option>ALLEGRO</option>
+        <option>SONATA</option>
+        <option>FUGA</option>
+        <option>REQUIEM</option>
+       </optionList>
+       <text>FUGA:</text>
+      </target>
+      <text size="18"> es una forma musical en la que tras sonar un tema, otro instrumento lo comienza a imitar formando un contrapunto, y así sucesivamente.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>RONDÓ</answer>
+       <optionList>
+        <option>RONDALLA</option>
+        <option>RONDÓ</option>
+        <option>SONATA</option>
+        <option>ÓPERA</option>
+       </optionList>
+       <text>RONDÓ</text>
+      </target>
+      <text size="18">: es una pieza musical en la que el tema se repite regularmente a modo de estribil</text>
+      <text family="Arial" background="0xFFFFFF">lo.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>PIZZICATO</answer>
+       <optionList>
+        <option>FUGA</option>
+        <option>SOSTENIDO</option>
+        <option>DA CAPO</option>
+        <option>PIZZICATO</option>
+       </optionList>
+       <text>PIZZICATO</text>
+      </target>
+      <text size="18">: es una técnica de los instrumentos de cuerda que consiste en pulsar las cuerdas en vez de frotarlas con el arco.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="CONCEPTOS MUSICALES 2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial Black" size="20" />
+      <color background="0x9999FF" />
+     </style>
+     <p>SEGUIMOS CON OTROS CONCEPTOS...</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Book Antiqua" size="20" bold="true" />
+      <color foreground="0x3300FF" background="0xFF6666" />
+     </style>
+     <p>ERES TODO UN EXPERTO</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Book Antiqua" size="20" bold="true" />
+      <color foreground="0xFFFFFF" background="0x330099" />
+     </style>
+     <p>¿Y SI PRUEBAS OTRA VEZ?</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="90" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0xFF0066">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x009999" border="true">
+     <size width="630" height="400" />
+    </window>
+    <skin file="@blue.xml" />
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="18" italic="false" tabWidth="12" background="0xFFFFFF" bold="false" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>INTERLUDIO</answer>
+       <optionList>
+        <option>CONCERTO</option>
+        <option>RONDÓ</option>
+        <option>SONATA</option>
+        <option>INTERLUDIO</option>
+       </optionList>
+       <text>INTERLUDIO</text>
+      </target>
+      <text family="Arial" size="18" background="0xFFFFFF">: es un fragmento musical que divide dos piezas distintas dentro de una misma obra.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>ORATORIO</answer>
+       <optionList>
+        <option>RONDÓ</option>
+        <option>FUGA</option>
+        <option>ORATORIO</option>
+        <option>SONATA</option>
+       </optionList>
+       <text>ORATORIO</text>
+      </target>
+      <text family="Arial" size="18" background="0xFFFFFF">: es una pieza musical de carácter religioso formada por varias partes.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>SCHERZO</answer>
+       <optionList>
+        <option>ARIA</option>
+        <option>SCHERZO</option>
+        <option>ALLEGRO</option>
+        <option>REQUIEM</option>
+       </optionList>
+       <text>SCHERZO:</text>
+      </target>
+      <text family="Arial" size="18" background="0xFFFFFF"> es una pieza instrumental de carácter animado. En italiano significa "broma".</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>SINFONÍA</answer>
+       <optionList>
+        <option>CANTATA</option>
+        <option>SINFONÍA</option>
+        <option>SCHERZO</option>
+        <option>ANDANTE</option>
+       </optionList>
+       <text>SINFONÍA</text>
+      </target>
+      <text family="Arial" size="18" background="0xFFFFFF">:  es una gran sonata para orquesta completa.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>SUITE</answer>
+       <optionList>
+        <option>SUITE</option>
+        <option>POLIFONÍA</option>
+        <option>ORATORIO</option>
+        <option>FANFARRIA</option>
+       </optionList>
+       <text>SUITE</text>
+      </target>
+      <text family="Arial" size="18" background="0xFFFFFF">: es la formación de una obra a partir de la unión de varias obras o danzas de distinto carácter.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>SONATA</answer>
+       <optionList>
+        <option>VIVACE</option>
+        <option>ANDANTE</option>
+        <option>SORDINA</option>
+        <option>SONATA</option>
+       </optionList>
+       <text>SONATA</text>
+      </target>
+      <text family="Arial" size="18" background="0xFFFFFF"> es una pieza musical que consta de una serie de movimientos, para un instrumento o varios en conjunto.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.Explore" name="CRONOLOGÍA" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" />
+      <color background="0xFF6699" />
+     </style>
+     <p>HAZ CLIC EN CADA TÍTULO Y SABRÁS EL AÑO DE SU CREACIÓN</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="20" countDownTime="true" report="false">
+    <container bgColor="0x6666FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x9999FF" border="true" />
+    <skin file="@simple.xml" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="127.0" cellHeight="67.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="20" />
+     <color background="0x009999" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0">
+     <p>BASTIÁN Y BASTIANA</p>
+    </cell>
+    <cell id="1">
+     <p>RAPTO EN EL SERRALLO</p>
+    </cell>
+    <cell id="2">
+     <p>LAS BODAS DE FÍGARO</p>
+    </cell>
+    <cell id="3">
+     <p>DON GIOVANNI</p>
+    </cell>
+    <cell id="4">
+     <p>COSI FAN TUTTE</p>
+    </cell>
+    <cell id="5">
+     <p>LA FLAUTA MÁGICA</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="75.0" cellHeight="30.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="20" />
+     <color background="0x00CCCC" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>1768</p>
+    </cell>
+    <cell>
+     <p>1782</p>
+    </cell>
+    <cell>
+     <p>1786</p>
+    </cell>
+    <cell>
+     <p>1787</p>
+    </cell>
+    <cell>
+     <p>1790</p>
+    </cell>
+    <cell>
+     <p>1791</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.CrossWord" name="CRUCIGRAMA" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="20" />
+      <color background="0x99FF00" />
+     </style>
+     <p>RESUELVE ESTE CRUCIGRAMA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial Black" size="20" />
+      <color background="0x33CC00" />
+     </style>
+     <p>YA VEO QUE TE GUSTAN LOS PASATIEMPOS</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial Narrow" size="20" bold="true" />
+      <color background="0xCC0000" />
+     </style>
+     <p>NO TE DESESPERES.TEN PACIENCIA</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="240" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0xCC00CC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x9999FF" border="true" />
+    <skin file="@simple.xml" />
+   </settings>
+   <textGrid rows="10" columns="10" cellWidth="39.0" cellHeight="25.0" border="true">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Comic Sans MS" size="20" bold="true" />
+     <color foreground="0xFF0066" background="0xFFFFFF" shadow="0x00CCCC" border="0xCC0099" />
+    </style>
+    <text>
+     <row>SALZBURGO*</row>
+     <row>O*E*******</row>
+     <row>L*O*F*D*SI</row>
+     <row>**PIANO*I*</row>
+     <row>O*O*****N*</row>
+     <row>PELUCA**F*</row>
+     <row>E*D*O*OBOE</row>
+     <row>RE*ARPA*N*</row>
+     <row>A***O**MI*</row>
+     <row>*LA*****A*</row>
+    </text>
+   </textGrid>
+   <cells rows="1" cols="3" cellWidth="200.0" cellHeight="57.0" border="true" id="acrossClues">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="18" />
+     <color background="0xCCCCFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="8" item="2">
+     <p>3ª nota musical</p>
+    </cell>
+    <cell id="7" item="1">
+     <p>Instrumento de cuerda</p>
+    </cell>
+    <cell id="7" item="0">
+     <p>2ª nota musical</p>
+    </cell>
+    <cell id="3" item="0">
+     <p>Instrumento de cuerda que tocaba Mozart</p>
+    </cell>
+    <cell id="2" item="4">
+     <p>7ª nota musical</p>
+    </cell>
+    <cell id="6" item="3">
+     <p>Instrumento de viento</p>
+    </cell>
+    <cell id="2" item="3" />
+    <cell id="5" item="0">
+     <p>Mozart se la empolvaba diariamente</p>
+    </cell>
+    <cell id="2" item="2" />
+    <cell id="4" item="0" />
+    <cell id="0" item="0">
+     <p>Ciudad natal de Mozart</p>
+    </cell>
+    <cell id="9" item="1">
+     <p>Vocal</p>
+    </cell>
+    <cell id="9" item="0">
+     <p>6ª nota musical</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="200.0" cellHeight="57.0" border="true" id="downClues">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="18" />
+     <color background="0xCCCCFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="3" item="3" />
+    <cell id="8" item="1">
+     <p>Composición musical, generalmente en 4 movimientos</p>
+    </cell>
+    <cell id="6" item="2">
+     <p>Dos vocales juntas</p>
+    </cell>
+    <cell id="6" item="1">
+     <p>1ª nota musical</p>
+    </cell>
+    <cell id="4" item="2">
+     <p>Conjunto armónico de voces</p>
+    </cell>
+    <cell id="4" item="1">
+     <p>4ª nota musical</p>
+    </cell>
+    <cell id="0" item="1">
+     <p>"Don Giovanni es una. "Las bodas de Fígaro", otra.</p>
+    </cell>
+    <cell id="2" item="0">
+     <p>Nombre del padre de Mozart</p>
+    </cell>
+    <cell id="0" item="0">
+     <p>5ª nota musical</p>
+    </cell>
+    <cell id="1" item="3">
+     <p>La llevan los coches de los conductores noveles</p>
+    </cell>
+    <cell id="7" item="2">
+     <p>Consonante</p>
+    </cell>
+   </cells>
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="FAMILIA" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Lucida Sans" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0x6600CC" />
+     </style>
+     <p>RELACIONA CADA FOTO CON SU NOMBRE Y SABRÁS EL PARENTESCO QUE LES UNE A MOZART</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="18" />
+      <color foreground="0x003333" background="0xCC66FF" />
+     </style>
+     <p>EXTRAORDINARIO. YA CONOCES A SU FAMILIA</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Book Antiqua" size="18" bold="true" />
+      <color foreground="0xFF3333" background="0xFFFFFF" />
+     </style>
+     <p>PERO SI ES MUY FÁCIL</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="30" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0x99FFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x6600CC" border="true" />
+    <skin file="@green.xml" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="115.0" cellHeight="123.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <color background="0x660033" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0" image="anna_maria_01 MADRE.jpg" />
+    <cell id="1" image="Carl Thomas hijo.jpg" />
+    <cell id="2" image="constanze_01ESPOSA.jpg" />
+    <cell id="3" image="Franz_Xaver_Mozart_(Wolfgang_Jr)_1825.jpg" />
+    <cell id="4" image="leopold_01.jpg" />
+    <cell id="5" image="nannerl_01-HERMANA.jpg" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="83.0" cellHeight="75.0" border="true" id="secondary">
+    <style>
+     <font family="Bookman Old Style" size="22" bold="true" />
+     <color foreground="0xFFCC00" background="0xFF6666" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>Anna Maria</p>
+    </cell>
+    <cell>
+     <p>Carl Thomas</p>
+    </cell>
+    <cell>
+     <p>Constanze</p>
+    </cell>
+    <cell>
+     <p>Franz Xaver</p>
+    </cell>
+    <cell>
+     <p>Leopold</p>
+    </cell>
+    <cell>
+     <p>Nannerl</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>madre</p>
+    </cell>
+    <cell>
+     <p>hijo</p>
+    </cell>
+    <cell>
+     <p>esposa</p>
+    </cell>
+    <cell>
+     <p>hijo</p>
+    </cell>
+    <cell>
+     <p>padre</p>
+    </cell>
+    <cell>
+     <p>hermana</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="INICIO" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="20" />
+      <color foreground="0xCC0033" background="0x66CCFF" />
+     </style>
+     <p>EN HOMENAJE AL GRAN GENIO DE LA MÚSICA:¡¡¡MOZART!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="25" countDownTime="false" report="false">
+    <container bgColor="0x9999FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF66FF" border="true">
+     <gradient source="0xFF66FF" dest="0xFFFFFF" angle="0" />
+    </window>
+    <eventSounds>
+     <sound id="start" file="sonata en d.mp3" />
+    </eventSounds>
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="PORTADA.jpg">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="INSTRUMENTOS DE CUERDA" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Dialog" size="17" bold="true" />
+      <color foreground="0xFFFF33" background="0xFF6699" />
+     </style>
+     <p>Relaciona cada sonido con su instrumento.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Dialog" size="18" />
+      <color background="0xFF9933" />
+     </style>
+     <p>¡¡Estupendo!!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xCC3300" />
+     </style>
+     <p>¡¡OH,NO!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x9999FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x99FFFF" border="true" />
+    <skin file="@green.xml" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="126.0" cellHeight="150.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="arpa.jpg" />
+    <cell image="piano.jpg" />
+    <cell image="violín.jpg" />
+    <cell image="contrabajo.jpg" />
+    <cell image="viola.jpg" />
+    <cell image="violonchelo.jpg" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="77.0" cellHeight="53.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <color background="0x66CC00" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="ARPA.mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="PIANO.mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="VIOLIN.mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="CONTRABAJO.mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="VIOLA.mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="VIOLONCELLO.mp3" />
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>ARPA</p>
+    </cell>
+    <cell>
+     <p>PIANO</p>
+    </cell>
+    <cell>
+     <p>VIOLÍN</p>
+    </cell>
+    <cell>
+     <p>CONTRABAJO</p>
+    </cell>
+    <cell>
+     <p>VIOLA</p>
+    </cell>
+    <cell>
+     <p>VIOLONCHELO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="INSTRUMENTOS DE VIENTO" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Dialog" size="22" bold="true" />
+      <color foreground="0xFF0033" background="0x66CC00" />
+     </style>
+     <p>RELACIONA CADA SONIDO CON SU INSTRUMENTO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Dialog" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0066FF" />
+     </style>
+     <p>ERES UN BUEN INSTRUMENTISTA</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Book Antiqua" size="20" bold="true" />
+      <color foreground="0x00CC66" background="0x660066" />
+     </style>
+     <p>ESCUCHA CON ATENCIÓN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x6699FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x66FFFF" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="165.0" cellHeight="152.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFF0033" background="0xFFFFFF" inactive="0xCCFFFF" alternative="0xFF0033" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell image="clarinete7.jpg" />
+    <cell image="fagot.7.jpg" />
+    <cell image="flauta.jpg" />
+    <cell image="oboe7.jpg" />
+    <cell image="saxo.7.jpg" />
+    <cell image="trombon7.jpg" />
+    <cell image="trompa7.jpg" />
+    <cell image="trompeta7.jpg" />
+    <cell image="tuba7.jpg" />
+   </cells>
+   <cells rows="3" cols="3" cellWidth="69.0" cellHeight="45.0" border="true" id="secondary">
+    <style>
+     <color background="0xFF9933" inactive="0xFF6666" alternative="0x999999" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="CLARINETE.mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="FAGOT.mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="FLAUTA.mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="OBOE.mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="SAXOFON.mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="trombon.mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="TROMPA.mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="TROMPETA.mp3" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="TUBA.mp3" />
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>CLARINETE</p>
+    </cell>
+    <cell>
+     <p>FAGOT</p>
+    </cell>
+    <cell>
+     <p>FLAUTA</p>
+    </cell>
+    <cell>
+     <p>OBOE</p>
+    </cell>
+    <cell>
+     <p>SAXOFÓN</p>
+    </cell>
+    <cell>
+     <p>TROMBÓN</p>
+    </cell>
+    <cell>
+     <p>TROMPA</p>
+    </cell>
+    <cell>
+     <p>TROMPETA</p>
+    </cell>
+    <cell>
+     <p>TUBA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="MEMORIA" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Bookman Old Style" size="18" />
+      <color background="0xFFCC00" />
+     </style>
+     <p>FORMA PAREJAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="18" bold="true" />
+      <color background="0x66FF00" />
+     </style>
+     <p>TIENES UNA GRAN MEMORIA VISUAL</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Dialog" size="18" bold="true" />
+      <color background="0xFF6600" />
+     </style>
+     <p>INTÉNTALO DE NUEVO. NO TE DESANIMES</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="90" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0x6666FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x009966" border="true" />
+    <skin file="@green.xml" />
+   </settings>
+   <cells rows="4" cols="4" cellWidth="147.0" cellHeight="87.0" border="true" id="primary">
+    <style>
+     <color background="0x006633" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial Black" size="17" />
+      <color foreground="0xFFFFFF" background="0x9999FF" />
+     </style>
+     <p>SALZSBURGO</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial Black" size="17" />
+      <color foreground="0xFFFFFF" background="0xCC0000" />
+     </style>
+     <p>LEOPOLD</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial Black" size="17" />
+      <color foreground="0xFFFFFF" background="0x99CC00" />
+     </style>
+     <p>CLAVECÍN</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial Black" size="17" />
+      <color foreground="0xFF0033" background="0xFFFFFF" />
+     </style>
+     <p>ÓPERA</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial Black" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0xFF33FF" />
+     </style>
+     <p>CONCIERTO</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial Black" size="17" />
+      <color foreground="0xFFFFFF" background="0xFF0033" />
+     </style>
+     <p>DON GIOVANNI</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial Black" size="17" />
+      <color foreground="0xFFFFFF" background="0xFF9900" />
+     </style>
+     <p>PIANO</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial Black" size="17" />
+      <color foreground="0xFFFFFF" background="0x006666" />
+     </style>
+     <p>ÓRGANO</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial Black" size="17" />
+      <color foreground="0xFFFFFF" background="0x00CCCC" />
+     </style>
+     <p>1.756</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial Black" size="17" />
+      <color foreground="0xFFFFFF" background="0x990099" />
+     </style>
+     <p>SONATA</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" bold="true" />
+      <color foreground="0xFFFFFF" background="0xFF9999" />
+     </style>
+     <p>CONSTANZE</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xCC6600" />
+     </style>
+     <p>FRANZ XAVER</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFFFFFF" background="0xFFCC00" />
+     </style>
+     <p>NANNERL</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x663300" />
+     </style>
+     <p>CARL THOMAS</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <p>REQUIEM</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFFFFFF" background="0x339900" />
+     </style>
+     <p>PARTITURA</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="MENÚ" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Lucida Sans" size="18" bold="true" />
+      <color background="0x9999FF" />
+     </style>
+     <p>SEÑALA EL GRUPO DE ACTIVIDADES QUE QUIERES REALIZAR</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFF6699">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x99FF99" border="true" />
+    <skin file="@green.xml" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="229.0" cellHeight="73.0" border="true">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial Black" size="22" bold="true" />
+     <color foreground="0xFFFFFF" background="0x0099FF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="vida y obra" />
+     <p>BIOGRAFÍA OBRA</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="pasatiempos" />
+     <p>PASATIEMPOS</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="instrumentos" />
+     <p>INSTRUMENTOS MUSICALES</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="conceptos musicales" />
+     <p>CONCEPTOS MUSICALES</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.Order" name="OBRA" code="" type="orderWords" amongParagraphs="true">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="22" />
+      <color foreground="0x0000FF" background="0x99FF66" />
+     </style>
+     <p>ORDENA LAS PALABRAS Y AVERIGUA EL NOMBRE DE 6 ÓPERAS DE MOZART </p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="20" />
+      <color foreground="0x339900" background="0xFFCC33" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="APLAUSOS.mp3" />
+     <p>EXTRAORDINARIO</p>
+    </cell>
+    <cell type="finalError">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Century Gothic" size="22" bold="true" />
+      <color background="0xFF3333" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="OOHHH.mp3" />
+     <p>INTÉNTALO OTRA VEZ. ES FÁCIL</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="90" countDownTime="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xCC0099">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x009999" border="true">
+     <size width="446" height="332" />
+    </window>
+    <skin file="@orange.xml" />
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" family="Book Antiqua" size="22" italic="false" tabWidth="12" background="0xFFFFFF" bold="false" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p family="Arial" background="0xFFFFFF" Alignment="1">
+      <text family="Arial" background="0xFFFFFF">COSI </text>
+      <target>FAN</target>
+      <text family="Arial" background="0xFFFFFF"> </text>
+      <target>TUTTE</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF" Alignment="1">
+      <text family="Arial" background="0xFFFFFF">EL </text>
+      <target>RAPTO</target>
+      <text family="Arial" background="0xFFFFFF"> EN EL </text>
+      <target>SERRALLO</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF" Alignment="1">
+      <text family="Arial" background="0xFFFFFF">LAS </text>
+      <target>BODAS</target>
+      <text family="Arial" background="0xFFFFFF"> </text>
+      <target>DE</target>
+      <text family="Arial" background="0xFFFFFF"> </text>
+      <target>FÍGARO</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" Alignment="1" />
+     <p family="Arial" background="0xFFFFFF" Alignment="1">
+      <text family="Arial" background="0xFFFFFF">DON </text>
+      <target>GIOVANNI</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF" Alignment="1">
+      <text family="Arial" background="0xFFFFFF">LA </text>
+      <target>FLAUTA</target>
+      <text family="Arial" background="0xFFFFFF"> MÁGICA</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" Alignment="1" />
+     <p family="Arial" background="0xFFFFFF" Alignment="1">
+      <target>BASTIAN</target>
+      <text family="Arial" background="0xFFFFFF"> Y </text>
+      <target>BASTIANA</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" Alignment="1" />
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="OBRA 2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Bookman Old Style" size="20" bold="true" />
+      <color foreground="0xFFFFFF" background="0xFF0066" />
+     </style>
+     <p>RELACIONA LA MÚSICA CON LOS TÍTULOS</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial Black" size="20" />
+      <color background="0x99CCFF" />
+     </style>
+     <p>EXTRAORDINARIO OÍDO</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Lucida Sans" size="20" />
+      <color background="0xCC0099" />
+     </style>
+     <p>CONCÉNTRATE EN LO QUE ESCUCHAS</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x9999FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00CC99" border="true" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="73.0" cellHeight="85.0" border="true" id="primary">
+    <style>
+     <color background="0x00CC99" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <media type="PLAY_MIDI" level="1" file="la_flauta_magica_reina_de_la_noche.mid" />
+    </cell>
+    <cell>
+     <media type="PLAY_MIDI" level="1" file="don_giovanni.mid" />
+    </cell>
+    <cell>
+     <media type="PLAY_MIDI" level="1" file="las_bodas_de_figaro.mid" />
+    </cell>
+    <cell>
+     <media type="PLAY_MIDI" level="1" file="Mozart-Misa_Coronacion-Gloria.mid" />
+    </cell>
+    <cell>
+     <media type="PLAY_MIDI" level="1" file="Mozart_Wolfgang_Amadeus-Sonata_en_Do-Mayor-K6.mid" />
+    </cell>
+    <cell>
+     <media type="PLAY_MIDI" level="1" file="sinfonia_no_41_jupiter.mid" />
+    </cell>
+    <cell>
+     <media type="PLAY_MIDI" level="1" file="marcha_alla_turca.mid" />
+    </cell>
+    <cell>
+     <media type="PLAY_MIDI" level="1" file="requiem.mid" />
+    </cell>
+    <cell>
+     <media type="PLAY_MIDI" level="1" file="CONCIERT PARA CLAR Y ORQU ADAGIO.mid" />
+    </cell>
+    <cell>
+     <media type="PLAY_MIDI" level="1" file="CONCIERTO ARPA FLAUTA.mid" />
+    </cell>
+   </cells>
+   <cells rows="2" cols="5" cellWidth="104.0" cellHeight="88.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <color background="0x9999FF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>La flauta mágica</p>
+    </cell>
+    <cell>
+     <p>Don Giovanni</p>
+    </cell>
+    <cell>
+     <p>Las bodas de Fígaro</p>
+    </cell>
+    <cell>
+     <p>Misa Coronación Gloria</p>
+    </cell>
+    <cell>
+     <p>Sonata en Do Mayor</p>
+    </cell>
+    <cell>
+     <p>Sinfonía nº 41- Júpiter-</p>
+    </cell>
+    <cell>
+     <p>Marcha alla Turca</p>
+    </cell>
+    <cell>
+     <p>Requiem</p>
+    </cell>
+    <cell>
+     <p>Concierto para clarinete y orquesta ADAGIO</p>
+    </cell>
+    <cell>
+     <p>Concierto para Arpa y Flauta</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="OBRA 3" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial Black" size="22" />
+      <color foreground="0x33FFFF" background="0xCC9900" />
+     </style>
+     <p>Señala las obras de Mozart</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial Black" size="20" />
+      <color foreground="0x660000" background="0x00CCCC" />
+     </style>
+     <p>PERFECTO!!!</p>
+    </cell>
+    <cell type="finalError">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial Narrow" size="18" bold="true" />
+      <color background="0xFF0033" />
+     </style>
+     <p>PUES VA A SER QUE NO</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="45" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0x6666FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x33FF99" border="true" />
+    <skin file="@default.xml" />
+   </settings>
+   <cells rows="3" cols="4" cellWidth="137.0" cellHeight="59.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Comic Sans MS" size="20" bold="true" />
+     <color background="0x33CC00" inactive="0x006666" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell id="1">
+     <p>Bastián y Bastiana</p>
+    </cell>
+    <cell id="1">
+     <p>Requiem</p>
+    </cell>
+    <cell id="1">
+     <p>Misa de la Coronación</p>
+    </cell>
+    <cell id="1">
+     <media type="PLAY_MIDI" level="1" file="sinfonia_no_41_jupiter.mid" />
+     <p>Sinfonía nº 41 Júpiter</p>
+    </cell>
+    <cell id="1">
+     <p>Concierto para piano nº 23</p>
+    </cell>
+    <cell id="1">
+     <p>La flauta mágica</p>
+    </cell>
+    <cell id="1">
+     <p>Pequeña serenata nocturna</p>
+    </cell>
+    <cell id="0">
+     <p>9ª Sinfonía</p>
+    </cell>
+    <cell id="0">
+     <p>Las cuatro estaciones</p>
+    </cell>
+    <cell id="0">
+     <p>Sombrero de tres picos</p>
+    </cell>
+    <cell id="0">
+     <p>Carmen</p>
+    </cell>
+    <cell id="0">
+     <p>Concierto de Aranjuez</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="4" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="OBRA 4" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Lucida Sans" size="17" bold="true" />
+      <color background="0xFFFF33" />
+     </style>
+     <p>Relaciona a los personajes con la ópera</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="20" />
+      <color foreground="0x339900" background="0xFFFFFF" />
+     </style>
+     <p>SÍÍÍ</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFF0000" />
+     </style>
+     <p>NOOO</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="120" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0xFF0066">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x339900" border="true" />
+    <skin file="@green.xml" />
+   </settings>
+   <cells rows="3" cols="6" cellWidth="83.0" cellHeight="61.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial Narrow" size="17" bold="true" />
+     <color background="0x9999FF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="3" />
+    <cell id="0">
+     <p>Papageno</p>
+    </cell>
+    <cell id="0">
+     <p>Pamina</p>
+    </cell>
+    <cell id="1">
+     <p>Don Juan</p>
+    </cell>
+    <cell id="5">
+     <p>Colás</p>
+    </cell>
+    <cell id="5">
+     <p>Bastiana</p>
+    </cell>
+    <cell id="1">
+     <p>Doña Ana</p>
+    </cell>
+    <cell id="1">
+     <p>Doña Elvira</p>
+    </cell>
+    <cell id="5">
+     <p>Bastián</p>
+    </cell>
+    <cell id="3">
+     <p>Conde Almaviva</p>
+    </cell>
+    <cell id="1">
+     <p>Leporello</p>
+    </cell>
+    <cell id="3">
+     <p>Marcelina</p>
+    </cell>
+    <cell id="3">
+     <p>Bartolo</p>
+    </cell>
+    <cell id="3">
+     <p>Fígaro</p>
+    </cell>
+    <cell id="2">
+     <p>Blonde</p>
+    </cell>
+    <cell id="2">
+     <p>Pedrillo</p>
+    </cell>
+    <cell id="2">
+     <p>Konstanze</p>
+    </cell>
+    <cell id="4">
+     <p>Dorabella</p>
+    </cell>
+    <cell id="4">
+     <p>Fiordiligi</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="125.0" cellHeight="49.0" border="true" id="secondary">
+    <style>
+     <font family="Arial Black" size="17" />
+     <color foreground="0x330099" background="0xFF9933" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>La flauta mágica</p>
+    </cell>
+    <cell>
+     <p>Don Giovanni</p>
+    </cell>
+    <cell>
+     <p>El rapto en el Serrallo</p>
+    </cell>
+    <cell>
+     <p>Las bodas de Fígaro</p>
+    </cell>
+    <cell>
+     <p>Cosi fan Tutte</p>
+    </cell>
+    <cell>
+     <p>Bastián y Bastiana</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="OBRA 5" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF6666" />
+     </style>
+     <p>RELACIONA LOS ARGUMENTOS CON LOS TÍTULOS DE LAS ÓPERAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="20" bold="true" />
+      <color background="0x66FF00" />
+     </style>
+     <p>¡¡PERFECTO!!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial Black" size="20" bold="true" />
+      <color foreground="0xFFFFFF" background="0x666666" />
+     </style>
+     <p>LEE CON ATENCIÓN Y PIENSA</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0099FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF6600" border="true" />
+    <skin file="@green.xml" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="222.0" cellHeight="152.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="18" />
+     <color foreground="0x000099" background="0xFFCC00" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>La protagonista está convencida de que su amado la engaña. Decide buscar la ayuda de uno de los vecinos de la aldea, Colás, considerado por todos como un mago. Tras varias escenas de celos y discusiones, los dos amantes se reencuentran gracias a la humanidad del mago.</p>
+    </cell>
+    <cell>
+     <p>Los protagonistas, ayudas de cámara de los condes de Almaviva, desean casarse y solicitan al conde que renuncie a su previlegio feudal de pasar con la novia la noche de bodas. El conde acepta la petición, aunque acomete una serie de intentos infructuosos para seducir a la protagonista. </p>
+    </cell>
+    <cell>
+     <p>Una joven noble española, su sirvienta y el enamorado de ésta, Pedrillo, han sido capturados por los piratas y puestos a la venta en un mercado de esclavos. Allí son comprados por el Pashá Selím. Una carta escrita por Pedrillo llega a manos de Belmonte, novio de joven noble. Éste embarca hasta Turquía para raptar a los cautivos.</p>
+    </cell>
+    <cell>
+     <p>Dos jóvenes oficiales, estando convencidos de la fidelidad de sus novias, hacen una apuesta con un amigo en la que pondrán a prueba la fidelidad de las mujeres. Tras una serie de juegos y actuaciones picarescas, todo se convierte en algo serio y surgen nuevas parejas, Al final las mujeres son las engañadas.</p>
+    </cell>
+    <cell>
+     <p>Cuenta las aventuras de un príncipe y su escudero que reciben el encargo de la malvada Reina de la Noche de rescatar a su hija que ha sido raptada por el malvado Sarastro. Sin dudarlo, emprenden su aventura hasta que descubren que la Reina los ha engañado.</p>
+    </cell>
+    <cell>
+     <p>Cuenta las aventuras de un caballero noble español obsesionado con seducir a todas las mujeres. Está dispuesto a mentir, a engañar e incluso a matar para aumentar la lista de conquistas. pero es incapaz de amar de verdad a ninguna.</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="109.0" cellHeight="43.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Book Antiqua" size="20" bold="true" />
+     <color foreground="0xFFFFFF" background="0x006666" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>Batián y Bastiana</p>
+    </cell>
+    <cell>
+     <p>Las bodas de Fígaro</p>
+    </cell>
+    <cell>
+     <p>Rapto en el Serrallo</p>
+    </cell>
+    <cell>
+     <p>Cosi fan tutte</p>
+    </cell>
+    <cell>
+     <p>La flauta mágica</p>
+    </cell>
+    <cell>
+     <p>Don Giovanni</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="OBRA 6" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" />
+      <color background="0x66FF66" />
+     </style>
+     <p>RELACIONA CADA TÍTULO CON EL AÑO DE SU CREACIÓN</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0x99CCFF" />
+     </style>
+     <p>¡SENSACIONAL!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFF3366" />
+     </style>
+     <p>ES CUESTIÓN DE TIEMPO</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="30" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0x0099CC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCC33" border="true" />
+    <skin file="@default.xml" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="132.0" cellHeight="79.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Comic Sans MS" size="17" />
+     <color background="0xFF3300" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>BASTIÁN Y BASTIANA</p>
+    </cell>
+    <cell>
+     <p>LA FLAUTA MÁGICA</p>
+    </cell>
+    <cell>
+     <p>RAPTO EN EL SERRALLO</p>
+    </cell>
+    <cell>
+     <p>LAS BODAS DE FÍGARO</p>
+    </cell>
+    <cell>
+     <p>DON GIOVANNI</p>
+    </cell>
+    <cell>
+     <p>COSI FAN TUTTE</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="79.0" cellHeight="30.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="20" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>1.768</p>
+    </cell>
+    <cell>
+     <p>1.791</p>
+    </cell>
+    <cell>
+     <p>1.782</p>
+    </cell>
+    <cell>
+     <p>1.786</p>
+    </cell>
+    <cell>
+     <p>1.787</p>
+    </cell>
+    <cell>
+     <p>1.790</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="PUZZLE" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x99FF99" />
+     </style>
+     <p>El mundo mágico de Mozart</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Book Antiqua" size="22" bold="true" />
+      <color foreground="0x990099" background="0x00CC99" />
+     </style>
+     <p>Vamos a conocer algo más sobre este GENIO</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" maxTime="15" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0x9999FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xCCFFCC" border="true" />
+    <skin file="@green.xml" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="mozart.gif">
+    <style borderStroke="0.7" markerStroke="5.0" />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="PUZZLE 2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial Black" size="18" />
+      <color background="0xFF66FF" />
+     </style>
+     <p>SI CONSTRUYES BIEN ESTE PUZZLE, DESCUBRIRÁS...</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="20" bold="true" />
+      <color background="0x9999FF" />
+     </style>
+     <p>LA FIRMA DE MOZART</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial Black" size="20" />
+      <color background="0xFF0033" />
+     </style>
+     <p>UN POCO MÁS RÁPIDO</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" maxTime="31" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0x9999FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00CCCC" border="true" />
+    <skin file="@default.xml" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="firma.jpg">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <color background="0x33FF99" shadow="0x009900" inactive="0xFF9900" alternative="0x00CCCC" />
+    </style>
+    <shaper class="@JigSaw" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="PUZZLE 3" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFF6666" />
+     </style>
+     <p>CONSTRUYE ESTE PUZZLE</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial Narrow" size="20" bold="true" />
+      <color background="0xFFCC00" />
+     </style>
+     <p>MOZART MAJESTUOSO</p>
+    </cell>
+    <cell type="finalError">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Book Antiqua" size="20" bold="true" />
+      <color foreground="0xFFFFFF" background="0xFF0000" />
+     </style>
+     <p>MÁS RÁPIDO, AMIGO</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" maxTime="45" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0xFFCC00">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00FF33" border="true" />
+    <skin file="@default.xml" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="busto2.jpg">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="PUZZLE 4" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFCC00" />
+     </style>
+     <p>¿DÓNDE SE ENCUENTRA MOZART AHORA?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Book Antiqua" size="20" bold="true" />
+      <color background="0x66FFFF" />
+     </style>
+     <p>EN UNA PLAZA DE SU CIUDAD NATAL</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Lucida Sans" size="18" bold="true" />
+      <color background="0xFF6600" />
+     </style>
+     <p>ÁNIMO. NO TE DESANIMES</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" maxTime="30" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0x9999FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF9966" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="3" cols="3" border="true" image="estatua2.jpg">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <color background="0x6633FF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.HolePuzzle" name="PUZZLE 5" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial Narrow" size="24" />
+      <color foreground="0x009933" background="0x9999FF" />
+     </style>
+     <p>DESCUBRE A UN MOZART NEVADO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial Narrow" size="24" bold="true" />
+      <color foreground="0xFFFFFF" background="0x006666" />
+     </style>
+     <p>BONITA FOTO, ¿VERDAD?</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFF0066" />
+     </style>
+     <p>ESTO NO PUEDE SER</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="30" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0x33CC00">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF6600" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="busto.jpg">
+    <style>
+     <color background="0xFFCC00" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="SOPA DE LETRAS" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Book Antiqua" size="20" bold="true" />
+      <color background="0x66FF00" />
+     </style>
+     <p>Descubre 8 palabras relacionadas con Mozart</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0xFF6666" />
+     </style>
+     <p>¡Buena vista tiene usted!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Lucida Sans" size="18" bold="true" />
+      <color background="0x009999" />
+     </style>
+     <p>¡Ánimo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="180" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0x6666FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00CCCC" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <textGrid rows="12" columns="12" cellWidth="32.0" cellHeight="28.0" border="true">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Lucida Sans" size="20" bold="true" />
+     <color foreground="0x006666" background="0xFFFF00" />
+    </style>
+    <text>
+     <row>COMPOSITOR*V</row>
+     <row>*R*A*I*****I</row>
+     <row>*Q*R*N*****O</row>
+     <row>*U*T*F*****L</row>
+     <row>*E*I*OPERA*I</row>
+     <row>*S*T*N*****N</row>
+     <row>*T*U*I******</row>
+     <row>*A*R*A******</row>
+     <row>**SALZBURGO*</row>
+     <row>************</row>
+     <row>SONATA******</row>
+     <row>************</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">COMPOSITOR</clue>
+    <clue id="1">SALZBURGO</clue>
+    <clue id="2">SONATA</clue>
+    <clue id="3">ORQUESTA</clue>
+    <clue id="4">PARTITURA</clue>
+    <clue id="5">SINFONIA</clue>
+    <clue id="6">VIOLIN</clue>
+    <clue id="7">OPERA</clue>
+   </clues>
+  </activity>
+  <activity class="@panels.Identify" name="VIAJES" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Century Gothic" size="18" bold="true" />
+      <color background="0xFFFF00" />
+     </style>
+     <p>Señala las ciudades visitadas por Mozart</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial Black" size="18" />
+      <color foreground="0xFFCC00" background="0x0033CC" />
+     </style>
+     <p>Ya ves cuántos kilómetros recorrió</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Book Antiqua" size="18" bold="true" />
+      <color background="0xCC6600" />
+     </style>
+     <p>Piénsalo bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="30" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0x990099">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+    <skin file="@green.xml" />
+   </settings>
+   <cells rows="3" cols="5" cellWidth="90.0" cellHeight="50.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <color background="0xFFCC00" inactive="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="3" />
+    <cell id="1">
+     <p>Roma</p>
+    </cell>
+    <cell id="1">
+     <p>Venecia</p>
+    </cell>
+    <cell id="1">
+     <p>París</p>
+    </cell>
+    <cell id="0">
+     <p>Madrid</p>
+    </cell>
+    <cell id="1">
+     <p>Berlín</p>
+    </cell>
+    <cell id="0">
+     <p>Lisboa</p>
+    </cell>
+    <cell id="1">
+     <p>Milán</p>
+    </cell>
+    <cell id="0">
+     <p>Atenas</p>
+    </cell>
+    <cell id="1">
+     <p>Viena</p>
+    </cell>
+    <cell id="1">
+     <p>Londres</p>
+    </cell>
+    <cell id="1">
+     <p>Praga</p>
+    </cell>
+    <cell id="0">
+     <p>Pekín</p>
+    </cell>
+    <cell id="1">
+     <p>Amsterdam</p>
+    </cell>
+    <cell id="1">
+     <p>Munich</p>
+    </cell>
+    <cell id="0">
+     <p>New York</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@text.Order" name="VIAJES 2" code="" type="orderWords">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color foreground="0xFFFFFF" background="0x990066" />
+     </style>
+     <p>Ordena y descubre las ciudades donde viajó Mozart</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Book Antiqua" size="18" />
+      <color background="0x6666FF" />
+     </style>
+     <p>¡SENSACIONAL!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Lucida Sans" size="18" bold="true" />
+      <color background="0xFF0066" />
+     </style>
+     <p>NO TE DESANIMES</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="180" countDownTime="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xCC9900">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0033" border="true">
+     <size width="268" height="465" />
+    </window>
+    <skin file="@green.xml" />
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" family="Arial" size="18" italic="false" tabWidth="12" background="0xFFFFFF" bold="false" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p family="Arial" background="0xFFFFFF">
+      <target>L</target>
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false"> O </text>
+      <target>N</target>
+      <text family="Arial" background="0xFFFFFF"> D </text>
+      <target>R</target>
+      <text family="Arial" background="0xFFFFFF"> </text>
+      <target>E</target>
+      <text family="Arial" background="0xFFFFFF"> </text>
+      <target>S</target>
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false"> </text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">                                                 </text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">A  </text>
+      <target>M</target>
+      <text family="Arial" background="0xFFFFFF">  </text>
+      <target>S</target>
+      <text family="Arial" background="0xFFFFFF">  T  </text>
+      <target>E</target>
+      <text family="Arial" background="0xFFFFFF">  </text>
+      <target>R</target>
+      <text family="Arial" background="0xFFFFFF">  </text>
+      <target>D</target>
+      <text family="Arial" background="0xFFFFFF">  A  </text>
+      <target>M</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <target>P</target>
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">  </text>
+      <target>A</target>
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">  R  </text>
+      <target>Í</target>
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">  </text>
+      <target>S</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">B  </text>
+      <target>E</target>
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">  </text>
+      <target>R</target>
+      <text family="Arial" background="0xFFFFFF">  </text>
+      <target>L</target>
+      <text family="Arial" background="0xFFFFFF">  Í  </text>
+      <target>N</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <target>M</target>
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">  U  </text>
+      <target>N</target>
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">  I  </text>
+      <target>C</target>
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">  </text>
+      <target>H</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">M  </text>
+      <target>I</target>
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">  </text>
+      <target>L</target>
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">  Á  </text>
+      <target>N</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <target>V</target>
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">  E  </text>
+      <target>N</target>
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">  E  </text>
+      <target>C</target>
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">  I  </text>
+      <target>A</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">F  L  </text>
+      <target>O</target>
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">  R  </text>
+      <target>E</target>
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">  N  C  </text>
+      <target>I</target>
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">  </text>
+      <target>A</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <target>N</target>
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">  Á  </text>
+      <target>P</target>
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">  </text>
+      <target>O</target>
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">  L  </text>
+      <target>E</target>
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">  </text>
+      <text>S</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <target>P</target>
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">  </text>
+      <target>R</target>
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">  A  </text>
+      <target>G</target>
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">  A</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" size="18" italic="false" background="0xFFFFFF" bold="false">                                       </text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF" />
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="mozart.gif" file="mozart.gif" animated="false" />
+  <media name="anna_maria_01 MADRE.jpg" file="anna_maria_01_madre.jpg" />
+  <media name="arpa.jpg" file="arpa.jpg" />
+  <media name="busto.jpg" file="busto.jpg" />
+  <media name="busto2.jpg" file="busto2.jpg" />
+  <media name="Carl Thomas hijo.jpg" file="carl_thomas_hijo.jpg" />
+  <media name="clarinete7.jpg" file="clarinete7.jpg" />
+  <media name="constanze_01ESPOSA.jpg" file="constanze_01esposa.jpg" />
+  <media name="contrabajo.jpg" file="contrabajo.jpg" />
+  <media name="estatua2.jpg" file="estatua2.jpg" />
+  <media name="fagot.7.jpg" file="fagot.7.jpg" />
+  <media name="firma.jpg" file="firma.jpg" />
+  <media name="flauta.jpg" file="flauta.jpg" />
+  <media name="Franz_Xaver_Mozart_(Wolfgang_Jr)_1825.jpg" file="franz_xaver_mozart__wolfgang_jr__1825.jpg" />
+  <media name="leopold_01.jpg" file="leopold_01.jpg" />
+  <media name="nannerl_01-HERMANA.jpg" file="nannerl_01-hermana.jpg" />
+  <media name="oboe7.jpg" file="oboe7.jpg" />
+  <media name="piano.jpg" file="piano.jpg" />
+  <media name="PORTADA.jpg" file="portada.jpg" />
+  <media name="saxo.7.jpg" file="saxo.7.jpg" />
+  <media name="trombon7.jpg" file="trombon7.jpg" />
+  <media name="trompa7.jpg" file="trompa7.jpg" />
+  <media name="trompeta7.jpg" file="trompeta7.jpg" />
+  <media name="tuba7.jpg" file="tuba7.jpg" />
+  <media name="viola.jpg" file="viola.jpg" />
+  <media name="violonchelo.jpg" file="violonchelo.jpg" />
+  <media name="violín.jpg" file="violin.jpg" />
+  <media name="CONCIERT PARA CLAR Y ORQU ADAGIO.mid" file="conciert_para_clar_y_orqu_adagio.mid" />
+  <media name="CONCIERTO ARPA FLAUTA.mid" file="concierto_arpa_flauta.mid" />
+  <media name="don_giovanni.mid" file="don_giovanni.mid" />
+  <media name="la_flauta_magica_reina_de_la_noche.mid" file="la_flauta_magica_reina_de_la_noche.mid" />
+  <media name="las_bodas_de_figaro.mid" file="las_bodas_de_figaro.mid" />
+  <media name="marcha_alla_turca.mid" file="marcha_alla_turca.mid" />
+  <media name="Mozart-Misa_Coronacion-Gloria.mid" file="mozart-misa_coronacion-gloria.mid" />
+  <media name="Mozart_Wolfgang_Amadeus-Sonata_en_Do-Mayor-K6.mid" file="mozart_wolfgang_amadeus-sonata_en_do-mayor-k6.mid" />
+  <media name="requiem.mid" file="requiem.mid" />
+  <media name="sinfonia_no_41_jupiter.mid" file="sinfonia_no_41_jupiter.mid" />
+  <media name="APLAUSOS.mp3" file="aplausos.mp3" />
+  <media name="ARPA.mp3" file="arpa.mp3" />
+  <media name="CLARINETE.mp3" file="clarinete.mp3" />
+  <media name="CONTRABAJO.mp3" file="contrabajo.mp3" />
+  <media name="FAGOT.mp3" file="fagot.mp3" />
+  <media name="FLAUTA.mp3" file="flauta.mp3" />
+  <media name="OBOE.mp3" file="oboe.mp3" />
+  <media name="OOHHH.mp3" file="oohhh.mp3" />
+  <media name="PIANO.mp3" file="piano.mp3" />
+  <media name="SAXOFON.mp3" file="saxofon.mp3" />
+  <media name="sonata en d.mp3" file="sonata_en_d.mp3" />
+  <media name="trombon.mp3" file="trombon.mp3" />
+  <media name="TROMPA.mp3" file="trompa.mp3" />
+  <media name="TROMPETA.mp3" file="trompeta.mp3" />
+  <media name="TUBA.mp3" file="tuba.mp3" />
+  <media name="VIOLA.mp3" file="viola.mp3" />
+  <media name="VIOLIN.mp3" file="violin.mp3" />
+  <media name="VIOLONCELLO.mp3" file="violoncello.mp3" />
+ </mediaBag>
+</JClicProject>
+

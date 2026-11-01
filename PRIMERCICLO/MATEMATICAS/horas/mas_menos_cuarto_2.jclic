@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="mas_menos_cuarto_2" version="0.1.3">
+ <settings>
+  <title>Las horas del reloj</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="2/15/08" />
+  <revision description="Conversión de Clic3 a JClic" date="2/14/08">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Tomás Fernández García" mail="tfernandez411@telefonica.net" />
+  <organization name="CP Ausiàs March" city="Alacant" state="País Valencià" />
+  <language>español</language>
+  <description>
+   <p>Proyecto de actividades dirigido a educación primaria  que teine como objetivo principal el aprendizaje y uso del reloj de forma práctica y sistemática. El proyecto tiene más de ciento cincuenta actividades y está dividido en seis partes:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Historia de relojes</p>
+   <p>&lt;LI&gt;En punto</p>
+   <p>&lt;LI&gt;Y media</p>
+   <p>&lt;LI&gt;Y cuarto, menos cuarto</p>
+   <p>&lt;LI&gt;Otras horas</p>
+   <p>&lt;LI&gt;Internet</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area="Matemáticas" level="Primaria (6-12)">tiempo</descriptors>
+  <skin file="@orange.xml" />
+ </settings>
+ <sequence>
+  <item id="start" name="cuarto hora 2 dig">
+   <jump tag="fin" project="mas menos cuarto 1.jclic" id="back" />
+  </item>
+  <item name="y cuarto hora 4" />
+  <item name="puzzle digital" />
+  <item name="y cuarto hora 5" />
+  <item name="cuarto hora 5a" />
+  <item id="fin" name="3 cuartos hora">
+   <jump tag="start" project="mas_menos_cuarto_3.jclic" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="3 cuartos hora" code="">
+   <description>
+    <p>¿Cuándo es una hora en punto?</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFCC33" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="lee atent.wav" />
+     <p>LEE ATENTAMENTE</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo2.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="414.0" cellHeight="231.0" border="true">
+    <style borderStroke="2.6" markerStroke="2.7">
+     <color background="0xCCFFFF" inactive="0xCCFFFF" alternative="0x000000" border="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell txtAlign="left,top" imgAlign="right,middle" border="true" image="3 cuartos.jpg">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <font family="Arial" size="28" />
+      <color foreground="0xFF00CC" background="0xFFFFFF" border="0x3399FF" />
+     </style>
+     <p>3 cuartos de hora =</p>
+     <p>45 minutos</p>
+    </cell>
+    <cell txtAlign="left,middle" border="true">
+     <style borderStroke="2.7" markerStroke="2.7">
+      <color background="0xFFFFFF" border="0x3399FF" />
+     </style>
+     <p>La esfera completa del reloj representa 1 hora (60 minutos)</p>
+     <p>                                                                                       Pero si dividimos la hora en 4 partes,  cada una será un cuarto de hora (15 minutos)                                                                                                                                                   </p>
+     <p>                                                                                           3 cuartos de hora serán 15 + 15 + 15 = 45 minutos</p>
+    </cell>
+    <cell image="-15min.gif" />
+    <cell>
+     <p>Observa este dibujo animado</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.Explore" name="cuarto hora 2 dig" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFCC33" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="senala reloj y obs hora.wav_1" />
+     <p>SEÑALA UN RELOJ Y OBSERVA LA HORA</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo2.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="153.0" cellHeight="124.0" border="false" id="primary">
+    <style borderStroke="2.6" markerStroke="2.7">
+     <color background="0xCCFFFF" inactive="0xCCFFFF" alternative="0x000000" border="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="0" border="true" image="DIGITA02-15.jpg">
+     <style borderStroke="4.9" markerStroke="2.7">
+      <color background="0xFF9900" inactive="0xCCCCCC" border="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell id="1" border="true" image="DIGITA06-15.jpg">
+     <style borderStroke="4.8" markerStroke="2.7">
+      <color background="0x99FF99" border="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell id="2" border="true" image="DIGITA04-15.jpg">
+     <style borderStroke="4.8" markerStroke="2.7">
+      <color background="0xFF99FF" border="0xFFFFFF" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="321.0" cellHeight="109.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="ana2-15.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="20" />
+      <color background="0xFF9900" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="2-15.wav" />
+     <p>Las 2 y cuarto</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="ana6-15.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="20" />
+      <color background="0x99FF99" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="6-15.wav" />
+     <p>Las 6 y cuarto</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="ana4-15.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="20" />
+      <color background="0xFF99FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="4-15.wav" />
+     <p>Las 4 y cuarto</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="cuarto hora 5a" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFCC33" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="une dig con hora.wav" />
+     <p>UNE   CADA   RELOJ    DIGITAL  CON  SU    CORRESPONDIENTE    HORA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="enhorabuena.wav" />
+     <p>¡¡¡   ENHORABUENA   !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo2.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="107.0" cellHeight="126.0" border="false" id="primary">
+    <style borderStroke="2.6" markerStroke="2.7">
+     <color background="0xCCFFFF" inactive="0xCCFFFF" alternative="0x000000" border="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell id="11" border="false" image="DIGITA00-15.jpg">
+     <style shadow="true" borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xFFFFFF" shadow="0xFFFFFF" inactive="0x3366FF" alternative="0x000000" border="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell id="5" image="DIGITA02-15.jpg">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xFFFFFF" inactive="0x3366FF" alternative="0x000000" border="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell id="7" image="DIGITA04-15.jpg">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xFFFFFF" inactive="0x3366FF" alternative="0x000000" border="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell id="10" image="DIGITA11-15.jpg">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFFF" inactive="0x3366FF" border="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell id="1" image="DIGITA07-15.jpg">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFFF" inactive="0x3366FF" border="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell id="4" image="DIGITA08-15.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x3366FF" border="0xFFFFFF" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="2" cols="6" cellWidth="124.0" cellHeight="129.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="2" />
+    <cell>
+     <style borderStroke="2.6" markerStroke="5.0">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>La 1 y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 7 y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 5 y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 6 y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 8 y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 2 y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 3 y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 4 y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0x000000" border="0x3366FF" />
+     </style>
+     <p>Las 9 y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="15" />
+      <color background="0xFFFFCC" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0x000000" border="0x3366FF" />
+     </style>
+     <p>Las 10 y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="15" />
+      <color background="0xFFFFCC" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0x000000" border="0x3366FF" />
+     </style>
+     <p>Las 11 y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="15" />
+      <color background="0xFFFFCC" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0x000000" border="0x3366FF" />
+     </style>
+     <p>Las 12 y cuarto</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="puzzle digital" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFCC33" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="animate y forma puzzle.wav" />
+     <p>ANÍMATE Y FORMA EL PUZZLE DEL RELOJ</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="lo conseguiste.wav" />
+     <p>¡¡ LO CONSEGUISTE !!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo2.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="4" cols="4" border="false" image="atrapado_en_el_tiempo.jpg">
+    <style borderStroke="2.6" markerStroke="2.7">
+     <color background="0xCCFFFF" inactive="0xCCFFFF" alternative="0x000000" border="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+   </cells>
+   <scramble times="31" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="y cuarto hora 4" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFCC33" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="une anal con dig.wav" />
+     <p>UNE  CADA  HORA  DEL RELOJ   ANALÓGICO CON  SU  CORRESPONDIENTE  DIGITAL</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="enhorabuena.wav" />
+     <p>¡¡¡   ENHORABUENA   !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo2.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="100.0" cellHeight="174.0" border="false" id="primary">
+    <style borderStroke="2.6" markerStroke="2.7">
+     <color background="0xCCFFFF" inactive="0xCCFFFF" alternative="0x000000" border="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0" border="false" image="ana4-15.jpg">
+     <style shadow="true" borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xFFFFFF" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0x000000" border="0x3399FF" />
+     </style>
+    </cell>
+    <cell id="1" image="ana11-15.jpg">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xFFFFFF" alternative="0x000000" border="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell id="2" image="ana5-15.jpg">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xFFFFFF" alternative="0x000000" border="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell id="4" image="ana7-15.jpg">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xFFFFFF" alternative="0x000000" border="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell id="5" image="ana9-15.jpg">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xFFFFFF" alternative="0x000000" border="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell id="6" image="ana3-15.jpg">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xFFFFFF" alternative="0x000000" border="0xFFFFFF" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="85.0" cellHeight="129.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0" image="DIGITA04-15.jpg">
+     <style borderStroke="2.6" markerStroke="5.0">
+      <font family="Comic Sans MS" size="12" />
+      <color foreground="0xFFFFFF" background="0xFFFFCC" border="0x6666FF" />
+     </style>
+    </cell>
+    <cell id="1" image="DIGITA11-15.jpg">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Comic Sans MS" size="12" />
+      <color foreground="0xFFFFFF" background="0xFFFFCC" border="0x6666FF" />
+     </style>
+    </cell>
+    <cell id="2" image="DIGITA05-15.jpg">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Comic Sans MS" size="12" />
+      <color foreground="0xFFFFFF" background="0xFFFFCC" border="0x6666FF" />
+     </style>
+    </cell>
+    <cell id="3" image="DIGITA02-15.jpg">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Comic Sans MS" size="12" />
+      <color foreground="0xFFFFFF" background="0xFFFFCC" border="0x6666FF" />
+     </style>
+    </cell>
+    <cell id="4" image="DIGITA07-15.jpg">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Comic Sans MS" size="12" />
+      <color foreground="0xFFFFFF" background="0xFFFFCC" border="0x6666FF" />
+     </style>
+    </cell>
+    <cell id="5" image="DIGITA09-15.jpg">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Comic Sans MS" size="12" />
+      <color foreground="0xFFFFFF" background="0xFFFFCC" border="0x6666FF" />
+     </style>
+    </cell>
+    <cell id="6" image="DIGITA03-15.jpg">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Comic Sans MS" size="12" />
+      <color foreground="0xFFFFFF" background="0xFFFFCC" border="0x6666FF" />
+     </style>
+    </cell>
+    <cell id="7" image="DIGITA01-15.jpg">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Comic Sans MS" size="12" />
+      <color foreground="0xFFFFFF" background="0xFFFFCC" border="0x6666FF" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <style borderStroke="0.0" markerStroke="2.7">
+      <font family="Comic Sans MS" size="16" />
+      <color background="0xCCFFFF" alternative="0x000000" border="0xFFFFFF" />
+     </style>
+     <p>Las 4 y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Comic Sans MS" size="16" />
+      <color background="0xCCFFFF" alternative="0x000000" border="0xFFFFFF" />
+     </style>
+     <p>Las 11 y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Comic Sans MS" size="16" />
+      <color background="0xCCFFFF" alternative="0x000000" border="0xFFFFFF" />
+     </style>
+     <p>Las 5 y cuarto</p>
+    </cell>
+    <cell border="false">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Comic Sans MS" size="16" />
+      <color background="0xCCFFFF" alternative="0x000000" border="0xFFFFFF" />
+     </style>
+     <p>Las 7 y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Comic Sans MS" size="16" />
+      <color background="0xCCFFFF" alternative="0x000000" border="0xFFFFFF" />
+     </style>
+     <p>Las 9 y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Comic Sans MS" size="16" />
+      <color background="0xCCFFFF" alternative="0x000000" border="0xFFFFFF" />
+     </style>
+     <p>Las 3 y cuarto</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="y cuarto hora 5" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFCC33" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="une anal con HORA.wav" />
+     <p>UNE   CADA   RELOJ    ANALÓGICO  CON  SU    CORRESPONDIENTE    HORA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="enhorabuena.wav" />
+     <p>¡¡¡   ENHORABUENA   !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo2.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="125.0" cellHeight="138.0" border="false" id="primary">
+    <style borderStroke="2.6" markerStroke="2.7">
+     <color background="0xCCFFFF" inactive="0xCCFFFF" alternative="0x000000" border="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell id="3" border="false" image="ana6-15.jpg">
+     <style shadow="true" borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xFFFFFF" shadow="0xFFFFFF" inactive="0x3366FF" alternative="0x000000" border="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell id="7" image="ana4-15.jpg">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xFFFFFF" inactive="0x3366FF" alternative="0x000000" border="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell id="4" image="ana8-15.jpg">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xFFFFFF" inactive="0x3366FF" alternative="0x000000" border="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell id="2" image="ana5-15.jpg">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFFF" inactive="0x3366FF" border="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell id="5" image="ana2-15.jpg">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFFF" inactive="0x3366FF" border="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell id="10" image="ana11-15.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x3366FF" border="0xFFFFFF" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="2" cols="6" cellWidth="124.0" cellHeight="89.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="2" />
+    <cell>
+     <style borderStroke="2.6" markerStroke="5.0">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>La 1 y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 7 y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 5 y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 6 y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 8 y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 2 y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 3 y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0x6666FF" />
+     </style>
+     <p>Las 4 y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0x000000" border="0x3366FF" />
+     </style>
+     <p>Las 9 y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="15" />
+      <color background="0xFFFFCC" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0x000000" border="0x3366FF" />
+     </style>
+     <p>Las 10 y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="15" />
+      <color background="0xFFFFCC" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0x000000" border="0x3366FF" />
+     </style>
+     <p>Las 11 y cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="15" />
+      <color background="0xFFFFCC" shadow="0xFFFFFF" inactive="0xFFFFFF" alternative="0x000000" border="0x3366FF" />
+     </style>
+     <p>Las 12 y cuarto</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="DIGITA06-15.jpg" />
+    <cell image="DIGITA04-15.jpg" />
+    <cell image="DIGITA08-15.jpg" />
+    <cell image="DIGITA05-15.jpg" />
+    <cell image="DIGITA02-15.jpg" />
+    <cell image="DIGITA11-15.jpg" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="-15min.gif" file="_15min.gif" />
+  <media name="3 cuartos.jpg" file="3_cuartos.jpg" />
+  <media name="ana11-15.jpg" file="ana11_15.jpg" />
+  <media name="ana2-15.jpg" file="ana2_15.jpg" />
+  <media name="ana3-15.jpg" file="ana3_15.jpg" />
+  <media name="ana4-15.jpg" file="ana4_15.jpg" />
+  <media name="ana5-15.jpg" file="ana5_15.jpg" />
+  <media name="ana6-15.jpg" file="ana6_15.jpg" />
+  <media name="ana7-15.jpg" file="ana7_15.jpg" />
+  <media name="ana8-15.jpg" file="ana8_15.jpg" />
+  <media name="ana9-15.jpg" file="ana9_15.jpg" />
+  <media name="atrapado_en_el_tiempo.jpg" file="atrapado_en_el_tiempo.jpg" />
+  <media name="DIGITA00-15.jpg" file="digita00_15.jpg" />
+  <media name="DIGITA01-15.jpg" file="digita01_15.jpg" />
+  <media name="DIGITA02-15.jpg" file="digita02_15.jpg" />
+  <media name="DIGITA03-15.jpg" file="digita03_15.jpg" />
+  <media name="DIGITA04-15.jpg" file="digita04_15.jpg" />
+  <media name="DIGITA05-15.jpg" file="digita05_15.jpg" />
+  <media name="DIGITA06-15.jpg" file="digita06_15.jpg" />
+  <media name="DIGITA07-15.jpg" file="digita07_15.jpg" />
+  <media name="DIGITA08-15.jpg" file="digita08_15.jpg" />
+  <media name="DIGITA09-15.jpg" file="digita09_15.jpg" />
+  <media name="DIGITA11-15.jpg" file="digita11_15.jpg" />
+  <media name="tiempo2.jpg" file="tiempo2.jpg" />
+  <media name="2-15.wav" file="2_15.wav" />
+  <media name="4-15.wav" file="4_15.wav" />
+  <media name="6-15.wav" file="6_15.wav" />
+  <media name="animate y forma puzzle.wav" file="animate_y_forma_puzzle.wav" />
+  <media name="enhorabuena.wav" file="enhorabuena.wav" />
+  <media name="lee atent.wav" file="lee_atent.wav" />
+  <media name="lo conseguiste.wav" file="lo_conseguiste.wav" />
+  <media name="senala reloj y obs hora.wav_1" file="senala_reloj_y_obs_hora.wav" />
+  <media name="une anal con dig.wav" file="une_anal_con_dig.wav" />
+  <media name="une anal con HORA.wav" file="une_anal_con_hora.wav" />
+  <media name="une dig con hora.wav" file="une_dig_con_hora.wav" />
+ </mediaBag>
+</JClicProject>
+

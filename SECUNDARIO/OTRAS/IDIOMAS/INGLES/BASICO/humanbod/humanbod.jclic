@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="bea" version="0.1.3">
+ <settings>
+  <title>The human body</title>
+  <revision description="Creation of the package of activities using Clic 3.0" date="9/17/02" />
+  <revision description="Converted from Clic3 to JClic" date="11/20/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Beatriz Dávila" mail="primaria2@orvalle.es" />
+  <organization name="Colegio Orvalle" mail="orvalle@orvalle.es" url="http://www.orvalle.es" city="Las Rozas" state="Madrid" />
+  <language>english</language>
+  <description>
+   <p>Brief review of the vocabulary related to the human boy. The activities have sounds. Some of them are puzzles that can be used as a classroom documents when completed and printed.</p>
+  </description>
+  <descriptors area-codes="lleng" level="Primary school">English language, vocabulary</descriptors>
+  <meta_langs>english</meta_langs>
+  <descriptions>
+   <description language="english">
+    <p>Brief review of the vocabulary related to the human boy. The activities have sounds. Some of them are puzzles that can be used as a classroom documents when completed and printed.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="bea.pac" name="cero.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="uno.ass" />
+  <item name="unob.ass" />
+  <item name="dos.ass" />
+  <item name="tres.ass" />
+  <item name="partes.ass" />
+  <item name="pelo.ass" />
+  <item name="funcio.txa" />
+  <item name="usos.ass" />
+  <item name="gusto.puz" />
+  <item name="olfato.puz" />
+  <item name="vista.puz" />
+  <item name="fin.puz">
+   <jump action="STOP" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="cero.ass">
+   <messages>
+    <cell image="copy.gif" type="initial">
+     <style>
+      <font family="Arial" size="20" />
+      <color background="0xFFFF00" />
+     </style>
+     <media type="PLAY_MIDI" level="2" file="minuet1.mid" />
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" />
+      <color background="0xFFFF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="escudo2.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="7" cols="1" cellWidth="700.0" cellHeight="200.0" border="false">
+    <style>
+     <font family="Arial" size="16" bold="true" italic="true" />
+     <color foreground="0xFFFF00" background="0x008000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell>
+     <p>Colegio Orvalle</p>
+    </cell>
+    <cell>
+     <p>Avda./Andraitx,1</p>
+    </cell>
+    <cell>
+     <p>Las Rozas (Madrid)</p>
+    </cell>
+    <cell>
+     <p>28230</p>
+    </cell>
+    <cell>
+     <p>Tfno: 91 631 9679</p>
+    </cell>
+    <cell>
+     <p>orvalle@orvalle.es</p>
+    </cell>
+    <cell>
+     <p>http://www.orvalle.es</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="dos.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>join each name with  the correct picture</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Bien </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFF00">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00FFFF" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>Hand</p>
+    </cell>
+    <cell>
+     <p>Finger</p>
+    </cell>
+    <cell>
+     <p>Heart</p>
+    </cell>
+    <cell>
+     <p>Mouth</p>
+    </cell>
+    <cell>
+     <p>Eye</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell image="mano.gif" />
+    <cell image="indice.gif" />
+    <cell image="corazon.gif" />
+    <cell image="labios.gif" />
+    <cell image="eye4.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="fin.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x8080FF" />
+     </style>
+     <p>..complete the puzzle!!!</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x8080FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x8080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="fin.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="funcio.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" />
+      <color foreground="0x0000FF" background="0xFFFFFF" />
+     </style>
+     <p>..write in english...</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" />
+      <color foreground="0x0000FF" background="0xFFFFFF" />
+     </style>
+     <p>You are the champion!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="u_as.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="700" height="300" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" background="0xFFFFFF" foreground="0x0000FF" size="25" family="Arial" bold="false" italic="false" tabWidth="16" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <text>The </text>
+      <target>
+       <answer>nails</answer>
+       <optionList>
+        <option>nails</option>
+        <option>sunglasses</option>
+       </optionList>
+       <text>nails</text>
+      </target>
+      <text> are strong and resistent and they protect the fingers</text>
+     </p>
+     <p>
+      <text>The </text>
+      <target>
+       <answer>hair</answer>
+       <optionList>
+        <option>hair</option>
+        <option>pencil</option>
+       </optionList>
+       <text>hair</text>
+      </target>
+      <text>  protects the head from the sun.</text>
+     </p>
+     <p>
+      <text>With the  </text>
+      <target>
+       <answer>skin</answer>
+       <optionList>
+        <option>table</option>
+        <option>skin</option>
+       </optionList>
+       <text>skin</text>
+      </target>
+      <text> you can feel: shapes, textures, heat,  and pain...</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="gusto.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x8080FF" />
+     </style>
+     <p>..complete the puzzle and you will learn!</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x8080FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x8080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="lengua.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="olfato.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x8080FF" />
+     </style>
+     <p>..complete the puzzle and you will learn!</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x8080FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x8080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="nariz.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="partes.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFF80" background="0x008000" />
+     </style>
+     <p>Write the names of each part</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFF80" background="0x008000" />
+     </style>
+     <p>Excellent!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFF80">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00FF40" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color foreground="0xFFFF00" background="0x00FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="hand.wav" />
+     <p />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="finger.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="heart.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="mouth.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="eye.wav" />
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>hand</p>
+    </cell>
+    <cell>
+     <p>finger</p>
+    </cell>
+    <cell>
+     <p>heart</p>
+    </cell>
+    <cell>
+     <p>mouth</p>
+    </cell>
+    <cell>
+     <p>eye</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell image="mano.gif" />
+    <cell image="indice.gif" />
+    <cell image="corazon.gif" />
+    <cell image="labios.gif" />
+    <cell image="eye4.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="pelo.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x0000FF" background="0xFFFFFF" />
+     </style>
+     <p>join...</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x0000FF" background="0xFFFFFF" />
+     </style>
+     <p>well done!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="ni_o1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000FF" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="220.0" cellHeight="220.0" border="true" id="primary">
+    <style>
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>nail</p>
+    </cell>
+    <cell>
+     <p>skin</p>
+    </cell>
+    <cell>
+     <p>hair</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="500.0" cellHeight="350.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="u_as.gif" />
+    <cell image="piel.gif" />
+    <cell image="pelo.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="tres.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Listen</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Well done!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x80FF80">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00FFFF" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="hand.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="finger.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="heart.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="mouth.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="eye.wav" />
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>Hand</p>
+    </cell>
+    <cell>
+     <p>Finger</p>
+    </cell>
+    <cell>
+     <p>Heart</p>
+    </cell>
+    <cell>
+     <p>Mouth</p>
+    </cell>
+    <cell>
+     <p>Eye</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="uno.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x8000FF" background="0xFFFF00" />
+     </style>
+     <media type="PLAY_MIDI" level="2" file="tele_ec.mid" />
+     <p>Seguro que lo consigues</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x8000FF" background="0xFFFF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="escudo.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="700.0" cellHeight="102.0" border="false">
+    <style>
+     <font family="Times New Roman" size="22" bold="true" />
+     <color foreground="0x000080" background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>Aquí empieza una sesión de trabajo para 3º de Primaria</p>
+    </cell>
+    <cell>
+     <p>tendrás que demostrar tus conocimientos sobre:</p>
+    </cell>
+    <cell>
+     <p>The human body</p>
+    </cell>
+    <cell>
+     <p>Autora: Beatriz Dávila</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="unob.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" />
+      <color foreground="0x0000FF" background="0xFFFF00" />
+     </style>
+     <p>¡¡¡you will like it!!!</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" />
+      <color foreground="0x0000FF" background="0xFFFF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="t_tulo2.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="t_tulo3.gif">
+    <style>
+     <font family="Arial" size="37" italic="true" />
+     <color foreground="0x0000FF" background="0xFFFF00" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="usos.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xC04979" />
+     </style>
+     <p>what is it for...</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xC04979" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="corazon.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC04979" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>mouth</p>
+    </cell>
+    <cell>
+     <p>finger</p>
+    </cell>
+    <cell>
+     <p>heart</p>
+    </cell>
+    <cell>
+     <p>hand</p>
+    </cell>
+    <cell>
+     <p>eye</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>to eat</p>
+    </cell>
+    <cell>
+     <p>to touch</p>
+    </cell>
+    <cell>
+     <p>to feel</p>
+    </cell>
+    <cell>
+     <p>to touch</p>
+    </cell>
+    <cell>
+     <p>to see</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="vista.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x8080FF" />
+     </style>
+     <p>..complete the puzzle and you will learn!</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x8080FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x8080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="ojos.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="copy.gif" file="copy.gif" animated="false" />
+  <media name="corazon.gif" file="corazon.gif" animated="false" />
+  <media name="escudo.gif" file="escudo.gif" animated="false" />
+  <media name="escudo2.gif" file="escudo2.gif" animated="false" />
+  <media name="eye4.gif" file="eye4.gif" animated="false" />
+  <media name="fin.gif" file="fin.gif" animated="false" />
+  <media name="indice.gif" file="indice.gif" animated="false" />
+  <media name="labios.gif" file="labios.gif" animated="false" />
+  <media name="lengua.gif" file="lengua.gif" animated="false" />
+  <media name="mano.gif" file="mano.gif" animated="false" />
+  <media name="nariz.gif" file="nariz.gif" animated="false" />
+  <media name="ni_o1.gif" file="ni_o1.gif" animated="false" />
+  <media name="ojos.gif" file="ojos.gif" animated="false" />
+  <media name="pelo.gif" file="pelo.gif" animated="false" />
+  <media name="piel.gif" file="piel.gif" animated="false" />
+  <media name="t_tulo2.gif" file="t_tulo2.gif" animated="false" />
+  <media name="t_tulo3.gif" file="t_tulo3.gif" animated="false" />
+  <media name="u_as.gif" file="u_as.gif" animated="false" />
+  <media name="minuet1.mid" file="minuet1.mid" />
+  <media name="tele_ec.mid" file="tele_ec.mid" />
+  <media name="eye.wav" file="eye.wav" />
+  <media name="finger.wav" file="finger.wav" />
+  <media name="hand.wav" file="hand.wav" />
+  <media name="heart.wav" file="heart.wav" />
+  <media name="mouth.wav" file="mouth.wav" />
+ </mediaBag>
+</JClicProject>
+

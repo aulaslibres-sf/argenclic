@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="historia_del_reloj" version="0.1.3">
+ <settings>
+  <title>Las horas del reloj</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="2/15/08" />
+  <revision description="Conversión de Clic3 a JClic" date="2/15/08">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Tomás Fernández García" mail="tfernandez411@telefonica.net" />
+  <organization name="CP Ausiàs March" city="Alacant" state="País Valencià" />
+  <language>español</language>
+  <description>
+   <p>Proyecto de actividades dirigido a educación primaria  que teine como objetivo principal el aprendizaje y uso del reloj de forma práctica y sistemática. El proyecto tiene más de ciento cincuenta actividades y está dividido en seis partes:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Historia de relojes</p>
+   <p>&lt;LI&gt;En punto</p>
+   <p>&lt;LI&gt;Y media</p>
+   <p>&lt;LI&gt;Y cuarto, menos cuarto</p>
+   <p>&lt;LI&gt;Otras horas</p>
+   <p>&lt;LI&gt;Internet</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area="Matemáticas" level="Primaria (6-12)">tiempo</descriptors>
+  <skin file="@orange.xml" />
+ </settings>
+ <sequence>
+  <item id="start" name="reloj de sol">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="reloj de sol A" />
+  <item name="Reloj de arena" />
+  <item name="reloj de arena  A" />
+  <item name="Reloj de agua" />
+  <item name="reloj de agua A" />
+  <item name="Reloj de cera" />
+  <item name="reloj de cera  A" />
+  <item name="Reloj mecánico" />
+  <item name="Reloj digital">
+   <jump tag="inicio" project="horas.jclic" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="Reloj de agua" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="que es reloj agua.wav" />
+     <p>¿QUÉ  ES  UN  RELOJ  DE  AGUA?</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="262.0" cellHeight="433.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell txtAlign="right,bottom" border="false" image="clepsidra.jpg">
+     <style>
+      <font family="Arial" size="28" />
+      <color foreground="0xFFFFFF" background="0x3366FF" />
+     </style>
+     <p>Reloj de agua</p>
+    </cell>
+    <cell txtAlign="left,bottom" image="reloj agua.jpg">
+     <style>
+      <font family="Arial" size="28" />
+      <color foreground="0xFFFFFF" background="0x3366FF" border="0x3366FF" />
+     </style>
+     <p>o clepsidra</p>
+    </cell>
+    <cell txtAlign="left,middle" border="true">
+     <style>
+      <color background="0xFFFFCC" />
+     </style>
+     <p>   Los RELOJES DE AGUA O CLEPSIDRAS son muy antiguos.</p>
+     <p>   Los primeros relojes de agua estaban formados por una vasija de barro que contenía agua que salía por un orificio.</p>
+     <p>           </p>
+     <p>                                           </p>
+     <p>                                                  El recipiente estaba marcado con varias rayas para poder leer el tiempo que iba pasando mientras se vaciaba.</p>
+     <p>  </p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="Reloj de arena" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="que es reloj arena.wav" />
+     <p>¿QUÉ   ES   UN RELOJ   DE   ARENA?</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="262.0" cellHeight="431.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell txtAlign="right,bottom" border="true" image="reloj arena1.jpg">
+     <style>
+      <font family="Arial" size="24" />
+      <color foreground="0xFF0099" background="0xFFFFCC" border="0xFFFFFF" />
+     </style>
+     <p>Relojes</p>
+    </cell>
+    <cell txtAlign="left,bottom" border="false" image="reloj arena.jpg">
+     <style>
+      <font family="Arial" size="24" />
+      <color foreground="0xFF0099" background="0xFFFFCC" border="0xFFFFFF" />
+     </style>
+     <p>de arena</p>
+    </cell>
+    <cell txtAlign="left,middle" border="true">
+     <style>
+      <font family="Arial" size="24" />
+      <color background="0xFFFFCC" border="0xFFFFFF" />
+     </style>
+     <p>El RELOJ DE ARENA es un aparato mecánico que sirve para medir,de manera visual, tiempos más o menos iguales, desde el momento que la arena comienza a caer hasta que finaliza. </p>
+     <p>  </p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="Reloj de cera" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="que es reloj cera.wav" />
+     <p>¿QUÉ  ES  UN  RELOJ  DE  CERA?</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="1" cols="2" cellWidth="290.0" cellHeight="309.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell txtAlign="middle,bottom" image="reloj vela1.jpg">
+     <style>
+      <font family="Arial" size="24" />
+      <color foreground="0xFFFFFF" background="0xFFFFCC" border="0xFFFFFF" />
+     </style>
+     <p>Reloj de cera</p>
+    </cell>
+    <cell txtAlign="left,middle">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xFFFFCC" border="0xFFFFFF" />
+     </style>
+     <p>Los RELOJES DE CERA estaban formados por velas que tardaban en deshacerse un tiempo conocido.</p>
+     <p> </p>
+     <p>                                                            A medida que se iba consumiendo la vela (marcada con las horas) señalaba un determinado período de tiempo. </p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="Reloj digital" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="que es reloj digital.wav" />
+     <p>¿QUÉ  ES UN  RELOJ  DIGITAL?</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="184.0" cellHeight="237.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell txtAlign="middle,bottom" image="reloj digital1.jpg">
+     <style>
+      <font family="Arial" size="18" />
+      <color foreground="0xFF0099" background="0xFFFFCC" border="0xFFFFFF" />
+     </style>
+     <p>Reloj digital</p>
+    </cell>
+    <cell txtAlign="middle,bottom" image="reloj digital3.jpg">
+     <style>
+      <font family="Arial" size="18" />
+      <color foreground="0xFF0099" background="0xFFFFCC" border="0xFFFFFF" />
+     </style>
+     <p>Reloj despertador digital</p>
+    </cell>
+    <cell txtAlign="left,middle">
+     <style>
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0xFFFFFF" />
+     </style>
+     <p>El RELOJ DIGITAL funciona de manera electrónica.</p>
+     <p>                                Muy utilizado actualmente como despertador y unido a otros aparatos electrónicos.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="Reloj mecánico" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="que es reloj mecan.wav" />
+     <p>¿QUÉ   ES   UN   RELOJ   MECÁNICO?</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="191.0" cellHeight="299.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell txtAlign="middle,bottom" image="reloj bolsillo.jpg">
+     <style>
+      <font family="Arial" size="28" />
+      <color foreground="0xFF0099" background="0xFFFFFF" border="0xFFFFFF" />
+     </style>
+     <p>Reloj de bolsillo</p>
+    </cell>
+    <cell txtAlign="middle,bottom" imgAlign="middle,top" image="reloj pendulo.jpg">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0xFF0099" background="0xFFFFFF" border="0xFFFFFF" />
+     </style>
+     <p>Reloj de péndulo</p>
+    </cell>
+    <cell txtAlign="middle,bottom" imgAlign="middle,top" avoidOverlapping="true" image="reloj analog1.jpg">
+     <style>
+      <font family="Arial" size="28" />
+      <color foreground="0xFF0099" background="0xFFFFFF" border="0xFFFFFF" />
+     </style>
+     <p>Reloj analógico de pared</p>
+    </cell>
+    <cell txtAlign="left,middle">
+     <style>
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0xFFFFFF" />
+     </style>
+     <p>Los RELOJES MECÁNICOS funcionan por medio de engranajes encadenados, ruedas dentadas y, a veces, con péndulos.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.FillInBlanks" name="reloj de agua A" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="completa text.wav" />
+     <p>COMPLETA EL TEXTO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="estupendo.wav" />
+     <p>ESTUPENDO</p>
+    </cell>
+    <cell type="finalError">
+     <style />
+     <p>REPASA,   PUES  HAY   ALGÚN   ERROR</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true">
+     <size width="616" height="348" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" italic="false" bold="true" size="20" tabWidth="12" background="0x99FFFF" family="Microsoft Sans Serif" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p family="Arial" background="0xFFFFFF">
+      <text bold="false" size="18" foreground="0x000000" background="0x99FFFF" family="Boo">  </text>
+      <text bold="false" size="22" foreground="0x000000" background="0x99FFFF" family="Arial"> </text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text bold="false" size="22" foreground="0x000000" background="0x99FFFF" family="Arial">Los RELOJES DE AGUA O </text>
+      <target>
+       <answer>CLEPSIDRAS</answer>
+       <optionList>
+        <option>PERDIDAS</option>
+        <option>CANICAS</option>
+        <option>CLEPSIDRAS</option>
+        <option>SOPITAS</option>
+       </optionList>
+       <text>CLEPSIDRAS</text>
+      </target>
+      <text bold="false" size="22" foreground="0x000000" background="0x99FFFF" family="Arial"> son muy antiguos.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text bold="false" size="22" foreground="0x000000" background="0x99FFFF" family="Arial"> </text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text bold="false" size="22" foreground="0x000000" background="0x99FFFF" family="Arial">  Los primeros relojes de agua estaban formados por una </text>
+      <target>
+       <answer>vasija de barro</answer>
+       <optionList>
+        <option>vasija de miel</option>
+        <option>vasija de plátanos</option>
+        <option>vasija de agua</option>
+        <option>vasija de barro</option>
+       </optionList>
+       <text>vasija de barro</text>
+      </target>
+      <text bold="false" size="22" foreground="0x000000" background="0x99FFFF" family="Arial"> que contenía </text>
+      <target>
+       <answer>agua</answer>
+       <optionList>
+        <option>sal</option>
+        <option>agua</option>
+        <option>miel</option>
+        <option>barro</option>
+       </optionList>
+       <text>agua</text>
+      </target>
+      <text bold="false" size="22" foreground="0x000000" background="0x99FFFF" family="Arial"> que salía por un orificio.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text bold="false" size="22" foreground="0x000000" background="0x99FFFF" family="Arial">             </text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text bold="false" size="22" foreground="0x000000" background="0x99FFFF" family="Arial">  El recipiente estaba marcado con varias </text>
+      <target>
+       <answer>rayas</answer>
+       <optionList>
+        <option>manchas</option>
+        <option>rayas</option>
+        <option>tallas</option>
+        <option>chozas</option>
+       </optionList>
+       <text>rayas</text>
+      </target>
+      <text bold="false" size="22" foreground="0x000000" background="0x99FFFF" family="Arial"> para poder leer el tiempo que iba pasando mientras se </text>
+      <target>
+       <answer>vaciaba</answer>
+       <optionList>
+        <option>llenaba</option>
+        <option>vaciaba</option>
+        <option>coloreaba</option>
+        <option>pintaba</option>
+       </optionList>
+       <text>vaciaba</text>
+      </target>
+      <text bold="false" size="22" foreground="0x000000" background="0x99FFFF" family="Arial">.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="reloj de arena  A" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="completa text.wav" />
+     <p>COMPLETA EL TEXTO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="lo conseguiste.wav" />
+     <p>CONSEGUIDO</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true">
+     <size width="442" height="257" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" italic="false" bold="true" size="22" tabWidth="12" background="0x99FFFF" family="Microsoft Sans Serif" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text bold="false" size="22" foreground="0x000000" background="0x99FFFF" family="Arial">El RELOJ DE ARENA es un aparato </text>
+      <target>
+       <answer>mecánico</answer>
+       <optionList>
+        <option>digital</option>
+        <option>mineral</option>
+        <option>mecánico</option>
+        <option>especial</option>
+        <option>preciso</option>
+       </optionList>
+       <text>mecánico</text>
+      </target>
+      <text bold="false" size="22" foreground="0x000000" background="0x99FFFF" family="Arial"> que sirve para medir,de manera </text>
+      <target>
+       <answer>visual</answer>
+       <optionList>
+        <option>visual</option>
+        <option>precisa</option>
+        <option>exacta</option>
+        <option>auditiva</option>
+       </optionList>
+       <text>visual</text>
+      </target>
+      <text bold="false" size="22" foreground="0x000000" background="0x99FFFF" family="Arial">, tiempos más o menos </text>
+      <target>
+       <answer>iguales</answer>
+       <optionList>
+        <option>diferentes</option>
+        <option>cortos</option>
+        <option>largos</option>
+        <option>iguales</option>
+        <option>distintos</option>
+       </optionList>
+       <text>iguales</text>
+      </target>
+      <text bold="false" size="22" foreground="0x000000" background="0x99FFFF" family="Arial">, desde el momento que la arena comienza a caer hasta que </text>
+      <target>
+       <answer>finaliza</answer>
+       <optionList>
+        <option>cae</option>
+        <option>finaliza</option>
+        <option>se eleva</option>
+        <option>desaparece</option>
+       </optionList>
+       <text>finaliza</text>
+      </target>
+      <text bold="false" size="22" foreground="0x000000" background="0x99FFFF" family="Arial">.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="reloj de cera  A" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="completa text.wav" />
+     <p>COMPLETA EL TEXTO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="lo conseguiste.wav" />
+     <p>CONSEGUIDO</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true">
+     <size width="438" height="279" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" italic="false" bold="true" size="22" tabWidth="12" background="0x99FFFF" family="Microsoft Sans Serif" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text bold="false" size="22" foreground="0x000000" background="0x99FFFF" family="Arial">Los RELOJES DE CERA estaban formados por </text>
+      <target>
+       <answer>velas</answer>
+       <optionList>
+        <option>ruedas</option>
+        <option>arenas</option>
+        <option>velas</option>
+        <option>sierras</option>
+       </optionList>
+       <text>velas</text>
+      </target>
+      <text bold="false" size="22" foreground="0x000000" background="0x99FFFF" family="Arial"> que tardaban en deshacerse un tiempo </text>
+      <target>
+       <answer>conocido</answer>
+       <optionList>
+        <option>conocido</option>
+        <option>desconocido</option>
+        <option>igual</option>
+        <option>diferente</option>
+       </optionList>
+       <text>conocido</text>
+      </target>
+      <text bold="false" size="22" foreground="0x000000" background="0x99FFFF" family="Arial">. </text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text bold="false" size="22" foreground="0x000000" background="0x99FFFF" family="Arial">A medida que se iba </text>
+      <target>
+       <answer>consumiendo</answer>
+       <optionList>
+        <option>oliendo</option>
+        <option>desapareciendo</option>
+        <option>consumiendo</option>
+        <option>coloreando</option>
+       </optionList>
+       <text>consumiendo</text>
+      </target>
+      <text bold="false" size="22" foreground="0x000000" background="0x99FFFF" family="Arial"> la vela (marcada con las horas) señalaba un determinado período de tiempo. </text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.Identify" name="reloj de sol" code="">
+   <description>
+    <p>Informacion sobre historia de relojes</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="lee imfo sobre tipo reloj.wav" />
+     <p>LEE LA INFORMACIÓN SOBRE ESTE TIPO DE RELOJ</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="232.0" cellHeight="337.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="0" txtAlign="middle,bottom" imgAlign="middle,top" border="false" image="Relojes_de_Sol.jpg">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" />
+      <color foreground="0xFF33CC" background="0xFFFFCC" />
+     </style>
+     <p>Reloj de sol de pared</p>
+    </cell>
+    <cell txtAlign="middle,bottom" imgAlign="middle,top" border="false" image="relojsolhemisferico.jpg">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" />
+      <color foreground="0xFF33CC" background="0xFFFFCC" />
+     </style>
+     <p>Reloj de sol esférico</p>
+    </cell>
+    <cell txtAlign="left,middle" border="false">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFCC" />
+     </style>
+     <p>El RELOJ DE SOL es el más antiguo.</p>
+     <p>La sombra arrojada por una varilla sobre una escala del reloj va indicando el paso del tiempo.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="reloj de sol A" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="completa text.wav" />
+     <p>COMPLETA EL TEXTO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="lo conseguiste.wav" />
+     <p>CONSEGUIDO</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true">
+     <size width="477" height="190" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Microsoft Sans Serif" tabWidth="12" italic="false" background="0x99FFFF" bold="true" size="22" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text foreground="0x000000" family="Arial" background="0x99FFFF" bold="false" size="22">El RELOJ DE SOL es el más </text>
+      <target>
+       <answer>antiguo</answer>
+       <optionList>
+        <option>moderno</option>
+        <option>antiguo</option>
+        <option>perfecto</option>
+        <option>bonito</option>
+       </optionList>
+       <text>antiguo</text>
+      </target>
+      <text foreground="0x000000" family="Arial" background="0x99FFFF" bold="false" size="22">.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text foreground="0x000000" family="Arial" background="0x99FFFF" bold="false" size="22">La sombra arrojada por una </text>
+      <target>
+       <answer>varilla</answer>
+       <optionList>
+        <option>cuchara</option>
+        <option>varilla</option>
+        <option>mariquita</option>
+        <option>hormiga</option>
+       </optionList>
+       <text>varilla</text>
+      </target>
+      <text foreground="0x000000" family="Arial" background="0x99FFFF" bold="false" size="22"> sobre una </text>
+      <target>
+       <answer>escala</answer>
+       <optionList>
+        <option>rama</option>
+        <option>alfombra</option>
+        <option>escala</option>
+        <option>regla</option>
+       </optionList>
+       <text>escala</text>
+      </target>
+      <text foreground="0x000000" family="Arial" background="0x99FFFF" bold="false" size="22"> del reloj va indicando el paso del </text>
+      <target>
+       <answer>tiempo</answer>
+       <optionList>
+        <option>río</option>
+        <option>animal</option>
+        <option>viento</option>
+        <option>tiempo</option>
+       </optionList>
+       <text>tiempo</text>
+      </target>
+      <text foreground="0x000000" family="Arial" background="0x99FFFF" bold="false" size="22">.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="clepsidra.jpg" file="clepsidra.jpg" />
+  <media name="reloj agua.jpg" file="reloj_agua.jpg" />
+  <media name="reloj analog1.jpg" file="reloj_analog1.jpg" />
+  <media name="reloj arena.jpg" file="reloj_arena.jpg" />
+  <media name="reloj arena1.jpg" file="reloj_arena1.jpg" />
+  <media name="reloj bolsillo.jpg" file="reloj_bolsillo.jpg" />
+  <media name="reloj digital1.jpg" file="reloj_digital1.jpg" />
+  <media name="reloj digital3.jpg" file="reloj_digital3.jpg" />
+  <media name="reloj pendulo.jpg" file="reloj_pendulo.jpg" />
+  <media name="reloj vela1.jpg" file="reloj_vela1.jpg" />
+  <media name="Relojes_de_Sol.jpg" file="relojes_de_sol.jpg" />
+  <media name="relojsolhemisferico.jpg" file="relojsolhemisferico.jpg" />
+  <media name="tiempo.jpg" file="tiempo.jpg" />
+  <media name="completa text.wav" file="completa_text.wav" />
+  <media name="estupendo.wav" file="estupendo.wav" />
+  <media name="lee imfo sobre tipo reloj.wav" file="lee_imfo_sobre_tipo_reloj.wav" />
+  <media name="lo conseguiste.wav" file="lo_conseguiste.wav" />
+  <media name="que es reloj agua.wav" file="que_es_reloj_agua.wav" />
+  <media name="que es reloj arena.wav" file="que_es_reloj_arena.wav" />
+  <media name="que es reloj cera.wav" file="que_es_reloj_cera.wav" />
+  <media name="que es reloj digital.wav" file="que_es_reloj_digital.wav" />
+  <media name="que es reloj mecan.wav" file="que_es_reloj_mecan.wav" />
+ </mediaBag>
+</JClicProject>
+

@@ -1,0 +1,1084 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="egipto" version="0.1.3">
+ <settings>
+  <title>Civilizaciones antiguas</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="11/5/03" />
+  <revision description="Conversión de Clic3 a JClic" date="11/5/03">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Isidoro Gómez Navarro" mail="isibronch@mixmail.com" />
+  <organization name="CRA Sexma de la Sierra" mail="cra.sexma.de.la.sierra@centros2.pntic.mec.es" url="http://centros2.pntic.mec.es/cra.sexma.de.la.sierra/" city="Checa - Guadalajara" state="Castilla - La Mancha" />
+  <language>es</language>
+  <description>
+   <p>Este paquete de actividades repasa como avanzó el hombre del Neolítico. Cómo se inventó y desarrolló la escritura en cuatro grandes civilizaciones, como se organizaban, como vivían y en que creían los habitantes de Mesopotamia y Egipto.</p>
+  </description>
+  <descriptors area-codes="soc" level="Secundaria">historia antigua</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Este paquete de actividades repasa como avanzó el hombre del Neolítico. Cómo se inventó y desarrolló la escritura en cuatro grandes civilizaciones, como se organizaban, como vivían y en que creían los habitantes de Mesopotamia y Egipto.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="egipto.pac" name="tintin1.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="texto1.txa" />
+  <item name="nilo.ass" />
+  <item name="culti.ass" />
+  <item name="clases.ass" />
+  <item name="faraon12.ass" />
+  <item name="dioses0.ass" />
+  <item name="dioses12.ass" />
+  <item name="dioses34.ass" />
+  <item name="defini12.ass" />
+  <item name="pirami12.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.ComplexAssociation" name="clases.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" />
+      <color background="0xDAFEF0" />
+     </style>
+     <p>Ordena las clases sociales de Egipto en la pirámide</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" />
+      <color background="0xDAFEF0" />
+     </style>
+     <p>Los esclavos construyeron las pirámides</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x408080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x408080" border="false" />
+   </settings>
+   <cells rows="4" cols="1" border="false" image="clases.gif" id="primary">
+    <style>
+     <font family="Tahoma" size="32" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <ids>0 1 2 3</ids>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="500.0" cellHeight="40.0" border="false" id="secondary">
+    <style>
+     <font family="Tahoma" size="32" />
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>faraón</p>
+    </cell>
+    <cell>
+     <p>nobles, escribas, sacerdotes, guerreros</p>
+    </cell>
+    <cell>
+     <p>campesinos, artesanos</p>
+    </cell>
+    <cell>
+     <p>esclavos</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" border="false" image="clases1.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="4" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="culti.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" />
+      <color background="0xDAFEF0" />
+     </style>
+     <p>Señala SIETE cultivos del Antiguo Egipto</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" />
+      <color background="0xDAFEF0" />
+     </style>
+     <p>Los que quedan, excepto el arroz, son de América.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x408080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x408080" border="false" />
+   </settings>
+   <cells rows="3" cols="4" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Tahoma" size="32" />
+     <color foreground="0x804040" background="0xFFFFD0" inactive="0x0000FF" alternative="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell id="1">
+     <p>trigo</p>
+    </cell>
+    <cell id="1">
+     <p>cebada</p>
+    </cell>
+    <cell id="1">
+     <p>vid</p>
+    </cell>
+    <cell id="1">
+     <p>olivo</p>
+    </cell>
+    <cell id="1">
+     <p>lino</p>
+    </cell>
+    <cell id="1">
+     <p>papiro</p>
+    </cell>
+    <cell id="1">
+     <p>cebolla</p>
+    </cell>
+    <cell id="0">
+     <p>patata</p>
+    </cell>
+    <cell id="0">
+     <p>maíz</p>
+    </cell>
+    <cell id="0">
+     <p>arroz</p>
+    </cell>
+    <cell id="0">
+     <p>tomate</p>
+    </cell>
+    <cell id="0">
+     <p>cacao</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="4" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>trigo</p>
+    </cell>
+    <cell>
+     <p>cebada</p>
+    </cell>
+    <cell>
+     <p>vid</p>
+    </cell>
+    <cell>
+     <p>olivo</p>
+    </cell>
+    <cell>
+     <p>lino</p>
+    </cell>
+    <cell>
+     <p>papiro</p>
+    </cell>
+    <cell>
+     <p>cebolla</p>
+    </cell>
+    <cell>
+     <p>patata</p>
+    </cell>
+    <cell>
+     <p>maíz</p>
+    </cell>
+    <cell>
+     <p>arroz</p>
+    </cell>
+    <cell>
+     <p>tomate</p>
+    </cell>
+    <cell>
+     <p>cacao</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="defini12.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" />
+      <color background="0xDAFEF0" />
+     </style>
+     <p>Une las definiciones con las palabras definidas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" />
+      <color background="0xDAFEF0" />
+     </style>
+     <p>Sabes mucho</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x408080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x408080" border="false" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="125.0" cellHeight="135.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="31" />
+     <color foreground="0x800000" background="0xFFFFD9" inactive="0x408080" alternative="0x408080" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>pirámide</p>
+    </cell>
+    <cell>
+     <p>hipogeo</p>
+    </cell>
+    <cell>
+     <p>esfinge</p>
+    </cell>
+    <cell>
+     <p>momia</p>
+    </cell>
+    <cell>
+     <p>lino</p>
+    </cell>
+    <cell>
+     <p>papiro</p>
+    </cell>
+    <cell>
+     <p>sarcófago</p>
+    </cell>
+    <cell>
+     <p>jeroglifo</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="200.0" cellHeight="135.0" border="true" id="secondary">
+    <style>
+     <font family="Tahoma" size="25" bold="true" />
+     <color background="0xFFFFFF" inactive="0x408080" alternative="0x408080" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Construcción de piedra o ladrillo de caras triangulares usada en Egipto como tumba de faraones.</p>
+    </cell>
+    <cell>
+     <p>Tumba subterránea excavada en la roca.</p>
+    </cell>
+    <cell>
+     <p>Animal mitológico mitad persona mitad león.</p>
+    </cell>
+    <cell>
+     <p>El cadáver embalsamado y envuelto en vendas de lino.</p>
+    </cell>
+    <cell>
+     <p>Tejido suave y ligero que se obtiene de la planta del mismo nombre, cultivada ya en el antiguo Egipto.</p>
+    </cell>
+    <cell>
+     <p>Planta que crece junto al Nilo y se cultivaba para escribir sobre sus hojas.</p>
+    </cell>
+    <cell>
+     <p>Caja de madera, piedra, metal o metal precioso en la que se ponía la momia.</p>
+    </cell>
+    <cell>
+     <p>Cada uno de 700 signos de la escritura egipcia.</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="125.0" cellHeight="135.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell image="pirami.gif" />
+    <cell image="hipo.gif" />
+    <cell image="esfi.gif" />
+    <cell image="momia3.gif" />
+    <cell image="lino.gif" />
+    <cell image="papi.gif" />
+    <cell image="sarco.gif" />
+    <cell image="jero2.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="dioses0.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x408080">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x408080" border="false" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="350.0" cellHeight="250.0" border="true">
+    <style>
+     <font family="Tahoma" size="32" />
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>Vamos a repasar un poco sobre la religión de Egipto, sus dioses y el culto a los muertos</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="dioses12.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" />
+      <color background="0xDAFEF0" />
+     </style>
+     <p>Une los nombres de los dioses con cada civilización</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" />
+      <color background="0xDAFEF0" />
+     </style>
+     <p>Sigue adelante</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x408080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x408080" border="false" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="175.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Tahoma" size="25" />
+     <color foreground="0x800000" background="0xFFFFFF" inactive="0x0000FF" alternative="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0">
+     <p>An (de Cielo)</p>
+    </cell>
+    <cell id="0">
+     <p>Ki (de la Tierra)</p>
+    </cell>
+    <cell id="0">
+     <p>Enki (del Agua)</p>
+    </cell>
+    <cell id="1">
+     <p>Isis (de la Naturaleza)</p>
+    </cell>
+    <cell id="1">
+     <p>Osiris (de los Muertos)</p>
+    </cell>
+    <cell id="1">
+     <p>Ra (del Sol)</p>
+    </cell>
+    <cell id="1">
+     <p>Thot (de la Escritura)</p>
+    </cell>
+    <cell id="1">
+     <p>Horus (del Cielo y la Luz)</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="220.0" cellHeight="120.0" border="true" id="secondary">
+    <style>
+     <font family="Tahoma" size="32" bold="true" />
+     <color background="0xFFFFD9" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell>
+     <p>MESOPOTAMIA</p>
+    </cell>
+    <cell>
+     <p>EGIPTO</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="175.0" cellHeight="120.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>An (de Cielo) MESOPOTAMIA</p>
+    </cell>
+    <cell>
+     <p>Ki (de la Tierra) MESOPOTAMIA</p>
+    </cell>
+    <cell>
+     <p>Enki (del Agua) MESOPOTAMIA</p>
+    </cell>
+    <cell>
+     <p>Isis (de la Naturaleza) EGIPTO</p>
+    </cell>
+    <cell>
+     <p>Osiris (de los Muertos) EGIPTO</p>
+    </cell>
+    <cell>
+     <p>Ra (del Sol) EGIPTO</p>
+    </cell>
+    <cell>
+     <p>Thot (de la Escritura) EGIPTO</p>
+    </cell>
+    <cell>
+     <p>Horus (del Cielo y la Luz) EGIPTO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="dioses34.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" />
+      <color background="0xDAFEF0" />
+     </style>
+     <p>Une las imágenes con sus nombres: DIOSES EGIPCIOS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" />
+      <color background="0xDAFEF0" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x408080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x408080" border="false" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="150.0" cellHeight="296.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0x800000" alternative="0x800000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="isis.gif" />
+    <cell image="osiris.gif" />
+    <cell image="ra.gif" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="205.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Tahoma" size="32" />
+     <color background="0xFFFFD9" inactive="0x408080" alternative="0x408080" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>Isis (de la Naturaleza)</p>
+    </cell>
+    <cell>
+     <p>Osiris (de los Muertos)</p>
+    </cell>
+    <cell>
+     <p>Ra (del Sol)</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="150.0" cellHeight="296.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>Isis (de la Naturaleza)</p>
+    </cell>
+    <cell>
+     <p>Osiris (de los Muertos)</p>
+    </cell>
+    <cell>
+     <p>Ra (del Sol)</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="faraon12.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" />
+      <color background="0xDAFEF0" />
+     </style>
+     <p>Un faraón muy conocido por las riquezas de su tumba</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" />
+      <color background="0xDAFEF0" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x408080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x408080" border="false" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="161.0" cellHeight="200.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell image="tutanka.gif" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="371.0" cellHeight="100.0" border="false" id="answers">
+    <style>
+     <font family="Tahoma" size="32" />
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>TUTANKAMON|TUTANKAMÓN</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" border="false" image="momia2.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="nilo.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" />
+      <color background="0xDAFEF0" />
+     </style>
+     <p>Elige la respuesta correcta</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" />
+      <color background="0xDAFEF0" />
+     </style>
+     <p>Ésa era</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x408080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x408080" border="false" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="500.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Tahoma" size="32" />
+     <color background="0xFFFFC6" inactive="0x800000" alternative="0x800000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="0">
+     <p>Las crecidas del Nilo en verano se deben al deshielo de las nieves.</p>
+    </cell>
+    <cell id="1">
+     <p>Las crecidas del Nilo en verano se deben a las lluvias estacionales en la sabana africana (clima tropical húmedo)</p>
+    </cell>
+    <cell id="0">
+     <p>Las crecidas del Nilo en verano se deben a los monzones</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="500.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>Las crecidas del Nilo en verano se deben al deshielo de las nieves.</p>
+    </cell>
+    <cell>
+     <p>Las crecidas del Nilo en verano se deben a las lluvias estacionales en la sabana africana (clima tropical húmedo)</p>
+    </cell>
+    <cell>
+     <p>Las crecidas del Nilo en verano se deben a los monzones</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="pirami12.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" />
+      <color background="0xDAFEF0" inactive="0xFFFF80" alternative="0xFFFF80" />
+     </style>
+     <p>Algunos datos sobre la gran pirámide</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" />
+      <color background="0xDAFEF0" inactive="0xFFFF80" alternative="0xFFFF80" />
+     </style>
+     <p>Recuérdalos</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x408080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x408080" border="false" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Tahoma" size="32" />
+     <color foreground="0x800000" background="0xFFFFFF" inactive="0x408080" alternative="0x408080" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>Antigüedad:</p>
+    </cell>
+    <cell>
+     <p>Construida para:</p>
+    </cell>
+    <cell>
+     <p>Altura:</p>
+    </cell>
+    <cell>
+     <p>Bloques de hasta:</p>
+    </cell>
+    <cell>
+     <p>Polígono de la base:</p>
+    </cell>
+    <cell>
+     <p>Polígonos laterales:</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Tahoma" size="32" />
+     <color foreground="0x0000FF" background="0xFFFFFF" inactive="0x408080" alternative="0x408080" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>Unos 5000 años</p>
+    </cell>
+    <cell>
+     <p>El faraón Keops</p>
+    </cell>
+    <cell>
+     <p>147 metros</p>
+    </cell>
+    <cell>
+     <p>50 toneladas</p>
+    </cell>
+    <cell>
+     <p>Cuadrado</p>
+    </cell>
+    <cell>
+     <p>Triángulos</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="pirami3.gif" />
+    <cell image="pirami3.gif" />
+    <cell image="pirami3.gif" />
+    <cell image="pirami3.gif" />
+    <cell image="pirami3.gif" />
+    <cell image="pirami3.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="texto1.txa" code="" autoJump="true" forceOkToAdvance="true">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" />
+      <color background="0xE6FFE6" />
+     </style>
+     <p>Completa el texto</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" />
+      <color background="0xE6FFE6" />
+     </style>
+     <p>Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x408080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="700" height="425" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" size="13" background="0x408080" tabWidth="16" family="Arial" bold="true" foreground="0x000000" italic="false" />
+    <style name="target" base="default" foreground="0x0000FF" background="0xC0C0C0" target="true" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false">
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false">El imperio </text>
+      <target>
+       <answer>egipcio</answer>
+       <optionList>
+        <option>asirio</option>
+        <option>chino</option>
+        <option>romano</option>
+        <option>egipcio</option>
+       </optionList>
+       <text>egipcio</text>
+      </target>
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false"> se desarrolló a orillas del río </text>
+      <target>
+       <answer>Nilo</answer>
+       <optionList>
+        <option>Nilo</option>
+        <option>Tigris</option>
+        <option>Éufrates</option>
+        <option>Huang-Ho</option>
+        <option>Indo</option>
+        <option>Ganges</option>
+       </optionList>
+       <text>Nilo</text>
+      </target>
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false"> a lo largo de casi </text>
+      <target>
+       <answer>3000</answer>
+       <optionList>
+        <option>4000</option>
+        <option>5000</option>
+        <option>2000</option>
+        <option>3000</option>
+        <option>1000</option>
+       </optionList>
+       <text>3000</text>
+      </target>
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false"> años.</text>
+     </p>
+     <p size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false" />
+     <p size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false">
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false">Aproximadamente en el </text>
+      <target>
+       <answer>3100</answer>
+       <optionList>
+        <option>2900</option>
+        <option>3000</option>
+        <option>3100</option>
+       </optionList>
+       <text>3100</text>
+      </target>
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false"> a.C. el rey </text>
+      <target>
+       <answer>Menés</answer>
+       <optionList>
+        <option>Sargón</option>
+        <option>Menés</option>
+        <option>Asoka</option>
+       </optionList>
+       <text>Menés</text>
+      </target>
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false"> unificó bajo su mando las tierras del Nilo. </text>
+     </p>
+     <p size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false" />
+     <p size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false">
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false">En la historia del Antiguo Egipto se distinguen tres etapas:</text>
+     </p>
+     <p size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false" />
+     <p size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false">
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false">- El Imperio </text>
+      <target>
+       <answer>Antiguo</answer>
+       <optionList>
+        <option>Antiguo</option>
+        <option>Medio</option>
+        <option>Nuevo</option>
+       </optionList>
+       <text>Antiguo</text>
+      </target>
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false">, entre </text>
+      <target>
+       <answer>3100</answer>
+       <optionList>
+        <option>3100</option>
+        <option>2200</option>
+        <option>2000</option>
+        <option>1800</option>
+        <option>1600</option>
+        <option>1100</option>
+       </optionList>
+       <text>3100</text>
+      </target>
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false"> a.C. y </text>
+      <target>
+       <answer>2200</answer>
+       <optionList>
+        <option>3100</option>
+        <option>2200</option>
+        <option>2000</option>
+        <option>1800</option>
+        <option>1600</option>
+        <option>1100</option>
+       </optionList>
+       <text>2200</text>
+      </target>
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false"> a.C. Destacan los faraones Keops, Kefren y Mikerinos, que hicieron construir las grandes pirámides de </text>
+      <target>
+       <answer>Gizeh</answer>
+       <optionList>
+        <option>Luxor</option>
+        <option>Karnac</option>
+        <option>Gizeh</option>
+        <option>Menfis</option>
+       </optionList>
+       <text>Gizeh</text>
+      </target>
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false">.</text>
+     </p>
+     <p size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false" />
+     <p size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false">
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false">- El Imperio </text>
+      <target>
+       <answer>Medio</answer>
+       <optionList>
+        <option>Antiguo</option>
+        <option>Medio</option>
+        <option>Nuevo</option>
+       </optionList>
+       <text>Medio</text>
+      </target>
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false">, entre </text>
+      <target>
+       <answer>2000</answer>
+       <optionList>
+        <option>3100</option>
+        <option>2200</option>
+        <option>2000</option>
+        <option>1800</option>
+        <option>1600</option>
+        <option>1100</option>
+       </optionList>
+       <text>2000</text>
+      </target>
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false"> a.C. y </text>
+      <target>
+       <answer>1800</answer>
+       <optionList>
+        <option>3100</option>
+        <option>2200</option>
+        <option>2000</option>
+        <option>1800</option>
+        <option>1600</option>
+        <option>1100</option>
+       </optionList>
+       <text>1800</text>
+      </target>
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false"> a.C. Los egipcios conquistan </text>
+      <target>
+       <answer>Nubia</answer>
+       <optionList>
+        <option>Palestina</option>
+        <option>Nubia</option>
+        <option>Siria</option>
+       </optionList>
+       <text>Nubia</text>
+      </target>
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false">, en el actual Sudán.</text>
+     </p>
+     <p size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false" />
+     <p size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false">
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false">- El Imperio </text>
+      <target>
+       <answer>Nuevo</answer>
+       <optionList>
+        <option>Antiguo</option>
+        <option>Medio</option>
+        <option>Nuevo</option>
+       </optionList>
+       <text>Nuevo</text>
+      </target>
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false">, entre </text>
+      <target>
+       <answer>1600</answer>
+       <optionList>
+        <option>3100</option>
+        <option>2200</option>
+        <option>2000</option>
+        <option>1800</option>
+        <option>1600</option>
+        <option>1100</option>
+       </optionList>
+       <text>1600</text>
+      </target>
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false"> a.C. y </text>
+      <target>
+       <answer>1100</answer>
+       <optionList>
+        <option>3100</option>
+        <option>2200</option>
+        <option>2000</option>
+        <option>1800</option>
+        <option>1600</option>
+        <option>1100</option>
+       </optionList>
+       <text>1100</text>
+      </target>
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false"> a.C. Destacan los faraones Tutmosis III y </text>
+      <target>
+       <answer>Ramsés II</answer>
+       <optionList>
+        <option>Tutankamon</option>
+        <option>Amenofis IV</option>
+        <option>Ramsés II</option>
+       </optionList>
+       <text>Ramsés II</text>
+      </target>
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false">. Conquista de </text>
+      <target>
+       <answer>Palestina</answer>
+       <optionList>
+        <option>Nubia</option>
+        <option>Palestina</option>
+        <option>Libia</option>
+       </optionList>
+       <text>Palestina</text>
+      </target>
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false"> y Siria.</text>
+     </p>
+     <p size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false" />
+     <p size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false" />
+     <p size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false">
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false">Posteriormente Egipto sufrió las sucesivas conquistas de </text>
+      <target>
+       <answer>asirios</answer>
+       <optionList>
+        <option>romanos</option>
+        <option>asirios</option>
+        <option>griegos</option>
+       </optionList>
+       <text>asirios</text>
+      </target>
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false">, </text>
+      <target>
+       <answer>griegos</answer>
+       <optionList>
+        <option>romanos</option>
+        <option>asirios</option>
+        <option>griegos</option>
+       </optionList>
+       <text>griegos</text>
+      </target>
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false"> y </text>
+      <target>
+       <answer>romanos</answer>
+       <optionList>
+        <option>romanos</option>
+        <option>asirios</option>
+        <option>griegos</option>
+       </optionList>
+       <text>romanos</text>
+      </target>
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false">. El último faraón de Egipto, en la época de la conquista romana (siglo </text>
+      <target>
+       <answer>I</answer>
+       <optionList>
+        <option>I</option>
+        <option>II</option>
+        <option>III</option>
+        <option>IV</option>
+       </optionList>
+       <text>I</text>
+      </target>
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false"> a.C.) fue la reina </text>
+      <target>
+       <answer>Cleopatra</answer>
+       <optionList>
+        <option>Nefertiti</option>
+        <option>Cleopatra</option>
+        <option>Isis</option>
+       </optionList>
+       <text>Cleopatra</text>
+      </target>
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false">. Por entonces la principal ciudad de Egipto era </text>
+      <target>
+       <answer>Alejandría</answer>
+       <optionList>
+        <option>Menfis</option>
+        <option>Tebas</option>
+        <option>Alejandría</option>
+       </optionList>
+       <text>Alejandría</text>
+      </target>
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false">, fundada en el delta del Nilo por Alejandro Magno en el siglo </text>
+      <target>
+       <answer>IV</answer>
+       <optionList>
+        <option>I</option>
+        <option>II</option>
+        <option>III</option>
+        <option>IV</option>
+       </optionList>
+       <text>IV</text>
+      </target>
+      <text size="13" background="0x408080" family="Arial" bold="true" foreground="0x000000" italic="false"> a.C.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" checkCase="true" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="tintin1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" />
+      <color background="0xE6FFE6" />
+     </style>
+     <p>¿Qué país se dispone a visitar Tintín?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" />
+      <color background="0xE6FFE6" />
+     </style>
+     <p>Adelante</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x408080">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x408080" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="tintin1.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="200.0" cellHeight="75.0" border="true" id="answers">
+    <style>
+     <font family="Tahoma" size="28" />
+     <color foreground="0x0000A0" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>EGIPTO</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" border="false" image="tintin1.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="clases.gif" file="clases.gif" animated="false" />
+  <media name="clases1.gif" file="clases1.gif" animated="false" />
+  <media name="esfi.gif" file="esfi.gif" animated="false" />
+  <media name="hipo.gif" file="hipo.gif" animated="false" />
+  <media name="isis.gif" file="isis.gif" animated="false" />
+  <media name="jero2.gif" file="jero2.gif" animated="false" />
+  <media name="lino.gif" file="lino.gif" animated="false" />
+  <media name="momia2.gif" file="momia2.gif" animated="false" />
+  <media name="momia3.gif" file="momia3.gif" animated="false" />
+  <media name="osiris.gif" file="osiris.gif" animated="false" />
+  <media name="papi.gif" file="papi.gif" animated="false" />
+  <media name="pirami.gif" file="pirami.gif" animated="false" />
+  <media name="pirami3.gif" file="pirami3.gif" animated="false" />
+  <media name="ra.gif" file="ra.gif" animated="false" />
+  <media name="sarco.gif" file="sarco.gif" animated="false" />
+  <media name="tintin1.gif" file="tintin1.gif" animated="false" />
+  <media name="tutanka.gif" file="tutanka.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

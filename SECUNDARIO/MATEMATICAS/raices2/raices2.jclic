@@ -1,0 +1,2211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="raices2" version="0.1.3">
+ <settings>
+  <title>Cálculo con radicales</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="6/12/03" />
+  <revision description="Conversión de Clic3 a JClic" date="5/27/03">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Fernando López Juárez" mail="fjuarez@mixmail.com" />
+  <author name="Rosa Fargueta Calatayud" />
+  <author name="Carmen Gutiérrez Vargas" />
+  <author name="Antonio Fco. Devesa Botella" />
+  <organization name="IES Tirant lo Blanc" mail="03012773@centres.cult.gva.es" url="http://intercentres.cult.gva.es/intercentres/03012773/" city="Elx" state="País Valencià" />
+  <organization name="IES Victòria Kent" mail="03013881@centres.cult.gva.es" city="Elx" state="País Valencià" />
+  <organization name="CEFIRE d'Elx" mail="03402150@centres.cult.gva.es" url="http://intercentres.cult.gva.es/cefire/03402150/" city="Elx" state="País Valencià" />
+  <language>es</language>
+  <description>
+   <p>Esta aplicación consta de cuatro paquetes de actividades con ejercicios sobre:&lt;BR&gt;</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Las potencias (con exponentes enteros y fraccionarios)</p>
+   <p>&lt;LI&gt;Las raíces</p>
+   <p>&lt;LI&gt;Suma y resta de raíces</p>
+   <p>&lt;LI&gt;Producto y cociente de raíces</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area-codes="mat" level="Secundaria">cálculo</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Esta aplicación consta de cuatro paquetes de actividades con ejercicios sobre:&lt;BR&gt;</p>
+    <p>&lt;UL&gt;</p>
+    <p>&lt;LI&gt;Las potencias (con exponentes enteros y fraccionarios)</p>
+    <p>&lt;LI&gt;Las raíces</p>
+    <p>&lt;LI&gt;Suma y resta de raíces</p>
+    <p>&lt;LI&gt;Producto y cociente de raíces</p>
+    <p>&lt;/UL&gt;</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="inici0m.pac" name="ptll1.ass">
+   <jump tag="menu.pac" id="forward" />
+   <jump action="STOP" id="back" />
+  </item>
+  <item id="menu.pac" name="menu.ass">
+   <jump action="STOP" id="forward" />
+   <jump action="STOP" id="back" />
+  </item>
+  <item id="potencim.pac" name="ptll8.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="ptll4.ass" />
+  <item name="asp3.ass" />
+  <item name="asp4.ass" />
+  <item name="asp1.ass" />
+  <item name="asp5.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="raicesm.pac" name="ptll9.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="ptll2.ass" />
+  <item name="ptll3.ass" />
+  <item name="asp6.ass" />
+  <item name="asp2.ass" />
+  <item name="ptll10.ass" />
+  <item name="asp7.ass" />
+  <item name="texto1.txa" />
+  <item name="rpesc1.ass" />
+  <item name="asc1.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="sumam.pac" name="ptll5.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="ptll6.ass" />
+  <item name="ptll7.ass" />
+  <item name="expl1.ass" />
+  <item name="ident2.ass" />
+  <item name="ident3.ass" />
+  <item name="asp8.ass" />
+  <item name="asp9.ass" />
+  <item name="ptll12.ass" />
+  <item name="asp10.ass" />
+  <item name="asp11.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="productm.pac" name="ptll11.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="ptll13.ass" />
+  <item name="asp12.ass" />
+  <item name="asp13.ass" />
+  <item name="ptll16.ass" />
+  <item name="asp14.ass" />
+  <item name="asp15.ass" />
+  <item name="raiz2vf.ass" />
+  <item name="raiz1vf.ass">
+   <jump tag="menu.pac" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.ComplexAssociation" name="asc1.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="24" />
+     </style>
+     <p>Asocia según sea Verdadero o Falso</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="24" />
+     </style>
+     <p>Ya era hora. Adelante</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF8000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="3" cols="3" cellWidth="700.0" cellHeight="500.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="1" image="asc11.gif" />
+    <cell id="0" image="asc12.gif" />
+    <cell id="1" image="asc13.gif" />
+    <cell id="1" image="asc14.gif" />
+    <cell id="0" image="asc15.gif" />
+    <cell id="1" image="asc16.gif" />
+    <cell id="0" image="asc17.gif" />
+    <cell id="0" image="asc18.gif" />
+    <cell id="0" image="asc19.gif" />
+   </cells>
+   <cells rows="1" cols="2" cellWidth="700.0" cellHeight="497.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="28" bold="true" />
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell>
+     <p>FALSO</p>
+    </cell>
+    <cell>
+     <p>VERDADERO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="asp1.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="24" />
+     </style>
+     <p>Asocia cada potencia con su equivalente</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="24" />
+     </style>
+     <p>A por otra</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x80FF80">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="3" cols="2" cellWidth="468.0" cellHeight="306.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="asp11.gif" />
+    <cell image="asp12.gif" />
+    <cell image="asp13.gif" />
+    <cell image="asp14.gif" />
+    <cell image="asp15.gif" />
+    <cell image="asp16.gif" />
+   </cells>
+   <cells rows="3" cols="2" cellWidth="468.0" cellHeight="306.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="28" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="asp111.gif" />
+    <cell image="asp122.gif" />
+    <cell image="asp133.gif" />
+    <cell image="asp144.gif" />
+    <cell image="asp155.gif" />
+    <cell image="asp166.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="asp10.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Asocia cada operación con su resultado</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Estás acabando</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0080C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="3" cols="2" cellWidth="241.0" cellHeight="171.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="asp101.gif" />
+    <cell image="asp102.gif" />
+    <cell image="asp103.gif" />
+    <cell image="asp104.gif" />
+    <cell image="asp105.gif" />
+    <cell image="asp106.gif" />
+   </cells>
+   <cells rows="3" cols="2" cellWidth="241.0" cellHeight="171.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="asp1011.gif" />
+    <cell image="asp1022.gif" />
+    <cell image="asp1033.gif" />
+    <cell image="asp1044.gif" />
+    <cell image="asp1055.gif" />
+    <cell image="asp1066.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="asp11.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>¿Acertarás?</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Cambiamos de actividades</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0080C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="3" cols="2" cellWidth="281.0" cellHeight="171.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="asp1111.gif" />
+    <cell image="asp1112.gif" />
+    <cell image="asp1113.gif" />
+    <cell image="asp1114.gif" />
+    <cell image="asp1115.gif" />
+    <cell image="asp1116.gif" />
+   </cells>
+   <cells rows="3" cols="2" cellWidth="241.0" cellHeight="171.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="asp11111.gif" />
+    <cell image="asp11122.gif" />
+    <cell image="asp11133.gif" />
+    <cell image="asp11144.gif" />
+    <cell image="asp11155.gif" />
+    <cell image="asp11166.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="asp12.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>¿Sabrás hacerlo?</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Cuestión de suerte</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x8080C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="asp1211.gif" />
+    <cell image="asp1222.gif" />
+    <cell image="asp1233.gif" />
+    <cell image="asp1244.gif" />
+    <cell image="asp1255.gif" />
+    <cell image="asp1266.gif" />
+   </cells>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="asp12111.gif" />
+    <cell image="asp12222.gif" />
+    <cell image="asp12333.gif" />
+    <cell image="asp12444.gif" />
+    <cell image="asp12555.gif" />
+    <cell image="asp12666.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="asp13.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="22" />
+     </style>
+     <p>Relaciona</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="22" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x8080C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="32" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="asp1311.gif" />
+    <cell image="asp1322.gif" />
+    <cell image="asp1333.gif" />
+    <cell image="asp1344.gif" />
+    <cell image="asp1355.gif" />
+    <cell image="asp1366.gif" />
+   </cells>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="15" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="asp13111.gif" />
+    <cell image="asp13222.gif" />
+    <cell image="asp13333.gif" />
+    <cell image="asp13444.gif" />
+    <cell image="asp13555.gif" />
+    <cell image="asp13666.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="asp14.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Esta es de las últimas</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Creeme</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x8080C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="asp1411.gif" />
+    <cell image="asp1422.gif" />
+    <cell image="asp1433.gif" />
+    <cell image="asp1444.gif" />
+    <cell image="asp1455.gif" />
+    <cell image="asp1466.gif" />
+   </cells>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="asp14111.gif" />
+    <cell image="asp14222.gif" />
+    <cell image="asp14333.gif" />
+    <cell image="asp14444.gif" />
+    <cell image="asp14555.gif" />
+    <cell image="asp14666.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="asp15.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Realiza estos productos y divisiones</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Esto se acaba</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x8080C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="4" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell image="asp1511.gif" />
+    <cell image="asp1522.gif" />
+    <cell image="asp1533.gif" />
+    <cell image="asp1544.gif" />
+    <cell image="asp1555.gif" />
+    <cell image="asp1566.gif" />
+    <cell image="asp1577.gif" />
+    <cell image="asp1588.gif" />
+   </cells>
+   <cells rows="4" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell image="asp15111.gif" />
+    <cell image="asp15222.gif" />
+    <cell image="asp15333.gif" />
+    <cell image="asp15444.gif" />
+    <cell image="asp15555.gif" />
+    <cell image="asp15666.gif" />
+    <cell image="asp15777.gif" />
+    <cell image="asp15888.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="asp2.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="24" />
+     </style>
+     <p>Pues prueba con estas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="24" />
+     </style>
+     <p>A por otra</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF8000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="3" cols="2" cellWidth="468.0" cellHeight="400.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="asp21.gif" />
+    <cell image="asp22.gif" />
+    <cell image="asp23.gif" />
+    <cell image="asp24.gif" />
+    <cell image="asp25.gif" />
+    <cell image="asp26.gif" />
+   </cells>
+   <cells rows="3" cols="2" cellWidth="468.0" cellHeight="400.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="28" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>-2</p>
+    </cell>
+    <cell>
+     <p>1 y -1</p>
+    </cell>
+    <cell>
+     <p>0</p>
+    </cell>
+    <cell>
+     <p>5/4</p>
+    </cell>
+    <cell>
+     <p>2</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="asp3.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+     </style>
+     <p>Pues prueba con estas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+     </style>
+     <p>A por otra</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x80FF80">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="3" cols="3" cellWidth="352.0" cellHeight="371.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="32" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell image="asp31.gif" />
+    <cell image="asp32.gif" />
+    <cell image="asp33.gif" />
+    <cell image="asp34.gif" />
+    <cell image="asp35.gif" />
+    <cell image="asp36.gif" />
+    <cell image="asp37.gif" />
+    <cell image="asp38.gif" />
+    <cell image="asp39.gif" />
+   </cells>
+   <cells rows="3" cols="3" cellWidth="352.0" cellHeight="371.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell image="asp311.gif" />
+    <cell image="asp322.gif" />
+    <cell image="asp333.gif" />
+    <cell image="asp344.gif" />
+    <cell image="asp355.gif" />
+    <cell image="asp366.gif" />
+    <cell image="asp377.gif" />
+    <cell image="asp388.gif" />
+    <cell image="asp399.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="asp4.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="24" />
+     </style>
+     <p>¿Y si los exponentes son fraccionarios?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="24" />
+     </style>
+     <p>Ha sido cuestión de suerte</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x80FF80">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="2" cols="3" cellWidth="700.0" cellHeight="350.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="asp41.gif" />
+    <cell image="asp42.gif" />
+    <cell image="asp43.gif" />
+    <cell image="asp44.gif" />
+    <cell image="asp45.gif" />
+    <cell image="asp46.gif" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="700.0" cellHeight="350.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="28" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="asp411.gif" />
+    <cell image="asp422.gif" />
+    <cell image="asp433.gif" />
+    <cell image="asp444.gif" />
+    <cell image="asp455.gif" />
+    <cell image="asp466.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="asp5.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="24" />
+     </style>
+     <p>Elimina los exponentes fraccionarios y negativos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="24" />
+     </style>
+     <p>Cambiemos de asunto</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x80FF80">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="2" cols="3" cellWidth="700.0" cellHeight="350.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="asp51.gif" />
+    <cell image="asp52.gif" />
+    <cell image="asp53.gif" />
+    <cell image="asp54.gif" />
+    <cell image="asp55.gif" />
+    <cell image="asp56.gif" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="700.0" cellHeight="350.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="28" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="asp511.gif" />
+    <cell image="asp522.gif" />
+    <cell image="asp533.gif" />
+    <cell image="asp544.gif" />
+    <cell image="asp555.gif" />
+    <cell image="asp566.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="asp6.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="24" />
+     </style>
+     <p>No dirás que no es fácil</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="24" />
+     </style>
+     <p>Te lo dije</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF8000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="1" cols="7" cellWidth="397.0" cellHeight="350.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="7" rows="1" />
+    <cell image="asp61.gif" />
+    <cell image="asp62.gif" />
+    <cell image="asp63.gif" />
+    <cell image="asp64.gif" />
+    <cell image="asp65.gif" />
+    <cell image="asp66.gif" />
+    <cell image="asp67.gif" />
+   </cells>
+   <cells rows="1" cols="7" cellWidth="397.0" cellHeight="350.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="28" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="7" rows="1" />
+    <cell image="asp611.gif" />
+    <cell image="asp622.gif" />
+    <cell image="asp633.gif" />
+    <cell image="asp644.gif" />
+    <cell image="asp655.gif" />
+    <cell image="asp666.gif" />
+    <cell image="asp677.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="asp7.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="24" />
+     </style>
+     <p>Asocia cada resultado</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="24" />
+     </style>
+     <p>Era muy fácil</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF8000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="3" cols="2" cellWidth="700.0" cellHeight="500.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="asp71.gif" />
+    <cell image="asp72.gif" />
+    <cell image="asp73.gif" />
+    <cell image="asp74.gif" />
+    <cell image="asp75.gif" />
+    <cell image="asp76.gif" />
+   </cells>
+   <cells rows="3" cols="2" cellWidth="700.0" cellHeight="500.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="28" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="asp711.gif" />
+    <cell image="asp722.gif" />
+    <cell image="asp733.gif" />
+    <cell image="asp744.gif" />
+    <cell image="asp755.gif" />
+    <cell image="asp766.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="asp8.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Asocia ambas ventanas</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Ha sido muy fácil</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0080C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="3" cols="2" cellWidth="241.0" cellHeight="171.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="asp81.gif" />
+    <cell image="asp82.gif" />
+    <cell image="asp83.gif" />
+    <cell image="asp84.gif" />
+    <cell image="asp85.gif" />
+    <cell image="asp86.gif" />
+   </cells>
+   <cells rows="3" cols="2" cellWidth="241.0" cellHeight="171.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="asp811.gif" />
+    <cell image="asp822.gif" />
+    <cell image="asp833.gif" />
+    <cell image="asp844.gif" />
+    <cell image="asp855.gif" />
+    <cell image="asp866.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="asp9.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Realiza estas operaciones</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Eres un listill@</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0080C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="2" cols="3" cellWidth="526.0" cellHeight="390.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="asp91.gif" />
+    <cell image="asp92.gif" />
+    <cell image="asp93.gif" />
+    <cell image="asp94.gif" />
+    <cell image="asp95.gif" />
+    <cell image="asp96.gif" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="275.0" cellHeight="390.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="asp911.gif" />
+    <cell image="asp922.gif" />
+    <cell image="asp933.gif" />
+    <cell image="asp944.gif" />
+    <cell image="asp955.gif" />
+    <cell image="asp966.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="expl1.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="24" />
+     </style>
+     <p>Haz clic en cada casilla y recibirás una información</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="24" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x0080C0">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="2" cols="3" cellWidth="700.0" cellHeight="500.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0" image="ident11.gif" />
+    <cell id="1" image="ident12.gif" />
+    <cell id="2" image="ident13.gif" />
+    <cell id="3" image="ident14.gif" />
+    <cell id="4" image="ident15.gif" />
+    <cell id="5" image="ident16.gif" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="700.0" cellHeight="500.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="28" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>No son semejantes</p>
+    </cell>
+    <cell>
+     <p>No se puede restar</p>
+    </cell>
+    <cell>
+     <p>No son semejantes</p>
+    </cell>
+    <cell>
+     <p>Son semejantes pero están mal sumadas</p>
+    </cell>
+    <cell>
+     <p>Son semejantes pero están mal sumadas</p>
+    </cell>
+    <cell>
+     <p>SON SEMEJANTES luego se pueden sumar</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="ident2.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic en las expresiones que no sean ciertas</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Ha sido suerte</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0080C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="3" cols="3" cellWidth="569.0" cellHeight="332.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="1" image="ident21.gif" />
+    <cell id="0" image="ident22.gif" />
+    <cell id="1" image="ident23.gif" />
+    <cell id="1" image="ident24.gif" />
+    <cell id="1" image="ident25.gif" />
+    <cell id="0" image="ident26.gif" />
+    <cell id="1" image="ident27.gif" />
+    <cell id="0" image="ident28.gif" />
+    <cell id="1" image="ident29.gif" />
+   </cells>
+   <cells rows="3" cols="3" cellWidth="569.0" cellHeight="332.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>FALSA</p>
+    </cell>
+    <cell>
+     <p>VERDADERA</p>
+    </cell>
+    <cell>
+     <p>FALSA</p>
+    </cell>
+    <cell>
+     <p>FALSA</p>
+    </cell>
+    <cell>
+     <p>FALSA</p>
+    </cell>
+    <cell>
+     <p>VERDADERA</p>
+    </cell>
+    <cell>
+     <p>FALSA</p>
+    </cell>
+    <cell>
+     <p>VERDADERA</p>
+    </cell>
+    <cell>
+     <p>FALSA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="ident3.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic en las expresiones verdaderas</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Adelante</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0080C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="3" cols="3" cellWidth="569.0" cellHeight="332.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="0" image="ident21.gif" />
+    <cell id="1" image="ident22.gif" />
+    <cell id="0" image="ident23.gif" />
+    <cell id="0" image="ident24.gif" />
+    <cell id="0" image="ident25.gif" />
+    <cell id="1" image="ident26.gif" />
+    <cell id="0" image="ident27.gif" />
+    <cell id="1" image="ident28.gif" />
+    <cell id="0" image="ident29.gif" />
+   </cells>
+   <cells rows="3" cols="3" cellWidth="569.0" cellHeight="332.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>FALSA</p>
+    </cell>
+    <cell>
+     <p>VERDADERA</p>
+    </cell>
+    <cell>
+     <p>FALSA</p>
+    </cell>
+    <cell>
+     <p>FALSA</p>
+    </cell>
+    <cell>
+     <p>FALSA</p>
+    </cell>
+    <cell>
+     <p>VERDADERA</p>
+    </cell>
+    <cell>
+     <p>FALSA</p>
+    </cell>
+    <cell>
+     <p>VERDADERA</p>
+    </cell>
+    <cell>
+     <p>FALSA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="menu.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Elige una opción</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x8080FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="4" cols="1" cellWidth="554.0" cellHeight="200.0" border="true">
+    <style>
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="potencim.pac" />
+     <p>Potencias</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="raicesm.pac" />
+     <p>Raices</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="sumam.pac" />
+     <p>Sumas</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="productm.pac" />
+     <p>Productos</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="ptll1.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x80FFFF">
+     <image name="nuvols.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="700.0" cellHeight="500.0" border="true">
+    <style>
+     <font family="Arial" size="53" />
+     <color foreground="0xFF0000" background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>CÁLCULO CON RADICALES</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="ptll10.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0x800000" />
+     </style>
+     <p>Pantalla de información</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="24" bold="true" />
+      <color foreground="0x800000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="3" cols="2" cellWidth="390.0" cellHeight="198.0" border="true">
+    <style>
+     <font family="Arial" size="39" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>VAMOS A CALCULAR</p>
+    </cell>
+    <cell image="18.gif" />
+    <cell>
+     <p>Descomponemos el número 18 en producto de factores primos:</p>
+    </cell>
+    <cell image="18dos.gif" />
+    <cell>
+     <p>No hemos calculado su valor, pero hemos simplificado el radical extrayendo el 3 fuera de la raíz.</p>
+    </cell>
+    <cell>
+     <p>¡INTÉNTALO TÚ!</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="ptll11.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0x800000" />
+     </style>
+     <p>Pantalla de información</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0x800000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x80FFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="321.0" border="true">
+    <style>
+     <font family="Arial" size="53" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>PRODUCTO Y COCIENTE DE RAÍCES</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="ptll12.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="12" bold="true" />
+      <color foreground="0x800000" />
+     </style>
+     <p>Pantalla de información</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="12" bold="true" />
+      <color foreground="0x800000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="2" cols="1" cellWidth="381.0" cellHeight="198.0" border="true">
+    <style>
+     <font family="Arial" size="39" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>Recuerda que, en ocasiones, es necesario sacar factores fuera del radical para poder sumar o restar</p>
+    </cell>
+    <cell image="ptll12.gif" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="ptll13.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="12" bold="true" />
+      <color foreground="0x800000" />
+     </style>
+     <p>Pantalla de información</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="12" bold="true" />
+      <color foreground="0x800000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="3" cols="1" cellWidth="421.0" cellHeight="191.0" border="true">
+    <style>
+     <font family="Arial" size="39" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>Las siguientes propiedades te permiten multiplicar y dividir raíces</p>
+    </cell>
+    <cell image="ptll131.gif" />
+    <cell image="ptll132.gif" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="ptll16.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="12" bold="true" />
+      <color foreground="0x800000" />
+     </style>
+     <p>Pantalla de información</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="12" bold="true" />
+      <color foreground="0x800000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="3" cols="1" cellWidth="546.0" cellHeight="350.0" border="true">
+    <style>
+     <font family="Arial" size="39" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>Si es necesario recurre al cálculo del mínimo común índice a partir de esta propiedad</p>
+    </cell>
+    <cell image="ptll141.gif" />
+    <cell image="ptll142.gif" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="ptll2.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="12" bold="true" />
+      <color foreground="0x800000" />
+     </style>
+     <p>PANTALLA DE INFORMACIÓN</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="12" bold="true" />
+      <color foreground="0x800000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="2" cols="1" cellWidth="491.0" cellHeight="198.0" border="true">
+    <style>
+     <font family="Arial" size="39" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>EL SIGUIENTE ESQUEMA TE RECUERDA LA DEFINICIÓN DE RAÍZ</p>
+    </cell>
+    <cell image="ptll2.gif" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="ptll3.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="12" bold="true" />
+      <color foreground="0x800000" />
+     </style>
+     <p>Pantalla de información</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="12" bold="true" />
+      <color foreground="0x800000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="2" cols="1" cellWidth="491.0" cellHeight="198.0" border="true">
+    <style>
+     <font family="Arial" size="39" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>por tanto:</p>
+    </cell>
+    <cell image="ptll3.gif" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="ptll4.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="12" bold="true" />
+      <color foreground="0x800000" />
+     </style>
+     <p>PANTALLA DE INFORMACIÓN</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="12" bold="true" />
+      <color foreground="0x800000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="1" cols="2" cellWidth="290.0" cellHeight="198.0" border="true">
+    <style>
+     <font family="Arial" size="39" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell>
+     <p>¿Recuerdas cómo se calcula una POTENCIA?</p>
+    </cell>
+    <cell image="ptll4.gif" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="ptll5.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0x800000" />
+     </style>
+     <p>Pantalla de información</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0x800000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x80FFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="321.0" border="true">
+    <style>
+     <font family="Arial" size="53" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>SUMA Y RESTA DE RAÍCES</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="ptll6.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0x800000" />
+     </style>
+     <p>Pantalla de información</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0x800000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="569.0" cellHeight="438.0" border="true">
+    <style>
+     <font family="Arial" size="39" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>La suma y resta de raíces puede efectuarse únicamente en el caso de que sean semejantes, es decir, si tienen el mismo índice e igual radicando</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="ptll7.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+      <color foreground="0x800000" />
+     </style>
+     <p>Pantalla de información</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+      <color foreground="0x800000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="2" cols="2" cellWidth="290.0" cellHeight="198.0" border="true">
+    <style>
+     <font family="Arial" size="53" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>Son semejantes:</p>
+    </cell>
+    <cell image="ptll7.gif" />
+    <cell>
+     <p>con lo cual se podrán sumar</p>
+    </cell>
+    <cell image="ptll72.gif" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="ptll8.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0x800000" />
+     </style>
+     <p>Pantalla de información</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0x800000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x80FFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="321.0" border="true">
+    <style>
+     <font family="Arial" size="53" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>POTENCIAS</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="ptll9.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0x800000" />
+     </style>
+     <p>PANTALLA DE INFORMACIÓN</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0x800000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x80FFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="321.0" border="true">
+    <style>
+     <font family="Arial" size="53" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>RAÍCES</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="raiz1vf.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Señala cúales son verdaderas y cuáles son falsas</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Esto es el final</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x8080C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="2" cols="3" cellWidth="468.0" cellHeight="306.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="1" image="raiz11.gif" />
+    <cell id="0" image="raiz12.gif" />
+    <cell id="0" image="raiz13.gif" />
+    <cell id="0" image="raiz14.gif" />
+    <cell id="0" image="raiz15.gif" />
+    <cell id="1" image="raiz16.gif" />
+   </cells>
+   <cells rows="1" cols="2" cellWidth="308.0" cellHeight="294.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="28" bold="true" />
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell>
+     <p>VERDADERO</p>
+    </cell>
+    <cell>
+     <p>FALSO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="raiz2vf.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Indica si la expresión es o no cierta</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Viene la última</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x8080C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="3" cols="2" cellWidth="468.0" cellHeight="306.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell id="1" image="raiz2v1.gif" />
+    <cell id="0" image="raiz2v2.gif" />
+    <cell id="1" image="raiz2v3.gif" />
+    <cell id="1" image="raiz2v4.gif" />
+    <cell id="0" image="raiz2v5.gif" />
+    <cell id="0" image="raiz2v6.gif" />
+   </cells>
+   <cells rows="2" cols="1" cellWidth="308.0" cellHeight="294.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="28" bold="true" />
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>Verdadero</p>
+    </cell>
+    <cell>
+     <p>Falso</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="rpesc1.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="12" />
+     </style>
+     <p>¿Existe cada una de estas raíces?. Teclea si/no y pulsa INTRO para confirmar</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="12" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF8000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="400" height="300" />
+    </window>
+   </settings>
+   <cells rows="1" cols="6" cellWidth="312.0" cellHeight="380.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="rpesc11.gif" />
+    <cell image="rpesc12.gif" />
+    <cell image="rpesc13.gif" />
+    <cell image="rpesc14.gif" />
+    <cell image="rpesc15.gif" />
+    <cell image="rpesc16.gif" />
+   </cells>
+   <cells rows="1" cols="6" cellWidth="220.0" cellHeight="394.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="28" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>no</p>
+    </cell>
+    <cell>
+     <p>no</p>
+    </cell>
+    <cell>
+     <p>si|sí</p>
+    </cell>
+    <cell>
+     <p>si|sí</p>
+    </cell>
+    <cell>
+     <p>si|sí</p>
+    </cell>
+    <cell>
+     <p>no</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="texto1.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="24" />
+     </style>
+     <p>Completa los huecos con la palabra adecuada y pulsa INTRO para cada uno.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="24" />
+     </style>
+     <p>Enhorabuena</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF8000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" size="17" background="0xFFFFE8" family="Arial" bold="false" foreground="0x000000" italic="false" tabWidth="16" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text>  Recordemos que las raíces de índice 2 se denominan RAÍCES </text>
+      <target>
+       <answer>CUADRADAS</answer>
+       <response fill="." length="9" maxLength="9" />
+       <text>CUADRADAS</text>
+      </target>
+      <text>. Cuando no aparece el índice en una raíz se sobreentiende que es </text>
+      <target>
+       <answer>2</answer>
+       <answer>dos</answer>
+       <response fill="." length="2" maxLength="3" />
+       <text>2</text>
+      </target>
+      <text> .</text>
+     </p>
+     <p />
+     <p>
+      <text>  Las raíces de índice 3 se denominan RAÍCES </text>
+      <target>
+       <answer>CÚBICAS</answer>
+       <answer>cubicas</answer>
+       <response fill="." length="7" maxLength="7" />
+       <text>CÚBICAS</text>
+      </target>
+      <text> .</text>
+     </p>
+     <p />
+     <p>
+      <text>  Las únicas raíces que no se pueden calcular son las que tienen el radicando </text>
+      <target>
+       <answer>negativo</answer>
+       <response fill="." length="8" maxLength="8" />
+       <text>negativo</text>
+      </target>
+      <text> y el </text>
+      <target>
+       <answer>índice par</answer>
+       <answer>indice par</answer>
+       <response fill="." length="10" maxLength="10" />
+       <text>índice par</text>
+      </target>
+      <text> .</text>
+     </p>
+     <p />
+     <p>
+      <text>  Sin embargo, las raíces de radicando negativo pero índice </text>
+      <target>
+       <answer>impar</answer>
+       <response fill="." length="5" maxLength="5" />
+       <text>impar</text>
+      </target>
+      <text> sí se pueden calcular.</text>
+     </p>
+     <p />
+     <p>
+      <text>  Para acabar, las raíces de índice par y radicando positivo admiten </text>
+      <target>
+       <answer>dos</answer>
+       <optionList>
+        <option>una</option>
+        <option>dos</option>
+        <option>tres</option>
+       </optionList>
+       <text>dos</text>
+      </target>
+      <text> soluciones, una </text>
+      <target>
+       <answer>positiva</answer>
+       <response fill="." length="8" maxLength="8" />
+       <text>positiva</text>
+      </target>
+      <text> y otra </text>
+      <target>
+       <answer>negativa</answer>
+       <response fill="." length="8" maxLength="8" />
+       <text>negativa</text>
+      </target>
+      <text> .</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="18.gif" file="18.gif" animated="false" />
+  <media name="18dos.gif" file="18dos.gif" animated="false" />
+  <media name="asc11.gif" file="asc11.gif" animated="false" />
+  <media name="asc12.gif" file="asc12.gif" animated="false" />
+  <media name="asc13.gif" file="asc13.gif" animated="false" />
+  <media name="asc14.gif" file="asc14.gif" animated="false" />
+  <media name="asc15.gif" file="asc15.gif" animated="false" />
+  <media name="asc16.gif" file="asc16.gif" animated="false" />
+  <media name="asc17.gif" file="asc17.gif" animated="false" />
+  <media name="asc18.gif" file="asc18.gif" animated="false" />
+  <media name="asc19.gif" file="asc19.gif" animated="false" />
+  <media name="asp101.gif" file="asp101.gif" animated="false" />
+  <media name="asp1011.gif" file="asp1011.gif" animated="false" />
+  <media name="asp102.gif" file="asp102.gif" animated="false" />
+  <media name="asp1022.gif" file="asp1022.gif" animated="false" />
+  <media name="asp103.gif" file="asp103.gif" animated="false" />
+  <media name="asp1033.gif" file="asp1033.gif" animated="false" />
+  <media name="asp104.gif" file="asp104.gif" animated="false" />
+  <media name="asp1044.gif" file="asp1044.gif" animated="false" />
+  <media name="asp105.gif" file="asp105.gif" animated="false" />
+  <media name="asp1055.gif" file="asp1055.gif" animated="false" />
+  <media name="asp106.gif" file="asp106.gif" animated="false" />
+  <media name="asp1066.gif" file="asp1066.gif" animated="false" />
+  <media name="asp11.gif" file="asp11.gif" animated="false" />
+  <media name="asp111.gif" file="asp111.gif" animated="false" />
+  <media name="asp1111.gif" file="asp1111.gif" animated="false" />
+  <media name="asp11111.gif" file="asp11111.gif" animated="false" />
+  <media name="asp1112.gif" file="asp1112.gif" animated="false" />
+  <media name="asp11122.gif" file="asp11122.gif" animated="false" />
+  <media name="asp1113.gif" file="asp1113.gif" animated="false" />
+  <media name="asp11133.gif" file="asp11133.gif" animated="false" />
+  <media name="asp1114.gif" file="asp1114.gif" animated="false" />
+  <media name="asp11144.gif" file="asp11144.gif" animated="false" />
+  <media name="asp1115.gif" file="asp1115.gif" animated="false" />
+  <media name="asp11155.gif" file="asp11155.gif" animated="false" />
+  <media name="asp1116.gif" file="asp1116.gif" animated="false" />
+  <media name="asp11166.gif" file="asp11166.gif" animated="false" />
+  <media name="asp12.gif" file="asp12.gif" animated="false" />
+  <media name="asp1211.gif" file="asp1211.gif" animated="false" />
+  <media name="asp12111.gif" file="asp12111.gif" animated="false" />
+  <media name="asp122.gif" file="asp122.gif" animated="false" />
+  <media name="asp1222.gif" file="asp1222.gif" animated="false" />
+  <media name="asp12222.gif" file="asp12222.gif" animated="false" />
+  <media name="asp1233.gif" file="asp1233.gif" animated="false" />
+  <media name="asp12333.gif" file="asp12333.gif" animated="false" />
+  <media name="asp1244.gif" file="asp1244.gif" animated="false" />
+  <media name="asp12444.gif" file="asp12444.gif" animated="false" />
+  <media name="asp1255.gif" file="asp1255.gif" animated="false" />
+  <media name="asp12555.gif" file="asp12555.gif" animated="false" />
+  <media name="asp1266.gif" file="asp1266.gif" animated="false" />
+  <media name="asp12666.gif" file="asp12666.gif" animated="false" />
+  <media name="asp13.gif" file="asp13.gif" animated="false" />
+  <media name="asp1311.gif" file="asp1311.gif" animated="false" />
+  <media name="asp13111.gif" file="asp13111.gif" animated="false" />
+  <media name="asp1322.gif" file="asp1322.gif" animated="false" />
+  <media name="asp13222.gif" file="asp13222.gif" animated="false" />
+  <media name="asp133.gif" file="asp133.gif" animated="false" />
+  <media name="asp1333.gif" file="asp1333.gif" animated="false" />
+  <media name="asp13333.gif" file="asp13333.gif" animated="false" />
+  <media name="asp1344.gif" file="asp1344.gif" animated="false" />
+  <media name="asp13444.gif" file="asp13444.gif" animated="false" />
+  <media name="asp1355.gif" file="asp1355.gif" animated="false" />
+  <media name="asp13555.gif" file="asp13555.gif" animated="false" />
+  <media name="asp1366.gif" file="asp1366.gif" animated="false" />
+  <media name="asp13666.gif" file="asp13666.gif" animated="false" />
+  <media name="asp14.gif" file="asp14.gif" animated="false" />
+  <media name="asp1411.gif" file="asp1411.gif" animated="false" />
+  <media name="asp14111.gif" file="asp14111.gif" animated="false" />
+  <media name="asp1422.gif" file="asp1422.gif" animated="false" />
+  <media name="asp14222.gif" file="asp14222.gif" animated="false" />
+  <media name="asp1433.gif" file="asp1433.gif" animated="false" />
+  <media name="asp14333.gif" file="asp14333.gif" animated="false" />
+  <media name="asp144.gif" file="asp144.gif" animated="false" />
+  <media name="asp1444.gif" file="asp1444.gif" animated="false" />
+  <media name="asp14444.gif" file="asp14444.gif" animated="false" />
+  <media name="asp1455.gif" file="asp1455.gif" animated="false" />
+  <media name="asp14555.gif" file="asp14555.gif" animated="false" />
+  <media name="asp1466.gif" file="asp1466.gif" animated="false" />
+  <media name="asp14666.gif" file="asp14666.gif" animated="false" />
+  <media name="asp15.gif" file="asp15.gif" animated="false" />
+  <media name="asp1511.gif" file="asp1511.gif" animated="false" />
+  <media name="asp15111.gif" file="asp15111.gif" animated="false" />
+  <media name="asp1522.gif" file="asp1522.gif" animated="false" />
+  <media name="asp15222.gif" file="asp15222.gif" animated="false" />
+  <media name="asp1533.gif" file="asp1533.gif" animated="false" />
+  <media name="asp15333.gif" file="asp15333.gif" animated="false" />
+  <media name="asp1544.gif" file="asp1544.gif" animated="false" />
+  <media name="asp15444.gif" file="asp15444.gif" animated="false" />
+  <media name="asp155.gif" file="asp155.gif" animated="false" />
+  <media name="asp1555.gif" file="asp1555.gif" animated="false" />
+  <media name="asp15555.gif" file="asp15555.gif" animated="false" />
+  <media name="asp1566.gif" file="asp1566.gif" animated="false" />
+  <media name="asp15666.gif" file="asp15666.gif" animated="false" />
+  <media name="asp1577.gif" file="asp1577.gif" animated="false" />
+  <media name="asp15777.gif" file="asp15777.gif" animated="false" />
+  <media name="asp1588.gif" file="asp1588.gif" animated="false" />
+  <media name="asp15888.gif" file="asp15888.gif" animated="false" />
+  <media name="asp16.gif" file="asp16.gif" animated="false" />
+  <media name="asp166.gif" file="asp166.gif" animated="false" />
+  <media name="asp21.gif" file="asp21.gif" animated="false" />
+  <media name="asp22.gif" file="asp22.gif" animated="false" />
+  <media name="asp23.gif" file="asp23.gif" animated="false" />
+  <media name="asp24.gif" file="asp24.gif" animated="false" />
+  <media name="asp25.gif" file="asp25.gif" animated="false" />
+  <media name="asp26.gif" file="asp26.gif" animated="false" />
+  <media name="asp31.gif" file="asp31.gif" animated="false" />
+  <media name="asp311.gif" file="asp311.gif" animated="false" />
+  <media name="asp32.gif" file="asp32.gif" animated="false" />
+  <media name="asp322.gif" file="asp322.gif" animated="false" />
+  <media name="asp33.gif" file="asp33.gif" animated="false" />
+  <media name="asp333.gif" file="asp333.gif" animated="false" />
+  <media name="asp34.gif" file="asp34.gif" animated="false" />
+  <media name="asp344.gif" file="asp344.gif" animated="false" />
+  <media name="asp35.gif" file="asp35.gif" animated="false" />
+  <media name="asp355.gif" file="asp355.gif" animated="false" />
+  <media name="asp36.gif" file="asp36.gif" animated="false" />
+  <media name="asp366.gif" file="asp366.gif" animated="false" />
+  <media name="asp37.gif" file="asp37.gif" animated="false" />
+  <media name="asp377.gif" file="asp377.gif" animated="false" />
+  <media name="asp38.gif" file="asp38.gif" animated="false" />
+  <media name="asp388.gif" file="asp388.gif" animated="false" />
+  <media name="asp39.gif" file="asp39.gif" animated="false" />
+  <media name="asp399.gif" file="asp399.gif" animated="false" />
+  <media name="asp41.gif" file="asp41.gif" animated="false" />
+  <media name="asp411.gif" file="asp411.gif" animated="false" />
+  <media name="asp42.gif" file="asp42.gif" animated="false" />
+  <media name="asp422.gif" file="asp422.gif" animated="false" />
+  <media name="asp43.gif" file="asp43.gif" animated="false" />
+  <media name="asp433.gif" file="asp433.gif" animated="false" />
+  <media name="asp44.gif" file="asp44.gif" animated="false" />
+  <media name="asp444.gif" file="asp444.gif" animated="false" />
+  <media name="asp45.gif" file="asp45.gif" animated="false" />
+  <media name="asp455.gif" file="asp455.gif" animated="false" />
+  <media name="asp46.gif" file="asp46.gif" animated="false" />
+  <media name="asp466.gif" file="asp466.gif" animated="false" />
+  <media name="asp51.gif" file="asp51.gif" animated="false" />
+  <media name="asp511.gif" file="asp511.gif" animated="false" />
+  <media name="asp52.gif" file="asp52.gif" animated="false" />
+  <media name="asp522.gif" file="asp522.gif" animated="false" />
+  <media name="asp53.gif" file="asp53.gif" animated="false" />
+  <media name="asp533.gif" file="asp533.gif" animated="false" />
+  <media name="asp54.gif" file="asp54.gif" animated="false" />
+  <media name="asp544.gif" file="asp544.gif" animated="false" />
+  <media name="asp55.gif" file="asp55.gif" animated="false" />
+  <media name="asp555.gif" file="asp555.gif" animated="false" />
+  <media name="asp56.gif" file="asp56.gif" animated="false" />
+  <media name="asp566.gif" file="asp566.gif" animated="false" />
+  <media name="asp61.gif" file="asp61.gif" animated="false" />
+  <media name="asp611.gif" file="asp611.gif" animated="false" />
+  <media name="asp62.gif" file="asp62.gif" animated="false" />
+  <media name="asp622.gif" file="asp622.gif" animated="false" />
+  <media name="asp63.gif" file="asp63.gif" animated="false" />
+  <media name="asp633.gif" file="asp633.gif" animated="false" />
+  <media name="asp64.gif" file="asp64.gif" animated="false" />
+  <media name="asp644.gif" file="asp644.gif" animated="false" />
+  <media name="asp65.gif" file="asp65.gif" animated="false" />
+  <media name="asp655.gif" file="asp655.gif" animated="false" />
+  <media name="asp66.gif" file="asp66.gif" animated="false" />
+  <media name="asp666.gif" file="asp666.gif" animated="false" />
+  <media name="asp67.gif" file="asp67.gif" animated="false" />
+  <media name="asp677.gif" file="asp677.gif" animated="false" />
+  <media name="asp71.gif" file="asp71.gif" animated="false" />
+  <media name="asp711.gif" file="asp711.gif" animated="false" />
+  <media name="asp72.gif" file="asp72.gif" animated="false" />
+  <media name="asp722.gif" file="asp722.gif" animated="false" />
+  <media name="asp73.gif" file="asp73.gif" animated="false" />
+  <media name="asp733.gif" file="asp733.gif" animated="false" />
+  <media name="asp74.gif" file="asp74.gif" animated="false" />
+  <media name="asp744.gif" file="asp744.gif" animated="false" />
+  <media name="asp75.gif" file="asp75.gif" animated="false" />
+  <media name="asp755.gif" file="asp755.gif" animated="false" />
+  <media name="asp76.gif" file="asp76.gif" animated="false" />
+  <media name="asp766.gif" file="asp766.gif" animated="false" />
+  <media name="asp81.gif" file="asp81.gif" animated="false" />
+  <media name="asp811.gif" file="asp811.gif" animated="false" />
+  <media name="asp82.gif" file="asp82.gif" animated="false" />
+  <media name="asp822.gif" file="asp822.gif" animated="false" />
+  <media name="asp83.gif" file="asp83.gif" animated="false" />
+  <media name="asp833.gif" file="asp833.gif" animated="false" />
+  <media name="asp84.gif" file="asp84.gif" animated="false" />
+  <media name="asp844.gif" file="asp844.gif" animated="false" />
+  <media name="asp85.gif" file="asp85.gif" animated="false" />
+  <media name="asp855.gif" file="asp855.gif" animated="false" />
+  <media name="asp86.gif" file="asp86.gif" animated="false" />
+  <media name="asp866.gif" file="asp866.gif" animated="false" />
+  <media name="asp91.gif" file="asp91.gif" animated="false" />
+  <media name="asp911.gif" file="asp911.gif" animated="false" />
+  <media name="asp92.gif" file="asp92.gif" animated="false" />
+  <media name="asp922.gif" file="asp922.gif" animated="false" />
+  <media name="asp93.gif" file="asp93.gif" animated="false" />
+  <media name="asp933.gif" file="asp933.gif" animated="false" />
+  <media name="asp94.gif" file="asp94.gif" animated="false" />
+  <media name="asp944.gif" file="asp944.gif" animated="false" />
+  <media name="asp95.gif" file="asp95.gif" animated="false" />
+  <media name="asp955.gif" file="asp955.gif" animated="false" />
+  <media name="asp96.gif" file="asp96.gif" animated="false" />
+  <media name="asp966.gif" file="asp966.gif" animated="false" />
+  <media name="ident11.gif" file="ident11.gif" animated="false" />
+  <media name="ident12.gif" file="ident12.gif" animated="false" />
+  <media name="ident13.gif" file="ident13.gif" animated="false" />
+  <media name="ident14.gif" file="ident14.gif" animated="false" />
+  <media name="ident15.gif" file="ident15.gif" animated="false" />
+  <media name="ident16.gif" file="ident16.gif" animated="false" />
+  <media name="ident21.gif" file="ident21.gif" animated="false" />
+  <media name="ident22.gif" file="ident22.gif" animated="false" />
+  <media name="ident23.gif" file="ident23.gif" animated="false" />
+  <media name="ident24.gif" file="ident24.gif" animated="false" />
+  <media name="ident25.gif" file="ident25.gif" animated="false" />
+  <media name="ident26.gif" file="ident26.gif" animated="false" />
+  <media name="ident27.gif" file="ident27.gif" animated="false" />
+  <media name="ident28.gif" file="ident28.gif" animated="false" />
+  <media name="ident29.gif" file="ident29.gif" animated="false" />
+  <media name="nuvols.gif" file="nuvols.gif" animated="false" />
+  <media name="ptll12.gif" file="ptll12.gif" animated="false" />
+  <media name="ptll131.gif" file="ptll131.gif" animated="false" />
+  <media name="ptll132.gif" file="ptll132.gif" animated="false" />
+  <media name="ptll141.gif" file="ptll141.gif" animated="false" />
+  <media name="ptll142.gif" file="ptll142.gif" animated="false" />
+  <media name="ptll2.gif" file="ptll2.gif" animated="false" />
+  <media name="ptll3.gif" file="ptll3.gif" animated="false" />
+  <media name="ptll4.gif" file="ptll4.gif" animated="false" />
+  <media name="ptll7.gif" file="ptll7.gif" animated="false" />
+  <media name="ptll72.gif" file="ptll72.gif" animated="false" />
+  <media name="raiz11.gif" file="raiz11.gif" animated="false" />
+  <media name="raiz12.gif" file="raiz12.gif" animated="false" />
+  <media name="raiz13.gif" file="raiz13.gif" animated="false" />
+  <media name="raiz14.gif" file="raiz14.gif" animated="false" />
+  <media name="raiz15.gif" file="raiz15.gif" animated="false" />
+  <media name="raiz16.gif" file="raiz16.gif" animated="false" />
+  <media name="raiz2v1.gif" file="raiz2v1.gif" animated="false" />
+  <media name="raiz2v2.gif" file="raiz2v2.gif" animated="false" />
+  <media name="raiz2v3.gif" file="raiz2v3.gif" animated="false" />
+  <media name="raiz2v4.gif" file="raiz2v4.gif" animated="false" />
+  <media name="raiz2v5.gif" file="raiz2v5.gif" animated="false" />
+  <media name="raiz2v6.gif" file="raiz2v6.gif" animated="false" />
+  <media name="rpesc11.gif" file="rpesc11.gif" animated="false" />
+  <media name="rpesc12.gif" file="rpesc12.gif" animated="false" />
+  <media name="rpesc13.gif" file="rpesc13.gif" animated="false" />
+  <media name="rpesc14.gif" file="rpesc14.gif" animated="false" />
+  <media name="rpesc15.gif" file="rpesc15.gif" animated="false" />
+  <media name="rpesc16.gif" file="rpesc16.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

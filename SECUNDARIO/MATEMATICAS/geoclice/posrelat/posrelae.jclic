@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="posrelae" version="0.1.3">
+ <settings>
+  <title>posrelae</title>
+  <revision description="created" date="6/3/02" />
+  <descriptors />
+ </settings>
+ <sequence>
+  <item id="posrelae.pac" name="paq29int.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="espai2.ass" />
+  <item name="espai7.ass" />
+  <item name="espai1.ass" />
+  <item name="espai3.ass" />
+  <item name="espai4.ass" />
+  <item name="espai6.ass" />
+  <item name="espai13.ass" />
+  <item name="espai12.ass" />
+  <item name="espai5.ass" />
+  <item name="espai8.ass" />
+  <item name="espai9.ass" />
+  <item name="espai10.ass" />
+  <item name="espai11.ass" />
+  <item name="paq29fi.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.SimpleAssociation" name="espai1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Haz corresponder cada propiedad de los planos en el espacio con la figura correspondiente.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="2" border="true" image="espai1a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+   </cells>
+   <cells rows="4" cols="2" cellWidth="170.0" cellHeight="110.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <p>Por tres puntos, no alineados, pasa un solo plano</p>
+    </cell>
+    <cell>
+     <p>Por una recta y por un punto exterior a ella pasa un solo plano</p>
+    </cell>
+    <cell>
+     <p>Por dos rectar que se cortan pasa un solo plano</p>
+    </cell>
+    <cell>
+     <p>Por dos rectas paralelas pasa un solo plano</p>
+    </cell>
+    <cell>
+     <p>Por una recta pasan infinitos planos</p>
+    </cell>
+    <cell>
+     <p>La recta que pasa por dos puntos de un plano está toda ella contenida en el plano</p>
+    </cell>
+    <cell>
+     <p>Si dos planos se cortan, su intersección es una recta</p>
+    </cell>
+    <cell>
+     <p>Si dos planos no se cortan, son paralelos</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="2" border="true" image="espai1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="4" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="espai10.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Si esta figura es un cubo, ¿cuál es la posición relativa de cada par de planos?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="espai10a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <ids>5 1 0 0 1 2</ids>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="160.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="16" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>SE CORTAN PERPENDICULARMENTE</p>
+    </cell>
+    <cell>
+     <p>SE CORTAN OBLICUAMENTE</p>
+    </cell>
+    <cell>
+     <p>SON PARALELOS</p>
+    </cell>
+    <cell>
+     <p>SE CRUZAN PERPENDICULARMENTE</p>
+    </cell>
+    <cell>
+     <p>SE CRUZAN OBLICUAMENTE</p>
+    </cell>
+    <cell>
+     <p>SON COINCIDENTES</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" border="true" image="espai10c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="espai11.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Si esta figura es un cubo, ¿cuál es la posición relativa de cada par recta-plano?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="espai11a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <ids>1 5 2 1 2 0</ids>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="160.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="16" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>SE CORTAN PERPENDICULARMENTE</p>
+    </cell>
+    <cell>
+     <p>SE CORTAN OBLICUAMENTE</p>
+    </cell>
+    <cell>
+     <p>SON PARALELOS</p>
+    </cell>
+    <cell>
+     <p>SE CRUZAN PERPENDICULARMENTE</p>
+    </cell>
+    <cell>
+     <p>SE CRUZAN OBLICUAMENTE</p>
+    </cell>
+    <cell>
+     <p>LA RECTA ESTÁ CONTENIDA EN EL PLANO</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" border="true" image="espai11c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="espai12.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Completa estos dos esquemas de posiciones relativas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="3" border="false" image="espai12a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="3" rows="5" showEnclosure="true" scaleX="3.0" scaleY="5.0">
+     <enclosing>
+      <shape>rectangle:0,0,3,5</shape>
+     </enclosing>
+     <shape>rectangle:2,0,1,1</shape>
+     <shape>rectangle:1,1,1,1</shape>
+     <shape>rectangle:1,2,1,1</shape>
+     <shape>rectangle:2,3,1,1</shape>
+     <shape>rectangle:1,4,1,1</shape>
+    </shaper>
+    <ids>0 1 3 4 5</ids>
+   </cells>
+   <cells rows="8" cols="1" border="false" image="espai12b.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="8" />
+   </cells>
+   <cells rows="5" cols="3" border="false" image="espai12c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="3" rows="5" showEnclosure="true" scaleX="3.0" scaleY="5.0">
+     <enclosing>
+      <shape>rectangle:0,0,3,5</shape>
+     </enclosing>
+     <shape>rectangle:2,0,1,1</shape>
+     <shape>rectangle:1,1,1,1</shape>
+     <shape>rectangle:1,2,1,1</shape>
+     <shape>rectangle:2,3,1,1</shape>
+     <shape>rectangle:1,4,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="espai13.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Completa estos dos esquemas de posiciones relativas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="4" border="false" image="espai13a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="4" rows="5" showEnclosure="true" scaleX="4.0" scaleY="5.0">
+     <enclosing>
+      <shape>rectangle:0,0,4,5</shape>
+     </enclosing>
+     <shape>rectangle:3,0,1,1</shape>
+     <shape>rectangle:2,1,1,1</shape>
+     <shape>rectangle:3,2,1,1</shape>
+     <shape>rectangle:2,3,1,1</shape>
+     <shape>rectangle:3,4,1,1</shape>
+    </shaper>
+    <ids>0 1 2 3 4</ids>
+   </cells>
+   <cells rows="8" cols="1" border="false" image="espai13b.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="8" />
+   </cells>
+   <cells rows="5" cols="4" border="false" image="espai13c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="4" rows="5" showEnclosure="true" scaleX="4.0" scaleY="5.0">
+     <enclosing>
+      <shape>rectangle:0,0,4,5</shape>
+     </enclosing>
+     <shape>rectangle:3,0,1,1</shape>
+     <shape>rectangle:2,1,1,1</shape>
+     <shape>rectangle:3,2,1,1</shape>
+     <shape>rectangle:2,3,1,1</shape>
+     <shape>rectangle:3,4,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="espai2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Cuáles de estos elementos determinan una recta?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="espai2a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <ids>1 1 0 0 0 0</ids>
+   </cells>
+   <cells rows="2" cols="3" border="true" image="espai2c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="espai3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Si esta figura es un cubo, ¿cuál es la posición relativa de cada par de rectas?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="espai3a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <ids>0 1 2 0 1 2</ids>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="200.0" cellHeight="40.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>SE CORTAN</p>
+    </cell>
+    <cell>
+     <p>SON PARALELAS</p>
+    </cell>
+    <cell>
+     <p>SE CRUZAN</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" border="true" image="espai3c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="espai4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Si esta figura es un cubo, ¿cuál es la posición relativa de cada par de planos?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="espai4a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <ids>0 0 1 1 2 2</ids>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="200.0" cellHeight="40.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>SON COINCIDENTES</p>
+    </cell>
+    <cell>
+     <p>SE CORTAN</p>
+    </cell>
+    <cell>
+     <p>SON PARALELAS</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" border="true" image="espai4c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="espai5.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Completa la ventana con las correspondientes posiciones relativas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="6" cols="8" border="false" image="espai5a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="8" rows="6" showEnclosure="true" scaleX="8.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,8,6</shape>
+     </enclosing>
+     <shape>rectangle:4,2,1,1</shape>
+     <shape>rectangle:5,2,1,1</shape>
+     <shape>rectangle:6,2,1,1</shape>
+     <shape>rectangle:4,3,1,1</shape>
+     <shape>rectangle:5,3,2,1</shape>
+     <shape>rectangle:4,4,1,1</shape>
+     <shape>rectangle:5,4,2,1</shape>
+    </shaper>
+    <ids>0 1 2 3 4 2 0</ids>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="135.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>SE CORTAN</p>
+    </cell>
+    <cell>
+     <p>SON COINCIDENTES</p>
+    </cell>
+    <cell>
+     <p>LA RECTA ESTÁ CONTENIDA EN EL PLANO</p>
+    </cell>
+    <cell>
+     <p>SE CRUZAN</p>
+    </cell>
+    <cell>
+     <p>SON PARALELOS/AS</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="8" border="false" image="espai5c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="8" rows="6" showEnclosure="true" scaleX="8.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,8,6</shape>
+     </enclosing>
+     <shape>rectangle:4,2,1,1</shape>
+     <shape>rectangle:5,2,1,1</shape>
+     <shape>rectangle:6,2,1,1</shape>
+     <shape>rectangle:4,3,1,1</shape>
+     <shape>rectangle:5,3,2,1</shape>
+     <shape>rectangle:4,4,1,1</shape>
+     <shape>rectangle:5,4,2,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="espai6.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Si esta figura es un cubo, ¿cuál es la posición relativa de cada par plano-recta?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="espai6a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <ids>0 0 1 1 2 2</ids>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="200.0" cellHeight="45.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>LA RECTA ESTÁ CONTENIDA EN EL PLANO</p>
+    </cell>
+    <cell>
+     <p>SON PARALELOS</p>
+    </cell>
+    <cell>
+     <p>SE CORTAN</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" border="true" image="espai6c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="espai7.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Cuáles de estos elementos determinan un plano?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="espai7a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <ids>1 1 1 1 0 0</ids>
+   </cells>
+   <cells rows="2" cols="3" border="true" image="espai7c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="espai8.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Completa la ventana con las correspondientes posiciones relativas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="6" cols="8" border="false" image="espai8a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="8" rows="6" showEnclosure="true" scaleX="8.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,8,6</shape>
+     </enclosing>
+     <shape>rectangle:4,2,1,1</shape>
+     <shape>rectangle:5,2,2,1</shape>
+     <shape>rectangle:4,3,1,1</shape>
+     <shape>rectangle:5,3,1,1</shape>
+     <shape>rectangle:6,3,1,1</shape>
+     <shape>rectangle:4,4,1,1</shape>
+     <shape>rectangle:5,4,1,1</shape>
+     <shape>rectangle:6,4,1,1</shape>
+    </shaper>
+    <ids>2 0 0 2 3 2 0 2</ids>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="135.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>SE CORTAN</p>
+    </cell>
+    <cell>
+     <p>SON COINCIDENTES</p>
+    </cell>
+    <cell>
+     <p>LA RECTA ESTÁ CONTENIDA EN EL PLANO</p>
+    </cell>
+    <cell>
+     <p>SE CRUZAN</p>
+    </cell>
+    <cell>
+     <p>SON PARALELOS/AS</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="8" border="false" image="espai8c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="8" rows="6" showEnclosure="true" scaleX="8.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,8,6</shape>
+     </enclosing>
+     <shape>rectangle:4,2,1,1</shape>
+     <shape>rectangle:5,2,2,1</shape>
+     <shape>rectangle:4,3,1,1</shape>
+     <shape>rectangle:5,3,1,1</shape>
+     <shape>rectangle:6,3,1,1</shape>
+     <shape>rectangle:4,4,1,1</shape>
+     <shape>rectangle:5,4,1,1</shape>
+     <shape>rectangle:6,4,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="espai9.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Si esta figura es un cubo, ¿cuál es la posición relativa de cada par de rectas?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="espai9a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <ids>0 2 1 0 4 3</ids>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="160.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="16" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>SE CORTAN PERPENDICULARMENTE</p>
+    </cell>
+    <cell>
+     <p>SE CORTAN OBLICUAMENTE</p>
+    </cell>
+    <cell>
+     <p>SON PERALELOS</p>
+    </cell>
+    <cell>
+     <p>SE CRUZAN PERPENDICULARMENTE</p>
+    </cell>
+    <cell>
+     <p>SE CRUZAN OBLICUAMENTE</p>
+    </cell>
+    <cell>
+     <p>SON COINCIDENTES</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" border="true" image="espai9c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="paq29fi.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic sobre la flecha de la derecha para volver al menú         &gt;&gt;&gt;</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="portada1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="60.0" border="false">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>FIN DEL PAQUETE 29</p>
+    </cell>
+    <cell>
+     <p>POSICIONES RELATIVAS DE RECTAS Y PLANOS</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="paq29int.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic sobre la flecha para iniciar el paquete de actividades         &gt;&gt;&gt;</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="portada1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="60.0" border="false">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>GEOCLIC - PAQUETE 29</p>
+    </cell>
+    <cell>
+     <p>POSICIONES RELATIVAS DE RECTAS Y PLANOS</p>
+    </cell>
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="espai10a.gif" file="espai10a.gif" animated="false" />
+  <media name="espai10c.gif" file="espai10c.gif" animated="false" />
+  <media name="espai11a.gif" file="espai11a.gif" animated="false" />
+  <media name="espai11c.gif" file="espai11c.gif" animated="false" />
+  <media name="espai12a.gif" file="espai12a.gif" animated="false" />
+  <media name="espai12b.gif" file="espai12b.gif" animated="false" />
+  <media name="espai12c.gif" file="espai12c.gif" animated="false" />
+  <media name="espai13a.gif" file="espai13a.gif" animated="false" />
+  <media name="espai13b.gif" file="espai13b.gif" animated="false" />
+  <media name="espai13c.gif" file="espai13c.gif" animated="false" />
+  <media name="espai1a.gif" file="espai1a.gif" animated="false" />
+  <media name="espai1c.gif" file="espai1c.gif" animated="false" />
+  <media name="espai2a.gif" file="espai2a.gif" animated="false" />
+  <media name="espai2c.gif" file="espai2c.gif" animated="false" />
+  <media name="espai3a.gif" file="espai3a.gif" animated="false" />
+  <media name="espai3c.gif" file="espai3c.gif" animated="false" />
+  <media name="espai4a.gif" file="espai4a.gif" animated="false" />
+  <media name="espai4c.gif" file="espai4c.gif" animated="false" />
+  <media name="espai5a.gif" file="espai5a.gif" animated="false" />
+  <media name="espai5c.gif" file="espai5c.gif" animated="false" />
+  <media name="espai6a.gif" file="espai6a.gif" animated="false" />
+  <media name="espai6c.gif" file="espai6c.gif" animated="false" />
+  <media name="espai7a.gif" file="espai7a.gif" animated="false" />
+  <media name="espai7c.gif" file="espai7c.gif" animated="false" />
+  <media name="espai8a.gif" file="espai8a.gif" animated="false" />
+  <media name="espai8c.gif" file="espai8c.gif" animated="false" />
+  <media name="espai9a.gif" file="espai9a.gif" animated="false" />
+  <media name="espai9c.gif" file="espai9c.gif" animated="false" />
+  <media name="portada1.gif" file="portada1.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

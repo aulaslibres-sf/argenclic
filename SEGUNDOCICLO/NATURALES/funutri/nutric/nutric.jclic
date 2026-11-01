@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="nutric" version="0.1.3">
+ <settings>
+  <title>La función de nutrición</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="6/12/03" />
+  <revision description="Conversión de Clic3 a JClic" date="5/13/03">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="María Feliciana Lara Romero" mail="mariafelara@hispavista.com" />
+  <organization name="CEIP Eduardo Sanchiz" mail="colegiotarazona@terra.es" url="http://centros1.pntic.mec.es/cp.eduardo.sanchiz/" city="Tarazona de la Mancha - Albacete" state="Castilla - La Mancha" />
+  <language>es</language>
+  <description>
+   <p>Paquete de actividades sobre la función de nutrición humana. Consta de cinco paquetes; en cuatro de ellos se desarrollan cada uno de los aparatos que colaboran en la realización de dicha función y en el otro se da una visión integrada de los mismos.&lt;BR&gt;</p>
+   <p>Contiene archivos de vídeo que permiten ver el funcionamiento del corazón y de los pulmones.</p>
+  </description>
+  <descriptors area-codes="exp" level="Primaria">circulatorio, digestivo, excretor, respiratorio, nutrición</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Paquete de actividades sobre la función de nutrición humana. Consta de cinco paquetes; en cuatro de ellos se desarrollan cada uno de los aparatos que colaboran en la realización de dicha función y en el otro se da una visión integrada de los mismos.&lt;BR&gt;</p>
+    <p>Contiene archivos de vídeo que permiten ver el funcionamiento del corazón y de los pulmones.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="nutric.pac" name="nutrici.txa">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="nu8.ass" />
+  <item name="d1.ass" />
+  <item name="nutr6.puz" />
+  <item name="nutric4.puz" />
+  <item name="nu3.puz" />
+  <item name="cricigra.crw" />
+  <item name="verd.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@text.FillInBlanks" name="nutrici.txa">
+   <messages>
+    <cell type="previous">
+     <style>
+      <font family="Arial" size="22" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>LEE EL TEXTO Y HAZ CLIC PARA COMENZAR LA ACTIVIDAD</p>
+    </cell>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="22" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Rellena los huecos para completar el texto</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="22" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x00FFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF80FF" border="true">
+     <size width="618" height="433" />
+    </window>
+   </settings>
+   <prevScreen />
+   <document>
+    <style name="default" size="19" background="0xFFFFFF" family="Arial" bold="true" foreground="0x000000" italic="false" tabWidth="16" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text>                              </text>
+      <cell width="450" height="45" border="true">
+       <style>
+        <font family="Arial" size="20" bold="true" />
+        <color foreground="0xFFFFFF" background="0x0000FF" />
+       </style>
+       <p>LA FUNCIÓN DE NUTRICIÓN</p>
+      </cell>
+     </p>
+     <p />
+     <p>
+      <text> La función de </text>
+      <target>
+       <answer>nutrición</answer>
+       <optionList>
+        <option>nutrición</option>
+        <option>Relación </option>
+        <option>Reproducción</option>
+       </optionList>
+       <text>nutrición</text>
+      </target>
+      <text> tiene como finalidad obtener los </text>
+      <target>
+       <answer>nutrientes</answer>
+       <response fill="_" length="10" maxLength="10" />
+       <info mode="onError">
+        <cell width="140" height="60">
+         <style>
+          <color background="0xFFFFFF" />
+         </style>
+         <p>Sustancias nutritivas</p>
+        </cell>
+       </info>
+       <text>nutrientes</text>
+      </target>
+      <text> y el oxígeno que los seres vivos necesitan.</text>
+     </p>
+     <p>
+      <text>Para completar la función de nutrición son necesarios los siguientes procesos :</text>
+     </p>
+     <p>
+      <text>La </text>
+      <target>
+       <answer>digestión</answer>
+       <optionList>
+        <option>circulación</option>
+        <option>nutrición</option>
+        <option>respiración</option>
+        <option>digestión</option>
+        <option>excrección</option>
+       </optionList>
+       <text>digestión</text>
+      </target>
+      <text>:  para obtener de los alimentos las sustancias aprovechables para el organismo.</text>
+     </p>
+     <p>
+      <text>La </text>
+      <target>
+       <answer>respiración</answer>
+       <optionList>
+        <option>circulación</option>
+        <option>nutrición</option>
+        <option>respiración</option>
+        <option>digestión</option>
+        <option>excrección</option>
+       </optionList>
+       <text>respiración</text>
+      </target>
+      <text>:  para obtener el </text>
+      <target>
+       <answer>oxígeno</answer>
+       <optionList>
+        <option>dióxido de carbono</option>
+        <option>hidrógeno</option>
+        <option>oxígeno</option>
+        <option>nitrógeno</option>
+       </optionList>
+       <text>oxígeno</text>
+      </target>
+      <text> del aire y eliminar el </text>
+      <target>
+       <answer>dióxido de carbono</answer>
+       <optionList>
+        <option>dióxido de carbono</option>
+        <option>hidrógeno</option>
+        <option>oxígeno</option>
+        <option>nitrógeno</option>
+       </optionList>
+       <text>dióxido de carbono</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p>
+      <text>La </text>
+      <target>
+       <answer>circulación</answer>
+       <optionList>
+        <option>circulación</option>
+        <option>nutrición</option>
+        <option>respiración</option>
+        <option>digestión</option>
+        <option>excrección</option>
+       </optionList>
+       <text>circulación</text>
+      </target>
+      <text>:  para repartir el </text>
+      <target>
+       <answer>oxígeno</answer>
+       <optionList>
+        <option>dióxido de carbono</option>
+        <option>hidrógeno</option>
+        <option>oxígeno</option>
+        <option>nitrógeno</option>
+       </optionList>
+       <text>oxígeno</text>
+      </target>
+      <text> y los </text>
+      <target>
+       <answer>nutrientes</answer>
+       <optionList>
+        <option>pienso</option>
+        <option>oxígeno</option>
+        <option>excrementos</option>
+        <option>nutrientes</option>
+       </optionList>
+       <text>nutrientes</text>
+      </target>
+      <text> por todas las células del organismo y recoger la sustancias de desecho.</text>
+     </p>
+     <p>
+      <text>La </text>
+      <target>
+       <answer>excrección</answer>
+       <optionList>
+        <option>circulación</option>
+        <option>nutrición</option>
+        <option>respiración</option>
+        <option>digestión</option>
+        <option>excrección</option>
+       </optionList>
+       <text>excrección</text>
+      </target>
+      <text>: para eliminar todas las sustancias de desecho inservibles para el organismo.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="nu8.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Asocia cada uno de los proceso de la nutrición  con su nombre y podrás ver los aparatos donde se realizan</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x80FFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF80FF" border="true" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="317.0" cellHeight="458.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell id="0">
+     <p>Sirve para obtener de los alimentos las sustancias que el  cuerpo humano necesita para vivir.</p>
+    </cell>
+    <cell id="1">
+     <p>Sirve para obtener del aire el oxígeno necesario para vivir y también para eliminar el dióxido de carbono.</p>
+    </cell>
+    <cell id="2">
+     <p>Sirve para repartir por todo el cuerpo el oxígeno  y las sustancias nutritivas y para recoger las sustancias de desecho   que se han ido formando en las células.</p>
+    </cell>
+    <cell id="3">
+     <p>Sirve para eliminar las sustancias de desecho que se han formado en el cuerpo.</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="4" cellWidth="317.0" cellHeight="42.0" border="true" id="secondary">
+    <style>
+     <color foreground="0xFFFFFF" background="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>DIGESTIÓN</p>
+    </cell>
+    <cell>
+     <p>RESPIRACIÓN</p>
+    </cell>
+    <cell>
+     <p>CIRCULACIÓN</p>
+    </cell>
+    <cell>
+     <p>EXCRECIÓN</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="4" cellWidth="317.0" cellHeight="458.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="ad.jpg" />
+    <cell image="ar.jpg" />
+    <cell image="ayvp.jpg" />
+    <cell image="ae.jpg" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="d1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="19" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Lee el texto sobre la función de nutrición y haz clic para ver el gráfico.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="19" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x00FFFF">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF80FF" border="true" />
+   </settings>
+   <cells rows="7" cols="1" cellWidth="363.0" cellHeight="76.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell id="0">
+     <p>         LA FUNCIÓN DE NUTRICIÓN</p>
+    </cell>
+    <cell id="0">
+     <p>La función de nutrición es un conjunto de procesos que sirven para obtener las sustancias nutritivas y el oxígeno que necesitamos para vivir.</p>
+    </cell>
+    <cell id="0">
+     <p>En la función de nutrición es necesaria la colaboración del aparato digestivo, el aparato respiratorio, el aparato circulatorio y el aparato excretor.</p>
+    </cell>
+    <cell id="0">
+     <p>Mediante la circulación, la sangre reparte por todo el cuerpo las sustancias nutritivas y el oxígeno.</p>
+    </cell>
+    <cell id="0">
+     <p>Cuando la sangre pasa por el intestino delgado, recoge las sustancias nutritivas procedentes de la digestión.</p>
+    </cell>
+    <cell id="0">
+     <p>Cuando la sangre pasa por los pulmones, toma oxígeno y cede dióxido de carbono.</p>
+    </cell>
+    <cell id="0">
+     <p>Cuando la sangre pasa por los riñones, se filtra y se eliminan parte de las sustancias de desecho que ha recogido en su recorrido por todo el cuerpo.</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" border="false" image="nutricon.jpg" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="nutr6.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="19" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Ordena el texto para ver como se completa la función de nutrición</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="19" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x00FFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF80FF" border="true" />
+   </settings>
+   <cells rows="7" cols="1" cellWidth="400.0" cellHeight="70.0" border="true">
+    <style>
+     <font family="Arial" size="18" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell>
+     <p>         LA FUNCIÓN DE NUTRICIÓN</p>
+    </cell>
+    <cell>
+     <p>La función de nutrición es un conjunto de procesos que sirven para obtener las sustancias nutritivas y el oxígeno que necesitamos para vivir.</p>
+    </cell>
+    <cell>
+     <p>En la función de nutrición es necesaria la colaboración del aparato digestivo, el aparato respiratorio, el aparato circulatorio y el aparato excretor.</p>
+    </cell>
+    <cell>
+     <p>Mediante la circulación, la sangre reparte por todo el cuerpo las sustancias nutritivas y el oxígeno.</p>
+    </cell>
+    <cell>
+     <p>Cuando la sangre pasa por el intestino delgado, recoge las sustancias nutritivas procedentes de la digestión.</p>
+    </cell>
+    <cell>
+     <p>Cuando la sangre pasa por los pulmones, toma oxígeno y cede dióxido de carbono.</p>
+    </cell>
+    <cell>
+     <p>Cuando la sangre pasa por los riñones, se filtra y se eliminan parte de las sustancias de desecho que ha recogido en su recorrido por todo el cuerpo.</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="nutric4.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Ordena las piezas del rompecabezas y verás como colaboran varios aparatos en la función de nutrición</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x00FFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF80FF" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="nutric~1.jpg">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="nu3.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="19" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Ordena las piezas del rompecabezas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="19" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x00FFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF80FF" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="nutricon.jpg">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@textGrid.CrossWord" name="cricigra.crw">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="19" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Resuelve el crucigrama</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="19" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x80FFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF80FF" border="true" />
+   </settings>
+   <textGrid rows="12" columns="9" cellWidth="23.0" cellHeight="28.0" border="true">
+    <style>
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>*****N******</row>
+     <row>*CIRCULACIÓN</row>
+     <row>DIGESTIÓN***</row>
+     <row>*****R******</row>
+     <row>*****I******</row>
+     <row>EXCRECIÓN***</row>
+     <row>*RESPIRACIÓN</row>
+     <row>*****Ó******</row>
+     <row>*****N******</row>
+    </text>
+   </textGrid>
+   <cells rows="9" cols="1" cellWidth="200.0" cellHeight="75.0" border="false" id="acrossClues">
+    <style>
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <cell id="1" item="0">
+     <p>Proceso que sirve para repartir el  óxigeno y las sustancias nutritivas</p>
+    </cell>
+    <cell id="2" item="0">
+     <p>Proceso en el que se tansforman  los alimentos en sustancias más sencillas</p>
+    </cell>
+    <cell id="5" item="0">
+     <p>Proceso por el que se eliminan las sustancias de desecho</p>
+    </cell>
+    <cell id="6" item="0">
+     <p>Proceso que sirve para obtener óxigeno y eliminar dióxido de carbono</p>
+    </cell>
+   </cells>
+   <cells rows="12" cols="1" cellWidth="200.0" cellHeight="75.0" border="false" id="downClues">
+    <style>
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <cell id="5" item="0">
+     <p>Una de las tres funciones vitales</p>
+    </cell>
+    <cell id="8" item="0">
+     <p>:</p>
+    </cell>
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="verd.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Asocia con verdarero o falso</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x80FFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF80FF" border="true" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="428.0" cellHeight="79.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="19" bold="true" />
+     <color foreground="0xFFFFFF" background="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <p>   La función de nutrición es un conjunto de procesos que sirven para obtener las sustancias nutritivas y el oxígeno que necesitamos para vivir.</p>
+    </cell>
+    <cell id="0">
+     <p>En la función de nutrición es necesaria la colaboración del aparato digestivo, el aparato respiratorio, el aparato circulatorio y el aparato excretor.</p>
+    </cell>
+    <cell id="0">
+     <p>Mediante la circulación, la sangre reparte por todo el cuerpo las sustancias nutritivas y el oxígeno.</p>
+    </cell>
+    <cell id="0">
+     <p>Cuando la sangre pasa por el intestino delgado, recoge las sustancias nutritivas procedentes de la digestión.</p>
+    </cell>
+    <cell id="1">
+     <p>Cuando la sangre pasa por los pulmones, toma dióxido de carbono  y cede  oxígeno.</p>
+    </cell>
+    <cell id="1">
+     <p>Cuando la sangre pasa por los riñones, se filtra y se eliminan parte de oxígeno que ha recogido en su recorrido por todo el cuerpo.</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="158.0" cellHeight="150.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="22" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>VERDADERO</p>
+    </cell>
+    <cell>
+     <p>FALSO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="ad.jpg" file="ad.jpg" />
+  <media name="ae.jpg" file="ae.jpg" />
+  <media name="ar.jpg" file="ar.jpg" />
+  <media name="ayvp.jpg" file="ayvp.jpg" />
+  <media name="nutricon.jpg" file="nutricon.jpg" />
+  <media name="nutric~1.jpg" file="nutric_1.jpg" />
+ </mediaBag>
+</JClicProject>
+

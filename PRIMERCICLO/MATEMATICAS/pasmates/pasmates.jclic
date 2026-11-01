@@ -1,0 +1,2938 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="pasmate" version="0.1.3">
+ <settings>
+  <title>Pasatiempos matemáticos 1</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="6/19/01" />
+  <revision description="Conversión de Clic3 a JClic" date="3/8/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="José Luis Oliván Rau" mail="pplu98@hotmail.com" />
+  <organization name="CEIP San Juan de la Peña" city="Jaca" state="Aragón" />
+  <language>Español</language>
+  <description>
+   <p>Conjunto de actividades en forma de pasatiempos para Educación Primaria del área de matemáticas. En el paquete encontramos ejercicios sobre:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Series numéricas.</p>
+   <p>&lt;LI&gt;Identificación de objetos iguales.</p>
+   <p>&lt;LI&gt;Crucigramas de números.</p>
+   <p>&lt;LI&gt;Cuántos cubos forman una figura.</p>
+   <p>&lt;LI&gt;Escritura de números.</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area="Matemáticas" level="Primaria">cálculo, simetrías, números ordinales</descriptors>
+ </settings>
+ <sequence>
+  <item id="pasmate.pac" name="pplu.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="domino1.ass" />
+  <item name="gafas.ass" />
+  <item name="cruc1.crw" />
+  <item name="p1.ass" />
+  <item name="libros.ass" />
+  <item name="p2.ass" />
+  <item name="rectang.ass" />
+  <item name="relojes1.ass" />
+  <item name="seri1.txa" />
+  <item name="sopnu1.sop" />
+  <item name="domino2.ass" />
+  <item name="cruc2.crw" />
+  <item name="sopor5.sop" />
+  <item name="domino3.ass" />
+  <item name="p3.ass" />
+  <item name="rectang1.ass" />
+  <item name="relojes2.ass" />
+  <item name="seri2.txa" />
+  <item name="sopca3.sop" />
+  <item name="cruc3.crw" />
+  <item name="domino4.ass" />
+  <item name="identi.ass" />
+  <item name="p4.ass" />
+  <item name="sopnu2.sop" />
+  <item name="relojes6.ass" />
+  <item name="relacuad.ass" />
+  <item name="sopnu4.sop" />
+  <item name="p7.ass" />
+  <item name="seri3.txa" />
+  <item name="sopor6.sop" />
+  <item name="cruc4.crw" />
+  <item name="domino5.ass" />
+  <item name="p6.ass" />
+  <item name="relojes7.ass" />
+  <item name="sopor7.sop" />
+  <item name="seri4.txa" />
+  <item name="sopca9.sop" />
+  <item name="p8.ass" />
+  <item name="fin.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@textGrid.CrossWord" name="cruc1.crw">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Crucigrama numérico</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>¡¡¡ Muy bien !!! </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="463c3.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x2CB689" border="false" />
+   </settings>
+   <textGrid rows="10" columns="4" cellWidth="50.0" cellHeight="50.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>12*100***1</row>
+     <row>**20**16*5</row>
+     <row>***100***0</row>
+     <row>195*******</row>
+    </text>
+   </textGrid>
+   <cells rows="1" columns="4" cellWidth="200.0" cellHeight="75.0" border="false" id="acrossClues">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <cell id="0" item="0">
+     <p>Docena</p>
+    </cell>
+    <cell id="0" item="1">
+     <p> Número siguiente al 99 </p>
+    </cell>
+    <cell id="1" item="0">
+     <p>4 x 5 = </p>
+    </cell>
+    <cell id="1" item="1">
+     <p> (3 +5) x 2 =</p>
+    </cell>
+    <cell id="2" item="0">
+     <p>Centena</p>
+    </cell>
+    <cell id="3" item="0">
+     <p>200 - 5</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="10" cellWidth="200.0" cellHeight="75.0" border="false" id="downClues">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <cell id="0" item="0">
+     <p>Números impares</p>
+    </cell>
+    <cell id="1" item="0">
+     <p>Primer número par</p>
+    </cell>
+    <cell id="1" item="1">
+     <p> Número impar</p>
+    </cell>
+    <cell id="2" item="0">
+     <p>( 10 - 9) x 2=</p>
+    </cell>
+    <cell id="2" item="1">
+     <p> 9 - 4=</p>
+    </cell>
+    <cell id="3" item="0">
+     <p>CI</p>
+    </cell>
+    <cell id="4" item="0">
+     <p>Sin valor</p>
+    </cell>
+    <cell id="4" item="1">
+     <p> Sin valor</p>
+    </cell>
+    <cell id="5" item="0">
+     <p>Sin valor</p>
+    </cell>
+    <cell id="5" item="1">
+     <p> Sin valor</p>
+    </cell>
+    <cell id="6" item="0">
+     <p>100 - 99</p>
+    </cell>
+    <cell id="7" item="0">
+     <p>9 - 3=</p>
+    </cell>
+    <cell id="8" item="0">
+     <p>.</p>
+    </cell>
+    <cell id="9" item="0">
+     <p>25 x 6</p>
+    </cell>
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.CrossWord" name="cruc2.crw">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Crucigrama numérico</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="cool044.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x2CB689" border="true" />
+   </settings>
+   <textGrid rows="11" columns="4" cellWidth="50.0" cellHeight="50.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>*7014*13100</row>
+     <row>100***2000*</row>
+     <row>8010*******</row>
+     <row>*****30505*</row>
+    </text>
+   </textGrid>
+   <cells rows="1" columns="4" cellWidth="200.0" cellHeight="75.0" border="false" id="acrossClues">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <cell id="0" item="0">
+     <p>Siete mil catorce</p>
+    </cell>
+    <cell id="0" item="1">
+     <p> Trece mil cien</p>
+    </cell>
+    <cell id="1" item="0">
+     <p>( 4 + 6 + 10 ) x 5 =</p>
+    </cell>
+    <cell id="1" item="1">
+     <p> Doble de mil</p>
+    </cell>
+    <cell id="2" item="0">
+     <p>Ocho mil diez</p>
+    </cell>
+    <cell id="3" item="0">
+     <p>Treinta mil quinientos cinco</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="11" cellWidth="200.0" cellHeight="75.0" border="false" id="downClues">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <cell id="0" item="0">
+     <p>3 x 6</p>
+    </cell>
+    <cell id="1" item="0">
+     <p>1000 - 200 - 100 =</p>
+    </cell>
+    <cell id="2" item="0">
+     <p>Al revés: Centena</p>
+    </cell>
+    <cell id="3" item="0">
+     <p>.</p>
+    </cell>
+    <cell id="4" item="0">
+     <p>24 : 6 =</p>
+    </cell>
+    <cell id="5" item="0">
+     <p>Número impar</p>
+    </cell>
+    <cell id="6" item="0">
+     <p>Docena</p>
+    </cell>
+    <cell id="6" item="1">
+     <p> Nada</p>
+    </cell>
+    <cell id="7" item="0">
+     <p>15 x 2 =</p>
+    </cell>
+    <cell id="8" item="0">
+     <p>Decena</p>
+    </cell>
+    <cell id="9" item="0">
+     <p>.</p>
+    </cell>
+    <cell id="10" item="0">
+     <p>.</p>
+    </cell>
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.CrossWord" name="cruc3.crw">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Resuelve este crucigrama numérico</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="cool044.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x2CB689" border="true" />
+   </settings>
+   <textGrid rows="10" columns="5" cellWidth="50.0" cellHeight="50.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>65012*1000</row>
+     <row>*20301*100</row>
+     <row>*****15018</row>
+     <row>2712*11***</row>
+     <row>*452*3*125</row>
+    </text>
+   </textGrid>
+   <cells rows="1" columns="5" cellWidth="200.0" cellHeight="75.0" border="false" id="acrossClues">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <cell id="0" item="0">
+     <p>Sesenta y cinco mil doce</p>
+    </cell>
+    <cell id="0" item="1">
+     <p> 2 x 500</p>
+    </cell>
+    <cell id="1" item="0">
+     <p>Veinte mil trescientos una</p>
+    </cell>
+    <cell id="1" item="1">
+     <p> 10 x 10</p>
+    </cell>
+    <cell id="2" item="0">
+     <p>Quince mil dieciocho</p>
+    </cell>
+    <cell id="3" item="0">
+     <p>Dos mil setecientos doce</p>
+    </cell>
+    <cell id="3" item="1">
+     <p> ( 6 x 2 ) - 1=</p>
+    </cell>
+    <cell id="4" item="0">
+     <p>Cuatrocientas cicuenta y dos</p>
+    </cell>
+    <cell id="4" item="1">
+     <p> ( 10 - 3 + 5 ) : 4 =</p>
+    </cell>
+    <cell id="4" item="2">
+     <p> 25 x 5=</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="10" cellWidth="200.0" cellHeight="75.0" border="false" id="downClues">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <cell id="0" item="0">
+     <p>120 : 20=: Número par</p>
+    </cell>
+    <cell id="1" item="0">
+     <p>En numeración romana LII</p>
+    </cell>
+    <cell id="1" item="1">
+     <p> 8 x 9 + 2</p>
+    </cell>
+    <cell id="2" item="0">
+     <p>Sin valos</p>
+    </cell>
+    <cell id="2" item="1">
+     <p> 50 - 35</p>
+    </cell>
+    <cell id="3" item="0">
+     <p>Número impar</p>
+    </cell>
+    <cell id="3" item="1">
+     <p> Número repetido</p>
+    </cell>
+    <cell id="4" item="0">
+     <p>Dos decenas</p>
+    </cell>
+    <cell id="5" item="0">
+     <p>1000 + 100 + 10+ 3</p>
+    </cell>
+    <cell id="6" item="0">
+     <p>Dos menos uno</p>
+    </cell>
+    <cell id="6" item="1">
+     <p> Mitad de 102</p>
+    </cell>
+    <cell id="7" item="0">
+     <p>....</p>
+    </cell>
+    <cell id="8" item="0">
+     <p>...</p>
+    </cell>
+    <cell id="9" item="0">
+     <p>....</p>
+    </cell>
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.CrossWord" name="cruc4.crw">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Crucigrama numérico</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>Muy bien </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="cool044.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x2CB689" border="true" />
+   </settings>
+   <textGrid rows="13" columns="6" cellWidth="50.0" cellHeight="50.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>*30**44004***</row>
+     <row>1400**1609***</row>
+     <row>49099*400****</row>
+     <row>1492*120**120</row>
+     <row>85105*880*180</row>
+     <row>55*9009**1611</row>
+    </text>
+   </textGrid>
+   <cells rows="1" columns="6" cellWidth="200.0" cellHeight="75.0" border="false" id="acrossClues">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <cell id="0" item="0">
+     <p>10 + 5 x 4=</p>
+    </cell>
+    <cell id="0" item="1">
+     <p> Cuarenta y cuatro mil cuatro</p>
+    </cell>
+    <cell id="1" item="0">
+     <p>Doble de 700</p>
+    </cell>
+    <cell id="1" item="1">
+     <p> 1700 - 91=</p>
+    </cell>
+    <cell id="2" item="0">
+     <p>Cuarenta y nueve mil noventa y nueve</p>
+    </cell>
+    <cell id="2" item="1">
+     <p> 4000 : 10=</p>
+    </cell>
+    <cell id="3" item="0">
+     <p>Año descubrimiento de América</p>
+    </cell>
+    <cell id="3" item="1">
+     <p> ( 12 - 10 + 8 ) x 12=</p>
+    </cell>
+    <cell id="3" item="2">
+     <p> 12 x 10</p>
+    </cell>
+    <cell id="4" item="0">
+     <p>Ochenta y cinco mil ciento cinco</p>
+    </cell>
+    <cell id="4" item="1">
+     <p> 40 x 22=</p>
+    </cell>
+    <cell id="4" item="2">
+     <p> 30 x 6</p>
+    </cell>
+    <cell id="5" item="0">
+     <p>( 15 x 2 ) + 25=</p>
+    </cell>
+    <cell id="5" item="1">
+     <p> Nueve mil nueve</p>
+    </cell>
+    <cell id="5" item="2">
+     <p> Mil seiscientos once</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="13" cellWidth="200.0" cellHeight="75.0" border="false" id="downClues">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <cell id="0" item="0">
+     <p>Catorce mil cientos ochenta y cinco</p>
+    </cell>
+    <cell id="1" item="0">
+     <p>Trescientas cuarenta y nueve mil cuatrocientas cincuenta y cinco</p>
+    </cell>
+    <cell id="2" item="0">
+     <p>.........</p>
+    </cell>
+    <cell id="3" item="0">
+     <p>.........</p>
+    </cell>
+    <cell id="4" item="0">
+     <p>Número impar</p>
+    </cell>
+    <cell id="4" item="1">
+     <p> En numeración romana L</p>
+    </cell>
+    <cell id="5" item="0">
+     <p>.........</p>
+    </cell>
+    <cell id="6" item="0">
+     <p>.........</p>
+    </cell>
+    <cell id="7" item="0">
+     <p>.........</p>
+    </cell>
+    <cell id="8" item="0">
+     <p>.........</p>
+    </cell>
+    <cell id="9" item="0">
+     <p>..........</p>
+    </cell>
+    <cell id="10" item="0">
+     <p>..........</p>
+    </cell>
+    <cell id="11" item="0">
+     <p>........</p>
+    </cell>
+    <cell id="12" item="0">
+     <p>.........</p>
+    </cell>
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="domino1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x0000FF" background="0xC6D7A8" />
+     </style>
+     <p>¿Qué ficha deberemos colocar en el quinto lugar?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x0000FF" background="0xC6D7A8" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>Magnífico </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="domino~1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x50754A" border="false" />
+   </settings>
+   <cells rows="1" columns="3" cellWidth="602.0" cellHeight="190.0" border="true" id="primary">
+    <style>
+     <color background="0xFF80C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="0" image="domino1.gif" />
+    <cell id="1" image="domino2.gif" />
+    <cell id="2" image="domino3.gif" />
+   </cells>
+   <cells rows="4" columns="3" cellWidth="100.0" cellHeight="190.0" border="true" id="secondary">
+    <style>
+     <color background="0xFF80C0" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell image="xdomi1.gif" />
+    <cell image="xdomi2.gif" />
+    <cell image="xdomi3.gif" />
+    <cell image="xdomi4.gif" />
+    <cell image="xdomi5.gif" />
+    <cell image="xdomia.gif" />
+    <cell image="xdomi7.gif" />
+    <cell image="xdomi8.gif" />
+    <cell image="xdomi9.gif" />
+    <cell image="xdomid.gif" />
+    <cell image="xdomic.gif" />
+    <cell image="xdomib.gif" />
+   </cells>
+   <cells rows="1" columns="3" cellWidth="602.0" cellHeight="190.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="sdomi1.gif" />
+    <cell image="sdomi2.gif" />
+    <cell image="sdomi3.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="domino2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x0000FF" background="0xC6D7A8" />
+     </style>
+     <p>¿Qué ficha debemos colocar?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x0000FF" background="0xC6D7A8" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>Muy bien </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="domino~1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x50754A" border="false" />
+   </settings>
+   <cells rows="1" columns="3" cellWidth="602.0" cellHeight="190.0" border="true" id="primary">
+    <style>
+     <color background="0xFF80C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="0" image="domino4.gif" />
+    <cell id="1" image="domino5.gif" />
+    <cell id="2" image="domino6.gif" />
+   </cells>
+   <cells rows="4" columns="3" cellWidth="100.0" cellHeight="190.0" border="true" id="secondary">
+    <style>
+     <color background="0xFF80C0" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell image="xdomi4.gif" />
+    <cell image="xdomib.gif" />
+    <cell image="xdomi2.gif" />
+    <cell image="xdomic.gif" />
+    <cell image="xdomi7.gif" />
+    <cell image="xdomi1.gif" />
+    <cell image="xdomi8.gif" />
+    <cell image="xdomi9.gif" />
+    <cell image="xdomia.gif" />
+    <cell image="xdomi1.gif" />
+    <cell image="xdomid.gif" />
+    <cell image="xdomi3.gif" />
+   </cells>
+   <cells rows="1" columns="3" cellWidth="602.0" cellHeight="190.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="sdomi4.gif" />
+    <cell image="sdomi5.gif" />
+    <cell image="sdomi6.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="domino3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x0000FF" background="0xC6D7A8" />
+     </style>
+     <p>Elige la ficha adecuada para continuar la serie</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x0000FF" background="0xC6D7A8" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>Muy bien </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="domino~1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x50754A" border="false" />
+   </settings>
+   <cells rows="1" columns="3" cellWidth="602.0" cellHeight="190.0" border="true" id="primary">
+    <style>
+     <color background="0xFF80C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="0" image="domino7.gif" />
+    <cell id="1" image="domino8.gif" />
+    <cell id="2" image="domino9.gif" />
+   </cells>
+   <cells rows="4" columns="3" cellWidth="100.0" cellHeight="190.0" border="true" id="secondary">
+    <style>
+     <color background="0xFF80C0" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell image="xdomi7.gif" />
+    <cell image="xdomi8.gif" />
+    <cell image="xdomi9.gif" />
+    <cell image="xdomi4.gif" />
+    <cell image="xdomi6.gif" />
+    <cell image="xdomi2.gif" />
+    <cell image="xdomic.gif" />
+    <cell image="xdomi1.gif" />
+    <cell image="xdomia.gif" />
+    <cell image="xdomi5.gif" />
+    <cell image="xdomic.gif" />
+    <cell image="xdomi3.gif" />
+   </cells>
+   <cells rows="1" columns="3" cellWidth="602.0" cellHeight="190.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="sdomi7.gif" />
+    <cell image="sdomi8.gif" />
+    <cell image="sdomi9.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="domino4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x0000FF" background="0xC6D7A8" />
+     </style>
+     <p>Coloca la ficha adecuada</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x0000FF" background="0xC6D7A8" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="domino~1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x50754A" border="false" />
+   </settings>
+   <cells rows="1" columns="3" cellWidth="602.0" cellHeight="190.0" border="true" id="primary">
+    <style>
+     <color background="0xFF80C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="0" image="domino10.gif" />
+    <cell id="1" image="domino11.gif" />
+    <cell id="2" image="domino12.gif" />
+   </cells>
+   <cells rows="4" columns="3" cellWidth="100.0" cellHeight="190.0" border="true" id="secondary">
+    <style>
+     <color background="0xFF80C0" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell image="xdomi10.gif" />
+    <cell image="xdomi11.gif" />
+    <cell image="xdomi12.gif" />
+    <cell image="xdomi4.gif" />
+    <cell image="xdomi7.gif" />
+    <cell image="xdomi4.gif" />
+    <cell image="xdomi8.gif" />
+    <cell image="xdomi9.gif" />
+    <cell image="xdomi3.gif" />
+    <cell image="xdomi2.gif" />
+    <cell image="xdomi1.gif" />
+    <cell image="xdomi1.gif" />
+   </cells>
+   <cells rows="1" columns="3" cellWidth="602.0" cellHeight="190.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="sdomi10.gif" />
+    <cell image="sdomi11.gif" />
+    <cell image="sdomi12.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="domino5.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x0000FF" background="0xC6D7A8" />
+     </style>
+     <p>Coloca la ficha adecuada</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x0000FF" background="0xC6D7A8" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="domino~1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x50754A" border="false" />
+   </settings>
+   <cells rows="1" columns="3" cellWidth="602.0" cellHeight="190.0" border="true" id="primary">
+    <style>
+     <color background="0xFF80C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="0" image="domino13.gif" />
+    <cell id="1" image="domino14.gif" />
+    <cell id="2" image="domino15.gif" />
+   </cells>
+   <cells rows="4" columns="3" cellWidth="100.0" cellHeight="190.0" border="true" id="secondary">
+    <style>
+     <color background="0xFF80C0" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell image="xdomi13.gif" />
+    <cell image="xdomi14a.gif" />
+    <cell image="xdomi15a.gif" />
+    <cell image="xdomi4.gif" />
+    <cell image="xdomi7.gif" />
+    <cell image="xdomi11.gif" />
+    <cell image="xdomi8.gif" />
+    <cell image="xdomi9.gif" />
+    <cell image="xdomi3.gif" />
+    <cell image="xdomi2.gif" />
+    <cell image="xdomi1.gif" />
+    <cell image="xdomi12.gif" />
+   </cells>
+   <cells rows="1" columns="3" cellWidth="602.0" cellHeight="190.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="sdomi13.gif" />
+    <cell image="sdomi14.gif" />
+    <cell image="sdomi15.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="fin.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="azul008.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="1" columns="1" border="true" image="fin.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.Identify" name="gafas.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x800040" background="0xFFFFFF" />
+     </style>
+     <p>Busca las gafas que sean iguales a la que está dentro de un marco negro</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x800040" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>¡¡ Buena vista !! </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x008000">
+     <image name="463c3.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x808040" border="false" />
+   </settings>
+   <cells rows="4" columns="4" cellWidth="240.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFF0000" inactive="0x008040" alternative="0x008040" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="1" image="gafas5.gif" />
+    <cell id="0" image="gafas6.gif" />
+    <cell id="0" image="gafas7.gif" />
+    <cell id="0" image="gafas1.gif" />
+    <cell id="0" image="gafas2.gif" />
+    <cell id="0" image="gafas3.gif" />
+    <cell id="1" image="gafas5.gif" />
+    <cell id="0" image="gafas6.gif" />
+    <cell id="0" image="gafas7.gif" />
+    <cell id="0" image="gafas0.gif" />
+    <cell id="1" image="gafas5.gif" />
+    <cell id="1" image="gafas5.gif" />
+    <cell id="0" image="gafas6.gif" />
+    <cell id="0" image="gafas7.gif" />
+    <cell id="0" image="gafas2.gif" />
+    <cell id="0" image="gafas3.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="identi.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x800040" />
+     </style>
+     <p>Identifica los laberintos que sean iguales al de color azul</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x800040" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>Muy bien </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="463c3.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="4" columns="4" cellWidth="150.0" cellHeight="125.0" border="true" id="primary">
+    <style>
+     <color background="0xFF80C0" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="0" image="design0.gif" />
+    <cell id="1" image="design1.gif" />
+    <cell id="0" image="design2.gif" />
+    <cell id="0" image="design3.gif" />
+    <cell id="0" image="design4.gif" />
+    <cell id="0" image="design5.gif" />
+    <cell id="0" image="design6.gif" />
+    <cell id="0" image="design7.gif" />
+    <cell id="1" image="design1.gif" />
+    <cell id="1" image="design1.gif" />
+    <cell id="1" image="design1.gif" />
+    <cell id="1" image="design1.gif" />
+    <cell id="1" image="design1.gif" />
+    <cell id="1" image="design1.gif" />
+    <cell id="1" image="design1.gif" />
+    <cell id="1" image="design1.gif" />
+   </cells>
+   <cells rows="4" columns="4" cellWidth="150.0" cellHeight="125.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell image="cubo3.gif" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="libros.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x800040" background="0xFFFFFF" />
+     </style>
+     <p>Cliquea los libros que sean iguales a los enmarcados</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x800040" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>¡¡ A leer !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x008000">
+     <image name="463c3.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x808040" border="true" />
+   </settings>
+   <cells rows="6" columns="3" cellWidth="210.0" cellHeight="255.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0x008040" alternative="0x008040" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="3" />
+    <cell id="0" image="libro0.gif" />
+    <cell id="1" image="libro.gif" />
+    <cell id="1" image="libro.gif" />
+    <cell id="0" image="libro7.gif" />
+    <cell id="0" image="libro1.gif" />
+    <cell id="0" image="libro1.gif" />
+    <cell id="0" image="libro3.gif" />
+    <cell id="0" image="libro4.gif" />
+    <cell id="0" image="libro8.gif" />
+    <cell id="0" image="libro6.gif" />
+    <cell id="1" image="libro.gif" />
+    <cell id="1" image="libro.gif" />
+    <cell id="1" image="libro.gif" />
+    <cell id="1" image="libro.gif" />
+    <cell id="1" image="libro.gif" />
+    <cell id="1" image="libro.gif" />
+    <cell id="1" image="libro.gif" />
+    <cell id="1" image="libro.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="p1.ass">
+   <description>
+    <p>Actividad de respuesta escrita</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <p>Averigua el número de cubos que forman esta figura</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>¡Muy bien! </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="cool044.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x008000" border="false" />
+   </settings>
+   <cells rows="4" columns="1" cellWidth="500.0" cellHeight="465.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="33" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="cubo0.gif" />
+    <cell image="cubo2.gif" />
+    <cell image="cubo3.gif" />
+    <cell image="cubo4.gif" />
+   </cells>
+   <cells rows="4" columns="1" cellWidth="150.0" cellHeight="150.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="27" bold="true" />
+     <color foreground="0x800040" background="0x98E2E7" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="p2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <p>Cuántos cubos componen cada figura</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>¡¡¡ Bravo !!! </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="cool044.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x008000" border="false" />
+   </settings>
+   <cells rows="4" columns="1" cellWidth="500.0" cellHeight="465.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="33" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="cubo9.gif" />
+    <cell image="cubo8.gif" />
+    <cell image="cubo6.gif" />
+    <cell image="cubo7.gif" />
+   </cells>
+   <cells rows="4" columns="1" cellWidth="150.0" cellHeight="150.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="27" bold="true" />
+     <color foreground="0x800040" background="0x80FFFF" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>7</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="p3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <p>Averigua los cubos que forman estas figuras</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>Bien </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="cool044.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x008000" border="false" />
+   </settings>
+   <cells rows="4" columns="1" cellWidth="500.0" cellHeight="465.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="33" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="cubo14.gif" />
+    <cell image="cubo13.gif" />
+    <cell image="cubo12.gif" />
+    <cell image="cubo11.gif" />
+   </cells>
+   <cells rows="4" columns="1" cellWidth="150.0" cellHeight="150.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="27" bold="true" />
+     <color foreground="0x800040" background="0x80FFFF" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>14</p>
+    </cell>
+    <cell>
+     <p>15</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>11</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="p4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <p>Volvamos a contar</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>¡¡ Muy bien !!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="cool044.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x008000" border="false" />
+   </settings>
+   <cells rows="4" columns="1" cellWidth="500.0" cellHeight="465.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="33" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="cubo5.gif" />
+    <cell image="cubo1.gif" />
+    <cell image="cubo16.gif" />
+    <cell image="cubo15.gif" />
+   </cells>
+   <cells rows="4" columns="1" cellWidth="150.0" cellHeight="150.0" border="true" id="answers">
+    <style shadow="true">
+     <font family="Arial" size="27" bold="true" />
+     <color foreground="0xFF8080" background="0x808000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>17</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="p6.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <p>Cuántos cubos son necesarios?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>Magnífico !! </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="cool044.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x008000" border="false" />
+   </settings>
+   <cells rows="4" columns="1" cellWidth="500.0" cellHeight="465.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="33" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="cubo21.gif" />
+    <cell image="cubo22.gif" />
+    <cell image="cubo23.gif" />
+    <cell image="cubo24.gif" />
+   </cells>
+   <cells rows="4" columns="1" cellWidth="150.0" cellHeight="150.0" border="true" id="answers">
+    <style shadow="true">
+     <font family="Arial" size="27" bold="true" />
+     <color foreground="0xFF8080" background="0x808000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>20</p>
+    </cell>
+    <cell>
+     <p>16</p>
+    </cell>
+    <cell>
+     <p>19</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="p7.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <p>¿Cuántos cubos forman cada figura?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>Muy bien </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="cool044.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x008000" border="false" />
+   </settings>
+   <cells rows="4" columns="1" cellWidth="500.0" cellHeight="465.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="33" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="cubo25.gif" />
+    <cell image="cubo26.gif" />
+    <cell image="cubo27.gif" />
+    <cell image="cubo28.gif" />
+   </cells>
+   <cells rows="4" columns="1" cellWidth="150.0" cellHeight="150.0" border="true" id="answers">
+    <style shadow="true">
+     <font family="Arial" size="27" bold="true" />
+     <color foreground="0xFF8080" background="0x808000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>16</p>
+    </cell>
+    <cell>
+     <p>15</p>
+    </cell>
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>15</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="p8.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <p>¿Cuántos cubos componen cada una de éstas?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>Magnífico</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="cool044.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x008000" border="false" />
+   </settings>
+   <cells rows="4" columns="1" cellWidth="500.0" cellHeight="465.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="33" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="cubo29.gif" />
+    <cell image="cubo30.gif" />
+    <cell image="cubo31.gif" />
+    <cell image="cubo32.gif" />
+   </cells>
+   <cells rows="4" columns="1" cellWidth="150.0" cellHeight="150.0" border="true" id="answers">
+    <style shadow="true">
+     <font family="Arial" size="27" bold="true" />
+     <color foreground="0xFF8080" background="0x808000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>11</p>
+    </cell>
+    <cell>
+     <p>21</p>
+    </cell>
+    <cell>
+     <p>37</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="pplu.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x000000" border="false" />
+   </settings>
+   <cells rows="1" columns="1" border="false" image="juegma~1.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="rectang.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x80FF80" />
+     </style>
+     <p>Unir dos piezas de color distinto y formarás un rectángulo</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x80FF80" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>Muy bien </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="cool044.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x008000" border="false" />
+   </settings>
+   <cells rows="2" columns="3" cellWidth="182.0" cellHeight="110.0" border="true" id="primary">
+    <style>
+     <color background="0x008000" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell id="0" image="recta.gif" />
+    <cell id="1" image="rectc.gif" />
+    <cell id="2" image="rectd.gif" />
+    <cell id="3" image="recte.gif" />
+    <cell id="4" image="rectf.gif" />
+    <cell id="5" image="rectg.gif" />
+   </cells>
+   <cells rows="2" columns="3" cellWidth="182.0" cellHeight="110.0" border="true" id="secondary">
+    <style>
+     <color background="0x008000" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="rectb.gif" />
+    <cell image="rectc1.gif" />
+    <cell image="rectd1.gif" />
+    <cell image="recte1.gif" />
+    <cell image="rectf1.gif" />
+    <cell image="rectg1.gif" />
+   </cells>
+   <cells rows="2" columns="3" cellWidth="182.0" cellHeight="110.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="rectsolu.gif" />
+    <cell image="rectsolu.gif" />
+    <cell image="rectsolu.gif" />
+    <cell image="rectsolu.gif" />
+    <cell image="rectsolu.gif" />
+    <cell image="rectsolu.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="rectang1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x80FF80" />
+     </style>
+     <p>Une dos piezas. una azul y otra roja, y formarás un rectángulo</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x80FF80" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>Adelante </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="cool044.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x008000" border="false" />
+   </settings>
+   <cells rows="2" columns="3" cellWidth="182.0" cellHeight="110.0" border="true" id="primary">
+    <style>
+     <color background="0x008000" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell id="0" image="recth1.gif" />
+    <cell id="1" image="rectj1.gif" />
+    <cell id="2" image="rectk1.gif" />
+    <cell id="3" image="rectl.gif" />
+    <cell id="4" image="rectll.gif" />
+    <cell id="5" image="rectm.gif" />
+   </cells>
+   <cells rows="2" columns="3" cellWidth="182.0" cellHeight="110.0" border="true" id="secondary">
+    <style>
+     <color background="0x008000" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="recth.gif" />
+    <cell image="rectj.gif" />
+    <cell image="rectk.gif" />
+    <cell image="rectl1.gif" />
+    <cell image="rectll1.gif" />
+    <cell image="rectm1.gif" />
+   </cells>
+   <cells rows="2" columns="3" cellWidth="182.0" cellHeight="110.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="rectsolu.gif" />
+    <cell image="rectsolu.gif" />
+    <cell image="rectsolu.gif" />
+    <cell image="rectsolu.gif" />
+    <cell image="rectsolu.gif" />
+    <cell image="rectsolu.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="relacuad.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x0000FF" background="0xC4B4CB" />
+     </style>
+     <p>Relaciona una figura de cada ventana y formarás un cuadrado</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x0000FF" background="0xC4B4CB" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>Adelante</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="cool044.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x000080" border="false" />
+   </settings>
+   <cells rows="3" columns="3" cellWidth="140.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <color background="0xFF80C0" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="0" image="cuadraa.gif" />
+    <cell id="1" image="cuadraa1.gif" />
+    <cell id="2" image="cuadrac1.gif" />
+    <cell id="3" image="cuadrad.gif" />
+    <cell id="4" image="cuadrae1.gif" />
+    <cell id="5" image="cuadraf1.gif" />
+    <cell id="6" image="cuadrag.gif" />
+    <cell id="7" image="cuadrah.gif" />
+    <cell id="8" image="cuadrai1.gif" />
+   </cells>
+   <cells rows="3" columns="3" cellWidth="140.0" cellHeight="120.0" border="true" id="secondary">
+    <style>
+     <color background="0xB5C2CA" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell image="cuadrab.gif" />
+    <cell image="cuadrab1.gif" />
+    <cell image="cuadrac.gif" />
+    <cell image="cuadrad1.gif" />
+    <cell image="cuadrae.gif" />
+    <cell image="cuadraf.gif" />
+    <cell image="cuadrag1.gif" />
+    <cell image="cuadrah1.gif" />
+    <cell image="cuadrai.gif" />
+   </cells>
+   <cells rows="3" columns="3" cellWidth="140.0" cellHeight="120.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell image="cuadrso2.gif" />
+    <cell image="cuadrso1.gif" />
+    <cell image="cuadrso2.gif" />
+    <cell image="cuadrso3.gif" />
+    <cell image="cuadrso1.gif" />
+    <cell image="cuadrso1.gif" />
+    <cell image="cuadrso2.gif" />
+    <cell image="cuadrso3.gif" />
+    <cell image="cuadrso1.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="relojes1.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="cucu1.wav" />
+     <p>Escribe la hora que debe marcar el cuarto reloj. (Por ejemplo: 5h 25m) </p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="reloj1.wav" />
+     <p>!! Muy bien ¡¡ </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="azul008.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x8080C0" border="false" />
+   </settings>
+   <cells rows="1" columns="3" cellWidth="605.0" cellHeight="150.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="sreloj1.gif" />
+    <cell image="sreloj2.gif" />
+    <cell image="sreloj3.gif" />
+   </cells>
+   <cells rows="1" columns="3" cellWidth="125.0" cellHeight="50.0" border="true" id="answers">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>4h 30m|4 horas 30 minutos|4horas 30minutos</p>
+    </cell>
+    <cell>
+     <p>8h 45m|8 horas 45 minutos|8horas 45minutos</p>
+    </cell>
+    <cell>
+     <p>11h 30m|11 horas 30 minutos|11horas 30minutos </p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="relojes2.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="cucu1.wav" />
+     <p>Averigua la hora del cuarto reloj. (Responde así: 3h 35m)</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="reloj1.wav" />
+     <p>¡¡ Muy bien !!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="azul008.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x8080C0" border="false" />
+   </settings>
+   <cells rows="1" columns="3" cellWidth="605.0" cellHeight="150.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="sreloj4.gif" />
+    <cell image="sreloj5.gif" />
+    <cell image="sreloj6.gif" />
+   </cells>
+   <cells rows="1" columns="3" cellWidth="125.0" cellHeight="50.0" border="true" id="answers">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>6h 10m</p>
+    </cell>
+    <cell>
+     <p>10h 15m</p>
+    </cell>
+    <cell>
+     <p>1h 30m</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="relojes6.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="cucu1.wav" />
+     <p>Otro de relojes. El cuarto reloj qué hora debe marcar?</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="reloj1.wav" />
+     <p>Magnífico</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="azul008.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x8080C0" border="false" />
+   </settings>
+   <cells rows="1" columns="3" cellWidth="605.0" cellHeight="150.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="sreloj17.gif" />
+    <cell image="sreloj11.gif" />
+    <cell image="sreloj19.gif" />
+   </cells>
+   <cells rows="1" columns="3" cellWidth="125.0" cellHeight="50.0" border="true" id="answers">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>3h 30m|3 h 30 m|3 horas 30 minutos</p>
+    </cell>
+    <cell>
+     <p>1h 15m|1 h 15 m|1 horas 15 minutos</p>
+    </cell>
+    <cell>
+     <p>4h|4 h|4 horas</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="relojes7.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="cucu1.wav" />
+     <p>Pon en marcha el reloj y dí la hora del cuarto </p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="reloj1.wav" />
+     <p>Magnífico</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="azul008.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x8080C0" border="false" />
+   </settings>
+   <cells rows="1" columns="3" cellWidth="605.0" cellHeight="150.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="sreloj20.gif" />
+    <cell image="sreloj21.gif" />
+    <cell image="sreloj22.gif" />
+   </cells>
+   <cells rows="1" columns="3" cellWidth="125.0" cellHeight="50.0" border="true" id="answers">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>11h 30m|11 h 30 m| 11 horas 30 minutos</p>
+    </cell>
+    <cell>
+     <p>9h 30m|9 h 30 m|9 horas 30 minutos</p>
+    </cell>
+    <cell>
+     <p>12h 15m|12 h 15 m| 12 horas 15 minutos</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="seri1.txa" autoJump="true">
+   <description>
+    <p>Completar series</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x0000A0" background="0xFF8040" inactive="0x800040" alternative="0x800040" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x0000A0" background="0xFF8040" inactive="0x800040" alternative="0x800040" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>Bien !!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="cool044.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF80C0" border="false">
+     <size width="690" height="330" />
+    </window>
+   </settings>
+   <checkButton>Corregir texto</checkButton>
+   <document>
+    <style name="default" background="0xAFCFB6" foreground="0x0000A0" bold="false" size="16" italic="false" family="Arial" tabWidth="14" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <cell width="520" height="50" border="true">
+       <style>
+        <color foreground="0x0000A0" background="0xFF8040" inactive="0x800040" alternative="0x800040" />
+       </style>
+       <p>Escribe el número adecuado para que la serie continúe</p>
+      </cell>
+     </p>
+     <p />
+     <p>
+      <text>1 - 3 - 5 - 7 - 9 -  </text>
+      <target>
+       <answer>11</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>11</text>
+      </target>
+      <text>?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>2 - 5 -  8 - 11 -14 -</text>
+      <target>
+       <answer>17</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>17</text>
+      </target>
+      <text>?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>30 - 26 - 22 - 18 - 14  - </text>
+      <target>
+       <answer>10</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>10</text>
+      </target>
+      <text> ?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>200 - 180 - 160 - 140 - 120 - </text>
+      <target>
+       <answer>100</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>100</text>
+      </target>
+      <text> ?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>2 - 6 - 18 - 54 - 162 - </text>
+      <target>
+       <answer>486</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>486</text>
+      </target>
+      <text>?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>11 - 22 - 33 -  44 - 55 - </text>
+      <target>
+       <answer>66</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>66</text>
+      </target>
+      <text>?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>3 - 15 - 75 - 375 - </text>
+      <target>
+       <answer>1875</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>1875</text>
+      </target>
+      <text>?</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" checkCase="true" detail="false" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="seri2.txa" autoJump="true">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x0000A0" background="0xFF8040" inactive="0x800040" alternative="0x800040" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x0000A0" background="0xFF8040" inactive="0x800040" alternative="0x800040" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>Adelante </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="cool044.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF80C0" border="false">
+     <size width="690" height="330" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" background="0xAFCFB6" foreground="0x0000A0" bold="false" size="16" italic="false" family="Arial" tabWidth="12" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <cell width="600" height="60" border="true">
+       <style>
+        <color foreground="0x0000A0" background="0xFF8040" inactive="0x800040" alternative="0x800040" />
+       </style>
+       <p>Escribe el número que complete cada serie</p>
+      </cell>
+     </p>
+     <p />
+     <p>
+      <text>10 - 20 - 30 - 40 - </text>
+      <target>
+       <answer>50</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>50</text>
+      </target>
+      <text> ?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>100 - 95 - 90 - 85 - </text>
+      <target>
+       <answer>80</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>80</text>
+      </target>
+      <text>?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>14 - 21 - 28 - 35 - </text>
+      <target>
+       <answer>42</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>42</text>
+      </target>
+      <text> ?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>200 - 192 - 184 - 176 - </text>
+      <target>
+       <answer>168</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text />
+      </target>
+     </p>
+     <p>
+      <target>
+       <answer>168</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>168</text>
+      </target>
+      <text> ?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>38 - 43 - 48 - 53 - </text>
+      <target>
+       <answer>58</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>58</text>
+      </target>
+      <text> ?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>10 - 20 - 40 - 80 - </text>
+      <target>
+       <answer>160</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>160</text>
+      </target>
+      <text>?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>1 - 5 - 25 - 125 - </text>
+      <target>
+       <answer>625</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>625</text>
+      </target>
+      <text>?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>80 - 40 - 20 - 10 - </text>
+      <target>
+       <answer>5</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>5</text>
+      </target>
+      <text>?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>4 - 40 - 400 - 4000 - </text>
+      <target>
+       <answer>40000</answer>
+       <answer>40.000</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text>40000</text>
+      </target>
+      <text>?</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="seri3.txa" autoJump="true">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x0000A0" background="0xFF8040" inactive="0x800040" alternative="0x800040" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x0000A0" background="0xFF8040" inactive="0x800040" alternative="0x800040" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>Adelante</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="cool044.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF80C0" border="false">
+     <size width="690" height="330" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" background="0xAFCFB6" foreground="0x0000A0" bold="false" size="16" italic="false" family="Arial" tabWidth="10" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <cell width="590" height="50" border="true">
+       <style>
+        <color foreground="0x0000A0" background="0xFF8040" inactive="0x800040" alternative="0x800040" />
+       </style>
+       <p>Completa cada una de las series</p>
+      </cell>
+     </p>
+     <p />
+     <p>
+      <text>275 - 250 - 225 - 200 - 175 - </text>
+      <target>
+       <answer>150</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>150</text>
+      </target>
+      <text> ?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>100 - 109 - 118 - 127 - 136 - </text>
+      <target>
+       <answer>145</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>145</text>
+      </target>
+      <text> ?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>500 - 480 - 460 - 440 - 420 - </text>
+      <target>
+       <answer>400</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>400</text>
+      </target>
+      <text> ?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>110 - 121- 132 - 143 - 154 - </text>
+      <target>
+       <answer>165</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>165</text>
+      </target>
+      <text> ?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>12 - 19 - 26 - 33 - 40 - </text>
+      <target>
+       <answer>47</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>47</text>
+      </target>
+      <text>?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>700 - 694 - 688 - 682 - 676 - </text>
+      <target>
+       <answer>670</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>670</text>
+      </target>
+      <text>?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>1500 - 1300 - 1100 - 900 - </text>
+      <target>
+       <answer>700</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>700</text>
+      </target>
+      <text>?</text>
+     </p>
+     <p />
+     <p />
+     <p />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="seri4.txa" autoJump="true">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x0000A0" background="0xFF8040" inactive="0x800040" alternative="0x800040" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x0000A0" background="0xFF8040" inactive="0x800040" alternative="0x800040" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>Bravo</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="cool044.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF80C0" border="false">
+     <size width="690" height="330" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" background="0xAFCFB6" foreground="0x0000A0" bold="false" size="16" italic="false" family="Arial" tabWidth="15" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <cell width="600" height="50" border="true">
+       <style>
+        <color foreground="0x0000A0" background="0xFF8040" inactive="0x800040" alternative="0x800040" />
+       </style>
+       <p>Calcula y completa</p>
+      </cell>
+     </p>
+     <p />
+     <p>
+      <text>33 - 66 - 132 - 264 - </text>
+      <target>
+       <answer>792</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>792</text>
+      </target>
+      <text> ?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>800 - 793 - 786 - 779 - </text>
+      <target>
+       <answer>772</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>772</text>
+      </target>
+      <text>?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>21 - 105 - 525 - 2625 - </text>
+      <target>
+       <answer>13125</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>13125</text>
+      </target>
+      <text>?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>2000 - 1000 - 500 - 250 - </text>
+      <target>
+       <answer>125</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>125</text>
+      </target>
+      <text>?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>70 - 210 - 630 - 1890 - </text>
+      <target>
+       <answer>5670</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>5670</text>
+      </target>
+      <text>?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>550 - 535 - 520 - 505 - 490 - </text>
+      <target>
+       <answer>475</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>475</text>
+      </target>
+      <text>?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>9 - 18 - 36 - 72 - 144 - </text>
+      <target>
+       <answer>288</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>288</text>
+      </target>
+      <text>?</text>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>6000 - 5500 - 5000 - 4500 - </text>
+      <target>
+       <answer>4000</answer>
+       <answer>4.000</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>4000</text>
+      </target>
+      <text>?</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="sopca3.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <p>Busca diez números cardinales</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="cool044.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x008000" border="false" />
+   </settings>
+   <textGrid rows="11" columns="6" cellWidth="500.0" cellHeight="465.0" border="true">
+    <style>
+     <font family="Arial" size="32" />
+     <color background="0xA6D9B4" />
+    </style>
+    <text>
+     <row>SDOSCIENTOS</row>
+     <row>E*O**DOS**I</row>
+     <row>R**C**OCHOE</row>
+     <row>TRECE**I**T</row>
+     <row>***ETNIEV*E</row>
+     <row>*DIEZ*UNO**</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">DOSCIENTOS</clue>
+    <clue id="1">CIEN</clue>
+    <clue id="2">OCHO</clue>
+    <clue id="3">DOCE</clue>
+    <clue id="4">VEINTE</clue>
+    <clue id="5">DOS</clue>
+    <clue id="6">UNO</clue>
+    <clue id="7">TRECE</clue>
+    <clue id="8">SIETE</clue>
+    <clue id="9">TRES</clue>
+    <clue id="10">DIEZ</clue>
+   </clues>
+  </activity>
+  <activity class="@textGrid.WordSearch" name="sopca9.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <p>Buscar diez números cardinales</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>!! Bravo ¡¡ </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="463c3.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x008000" border="false" />
+   </settings>
+   <textGrid rows="18" columns="10" cellWidth="500.0" cellHeight="465.0" border="true">
+    <style>
+     <font family="Arial" size="32" />
+     <color background="0xA6D9B4" />
+    </style>
+    <text>
+     <row>*****E**********Q*</row>
+     <row>****TRESCIENTOSUA*</row>
+     <row>*CINCUENTA**V*I*T*</row>
+     <row>*MIL*******E*N**N*</row>
+     <row>*E********ICIEN*E*</row>
+     <row>V********N*E****R*</row>
+     <row>********T*NOVENTA*</row>
+     <row>*******E*T******U*</row>
+     <row>********O*******C*</row>
+     <row>*******SETECIENTOS</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">VEINTE</clue>
+    <clue id="1">CINCUENTA</clue>
+    <clue id="2">QUINIENTOS</clue>
+    <clue id="3">NOVENTA</clue>
+    <clue id="4">TRESCIENTOS</clue>
+    <clue id="5">MIL</clue>
+    <clue id="6">CUARENTA</clue>
+    <clue id="7">VEINTE</clue>
+    <clue id="8">CIEN</clue>
+    <clue id="9">SETECIENTOS</clue>
+   </clues>
+  </activity>
+  <activity class="@textGrid.WordSearch" name="sopnu1.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <p>Buscar siete números ordinales</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>¡¡ Muy bien !!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="463c3.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x008000" border="false" />
+   </settings>
+   <textGrid rows="12" columns="9" cellWidth="500.0" cellHeight="465.0" border="true">
+    <style>
+     <font family="Arial" size="32" />
+     <color background="0xA6D9B4" />
+    </style>
+    <text>
+     <row>VNOVENO*DT**</row>
+     <row>*I******ER**</row>
+     <row>O*G*****CI**</row>
+     <row>C**E****IG**</row>
+     <row>T***S***ME**</row>
+     <row>A**QUINTOS**</row>
+     <row>V*****M**I**</row>
+     <row>OPRIMERO*M**</row>
+     <row>*********O**</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">NOVENO</clue>
+    <clue id="1">DECIMO</clue>
+    <clue id="2">TRIGESIMO</clue>
+    <clue id="3">QUINTO</clue>
+    <clue id="4">PRIMERO</clue>
+    <clue id="5">OCTAVO</clue>
+    <clue id="6">VIGESIMO</clue>
+   </clues>
+  </activity>
+  <activity class="@textGrid.WordSearch" name="sopnu2.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <p>Buscar siete números ordinales</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="cool044.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x008000" border="false" />
+   </settings>
+   <textGrid rows="16" columns="9" cellWidth="500.0" cellHeight="465.0" border="true">
+    <style>
+     <font family="Arial" size="32" />
+     <color background="0xA6D9B4" />
+    </style>
+    <text>
+     <row>D*U***********D*</row>
+     <row>SE*N**********U*</row>
+     <row>E*C*D*VIGESIMOO*</row>
+     <row>G**I*E********D*</row>
+     <row>U***M*C*******E*</row>
+     <row>N****O*I******C*</row>
+     <row>D*******M*****I*</row>
+     <row>OCTAVO***O****M*</row>
+     <row>*********NOVENO*</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">SEGUNDO</clue>
+    <clue id="1">DECIMO</clue>
+    <clue id="2">UNDECIMO</clue>
+    <clue id="3">VIGESIMO</clue>
+    <clue id="4">DUODECIMO</clue>
+    <clue id="5">OCTAVO</clue>
+    <clue id="6">NOVENO</clue>
+   </clues>
+  </activity>
+  <activity class="@textGrid.WordSearch" name="sopnu4.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <p>Buscar diez números cardinales</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>Muy bien </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="463c3.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x008000" border="false" />
+   </settings>
+   <textGrid rows="14" columns="10" cellWidth="500.0" cellHeight="465.0" border="true">
+    <style>
+     <font family="Arial" size="32" />
+     <color background="0xA6D9B4" />
+    </style>
+    <text>
+     <row>**D****OCNIC**</row>
+     <row>**I*******U***</row>
+     <row>T*ETREINTA**S*</row>
+     <row>R*CIEN**R**E**</row>
+     <row>E*I****E**S***</row>
+     <row>C*S***NOVENTA*</row>
+     <row>E*I**T**NS****</row>
+     <row>**E*A**TE*****</row>
+     <row>SETENTAR******</row>
+     <row>**E***T*******</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">CUARENTA</clue>
+    <clue id="1">CINCO</clue>
+    <clue id="2">TREINTA</clue>
+    <clue id="3">DIECISIETE</clue>
+    <clue id="4">CIEN</clue>
+    <clue id="5">SESENTA</clue>
+    <clue id="6">TRECE</clue>
+    <clue id="7">SETENTA</clue>
+    <clue id="8">TRES</clue>
+    <clue id="9">NOVENTA</clue>
+   </clues>
+  </activity>
+  <activity class="@textGrid.WordSearch" name="sopor5.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <p>Busca siete números ordinales</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>Bien. Continúa</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="463c3.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x008000" border="false" />
+   </settings>
+   <textGrid rows="10" columns="8" cellWidth="500.0" cellHeight="465.0" border="true">
+    <style>
+     <font family="Arial" size="32" />
+     <color background="0xA6D9B4" />
+    </style>
+    <text>
+     <row>OVIGESIMO*</row>
+     <row>CENTESIMOS</row>
+     <row>T*******E*</row>
+     <row>A******P**</row>
+     <row>V*CUARTO**</row>
+     <row>OTXESI****</row>
+     <row>****M*****</row>
+     <row>***OTNIUQ*</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">VIGESIMO</clue>
+    <clue id="1">OCTAVO</clue>
+    <clue id="2">CENTESIMO</clue>
+    <clue id="3">SEPTIMO</clue>
+    <clue id="4">QUINTO</clue>
+    <clue id="5">CUARTO</clue>
+    <clue id="6">SEXTO</clue>
+   </clues>
+  </activity>
+  <activity class="@textGrid.WordSearch" name="sopor6.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <p>Busca ocho números ordinales</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>Muy bien </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="463c3.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x008000" border="false" />
+   </settings>
+   <textGrid rows="11" columns="9" cellWidth="500.0" cellHeight="465.0" border="true">
+    <style>
+     <font family="Arial" size="32" />
+     <color background="0xA6D9B4" />
+    </style>
+    <text>
+     <row>*D****SEXTO</row>
+     <row>U*U*OREMIRP</row>
+     <row>N*NOVENO*I*</row>
+     <row>D***D****G*</row>
+     <row>E****E***E*</row>
+     <row>C**OMICEDS*</row>
+     <row>I******I*I*</row>
+     <row>M*******MM*</row>
+     <row>O********O*</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">DUODECIMO </clue>
+    <clue id="1">NOVENO </clue>
+    <clue id="2">TRIGESIMO</clue>
+    <clue id="3">SEXTO</clue>
+    <clue id="4">PRIMERO</clue>
+    <clue id="5">UNDECIMO</clue>
+    <clue id="6">DECIMO</clue>
+    <clue id="7">TRIGESIMO </clue>
+   </clues>
+  </activity>
+  <activity class="@textGrid.WordSearch" name="sopor7.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <p>Busca nueve números ordinales</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0x004080" background="0x80FFFF" inactive="0xFF0000" alternative="0xFF0000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso1.wav" />
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="cool044.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x008000" border="false" />
+   </settings>
+   <textGrid rows="14" columns="10" cellWidth="500.0" cellHeight="465.0" border="true">
+    <style>
+     <font family="Arial" size="32" />
+     <color background="0xA6D9B4" />
+    </style>
+    <text>
+     <row>*******ONEVON*</row>
+     <row>*CUADRAGESIMO*</row>
+     <row>*****OMICED*N*</row>
+     <row>O********P**A*</row>
+     <row>MOMISEGIRT**G*</row>
+     <row>I*T**E***I**E*</row>
+     <row>C**R**X**M**S*</row>
+     <row>E***A**T*O**M*</row>
+     <row>D****U**O***O*</row>
+     <row>******C*******</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">CUADRAGESIMO</clue>
+    <clue id="1">SEPTIMO</clue>
+    <clue id="2">NONAGESIMO</clue>
+    <clue id="3">TRIGESIMO</clue>
+    <clue id="4">CUARTO</clue>
+    <clue id="5">DECIMO</clue>
+    <clue id="6">SEXTO</clue>
+    <clue id="7">NOVENO</clue>
+    <clue id="8">DECIMO</clue>
+   </clues>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="cuadraa.gif" file="cuadraa.gif" />
+  <media name="cuadraa1.gif" file="cuadraa1.gif" />
+  <media name="cuadrab.gif" file="cuadrab.gif" />
+  <media name="cuadrab1.gif" file="cuadrab1.gif" />
+  <media name="cuadrac.gif" file="cuadrac.gif" />
+  <media name="cuadrac1.gif" file="cuadrac1.gif" />
+  <media name="cuadrad.gif" file="cuadrad.gif" />
+  <media name="cuadrad1.gif" file="cuadrad1.gif" />
+  <media name="cuadrae.gif" file="cuadrae.gif" />
+  <media name="cuadrae1.gif" file="cuadrae1.gif" />
+  <media name="cuadraf.gif" file="cuadraf.gif" />
+  <media name="cuadraf1.gif" file="cuadraf1.gif" />
+  <media name="cuadrag.gif" file="cuadrag.gif" />
+  <media name="cuadrag1.gif" file="cuadrag1.gif" />
+  <media name="cuadrah.gif" file="cuadrah.gif" />
+  <media name="cuadrah1.gif" file="cuadrah1.gif" />
+  <media name="cuadrai.gif" file="cuadrai.gif" />
+  <media name="cuadrai1.gif" file="cuadrai1.gif" />
+  <media name="cuadrso1.gif" file="cuadrso1.gif" />
+  <media name="cuadrso2.gif" file="cuadrso2.gif" />
+  <media name="cuadrso3.gif" file="cuadrso3.gif" />
+  <media name="cubo0.gif" file="cubo0.gif" />
+  <media name="cubo1.gif" file="cubo1.gif" />
+  <media name="cubo11.gif" file="cubo11.gif" />
+  <media name="cubo12.gif" file="cubo12.gif" />
+  <media name="cubo13.gif" file="cubo13.gif" />
+  <media name="cubo14.gif" file="cubo14.gif" />
+  <media name="cubo15.gif" file="cubo15.gif" />
+  <media name="cubo16.gif" file="cubo16.gif" />
+  <media name="cubo2.gif" file="cubo2.gif" />
+  <media name="cubo21.gif" file="cubo21.gif" />
+  <media name="cubo22.gif" file="cubo22.gif" />
+  <media name="cubo23.gif" file="cubo23.gif" />
+  <media name="cubo24.gif" file="cubo24.gif" />
+  <media name="cubo25.gif" file="cubo25.gif" />
+  <media name="cubo26.gif" file="cubo26.gif" />
+  <media name="cubo27.gif" file="cubo27.gif" />
+  <media name="cubo28.gif" file="cubo28.gif" />
+  <media name="cubo29.gif" file="cubo29.gif" />
+  <media name="cubo3.gif" file="cubo3.gif" />
+  <media name="cubo30.gif" file="cubo30.gif" />
+  <media name="cubo31.gif" file="cubo31.gif" />
+  <media name="cubo32.gif" file="cubo32.gif" />
+  <media name="cubo4.gif" file="cubo4.gif" />
+  <media name="cubo5.gif" file="cubo5.gif" />
+  <media name="cubo6.gif" file="cubo6.gif" />
+  <media name="cubo7.gif" file="cubo7.gif" />
+  <media name="cubo8.gif" file="cubo8.gif" />
+  <media name="cubo9.gif" file="cubo9.gif" />
+  <media name="design0.gif" file="design0.gif" />
+  <media name="design1.gif" file="design1.gif" />
+  <media name="design2.gif" file="design2.gif" />
+  <media name="design3.gif" file="design3.gif" />
+  <media name="design4.gif" file="design4.gif" />
+  <media name="design5.gif" file="design5.gif" />
+  <media name="design6.gif" file="design6.gif" />
+  <media name="design7.gif" file="design7.gif" />
+  <media name="domino1.gif" file="domino1.gif" />
+  <media name="domino10.gif" file="domino10.gif" />
+  <media name="domino11.gif" file="domino11.gif" />
+  <media name="domino12.gif" file="domino12.gif" />
+  <media name="domino13.gif" file="domino13.gif" />
+  <media name="domino14.gif" file="domino14.gif" />
+  <media name="domino15.gif" file="domino15.gif" />
+  <media name="domino2.gif" file="domino2.gif" />
+  <media name="domino3.gif" file="domino3.gif" />
+  <media name="domino4.gif" file="domino4.gif" />
+  <media name="domino5.gif" file="domino5.gif" />
+  <media name="domino6.gif" file="domino6.gif" />
+  <media name="domino7.gif" file="domino7.gif" />
+  <media name="domino8.gif" file="domino8.gif" />
+  <media name="domino9.gif" file="domino9.gif" />
+  <media name="domino~1.gif" file="domino_1.gif" />
+  <media name="fin.gif" file="fin.gif" />
+  <media name="gafas0.gif" file="gafas0.gif" />
+  <media name="gafas1.gif" file="gafas1.gif" />
+  <media name="gafas2.gif" file="gafas2.gif" />
+  <media name="gafas3.gif" file="gafas3.gif" />
+  <media name="gafas5.gif" file="gafas5.gif" />
+  <media name="gafas6.gif" file="gafas6.gif" />
+  <media name="gafas7.gif" file="gafas7.gif" />
+  <media name="juegma~1.gif" file="juegma_1.gif" />
+  <media name="libro.gif" file="libro.gif" />
+  <media name="libro0.gif" file="libro0.gif" />
+  <media name="libro1.gif" file="libro1.gif" />
+  <media name="libro3.gif" file="libro3.gif" />
+  <media name="libro4.gif" file="libro4.gif" />
+  <media name="libro6.gif" file="libro6.gif" />
+  <media name="libro7.gif" file="libro7.gif" />
+  <media name="libro8.gif" file="libro8.gif" />
+  <media name="recta.gif" file="recta.gif" />
+  <media name="rectb.gif" file="rectb.gif" />
+  <media name="rectc.gif" file="rectc.gif" />
+  <media name="rectc1.gif" file="rectc1.gif" />
+  <media name="rectd.gif" file="rectd.gif" />
+  <media name="rectd1.gif" file="rectd1.gif" />
+  <media name="recte.gif" file="recte.gif" />
+  <media name="recte1.gif" file="recte1.gif" />
+  <media name="rectf.gif" file="rectf.gif" />
+  <media name="rectf1.gif" file="rectf1.gif" />
+  <media name="rectg.gif" file="rectg.gif" />
+  <media name="rectg1.gif" file="rectg1.gif" />
+  <media name="recth.gif" file="recth.gif" />
+  <media name="recth1.gif" file="recth1.gif" />
+  <media name="rectj.gif" file="rectj.gif" />
+  <media name="rectj1.gif" file="rectj1.gif" />
+  <media name="rectk.gif" file="rectk.gif" />
+  <media name="rectk1.gif" file="rectk1.gif" />
+  <media name="rectl.gif" file="rectl.gif" />
+  <media name="rectl1.gif" file="rectl1.gif" />
+  <media name="rectll.gif" file="rectll.gif" />
+  <media name="rectll1.gif" file="rectll1.gif" />
+  <media name="rectm.gif" file="rectm.gif" />
+  <media name="rectm1.gif" file="rectm1.gif" />
+  <media name="rectsolu.gif" file="rectsolu.gif" />
+  <media name="sdomi1.gif" file="sdomi1.gif" />
+  <media name="sdomi10.gif" file="sdomi10.gif" />
+  <media name="sdomi11.gif" file="sdomi11.gif" />
+  <media name="sdomi12.gif" file="sdomi12.gif" />
+  <media name="sdomi13.gif" file="sdomi13.gif" />
+  <media name="sdomi14.gif" file="sdomi14.gif" />
+  <media name="sdomi15.gif" file="sdomi15.gif" />
+  <media name="sdomi2.gif" file="sdomi2.gif" />
+  <media name="sdomi3.gif" file="sdomi3.gif" />
+  <media name="sdomi4.gif" file="sdomi4.gif" />
+  <media name="sdomi5.gif" file="sdomi5.gif" />
+  <media name="sdomi6.gif" file="sdomi6.gif" />
+  <media name="sdomi7.gif" file="sdomi7.gif" />
+  <media name="sdomi8.gif" file="sdomi8.gif" />
+  <media name="sdomi9.gif" file="sdomi9.gif" />
+  <media name="sreloj1.gif" file="sreloj1.gif" />
+  <media name="sreloj11.gif" file="sreloj11.gif" />
+  <media name="sreloj17.gif" file="sreloj17.gif" />
+  <media name="sreloj19.gif" file="sreloj19.gif" />
+  <media name="sreloj2.gif" file="sreloj2.gif" />
+  <media name="sreloj20.gif" file="sreloj20.gif" />
+  <media name="sreloj21.gif" file="sreloj21.gif" />
+  <media name="sreloj22.gif" file="sreloj22.gif" />
+  <media name="sreloj3.gif" file="sreloj3.gif" />
+  <media name="sreloj4.gif" file="sreloj4.gif" />
+  <media name="sreloj5.gif" file="sreloj5.gif" />
+  <media name="sreloj6.gif" file="sreloj6.gif" />
+  <media name="xdomi1.gif" file="xdomi1.gif" />
+  <media name="xdomi10.gif" file="xdomi10.gif" />
+  <media name="xdomi11.gif" file="xdomi11.gif" />
+  <media name="xdomi12.gif" file="xdomi12.gif" />
+  <media name="xdomi13.gif" file="xdomi13.gif" />
+  <media name="xdomi14a.gif" file="xdomi14a.gif" />
+  <media name="xdomi15a.gif" file="xdomi15a.gif" />
+  <media name="xdomi2.gif" file="xdomi2.gif" />
+  <media name="xdomi3.gif" file="xdomi3.gif" />
+  <media name="xdomi4.gif" file="xdomi4.gif" />
+  <media name="xdomi5.gif" file="xdomi5.gif" />
+  <media name="xdomi6.gif" file="xdomi6.gif" />
+  <media name="xdomi7.gif" file="xdomi7.gif" />
+  <media name="xdomi8.gif" file="xdomi8.gif" />
+  <media name="xdomi9.gif" file="xdomi9.gif" />
+  <media name="xdomia.gif" file="xdomia.gif" />
+  <media name="xdomib.gif" file="xdomib.gif" />
+  <media name="xdomic.gif" file="xdomic.gif" />
+  <media name="xdomid.gif" file="xdomid.gif" />
+  <media name="463c3.jpg" file="463c3.jpg" />
+  <media name="azul008.jpg" file="azul008.jpg" />
+  <media name="cool044.jpg" file="cool044.jpg" />
+  <media name="aplauso1.wav" file="aplauso1.wav" />
+  <media name="cucu1.wav" file="cucu1.wav" />
+  <media name="reloj1.wav" file="reloj1.wav" />
+ </mediaBag>
+</JClicProject>
+

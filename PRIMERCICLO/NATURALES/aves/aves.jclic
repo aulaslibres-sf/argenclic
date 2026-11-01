@@ -1,0 +1,879 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="aves" version="0.1.3">
+ <settings>
+  <title>Jugamos con los animales</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="9/14/05" />
+  <revision description="Conversión de Clic3 a JClic" date="9/14/05">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Francisco García-Pozuelo Díaz" />
+  <author name="Juana Rello Serrano" mail="918816785@telefonica.net" />
+  <organization name="CP Luis Vives" mail="cp.luis.vives4@centros2.pntic.mec.es" url="http://centros2.pntic.mec.es/cp.luis.vives4/index.html" city="Alcalá de Henares" state="Madrid" />
+  <language>es</language>
+  <description>
+   <p>Proyecto de 14 actividades enfocado a despertar el interés de los alumnos por la naturaleza.</p>
+  </description>
+  <descriptors area-codes="exp" level-codes="PRI">animales</descriptors>
+  <skin file="@blue.xml" />
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Proyecto de 14 actividades enfocado a despertar el interés de los alumnos por la naturaleza.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="start" name="00">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item id="primera" name="01" />
+  <item id="segunda" name="02" />
+  <item id="tercera" name="04" />
+  <item id="cuarta" name="05" />
+  <item id="quinta" name="06" />
+  <item id="sexta" name="07" />
+  <item id="séptima" name="08" />
+  <item id="octava" name="09" />
+  <item id="novena" name="10" />
+  <item id="décima" name="11" />
+  <item id="undécima" name="12" />
+  <item id="duodécima" name="13" />
+  <item name="14" />
+  <item name="FIN">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="00" code="">
+   <description>
+    <p>presentación</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Harlow Solid Italic" size="22" />
+      <color background="0xFFFF33" />
+     </style>
+     <media type="PLAY_VIDEO" level="1" file="Película2.avi" stretch="true" free="false" loop="true" autoStart="true" />
+    </cell>
+   </messages>
+   <settings margin="18" report="false">
+    <container bgColor="0xFFFF66">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x9999FF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="450.0" cellHeight="314.0" border="true">
+    <style borderStroke="0.7" markerStroke="5.0" />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell txtAlign="middle,top">
+     <style>
+      <font family="Lucida Handwriting" size="22" bold="true" />
+      <color foreground="0xFFFFFF" />
+     </style>
+     <media type="PLAY_VIDEO" level="1" file="Película3.avi" stretch="true" free="false" loop="true" autoStart="true" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="01" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Harrington" size="20" bold="true" />
+      <color background="0xFFFF66" />
+     </style>
+     <p>Coloca las piezas del rompecabezas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFF00" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFF3333" />
+     </style>
+     <p>Inténtalo otra vez</p>
+    </cell>
+   </messages>
+   <settings margin="18" dragCells="true" maxActions="10" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0xFFFF66">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x9999FF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="3" cols="3" border="true" image="Periquitoaustral.jpg">
+    <style borderStroke="1.6" markerStroke="5.0">
+     <gradient source="0x9999FF" dest="0x0066FF" angle="153" cycles="11" />
+    </style>
+    <shaper class="@ClassicJigSaw" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="02" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Harrington" size="20" bold="true" />
+      <color background="0xFFFF66" />
+     </style>
+     <p>Coloca bien las piezas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFF00" />
+     </style>
+     <p>Perfecto</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFF3333" />
+     </style>
+     <p>Hazlo otra vez</p>
+    </cell>
+   </messages>
+   <settings margin="18" dragCells="true" maxActions="15" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0xFFFF66">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x9999FF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="4" cols="3" border="true" image="Agapornis2.jpg">
+    <style borderStroke="1.9" markerStroke="5.0">
+     <gradient source="0x9999FF" dest="0x0066FF" angle="153" cycles="11" />
+    </style>
+    <shaper class="@TriangularJigSaw" cols="3" rows="4" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="04" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Harrington" size="20" bold="true" />
+      <color background="0xFFFF66" />
+     </style>
+     <p>Un poco más difícil</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFF00" />
+     </style>
+     <p>Bravo</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFF3333" />
+     </style>
+     <p>Una vez más</p>
+    </cell>
+   </messages>
+   <settings margin="18" dragCells="true" maxActions="11" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0xFFFF66">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x9999FF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="3" cols="3" border="true" image="Avestruz.jpg">
+    <style borderStroke="3.8" markerStroke="5.0">
+     <color border="0xFFFFFF" />
+     <gradient source="0x9999FF" dest="0x0066FF" angle="153" cycles="11" />
+    </style>
+    <shaper class="@JigSaw" cols="3" rows="3" baseWidthFactor="0.37" toothHeightFactor="0.19" randomLines="true" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="05">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Harrington" size="20" bold="true" />
+      <color background="0xFFFF66" />
+     </style>
+     <p>Ahora un frailecillo</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFF00" />
+     </style>
+     <p>Bravo</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFF3333" />
+     </style>
+     <p>Fíjate bien</p>
+    </cell>
+   </messages>
+   <settings margin="18" dragCells="true" maxActions="12" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0xFFFF66">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x9999FF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="3" cols="3" border="true" image="frailecillo.jpg">
+    <style borderStroke="3.8" markerStroke="5.0">
+     <color border="0xFFFFFF" />
+     <gradient source="0x9999FF" dest="0x0066FF" angle="153" cycles="11" />
+    </style>
+    <shaper class="@TriangularJigSaw" cols="3" rows="3" baseWidthFactor="0.41" toothHeightFactor="0.22" randomLines="true" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.HolePuzzle" name="06" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Harrington" size="20" bold="true" />
+      <color background="0xFFFF66" />
+     </style>
+     <p>Mueve bien las fichas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFF00" />
+     </style>
+     <p>Excelente</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFF3333" />
+     </style>
+     <p>Fíjate bien</p>
+    </cell>
+   </messages>
+   <settings margin="18" report="true" reportActions="false">
+    <container bgColor="0xFFFF66">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x9999FF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="Periquitoaustral.jpg">
+    <style borderStroke="3.8" markerStroke="5.0">
+     <color border="0xFFFFFF" />
+     <gradient source="0x9999FF" dest="0x0066FF" angle="153" cycles="11" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="07" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Harrington" size="20" bold="true" />
+      <color background="0xFFFF66" />
+     </style>
+     <p>Busca las parejas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFF00" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFF3333" />
+     </style>
+     <p>Otra vez</p>
+    </cell>
+   </messages>
+   <settings margin="18" maxActions="30" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0xFFFF66">
+     <image name="Delfines2.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x9999FF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="149.0" cellHeight="99.0" border="true" id="primary">
+    <style transparent="true" borderStroke="2.3" markerStroke="5.0">
+     <color border="0xFFFFFF" />
+     <gradient source="0x9999FF" dest="0x0066FF" angle="153" cycles="11" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell image="ballena1.jpg" />
+    <cell image="BebeFoca.jpg" />
+    <cell image="criafoca.jpg" />
+    <cell image="delfi.jpg" />
+    <cell image="delfin.jpg" />
+    <cell image="Delfinamazona.jpg" />
+    <cell image="Delfines2.jpg" />
+    <cell image="Delfines3.jpg" />
+    <cell image="Delfintwist2.jpg" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="08" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Harrington" size="20" bold="true" />
+      <color background="0xFFFF66" />
+     </style>
+     <p>Busca el nombre de cinco animales de los rompecabezas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFF00" />
+     </style>
+     <p>Bravo</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFF3333" />
+     </style>
+     <p>Date más prisa</p>
+    </cell>
+   </messages>
+   <settings margin="18" maxTime="25" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0xFFFF66">
+     <image name="Delfines2.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x9999FF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <textGrid rows="8" columns="8" cellWidth="45.0" cellHeight="43.0" border="true">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFFFFFF" background="0x0066FF" />
+    </style>
+    <text>
+     <row>BALLENA*</row>
+     <row>DEF****F</row>
+     <row>GHD****O</row>
+     <row>*DELFINC</row>
+     <row>****L**A</row>
+     <row>*****F**</row>
+     <row>AVESTRUZ</row>
+     <row>ORCA***N</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">BALLENA</clue>
+    <clue id="1">FOCA</clue>
+    <clue id="2">DELFIN</clue>
+    <clue id="3">ORCA</clue>
+    <clue id="4">AVESTRUZ</clue>
+   </clues>
+   <cells rows="5" cols="1" cellWidth="103.0" cellHeight="65.0" border="true" id="secondary">
+    <style transparent="true" borderStroke="2.3" markerStroke="5.0">
+     <color foreground="0xFFFFFF" background="0x6600FF" shadow="0x0066FF" alternative="0x0066FF" border="0xFFFFFF" />
+     <gradient source="0x9999FF" dest="0x0066FF" angle="153" cycles="11" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell image="ballena1.jpg" />
+    <cell image="BebeFoca.jpg" />
+    <cell image="delfi.jpg" />
+    <cell image="orca.jpg" />
+    <cell image="Avestruz.jpg" />
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.CrossWord" name="09" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Harrington" size="20" bold="true" />
+      <color background="0xFFFF66" />
+     </style>
+     <p>Rellena este crucigrama</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFF00" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFF3333" />
+     </style>
+     <p>Un poco más deprisa</p>
+    </cell>
+   </messages>
+   <settings margin="19" maxTime="30" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0xFFFF66">
+     <image name="Delfines2.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x9999FF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <textGrid rows="7" columns="8" cellWidth="45.0" cellHeight="43.0" border="true">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFFFFFF" background="0x0066FF" />
+    </style>
+    <text>
+     <row>BALLENA</row>
+     <row>*C****V</row>
+     <row>*ORCA*E</row>
+     <row>*F*O**S</row>
+     <row>***N**T</row>
+     <row>*NADA*R</row>
+     <row>***O**U</row>
+     <row>*MAR**Z</row>
+    </text>
+   </textGrid>
+   <cells rows="1" cols="3" cellWidth="135.0" cellHeight="84.0" border="true" id="acrossClues">
+    <style transparent="true" borderStroke="2.3" markerStroke="5.0">
+     <color foreground="0xFFFFFF" background="0x6600FF" shadow="0x0066FF" alternative="0x0066FF" border="0xFFFFFF" />
+     <gradient source="0x9999FF" dest="0x0066FF" angle="153" cycles="11" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="7" item="0" />
+    <cell id="7" item="0" />
+    <cell id="7" item="1" />
+    <cell id="6" item="2" />
+    <cell id="6" item="0" />
+    <cell id="6" item="1" />
+    <cell id="5" item="1" image="Delfines2.jpg">
+     <style>
+      <font family="Arial" size="14" bold="true" />
+      <color foreground="0xFFFFFF" />
+     </style>
+     <p>Lo hace muy bien el delfín</p>
+    </cell>
+    <cell id="5" item="0" image="Delfines2.jpg">
+     <style>
+      <font family="Arial" size="14" bold="true" />
+      <color foreground="0xFFFFFF" />
+     </style>
+     <p>Lo hace muy bien el delfin</p>
+    </cell>
+    <cell id="5" item="1" />
+    <cell id="4" item="2" />
+    <cell id="4" item="0" />
+    <cell id="4" item="1" />
+    <cell id="2" item="2" />
+    <cell id="2" item="1" />
+    <cell id="1" item="2" />
+    <cell id="1" item="1" />
+    <cell id="2" item="0" image="orca.jpg" />
+    <cell id="3" item="3" />
+    <cell id="3" item="1" />
+    <cell id="3" item="2" />
+    <cell id="3" item="0" />
+    <cell id="0" item="1" image="ballena1.jpg" />
+    <cell id="0" item="0" image="ballena1.jpg" />
+    <cell id="1" item="0" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="135.0" cellHeight="84.0" border="true" id="downClues">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+    </style>
+    <cell id="1" item="3" avoidOverlapping="true">
+     <p>Los peces viven en el .....</p>
+    </cell>
+    <cell id="1" item="2" border="false">
+     <p>Los peces viven en el ....</p>
+    </cell>
+    <cell id="1" item="1" />
+    <cell id="4" item="3" />
+    <cell id="4" item="2" />
+    <cell id="3" item="2" />
+    <cell id="5" item="1" />
+    <cell id="4" item="1" />
+    <cell id="3" item="1" image="Condor.jpg" />
+    <cell id="0" item="1" />
+    <cell id="5" item="0" />
+    <cell id="4" item="0" />
+    <cell id="3" item="0" />
+    <cell id="5" item="3" />
+    <cell id="4" item="6" />
+    <cell id="4" item="5" />
+    <cell id="3" item="5" />
+    <cell id="3" item="4" />
+    <cell id="2" item="4" />
+    <cell id="2" item="3" />
+    <cell id="2" item="2" />
+    <cell id="2" item="1" />
+    <cell id="6" item="0" image="Avestruz.jpg" />
+    <cell id="2" item="0" />
+    <cell id="1" item="0" image="criafoca.jpg" />
+    <cell id="0" item="0" />
+    <cell id="6" />
+    <cell id="6" />
+    <cell id="5" />
+    <cell id="5" />
+    <cell id="4" />
+    <cell id="4" />
+    <cell id="3" />
+    <cell id="3" />
+    <cell id="2" />
+    <cell id="1" />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+   </cells>
+   <layout position="AB" wildTransparent="true" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="10" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Harrington" size="20" bold="true" />
+      <color background="0xFFFF66" />
+     </style>
+     <p>Relaciona cada animal con su nombre</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFF00" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="18" maxActions="6" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0xFFFF66">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x9999FF" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="132.0" cellHeight="90.0" border="true" id="primary">
+    <style borderStroke="3.8" markerStroke="5.0">
+     <color border="0xFFFFFF" />
+     <gradient source="0x9999FF" dest="0x0066FF" angle="153" cycles="11" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="Avestruz.jpg" />
+    <cell image="ballena1.jpg" />
+    <cell image="orca.jpg" />
+    <cell image="Periquitoaustral.jpg" />
+    <cell image="flamencos7.jpg" />
+    <cell image="Condor.jpg" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="132.0" cellHeight="91.0" border="false" id="secondary">
+    <style transparent="true" borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="36" bold="true" />
+     <color foreground="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>avestruz</p>
+    </cell>
+    <cell>
+     <p>ballena</p>
+    </cell>
+    <cell>
+     <p>orca</p>
+    </cell>
+    <cell>
+     <p>periquito</p>
+    </cell>
+    <cell>
+     <p>flamenco</p>
+    </cell>
+    <cell>
+     <p>condor</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="11" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Harrington" size="20" bold="true" />
+      <color background="0xFFFF66" />
+     </style>
+     <p>Pincha en las imágenes y aprende el grupo a que pertenece cada animal</p>
+    </cell>
+   </messages>
+   <settings margin="18" report="false">
+    <container bgColor="0xFFFF66">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x9999FF" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="128.0" cellHeight="98.0" border="true" id="primary">
+    <style borderStroke="3.8" markerStroke="5.0">
+     <color border="0xFFFFFF" />
+     <gradient source="0x9999FF" dest="0x0066FF" angle="153" cycles="11" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0" image="Avestruz.jpg" />
+    <cell id="1" image="pezestan.jpg" />
+    <cell id="2" image="leoncachorros.jpg" />
+    <cell id="3" image="Dromedario1.jpg" />
+    <cell id="4" image="zapatero.jpg" />
+    <cell id="5" image="Delfines3.jpg" />
+   </cells>
+   <cells rows="6" cols="1" cellWidth="115.0" cellHeight="42.0" border="false" id="secondary">
+    <style transparent="true" borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="36" bold="true" />
+     <color foreground="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>aves</p>
+    </cell>
+    <cell>
+     <p>peces</p>
+    </cell>
+    <cell>
+     <p>felinos</p>
+    </cell>
+    <cell>
+     <p>herbívoros</p>
+    </cell>
+    <cell>
+     <p>insectos</p>
+    </cell>
+    <cell>
+     <p>cetáceos</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="12" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="Periquitoaustral.jpg" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Agency FB" size="28" bold="true" />
+      <color background="0xFF3333" />
+     </style>
+     <p>Escribe el grupo al que pertenecen estos animales</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF3333" />
+     </style>
+     <p>muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="18" report="true" reportActions="false">
+    <container bgColor="0xFFFF66">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x9999FF" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="150.0" cellHeight="124.0" border="false" id="primary">
+    <style transparent="true" borderStroke="1.2" markerStroke="5.0">
+     <color border="0xFFFF66" />
+     <gradient source="0x9999FF" dest="0x0066FF" angle="153" cycles="11" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="Avestruz.jpg" />
+    <cell image="Delfines3.jpg" />
+    <cell image="leoncachorros.jpg" />
+    <cell image="pezestan.jpg" />
+    <cell image="zapatero.jpg" />
+    <cell image="Dromedario1.jpg" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="78.0" cellHeight="67.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="24" bold="true" />
+     <color background="0x9999FF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>aves</p>
+    </cell>
+    <cell>
+     <p>cetáceos</p>
+    </cell>
+    <cell>
+     <p>felinos</p>
+    </cell>
+    <cell>
+     <p>peces</p>
+    </cell>
+    <cell>
+     <p>insectos</p>
+    </cell>
+    <cell>
+     <p>herbívoros</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" border="true" image="flamencos7.jpg" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="13" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Harrington" size="20" bold="true" />
+      <color background="0xFFFF66" />
+     </style>
+     <p>Busca la pareja</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFF00" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFF3333" />
+     </style>
+     <p>Inténtalo otra vez</p>
+    </cell>
+   </messages>
+   <settings margin="18" report="true" reportActions="false">
+    <container bgColor="0xFFFF66">
+     <image name="BebeFoca.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x9999FF" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="177.0" cellHeight="129.0" border="true" id="primary">
+    <style transparent="true" borderStroke="2.3" markerStroke="5.0">
+     <color border="0xFFFFFF" />
+     <gradient source="0x9999FF" dest="0x0066FF" angle="153" cycles="11" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="Avestruz.jpg" />
+    <cell image="zapatero.jpg" />
+    <cell image="Delfinamazona.jpg" />
+    <cell image="Dromedario1.jpg" />
+    <cell image="flamencos7.jpg" />
+    <cell image="frailecillo.jpg" />
+   </cells>
+   <scramble times="31" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="14" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" image="provincias2.gif" type="initial">
+     <style>
+      <font family="Harrington" size="20" bold="true" />
+      <color background="0xFFFF66" />
+     </style>
+     <p>Forma el mapa de España</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFF00" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="18" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFFF66">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x9999FF" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="provincias2.gif">
+    <style borderStroke="1.2" markerStroke="5.0">
+     <font family="Arial" size="17" bold="true" />
+     <gradient source="0x999999" dest="0x00FFFF" angle="6" cycles="5" />
+    </style>
+    <shaper class="@JigSaw" cols="4" rows="3" baseWidthFactor="0.37" toothHeightFactor="0.16" randomLines="true" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="FIN" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <gradient source="0x000000" dest="0xFFFFFF" angle="19" cycles="3" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x000000" dest="0xFFFFFF" angle="27" cycles="5" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="523.0" cellHeight="314.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_VIDEO" level="1" file="Película5.avi" stretch="true" free="false" loop="true" autoStart="true" />
+    </cell>
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="Película2.avi" file="pelicula2.avi" />
+  <media name="Película3.avi" file="pelicula3.avi" />
+  <media name="Película5.avi" file="pelicula5.avi" />
+  <media name="provincias2.gif" file="provincias2.gif" animated="false" />
+  <media name="Agapornis2.jpg" file="agapornis2.jpg" />
+  <media name="Avestruz.jpg" file="avestruz.jpg" />
+  <media name="ballena1.jpg" file="ballena1.jpg" />
+  <media name="BebeFoca.jpg" file="bebefoca.jpg" />
+  <media name="Condor.jpg" file="condor.jpg" />
+  <media name="criafoca.jpg" file="criafoca.jpg" />
+  <media name="delfi.jpg" file="delfi.jpg" />
+  <media name="delfin.jpg" file="delfin.jpg" />
+  <media name="Delfinamazona.jpg" file="delfinamazona.jpg" />
+  <media name="Delfines2.jpg" file="delfines2.jpg" />
+  <media name="Delfines3.jpg" file="delfines3.jpg" />
+  <media name="Delfintwist2.jpg" file="delfintwist2.jpg" />
+  <media name="Dromedario1.jpg" file="dromedario1.jpg" />
+  <media name="flamencos7.jpg" file="flamencos7.jpg" />
+  <media name="frailecillo.jpg" file="frailecillo.jpg" />
+  <media name="leoncachorros.jpg" file="leoncachorros.jpg" />
+  <media name="orca.jpg" file="orca.jpg" />
+  <media name="Periquitoaustral.jpg" file="periquitoaustral.jpg" />
+  <media name="pezestan.jpg" file="pezestan.jpg" />
+  <media name="zapatero.jpg" file="zapatero.jpg" />
+ </mediaBag>
+</JClicProject>
+

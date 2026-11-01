@@ -1,0 +1,1004 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="polied1e" version="0.1.3">
+ <settings>
+  <title>polied1e</title>
+  <revision description="created" date="5/31/02" />
+  <descriptors />
+ </settings>
+ <sequence>
+  <item id="polied1e.pac" name="paq30int.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="pldres00.ass" />
+  <item name="pldres10.ass" />
+  <item name="pldres01.ass" />
+  <item name="pldres02.ass" />
+  <item name="cub1.ass" />
+  <item name="prisma1.ass" />
+  <item name="pirami1.ass" />
+  <item name="pldres03.ass" />
+  <item name="pldres04.ass" />
+  <item name="poledr1.ass" />
+  <item name="pldres05.ass" />
+  <item name="pldres06.ass" />
+  <item name="pldres07.ass" />
+  <item name="pldres30.ass" />
+  <item name="paq30fi.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.ComplexAssociation" name="cub1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica los elementos de este cubo.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="10" cols="4" border="false" image="cub1a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="4" rows="10" showEnclosure="true" scaleX="4.0" scaleY="10.0">
+     <enclosing>
+      <shape>rectangle:0,0,4,10</shape>
+     </enclosing>
+     <shape>rectangle:0,3,1,1</shape>
+     <shape>rectangle:1,5,1,1</shape>
+     <shape>rectangle:3,7,1,1</shape>
+    </shaper>
+    <ids>0 1 2</ids>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>VÉRTICE</p>
+    </cell>
+    <cell>
+     <p>CARA</p>
+    </cell>
+    <cell>
+     <p>ARISTA</p>
+    </cell>
+   </cells>
+   <cells rows="10" cols="4" border="false" image="cub1c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="4" rows="10" showEnclosure="true" scaleX="4.0" scaleY="10.0">
+     <enclosing>
+      <shape>rectangle:0,0,4,10</shape>
+     </enclosing>
+     <shape>rectangle:0,3,1,1</shape>
+     <shape>rectangle:1,5,1,1</shape>
+     <shape>rectangle:3,7,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="paq30fi.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic sobre la flecha de la derecha para volver al menú         &gt;&gt;&gt;</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="portada1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="60.0" border="false">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>FIN DEL PAQUETE 30</p>
+    </cell>
+    <cell>
+     <p>POLIEDROS, PRISMAS Y PIRÁMIDES</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="paq30int.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic sobre la flecha para iniciar el paquete de actividades         &gt;&gt;&gt;</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="portada1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="60.0" border="false">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>GEOCLIC - PAQUETE 30</p>
+    </cell>
+    <cell>
+     <p>POLIEDROS, PRISMAS Y PIRÁMIDES</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="pirami1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica los elementos de esta pirámide.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="6" cols="3" border="false" image="pirami1a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="3" rows="6" showEnclosure="true" scaleX="3.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,3,6</shape>
+     </enclosing>
+     <shape>rectangle:2,0,1,1</shape>
+     <shape>rectangle:0,2,1,1</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>rectangle:0,3,1,1</shape>
+     <shape>rectangle:0,4,1,1</shape>
+     <shape>rectangle:2,4,1,1</shape>
+     <shape>rectangle:1,5,1,1</shape>
+    </shaper>
+    <ids>0 6 4 2 5 1 3</ids>
+   </cells>
+   <cells rows="7" cols="1" cellWidth="200.0" cellHeight="50.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell>
+     <p>EL VÉRTICE</p>
+    </cell>
+    <cell>
+     <p>VÉRTICE DE LA BASE</p>
+    </cell>
+    <cell>
+     <p>CARA LATERAL</p>
+    </cell>
+    <cell>
+     <p>BASE</p>
+    </cell>
+    <cell>
+     <p>ARISTA LATERAL</p>
+    </cell>
+    <cell>
+     <p>ARISTA DE LA BASE </p>
+    </cell>
+    <cell>
+     <p>ALTURA</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="3" border="false" image="pirami1c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="3" rows="6" showEnclosure="true" scaleX="3.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,3,6</shape>
+     </enclosing>
+     <shape>rectangle:2,0,1,1</shape>
+     <shape>rectangle:0,2,1,1</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>rectangle:0,3,1,1</shape>
+     <shape>rectangle:0,4,1,1</shape>
+     <shape>rectangle:2,4,1,1</shape>
+     <shape>rectangle:1,5,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="pldres00.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica los cuerpos que sean POLIEDROS.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="5" cellWidth="150.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="4" />
+    <cell id="1" image="6edr2.gif" />
+    <cell id="1" image="12edr3.gif" />
+    <cell id="1" image="20edr1.gif" />
+    <cell id="1" image="pira41.gif" />
+    <cell id="1" image="pira51.gif" />
+    <cell id="1" image="pira61.gif" />
+    <cell id="1" image="pris32.gif" />
+    <cell id="1" image="pris42.gif" />
+    <cell id="1" image="pris81.gif" />
+    <cell id="1" image="prisi3.gif" />
+    <cell id="1" image="prisi4.gif" />
+    <cell id="0" image="esfera1.gif" />
+    <cell id="0" image="esfsemi1.gif" />
+    <cell id="0" image="cilin1.gif" />
+    <cell id="0" image="cilin2.gif" />
+    <cell id="0" image="cilin3.gif" />
+    <cell id="0" image="cilinob1.gif" />
+    <cell id="0" image="con1.gif" />
+    <cell id="0" image="con2.gif" />
+    <cell id="0" image="contc1.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="pldres01.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica los poliedros que sean PRISMAS.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="5" cellWidth="150.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="4" />
+    <cell id="0" image="4edr2.gif" />
+    <cell id="1" image="6edr4.gif" />
+    <cell id="0" image="8edr3.gif" />
+    <cell id="0" image="12edr1.gif" />
+    <cell id="0" image="20edr2.gif" />
+    <cell id="0" image="pira41.gif" />
+    <cell id="0" image="pira42.gif" />
+    <cell id="0" image="pira51.gif" />
+    <cell id="0" image="pira61.gif" />
+    <cell id="0" image="pira81.gif" />
+    <cell id="1" image="pris32.gif" />
+    <cell id="1" image="pris33.gif" />
+    <cell id="1" image="pris42.gif" />
+    <cell id="1" image="pris43.gif" />
+    <cell id="1" image="pris51.gif" />
+    <cell id="1" image="pris61.gif" />
+    <cell id="1" image="pris81.gif" />
+    <cell id="0" image="pirat1.gif" />
+    <cell id="1" image="prisi3.gif" />
+    <cell id="1" image="priso1.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="pldres02.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica los poliedros que sean PIRÁMIDES.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="5" cellWidth="150.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="4" />
+    <cell id="1" image="4edr2.gif" />
+    <cell id="0" image="6edr4.gif" />
+    <cell id="0" image="8edr3.gif" />
+    <cell id="0" image="12edr1.gif" />
+    <cell id="0" image="20edr2.gif" />
+    <cell id="1" image="pira31.gif" />
+    <cell id="1" image="pira41.gif" />
+    <cell id="1" image="pira42.gif" />
+    <cell id="1" image="pira51.gif" />
+    <cell id="1" image="pira61.gif" />
+    <cell id="1" image="pira81.gif" />
+    <cell id="0" image="pris32.gif" />
+    <cell id="0" image="pris33.gif" />
+    <cell id="0" image="pris42.gif" />
+    <cell id="0" image="pris43.gif" />
+    <cell id="0" image="pris51.gif" />
+    <cell id="0" image="pris61.gif" />
+    <cell id="0" image="pris81.gif" />
+    <cell id="0" image="prisi3.gif" />
+    <cell id="0" image="priso1.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="pldres03.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica los poliedros que sean PRISMAS.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="5" cellWidth="150.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="4" />
+    <cell id="0" image="4edr3.gif" />
+    <cell id="0" image="8edr2.gif" />
+    <cell id="0" image="12edr1.gif" />
+    <cell id="0" image="atpris50.gif" />
+    <cell id="0" image="bipira30.gif" />
+    <cell id="0" image="pira41.gif" />
+    <cell id="0" image="pira51.gif" />
+    <cell id="0" image="pira61.gif" />
+    <cell id="0" image="pira81.gif" />
+    <cell id="1" image="pris33.gif" />
+    <cell id="1" image="pris42.gif" />
+    <cell id="1" image="pris51.gif" />
+    <cell id="1" image="pris61.gif" />
+    <cell id="1" image="pris81.gif" />
+    <cell id="0" image="pirat1.gif" />
+    <cell id="1" image="prisi3.gif" />
+    <cell id="1" image="priso2.gif" />
+    <cell id="1" image="priso3.gif" />
+    <cell id="1" image="priso4.gif" />
+    <cell id="1" image="priso5.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="pldres04.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica los poliedros que sean PIRÁMIDES.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="5" cellWidth="150.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="4" />
+    <cell id="1" image="4edr1.gif" />
+    <cell id="0" image="8edr3.gif" />
+    <cell id="0" image="20edr2.gif" />
+    <cell id="0" image="atpris50.gif" />
+    <cell id="0" image="bipira30.gif" />
+    <cell id="0" image="bipira50.gif" />
+    <cell id="1" image="pira31.gif" />
+    <cell id="1" image="pira41.gif" />
+    <cell id="1" image="pira42.gif" />
+    <cell id="1" image="pira43.gif" />
+    <cell id="1" image="pira51.gif" />
+    <cell id="1" image="pira61.gif" />
+    <cell id="1" image="pira62.gif" />
+    <cell id="1" image="pira81.gif" />
+    <cell id="0" image="pris32.gif" />
+    <cell id="0" image="pris42.gif" />
+    <cell id="0" image="pris51.gif" />
+    <cell id="0" image="priso3.gif" />
+    <cell id="0" image="prisi4.gif" />
+    <cell id="0" image="prisi5.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="pldres05.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica los prismas que sean PARALELEPÍPEDOS.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="5" cellWidth="150.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="4" />
+    <cell id="1" image="6edr2.gif" />
+    <cell id="0" image="pris32.gif" />
+    <cell id="0" image="pris33.gif" />
+    <cell id="0" image="pris34.gif" />
+    <cell id="1" image="pris42.gif" />
+    <cell id="1" image="pris43.gif" />
+    <cell id="1" image="pris44.gif" />
+    <cell id="0" image="pris51.gif" />
+    <cell id="0" image="pris61.gif" />
+    <cell id="0" image="pris62.gif" />
+    <cell id="0" image="pris81.gif" />
+    <cell id="0" image="prisi3.gif" />
+    <cell id="0" image="prisi4.gif" />
+    <cell id="0" image="prisi5.gif" />
+    <cell id="1" image="priso1.gif" />
+    <cell id="1" image="priso2.gif" />
+    <cell id="0" image="priso3.gif" />
+    <cell id="1" image="priso4.gif" />
+    <cell id="0" image="priso5.gif" />
+    <cell id="0" image="priso6.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="pldres06.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica los paralelepípedos que sean ORTOEDROS.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="150.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="1" image="6edr2.gif" />
+    <cell id="1" image="pris42.gif" />
+    <cell id="1" image="pris43.gif" />
+    <cell id="1" image="pris44.gif" />
+    <cell id="1" image="pris45.gif" />
+    <cell id="0" image="priso1.gif" />
+    <cell id="0" image="priso2.gif" />
+    <cell id="0" image="priso4.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="pldres07.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica los ortoedros que sean CUBOS.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="150.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="1" image="6edr2.gif" />
+    <cell id="1" image="6edr5.gif" />
+    <cell id="0" image="pris42.gif" />
+    <cell id="0" image="pris43.gif" />
+    <cell id="0" image="pris44.gif" />
+    <cell id="0" image="pris45.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="pldres10.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica los cuerpos que sean POLIEDROS.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="5" cellWidth="150.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="4" />
+    <cell id="1" image="6edr1.gif" />
+    <cell id="1" image="8edr2.gif" />
+    <cell id="1" image="atpris50.gif" />
+    <cell id="1" image="bipira40.gif" />
+    <cell id="1" image="pira43.gif" />
+    <cell id="1" image="pira62.gif" />
+    <cell id="1" image="pirat1.gif" />
+    <cell id="1" image="pris34.gif" />
+    <cell id="1" image="pris43.gif" />
+    <cell id="1" image="noeu1.gif" />
+    <cell id="1" image="noeu2.gif" />
+    <cell id="1" image="priso3.gif" />
+    <cell id="1" image="priso4.gif" />
+    <cell id="0" image="esfseg1.gif" />
+    <cell id="0" image="esftasc3.gif" />
+    <cell id="0" image="cilin3.gif" />
+    <cell id="0" image="cilinob1.gif" />
+    <cell id="0" image="conob1.gif" />
+    <cell id="0" image="con2.gif" />
+    <cell id="0" image="esfsegm1.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="pldres30.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Clasifica estas figuras en RECTAS y OBLICUAS.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="5" cellWidth="150.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="4" />
+    <cell id="0" image="6edr4.gif" />
+    <cell id="0" image="cilin1.gif" />
+    <cell id="0" image="cilin2.gif" />
+    <cell id="0" image="cilin3.gif" />
+    <cell id="1" image="cilinob1.gif" />
+    <cell id="0" image="con1.gif" />
+    <cell id="1" image="conob1.gif" />
+    <cell id="0" image="pira41.gif" />
+    <cell id="1" image="pira42.gif" />
+    <cell id="0" image="pira61.gif" />
+    <cell id="1" image="pira62.gif" />
+    <cell id="0" image="pira81.gif" />
+    <cell id="0" image="pris45.gif" />
+    <cell id="0" image="pris51.gif" />
+    <cell id="0" image="pris81.gif" />
+    <cell id="1" image="priso1.gif" />
+    <cell id="1" image="priso2.gif" />
+    <cell id="1" image="priso3.gif" />
+    <cell id="1" image="priso4.gif" />
+    <cell id="1" image="priso6.gif" />
+   </cells>
+   <cells rows="2" cols="1" cellWidth="100.0" cellHeight="70.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>RECTA</p>
+    </cell>
+    <cell>
+     <p>OBLICUA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="poledr1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Con las piezas de un juego de arquitectura hemos hecho esta construcción. Responde a todas estas preguntas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="16" cols="6" border="false" image="poledr1a.gif" id="primary">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="6" rows="16" showEnclosure="true" scaleX="6.0" scaleY="16.0">
+     <enclosing>
+      <shape>rectangle:0,0,6,16</shape>
+     </enclosing>
+     <shape>rectangle:5,1,1,1</shape>
+     <shape>rectangle:5,2,1,1</shape>
+     <shape>rectangle:5,4,1,1</shape>
+     <shape>rectangle:5,5,1,1</shape>
+     <shape>rectangle:5,7,1,1</shape>
+     <shape>rectangle:5,8,1,1</shape>
+     <shape>rectangle:5,10,1,1</shape>
+     <shape>rectangle:5,11,1,1</shape>
+     <shape>rectangle:5,13,1,1</shape>
+     <shape>rectangle:5,14,1,1</shape>
+    </shaper>
+    <ids>0 5 10 1 2 7 0 19 2 11</ids>
+   </cells>
+   <cells rows="10" cols="2" cellWidth="70.0" cellHeight="40.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="10" />
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>AZUL</p>
+    </cell>
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>MORADO</p>
+    </cell>
+    <cell>
+     <p>3</p>
+    </cell>
+    <cell>
+     <p>ROJO</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>AMARILLO</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>NEGRO</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>LILA</p>
+    </cell>
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>MARRÓN</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>BLANCO</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>GRIS</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>VERDE</p>
+    </cell>
+   </cells>
+   <cells rows="16" cols="6" border="false" image="poledr1c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="6" rows="16" showEnclosure="true" scaleX="6.0" scaleY="16.0">
+     <enclosing>
+      <shape>rectangle:0,0,6,16</shape>
+     </enclosing>
+     <shape>rectangle:5,1,1,1</shape>
+     <shape>rectangle:5,2,1,1</shape>
+     <shape>rectangle:5,4,1,1</shape>
+     <shape>rectangle:5,5,1,1</shape>
+     <shape>rectangle:5,7,1,1</shape>
+     <shape>rectangle:5,8,1,1</shape>
+     <shape>rectangle:5,10,1,1</shape>
+     <shape>rectangle:5,11,1,1</shape>
+     <shape>rectangle:5,13,1,1</shape>
+     <shape>rectangle:5,14,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="prisma1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica los elementos de este prisma.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="8" cols="3" border="false" image="prisma1a.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="3" rows="8" showEnclosure="true" scaleX="3.0" scaleY="8.0">
+     <enclosing>
+      <shape>rectangle:0,0,3,8</shape>
+     </enclosing>
+     <shape>rectangle:1,1,1,1</shape>
+     <shape>rectangle:2,1,1,1</shape>
+     <shape>rectangle:2,3,1,1</shape>
+     <shape>rectangle:0,4,1,1</shape>
+     <shape>rectangle:2,6,1,1</shape>
+     <shape>rectangle:1,7,1,1</shape>
+    </shaper>
+    <ids>2 0 3 1 4 2</ids>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="200.0" cellHeight="50.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>VÉRTICE</p>
+    </cell>
+    <cell>
+     <p>CARA LATERAL</p>
+    </cell>
+    <cell>
+     <p>BASE</p>
+    </cell>
+    <cell>
+     <p>ARISTA LATERAL</p>
+    </cell>
+    <cell>
+     <p>ARISTA DE LA BASE </p>
+    </cell>
+   </cells>
+   <cells rows="8" cols="3" border="false" image="prisma1c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="3" rows="8" showEnclosure="true" scaleX="3.0" scaleY="8.0">
+     <enclosing>
+      <shape>rectangle:0,0,3,8</shape>
+     </enclosing>
+     <shape>rectangle:1,1,1,1</shape>
+     <shape>rectangle:2,1,1,1</shape>
+     <shape>rectangle:2,3,1,1</shape>
+     <shape>rectangle:0,4,1,1</shape>
+     <shape>rectangle:2,6,1,1</shape>
+     <shape>rectangle:1,7,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="12edr1.gif" file="12edr1.gif" animated="false" />
+  <media name="12edr3.gif" file="12edr3.gif" animated="false" />
+  <media name="20edr1.gif" file="20edr1.gif" animated="false" />
+  <media name="20edr2.gif" file="20edr2.gif" animated="false" />
+  <media name="4edr1.gif" file="4edr1.gif" animated="false" />
+  <media name="4edr2.gif" file="4edr2.gif" animated="false" />
+  <media name="4edr3.gif" file="4edr3.gif" animated="false" />
+  <media name="6edr1.gif" file="6edr1.gif" animated="false" />
+  <media name="6edr2.gif" file="6edr2.gif" animated="false" />
+  <media name="6edr4.gif" file="6edr4.gif" animated="false" />
+  <media name="6edr5.gif" file="6edr5.gif" animated="false" />
+  <media name="8edr2.gif" file="8edr2.gif" animated="false" />
+  <media name="8edr3.gif" file="8edr3.gif" animated="false" />
+  <media name="atpris50.gif" file="atpris50.gif" animated="false" />
+  <media name="bipira30.gif" file="bipira30.gif" animated="false" />
+  <media name="bipira40.gif" file="bipira40.gif" animated="false" />
+  <media name="bipira50.gif" file="bipira50.gif" animated="false" />
+  <media name="cilin1.gif" file="cilin1.gif" animated="false" />
+  <media name="cilin2.gif" file="cilin2.gif" animated="false" />
+  <media name="cilin3.gif" file="cilin3.gif" animated="false" />
+  <media name="cilinob1.gif" file="cilinob1.gif" animated="false" />
+  <media name="con1.gif" file="con1.gif" animated="false" />
+  <media name="con2.gif" file="con2.gif" animated="false" />
+  <media name="conob1.gif" file="conob1.gif" animated="false" />
+  <media name="contc1.gif" file="contc1.gif" animated="false" />
+  <media name="cub1a.gif" file="cub1a.gif" animated="false" />
+  <media name="cub1c.gif" file="cub1c.gif" animated="false" />
+  <media name="esfera1.gif" file="esfera1.gif" animated="false" />
+  <media name="esfseg1.gif" file="esfseg1.gif" animated="false" />
+  <media name="esfsegm1.gif" file="esfsegm1.gif" animated="false" />
+  <media name="esfsemi1.gif" file="esfsemi1.gif" animated="false" />
+  <media name="esftasc3.gif" file="esftasc3.gif" animated="false" />
+  <media name="noeu1.gif" file="noeu1.gif" animated="false" />
+  <media name="noeu2.gif" file="noeu2.gif" animated="false" />
+  <media name="pira31.gif" file="pira31.gif" animated="false" />
+  <media name="pira41.gif" file="pira41.gif" animated="false" />
+  <media name="pira42.gif" file="pira42.gif" animated="false" />
+  <media name="pira43.gif" file="pira43.gif" animated="false" />
+  <media name="pira51.gif" file="pira51.gif" animated="false" />
+  <media name="pira61.gif" file="pira61.gif" animated="false" />
+  <media name="pira62.gif" file="pira62.gif" animated="false" />
+  <media name="pira81.gif" file="pira81.gif" animated="false" />
+  <media name="pirami1a.gif" file="pirami1a.gif" animated="false" />
+  <media name="pirami1c.gif" file="pirami1c.gif" animated="false" />
+  <media name="pirat1.gif" file="pirat1.gif" animated="false" />
+  <media name="poledr1a.gif" file="poledr1a.gif" animated="false" />
+  <media name="poledr1c.gif" file="poledr1c.gif" animated="false" />
+  <media name="portada1.gif" file="portada1.gif" animated="false" />
+  <media name="pris32.gif" file="pris32.gif" animated="false" />
+  <media name="pris33.gif" file="pris33.gif" animated="false" />
+  <media name="pris34.gif" file="pris34.gif" animated="false" />
+  <media name="pris42.gif" file="pris42.gif" animated="false" />
+  <media name="pris43.gif" file="pris43.gif" animated="false" />
+  <media name="pris44.gif" file="pris44.gif" animated="false" />
+  <media name="pris45.gif" file="pris45.gif" animated="false" />
+  <media name="pris51.gif" file="pris51.gif" animated="false" />
+  <media name="pris61.gif" file="pris61.gif" animated="false" />
+  <media name="pris62.gif" file="pris62.gif" animated="false" />
+  <media name="pris81.gif" file="pris81.gif" animated="false" />
+  <media name="prisi3.gif" file="prisi3.gif" animated="false" />
+  <media name="prisi4.gif" file="prisi4.gif" animated="false" />
+  <media name="prisi5.gif" file="prisi5.gif" animated="false" />
+  <media name="prisma1a.gif" file="prisma1a.gif" animated="false" />
+  <media name="prisma1c.gif" file="prisma1c.gif" animated="false" />
+  <media name="priso1.gif" file="priso1.gif" animated="false" />
+  <media name="priso2.gif" file="priso2.gif" animated="false" />
+  <media name="priso3.gif" file="priso3.gif" animated="false" />
+  <media name="priso4.gif" file="priso4.gif" animated="false" />
+  <media name="priso5.gif" file="priso5.gif" animated="false" />
+  <media name="priso6.gif" file="priso6.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

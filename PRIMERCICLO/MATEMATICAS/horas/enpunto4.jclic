@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="enpunto4" version="0.1.3">
+ <settings>
+  <title>Las horas del reloj</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="2/15/08" />
+  <revision description="Conversión de Clic3 a JClic" date="2/15/08">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Tomás Fernández García" mail="tfernandez411@telefonica.net" />
+  <organization name="CP Ausiàs March" city="Alacant" state="País Valencià" />
+  <language>español</language>
+  <description>
+   <p>Proyecto de actividades dirigido a educación primaria  que teine como objetivo principal el aprendizaje y uso del reloj de forma práctica y sistemática. El proyecto tiene más de ciento cincuenta actividades y está dividido en seis partes:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Historia de relojes</p>
+   <p>&lt;LI&gt;En punto</p>
+   <p>&lt;LI&gt;Y media</p>
+   <p>&lt;LI&gt;Y cuarto, menos cuarto</p>
+   <p>&lt;LI&gt;Otras horas</p>
+   <p>&lt;LI&gt;Internet</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area="Matemáticas" level="Primaria (6-12)">tiempo</descriptors>
+  <skin file="@orange.xml" />
+ </settings>
+ <sequence>
+  <item id="start" name="señala hora punto">
+   <jump tag="fin" project="enpunto3.jclic" id="back" />
+  </item>
+  <item name="memoria ana en punto" />
+  <item name="señala hora punto_2" />
+  <item name="memoria mixta en punto" />
+  <item id="fin" name="final 1er ciclo">
+   <jump tag="inicio" project="horas.jclic" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="final 1er ciclo" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="final.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="443.0" cellHeight="125.0" border="false">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell image="ALEGRIA.jpg">
+     <style>
+      <font family="Century Gothic" size="17" bold="true" />
+      <color foreground="0xFF3333" background="0xFFFFFF" border="0xFFFFFF" />
+     </style>
+     <p>¡¡  ENHORABUENA  !! </p>
+     <p>HAS TERMINADO LAS ACTIVIDADES DE ESTE GRUPO.</p>
+    </cell>
+    <cell txtAlign="middle,top" imgAlign="middle,top" image="flecha adelante.jpg">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0x0033FF" background="0xFFFFFF" border="0xFFFFFF" />
+     </style>
+     <p>............ PINCHA EN                      Y DESPUÉS ELIJE </p>
+     <p>                                                                                              OTRO PAQUETE DE ACTIVIDADES</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@memory.MemoryGame" name="memoria ana en punto" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="localiza horas igual.wav" />
+     <p>LOCALIZA    LAS  HORAS    IGUALES</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="correcto.wav" />
+     <p>¡¡¡¡   CORRECTO   !!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="163.0" cellHeight="79.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFFFFFF" border="0x6699FF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="ana1-00.jpg" />
+    <cell image="ana10-00.jpg" />
+    <cell image="ana4-00.jpg" />
+    <cell image="ana12-00.jpg" />
+    <cell image="ana5-00.jpg" />
+    <cell image="ana8-00.jpg" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="memoria mixta en punto" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="localiza horas igual.wav" />
+     <p>LOCALIZA    LAS  HORAS    IGUALES</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="correcto.wav" />
+     <p>¡¡¡¡   CORRECTO   !!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="163.0" cellHeight="94.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <color background="0xFFFFFF" inactive="0xFFFFFF" border="0x6699FF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="ana11-00.jpg" />
+    <cell image="ana2-00.jpg" />
+    <cell image="ana4-00.jpg" />
+    <cell image="ana12-00.jpg" />
+    <cell image="ana5-00.jpg" />
+    <cell image="ana3-00.jpg" />
+   </cells>
+   <cells rows="3" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="secondary">
+    <style />
+    <cell image="DIGITA11-00.jpg" />
+    <cell image="DIGITA02-00.jpg" />
+    <cell image="DIGITA04-00.jpg" />
+    <cell image="DIGITA00-00.jpg" />
+    <cell image="DIGITA05-00.jpg" />
+    <cell image="DIGITA03-00.jpg" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="señala hora punto" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="senala relojes 2-00.wav" />
+     <p>SEÑALA LOS RELOJES QUE MARQUEN  LAS  2 EN PUNTO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="eres buen detect.wav" />
+     <p>ERES UN BUEN DETECTIVE</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="3" cols="4" cellWidth="102.0" cellHeight="114.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <color background="0xFFFFFF" inactive="0xCCFFFF" border="0x3366FF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell id="1" image="ana2-00.jpg" />
+    <cell id="0" image="ana8-00.jpg" />
+    <cell id="1" image="DIGITA02-00.jpg" />
+    <cell id="0" image="DIGITA04-00.jpg" />
+    <cell id="0" image="DIGITA06-00.jpg" />
+    <cell id="0" image="ana3-00.jpg" />
+    <cell id="0" image="DIGITA01-00.jpg" />
+    <cell id="0" image="ana9-00.jpg" />
+    <cell id="1" image="ana2-00.jpg" />
+    <cell id="0" image="DIGITA03-00.jpg" />
+    <cell id="0" image="ana1-00.jpg" />
+    <cell id="1" image="DIGITA02-00.jpg" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="señala hora punto_2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="senala relojes 12-00.wav" />
+     <p>SEÑALA LOS RELOJES QUE MARQUEN  LAS  12 EN PUNTO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="buen detective.wav" />
+     <p>¡¡¡  BUEN DETECTIVE   !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="3" cols="4" cellWidth="104.0" cellHeight="114.0" border="true" id="primary">
+    <style borderStroke="1.7" markerStroke="2.7">
+     <color background="0xFFFFFF" inactive="0xCCFFFF" border="0x3366FF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell id="0" image="ana11-00.jpg" />
+    <cell id="0" image="ana8-00.jpg" />
+    <cell id="0" image="DIGITA02-00.jpg" />
+    <cell id="1" image="DIGITA00-00.jpg" />
+    <cell id="1" image="DIGITA00-00.jpg" />
+    <cell id="1" image="ana12-00.jpg" />
+    <cell id="0" image="DIGITA01-00.jpg" />
+    <cell id="1" image="ana12-00.jpg" />
+    <cell id="0" image="ana2-00.jpg" />
+    <cell id="0" image="DIGITA03-00.jpg" />
+    <cell id="0" image="ana1-00.jpg" />
+    <cell id="0" image="DIGITA10-00.jpg" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="ALEGRIA.jpg" file="alegria.jpg" />
+  <media name="ana1-00.jpg" file="ana1_00.jpg" />
+  <media name="ana10-00.jpg" file="ana10_00.jpg" />
+  <media name="ana11-00.jpg" file="ana11_00.jpg" />
+  <media name="ana12-00.jpg" file="ana12_00.jpg" />
+  <media name="ana2-00.jpg" file="ana2_00.jpg" />
+  <media name="ana3-00.jpg" file="ana3_00.jpg" />
+  <media name="ana4-00.jpg" file="ana4_00.jpg" />
+  <media name="ana5-00.jpg" file="ana5_00.jpg" />
+  <media name="ana8-00.jpg" file="ana8_00.jpg" />
+  <media name="ana9-00.jpg" file="ana9_00.jpg" />
+  <media name="DIGITA00-00.jpg" file="digita00_00.jpg" />
+  <media name="DIGITA01-00.jpg" file="digita01_00.jpg" />
+  <media name="DIGITA02-00.jpg" file="digita02_00.jpg" />
+  <media name="DIGITA03-00.jpg" file="digita03_00.jpg" />
+  <media name="DIGITA04-00.jpg" file="digita04_00.jpg" />
+  <media name="DIGITA05-00.jpg" file="digita05_00.jpg" />
+  <media name="DIGITA06-00.jpg" file="digita06_00.jpg" />
+  <media name="DIGITA10-00.jpg" file="digita10_00.jpg" />
+  <media name="DIGITA11-00.jpg" file="digita11_00.jpg" />
+  <media name="flecha adelante.jpg" file="flecha_adelante.jpg" />
+  <media name="tiempo.jpg" file="tiempo.jpg" />
+  <media name="buen detective.wav" file="buen_detective.wav" />
+  <media name="correcto.wav" file="correcto.wav" />
+  <media name="eres buen detect.wav" file="eres_buen_detect.wav" />
+  <media name="final.wav" file="final.wav" />
+  <media name="localiza horas igual.wav" file="localiza_horas_igual.wav" />
+  <media name="senala relojes 12-00.wav" file="senala_relojes_12_00.wav" />
+  <media name="senala relojes 2-00.wav" file="senala_relojes_2_00.wav" />
+ </mediaBag>
+</JClicProject>
+

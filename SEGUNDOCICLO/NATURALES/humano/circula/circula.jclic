@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="circula" version="0.1.3">
+ <settings>
+  <title>El cuerpo humano - 1</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="5/5/97" />
+  <revision description="Traducción Español" date="5/5/97">
+   <author name="Rafael Rodríguez Martín" mail="rrodri4@platea.pntic.mec.es" />
+  </revision>
+  <revision description="Conversión de Clic3 a JClic" date="7/11/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Seminari d'Informàtica Educativa del Pla d'Urgell" />
+  <language>es</language>
+  <description>
+   <p>Paquete de actividades sobre el cuerpo humano: los aparatos digestivo, excretor, locomotor, respiratorio, reproductor y circulatorio. Este material corresponde a la unidad de programación &lt;B&gt;&lt;A HREF="http://www.xtec.es/recursos/curricul/experim/coshuma.htm"  TARGET="_blank"&gt;"El cos humà"&lt;/A&gt;&lt;/B&gt;.</p>
+  </description>
+  <descriptors area-codes="exp" level="Primaria, Secundaria">anatomía</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Paquete de actividades sobre el cuerpo humano: los aparatos digestivo, excretor, locomotor, respiratorio, reproductor y circulatorio. Este material corresponde a la unidad de programación &lt;B&gt;&lt;A HREF="http://www.xtec.es/recursos/curricul/experim/coshuma.htm"  TARGET="_blank"&gt;"El cos humà"&lt;/A&gt;&lt;/B&gt;.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="circula.pac" name="circula/circul1.puz">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="circula/circul2.ass" />
+  <item name="circula/circul3.ass" />
+  <item name="circula/circula.sop">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@puzzles.ExchangePuzzle" name="circula\circul1.puz">
+   <description>
+    <p>Trencaclosques amb l'aparell circulatori</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Recompón este esquema del aparato circulatorio</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¡ Muy bien !</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="circula\circu.gif">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="circula\circul2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿A qué componentes de la sangre corresponden las definiciones?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¡ Muy bien ! Puedes seguir adelante ...</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="200.0" cellHeight="150.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>Hematies: poseen la hemoglobina, capaz de fijar el oxígeno del aire</p>
+    </cell>
+    <cell>
+     <p>Leucocitos: luchan contra los microbios por medio de la fagocitosis y con antitoxinas.</p>
+    </cell>
+    <cell>
+     <p>No tienen núcleo, se forman en la médula roja de los huesos.</p>
+    </cell>
+    <cell>
+     <p>Líquido de color rojizo, donde están los glóbulos</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="200.0" cellHeight="150.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>Glóbulos rojos</p>
+    </cell>
+    <cell>
+     <p>Glóbulos blancos</p>
+    </cell>
+    <cell>
+     <p>Plaquetas</p>
+    </cell>
+    <cell>
+     <p>Plasma</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="circula\circul3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Explora las partes y órganos del aparato circulatorio</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="10" cols="6" border="false" image="circula\circu.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="6" rows="10" showEnclosure="true" scaleX="6.0" scaleY="10.0">
+     <enclosing>
+      <shape>rectangle:0,0,6,10</shape>
+     </enclosing>
+     <shape>M:0,0|L:0,1|L:0,2|L:0,3|L:3,3|L:3,2|L:1,2|L:1,1|L:1,0|X</shape>
+     <shape>M:1,0|L:1,1|L:1,2|L:5,2|L:5,1|L:5,0|X</shape>
+     <shape>M:5,0|L:5,1|L:5,2|L:5,3|L:6,3|L:6,2|L:6,1|L:6,0|X</shape>
+     <shape>rectangle:3,2,2,1</shape>
+     <shape>rectangle:0,3,1,1</shape>
+     <shape>M:1,3|L:1,4|L:0,4|L:0,5|L:0,6|L:0,7|L:0,8|L:0,9|L:1,9|L:1,10|L:2,10|L:2,9|L:2,8|L:1,8|L:1,7|L:1,6|L:2,6|L:2,5|L:2,4|L:2,3|X</shape>
+     <shape>rectangle:2,3,1,1</shape>
+     <shape>rectangle:3,3,1,1</shape>
+     <shape>rectangle:4,3,1,1</shape>
+     <shape>M:5,3|L:5,4|L:4,4|L:4,5|L:5,5|L:5,6|L:5,7|L:5,8|L:4,8|L:4,9|L:5,9|L:5,10|L:6,10|L:6,9|L:6,8|L:6,7|L:6,6|L:6,5|L:6,4|L:6,3|X</shape>
+     <shape>rectangle:2,4,1,1</shape>
+     <shape>rectangle:3,4,1,1</shape>
+     <shape>M:2,5|L:2,6|L:1,6|L:1,7|L:1,8|L:3,8|L:3,7|L:4,7|L:4,6|L:3,6|L:3,5|X</shape>
+     <shape>rectangle:3,5,1,1</shape>
+     <shape>M:4,5|L:4,6|L:4,7|L:5,7|L:5,6|L:5,5|X</shape>
+     <shape>M:3,7|L:3,8|L:2,8|L:2,9|L:4,9|L:4,8|L:4,7|X</shape>
+     <shape>rectangle:4,7,1,1</shape>
+     <shape>rectangle:0,9,1,1</shape>
+     <shape>rectangle:2,9,3,1</shape>
+    </shaper>
+    <ids>2 8 3 0 0 1 7 6 3 0 4 5 11 0 10 10 9 0 9</ids>
+   </cells>
+   <cells rows="2" cols="6" cellWidth="100.0" cellHeight="70.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="2" />
+    <cell>
+     <p>arteria aorta</p>
+    </cell>
+    <cell>
+     <p>vena cava</p>
+    </cell>
+    <cell>
+     <p>arteria pulmonar</p>
+    </cell>
+    <cell>
+     <p>vena pulmonar</p>
+    </cell>
+    <cell>
+     <p>ventrículo derecho</p>
+    </cell>
+    <cell>
+     <p>ventrículo izquierdo</p>
+    </cell>
+    <cell>
+     <p>aurícula izquierda</p>
+    </cell>
+    <cell>
+     <p>aurícula derecha</p>
+    </cell>
+    <cell>
+     <p>capilares pulmonares</p>
+    </cell>
+    <cell>
+     <p>capilares generales</p>
+    </cell>
+    <cell>
+     <p>intestino</p>
+    </cell>
+    <cell>
+     <p>hígado</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="circula\circula.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Encuentra 9 palabras sobre la circulación de la sangre</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Lo has hecho muy bien. ¡ Enhorabuena !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="12" columns="10" cellWidth="40.0" cellHeight="40.0" border="true">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>VT*SISTOLE*C</row>
+     <row>E*R**AIRETRA</row>
+     <row>N**I*A*****P</row>
+     <row>T***CL**L**I</row>
+     <row>R****U**A**L</row>
+     <row>I*V**CS*R**A</row>
+     <row>C*E**I*PT**R</row>
+     <row>U*N**R**I***</row>
+     <row>L*A**U**MD**</row>
+     <row>O**DIASTOLE*</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">AURICULA</clue>
+    <clue id="1">VENTRICULO</clue>
+    <clue id="2">TRICUSPIDE</clue>
+    <clue id="3">MITRAL</clue>
+    <clue id="4">SISTOLE</clue>
+    <clue id="5">DIASTOLE</clue>
+    <clue id="6">ARTERIA</clue>
+    <clue id="7">VENA</clue>
+    <clue id="8">CAPILAR</clue>
+   </clues>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="circula/circu.gif" file="circula_circu.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

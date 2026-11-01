@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="huma" version="0.1.3">
+ <settings>
+  <title>El cuerpo humano - 1</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="5/5/97" />
+  <revision description="Traducción Español" date="4/19/00">
+   <author name="Rafael Rodríguez Martín" mail="rrodri4@platea.pntic.mec.es" />
+  </revision>
+  <revision description="Conversión de Clic3 a JClic" date="7/11/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Seminari d'Informàtica Educativa del Pla d'Urgell" />
+  <language>es</language>
+  <description>
+   <p>Paquete de actividades sobre el cuerpo humano: los aparatos digestivo, excretor, locomotor, respiratorio, reproductor y circulatorio. Este material corresponde a la unidad de programación &lt;B&gt;&lt;A HREF="http://www.xtec.es/recursos/curricul/experim/coshuma.htm"  TARGET="_blank"&gt;"El cos humà"&lt;/A&gt;&lt;/B&gt;.</p>
+  </description>
+  <descriptors area-codes="exp" level="Primaria, Secundaria">anatomía</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Paquete de actividades sobre el cuerpo humano: los aparatos digestivo, excretor, locomotor, respiratorio, reproductor y circulatorio. Este material corresponde a la unidad de programación &lt;B&gt;&lt;A HREF="http://www.xtec.es/recursos/curricul/experim/coshuma.htm"  TARGET="_blank"&gt;"El cos humà"&lt;/A&gt;&lt;/B&gt;.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="huma.pac" name="portada.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="menu.ass">
+   <jump action="STOP" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="menu.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¿Por dónde quieres comenzar?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="150.0" cellHeight="150.0" border="true">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="dige.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="digestiu.pac" params="digestiu/digestiu.jclic" />
+    </cell>
+    <cell image="excre.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="excretor.pac" params="excretor/excretor.jclic" />
+    </cell>
+    <cell image="loco.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="locomot.pac" params="locomot/locomot.jclic" />
+    </cell>
+    <cell image="pulmo.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="respira.pac" params="respira/respira.jclic" />
+    </cell>
+    <cell image="repro.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="reproduc.pac" params="reproduc/reproduc.jclic" />
+    </cell>
+    <cell image="circu.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="circula.pac" params="circula/circula.jclic" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="portada.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="portada.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="circu.gif" file="circu.gif" animated="false" />
+  <media name="dige.gif" file="dige.gif" animated="false" />
+  <media name="excre.gif" file="excre.gif" animated="false" />
+  <media name="loco.gif" file="loco.gif" animated="false" />
+  <media name="portada.gif" file="portada.gif" animated="false" />
+  <media name="pulmo.gif" file="pulmo.gif" animated="false" />
+  <media name="repro.gif" file="repro.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

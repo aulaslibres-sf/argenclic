@@ -1,0 +1,1584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="fabulas" version="0.1.3">
+ <settings>
+  <title>Sin nombre</title>
+  <revision description="created" date="3/17/06" />
+  <descriptors />
+ </settings>
+ <sequence>
+  <item id="fabulas.pac" name="inicio.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="election.ass">
+   <jump action="STOP" id="forward" />
+  </item>
+  <item id="primero.pac" name="inicio2.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="zorra.ass" />
+  <item name="zorra2.ass" />
+  <item name="gallo1.puz" />
+  <item name="gallo2.puz" />
+  <item name="gallo1.txa" />
+  <item name="gallo2.txa" />
+  <item name="gallop~1.puz" />
+  <item name="election.ass">
+   <jump action="STOP" id="forward" />
+  </item>
+  <item id="segundo.pac" name="inicio3.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="hormiga1.ass" />
+  <item name="hormiga.puz" />
+  <item name="hormiga.txa" />
+  <item name="hormig~1.puz" />
+  <item name="election.ass">
+   <jump action="STOP" id="forward" />
+  </item>
+  <item id="tercero.pac" name="inicio4.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="lobo1.ass" />
+  <item name="lobo.puz" />
+  <item name="lobo.txa" />
+  <item name="lobopuzz.puz" />
+  <item name="election.ass">
+   <jump action="STOP" id="forward" />
+  </item>
+  <item id="cuarto.pac" name="inicio5.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="leon1.ass" />
+  <item name="leon.puz" />
+  <item name="leon.txa" />
+  <item name="leonpuzz.puz" />
+  <item name="election.ass">
+   <jump action="STOP" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="election.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>ELIGE UN CUENTO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x00FF00">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="300.0" cellHeight="500.0" border="false">
+    <style>
+     <color background="0x00FF00" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="a1.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="primero.pac" />
+     <p>|</p>
+    </cell>
+    <cell image="a2.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="segundo.pac" />
+     <p>|</p>
+    </cell>
+    <cell image="a3.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="tercero.pac" />
+     <p>|</p>
+    </cell>
+    <cell image="a4.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="cuarto.pac" />
+     <p>|</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="gallo1.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>ORDENA LAS SECUENCIAS EN FORMA CORRECTA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="trans1.gif" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <position x="480" y="0" />
+    </window>
+   </settings>
+   <cells rows="6" cols="1" cellWidth="350.0" cellHeight="100.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Un gallo muy hermoso estaba posado en la rama de un árbol, mirando y vigilando con atención el horizonte.</p>
+    </cell>
+    <cell>
+     <p>De pronto se le acercó la zorra que andaba por esos lugares.</p>
+    </cell>
+    <cell>
+     <p>La zorra muy astuta con voz suave le dijo:- Querido hermano, vengo a darte una gran noticia.</p>
+    </cell>
+    <cell>
+     <p>A partir de este momento no habrá más guerra entre nosotros. </p>
+    </cell>
+    <cell>
+     <p>Por eso, te suplico que bajes de la rama así nos damos un abrazo en señal de amistad y paz.</p>
+    </cell>
+    <cell>
+     <p>¡Baja pronto, por favor, porque aún me queda un largo camino por recorrer para anunciar esta feliz noticia.                            </p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="gallo1.txa" autoJump="true" forceOkToAdvance="true">
+   <description>
+    <p>Actividad con progresión limitada a aciertos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+     </style>
+     <p>ELIGE LA OPCIÓN CORRECTA PARA COMPLETAR</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0000FF">
+     <image name="transp3.gif" tiled="false" />
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true">
+     <position x="0" y="0" />
+     <size width="672" height="385" />
+    </window>
+   </settings>
+   <document>
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xFFFFFF" />
+    <style name="default" family="Arial" foreground="0x000000" tabWidth="12" bold="false" size="15" italic="false" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>  •  Un </text>
+      <target>
+       <answer>gallo</answer>
+       <optionList>
+        <option>perro</option>
+        <option>gallo</option>
+        <option>gato</option>
+       </optionList>
+       <text>gallo</text>
+      </target>
+      <text> muy hermoso estaba posado en la rama de un árbol</text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>  •  De pronto se le acercó la </text>
+      <target>
+       <answer>zorra</answer>
+       <optionList>
+        <option>vaca</option>
+        <option>gata</option>
+        <option>golondrina</option>
+        <option>zorra</option>
+       </optionList>
+       <text>zorra</text>
+      </target>
+      <text> que andaba por esos lugares</text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>  •  La zorra muy </text>
+      <target>
+       <answer>astuta</answer>
+       <optionList>
+        <option>astuta</option>
+        <option>asustada</option>
+        <option>divertida</option>
+       </optionList>
+       <text>astuta</text>
+      </target>
+      <text> con voz </text>
+      <target>
+       <answer>suave</answer>
+       <optionList>
+        <option>grave</option>
+        <option>chillona</option>
+        <option>suave</option>
+       </optionList>
+       <text>suave</text>
+      </target>
+      <text> le dijo: </text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>  •  - Querido hermano, vengo a darte una gran </text>
+      <target>
+       <answer>noticia</answer>
+       <optionList>
+        <option>alegría</option>
+        <option>noticia</option>
+        <option>invitación</option>
+       </optionList>
+       <text>noticia</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>  •  A partir de este momento no habrá más </text>
+      <target>
+       <answer>guerra</answer>
+       <optionList>
+        <option>guerra</option>
+        <option>palabras</option>
+        <option>alegrías</option>
+       </optionList>
+       <text>guerra</text>
+      </target>
+      <text> entre nosotros</text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>  •  Por eso, te suplico que bajes de la </text>
+      <target>
+       <answer>rama</answer>
+       <optionList>
+        <option>terraza</option>
+        <option>rama</option>
+        <option>alambrada</option>
+       </optionList>
+       <text>rama</text>
+      </target>
+      <text> así</text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>     nos damos un abrazo en señal de</text>
+      <target>
+       <answer>amistad y paz</answer>
+       <optionList>
+        <option>buena voluntad</option>
+        <option>alegría y unión</option>
+        <option>amistad y paz</option>
+       </optionList>
+       <text> amistad y paz</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="gallo2.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>ORDENA LAS SECUENCIAS EN FORMA CORRECTA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="trans2.gif" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <position x="479" y="0" />
+    </window>
+   </settings>
+   <cells rows="6" cols="1" cellWidth="380.0" cellHeight="100.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>El gallo, que no confiaba en ella, le respondió: - Amiga querida, no te imaginas cuánto me alegra la noticia que me traes.</p>
+    </cell>
+    <cell>
+     <p>Enseguida bajo para darte un abrazo pero... </p>
+    </cell>
+    <cell>
+     <p>Espera, espera, veo desde aquí dos perros de caza que vienen muy rápido, seguramente, para anunciar la noticia que tu me das.</p>
+    </cell>
+    <cell>
+     <p>Al oír esto, la zorra asustada porque venían dos perros de caza se despidió rápidamente del gallo.</p>
+    </cell>
+    <cell>
+     <p>¡Adiós querido amigo!. No puedo detenerme más; todavía tengo un largo camino por recorrer para anunciar la feliz noticia.</p>
+    </cell>
+    <cell>
+     <p>Y apenas dijo esto, la zorra salió disparando, y nuestro amigo el gallo quedó riéndose muy contento pues había conseguido engañar a quien quería engañarlo.</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="gallo2.txa" autoJump="true" forceOkToAdvance="true">
+   <description>
+    <p>Actividad con progresión limitada a aciertos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+     </style>
+     <p>ELIGE LA OPCIÓN CORRECTA PARA COMPLETAR</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0080FF">
+     <image name="transp4.gif" tiled="false" />
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true">
+     <position x="0" y="0" />
+     <size width="672" height="390" />
+    </window>
+   </settings>
+   <document>
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xFFFFFF" />
+    <style name="default" family="Arial" foreground="0x000000" tabWidth="12" bold="false" size="15" italic="false" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>  •  El </text>
+      <target>
+       <answer>gallo</answer>
+       <optionList>
+        <option>gallo</option>
+        <option>gato</option>
+        <option>ave</option>
+       </optionList>
+       <text>gallo</text>
+      </target>
+      <text>, que no confiaba en ella, le respondió:</text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>  •  Enseguida bajo para darte un </text>
+      <target>
+       <answer>abrazo</answer>
+       <optionList>
+        <option>beso</option>
+        <option>saludo</option>
+        <option>abrazo</option>
+       </optionList>
+       <text>abrazo</text>
+      </target>
+      <text> pero...</text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>  •  Espera, espera, veo desde aquí </text>
+      <target>
+       <answer>dos</answer>
+       <optionList>
+        <option>tres</option>
+        <option>cuatro</option>
+        <option>dos</option>
+       </optionList>
+       <text>dos</text>
+      </target>
+      <text> perros de caza que</text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>      vienen muy </text>
+      <target>
+       <answer>rápido</answer>
+       <optionList>
+        <option>despacio</option>
+        <option>rápido</option>
+        <option>lento</option>
+       </optionList>
+       <text>rápido</text>
+      </target>
+      <text> </text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>  •  - Al oír esto, la </text>
+      <target>
+       <answer>zorra</answer>
+       <optionList>
+        <option>gata</option>
+        <option>zorra</option>
+        <option>gallina</option>
+       </optionList>
+       <text>zorra</text>
+      </target>
+      <text> asustada porque venían dos </text>
+      <target>
+       <answer>perros</answer>
+       <optionList>
+        <option>perros</option>
+        <option>gatos</option>
+        <option>animales</option>
+       </optionList>
+       <text>perros</text>
+      </target>
+      <text> de </text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>        caza se despidió rápidamente del </text>
+      <target>
+       <answer>gallo</answer>
+       <optionList>
+        <option>gato</option>
+        <option>gallo</option>
+        <option>perro</option>
+       </optionList>
+       <text>gallo</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>  •  -No puedo detenerme más; todavía tengo un </text>
+      <target>
+       <answer>largo</answer>
+       <optionList>
+        <option>corto</option>
+        <option>largo</option>
+        <option>penoso</option>
+       </optionList>
+       <text>largo</text>
+      </target>
+      <text> camino </text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>       por recorrer para anunciar la </text>
+      <target>
+       <answer>feliz</answer>
+       <optionList>
+        <option>feliz</option>
+        <option>amarga</option>
+        <option>nueva</option>
+       </optionList>
+       <text>feliz</text>
+      </target>
+      <text> noticia.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="gallop~1.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>TE ANIMAS A RECONSTRUIR ESTA IMAGEN?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>BUENÍSIMO!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x800000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="5" border="true" image="gallo.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="5" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="hormiga.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>ORDENA LAS SECUENCIAS EN FORMA CORRECTA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="transp1.gif" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <position x="500" y="430" />
+    </window>
+   </settings>
+   <cells rows="6" cols="1" cellWidth="350.0" cellHeight="100.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Cierta vez, durante el frío invierno, una hormiga secaba granos al sol. </p>
+    </cell>
+    <cell>
+     <p>Una cigarra que pasaba por allí, muy hambrienta, le pidió algunos granos para comer y la hormiga negándose, le dijo:</p>
+    </cell>
+    <cell>
+     <p>-¿Por qué no guardas granos en verano para tener alimento en el invierno igual que yo?. </p>
+    </cell>
+    <cell>
+     <p>La cigarra contestó: -No creas que en verano no hago nada.</p>
+    </cell>
+    <cell>
+     <p>Me dedico a cantar todos los días.</p>
+    </cell>
+    <cell>
+     <p>Bueno, amiga - dijo la hormiga trabajadora- si en verano cantas, baila en invierno.</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="hormiga.txa" autoJump="true" forceOkToAdvance="true">
+   <description>
+    <p>Actividad con progresión limitada a aciertos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+     </style>
+     <p>ELIGE LA OPCIÓN CORRECTA PARA COMPLETAR</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0000FF">
+     <image name="transp2.gif" tiled="false" />
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <position x="0" y="0" />
+     <size width="700" height="400" />
+    </window>
+   </settings>
+   <document>
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xFFFFFF" />
+    <style name="default" family="Arial" foreground="0x000000" tabWidth="12" bold="false" size="15" italic="false" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>  •  Cierta vez, durante el frío </text>
+      <target>
+       <answer>invierno</answer>
+       <optionList>
+        <option>invierno</option>
+        <option>otoño</option>
+        <option>verano</option>
+       </optionList>
+       <text>invierno</text>
+      </target>
+      <text>, una </text>
+      <target>
+       <answer>hormiga</answer>
+       <optionList>
+        <option>cigarra</option>
+        <option>hormiga</option>
+        <option>mariposa</option>
+       </optionList>
+       <text>hormiga</text>
+      </target>
+      <text> secaba </text>
+      <target>
+       <answer>granos</answer>
+       <optionList>
+        <option>ropa</option>
+        <option>granos</option>
+        <option>semillas</option>
+       </optionList>
+       <text>granos</text>
+      </target>
+      <text> al sol</text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>  • Una </text>
+      <target>
+       <answer>cigarra</answer>
+       <optionList>
+        <option>cigarra</option>
+        <option>oveja</option>
+        <option>vaca</option>
+       </optionList>
+       <text>cigarra</text>
+      </target>
+      <text> que pasaba por allí, </text>
+      <target>
+       <answer>muy hambrienta</answer>
+       <optionList>
+        <option>muy contenta</option>
+        <option>muy triste</option>
+        <option>muy hambrienta</option>
+       </optionList>
+       <text>muy hambrienta</text>
+      </target>
+      <text>, le pidió algunos granos      </text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>    para </text>
+      <target>
+       <answer>comer</answer>
+       <optionList>
+        <option>comer</option>
+        <option>vender</option>
+        <option>tomar</option>
+       </optionList>
+       <text>comer</text>
+      </target>
+      <text> y la hormiga negándose, le dijo:</text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>  • -¿Por qué no guardas granos en </text>
+      <target>
+       <answer>verano</answer>
+       <optionList>
+        <option>otoño</option>
+        <option>verano</option>
+        <option>invierno</option>
+       </optionList>
+       <text>verano</text>
+      </target>
+      <text> para tener alimento en               </text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>       el</text>
+      <target>
+       <answer>invierno</answer>
+       <optionList>
+        <option>verano</option>
+        <option>invierno</option>
+        <option>otoño</option>
+       </optionList>
+       <text>  invierno</text>
+      </target>
+      <text> igual que yo?. </text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>  • La </text>
+      <target>
+       <answer>cigarra</answer>
+       <optionList>
+        <option>cigarra</option>
+        <option>hormiga</option>
+        <option>mariposa</option>
+       </optionList>
+       <text>cigarra</text>
+      </target>
+      <text> contestó: -No creas que en verano no hago nada.</text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>  • Me dedico a </text>
+      <target>
+       <answer>cantar</answer>
+       <optionList>
+        <option>bailar</option>
+        <option>saltar</option>
+        <option>cantar</option>
+       </optionList>
+       <text>cantar</text>
+      </target>
+      <text> todos los días.</text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>  • Bueno, amiga - dijo la hormiga </text>
+      <target>
+       <answer>trabajadora</answer>
+       <optionList>
+        <option>saltarina</option>
+        <option>trabajadora</option>
+        <option>inteligente</option>
+       </optionList>
+       <text>trabajadora</text>
+      </target>
+      <text>- si en verano cantas, baila </text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>    en </text>
+      <target>
+       <answer>invierno</answer>
+       <optionList>
+        <option>primavera</option>
+        <option>invierno</option>
+        <option>otoño</option>
+       </optionList>
+       <text>invierno</text>
+      </target>
+      <text>.    </text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="hormiga1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000A0" />
+     </style>
+     <p>LEE ATENTAMENTE</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000A0" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x80FFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF8040" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="480.0" cellHeight="500.0" border="false">
+    <style>
+     <font family="Arial" size="24" />
+     <color background="0xFF8040" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>Cierta vez, durante el frío invierno, una hormiga secaba granos al sol. Una cigarra que pasaba por allí, muy hambrienta, le pidió algunos granos para comer y la hormiga negándose, le dijo: -¿Por qué no guardas granos en verano para tener alimento en el invierno igual que yo?. La cigarra contestó: -No creas que en verano no hago nada. Me dedico a cantar todos los días.         Bueno, amiga - dijo la hormiga trabajadora- si en verano cantas, baila en invierno.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="hormig~1.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFF8000" />
+     </style>
+     <p>TE ANIMAS A RECONSTRUIR ESTA IMAGEN?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFF8000" />
+     </style>
+     <p>BUENÍSIMO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFF00FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="5" border="true" image="hormiga.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="5" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="inicio.ass">
+   <messages>
+    <cell image="contact.gif" type="initial">
+     <style>
+      <color background="0x80FF80" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x80FF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x80FF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="tapai.gif">
+    <style>
+     <font family="Arial" size="21" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="inicio2.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x80FF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="gallo.gif">
+    <style>
+     <font family="Arial" size="21" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="inicio3.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x80FF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="hormiga.gif">
+    <style>
+     <font family="Arial" size="21" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="inicio4.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x808040">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="lobo.gif">
+    <style>
+     <font family="Arial" size="21" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="inicio5.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x808040">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="caballo.gif">
+    <style>
+     <font family="Arial" size="21" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="leon.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>ORDENA LAS SECUENCIAS EN FORMA CORRECTA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="trans3.gif" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <position x="502" y="0" />
+    </window>
+   </settings>
+   <cells rows="5" cols="1" cellWidth="428.0" cellHeight="131.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>Un león muy viejo y lleno de achaques, como de maldad, vio en un campo a un caballo muy joven y fuerte, y por supuesto, ¡quería comer carne!.</p>
+    </cell>
+    <cell>
+     <p>Como sabía que si corría y se abalanzaba sobre él para cazarlo el caballo huiría, pensó que mejor sería fingir amistad y acercarse mansamente. </p>
+    </cell>
+    <cell>
+     <p>Fue así que le dijo que era médico... </p>
+    </cell>
+    <cell>
+     <p>El caballo, que no era nada tonto, quedó asombrado ante la fiera convertida en médico, entonces le dijo que la pata derecha tenía una espina que le provocaba dolores.</p>
+    </cell>
+    <cell>
+     <p>El león se acercó para ver la herida, pero como el caballo se dio cuenta que en realidad quería atraparlo, le plantó un par de patadas, lo tiró de espaldas... y asunto terminado.  </p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="leon.txa" autoJump="true" forceOkToAdvance="true">
+   <description>
+    <p>Actividad con progresión limitada a aciertos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+     </style>
+     <p>ELIGE LA OPCIÓN CORRECTA PARA COMPLETAR</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0000FF">
+     <image name="transp7.gif" tiled="false" />
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <position x="0" y="0" />
+     <size width="700" height="400" />
+    </window>
+   </settings>
+   <document>
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xFFFFFF" />
+    <style name="default" family="Arial" foreground="0x000000" tabWidth="12" bold="false" size="15" italic="false" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>  •  Un </text>
+      <target>
+       <answer>león</answer>
+       <optionList>
+        <option>caballo</option>
+        <option>león</option>
+        <option>puma</option>
+       </optionList>
+       <text>león</text>
+      </target>
+      <text> muy viejo y lleno de achaques, como de maldad, vio en un campo      a un </text>
+      <target>
+       <answer>caballo</answer>
+       <optionList>
+        <option>zorrino</option>
+        <option>caballo</option>
+        <option>ternero</option>
+       </optionList>
+       <text>caballo</text>
+      </target>
+      <text> muy </text>
+      <target>
+       <answer>joven</answer>
+       <optionList>
+        <option>viejo</option>
+        <option>anciano</option>
+        <option>joven</option>
+       </optionList>
+       <text>joven</text>
+      </target>
+      <text> y </text>
+      <target>
+       <answer>fuerte</answer>
+       <optionList>
+        <option>fuerte</option>
+        <option>debilucho</option>
+        <option>flaco</option>
+       </optionList>
+       <text>fuerte</text>
+      </target>
+      <text>, y por supuesto, ¡quería </text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>     comer </text>
+      <target>
+       <answer>carne</answer>
+       <optionList>
+        <option>granos</option>
+        <option>carne</option>
+        <option>pasto</option>
+       </optionList>
+       <text>carne</text>
+      </target>
+      <text>!.</text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>  •  Como sabía que si </text>
+      <target>
+       <answer>corría</answer>
+       <optionList>
+        <option>saltaba</option>
+        <option>corría</option>
+        <option>trotaba</option>
+       </optionList>
+       <text>corría</text>
+      </target>
+      <text> y se abalanzaba sobre él para cazarlo el caballo        huiría, pensó que mejor sería fingir amistad y acercarse </text>
+      <target>
+       <answer>mansamente</answer>
+       <optionList>
+        <option>velozmente</option>
+        <option>abruptamente</option>
+        <option>mansamente</option>
+       </optionList>
+       <text>mansamente</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text> </text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>  • Fue así que le dijo que era </text>
+      <target>
+       <answer>médico</answer>
+       <optionList>
+        <option>médico</option>
+        <option>enfermero</option>
+        <option>dentista</option>
+       </optionList>
+       <text>médico</text>
+      </target>
+      <text>...  El caballo, que no era nada tonto,</text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>    quedó asombrado ante la fiera convertida en médico, entonces le dijo que la  </text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>    pata </text>
+      <target>
+       <answer>derecha</answer>
+       <optionList>
+        <option>izquierda</option>
+        <option>derecha</option>
+        <option>trasera</option>
+       </optionList>
+       <text>derecha</text>
+      </target>
+      <text> tenía una espina que le provocaba </text>
+      <target>
+       <answer>dolores</answer>
+       <optionList>
+        <option>carcajadas</option>
+        <option>dolores</option>
+        <option>temblores</option>
+       </optionList>
+       <text>dolores</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text> • El león se acercó para ver la </text>
+      <target>
+       <answer>herida</answer>
+       <optionList>
+        <option>herida</option>
+        <option>pata</option>
+        <option>espina</option>
+       </optionList>
+       <text>herida</text>
+      </target>
+      <text>, pero como el caballo se dio cuenta que </text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>   en realidad quería atraparlo, le plantó un par de </text>
+      <target>
+       <answer>patadas</answer>
+       <optionList>
+        <option>relinchos</option>
+        <option>patadas</option>
+        <option>gritos</option>
+       </optionList>
+       <text>patadas</text>
+      </target>
+      <text>, lo tiró de espaldas... </text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>   y asunto terminado. </text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="leon1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="19" />
+      <color foreground="0x0000A0" background="0x80FFFF" />
+     </style>
+     <p>LEE ATENTAMENTE</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="19" />
+      <color foreground="0x0000A0" background="0x80FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x008080">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x408080" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="480.0" cellHeight="500.0" border="false">
+    <style>
+     <font family="Arial" size="23" />
+     <color background="0x0080FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>Un león muy viejo y lleno de achaques, como de maldad, vio en un campo a un caballo muy joven y fuerte, y por supuesto, ¡quería comer carne!. Como sabía que si corría y se abalanzaba sobre él para cazarlo el caballo huiría, pensó que mejor sería fingir amistad y acercarse mansamente. Fue así que le dijo que era médico... El caballo, que no era nada tonto, quedó asombrado ante la fiera convertida en médico, entonces le dijo que la pata derecha tenía una espina que le provocaba dolores. El león se acercó para ver la herida, pero como el caballo se dio cuenta que en realidad quería atraparlo, le plantó un par de patadas, lo tiró de espaldas... y asunto terminado.  </p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="leonpuzz.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+     <p>TE ANIMAS A RECONSTRUIR ESTA IMAGEN?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+     <p>bUENÍSIMO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x8000FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="5" border="true" image="caballo.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="5" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="lobo.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>ORDENA LAS SECUENCIAS EN FORMA CORRECTA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="transp5.gif" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <position x="479" y="0" />
+    </window>
+   </settings>
+   <cells rows="5" cols="1" cellWidth="380.0" cellHeight="126.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>Un día, un lobo moribundo tendido en el camino le dijo a una oveja:</p>
+    </cell>
+    <cell>
+     <p>-Amiga oveja, ¿puedes traerme agua de ese arroyo que me muero de sed?.</p>
+    </cell>
+    <cell>
+     <p>En cuanto beba, me levantaré y buscaré alimento por mí mismo. </p>
+    </cell>
+    <cell>
+     <p>La oveja pensó un rato y contestó: no está mal pensado, amigo lobo, seguro que si te alcanzo agua, tú me comes.</p>
+    </cell>
+    <cell>
+     <p>O ¿no?.</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="lobo.txa" autoJump="true" forceOkToAdvance="true">
+   <description>
+    <p>Actividad con progresión limitada a aciertos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+     </style>
+     <p>ELIGE LA OPCIÓN CORRECTA PARA COMPLETAR</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0000FF">
+     <image name="transp6.gif" tiled="false" />
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true">
+     <position x="0" y="0" />
+     <size width="662" height="400" />
+    </window>
+   </settings>
+   <document>
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xFFFFFF" />
+    <style name="default" family="Arial" foreground="0x000000" tabWidth="12" bold="false" size="15" italic="false" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>  •  Un día, un </text>
+      <target>
+       <answer>lobo</answer>
+       <optionList>
+        <option>lobo</option>
+        <option>león</option>
+        <option>ratón</option>
+       </optionList>
+       <text>lobo</text>
+      </target>
+      <text> moribundo tendido en el </text>
+      <target>
+       <answer>camino</answer>
+       <optionList>
+        <option>río</option>
+        <option>suelo</option>
+        <option>camino</option>
+       </optionList>
+       <text>camino</text>
+      </target>
+      <text> le dijo a </text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>     una </text>
+      <target>
+       <answer>oveja</answer>
+       <optionList>
+        <option>abeja</option>
+        <option>oveja</option>
+        <option>cigarra</option>
+       </optionList>
+       <text>                 oveja</text>
+      </target>
+      <text>:</text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>  •  -Amiga oveja, ¿puedes traerme </text>
+      <target>
+       <answer>agua</answer>
+       <optionList>
+        <option>piedras</option>
+        <option>arena</option>
+        <option>agua</option>
+       </optionList>
+       <text>agua</text>
+      </target>
+      <text> de ese arroyo que me muero            </text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>     de </text>
+      <target>
+       <answer>sed</answer>
+       <optionList>
+        <option>la risa</option>
+        <option>sed</option>
+        <option>calor</option>
+       </optionList>
+       <text>sed</text>
+      </target>
+      <text>?</text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>  •  En cuanto beba, me </text>
+      <target>
+       <answer>levantaré</answer>
+       <optionList>
+        <option>levantaré</option>
+        <option>saltaré</option>
+        <option>dormiré</option>
+       </optionList>
+       <text>levantaré</text>
+      </target>
+      <text> y buscaré </text>
+      <target>
+       <answer>alimento</answer>
+       <optionList>
+        <option>trabajo</option>
+        <option>alimento</option>
+        <option>sombra</option>
+       </optionList>
+       <text>alimento</text>
+      </target>
+      <text> por mí mismo.</text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>  •  La oveja pensó un rato y contestó: no está mal pensado, </text>
+      <target>
+       <answer>amigo lobo</answer>
+       <optionList>
+        <option>amigo león</option>
+        <option>amigo lobo</option>
+        <option>amigo mío</option>
+       </optionList>
+       <text>amigo lobo</text>
+      </target>
+      <text>,</text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>             </text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF">
+      <text>     seguro que si te alcanzo agua, tú me comes. O ¿no?</text>
+     </p>
+     <p name="default" family="Arial" foreground="0x000000" italic="false" size="15" bold="false" background="0xFFFFFF" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="lobo1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x808000" />
+     </style>
+     <p>LEE ATENTAMENTE</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x808000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x008080">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x408080" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="480.0" cellHeight="500.0" border="false">
+    <style>
+     <font family="Arial" size="28" />
+     <color background="0x00FF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>    Un día, un lobo moribundo tendido en el camino le dijo a una oveja:   -Amiga oveja, ¿puedes traerme agua de ese arroyo que me        muero de sed?.                                                            En cuanto beba, me levantaré y buscaré              alimento por mí mismo. La oveja pensó un rato y contestó: no está mal pensado, amigo lobo, seguro que si te alcanzo agua, tú me comes.         O ¿no?.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="lobopuzz.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>TE ANIMAS A RECONSTRUIR ESTA IMAGEN?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>BUENÍSIMO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x004080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="5" border="true" image="lobo.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="5" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="zorra.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>LEE ATENTAMENTE</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x004080">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF8040" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="480.0" cellHeight="500.0" border="true">
+    <style>
+     <font family="Arial" size="23" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>   Un gallo muy hermoso estaba posado en la rama de un árbol, mirando y vigilando con atención el horizonte.               De pronto se le acercó la zorra que andaba por esos lugares.            La zorra muy astuta con voz suave le dijo:     - Querido hermano, vengo a darte una gran noticia. A partir de este momento no habrá más guerra entre nosotros.      Por eso, te suplico que bajes de la rama así nos damos un abrazo en señal de amistad y paz.  ¡Baja pronto, por favor, porque aún me queda un largo camino por recorrer para anunciar esta feliz noticia.                            </p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="zorra2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x0080FF" />
+     </style>
+     <p>LEEE ATENTAMENTE</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x0080FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x004080">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF8040" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="480.0" cellHeight="500.0" border="true">
+    <style>
+     <font family="Arial" size="20" />
+     <color background="0xFF8040" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>El gallo, que no confiaba en ella, le respondió: - Amiga querida, no te imaginas cuánto me alegra la noticia que me traes.   Enseguida bajo para darte un abrazo pero... Espera, espera, veo desde aquí dos perros de caza que vienen muy rápido, seguramente, para anunciar la noticia que tu me das. Al oír esto, la zorra asustada porque venían dos perros de caza se despidió rápidamente del gallo. - ¡Adiós querido amigo!. No puedo detenerme más; todavía tengo un largo camino por recorrer para anunciar la feliz noticia.Y apenas dijo esto, la zorra salió disparando, y nuestro amigo el gallo quedó riéndose muy contento pues había conseguido engañar a quien quería engañarlo.</p>
+    </cell>
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="a1.gif" file="a1.gif" />
+  <media name="a2.gif" file="a2.gif" />
+  <media name="a3.gif" file="a3.gif" />
+  <media name="a4.gif" file="a4.gif" />
+  <media name="caballo.gif" file="caballo.gif" />
+  <media name="contact.gif" file="contact.gif" />
+  <media name="gallo.gif" file="gallo.gif" />
+  <media name="hormiga.gif" file="hormiga.gif" />
+  <media name="lobo.gif" file="lobo.gif" />
+  <media name="tapai.gif" file="tapai.gif" />
+  <media name="trans1.gif" file="trans1.gif" />
+  <media name="trans2.gif" file="trans2.gif" />
+  <media name="trans3.gif" file="trans3.gif" />
+  <media name="transp1.gif" file="transp1.gif" />
+  <media name="transp2.gif" file="transp2.gif" />
+  <media name="transp3.gif" file="transp3.gif" />
+  <media name="transp4.gif" file="transp4.gif" />
+  <media name="transp5.gif" file="transp5.gif" />
+  <media name="transp6.gif" file="transp6.gif" />
+  <media name="transp7.gif" file="transp7.gif" />
+ </mediaBag>
+</JClicProject>
+

@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="otras_horas_2" version="0.1.3">
+ <settings>
+  <title>Las horas del reloj</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="2/15/08" />
+  <revision description="Conversión de Clic3 a JClic" date="2/14/08">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Tomás Fernández García" mail="tfernandez411@telefonica.net" />
+  <organization name="CP Ausiàs March" city="Alacant" state="País Valencià" />
+  <language>español</language>
+  <description>
+   <p>Proyecto de actividades dirigido a educación primaria  que teine como objetivo principal el aprendizaje y uso del reloj de forma práctica y sistemática. El proyecto tiene más de ciento cincuenta actividades y está dividido en seis partes:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Historia de relojes</p>
+   <p>&lt;LI&gt;En punto</p>
+   <p>&lt;LI&gt;Y media</p>
+   <p>&lt;LI&gt;Y cuarto, menos cuarto</p>
+   <p>&lt;LI&gt;Otras horas</p>
+   <p>&lt;LI&gt;Internet</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area="Matemáticas" level="Primaria (6-12)">tiempo</descriptors>
+  <skin file="@orange.xml" />
+ </settings>
+ <sequence>
+  <item id="start" name="Minutos 7">
+   <jump tag="fin" project="Otras horas 1.jclic" id="back" />
+  </item>
+  <item name="puzzle reloj" />
+  <item name="Minutos 8 ana" />
+  <item name="Minutos 8 dig" />
+  <item name="Minutos 8 mixto" />
+  <item name="señala minutos 1" />
+  <item name="señala minutos 2" />
+  <item name="orden1" />
+  <item name="orden 1 dig" />
+  <item name="orden_2" />
+  <item id="fin" name="orden 1 dig 2">
+   <jump tag="start" project="otras_horas_3.jclic" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@text.WrittenAnswer" name="Minutos 7" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="escribe hora.wav" />
+     <p>ESCRIBE:        Las  (número)   y / menos   (número)  minutos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="eres un lince.wav" />
+     <p>¡¡¡  ERES    UN  LINCE   !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo8.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="143.0" cellHeight="135.0" border="false" id="primary">
+    <style borderStroke="2.9" markerStroke="2.7">
+     <color background="0xFFFFFF" shadow="0xFFFFFF" inactive="0xFFFFFF" border="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0" border="false" image="DIGITA01-05.jpg">
+     <style borderStroke="1.3" markerStroke="5.0">
+      <color background="0xFFFFFF" inactive="0x0066CC" border="0x3399FF" />
+     </style>
+    </cell>
+    <cell id="1" image="DIGITA02-25.jpg">
+     <style borderStroke="2.3" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x0066CC" border="0x3399FF" />
+     </style>
+    </cell>
+    <cell id="2" image="DIGITA03-20.jpg">
+     <style borderStroke="0.5" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x0066CC" border="0x3399FF" />
+     </style>
+    </cell>
+    <cell id="3" image="DIGITA05-50.jpg">
+     <style borderStroke="2.3" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x0066CC" border="0x3399FF" />
+     </style>
+    </cell>
+    <cell id="4" image="DIGITA06-55.jpg">
+     <style borderStroke="2.3" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x0066CC" border="0x3399FF" />
+     </style>
+    </cell>
+    <cell id="5" image="DIGITA07-40.jpg">
+     <style borderStroke="2.3" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x0066CC" border="0x3399FF" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="156.0" cellHeight="68.0" border="true" id="answers">
+    <style borderStroke="3.6" markerStroke="2.7">
+     <color background="0xFFFFCC" inactive="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <style borderStroke="2.3" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xFFFFCC" inactive="0x99FFFF" border="0x3399FF" />
+     </style>
+     <p>La 1 y 5 minutos</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.3" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xFFFFCC" inactive="0x99FFFF" border="0x3399FF" />
+     </style>
+     <p>Las 2 y 25 minutos</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.3" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xFFFFCC" inactive="0x99FFFF" border="0x3399FF" />
+     </style>
+     <p>Las 3 y 20 minutos</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.3" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xFFFFCC" inactive="0x99FFFF" border="0x3399FF" />
+     </style>
+     <p>Las 6 menos 10 minutos</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.3" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xFFFFCC" inactive="0x99FFFF" border="0x3399FF" />
+     </style>
+     <p>Las 7 menos 5 minutos</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.3" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xFFFFCC" inactive="0x99FFFF" border="0x3399FF" />
+     </style>
+     <p>Las 8 menos 20 minutos</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="Minutos 8 ana" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="escribe hora.wav" />
+     <p>ESCRIBE:        Las  (número)   en punto   ó     Las  (número) y media</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="estupendo.wav" />
+     <p>¡¡¡    ESTUPENDO    !!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="reloj min.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="135.0" cellHeight="178.0" border="false" id="primary">
+    <style borderStroke="2.9" markerStroke="5.0">
+     <color background="0xFFFFFF" shadow="0xFFFFFF" inactive="0xFFFFFF" border="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0" image="ana11-20a.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x6699FF" border="0x3366FF" />
+     </style>
+    </cell>
+    <cell id="1" image="ana2-20a.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x6699FF" border="0x3366FF" />
+     </style>
+    </cell>
+    <cell id="2" image="ana3-10.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x6699FF" border="0x3366FF" />
+     </style>
+    </cell>
+    <cell id="3" image="ana12-55a.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x6699FF" border="0x3366FF" />
+     </style>
+    </cell>
+    <cell id="4" image="ana11-50a.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x6699FF" border="0x3366FF" />
+     </style>
+    </cell>
+    <cell id="5" image="ana2-35a.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x6699FF" border="0x3366FF" />
+     </style>
+    </cell>
+    <cell id="6" image="ana3-50a.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x6699FF" border="0x3366FF" />
+     </style>
+    </cell>
+    <cell id="7" image="ana12-40a.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x6699FF" border="0x3366FF" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="109.0" cellHeight="49.0" border="true" id="answers">
+    <style borderStroke="2.7" markerStroke="5.0">
+     <color background="0xFFFFCC" inactive="0x6699FF" border="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell border="true">
+     <style borderStroke="2.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x3399FF" />
+     </style>
+     <p>Las 11 y 20 minutos</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.4" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x3399FF" />
+     </style>
+     <p>Las 2 y 20 minutos</p>
+    </cell>
+    <cell>
+     <p>Las 3 y 10 minutos</p>
+    </cell>
+    <cell>
+     <p>La 1 menos 5 minutos</p>
+    </cell>
+    <cell>
+     <p>Las 12 menos 10 minutos</p>
+    </cell>
+    <cell>
+     <p>Las 3 menos 25 minutos</p>
+    </cell>
+    <cell>
+     <p>Las 4 menos 10 minutos</p>
+    </cell>
+    <cell>
+     <p>La 1 menos 20 minutos</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="Minutos 8 dig" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="escribe hora.wav" />
+     <p>ESCRIBE:        Las  (número)   y / menos   (número)  minutos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="lo conseguiste.wav" />
+     <p>¡¡¡    LO CONSEGUISTE    !!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="reloj min.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="133.0" cellHeight="99.0" border="false" id="primary">
+    <style borderStroke="2.9" markerStroke="5.0">
+     <color background="0xFFFFFF" shadow="0xFFFFFF" inactive="0xFFFFFF" border="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0" image="DIGITA05-10.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x6699FF" border="0x3366FF" />
+     </style>
+    </cell>
+    <cell id="1" image="DIGITA02-55.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x6699FF" border="0x3366FF" />
+     </style>
+    </cell>
+    <cell id="2" image="DIGITA06-05.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x6699FF" border="0x3366FF" />
+     </style>
+    </cell>
+    <cell id="3" image="DIGITA08-55.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x6699FF" border="0x3366FF" />
+     </style>
+    </cell>
+    <cell id="4" image="DIGITA06-35.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x6699FF" border="0x3366FF" />
+     </style>
+    </cell>
+    <cell id="5" image="DIGITA11-40.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x6699FF" border="0x3366FF" />
+     </style>
+    </cell>
+    <cell id="6" image="DIGITA09-50.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x6699FF" border="0x3366FF" />
+     </style>
+    </cell>
+    <cell id="7" image="DIGITA00-35.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x6699FF" border="0x3366FF" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="123.0" cellHeight="49.0" border="true" id="answers">
+    <style borderStroke="2.7" markerStroke="5.0">
+     <color background="0xFFFFCC" inactive="0x6699FF" border="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell border="true">
+     <style borderStroke="2.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x3399FF" />
+     </style>
+     <p>Las 5 y 10 minutos</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.4" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x3399FF" />
+     </style>
+     <p>Las 3 menos 5 minutos</p>
+    </cell>
+    <cell>
+     <p>Las 6 y 5 minutos</p>
+    </cell>
+    <cell>
+     <p>Las 9 menos 5 minutos</p>
+    </cell>
+    <cell>
+     <p>Las 7 menos 25 minutos</p>
+    </cell>
+    <cell>
+     <p>Las 12 menos 10 minutos</p>
+    </cell>
+    <cell>
+     <p>Las 10 menos 10 minutos</p>
+    </cell>
+    <cell>
+     <p>La 1 menos 25 minutos</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="Minutos 8 mixto" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="escribe hora.wav" />
+     <p>ESCRIBE:        Las  (número)   y / menos   (número)  minutos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="muy bien.wav" />
+     <p>¡¡¡    MUY  BIEN    !!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="reloj min.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="125.0" cellHeight="159.0" border="false" id="primary">
+    <style borderStroke="2.9" markerStroke="5.0">
+     <color background="0xFFFFFF" shadow="0xFFFFFF" inactive="0xFFFFFF" border="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell id="0" image="DIGITA00-35.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x6699FF" border="0x3366FF" />
+     </style>
+    </cell>
+    <cell id="1" image="ana8-25a.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x6699FF" border="0x3366FF" />
+     </style>
+    </cell>
+    <cell id="2" image="ana7-50a.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x6699FF" border="0x3366FF" />
+     </style>
+    </cell>
+    <cell id="3" image="DIGITA06-55.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x6699FF" border="0x3366FF" />
+     </style>
+    </cell>
+    <cell id="4" image="ana1-55a.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x6699FF" border="0x3366FF" />
+     </style>
+    </cell>
+    <cell id="5" image="ana11-20a.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x6699FF" border="0x3366FF" />
+     </style>
+    </cell>
+    <cell id="6" image="ana9-35a.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x6699FF" border="0x3366FF" />
+     </style>
+    </cell>
+    <cell id="7" image="DIGITA07-20.jpg">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x6699FF" border="0x3366FF" />
+     </style>
+    </cell>
+    <cell id="8" image="DIGITA05-40.jpg">
+     <style borderStroke="2.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x6699FF" border="0x6699FF" />
+     </style>
+    </cell>
+    <cell id="9" image="DIGITA00-55.jpg">
+     <style borderStroke="2.7" markerStroke="2.7">
+      <color background="0xFFFFFF" inactive="0x6699FF" border="0x6699FF" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="2" cols="5" cellWidth="123.0" cellHeight="49.0" border="true" id="answers">
+    <style borderStroke="2.7" markerStroke="5.0">
+     <color background="0xFFFFCC" inactive="0x6699FF" border="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell border="true">
+     <style borderStroke="2.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x6699FF" />
+     </style>
+     <p>La 1 menos 25 minutos</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.4" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x6699FF" />
+     </style>
+     <p>Las 8 y 25 minutos</p>
+    </cell>
+    <cell>
+     <p>Las 8 menos 10 minutos</p>
+    </cell>
+    <cell>
+     <p>Las 7 menos 5 minutos</p>
+    </cell>
+    <cell>
+     <p>Las 2 menos 5 minutos</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.7" markerStroke="2.7">
+      <color background="0xFFFFCC" inactive="0x6699FF" border="0x6699FF" />
+     </style>
+     <p>Las 11 y 20 minutos</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.7" markerStroke="2.7">
+      <color background="0xFFFFCC" inactive="0x6699FF" border="0x6699FF" />
+     </style>
+     <p>Las 10 menos 25 minutos</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.7" markerStroke="2.7">
+      <color background="0xFFFFCC" inactive="0x6699FF" border="0x6699FF" />
+     </style>
+     <p>Las 7 y 20 minutos</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="2.7" markerStroke="2.7">
+      <color background="0xFFFFCC" inactive="0x6699FF" border="0x6699FF" />
+     </style>
+     <p>Las 6 menos 20 minutos</p>
+    </cell>
+    <cell>
+     <style borderStroke="2.7" markerStroke="2.7">
+      <color background="0xFFFFCC" inactive="0x6699FF" border="0x6699FF" />
+     </style>
+     <p>La 1 menos 5 minutos</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="orden 1 dig" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="ordena horas 3-15.wav" />
+     <p>ORDENA ESTAS HORAS DE MÁS TEMPRANO A MÁS TARDE </p>
+     <p>comenzando por las 3 y cuarto</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="como dominas.wav" />
+     <p>¡¡¡  CÓMO DOMINAS   !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo8.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="1" cols="9" border="false" image="orden 3 dig.jpg">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <color inactive="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="9" rows="1" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="orden 1 dig 2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="ordena horas 7-40.wav" />
+     <p>ORDENA ESTAS HORAS DE MÁS TEMPRANO A MÁS TARDE </p>
+     <p>comenzando por las 8 menos 20 minutos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="eres un genio.wav" />
+     <p>¡¡¡  ERES   UN   GENIO   !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo8.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="9" cols="1" border="false" image="orden 4 dig.jpg">
+    <style margin="13" borderStroke="0.7" markerStroke="5.0">
+     <color inactive="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="9" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="orden1" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="ordena horas 1-05.wav" />
+     <p>ORDENA ESTAS HORAS DE MÁS TEMPRANO A MÁS TARDE </p>
+     <p>Comenzando por la 1 y 5 minutos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="muy bien.wav" />
+     <p>¡¡¡  MUY  BIEN   !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo8.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="1" cols="8" border="true" image="orden 5 ana.jpg">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <color inactive="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="8" rows="1" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="orden_2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="ordena horas 10-10.wav" />
+     <p>ORDENA ESTAS HORAS DE MÁS TEMPRANO A MÁS TARDE </p>
+     <p>Comenzando por las 10 y 10 minutos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien hecho.wav" />
+     <p>¡¡¡    BIEN    HECHO   !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo8.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="1" cols="8" border="true" image="orden 6 ana.jpg">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <color inactive="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="8" rows="1" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puzzle reloj" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="animate y forma puzzle.wav" />
+     <p>ANÍMATE Y FORMA EL PUZZLE DEL RELOJ</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="lo conseguiste.wav" />
+     <p>¡¡ LO CONSEGUISTE !!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo8.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="4" cols="4" border="true" image="esp tiempo.jpg">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.Identify" name="señala minutos 1" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="senala reloj 2-10 6-40.wav" />
+     <p>SEÑALA LOS RELOJES QUE MARQUEN:  </p>
+     <p>Las 2 y 10 minutos   o    las 7 menos 20 minutos  </p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="eres buen detect.wav" />
+     <p>ERES UN BUEN DETECTIVE</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo8.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="3" cols="5" cellWidth="110.0" cellHeight="121.0" border="true" id="primary">
+    <style borderStroke="2.4" markerStroke="2.7">
+     <color background="0xFFFFFF" border="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="3" />
+    <cell id="1" image="ana2-10.jpg" />
+    <cell id="1" image="DIGITA06-40.jpg" />
+    <cell id="0" image="DIGITA05-40.jpg" />
+    <cell id="1" image="ana5-40.jpg" />
+    <cell id="0" image="ana6-35a.jpg" />
+    <cell id="0" image="DIGITA01-40.jpg" />
+    <cell id="1" image="DIGITA02-10.jpg" />
+    <cell id="0" image="ana8-25a.jpg" />
+    <cell id="0" image="DIGITA07-40.jpg" />
+    <cell id="1" image="DIGITA02-10.jpg" />
+    <cell id="1" image="ana6-40a.jpg" />
+    <cell id="0" image="DIGITA08-35.jpg" />
+    <cell id="1" image="ana2-10.jpg" />
+    <cell id="0" image="ana10-10a.jpg" />
+    <cell id="1" image="ana6-40a.jpg" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="señala minutos 2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="senala reloj 5-50 10-35.wav" />
+     <p>SEÑALA LOS RELOJES QUE MARQUEN:  </p>
+     <p>Las 6 menos 10 minutos   o    las 11 menos 25 minutos  </p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="lo conseguiste.wav" />
+     <p>¡¡¡    LO  CONSEGUISTE  !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo8.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="3" cols="5" cellWidth="104.0" cellHeight="132.0" border="true" id="primary">
+    <style borderStroke="2.4" markerStroke="2.7">
+     <color background="0xFFFFFF" border="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="3" />
+    <cell id="1" image="ana5-50a.jpg" />
+    <cell id="1" image="DIGITA05-50.jpg" />
+    <cell id="1" image="ana5-50a.jpg" />
+    <cell id="0" image="DIGITA09-40.jpg" />
+    <cell id="1" image="DIGITA07-50.jpg" />
+    <cell id="1" image="DIGITA10-35.jpg" />
+    <cell id="1" image="ana10-35.jpg" />
+    <cell id="1" image="DIGITA10-35.jpg" />
+    <cell id="0" image="ana4-50a.jpg" />
+    <cell id="0" image="ana10-25a.jpg" />
+    <cell id="0" image="DIGITA09-50.jpg" />
+    <cell id="1" image="ana10-35.jpg" />
+    <cell id="0" image="DIGITA04-55.jpg" />
+    <cell id="1" image="ana5-50a.jpg" />
+    <cell id="1" image="DIGITA05-50.jpg" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="ana1-55a.jpg" file="ana1_55a.jpg" />
+  <media name="ana10-10a.jpg" file="ana10_10a.jpg" />
+  <media name="ana10-25a.jpg" file="ana10_25a.jpg" />
+  <media name="ana10-35.jpg" file="ana10_35.jpg" />
+  <media name="ana11-20a.jpg" file="ana11_20a.jpg" />
+  <media name="ana11-50a.jpg" file="ana11_50a.jpg" />
+  <media name="ana12-40a.jpg" file="ana12_40a.jpg" />
+  <media name="ana12-55a.jpg" file="ana12_55a.jpg" />
+  <media name="ana2-10.jpg" file="ana2_10.jpg" />
+  <media name="ana2-20a.jpg" file="ana2_20a.jpg" />
+  <media name="ana2-35a.jpg" file="ana2_35a.jpg" />
+  <media name="ana3-10.jpg" file="ana3_10.jpg" />
+  <media name="ana3-50a.jpg" file="ana3_50a.jpg" />
+  <media name="ana4-50a.jpg" file="ana4_50a.jpg" />
+  <media name="ana5-40.jpg" file="ana5_40.jpg" />
+  <media name="ana5-50a.jpg" file="ana5_50a.jpg" />
+  <media name="ana6-35a.jpg" file="ana6_35a.jpg" />
+  <media name="ana6-40a.jpg" file="ana6_40a.jpg" />
+  <media name="ana7-50a.jpg" file="ana7_50a.jpg" />
+  <media name="ana8-25a.jpg" file="ana8_25a.jpg" />
+  <media name="ana9-35a.jpg" file="ana9_35a.jpg" />
+  <media name="DIGITA00-35.jpg" file="digita00_35.jpg" />
+  <media name="DIGITA00-55.jpg" file="digita00_55.jpg" />
+  <media name="DIGITA01-05.jpg" file="digita01_05.jpg" />
+  <media name="DIGITA01-40.jpg" file="digita01_40.jpg" />
+  <media name="DIGITA02-10.jpg" file="digita02_10.jpg" />
+  <media name="DIGITA02-25.jpg" file="digita02_25.jpg" />
+  <media name="DIGITA02-55.jpg" file="digita02_55.jpg" />
+  <media name="DIGITA03-20.jpg" file="digita03_20.jpg" />
+  <media name="DIGITA04-55.jpg" file="digita04_55.jpg" />
+  <media name="DIGITA05-10.jpg" file="digita05_10.jpg" />
+  <media name="DIGITA05-40.jpg" file="digita05_40.jpg" />
+  <media name="DIGITA05-50.jpg" file="digita05_50.jpg" />
+  <media name="DIGITA06-05.jpg" file="digita06_05.jpg" />
+  <media name="DIGITA06-35.jpg" file="digita06_35.jpg" />
+  <media name="DIGITA06-40.jpg" file="digita06_40.jpg" />
+  <media name="DIGITA06-55.jpg" file="digita06_55.jpg" />
+  <media name="DIGITA07-20.jpg" file="digita07_20.jpg" />
+  <media name="DIGITA07-40.jpg" file="digita07_40.jpg" />
+  <media name="DIGITA07-50.jpg" file="digita07_50.jpg" />
+  <media name="DIGITA08-35.jpg" file="digita08_35.jpg" />
+  <media name="DIGITA08-55.jpg" file="digita08_55.jpg" />
+  <media name="DIGITA09-40.jpg" file="digita09_40.jpg" />
+  <media name="DIGITA09-50.jpg" file="digita09_50.jpg" />
+  <media name="DIGITA10-35.jpg" file="digita10_35.jpg" />
+  <media name="DIGITA11-40.jpg" file="digita11_40.jpg" />
+  <media name="esp tiempo.jpg" file="esp_tiempo.jpg" />
+  <media name="orden 3 dig.jpg" file="orden_3_dig.jpg" />
+  <media name="orden 4 dig.jpg" file="orden_4_dig.jpg" />
+  <media name="orden 5 ana.jpg" file="orden_5_ana.jpg" />
+  <media name="orden 6 ana.jpg" file="orden_6_ana.jpg" />
+  <media name="reloj min.jpg" file="reloj_min.jpg" />
+  <media name="tiempo8.jpg" file="tiempo8.jpg" />
+  <media name="animate y forma puzzle.wav" file="animate_y_forma_puzzle.wav" />
+  <media name="bien hecho.wav" file="bien_hecho.wav" />
+  <media name="como dominas.wav" file="como_dominas.wav" />
+  <media name="eres buen detect.wav" file="eres_buen_detect.wav" />
+  <media name="eres un genio.wav" file="eres_un_genio.wav" />
+  <media name="eres un lince.wav" file="eres_un_lince.wav" />
+  <media name="escribe hora.wav" file="escribe_hora.wav" />
+  <media name="estupendo.wav" file="estupendo.wav" />
+  <media name="lo conseguiste.wav" file="lo_conseguiste.wav" />
+  <media name="muy bien.wav" file="muy_bien.wav" />
+  <media name="ordena horas 1-05.wav" file="ordena_horas_1_05.wav" />
+  <media name="ordena horas 10-10.wav" file="ordena_horas_10_10.wav" />
+  <media name="ordena horas 3-15.wav" file="ordena_horas_3_15.wav" />
+  <media name="ordena horas 7-40.wav" file="ordena_horas_7_40.wav" />
+  <media name="senala reloj 2-10 6-40.wav" file="senala_reloj_2_10_6_40.wav" />
+  <media name="senala reloj 5-50 10-35.wav" file="senala_reloj_5_50_10_35.wav" />
+ </mediaBag>
+</JClicProject>
+

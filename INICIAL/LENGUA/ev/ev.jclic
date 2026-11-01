@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="ev" version="0.1.3">
+ <settings>
+  <title>Estimulación visual</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="4/16/08" />
+  <revision description="Conversión de Clic3 a JClic" date="4/16/08">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Francisco José Romero Cabrillana" mail="fjrcabrillana@gmail.com" />
+  <organization name="Centro de Apoyo a la Integración de Deficientes Visuales (CAIDV) de Deficientes Visuales" mail="29601690.averroes@juntadeandalucia.es" url="http://www.juntadeandalucia.es/averroes/caidv" city="Málaga" state="Andalucía" />
+  <language>español</language>
+  <description>
+   <p>Conjunto de actividades orientadas a la estimulación visual. Se han diseñado pensando en alumnos con algún tipo de discapacidad visual pero que conservan un resto suficiente para la lectoescritura en tinta.&lt;p&gt;</p>
+   <p>La aplicación consta de dos módulos: "Vamos a ver" y "Letras y palabras". En ambos se proponen ejercicios que intentan estimular el uso de la visión trabajando en aspectos como constancia perceptual, discriminación figura-fondo, memoria visual, etc. En el segundo módulo los recursos son básicamente letras y palabras.&lt;p&gt;</p>
+   <p>Adaptado para discapacidad visual baja visión.</p>
+  </description>
+  <descriptors area="Lenguas, Diversos" level="Infantil (3-6), Primaria (6-12)" />
+  <skin file="@blue.xml" />
+ </settings>
+ <sequence>
+  <item id="start" name="portada" delay="7">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item id="menup" name="Menu principal">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="Menu principal" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="36" bold="true" />
+      <color background="0xFFFF99" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="quequiereshacer2.mp3" />
+     <p>¿Qué quieres hacer?</p>
+    </cell>
+   </messages>
+   <settings margin="2" report="false">
+    <container bgColor="0x000000">
+     <image name="background_textures_013.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF99" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="260.0" cellHeight="139.0" border="false">
+    <style transparent="true" borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="48" bold="true" />
+     <color background="0xFFFF99" inactive="0xFFFF99" />
+    </style>
+    <shaper class="@Holes" cols="3" rows="3">
+     <shape comment="0">rectangle:0.174359,0.035971,0.734615,0.11271</shape>
+     <shape comment="1">rectangle:0.108974,0.257143,0.169231,0.166667</shape>
+     <shape comment="2">rectangle:0.316667,0.258993,0.441026,0.165468</shape>
+     <shape comment="3">rectangle:0.774359,0.254762,0.20641,0.17381</shape>
+     <shape comment="4">rectangle:0.108974,0.57619,0.171795,0.166667</shape>
+     <shape comment="5">rectangle:0.317949,0.57619,0.441026,0.159524</shape>
+     <shape comment="6">rectangle:0.778205,0.57381,0.211538,0.161905</shape>
+    </shaper>
+    <cell>
+     <style transparent="true">
+      <font family="Arial" size="48" bold="true" />
+      <color foreground="0x0000FF" />
+     </style>
+     <p>Elige una actividad</p>
+    </cell>
+    <cell image="thumb_eyes_ojos_O15.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="start" params="vamosver/estimulacion_visual.jclic" />
+    </cell>
+    <cell border="true">
+     <style borderStroke="1.9" markerStroke="5.0">
+      <font family="Arial" size="36" bold="true" />
+      <color background="0xFFFF99" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="start" params="vamosver/vamosver.jclic" />
+     <p>Vamos a ver</p>
+    </cell>
+    <cell image="220.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="start" params="vamosver/estimulacion_visual.jclic" />
+    </cell>
+    <cell image="A_WTE.GIF">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="start" params="lyp/letrasypalabras.jclic" />
+    </cell>
+    <cell border="true">
+     <style borderStroke="1.9" markerStroke="5.0">
+      <font family="Arial" size="36" bold="true" />
+      <color background="0xFFFF99" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="start" params="letrpala/letrpala.jclic" />
+     <p>Letras y palabras</p>
+    </cell>
+    <cell image="D_WTE.GIF">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="start" params="lyp/letrasypalabras.jclic" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="portada" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="36" bold="true" />
+      <color background="0xFFCCCC" />
+     </style>
+     <p>ESTIMULACIÓN VISUAL</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x000000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="portada2.jpg">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <color background="0x000000" inactive="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="220.gif" file="220.gif" />
+  <media name="A_WTE.GIF" file="a_wte.gif" />
+  <media name="D_WTE.GIF" file="d_wte.gif" />
+  <media name="ojo.gif" file="ojo.gif" />
+  <media name="thumb_eyes_ojos_O15.gif" file="thumb_eyes_ojos_o15.gif" />
+  <media name="background_textures_013.jpg" file="background_textures_013.jpg" />
+  <media name="portada2.jpg" file="portada2.jpg" />
+  <media name="quequiereshacer2.mp3" file="quequiereshacer2.mp3" />
+ </mediaBag>
+</JClicProject>
+

@@ -1,0 +1,3010 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="111" version="0.1.3">
+ <settings>
+  <title>Ls1 y Ls2, ejercicios de práctica y evaluación</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="4/12/07" />
+  <revision description="Conversión de Clic3 a JClic" date="4/11/07">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Joan Calbet Casañas" mail="jcalbet2@xtec.cat" />
+  <organization name="IES Arraona" mail="a8024765@centres.xtec.es" url="http://www.xtec.es/centres/a8024765" city="Sabadell" state="Catalunya" />
+  <language>español</language>
+  <description>
+   <p>Ejercicios sistemáticos de práctica y evaluación, un paquete por unidad relacionados con los libros de Lengua castellana y literatura para primero y segundo de ESO. Métodos, técnicas, estrategias. Editorial Santaillana.</p>
+  </description>
+  <descriptors area="Lenguas" level="Secundaria (12-16)">lengua castellana</descriptors>
+ </settings>
+ <sequence>
+  <item id="111.pac" name="101.puz">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="lect_00.txa" />
+  <item name="lectura.txa" />
+  <item name="gram_00.txa" />
+  <item name="gram_01.ass" />
+  <item name="gram_01b.ass" />
+  <item name="gram02.txa" />
+  <item name="gram03.txa" />
+  <item name="gram04.txa" />
+  <item name="morf_01.txa" />
+  <item name="morf_02.txa" />
+  <item name="morf_03.txa" />
+  <item name="morf_04.txa" />
+  <item name="gram_001.txa" />
+  <item name="gram_002.txa" />
+  <item name="gram_003.txa" />
+  <item name="gram_004.txa" />
+  <item name="gram_005.txa" />
+  <item name="gram_006.txa" />
+  <item name="gram_007.txa" />
+  <item name="voc_00.txa" />
+  <item name="voc01.txa" />
+  <item name="voc02.ass" />
+  <item name="voc03.txa" />
+  <item name="voc_01.ass" />
+  <item name="voc_01.txa" />
+  <item name="voc_02.txa" />
+  <item name="voc_03.txa" />
+  <item name="ort_00.txa" />
+  <item name="ort_01.txa" />
+  <item name="ort_02.txa" />
+  <item name="ort_o3.txa" />
+  <item name="fin.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@puzzles.ExchangePuzzle" name="101.puz">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz el puzle</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFBFC9">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="4" border="true" image="willy.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="fin.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Pulsa en la pantalla</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="280.0" cellHeight="175.0" border="true">
+    <style>
+     <font family="Arial" size="33" bold="true" />
+     <color foreground="0xFFFFFF" background="0x676B14" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="unidades.ass" />
+     <p>FIN DE LA UNIDAD</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.Identify" name="gram02.txa" code="" type="identifyWords">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Lee las oraciones e identifica los adjetivos, que complementan a los sustantivos escritos en mayúscula.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="500" height="290" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" family="Arial" size="17" tabWidth="15" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xC0C0C0" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">Keiko fue capturada por un PESCADOR </text>
+      <target>islandés</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">Se encontraba en un </text>
+      <target>pequeño</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> DEPÓSITO de agua.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">Ella sólo aparece en la PELÍCULA </text>
+      <target>original</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">El animal vivía en </text>
+      <target>pésimas</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> CONDICIONES.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">Construyeron un TANQUE </text>
+      <target>artificial</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">KEIKO es " mentalmente </text>
+      <target>torpe</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> ".</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">Los científicos creen que no sea capaz de adaptarse a su </text>
+      <target>nueva</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> VIDA.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.FillInBlanks" name="gram03.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Completa escribiendo la forma del adjetivo adecuada</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="600" height="420" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="17" tabWidth="10" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xC0C0C0" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <cell txtAlign="left,middle" imgAlign="left,middle" width="590" height="145" border="true">
+       <style>
+        <font family="dialog" size="22" />
+        <color foreground="0x000040" background="0xDCEEF5" />
+       </style>
+       <p>Los adjetivos toman el género y el número del sustantivo al que complementan.</p>
+       <p>Los adjetivos de DOS TERMINACIONES tienen formas distintas para el masculino y para el femenino (bueno/buena).</p>
+       <p>Los adjetivos de UNA TERMINACIÓN presentan la misma forma para el masculino y para el femenino (triste/triste).</p>
+      </cell>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">ALEGRE:	Un hombre </text>
+      <target>
+       <answer>alegre</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text>alegre</text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">		Una mujer </text>
+      <target>
+       <answer>alegre</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text>alegre</text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">		Unos niños </text>
+      <target>
+       <answer>alegres</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>alegres</text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">		Unas niñas </text>
+      <target>
+       <answer>alegres</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>alegres</text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">DIFÍCIL:	Un examen </text>
+      <target>
+       <answer>difícil</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>difícil</text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">		Una prueba </text>
+      <target>
+       <answer>difícil</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>difícil</text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">		Unos exámenes </text>
+      <target>
+       <answer>difíciles</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <text>difíciles</text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">		Unas pruebas </text>
+      <target>
+       <answer>difíciles</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <text>difíciles</text>
+      </target>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="gram04.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Completa escribiendo la forma del adjetivo adecuada</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="600" height="420" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="17" tabWidth="13" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xC0C0C0" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <cell txtAlign="left,middle" imgAlign="left,middle" width="590" height="145" border="true">
+       <style>
+        <font family="dialog" size="22" />
+        <color foreground="0x000040" background="0xDCEEF5" />
+       </style>
+       <p>Los adjetivos toman el género y el número del sustantivo al que complementan.</p>
+       <p>Los adjetivos de DOS TERMINACIONES tienen formas distintas para el masculino y para el femenino (bueno/buena).</p>
+       <p>Los adjetivos de UNA TERMINACIÓN presentan la misma forma para el masculino y para el femenino (triste/triste).</p>
+      </cell>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">CAPAZ:		Un delfín </text>
+      <target>
+       <answer>capaz</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>capaz</text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">		Una ballena </text>
+      <target>
+       <answer>capaz</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>capaz</text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">		Unos delfines </text>
+      <target>
+       <answer>capaces</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>capaces</text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">		Unas ballenas </text>
+      <target>
+       <answer>capaces</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>capaces</text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">EDUCADO:	Un muchacho </text>
+      <target>
+       <answer>educado</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>educado</text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">		Una muchacha </text>
+      <target>
+       <answer>educada</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>educada</text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">		Unos muchachos </text>
+      <target>
+       <answer>educados</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>educados</text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">		Unas muchachas </text>
+      <target>
+       <answer>educadas</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>educadas</text>
+      </target>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="gram_00.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <size width="500" height="300" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="17" tabWidth="16" bold="false" foreground="0x000000" background="0x003955" italic="false" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xC0C0C0" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0x003955" italic="false">
+      <cell width="500" height="250" border="false">
+       <style>
+        <font family="Arial" size="33" bold="true" italic="true" />
+        <color foreground="0xFFFFFF" background="0x003955" />
+       </style>
+       <p>GRAMÁTICA</p>
+       <p>El adjetivo calificativo</p>
+      </cell>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.Identify" name="gram_001.txa" code="" type="identifyWords">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Analiza morfológicamente la palabra que aparece escrita en mayúscula en el recuadro de arriba</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" infoCmd="ls.txt" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="530" height="500" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" family="Arial" size="17" tabWidth="1" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xC0C0C0" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <cell width="490" height="25" border="true">
+       <style>
+        <color foreground="0x004040" background="0xC9D06F" />
+       </style>
+       <p>El NACIMIENTO de Keiko</p>
+      </cell>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">1. </text>
+      <target>SUSTANTIVO</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> : </text>
+      <target>masc</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">. / fem. | </text>
+      <target>sing</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">2. ADJETIVO : masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">3. DETERMINANTE:</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*ARTÍCULO:  masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*POSESIVO:  1ªp. /  2ªp. / 3ªp.  | masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*DEMOSTRATIVO: masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*NUMERAL: cardinal / ordinal  | masc. / fem.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*INDEFINIDO:  masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">4. VERBO: 			[ Infinitivo / Gerundio / Participio ]</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				   1ªp. /  2ªp. / 3ªp. || sing. / plur. |</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				Presente / Pret-imperf. / Pret-perf-simple / Futuro / Condic.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				Pret-perf-c. / Pret-plusc. / Pret-anter. / Fut-perf. / Cond-perf.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				   Modo: | Indicativo / Subjuntivo / Imperativo|</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">5. PRONOMBRE: 1ªp. /  2ªp. / 3ªp. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">6. ADVERBIO: lugar / tiempo / afirmación / negación / duda /</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">																								modo / cantidad</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">7. PREPOSICIÓN</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">8. CONJUNCIÓN: 	coordinante / subordinante</text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.Identify" name="gram_002.txa" code="" type="identifyWords">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Analiza morfológicamente la palabra que aparece escrita en mayúscula en el recuadro de arriba</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" infoCmd="ls.txt" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="530" height="500" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" family="Arial" size="17" tabWidth="1" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <cell width="490" height="25" border="true">
+       <style>
+        <color foreground="0x004040" background="0xC9D06F" />
+       </style>
+       <p>Los escolares RECAUDAN fondos</p>
+      </cell>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">1. SUSTANTIVO : masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">2. ADJETIVO : masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">3. DETERMINANTE:</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*ARTÍCULO:  masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*POSESIVO:  1ªp. /  2ªp. / 3ªp.  | masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*DEMOSTRATIVO: masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*NUMERAL: cardinal / ordinal  | masc. / fem.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*INDEFINIDO:  masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">4. </text>
+      <target>VERBO</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">: 			[ Infinitivo / Gerundio / Participio ]</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				   1ªp. /  2ªp. / </text>
+      <target>3ªp</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">. || sing. / </text>
+      <target>plur</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">. |</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				</text>
+      <target>Presente</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> / Pret-imperf. / Pret-perf-simple / Futuro / Condic.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				Pret-perf-c. / Pret-plusc. / Pret-anter. / Fut-perf. / Cond-perf.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				   Modo: | </text>
+      <target>Indicativo</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> / Subjuntivo / Imperativo|</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">5. PRONOMBRE: 1ªp. /  2ªp. / 3ªp. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">6. ADVERBIO: lugar / tiempo / afirmación / negación / duda /</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">																								modo / cantidad</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">7. PREPOSICIÓN</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">8. CONJUNCIÓN: 	coordinante / subordinante</text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.Identify" name="gram_003.txa" code="" type="identifyWords">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Analiza morfológicamente la palabra que aparece escrita en mayúscula en el recuadro de arriba</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" infoCmd="ls.txt" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="530" height="500" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" family="Arial" size="17" tabWidth="1" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <cell width="490" height="25" border="true">
+       <style>
+        <color foreground="0x004040" background="0xC9D06F" />
+       </style>
+       <p>Keiko se alimenta de TRUCHAS vivas</p>
+      </cell>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">1. </text>
+      <target>SUSTANTIVO</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> : masc. / </text>
+      <target>fem</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">. | sing. / </text>
+      <target>plur</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">2. ADJETIVO : masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">3. DETERMINANTE:</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*ARTÍCULO:  masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*POSESIVO:  1ªp. /  2ªp. / 3ªp.  | masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*DEMOSTRATIVO: masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*NUMERAL: cardinal / ordinal  | masc. / fem.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*INDEFINIDO:  masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">4. VERBO: 			[ Infinitivo / Gerundio / Participio ]</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				   1ªp. /  2ªp. / 3ªp. || sing. / plur. |</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				Presente / Pret-imperf. / Pret-perf-simple / Futuro / Condic.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				Pret-perf-c. / Pret-plusc. / Pret-anter. / Fut-perf. / Cond-perf.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				   Modo: | Indicativo / Subjuntivo / Imperativo|</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">5. PRONOMBRE: 1ªp. /  2ªp. / 3ªp. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">6. ADVERBIO: lugar / tiempo / afirmación / negación / duda /</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">																								modo / cantidad</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">7. PREPOSICIÓN</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">8. CONJUNCIÓN: 	coordinante / subordinante</text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.Identify" name="gram_004.txa" code="" type="identifyWords">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Analiza morfológicamente la palabra que aparece escrita en mayúscula en el recuadro de arriba</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" infoCmd="ls.txt" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="530" height="500" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" family="Arial" size="17" tabWidth="1" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <cell width="490" height="25" border="true">
+       <style>
+        <color foreground="0x004040" background="0xC9D06F" />
+       </style>
+       <p>Tenía que actuar VARIAS veces al día</p>
+      </cell>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">1. SUSTANTIVO : masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">2. ADJETIVO : masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">3. </text>
+      <target>DETERMINANTE</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">:</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*ARTÍCULO:  masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*POSESIVO:  1ªp. /  2ªp. / 3ªp.  | masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*DEMOSTRATIVO: masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*NUMERAL: cardinal / ordinal  | masc. / fem.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	</text>
+      <target>*INDEFINIDO</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">:  masc. / </text>
+      <target>fem</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">. | sing. / </text>
+      <target>plur</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">4. VERBO: 			[ Infinitivo / Gerundio / Participio ]</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				   1ªp. /  2ªp. / 3ªp. || sing. / plur. |</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				Presente / Pret-imperf. / Pret-perf-simple / Futuro / Condic.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				Pret-perf-c. / Pret-plusc. / Pret-anter. / Fut-perf. / Cond-perf.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				   Modo: | Indicativo / Subjuntivo / Imperativo|</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">5. PRONOMBRE: 1ªp. /  2ªp. / 3ªp. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">6. ADVERBIO: lugar / tiempo / afirmación / negación / duda /</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">																								modo / cantidad</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">7. PREPOSICIÓN</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">8. CONJUNCIÓN: 	coordinante / subordinante</text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.Identify" name="gram_005.txa" code="" type="identifyWords">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Analiza morfológicamente la palabra que aparece escrita en mayúscula en el recuadro de arriba</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" infoCmd="ls.txt" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="530" height="500" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" family="Arial" size="17" tabWidth="1" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <cell width="490" height="25" border="true">
+       <style>
+        <color foreground="0x004040" background="0xC9D06F" />
+       </style>
+       <p>El tanque era ARTIFICIAL</p>
+      </cell>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">1. SUSTANTIVO : masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">2. </text>
+      <target>ADJETIVO</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> : </text>
+      <target>masc</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">. / fem. | </text>
+      <target>sing</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">3. DETERMINANTE:</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*ARTÍCULO:  masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*POSESIVO:  1ªp. /  2ªp. / 3ªp.  | masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*DEMOSTRATIVO: masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*NUMERAL: cardinal / ordinal  | masc. / fem.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*INDEFINIDO:  masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">4. VERBO: 			[ Infinitivo / Gerundio / Participio ]</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				   1ªp. /  2ªp. / 3ªp. || sing. / plur. |</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				Presente / Pret-imperf. / Pret-perf-simple / Futuro / Condic.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				Pret-perf-c. / Pret-plusc. / Pret-anter. / Fut-perf. / Cond-perf.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				   Modo: | Indicativo / Subjuntivo / Imperativo|</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">5. PRONOMBRE: 1ªp. /  2ªp. / 3ªp. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">6. ADVERBIO: lugar / tiempo / afirmación / negación / duda /</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">																								modo / cantidad</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">7. PREPOSICIÓN</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">8. CONJUNCIÓN: 	coordinante / subordinante</text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.Identify" name="gram_006.txa" code="" type="identifyWords">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Analiza morfológicamente la palabra que aparece escrita en mayúscula en el recuadro de arriba</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" infoCmd="ls.txt" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="530" height="500" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" family="Arial" size="17" tabWidth="1" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <cell width="490" height="25" border="true">
+       <style>
+        <color foreground="0x004040" background="0xC9D06F" />
+       </style>
+       <p>Un pescador ISLANDÉS</p>
+      </cell>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">1. SUSTANTIVO : masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">2. </text>
+      <target>ADJETIVO</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> : </text>
+      <target>masc</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">. / fem. | </text>
+      <target>sing</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">3. DETERMINANTE:</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*ARTÍCULO:  masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*POSESIVO:  1ªp. /  2ªp. / 3ªp.  | masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*DEMOSTRATIVO: masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*NUMERAL: cardinal / ordinal  | masc. / fem.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*INDEFINIDO:  masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">4. VERBO: 			[ Infinitivo / Gerundio / Participio ]</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				   1ªp. /  2ªp. / 3ªp. || sing. / plur. |</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				Presente / Pret-imperf. / Pret-perf-simple / Futuro / Condic.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				Pret-perf-c. / Pret-plusc. / Pret-anter. / Fut-perf. / Cond-perf.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				   Modo: | Indicativo / Subjuntivo / Imperativo|</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">5. PRONOMBRE: 1ªp. /  2ªp. / 3ªp. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">6. ADVERBIO: lugar / tiempo / afirmación / negación / duda /</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">																								modo / cantidad</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">7. PREPOSICIÓN</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">8. CONJUNCIÓN: 	coordinante / subordinante</text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.Identify" name="gram_007.txa" code="" type="identifyWords">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Analiza morfológicamente la palabra que aparece escrita en mayúscula en el recuadro de arriba</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" infoCmd="ls.txt" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="530" height="500" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" family="Arial" size="17" tabWidth="1" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <cell width="490" height="25" border="true">
+       <style>
+        <color foreground="0x004040" background="0xC9D06F" />
+       </style>
+       <p>Una VIDA agitada</p>
+      </cell>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">1. </text>
+      <target>SUSTANTIVO</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> : masc. / </text>
+      <target>fem</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">. | </text>
+      <target>sing</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">2. ADJETIVO : masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">3. DETERMINANTE:</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*ARTÍCULO:  masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*POSESIVO:  1ªp. /  2ªp. / 3ªp.  | masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*DEMOSTRATIVO: masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*NUMERAL: cardinal / ordinal  | masc. / fem.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	*INDEFINIDO:  masc. / fem. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">4. VERBO: 			[ Infinitivo / Gerundio / Participio ]</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				   1ªp. /  2ªp. / 3ªp. || sing. / plur. |</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				Presente / Pret-imperf. / Pret-perf-simple / Futuro / Condic.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				Pret-perf-c. / Pret-plusc. / Pret-anter. / Fut-perf. / Cond-perf.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">				   Modo: | Indicativo / Subjuntivo / Imperativo|</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">5. PRONOMBRE: 1ªp. /  2ªp. / 3ªp. | sing. / plur.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">6. ADVERBIO: lugar / tiempo / afirmación / negación / duda /</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">																								modo / cantidad</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">7. PREPOSICIÓN</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">8. CONJUNCIÓN: 	coordinante / subordinante</text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@panels.Explore" name="gram_01.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Pulsa, lee y recuerda</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="200.0" cellHeight="150.0" border="true" id="primary">
+    <style>
+     <font family="dialog" size="32" bold="true" />
+     <color foreground="0x400080" background="0xC6F3FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell id="0">
+     <p>¿QUÉ SON LOS ADJETIVOS?</p>
+    </cell>
+    <cell id="1">
+     <p>GRADOS DEL ADJETIVO</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="5" cellWidth="380.0" cellHeight="300.0" border="false" id="secondary">
+    <style>
+     <font family="dialog" size="32" bold="true" />
+     <color foreground="0x400080" background="0xCAF4FF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>Los adjetivos son palabras variables que especifican o completan el significado del sustantivo. En el grupo nominal (GN) desempeñan la función de complemento del nombre (CN)</p>
+    </cell>
+    <cell>
+     <p>Los grados del adjetivo son tres: positivo, comparativo y superlativo</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="gram_01b.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Pulsa en las palabras que sean adjetivo</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="3" cellWidth="150.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="5" />
+    <cell id="0">
+     <p>La</p>
+    </cell>
+    <cell id="0">
+     <p>mesa</p>
+    </cell>
+    <cell id="1">
+     <p>verde</p>
+    </cell>
+    <cell id="0">
+     <p>Un</p>
+    </cell>
+    <cell id="1">
+     <p>bonito</p>
+    </cell>
+    <cell id="0">
+     <p>ejemplar</p>
+    </cell>
+    <cell id="0">
+     <p>La</p>
+    </cell>
+    <cell id="0">
+     <p>ballena</p>
+    </cell>
+    <cell id="1">
+     <p>asesina</p>
+    </cell>
+    <cell id="0">
+     <p>Su</p>
+    </cell>
+    <cell id="0">
+     <p>sonrisa</p>
+    </cell>
+    <cell id="1">
+     <p>alegre</p>
+    </cell>
+    <cell id="0">
+     <p>Llevaban</p>
+    </cell>
+    <cell id="1">
+     <p>largas</p>
+    </cell>
+    <cell id="0">
+     <p>coletas</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="3" cellWidth="150.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="5" />
+    <cell>
+     <p>La</p>
+    </cell>
+    <cell>
+     <p>mesa</p>
+    </cell>
+    <cell>
+     <p>verde</p>
+    </cell>
+    <cell>
+     <p>Un</p>
+    </cell>
+    <cell>
+     <p>bonito</p>
+    </cell>
+    <cell>
+     <p>ejemplar</p>
+    </cell>
+    <cell>
+     <p>La</p>
+    </cell>
+    <cell>
+     <p>ballena</p>
+    </cell>
+    <cell>
+     <p>asesina</p>
+    </cell>
+    <cell>
+     <p>Su</p>
+    </cell>
+    <cell>
+     <p>sonrisa</p>
+    </cell>
+    <cell>
+     <p>alegre</p>
+    </cell>
+    <cell>
+     <p>Llevaban</p>
+    </cell>
+    <cell>
+     <p>largas</p>
+    </cell>
+    <cell>
+     <p>coletas</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="lect_00.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <size width="500" height="300" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="17" tabWidth="16" bold="false" foreground="0x000000" background="0x003955" italic="false" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xC0C0C0" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0x003955" italic="false">
+      <cell width="500" height="250" border="false">
+       <style>
+        <font family="Arial" size="33" bold="true" italic="true" />
+        <color foreground="0xFFFFFF" background="0x003955" />
+       </style>
+       <p>LECTURA </p>
+       <p>Comprensión</p>
+      </cell>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.Order" name="lectura.txa" code="" type="orderWords">
+   <description />
+   <messages>
+    <cell type="previous">
+     <style />
+     <p>Lee el texto con atención. Cuando termines, pulsa en la pantalla</p>
+    </cell>
+    <cell type="initial">
+     <style />
+     <p>Algunas palabras del texto han cambiado de sitio. Colócalas donde estaban</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="700" height="500" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <prevScreen maxTime="180" />
+   <document>
+    <style name="default" family="Arial" size="17" tabWidth="16" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xC0C0C0" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">(...)</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">Keiko fue capturada en 1979 por un pescador </text>
+      <target>islandés</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">, que se encontró al animal atrapado en sus </text>
+      <target>redes</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> cuando apenas medía unos </text>
+      <target>centímetros</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">. El pescador vendió la ballena al </text>
+      <target>acuario</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> Saedyrasafnid de Islandia, y en 1982 fue revendida a otro en Canadá. Fue precisamente en Ontario donde Keiko contrajo un </text>
+      <target>virus</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> similar al herpes, del que no ha logrado nunca desprenderse. En 1985 Keiko fue vendida por 350.000 dólares (385.000 euros) al Reino Aventura de Ciudad de México, y allí comenzó su calvario como animal de </text>
+      <target>circo</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">. Tenía que actuar varias veces al </text>
+      <target>día</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> y el resto de la jornada la pasaba encajonada en un pequeño </text>
+      <target>depósito</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> de agua que apenas le cubría la parte superior del lomo. Después de siete años en esas condiciones, el equipo de producción de una </text>
+      <target>película</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> de la Warner Bross escogió a esta ballena para rodar las escenas de un guión que narraba las desventuras de un animal </text>
+      <target>maltratado</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> por los responsables de un acuario y los desvelos de un niño llamado Jessie para </text>
+      <target>liberarlo</target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">(...)</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">		«Willy» vuelve por fin a las aguas de su infancia.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">			JAVIER DEL PINO, Washington.  </text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="morf_01.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Observa el significado de cada palabra e indica qué clase de palabra es</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="605" height="500" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="17" tabWidth="15" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <cell txtAlign="left,middle" imgAlign="left,middle" width="596" height="196" border="false" image="morf.gif">
+       <style>
+        <font family="Comic Sans MS" size="36" />
+        <color foreground="0x400080" background="0xF4BA3E" />
+       </style>
+      </cell>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">Un</text>
+      <target>
+       <answer>Det</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> pescador</text>
+      <target>
+       <answer>Sust</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> islandés</text>
+      <target>
+       <answer>Adj</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">capturó</text>
+      <target>
+       <answer>V</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> a</text>
+      <target>
+       <answer>Prep</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> Keiko</text>
+      <target>
+       <answer>Sust</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="morf_02.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Observa el significado de cada palabra e indica qué clase de palabra es</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="605" height="500" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="17" tabWidth="15" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <cell txtAlign="left,middle" imgAlign="left,middle" width="596" height="196" border="false" image="morf.gif">
+       <style>
+        <font family="Comic Sans MS" size="36" />
+        <color foreground="0x400080" background="0xF4BA3E" />
+       </style>
+      </cell>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">Keiko</text>
+      <target>
+       <answer>Sust</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> se</text>
+      <target>
+       <answer>Pron</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> encontraba</text>
+      <target>
+       <answer>V</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">en</text>
+      <target>
+       <answer>Prep</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> un</text>
+      <target>
+       <answer>Det</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> pequeño</text>
+      <target>
+       <answer>Adj</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> depósito</text>
+      <target>
+       <answer>Sust</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">de</text>
+      <target>
+       <answer>Prep</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> agua</text>
+      <target>
+       <answer>Sust</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="morf_03.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Observa el significado de cada palabra e indica qué clase de palabra es</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="605" height="500" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="17" tabWidth="15" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <cell txtAlign="left,middle" imgAlign="left,middle" width="596" height="196" border="false" image="morf.gif">
+       <style>
+        <font family="Comic Sans MS" size="36" />
+        <color foreground="0x400080" background="0xF4BA3E" />
+       </style>
+      </cell>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">Construyeron</text>
+      <target>
+       <answer>V</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">un</text>
+      <target>
+       <answer>Det</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> tanque</text>
+      <target>
+       <answer>Sust</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> artificial</text>
+      <target>
+       <answer>Adj</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="morf_04.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Observa el significado de cada palabra e indica qué clase de palabra es</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="605" height="500" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="17" tabWidth="15" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <cell txtAlign="left,middle" imgAlign="left,middle" width="596" height="196" border="false" image="morf.gif">
+       <style>
+        <font family="Comic Sans MS" size="36" />
+        <color foreground="0x400080" background="0xF4BA3E" />
+       </style>
+      </cell>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">Los</text>
+      <target>
+       <answer>Det</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> científicos</text>
+      <target>
+       <answer>Sust</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">temen</text>
+      <target>
+       <answer>V</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> que</text>
+      <target>
+       <answer>Conj</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> Keiko</text>
+      <target>
+       <answer>Sust</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">no</text>
+      <target>
+       <answer>Adv</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> se</text>
+      <target>
+       <answer>Pron</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> adapte</text>
+      <target>
+       <answer>V</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">a</text>
+      <target>
+       <answer>Prep</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> su</text>
+      <target>
+       <answer>Det</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> nueva</text>
+      <target>
+       <answer>Adj</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> vida</text>
+      <target>
+       <answer>Sust</answer>
+       <optionList>
+        <option>Sust</option>
+        <option>Adj</option>
+        <option>Det</option>
+        <option>V</option>
+        <option>Pron</option>
+        <option>Adv</option>
+        <option>Prep</option>
+        <option>Conj</option>
+       </optionList>
+       <text> </text>
+      </target>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="ort_00.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <size width="500" height="300" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="17" tabWidth="16" bold="false" foreground="0x000000" background="0x003955" italic="false" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xC0C0C0" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0x003955" italic="false">
+      <cell width="500" height="250" border="false">
+       <style>
+        <font family="Arial" size="33" bold="true" italic="true" />
+        <color foreground="0xFFFFFF" background="0x003955" />
+       </style>
+       <p>ORTOGRAFÍA</p>
+       <p>Pausa interna: el punto y coma</p>
+      </cell>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="ort_01.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Lee el texto con atención</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="570" height="500" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Comic Sans MS" size="25" tabWidth="16" bold="true" foreground="0x400080" background="0x97EAFF" italic="false" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xC0C0C0" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="25" family="Comic Sans MS" bold="true" foreground="0x400080" background="0x97EAFF" italic="false">
+      <text size="25" family="Comic Sans MS" bold="true" foreground="0x400080" background="0x97EAFF" italic="false">NUEVO CENTRO MÉDICO.</text>
+     </p>
+     <p size="25" family="Comic Sans MS" bold="true" foreground="0x400080" background="0x97EAFF" italic="false">
+      <text size="25" family="Comic Sans MS" bold="true" foreground="0x400080" background="0x97EAFF" italic="false"> </text>
+     </p>
+     <p size="25" family="Comic Sans MS" bold="true" foreground="0x400080" background="0x97EAFF" italic="false">
+      <text size="25" family="Comic Sans MS" bold="true" foreground="0x400080" background="0x97EAFF" italic="false">El hospital será muy moderno; constituirá para todos un modelo de sanidad integrada. Sabemos que levantará grandes polémicas, aunque todos estamos de acuerdo en que ningún ser vivo debe sufrir ningún tipo de discriminación. La idea es que en la primera planta estén las habitaciones para los niños; en la segunda, los hombres; en la tercera, las mujeres; y en la cuarta, todo aquel animal que necesite atención veterinaria.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="ort_02.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Completa el texto con los signos de puntuación que faltan</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="570" height="500" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Comic Sans MS" size="25" tabWidth="16" bold="true" foreground="0x400080" background="0x97EAFF" italic="false" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="25" family="Comic Sans MS" bold="true" foreground="0x400080" background="0x97EAFF" italic="false">
+      <text size="25" family="Comic Sans MS" bold="true" foreground="0x400080" background="0x97EAFF" italic="false">NUEVO CENTRO MÉDICO.</text>
+     </p>
+     <p size="25" family="Comic Sans MS" bold="true" foreground="0x400080" background="0x97EAFF" italic="false">
+      <text size="25" family="Comic Sans MS" bold="true" foreground="0x400080" background="0x97EAFF" italic="false"> </text>
+     </p>
+     <p size="25" family="Comic Sans MS" bold="true" foreground="0x400080" background="0x97EAFF" italic="false">
+      <text size="25" family="Comic Sans MS" bold="true" foreground="0x400080" background="0x97EAFF" italic="false">El hospital será muy moderno</text>
+      <target>
+       <answer>;</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>;</text>
+      </target>
+      <text size="25" family="Comic Sans MS" bold="true" foreground="0x400080" background="0x97EAFF" italic="false"> constituirá para todos un modelo de sanidad integrada. Sabemos que levantará grandes polémicas</text>
+      <target>
+       <answer>,</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>,</text>
+      </target>
+      <text size="25" family="Comic Sans MS" bold="true" foreground="0x400080" background="0x97EAFF" italic="false"> aunque todos estamos de acuerdo en que ningún ser vivo debe sufrir ningún tipo de discriminación. La idea es que en la primera planta estén las habitaciones para los niños</text>
+      <target>
+       <answer>;</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>;</text>
+      </target>
+      <text size="25" family="Comic Sans MS" bold="true" foreground="0x400080" background="0x97EAFF" italic="false"> en la segunda</text>
+      <target>
+       <answer>,</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>,</text>
+      </target>
+      <text size="25" family="Comic Sans MS" bold="true" foreground="0x400080" background="0x97EAFF" italic="false"> los hombres</text>
+      <target>
+       <answer>;</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>;</text>
+      </target>
+      <text size="25" family="Comic Sans MS" bold="true" foreground="0x400080" background="0x97EAFF" italic="false"> en la tercera</text>
+      <target>
+       <answer>,</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>,</text>
+      </target>
+      <text size="25" family="Comic Sans MS" bold="true" foreground="0x400080" background="0x97EAFF" italic="false"> las mujeres</text>
+      <target>
+       <answer>;</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>;</text>
+      </target>
+      <text size="25" family="Comic Sans MS" bold="true" foreground="0x400080" background="0x97EAFF" italic="false"> y en la cuarta</text>
+      <target>
+       <answer>,</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>,</text>
+      </target>
+      <text size="25" family="Comic Sans MS" bold="true" foreground="0x400080" background="0x97EAFF" italic="false"> todo aquel animal que necesite atención veterinaria.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" checkCase="true" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="ort_o3.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Lee... y escribe</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="17" tabWidth="16" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <target>
+       <answer>NUEVO CENTRO MÉDICO.</answer>
+       <response fill="_" length="20" maxLength="20" />
+       <info maxTime="3">
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="275" height="50">
+         <style>
+          <color background="0x91FFAC" />
+         </style>
+         <p>NUEVO CENTRO MÉDICO.</p>
+        </cell>
+       </info>
+       <text>NUEVO CENTRO MÉDICO.</text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> </text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <target>
+       <answer>El hospital será muy moderno;</answer>
+       <response fill="_" length="29" maxLength="29" />
+       <info maxTime="3">
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="275" height="50">
+         <style>
+          <color background="0x91FFAC" />
+         </style>
+         <p>El hospital será muy moderno;</p>
+        </cell>
+       </info>
+       <text>El hospital será muy moderno;</text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> </text>
+      <target>
+       <answer>constituirá para todos</answer>
+       <response fill="_" length="22" maxLength="22" />
+       <info maxTime="3">
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="275" height="50">
+         <style>
+          <color background="0x91FFAC" />
+         </style>
+         <p>constituirá para todos</p>
+        </cell>
+       </info>
+       <text>constituirá para todos</text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> </text>
+      <target>
+       <answer>un modelo de sanidad integrada.</answer>
+       <response fill="_" length="31" maxLength="31" />
+       <info maxTime="3">
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="300" height="50">
+         <style>
+          <color background="0x91FFAC" />
+         </style>
+         <p>un modelo de sanidad integrada.</p>
+        </cell>
+       </info>
+       <text>un modelo de sanidad integrada.</text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> </text>
+      <target>
+       <answer>Sabemos que levantará grandes polémicas,</answer>
+       <response fill="_" length="40" maxLength="40" />
+       <info maxTime="3">
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="370" height="50">
+         <style>
+          <color background="0x91FFAC" />
+         </style>
+         <p>Sabemos que levantará grandes polémicas,</p>
+        </cell>
+       </info>
+       <text>Sabemos que levantará grandes polémicas,</text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> </text>
+      <target>
+       <answer>aunque todos estamos de acuerdo</answer>
+       <response fill="_" length="31" maxLength="31" />
+       <info maxTime="3">
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="325" height="50">
+         <style>
+          <color background="0x91FFAC" />
+         </style>
+         <p>aunque todos estamos de acuerdo</p>
+        </cell>
+       </info>
+       <text>aunque todos estamos de acuerdo</text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> </text>
+      <target>
+       <answer>en que ningún ser vivo debe sufrir</answer>
+       <response fill="_" length="34" maxLength="34" />
+       <info maxTime="3">
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="305" height="50">
+         <style>
+          <color background="0x91FFAC" />
+         </style>
+         <p>en que ningún ser vivo debe sufrir</p>
+        </cell>
+       </info>
+       <text>en que ningún ser vivo debe sufrir</text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> </text>
+      <target>
+       <answer>ningún tipo de discriminación.</answer>
+       <response fill="_" length="30" maxLength="30" />
+       <info maxTime="3">
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="275" height="50">
+         <style>
+          <color background="0x91FFAC" />
+         </style>
+         <p>ningún tipo de discriminación.</p>
+        </cell>
+       </info>
+       <text>ningún tipo de discriminación.</text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> </text>
+      <target>
+       <answer>La idea es que en la primera planta</answer>
+       <response fill="_" length="35" maxLength="35" />
+       <info maxTime="3">
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="315" height="50">
+         <style>
+          <color background="0x91FFAC" />
+         </style>
+         <p>La idea es que en la primera planta</p>
+        </cell>
+       </info>
+       <text>La idea es que en la primera planta</text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> </text>
+      <target>
+       <answer>estén las habitaciones para los niños;</answer>
+       <response fill="_" length="38" maxLength="38" />
+       <info maxTime="3">
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="365" height="50">
+         <style>
+          <color background="0x91FFAC" />
+         </style>
+         <p>estén las habitaciones para los niños;</p>
+        </cell>
+       </info>
+       <text>estén las habitaciones para los niños;</text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> </text>
+      <target>
+       <answer>en la segunda, los hombres;</answer>
+       <response fill="_" length="27" maxLength="27" />
+       <info maxTime="3">
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="275" height="50">
+         <style>
+          <color background="0x91FFAC" />
+         </style>
+         <p>en la segunda, los hombres;</p>
+        </cell>
+       </info>
+       <text>en la segunda, los hombres;</text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> </text>
+      <target>
+       <answer>en la tercera, las mujeres;</answer>
+       <response fill="_" length="27" maxLength="27" />
+       <info maxTime="3">
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="275" height="50">
+         <style>
+          <color background="0x91FFAC" />
+         </style>
+         <p>en la tercera, las mujeres;</p>
+        </cell>
+       </info>
+       <text>en la tercera, las mujeres;</text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> </text>
+      <target>
+       <answer>y en la cuarta,</answer>
+       <response fill="_" length="15" maxLength="15" />
+       <info maxTime="3">
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="275" height="50">
+         <style>
+          <color background="0x91FFAC" />
+         </style>
+         <p>y en la cuarta,</p>
+        </cell>
+       </info>
+       <text>y en la cuarta,</text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> </text>
+      <target>
+       <answer>todo aquel animal que necesite</answer>
+       <response fill="_" length="30" maxLength="30" />
+       <info maxTime="3">
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="275" height="50">
+         <style>
+          <color background="0x91FFAC" />
+         </style>
+         <p>todo aquel animal que necesite</p>
+        </cell>
+       </info>
+       <text>todo aquel animal que necesite</text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> </text>
+      <target>
+       <answer>atención veterinaria.</answer>
+       <response fill="_" length="21" maxLength="21" />
+       <info maxTime="3">
+        <cell txtAlign="left,middle" imgAlign="left,middle" width="275" height="50">
+         <style>
+          <color background="0x91FFAC" />
+         </style>
+         <p>atención veterinaria.</p>
+        </cell>
+       </info>
+       <text>atención veterinaria.</text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" checkCase="true" />
+  </activity>
+  <activity class="@text.Identify" name="voc01.txa" code="" type="identifyChars">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Identifica los sufijos, letra a letra</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="500" height="370" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" family="Arial" size="29" tabWidth="8" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xC0C0C0" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">gol</text>
+      <target>azo</target>
+      <text size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">		cruel</text>
+      <target>dad</target>
+     </p>
+     <p size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">tont</text>
+      <target>ería</target>
+      <text size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">		dulz</text>
+      <target>ura</target>
+     </p>
+     <p size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">planch</text>
+      <target>ado</target>
+      <text size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	aterriz</text>
+      <target>aje</target>
+     </p>
+     <p size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">vag</text>
+      <target>ancia</target>
+      <text size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">		llor</text>
+      <target>era</target>
+     </p>
+     <p size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">rot</text>
+      <target>ura</target>
+      <text size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">		reg</text>
+      <target>adera</target>
+     </p>
+     <p size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">am</text>
+      <target>ante</target>
+      <text size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">		mir</text>
+      <target>ón</target>
+     </p>
+     <p size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">com</text>
+      <target>edor</target>
+      <text size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">		secret</text>
+      <target>ario</target>
+     </p>
+     <p size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">papel</text>
+      <target>era</target>
+      <text size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">		pin</text>
+      <target>ar</target>
+     </p>
+     <p size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">famili</text>
+      <target>ar</target>
+      <text size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">		cal</text>
+      <target>iente</target>
+     </p>
+     <p size="29" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.WrittenAnswer" name="voc02.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Escribe el oficio o profesión del que...</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="10" cols="1" cellWidth="700.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="10" />
+    <cell id="0">
+     <p>arregla zapatos</p>
+    </cell>
+    <cell id="1">
+     <p>vende carne</p>
+    </cell>
+    <cell id="2">
+     <p>barre las calles</p>
+    </cell>
+    <cell id="3">
+     <p>corre en bicicleta</p>
+    </cell>
+    <cell id="4">
+     <p>vende libros</p>
+    </cell>
+    <cell id="5">
+     <p>toca el piano</p>
+    </cell>
+    <cell id="6">
+     <p>repara una instalación eléctrica</p>
+    </cell>
+    <cell id="7">
+     <p>corta y acarrea leña</p>
+    </cell>
+    <cell id="8">
+     <p>trabaja y labra la madera</p>
+    </cell>
+    <cell id="9">
+     <p>trabaja y labra la tierra</p>
+    </cell>
+   </cells>
+   <cells rows="10" cols="1" cellWidth="410.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="10" />
+    <cell>
+     <p>zapatero</p>
+    </cell>
+    <cell>
+     <p>carnicero</p>
+    </cell>
+    <cell>
+     <p>barrendero</p>
+    </cell>
+    <cell>
+     <p>ciclista</p>
+    </cell>
+    <cell>
+     <p>librero</p>
+    </cell>
+    <cell>
+     <p>pianista</p>
+    </cell>
+    <cell>
+     <p>electricista</p>
+    </cell>
+    <cell>
+     <p>leñador</p>
+    </cell>
+    <cell>
+     <p>carpintero|ebanista</p>
+    </cell>
+    <cell>
+     <p>agricultor|labrador</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="voc03.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Sustituye las palabras en mayúscula por una palabra derivada</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="500" height="290" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="17" tabWidth="15" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">Nos llevaron a un hotel DE LUJO.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">Nos llevaron a un hotel </text>
+      <target>
+       <answer>lujoso</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text>lujoso</text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">Es una persona QUE INSPIRA TEMOR.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">Es una persona </text>
+      <target>
+       <answer>temible</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>temible</text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">Ayer vi una obra DE TEATRO muy buena.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">Ayer vi una obra </text>
+      <target>
+       <answer>teatral</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>teatral</text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> muy buena.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="voc_00.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <size width="500" height="300" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="17" tabWidth="16" bold="false" foreground="0x000000" background="0x003955" italic="false" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xC0C0C0" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0x003955" italic="false">
+      <cell width="500" height="250" border="false">
+       <style>
+        <font family="Arial" size="33" bold="true" italic="true" />
+        <color foreground="0xFFFFFF" background="0x003955" />
+       </style>
+       <p>VOCABULARIO</p>
+       <p>Los sufijos. La libertad</p>
+      </cell>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="voc_01.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Relaciona cada palabra con su definición</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="250.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>OPRESOR</p>
+    </cell>
+    <cell>
+     <p>ESCLAVO</p>
+    </cell>
+    <cell>
+     <p>ENCARCELAR</p>
+    </cell>
+    <cell>
+     <p>EXCARCELAR</p>
+    </cell>
+    <cell>
+     <p>INDEPENDENCIA</p>
+    </cell>
+    <cell>
+     <p>SUMISIÓN</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="540.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Persona que se impone a otras abusando de su poder o autoridad</p>
+    </cell>
+    <cell>
+     <p>Persona sin libertad que sirve por obligación a otra</p>
+    </cell>
+    <cell>
+     <p>Meter a alguien en la cárcel</p>
+    </cell>
+    <cell>
+     <p>Sacar a alguien legalmente de la cárcel</p>
+    </cell>
+    <cell>
+     <p>Situación de un Estado o de una persona cuando ya no dependen de alguien ajeno a ellos</p>
+    </cell>
+    <cell>
+     <p>Actitud dócil que indica el acatamiento de un poder externo</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="voc_01.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Identifica con el mismo número las palabras con significado similar</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="500" height="290" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="17" tabWidth="15" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">1 celda		</text>
+      <target>
+       <answer>3</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>3</text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> cautivo</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">2 castigo		</text>
+      <target>
+       <answer>2</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>2</text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> pena</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">3 recluso		</text>
+      <target>
+       <answer>1</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>1</text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> calabozo</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">		</text>
+      <target>
+       <answer>1</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>1</text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> mazmorra</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">		</text>
+      <target>
+       <answer>3</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>3</text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> preso</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">		</text>
+      <target>
+       <answer>2</answer>
+       <response fill="_" length="1" maxLength="1" />
+       <text>2</text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> condena</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="voc_02.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Forma verbos utilizando el prefijo EN- y el sufijo -AR</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="500" height="290" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="17" tabWidth="12" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">reja		</text>
+      <target>
+       <answer>enrejar</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>enrejar</text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">cadena		</text>
+      <target>
+       <answer>encadenar</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <text>encadenar</text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">cárcel		</text>
+      <target>
+       <answer>encarcelar</answer>
+       <response fill="_" length="10" maxLength="10" />
+       <text>encarcelar</text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">jaula		</text>
+      <target>
+       <answer>enjaular</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>enjaular</text>
+      </target>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="voc_03.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Completa el texto escogiendo la opción adecuada</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="500" height="370" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="17" tabWidth="12" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">	TESTIMONIO DE UN PERIODISTA</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">La agencia para la que trabajo me encargó que cubriera la noticia de la liberación de Willy. Se trata de una agencia periodística </text>
+      <target>
+       <answer>independiente</answer>
+       <optionList>
+        <option>independencia</option>
+        <option>independizar</option>
+        <option>independiente</option>
+       </optionList>
+       <text>independiente</text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> que publica reportajes donde están siempre ensalzadas las ideas de </text>
+      <target>
+       <answer>independencia</answer>
+       <optionList>
+        <option>independencia</option>
+        <option>independizar</option>
+        <option>independiente</option>
+       </optionList>
+       <text>independencia</text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> y de libertad.</text>
+     </p>
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false" />
+     <p size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false">La noticia de la liberación de Willy nos pareció muy adecuada para animar a todos aquellos que por diferentes motivos se quieren </text>
+      <target>
+       <answer>independizar</answer>
+       <optionList>
+        <option>independencia</option>
+        <option>independizar</option>
+        <option>independiente</option>
+       </optionList>
+       <text>independizar</text>
+      </target>
+      <text size="17" family="Arial" bold="false" foreground="0x000000" background="0xFFFFFF" italic="false"> y vivir en libertad.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="morf.gif" file="morf.gif" />
+  <media name="willy.gif" file="willy.gif" />
+ </mediaBag>
+</JClicProject>
+

@@ -1,0 +1,1038 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="berni" version="0.1.3">
+ <settings>
+  <title>Berni para niños</title>
+  <revision description="Adaptación para JClic" date="1/2/05">
+   <author name="María Eugenia Núñez" mail="eugenunez@yahoo.com.ar" organization="&quot;Proyecto ArgenClic&quot;" />
+  </revision>
+  <author name="Fernando Pelillo - Rosario, Argentina" mail="fernandopelillo@yahoo.com.ar" rol="Director de &quot;Proyecto ArgenClic&quot;" />
+  <language>es</language>
+  <description>
+   <p>Paquete de actividades con obras dedicadas a la infancia del pintor argentino Berni a través del personaje "Juanito Laguna". El contenido pertenece a CD "Berni para niños" de la Municipalidad de Rosario.</p>
+  </description>
+  <descriptors area="Plástica" level="EGB1 / EGB2 / EGB3" />
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Paquete de actividades con obras dedicadas a la infancia del pintor argentino Berni a través del personaje "Juanito Laguna". El contenido pertenece a CD "Berni para niños" de la Municipalidad de Rosario.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="plastica.pac" name="plastic.ass">
+   <jump action="STOP" id="forward" />
+   <jump action="STOP" id="back" />
+  </item>
+  <item id="rompe.pac" name="r1.puz" delay="2" navButtons="none">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="r2.puz" delay="2" navButtons="none" />
+  <item name="r3.puz" delay="2" navButtons="none" />
+  <item name="r4.puz" delay="2" navButtons="none" />
+  <item name="r5.puz" delay="2" navButtons="none" />
+  <item name="r6.puz" delay="2" navButtons="none" />
+  <item name="r7.puz" delay="2" navButtons="none" />
+  <item name="r8.puz" delay="2" navButtons="none" />
+  <item name="volver.ass" delay="2" navButtons="none">
+   <jump action="STOP" id="forward" />
+  </item>
+  <item id="ident.pac" name="0001.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="0002.ass" />
+  <item name="0003.ass" />
+  <item name="0004.ass" />
+  <item name="0005.ass" />
+  <item name="0006.ass" />
+  <item name="0007.ass" />
+  <item name="0008.ass" />
+  <item name="volver.ass">
+   <jump action="STOP" id="forward" />
+  </item>
+  <item id="bernigal.pac" name="01.ass" delay="10">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="02.ass" delay="10" />
+  <item name="03.ass" delay="10" />
+  <item name="04.ass" delay="10" />
+  <item name="05.ass" delay="10" />
+  <item name="06.ass" delay="10" />
+  <item name="07.ass" delay="10" />
+  <item name="08.ass" delay="10" />
+  <item name="volver.ass" delay="10">
+   <jump tag="bernigal.pac" id="forward" />
+  </item>
+  <item name="juegos.ass">
+   <jump action="STOP" id="forward" />
+   <jump action="STOP" id="back" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.Identify" name="0001.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial Narrow" size="36" bold="true" />
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <p>¿DÓNDE ESTÁ JUANITO?</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial Narrow" size="37" bold="true" />
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="haber11.wav" to="7650" />
+     <p>¿CONOCÉS ESTE LUGAR?</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="2" border="false" image="001.PNG" id="primary">
+    <style>
+     <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <ids>1 0</ids>
+   </cells>
+   <cells rows="1" cols="2" border="false" image="001.PNG" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@panels.Identify" name="0002.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial Narrow" size="37" bold="true" />
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <p>¿DÓNDE ESTÁ JUANITO?</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial Narrow" size="37" bold="true" />
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="haber11.wav" from="7665" to="10800" />
+     <p>¿QUÉ LUGAR ES ESTE?</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="4" border="false" image="002.PNG" id="primary">
+    <style>
+     <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <ids>0 0 0 0 0 0 1 0 0 0 0 0</ids>
+   </cells>
+   <cells rows="3" cols="4" border="false" image="002.PNG" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@panels.Identify" name="0003.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial Narrow" size="37" bold="true" />
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <p>¿DÓNDE ESTÁ JUANITO?</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial Narrow" size="37" bold="true" />
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="haber11.wav" from="10900" to="16400" />
+     <p>IMAGINA ADÓNDE VA</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="3" border="false" image="003.PNG" id="primary">
+    <style>
+     <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <ids>0 0 1 0 0 0</ids>
+   </cells>
+   <cells rows="2" cols="3" border="false" image="003.PNG" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@panels.Identify" name="0004.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial Narrow" size="37" bold="true" />
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <p>¿DÓNDE ESTÁ JUANITO?</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial Black" size="37" />
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="haber11.wav" from="16400" />
+     <p />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="3" border="false" image="004.PNG" id="primary">
+    <style>
+     <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <ids>0 1 0</ids>
+   </cells>
+   <cells rows="1" cols="3" border="false" image="004.PNG" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@panels.Identify" name="0005.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial Narrow" size="37" bold="true" />
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <p>¿DÓNDE ESTÁ JUANITO?</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial Narrow" size="37" bold="true" />
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="haber33.wav" to="3500" />
+     <p>¿QUÉ MIRA JUANITO?</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="4" border="false" image="005.PNG" id="primary">
+    <style>
+     <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <ids>0 0 0 0 0 1 0 0</ids>
+   </cells>
+   <cells rows="2" cols="4" border="false" image="005.PNG" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="2" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@panels.Identify" name="0006.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial Narrow" size="37" bold="true" />
+      <color foreground="0xFFFFFF" background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¿DÓNDE ESTÁ JUANITO?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="haber22.wav" />
+     <p />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <position x="0" y="0" />
+    </window>
+   </settings>
+   <cells rows="2" cols="6" border="false" image="006.PNG" id="primary">
+    <style>
+     <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="2" />
+    <ids>0 0 0 0 0 0 0 0 1 0 0 0</ids>
+   </cells>
+   <cells rows="2" cols="6" border="false" image="006.PNG" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="6" rows="2" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@panels.Identify" name="0007.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial Narrow" size="37" bold="true" />
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <p>¿DÓNDE ESTÁ JUANITO?</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial Narrow" size="37" bold="true" />
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="haber33.wav" from="3540" to="8500" />
+     <p>¿QUÉ ESTÁ HACIENDO?</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="5" border="false" image="007.PNG" id="primary">
+    <style>
+     <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Holes" cols="5" rows="3" scaleX="5.0" scaleY="3.0">
+     <enclosing>
+      <shape>rectangle:0,0,5,3</shape>
+     </enclosing>
+     <shape>M:3,1|L:3,2|L:2,2|L:2,1|X|M:0,0|L:0,1|L:0,2|L:0,3|L:5,3|L:5,2|L:5,1|L:5,0|X</shape>
+     <shape>rectangle:2,1,1,1</shape>
+    </shaper>
+    <ids>0 1</ids>
+   </cells>
+   <cells rows="3" cols="5" border="false" image="007.PNG" id="solvedPrimary">
+    <shaper class="@Holes" cols="5" rows="3" scaleX="5.0" scaleY="3.0">
+     <enclosing>
+      <shape>rectangle:0,0,5,3</shape>
+     </enclosing>
+     <shape>M:3,1|L:3,2|L:2,2|L:2,1|X|M:0,0|L:0,1|L:0,2|L:0,3|L:5,3|L:5,2|L:5,1|L:5,0|X</shape>
+     <shape>rectangle:2,1,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@panels.Identify" name="0008.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial Narrow" size="37" bold="true" />
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <p>¿DÓNDE ESTÁ JUANITO?</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial Narrow" size="37" bold="true" />
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="haber33.wav" from="8500" />
+     <p>¿TE DISFRAZÁS PARA CARNAVAL?</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="6" border="false" image="008.PNG" id="primary">
+    <style>
+     <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="2" />
+    <ids>0 0 0 0 0 0 0 0 0 0 0 1</ids>
+   </cells>
+   <cells rows="2" cols="6" border="false" image="008.PNG" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="6" rows="2" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="01.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="haber11.wav" to="7650" />
+     <p />
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x000000">
+     <image name="001.PNG" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <position x="0" y="0" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="10.0" cellHeight="10.0" border="false">
+    <style>
+     <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="02.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="haber11.wav" from="7665" to="10800" />
+     <p />
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x000000">
+     <image name="002.PNG" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <position x="0" y="0" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="10.0" cellHeight="10.0" border="false">
+    <style>
+     <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="03.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="haber11.wav" from="10900" to="16400" />
+     <p />
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x000000">
+     <image name="003.PNG" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <position x="0" y="0" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="10.0" cellHeight="10.0" border="false">
+    <style>
+     <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="04.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="haber11.wav" from="16400" />
+     <p />
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x000000">
+     <image name="004.PNG" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <position x="0" y="0" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="10.0" cellHeight="10.0" border="false">
+    <style>
+     <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="05.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="haber33.wav" to="3500" />
+     <p />
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x000000">
+     <image name="005.PNG" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <position x="0" y="0" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="10.0" cellHeight="10.0" border="false">
+    <style>
+     <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="06.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial Narrow" size="37" bold="true" />
+      <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="haber22.wav" />
+     <p>--</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x000000">
+     <image name="006.PNG" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <position x="0" y="0" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="10.0" cellHeight="10.0" border="false">
+    <style>
+     <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="07.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial Narrow" size="37" bold="true" />
+      <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="haber33.wav" from="3540" to="8500" />
+     <p>--</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x000000">
+     <image name="007.PNG" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <position x="0" y="0" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="10.0" cellHeight="10.0" border="false">
+    <style>
+     <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="08.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="haber33.wav" from="8500" />
+     <p />
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x000000">
+     <image name="008.PNG" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <position x="0" y="0" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="10.0" cellHeight="10.0" border="false">
+    <style>
+     <color background="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="juegos.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial Black" size="37" />
+      <color foreground="0x0080C0" background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial Black" size="37" />
+      <color foreground="0x0080C0" background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="300.0" cellHeight="160.0" border="false">
+    <style shadow="true">
+     <font family="Times New Roman" size="30" bold="true" />
+     <color background="0xFFFFFF" shadow="0xFFFFBB" inactive="0xFFFFBB" alternative="0xFFFFBB" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="rompe.pac" />
+     <p>ROMPECABEZAS</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="ident.pac" />
+     <p>BUSCA A JUANITO</p>
+    </cell>
+    <cell image="AUTOR.PNG">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="plastica.pac" />
+    </cell>
+    <cell image="VOLVER.PNG">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="plastica.pac" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="plastic.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial Black" size="37" />
+      <color foreground="0x0080C0" background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>LAS INFANCIAS QUE VIO BERNI</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial Black" size="37" />
+      <color foreground="0x0080C0" background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="00FONAR.PNG" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="600.0" cellHeight="88.0" border="false">
+    <style shadow="true">
+     <font family="Times New Roman" size="30" bold="true" />
+     <color background="0xFFFFFF" shadow="0xFFFFBB" inactive="0xFFFFBB" alternative="0xFFFFBB" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>Los cuadros de Berni de este trabajo forman parte de las obras dedicadas a la infancia a través del personaje "Juanito Laguna"</p>
+    </cell>
+    <cell>
+     <p>Te recomendamos ocultar la barra de inicio de tu computadora, para visualizar mejor las imágenes.</p>
+    </cell>
+    <cell>
+     <p>El contenido pertenece al CD "Berni para niños" de la Municipalidad de Rosario.</p>
+    </cell>
+    <cell image="MINI.PNG">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="juegos.ass" />
+    </cell>
+    <cell image="GALE.PNG">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="bernigal.pac" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="r1.puz" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="haber11.wav" to="750" />
+     <p />
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x000000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x000000" border="false" />
+   </settings>
+   <cells rows="3" cols="2" border="false" image="001.PNG">
+    <style>
+     <color foreground="0xFFFFFF" background="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="r2.puz" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="haber11.wav" to="750" />
+     <p />
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x000000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x000000" border="false" />
+   </settings>
+   <cells rows="3" cols="2" border="false" image="002.PNG">
+    <style>
+     <color foreground="0xFFFFFF" background="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="r3.puz" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="haber11.wav" to="750" />
+     <p />
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x000000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x000000" border="false" />
+   </settings>
+   <cells rows="3" cols="2" border="false" image="003.PNG">
+    <style>
+     <color foreground="0xFFFFFF" background="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="r4.puz" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="haber11.wav" to="750" />
+     <p />
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x000000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x000000" border="false" />
+   </settings>
+   <cells rows="3" cols="2" border="false" image="004.PNG">
+    <style>
+     <color foreground="0xFFFFFF" background="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="r5.puz" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="haber11.wav" to="750" />
+     <p />
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x000000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x000000" border="false" />
+   </settings>
+   <cells rows="3" cols="2" border="false" image="005.PNG">
+    <style>
+     <color foreground="0xFFFFFF" background="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="r6.puz" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="haber11.wav" to="750" />
+     <p />
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x000000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x000000" border="false" />
+   </settings>
+   <cells rows="3" cols="2" border="false" image="006.PNG">
+    <style>
+     <color foreground="0xFFFFFF" background="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="r7.puz" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="haber11.wav" to="750" />
+     <p />
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x000000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x000000" border="false" />
+   </settings>
+   <cells rows="3" cols="2" border="false" image="007.PNG">
+    <style>
+     <color foreground="0xFFFFFF" background="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="r8.puz" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="haber11.wav" to="750" />
+     <p />
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x000000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x000000" border="false" />
+   </settings>
+   <cells rows="3" cols="2" border="false" image="008.PNG">
+    <style>
+     <color foreground="0xFFFFFF" background="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="volver.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial Black" size="37" />
+      <color foreground="0x0080C0" background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial Black" size="37" />
+      <color foreground="0x0080C0" background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="00FONAR.PNG" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="600.0" cellHeight="155.0" border="false">
+    <style shadow="true">
+     <font family="Times New Roman" size="30" bold="true" />
+     <color background="0xFFFFFF" shadow="0xFFFFBB" inactive="0xFFFFBB" alternative="0xFFFFBB" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>TE INVITAMOS A QUE INVESTIGUES, EN TU BIBLIOTECA O INTERNET, LA VIDA Y LA OBRA DE ESTE SINGULAR ARTISTA LATINOAMERICANO, COMPROMETIDO CON LA REALIDAD DE SU PUEBLO.</p>
+    </cell>
+    <cell>
+     <p>SI VISITÁS ROSARIO, NO TE PIERDAS DE CONOCER "LA GRANJA DE LA INFANCIA", "LA ISLA DE LOS INVENTOS" Y "EL JARDÍN DE LOS NIÑOS". SON LUGARES EXCEPCIONALES PARA CONOCER EL PATRIMONIO CULTURAL, JUGANDO.</p>
+    </cell>
+    <cell image="VOLVER.PNG">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="plastica.pac" />
+    </cell>
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="001.PNG" file="001.png" />
+  <media name="002.PNG" file="002.png" />
+  <media name="003.PNG" file="003.png" />
+  <media name="004.PNG" file="004.png" />
+  <media name="005.PNG" file="005.png" />
+  <media name="006.PNG" file="006.png" />
+  <media name="007.PNG" file="007.png" />
+  <media name="008.PNG" file="008.png" />
+  <media name="00FONAR.PNG" file="00fonar.png" />
+  <media name="AUTOR.PNG" file="autor.png" />
+  <media name="GALE.PNG" file="gale.png" />
+  <media name="MINI.PNG" file="mini.png" />
+  <media name="VOLVER.PNG" file="volver.png" />
+  <media name="haber11.wav" file="haber11.wav" />
+  <media name="haber22.wav" file="haber22.wav" />
+  <media name="haber33.wav" file="haber33.wav" />
+ </mediaBag>
+</JClicProject>
+

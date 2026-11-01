@@ -1,0 +1,2091 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="urss" version="0.1.3">
+ <settings>
+  <title>El nacimiento de la URSS</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="5/23/06" />
+  <revision description="Conversión de Clic3 a JClic" date="5/23/06">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Miren Felisa Mateo Ciluaga" mail="mifemat@yahoo.es" />
+  <organization name="IES Dolmen de Soto" mail="21700401.averroes@juntadeandalucia.es" url="http://www.juntadeandalucia.es/averroes/iesdolmendesoto/" city="Trigueros - Huelva" state="Andalucía" />
+  <language>es</language>
+  <description>
+   <p>Proyecto de actividades sobre la Revolución rusa y los hechos más importantes que esdevinieron.</p>
+  </description>
+  <descriptors area-codes="soc" level-codes="SEC, BTX">revolución Rusa</descriptors>
+  <skin file="@orange.xml" />
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Proyecto de actividades sobre la Revolución rusa y los hechos más importantes que esdevinieron.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="start" name="La formación de la URSS" />
+  <item id="indice" name="Índice" />
+  <item id="Repaso" name="Repaso" />
+  <item name="Final" delay="15">
+   <jump action="EXIT" id="forward" />
+  </item>
+  <item id="inicio" name="Resumiendo la Revolución de octubre" delay="60">
+   <jump tag="indice" id="forward">
+    <jump action="RETURN" threshold="80" id="upper" />
+   </jump>
+  </item>
+  <item id="caracteristicas" name="El nuevo régimen" />
+  <item id="medidas" name="Primeras medidas">
+   <jump tag="indice" id="forward" />
+  </item>
+  <item id="Calamidades" name="Guerra Mundial" />
+  <item id="Paz" name="Paz de Brest Litovsk">
+   <jump tag="indice" id="forward" />
+  </item>
+  <item id="Personajes" name="Guerra Civil" />
+  <item id="Guerra" name="La guerra civil">
+   <jump tag="indice" id="forward" />
+  </item>
+  <item id="nep" name="nep">
+   <jump tag="indice" id="forward" />
+  </item>
+  <item id="personas" name="Personajes">
+   <jump tag="Repaso" id="forward" />
+  </item>
+  <item id="acontecimientos" name="acontecimientos">
+   <jump tag="Repaso" id="forward" />
+  </item>
+  <item id="conceptos" name="conceptos">
+   <jump tag="Repaso" id="forward" />
+  </item>
+  <item id="intro" name="introducción">
+   <jump tag="indice" id="forward" />
+  </item>
+  <item id="dictadura" name="dictadura">
+   <jump tag="indice" id="forward" />
+  </item>
+  <item id="plan" name="planificación">
+   <jump tag="indice" id="forward" />
+  </item>
+  <item id="sucesion" name="Sucesión">
+   <jump tag="indice" id="forward" />
+  </item>
+  <item id="extensión" name="extensión">
+   <jump tag="indice" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="El nuevo régimen" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFCC" background="0x006699" />
+      <gradient source="0x006699" dest="0x000033" angle="23" cycles="2" />
+     </style>
+     <p>Lee atentamente los acontecimientos que se suceden en el proceso revolucionario</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="false">
+    <container bgColor="0x006699">
+     <gradient source="0x006699" dest="0x000066" angle="112" cycles="3" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x000066" border="true">
+     <gradient source="0x003399" dest="0x000033" angle="43" cycles="4" />
+    </window>
+   </settings>
+   <cells rows="2" cols="1" cellWidth="703.0" cellHeight="214.0" border="false">
+    <style shadow="true">
+     <font family="Goudy Old Style" size="20" bold="true" />
+     <color foreground="0xFFFFCC" background="0x000066" shadow="0x330033" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell txtAlign="left,middle" imgAlign="right,middle" avoidOverlapping="true" image="lenin_plaza_roja.jpg">
+     <p>Rusia se convierte en el primer país donde el partido obrero alcanza el poder. Las raíces marxistas lo dotaban de un soporte ideológico pero la construcción de una nueva sociedad no tenía bases en las que apoyarse.</p>
+    </cell>
+    <cell txtAlign="left,middle" imgAlign="left,middle" avoidOverlapping="true" image="trotski01.jpg">
+     <p>Tras nombrar el Consejo de Comisarios del Pueblo y a Lenin como Presidente, se reune una Asamblea Constituyente que fue disuelta por burguesa y se da paso a la DICTADURA DEL PROLETARIADO. Esta dictadura se apoyará en la Checa o policía política y elejército rojo. En 1918 el Congreso de los Soviets aprueba la Primera Constitución soviética</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="Final" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xCC6600" />
+     </style>
+     <p>Has llegado al final de las actividades</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xCC3300" />
+     </style>
+     <p>¡Se acabó!</p>
+    </cell>
+   </messages>
+   <settings margin="1" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="notebg.gif" tiled="true" />
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0xCC3300" border="true" />
+   </settings>
+   <cells rows="1" cols="2" cellWidth="352.0" cellHeight="343.0" border="true">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Vrinda" size="22" bold="true" />
+     <color background="0xCC6600" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell>
+     <p>El mundo se dividió en dos bloques antagonistas.</p>
+    </cell>
+    <cell image="carte.europe.jpg" />
+   </cells>
+  </activity>
+  <activity class="@panels.Explore" name="Guerra Civil" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color shadow="0x99FFFF" />
+      <gradient source="0xFFFFCC" dest="0x99FFCC" angle="35" />
+     </style>
+     <p>Pulsa en las fotografías y obtendrás información sobre el ejército blanco y sus generales</p>
+    </cell>
+   </messages>
+   <settings margin="1" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="notebg.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0xCCFFFF" dest="0xFFFFCC" angle="180" />
+    </window>
+   </settings>
+   <cells rows="2" cols="3" cellWidth="242.0" cellHeight="236.0" border="false" id="primary">
+    <style transparent="true">
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFFCC" border="0xFFFFCC" />
+    </style>
+    <shaper class="@JigSaw" cols="3" rows="2" baseWidthFactor="0.93" toothHeightFactor="0.08" randomLines="true" />
+    <cell id="4" image="Krasnov.jpg" />
+    <cell id="3" image="koltchak.jpg" />
+    <cell id="1" image="denikin.jpg" />
+    <cell id="5" image="wrangel.jpg" />
+    <cell id="0" image="cuartel blanco.jpg" />
+    <cell id="2" image="trotski01.jpg" />
+   </cells>
+   <cells rows="1" cols="6" cellWidth="112.0" cellHeight="42.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <gradient source="0xFFFFCC" dest="0xCCFFFF" angle="35" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell txtAlign="left,middle">
+     <p>El ejército blanco estaba formado por franceses, ingleses, japoneses, generales monárquicos liberales, zaristas, demócratas, ...</p>
+    </cell>
+    <cell>
+     <p>El general Denikin tenía el mando en Ucrania </p>
+    </cell>
+    <cell>
+     <p>Trotsky mandaba el ejército rojo</p>
+    </cell>
+    <cell>
+     <p>El almirante Koltchak tenían el mando en Siberia</p>
+    </cell>
+    <cell>
+     <p>Krasnov se ocupó de la región del Don</p>
+    </cell>
+    <cell txtAlign="left,middle">
+     <p>El Barón Wrangel, sucesor de Denikin, dirigió a las tropas en Polonia. Protagonizó las últimas derrotas del ejército blanco</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="Guerra Mundial" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFFFFCC" background="0x006666" shadow="0x003333" />
+     </style>
+     <p>Pulsa en las fotografías y tendrás unas breves informaciones sobre la I Guerra Mundial</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="false">
+    <container bgColor="0x006666">
+     <image name="notebg.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0x00CCCC" dest="0x006666" angle="180" />
+    </window>
+   </settings>
+   <cells rows="2" cols="3" cellWidth="268.0" cellHeight="244.0" border="true" id="primary">
+    <style transparent="true" borderStroke="0.7" markerStroke="5.0">
+     <color background="0x006666" border="0x003333" />
+    </style>
+    <shaper class="@TriangularJigSaw" cols="3" rows="2" baseWidthFactor="0.64" toothHeightFactor="0.09" />
+    <cell id="0" image="gasmostaza.jpg" />
+    <cell id="5" image="Im_Pr_Guerra_mun_6.jpg" />
+    <cell id="2" image="Im_Pr_Guerra_mun_7.jpg" />
+    <cell id="4" image="Frente_oriental.gif" />
+    <cell id="1" image="infanteriarusa.jpg" />
+    <cell id="3" image="operbelicas.jpg" />
+   </cells>
+   <cells rows="1" cols="6" cellWidth="135.0" cellHeight="55.0" border="true" id="secondary">
+    <style>
+     <font family="Bell MT" size="17" bold="true" />
+     <color background="0x33FFCC" />
+     <gradient source="0x33FFCC" dest="0x006666" angle="0" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>Las armas químicas se utilizaron por vez 1ª en la batalla de Yprés</p>
+    </cell>
+    <cell>
+     <p>El ejército ruso estaba mal armado y desabastecido</p>
+    </cell>
+    <cell>
+     <p>La batalla de Jutlandia marca el inicio de la guerra submarina</p>
+    </cell>
+    <cell>
+     <p>La guerra de trincheras supuso el estancamiento de los frentes originando batallas muy crueles (600.000 víctimas en Verdún)</p>
+    </cell>
+    <cell>
+     <p>La Paz de Brest Litovsk supuso la rendición de Rusia. La I G.M. tendrá como balance total 9.272.000 muertos, 6.500.000 inválidos, 4.250.000 viudas, 8.000.000 de huérfanos</p>
+    </cell>
+    <cell>
+     <p>Los cañones de gran tonelaje como el "gran Berta" conseguían dianas muy lejanas</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="La formación de la URSS" code="">
+   <description>
+    <p>Introducción al tema</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true" borderStroke="1.6" markerStroke="2.7">
+      <font family="Myriad Web" size="17" />
+      <color foreground="0xFFCC66" background="0xFF0000" shadow="0x333300" border="0x990000" />
+     </style>
+     <p>Las siguientes actividades te ayudarán a repasar los acontecimientos que siguieron al 24 de Octubre de 1917</p>
+    </cell>
+   </messages>
+   <settings margin="0" infoUrl="http://perso.wanadoo.es/mirenfelisa.mateo/revrusa/Index.htm" report="false">
+    <container bgColor="0xCC0000">
+     <gradient source="0xCC0000" dest="0xFF3333" angle="0" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="500.0" cellHeight="301.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell border="false">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Papyrus" size="48" />
+      <color foreground="0xFFFF33" background="0xCC0000" border="0xCC0000" />
+     </style>
+     <p>El nacimiento de la URSS</p>
+    </cell>
+    <cell avoidOverlapping="true" image="m_soviet.gif">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xCC0000" border="0xCC0000" />
+     </style>
+    </cell>
+    <cell txtAlign="left,bottom" imgAlign="left,bottom">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFF99" background="0xCC0000" border="0xCC0000" />
+     </style>
+     <p>Autora: Miren Felisa Mateo Ciluaga</p>
+    </cell>
+    <cell>
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Magneto" size="20" />
+      <color foreground="0xFFFF66" background="0xCC0000" shadow="0x333300" border="0xCC0000" />
+     </style>
+     <p>IES DOLMEN DE SOTO</p>
+     <p>Trigueros - Huelva</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.FillInBlanks" name="La guerra civil" code="">
+   <description />
+   <messages>
+    <cell type="previous">
+     <style />
+    </cell>
+    <cell type="initial">
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x660000" />
+     </style>
+     <p>Rellena los huecos con las palabras adecuadas</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="1.4" markerStroke="2.7">
+      <color background="0x666600" border="0x660000" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+    <cell type="finalError">
+     <style borderStroke="1.0" markerStroke="2.7">
+      <color background="0xFF3333" border="0x990066" />
+     </style>
+     <p>Lo siento debes repasar un poco más</p>
+    </cell>
+   </messages>
+   <settings margin="0" maxActions="30" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0x660000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true">
+     <size width="700" height="500" />
+    </window>
+   </settings>
+   <prevScreen maxTime="20" />
+   <document>
+    <style name="default" bold="false" family="Arial" tabWidth="12" italic="false" background="0xFFFFCC" size="14" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="20">Entre </text>
+      <target>
+       <answer>1918</answer>
+       <optionList>
+        <option>1922</option>
+        <option>1919</option>
+        <option>1920</option>
+        <option>1918</option>
+       </optionList>
+       <text>1918</text>
+      </target>
+      <text size="20"> y </text>
+      <target>
+       <answer>1920</answer>
+       <optionList>
+        <option>1922</option>
+        <option>1919</option>
+        <option>1918</option>
+        <option>1920</option>
+       </optionList>
+       <text>1920</text>
+      </target>
+      <text size="20"> el nuevo régimen se enfrenta a una guerra </text>
+      <target>
+       <answer>civil</answer>
+       <optionList>
+        <option>confusión</option>
+        <option>disciplina</option>
+        <option>radicalizar</option>
+        <option>agravar</option>
+        <option>desabastecimiento</option>
+        <option>armas</option>
+        <option>tropas</option>
+        <option>extranjeros</option>
+        <option>civil</option>
+       </optionList>
+       <text>civil</text>
+      </target>
+      <text size="20"> promovida por las fuerzas </text>
+      <target>
+       <answer>antirrevolucionarias</answer>
+       <optionList>
+        <option>blanco</option>
+        <option>demócratas</option>
+        <option>zaristas</option>
+        <option>monárquicos</option>
+        <option>armas</option>
+        <option>tropas</option>
+        <option>extranjeros</option>
+        <option>desabastecimiento</option>
+        <option>antirrevolucionarias</option>
+        <option>agravar</option>
+        <option>radicalizar</option>
+       </optionList>
+       <text>antirrevolucionarias</text>
+      </target>
+      <text size="20"> y varias potencias </text>
+      <target>
+       <answer>extranjeras</answer>
+       <optionList>
+        <option>blanco</option>
+        <option>rojo</option>
+        <option>demócratas</option>
+        <option>monárquicos</option>
+        <option>extranjeras</option>
+        <option>zaristas</option>
+        <option>antirrevolucionarias</option>
+       </optionList>
+       <text>extranjeras</text>
+      </target>
+      <text size="20"> (</text>
+      <target>
+       <answer>Francia</answer>
+       <optionList>
+        <option>Ucrania</option>
+        <option>Asia Central</option>
+        <option>Báltico</option>
+        <option>Caúcaso</option>
+        <option>Polonia</option>
+        <option>Reino Unido</option>
+        <option>Francia</option>
+       </optionList>
+       <text>Francia</text>
+      </target>
+      <text size="20">, </text>
+      <target>
+       <answer>Reino Unido</answer>
+       <optionList>
+        <option>Francia</option>
+        <option>Caúcaso</option>
+        <option>Asia Central</option>
+        <option>Ucrania</option>
+        <option>Reino Unido</option>
+        <option>Báltico</option>
+        <option>URSS</option>
+        <option>Polonia</option>
+       </optionList>
+       <text>Reino Unido</text>
+      </target>
+      <text size="20"> y Japón). Cada uno de estos países se ocupó de enviar </text>
+      <target>
+       <answer>tropas</answer>
+       <optionList>
+        <option>armas</option>
+        <option>civil</option>
+        <option>tropas</option>
+        <option>blanco</option>
+        <option>rojo</option>
+        <option>capital</option>
+        <option>disciplina</option>
+        <option>confusión</option>
+       </optionList>
+       <text>tropas</text>
+      </target>
+      <text size="20"> a una zona determinada del conflicto pero fueron más importante la aportación de </text>
+      <target>
+       <answer>capital</answer>
+       <optionList>
+        <option>armas</option>
+        <option>confusión</option>
+        <option>radicalizar</option>
+        <option>capital</option>
+        <option>tropas</option>
+        <option>desabastecimiento</option>
+        <option>extranjeros</option>
+       </optionList>
+       <text>capital</text>
+      </target>
+      <text size="20"> y </text>
+      <target>
+       <answer>armas</answer>
+       <optionList>
+        <option>desabastecimiento</option>
+        <option>confusión</option>
+        <option>agravar</option>
+        <option>armas</option>
+        <option>tropas</option>
+        <option>radicalizar</option>
+        <option>disciplina</option>
+        <option>confusión</option>
+       </optionList>
+       <text>armas</text>
+      </target>
+      <text size="20"> que los recursos humanos.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="20">El ejército </text>
+      <target>
+       <answer>blanco</answer>
+       <optionList>
+        <option>rojo</option>
+        <option>blanco</option>
+       </optionList>
+       <text>blanco</text>
+      </target>
+      <text size="20"> (anticomunista) estaba formado por </text>
+      <target>
+       <answer>monárquicos</answer>
+       <optionList>
+        <option>zaristas</option>
+        <option>demócratas</option>
+        <option>monárquicos</option>
+        <option>antirrevolucionarios</option>
+        <option>tropas</option>
+        <option>extranjeros</option>
+       </optionList>
+       <text>monárquicos</text>
+      </target>
+      <text size="20"> liberales, </text>
+      <target>
+       <answer>zaristas</answer>
+       <optionList>
+        <option>zaristas</option>
+        <option>monárquicos</option>
+        <option>demócratas</option>
+        <option>antirrevolucionarios</option>
+        <option>rojo</option>
+        <option>desabastecimiento</option>
+        <option>tropas</option>
+       </optionList>
+       <text>zaristas</text>
+      </target>
+      <text size="20">, </text>
+      <target>
+       <answer>demócratas</answer>
+       <optionList>
+        <option>zaristas</option>
+        <option>monárquicos</option>
+        <option>tropas</option>
+        <option>armas</option>
+        <option>demócratas</option>
+        <option>antirrevolucionarios</option>
+       </optionList>
+       <text>demócratas</text>
+      </target>
+      <text size="20">, ... siendo sus dirigentes destacados: Koltchak, Krasnov y Denikin. A ellos se unieron acciones separatistas en el </text>
+      <target>
+       <answer>Caúcaso</answer>
+       <optionList>
+        <option>Francia</option>
+        <option>Japón</option>
+        <option>Caúcaso</option>
+        <option>Báltico</option>
+        <option>Polonia</option>
+        <option>Asia Central</option>
+        <option>Ucrania</option>
+       </optionList>
+       <text>Caúcaso</text>
+      </target>
+      <text size="20"> y </text>
+      <target>
+       <answer>Báltico</answer>
+       <optionList>
+        <option>Francia</option>
+        <option>Reino Unido</option>
+        <option>Báltico</option>
+        <option>Polonia</option>
+        <option>Caúcaso</option>
+        <option>Asia Central</option>
+        <option>Ucrania</option>
+       </optionList>
+       <text>Báltico</text>
+      </target>
+      <text size="20">.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="20">La guerra civil se caracteriza por la </text>
+      <target>
+       <answer>confusión</answer>
+       <optionList>
+        <option>confusión</option>
+        <option>disciplina</option>
+        <option>capital</option>
+        <option>armas</option>
+        <option>tropas</option>
+        <option>extranjeros</option>
+       </optionList>
+       <text>confusión</text>
+      </target>
+      <text size="20">, y lo inconstante de las victorias. El ejército </text>
+      <target>
+       <answer>rojo</answer>
+       <optionList>
+        <option>blanco</option>
+        <option>rojo</option>
+       </optionList>
+       <text>rojo</text>
+      </target>
+      <text size="20"> dirigido por Trosky adquirió una </text>
+      <target>
+       <answer>disciplina</answer>
+       <optionList>
+        <option>confusión</option>
+        <option>desabastecimiento</option>
+        <option>capital</option>
+        <option>disciplina</option>
+        <option>armas</option>
+       </optionList>
+       <text>disciplina</text>
+      </target>
+      <text size="20"> y eficacia que consiguió vencer al ejército </text>
+      <target>
+       <answer>blanco</answer>
+       <optionList>
+        <option>rojo</option>
+        <option>blanco</option>
+        <option>zarista</option>
+        <option>monárquico</option>
+        <option>rebelde</option>
+       </optionList>
+       <text>blanco</text>
+      </target>
+      <text size="20">, desorganizado y dividido, a finales del </text>
+      <target>
+       <answer>1919</answer>
+       <optionList>
+        <option>1918</option>
+        <option>1920</option>
+        <option>1917</option>
+        <option>1914</option>
+        <option>1919</option>
+        <option>1922</option>
+       </optionList>
+       <text>1919</text>
+      </target>
+      <text size="20">. Las últimas acciones bélicas se producen contra </text>
+      <target>
+       <answer>Polonia</answer>
+       <optionList>
+        <option>Francia</option>
+        <option>Reino Unido</option>
+        <option>Japón</option>
+        <option>Ucrania</option>
+        <option>Caúcaso</option>
+        <option>Asia Central</option>
+        <option>Polonia</option>
+        <option>Báltico</option>
+       </optionList>
+       <text>Polonia</text>
+      </target>
+      <text size="20"> en 1920 y en los dos años siguientes recuperan </text>
+      <target>
+       <answer>Ucrania</answer>
+       <optionList>
+        <option>Asia central</option>
+        <option>Francia</option>
+        <option>Ucrania</option>
+        <option>Báltico</option>
+        <option>Caúcaso</option>
+        <option>Reino Unido</option>
+       </optionList>
+       <text>Ucrania</text>
+      </target>
+      <text size="20">,el Caúcaso y </text>
+      <target>
+       <answer>Asia central</answer>
+       <optionList>
+        <option>Reino Unido</option>
+        <option>Japón</option>
+        <option>Alemania</option>
+        <option>Asia central</option>
+        <option>Caúcaso</option>
+        <option>Ucrania</option>
+       </optionList>
+       <text>Asia central</text>
+      </target>
+      <text size="20">.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="20">La consolidación del poder soviético se vió refrendado con la creación en </text>
+      <target>
+       <answer>1922</answer>
+       <optionList>
+        <option>1918</option>
+        <option>1920</option>
+        <option>1919</option>
+        <option>1922</option>
+        <option>1917</option>
+        <option>1914</option>
+       </optionList>
+       <text>1922</text>
+      </target>
+      <text size="20"> de la Unión de Repúblicas Sociallistas Soviéticas (</text>
+      <target>
+       <answer>URSS</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>URSS</text>
+      </target>
+      <text size="20">). La guerra civil sirvió para </text>
+      <target>
+       <answer>radicalizar</answer>
+       <optionList>
+        <option>confusión</option>
+        <option>disciplina</option>
+        <option>armas</option>
+        <option>tropas</option>
+        <option>radicalizar</option>
+        <option>antirrevolucionario</option>
+       </optionList>
+       <text>radicalizar</text>
+      </target>
+      <text size="20"> posturas y </text>
+      <target>
+       <answer>agravar</answer>
+       <optionList>
+        <option>agravar</option>
+        <option>radicalizar</option>
+        <option>capital</option>
+        <option>desabastecimiento</option>
+        <option>tropas</option>
+        <option>confusión</option>
+       </optionList>
+       <text>agravar</text>
+      </target>
+      <text size="20"> el problema del </text>
+      <target>
+       <answer>desabastecimiento</answer>
+       <optionList>
+        <option>radicalizar</option>
+        <option>agravar</option>
+        <option>desabastecimiento</option>
+        <option>confusión</option>
+        <option>disciplina</option>
+       </optionList>
+       <text>desabastecimiento</text>
+      </target>
+      <text size="20">.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="Paz de Brest Litovsk" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFCC" background="0x990000" />
+     </style>
+     <p>Encuentra y une cada frase con su doble</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFCC" background="0x333300" />
+     </style>
+     <p>Estupendo estas son las características de la Paz de Brest Litovsk que apartaron a Rusia de la I G.M.</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <color background="0xFF6633" />
+     </style>
+     <p>Lo siento inténtalo de nuevo</p>
+    </cell>
+   </messages>
+   <settings margin="2" maxActions="30" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x330000" dest="0x990000" angle="56" />
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0x999900" dest="0x333300" angle="27" />
+    </window>
+   </settings>
+   <cells rows="2" cols="4" cellWidth="208.0" cellHeight="228.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Garamond" size="20" bold="true" />
+     <color foreground="0xFFFFCC" background="0x660000" shadow="0xFF6600" inactive="0x999999" alternative="0xFFFFCC" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <style>
+      <font family="Garamond" size="20" bold="true" />
+      <color foreground="0xFFFFCC" background="0x660000" shadow="0xCC6600" inactive="0x999999" alternative="0x666666" />
+     </style>
+     <p>División del partido</p>
+    </cell>
+    <cell>
+     <p>Lenin quería la paz a cualquier precio</p>
+    </cell>
+    <cell>
+     <p>Trosky veia en la guerra un modo de exportar la revolución</p>
+    </cell>
+    <cell>
+     <p>Comienzan negociaciones de paz en 1917</p>
+    </cell>
+    <cell>
+     <p>3 de marzo de 1918 se firma la paz</p>
+    </cell>
+    <cell>
+     <p>Rusia pierde 800.000 Km2 y una cuarta parte de la población</p>
+    </cell>
+    <cell>
+     <p>La paz se firma con los imperios centrales</p>
+    </cell>
+    <cell>
+     <p>La lentitud de las negociaciones provoca un ataque alemán</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="4" cellWidth="50.0" cellHeight="30.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <style>
+      <font family="Garamond" size="22" bold="true" />
+      <color foreground="0xFFFFCC" background="0x660000" shadow="0xCC6600" inactive="0x999999" alternative="0xFFFFCC" />
+     </style>
+     <p>División del partido</p>
+    </cell>
+    <cell>
+     <p>Lenin quería la paz a cualquier precio</p>
+    </cell>
+    <cell>
+     <p>Trosky veia en la guerra un modo de exportar la revolución</p>
+    </cell>
+    <cell>
+     <p>Comienzan negociaciones de paz en 1917</p>
+    </cell>
+    <cell>
+     <p>3 de marzo de 1918  se firma la paz</p>
+    </cell>
+    <cell>
+     <p>Rusia pierde 800.000 Km2 y una cuarta parte de la población</p>
+    </cell>
+    <cell>
+     <p>La paz se firma con los imperios centrales</p>
+    </cell>
+    <cell>
+     <p>La lentitud de las negociaciones provoca un ataque alemán</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="Personajes" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="22" bold="true" />
+      <gradient source="0x660066" dest="0xFFFFCC" angle="8" />
+     </style>
+     <p>Encuentra a los personajes de la Revolución rusa</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <gradient source="0x333300" dest="0xFFFFCC" angle="8" />
+     </style>
+     <p>Muy bien.</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <gradient source="0xFF6600" dest="0xFFFFCC" angle="8" />
+     </style>
+     <p>Tendrás que repetirlo</p>
+    </cell>
+   </messages>
+   <settings margin="0" maxActions="18" countDownActions="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="notebg.gif" tiled="true" />
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0xCC0066" dest="0x330033" angle="0" />
+    </window>
+   </settings>
+   <textGrid rows="16" columns="15" cellWidth="22.0" cellHeight="22.0" border="false">
+    <style borderStroke="0.7" markerStroke="3.1">
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFFCC" />
+    </style>
+    <text>
+     <row>**L*******MIGUEL</row>
+     <row>**E***WRANGEL***</row>
+     <row>**NICOLÁSII****Z</row>
+     <row>**I****RASPUTÍNI</row>
+     <row>**N*S**PULITOV*N</row>
+     <row>****T**********O</row>
+     <row>****A**TROTSKY*V</row>
+     <row>**M*L*******E**I</row>
+     <row>*DENIKIN****R**E</row>
+     <row>**R*N****KAMENEV</row>
+     <row>**C*********N***</row>
+     <row>KRASNOV*****S***</row>
+     <row>**D**KOLTCHAK***</row>
+     <row>**E*********Y***</row>
+     <row>**R**KORNILOV***</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">LENIN</clue>
+    <clue id="1">NICOLÁSII</clue>
+    <clue id="2">RASPUTÍN</clue>
+    <clue id="3">TROTSKY</clue>
+    <clue id="4">KERENSKY</clue>
+    <clue id="5">PULITOV</clue>
+    <clue id="6">DENIKIN</clue>
+    <clue id="7">STALIN</clue>
+    <clue id="8">KAMENEV</clue>
+    <clue id="9">ZINOVIEV</clue>
+    <clue id="10">MERCADER</clue>
+    <clue id="11">KRASNOV</clue>
+    <clue id="12">KOLTCHAK</clue>
+    <clue id="13">WRANGEL</clue>
+    <clue id="14">KORNILOV</clue>
+    <clue id="15">MIGUEL</clue>
+   </clues>
+   <cells rows="4" cols="4" border="false" image="stalin-1.jpg" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Primeras medidas" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFFFFCC" background="0x009999" />
+     </style>
+     <p>Une cada medida con la época en la cual se concede</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFFFFCC" background="0x660033" />
+     </style>
+     <media type="RETURN" level="1" autoStart="true" />
+     <p>Muy bien</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFF9933" background="0xFF0000" />
+     </style>
+     <p>Lo siento, repite el ejercicio</p>
+    </cell>
+   </messages>
+   <settings margin="0" maxActions="10" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0x003333">
+     <gradient source="0x00CCCC" dest="0x000066" angle="0" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0x003399" dest="0x000033" angle="43" cycles="4" />
+    </window>
+   </settings>
+   <cells rows="10" cols="1" cellWidth="472.0" cellHeight="43.0" border="false" id="primary">
+    <style shadow="true">
+     <font family="Bauhaus 93" size="24" bold="true" />
+     <color foreground="0xFFCCCC" background="0x00FFCC" shadow="0x330033" />
+     <gradient source="0x33FFCC" dest="0x000033" angle="41" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="10" />
+    <cell id="0">
+     <p>Creación de una Duma</p>
+    </cell>
+    <cell id="2">
+     <p>Decreto de final de la Guerra</p>
+    </cell>
+    <cell id="2">
+     <p>Decreto de expropiación de tierras</p>
+    </cell>
+    <cell id="1">
+     <p>Convocar Asamblea constituyente</p>
+    </cell>
+    <cell id="0">
+     <p>Establecer los MIR</p>
+    </cell>
+    <cell id="1">
+     <p>Conceder una amnistía general</p>
+    </cell>
+    <cell id="0">
+     <p>Derecho sindical</p>
+    </cell>
+    <cell id="0">
+     <p>Jornada laboral de 10 horas</p>
+    </cell>
+    <cell id="2">
+     <p>Decreto sobre industria y comercio</p>
+    </cell>
+    <cell id="2">
+     <p>Decreto sobre las nacionalidades</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="293.0" cellHeight="81.0" border="false" id="secondary">
+    <style shadow="true">
+     <font family="Bauhaus 93" size="24" />
+     <color foreground="0xFFFFFF" shadow="0x003333" />
+     <gradient source="0x66CCFF" dest="0x000033" angle="221" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>Medidas propuestas por los zares</p>
+    </cell>
+    <cell>
+     <p>Medidas de la revolución de Febrero</p>
+    </cell>
+    <cell>
+     <p>Medidas de la Revolución de Octubre</p>
+    </cell>
+   </cells>
+   <cells rows="10" cols="1" border="true" image="TextoExpo.jpg" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="10" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="Repaso" code="">
+   <description>
+    <p>Sopa de letras y crucigrama para repasar conceptos, acontecimientos y protagonistas</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="3.1">
+      <font family="Britannic Bold" size="20" />
+      <color foreground="0xFFFF99" background="0x006633" />
+     </style>
+     <p>Pulsa  en cada fotografía para obrener una actividad</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="notebg.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0xFFFFCC" dest="0x669900" angle="0" />
+    </window>
+   </settings>
+   <cells rows="2" cols="2" cellWidth="334.0" cellHeight="252.0" border="false">
+    <style shadow="true" margin="0" borderStroke="4.1" markerStroke="2.7">
+     <font family="Viner Hand ITC" size="24" bold="true" />
+     <color foreground="0x330000" background="0x006600" shadow="0x009933" border="0x339900" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell imgAlign="middle,bottom" avoidOverlapping="true" image="glasses_gleam_smlwht.gif">
+     <p>REPASA SOBRE:</p>
+    </cell>
+    <cell txtAlign="middle,bottom" image="9.jpg">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="personas" />
+     <p>PERSONAJES</p>
+    </cell>
+    <cell imgAlign="middle,bottom" image="octubre_rojo_interior.jpg">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="conceptos" />
+     <p>CONCEPTOS</p>
+    </cell>
+    <cell imgAlign="middle,bottom" image="rr15.jpg">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="acontecimientos" />
+     <p>ACONTECIMIENTOS</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Resumiendo la Revolución de octubre" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFCC" background="0x330000" />
+     </style>
+     <p>Une a los protagonistas de los hechos de Octubre con sus nombres.</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" border="false" image="lenin_plaza_roja.jpg" type="final">
+     <style shadow="true" borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x999900" shadow="0x666600" />
+     </style>
+     <p>Muy bien. La revolución de Octubre terminó con el triunfo Bolchevique</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFCC66" background="0xCC3300" />
+     </style>
+     <p>Repítelo otra vez</p>
+    </cell>
+   </messages>
+   <settings margin="0" maxActions="4" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0x999900">
+     <gradient source="0x330000" dest="0x990000" angle="56" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x666600" border="true">
+     <gradient source="0x999900" dest="0x333300" angle="27" />
+    </window>
+   </settings>
+   <cells rows="1" cols="4" cellWidth="108.0" cellHeight="173.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="7.3">
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0x666666" background="0xCC9900" inactive="0x666600" alternative="0x330000" border="0x999900" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="trotsky.jpg" />
+    <cell image="LENIN.jpg" />
+    <cell image="KERENSKY.jpg" />
+    <cell image="kornilov.jpg" />
+   </cells>
+   <cells rows="1" cols="4" cellWidth="107.0" cellHeight="30.0" border="true" id="secondary">
+    <style borderStroke="6.5" markerStroke="7.3">
+     <font family="Arial" size="17" bold="true" />
+     <color background="0x333300" inactive="0x333300" border="0x666600" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>Trosky</p>
+    </cell>
+    <cell>
+     <p>Lenin</p>
+    </cell>
+    <cell>
+     <p>Kerensky</p>
+    </cell>
+    <cell>
+     <p>Kornilov</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="6" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <style borderStroke="0.7" markerStroke="2.7">
+      <color foreground="0xFFCC66" background="0xFFCC66" shadow="0x993300" inactive="0x330000" alternative="0x330000" />
+     </style>
+     <p>Trosky era el presidente del soviet de la capital y dirigió de hecho la revolución de Octubre</p>
+    </cell>
+    <cell>
+     <p>Alma del grupo Bolchevique elaboró las tesis de Abril donde expone la ideología del partido</p>
+    </cell>
+    <cell>
+     <p>Jefe del grupo Menchevique, fue presidente del gobierno de marzo a Octubre de 1917</p>
+    </cell>
+    <cell>
+     <p>Comandante en Jefe del ejército intentó un Golpe de Fuerza antirrevolucionario.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.Order" name="Sucesión" code="" type="orderParagraphs">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x996600" />
+     </style>
+     <p>Ordena las frases para que el texto tenga sentido</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x993300" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <color background="0xFF6600" />
+     </style>
+     <p>Repítelo de nuevo</p>
+    </cell>
+   </messages>
+   <settings margin="1" maxActions="3" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0x330000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x330000" border="true">
+     <size width="737" height="327" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" bold="false" family="Microsoft Sans Serif" tabWidth="12" italic="false" background="0xFFFFFF" size="18" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p family="Arial" background="0xFFFFFF">
+      <target>Lenin, en 1923, se retira por enfermedad. </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>La sucesión quedaba en manos del Comité central quien tenía dos candidatos claros: Trotsky y José Stalin. </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>Mientras el primero, era un revolucionario brillante fiel impulsador de la revolución y partidario de exteder la revolución por el mundo. </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>Stalin era partidario  del socialismo en un sólo país, idea que agradaba a una URSS demasiado cansada de combates y luchas. </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>Zinoviev y Kamenev apoyaran a Stalin y Trostky será deportado en 1929. </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>Murio a manos de Ramón Mercader, agente de Stalin, en México. </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>Stalin desde el principio fue eliminando a los enemigos que se interponían en su avance hacia la dictadura personal. </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>Así Zinoviev y Kamenev, seguirán el mismo destino que Trotsky.</target>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="acontecimientos" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0x00CC99" />
+     </style>
+     <p>Une cada fecha con su acontecimiento</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0x009966" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0x990000" />
+     </style>
+     <p>Lo siento, tendrás que repetirlo</p>
+    </cell>
+   </messages>
+   <settings margin="2" maxTime="180" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="notebg.gif" tiled="true" />
+     <counters time="true" actions="false" score="true" />
+    </container>
+    <window bgColor="0x009999" border="true" />
+   </settings>
+   <cells rows="4" cols="4" cellWidth="195.0" cellHeight="165.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Garamond" size="20" bold="true" />
+     <color background="0xCCFFFF" inactive="0x006666" alternative="0x000099" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell>
+     <p>1905</p>
+    </cell>
+    <cell>
+     <p>1904</p>
+    </cell>
+    <cell>
+     <p>1914</p>
+    </cell>
+    <cell>
+     <p>1917</p>
+    </cell>
+    <cell>
+     <p>1918</p>
+    </cell>
+    <cell>
+     <p>1920</p>
+    </cell>
+    <cell>
+     <p>1922</p>
+    </cell>
+    <cell>
+     <p>1919</p>
+    </cell>
+    <cell>
+     <p>1928</p>
+    </cell>
+    <cell>
+     <p>1933</p>
+    </cell>
+    <cell>
+     <p>1936</p>
+    </cell>
+    <cell>
+     <p>1939</p>
+    </cell>
+    <cell>
+     <p>1923</p>
+    </cell>
+    <cell>
+     <p>1898</p>
+    </cell>
+    <cell>
+     <p>1902</p>
+    </cell>
+    <cell>
+     <p>1940</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="4" cellWidth="50.0" cellHeight="30.0" border="true" id="secondary">
+    <style />
+    <cell>
+     <p>Domingo sangriento</p>
+    </cell>
+    <cell>
+     <p>Guerra ruso-japonesa</p>
+    </cell>
+    <cell>
+     <p>Comienza la I Guerra Mundial</p>
+    </cell>
+    <cell>
+     <p>Revolución de Febrero (Menchevique)</p>
+    </cell>
+    <cell>
+     <p>Paz de Brest-Litovsk</p>
+    </cell>
+    <cell>
+     <p>Final de la guerra civil</p>
+    </cell>
+    <cell>
+     <p>Creación de la URSS</p>
+    </cell>
+    <cell>
+     <p>III Internacional</p>
+    </cell>
+    <cell>
+     <p>Primer plan quinquenal</p>
+    </cell>
+    <cell>
+     <p>Comienzan las "purgas"</p>
+    </cell>
+    <cell>
+     <p>Procesos de Moscú</p>
+    </cell>
+    <cell>
+     <p>II Guerra Mundial</p>
+    </cell>
+    <cell>
+     <p>Lenin se retira del poder</p>
+    </cell>
+    <cell>
+     <p>Fundación del Partido Obrero Socialdemócrata Ruso</p>
+    </cell>
+    <cell>
+     <p>Grave crisis económica</p>
+    </cell>
+    <cell>
+     <p>Muere Trotsky</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.CrossWord" name="conceptos" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <gradient source="0xCCCC00" dest="0xFFFF99" angle="124" cycles="6" />
+     </style>
+     <p>Resuelve el crucigrama</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x996600" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <color background="0xCC3300" />
+     </style>
+     <p>Lo siento has fallado</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="notebg.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0xFFFFCC" dest="0x669900" angle="0" />
+    </window>
+   </settings>
+   <textGrid rows="20" columns="16" cellWidth="33.0" cellHeight="31.0" border="true">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xCCCC00" />
+     <gradient source="0xCCCC00" dest="0xFFFF99" angle="124" cycles="6" />
+    </style>
+    <text>
+     <row>BOLCHEVIQUE*********</row>
+     <row>***H*****C**C***O*Z*</row>
+     <row>M*NEP****AUTOCRACIA*</row>
+     <row>E**CADETES**L*O*N*R*</row>
+     <row>N*AA*U***E**E*J*A***</row>
+     <row>C*N**M**C***C*O*L***</row>
+     <row>H*A**A*SOVIET***B***</row>
+     <row>E*R*****M***I*******</row>
+     <row>V*Q*****I***V*******</row>
+     <row>I*U*****S**MIR******</row>
+     <row>QUINQUENAL**Z*******</row>
+     <row>U*S***PURGA*A*******</row>
+     <row>E*T*****I***C*******</row>
+     <row>SKALUK**O***I*******</row>
+     <row>***********KOMINTERN</row>
+     <row>************N*******</row>
+    </text>
+   </textGrid>
+   <cells rows="1" cols="3" cellWidth="200.0" cellHeight="60.0" border="true" id="acrossClues">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFFCC" />
+     <gradient source="0xCCCC00" dest="0xFFFF99" angle="124" cycles="6" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="6" item="5" />
+    <cell id="6" item="4" />
+    <cell id="11" item="4" />
+    <cell id="11" item="1" />
+    <cell id="11" item="0" />
+    <cell id="15" item="1" />
+    <cell id="15" item="0" />
+    <cell id="14" item="1" />
+    <cell id="14" item="0">
+     <p>III INTERNACIONAL CELEBRADA EN MOSCÚ EN 1919</p>
+    </cell>
+    <cell id="13" item="0">
+     <p>(AL REVÉS) CAMPESINOS RICOS</p>
+    </cell>
+    <cell id="13" item="0" />
+    <cell id="13" item="1" />
+    <cell id="13" item="2" />
+    <cell id="12" item="4" />
+    <cell id="12" item="1" />
+    <cell id="12" item="0" />
+    <cell id="12" item="2" />
+    <cell id="12" item="3" />
+    <cell id="11" item="2">
+     <p>ELIMINACIÓN SISTEMÁTICA DE CUALQUIER FORMA DE OPOSICIÓN EN LA DICTADURA ESTALINISTA</p>
+    </cell>
+    <cell id="11" item="2" />
+    <cell id="11" item="3" />
+    <cell id="10" item="0">
+     <p>PLAN PARA EL CONTROL DE LA PRODUCCIÓN INDUSTRIAL Y LA COLECTIVIZACIÓN DE LA TIERRA</p>
+    </cell>
+    <cell id="10" item="0" />
+    <cell id="10" item="1" />
+    <cell id="9" item="4" />
+    <cell id="9" item="1" />
+    <cell id="9" item="0" />
+    <cell id="9" item="2" />
+    <cell id="9" item="3">
+     <p>CAMPESINOS RUSOS QUE ACCEDEN A LA COMPRA DE TIERRAS MEDIANTE PRÉSTAMOS ESTATALES</p>
+    </cell>
+    <cell id="8" item="4" />
+    <cell id="8" item="1" />
+    <cell id="8" item="0" />
+    <cell id="8" item="2" />
+    <cell id="8" item="3" />
+    <cell id="7" item="4" />
+    <cell id="7" item="1" />
+    <cell id="7" item="0" />
+    <cell id="7" item="2" />
+    <cell id="7" item="3" />
+    <cell id="3" item="6" />
+    <cell id="3" item="4" />
+    <cell id="3" item="5" />
+    <cell id="3" item="3" />
+    <cell id="3" item="0" />
+    <cell id="3" item="2" />
+    <cell id="6" item="3">
+     <p>ASOCIACIÓN DE OBREROS INICIALMENTE DE LAS INDUSTRIAS URBANAS</p>
+    </cell>
+    <cell id="6" item="1" />
+    <cell id="6" item="0" />
+    <cell id="6" item="3" />
+    <cell id="6" item="2" />
+    <cell id="5" item="7" />
+    <cell id="5" item="6" />
+    <cell id="5" item="5" />
+    <cell id="5" item="1" />
+    <cell id="5" item="0" />
+    <cell id="5" item="3" />
+    <cell id="5" item="4" />
+    <cell id="5" item="2" />
+    <cell id="4" item="7" />
+    <cell id="4" item="6" />
+    <cell id="4" item="5" />
+    <cell id="4" item="0" />
+    <cell id="4" item="4" />
+    <cell id="4" item="2" />
+    <cell id="4" item="1">
+     <p>IDEA POLÍTICA QUE NO CREE EN LA EXISTENCIA DE CUALQUIER FORMA DE ESTADO.</p>
+    </cell>
+    <cell id="4" item="3" />
+    <cell id="3" item="1">
+     <p>PARTIDO CONSTITUCIONAL DEMOCRATA</p>
+    </cell>
+    <cell id="3" item="1" />
+    <cell id="2" item="3" />
+    <cell id="2" item="0" />
+    <cell id="2" item="1">
+     <p>NUEVA POLÍTICA ECONÓMICA</p>
+    </cell>
+    <cell id="2" item="2">
+     <p>GOBIERNO BASADO EN UN PODER ABSOLUTO, AUTORITARIO E INDISCUTIBLE</p>
+    </cell>
+    <cell id="1" item="5" />
+    <cell id="1" item="3" />
+    <cell id="1" item="4" />
+    <cell id="1" item="2" />
+    <cell id="1" item="0" />
+    <cell id="1" item="1" />
+    <cell id="0" item="1" />
+    <cell id="0" item="0">
+     <p>Facción más radical del Partido Obrero Socialdemócrata ruso</p>
+    </cell>
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="200.0" cellHeight="60.0" border="true" id="downClues">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFFCC" />
+     <gradient source="0xCCCC00" dest="0xFFFF99" angle="124" cycles="6" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="19" item="0" />
+    <cell id="19" item="0" />
+    <cell id="18" item="1" />
+    <cell id="18" item="1" />
+    <cell id="18" item="0">
+     <p>REY ABSOLUTO RUSO</p>
+    </cell>
+    <cell id="17" item="1" />
+    <cell id="17" item="1" />
+    <cell id="17" item="0" />
+    <cell id="16" item="1" />
+    <cell id="16" item="1" />
+    <cell id="16" item="0">
+     <p>(AL REVÉS) EJÉRCITO CONTRARREVOLUCIONARIO</p>
+    </cell>
+    <cell id="15" item="1" />
+    <cell id="15" item="1" />
+    <cell id="15" item="0" />
+    <cell id="14" item="1" />
+    <cell id="14" item="1" />
+    <cell id="14" item="0">
+     <p>EJÉRCITO REVOLUCIONARIO</p>
+    </cell>
+    <cell id="13" item="2" />
+    <cell id="13" item="1" />
+    <cell id="13" item="2" />
+    <cell id="13" item="0" />
+    <cell id="12" item="1" />
+    <cell id="12" item="0">
+     <p>EXPROPIACIÓN DE LOS MEDIOS DE PRODUCCIÓN (EFECTO)</p>
+    </cell>
+    <cell id="11" item="3" />
+    <cell id="11" item="2" />
+    <cell id="11" item="3" />
+    <cell id="11" item="1" />
+    <cell id="11" item="0" />
+    <cell id="10" item="4" />
+    <cell id="10" item="3" />
+    <cell id="10" item="2" />
+    <cell id="10" item="1" />
+    <cell id="10" item="0" />
+    <cell id="9" item="3" />
+    <cell id="9" item="2" />
+    <cell id="9" item="1" />
+    <cell id="9" item="0">
+     <p>DECRETO DEL ZAR</p>
+    </cell>
+    <cell id="8" item="2">
+     <p>MIEMBRO DEL CONSEJO DIRIGENTE DE LA URSS</p>
+    </cell>
+    <cell id="8" item="2" />
+    <cell id="8" item="1" />
+    <cell id="8" item="0" />
+    <cell id="7" item="4" />
+    <cell id="7" item="3" />
+    <cell id="7" item="2" />
+    <cell id="7" item="1" />
+    <cell id="7" item="0" />
+    <cell id="6" item="3" />
+    <cell id="6" item="2" />
+    <cell id="6" item="1" />
+    <cell id="6" item="0" />
+    <cell id="5" item="4" />
+    <cell id="5" item="3" />
+    <cell id="5" item="2" />
+    <cell id="5" item="1">
+     <p>PARLAMENTO</p>
+    </cell>
+    <cell id="5" item="0" />
+    <cell id="4" item="4" />
+    <cell id="4" item="3" />
+    <cell id="4" item="2" />
+    <cell id="4" item="1" />
+    <cell id="4" item="0" />
+    <cell id="3" item="3" />
+    <cell id="3" item="2" />
+    <cell id="3" item="1" />
+    <cell id="3" item="0">
+     <p>Policía política</p>
+    </cell>
+    <cell id="2" item="2" />
+    <cell id="2" item="2" />
+    <cell id="2" item="1" />
+    <cell id="2" item="0" />
+    <cell id="1" item="3" />
+    <cell id="1" item="2" />
+    <cell id="1" item="1" />
+    <cell id="1" item="0" />
+    <cell id="0" item="2" />
+    <cell id="0" item="1">
+     <p>FACCIÓN MÁS MODERADA DEL PARTIDO OBRERO SOCIALDEMÓCRATA RUSO (PLURAL)</p>
+    </cell>
+    <cell id="0" item="0" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="dictadura" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <gradient source="0xCC3300" dest="0xFFFF99" angle="124" cycles="2" />
+     </style>
+     <p>Señala las características de la dictadura de Stalin</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <gradient source="0x999900" dest="0xFFFF99" angle="124" cycles="2" />
+     </style>
+     <p>La dictadura de Stalin surge tras una crisis del partido comunista y las purgas sistemáticas contra los antiguos dirigentes bolcheviques</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <gradient source="0x990033" dest="0xFFFF99" angle="124" cycles="2" />
+     </style>
+     <p>Vuelve a leerte el tema</p>
+    </cell>
+   </messages>
+   <settings margin="1" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="notebg.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0xFF9900" dest="0xFFFF99" angle="180" />
+    </window>
+   </settings>
+   <cells rows="2" cols="5" cellWidth="167.0" cellHeight="110.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <gradient source="0xCC3300" dest="0xFFFF99" angle="124" cycles="2" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell id="1">
+     <p>crisis del partido</p>
+    </cell>
+    <cell id="1">
+     <p>Mejora en las condiciones de vida</p>
+    </cell>
+    <cell id="0">
+     <p>Nepmen</p>
+    </cell>
+    <cell id="1">
+     <p>procesos de Moscú</p>
+    </cell>
+    <cell id="0">
+     <p>Surge una burguesia enriquecida</p>
+    </cell>
+    <cell id="0">
+     <p>empresas privadas</p>
+    </cell>
+    <cell id="0">
+     <p>democratiza-ción del partido</p>
+    </cell>
+    <cell id="1">
+     <p>depuraciones</p>
+    </cell>
+    <cell id="0">
+     <p>Sometimiento al voto del partido</p>
+    </cell>
+    <cell id="1">
+     <p>Propaganda</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="extensión" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <gradient source="0x990033" dest="0xFFFF99" angle="124" cycles="2" />
+     </style>
+     <p>Pulsa en cada información </p>
+    </cell>
+   </messages>
+   <settings margin="0" report="false">
+    <container bgColor="0xFF6633">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x330099" border="true">
+     <gradient source="0x330066" dest="0xFF6633" angle="180" />
+    </window>
+   </settings>
+   <cells rows="2" cols="2" cellWidth="353.0" cellHeight="156.0" border="true">
+    <style borderStroke="0.8" markerStroke="2.7">
+     <font family="Arial" size="20" bold="true" />
+     <color foreground="0xFFFFCC" background="0x330033" border="0x990099" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="URL" level="1" file="http://www.eumed.net/cursecon/economistas/luxemburg.htm" />
+     <p>Revolución espartaquista alemana</p>
+    </cell>
+    <cell id="1">
+     <media type="URL" level="1" file="http://www.historiasiglo20.org/EG/1919-24.htm" />
+     <p>República soviética en Hungría</p>
+    </cell>
+    <cell id="2">
+     <p>República soviética en Baviera</p>
+    </cell>
+    <cell id="3">
+     <media type="URL" level="1" file="http://www.historiasiglo20.org/GLOS/komintern.htm" />
+     <p>Komintern</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="introducción" code="">
+   <description />
+   <messages />
+   <settings margin="0" report="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xCC6600" dest="0xFF9933" angle="56" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x330000" border="true" />
+   </settings>
+   <cells rows="1" cols="2" cellWidth="390.0" cellHeight="343.0" border="true">
+    <style>
+     <font family="Garamond" size="22" bold="true" />
+     <gradient source="0xCC3300" dest="0xFFFF99" angle="124" cycles="2" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell>
+     <p>Stalin protagonizó el segundo periodo de la historia de la URSS. Instauró una dictadura personal. Los grandes hitos del estalinismo fueron la socialización de la tierra y la planificación económica. Stalin consolidó el régimen soviético y convirtió a la URSS en una gran potencia.</p>
+    </cell>
+    <cell image="stalin-1.jpg" />
+   </cells>
+  </activity>
+  <activity class="@panels.Identify" name="nep" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <gradient source="0xFF9933" dest="0xFFFF99" angle="124" cycles="6" />
+     </style>
+     <p>Señala las características del al NEP (1921-1927)</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <gradient source="0x999900" dest="0xFFFF99" angle="124" cycles="6" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <gradient source="0xCC3300" dest="0xFFFF99" angle="124" cycles="6" />
+     </style>
+     <p>Repite el ejercicio</p>
+    </cell>
+   </messages>
+   <settings margin="1" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="notebg.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0xFF9900" dest="0xFFFF99" angle="180" />
+    </window>
+   </settings>
+   <cells rows="3" cols="5" cellWidth="145.0" cellHeight="108.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <gradient source="0xFF9933" dest="0xFFFF99" angle="124" cycles="6" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="3" />
+    <cell id="1">
+     <p>capitalismo limitado</p>
+    </cell>
+    <cell id="0">
+     <p>libertad de comercio exterior</p>
+    </cell>
+    <cell id="0">
+     <p>Reducción jornada laboral</p>
+    </cell>
+    <cell id="0">
+     <p>Se crean sindicatos</p>
+    </cell>
+    <cell id="1">
+     <p>fomento del cooperativismo</p>
+    </cell>
+    <cell id="0">
+     <p>Siervos</p>
+    </cell>
+    <cell id="0">
+     <p>grandes latifundios</p>
+    </cell>
+    <cell id="1">
+     <p>pequeñas empresas privadas en la industria</p>
+    </cell>
+    <cell id="0">
+     <p>Nobleza industrial</p>
+    </cell>
+    <cell id="1">
+     <p>surgen los nepmen</p>
+    </cell>
+    <cell id="1">
+     <p>libertad de comercio interior</p>
+    </cell>
+    <cell id="1">
+     <p>control del crédito</p>
+    </cell>
+    <cell id="1">
+     <p>Estado controla la industria básica</p>
+    </cell>
+    <cell id="1">
+     <p>entrada de capital extranjero</p>
+    </cell>
+    <cell id="0">
+     <p>Estado presta dinero al pequeño propietario</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="planificación" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFFCCCC" background="0x663300" />
+     </style>
+     <p>Une las características económicas con sus términos correspondientes</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFFCCCC" background="0x333300" />
+     </style>
+     <p>Bien</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color foreground="0xFFCCCC" background="0x990066" />
+     </style>
+     <p>Vuelve a hacerlo</p>
+    </cell>
+   </messages>
+   <settings margin="0" maxActions="16" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0xCC6600">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0xFF9900" dest="0xFFFF99" angle="180" />
+    </window>
+   </settings>
+   <cells rows="3" cols="5" cellWidth="156.0" cellHeight="155.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xCC6600" inactive="0x333300" border="0xFF6600" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="3" />
+    <cell id="2">
+     <p>Se dobla la producción industrial</p>
+    </cell>
+    <cell id="2">
+     <p>Deportaciones masivas a Siberia</p>
+    </cell>
+    <cell id="2">
+     <p>Mejora considerable de las condiciones de vida</p>
+    </cell>
+    <cell id="2">
+     <p>Se consolida la sovietización</p>
+    </cell>
+    <cell id="2">
+     <p>La producción agraria crece un 50%</p>
+    </cell>
+    <cell id="1">
+     <p>Formación de Técnicos y mano de obra especializada</p>
+    </cell>
+    <cell id="1">
+     <p>Desarrollo de la industria pesada</p>
+    </cell>
+    <cell id="1">
+     <p>Gigantescas obras públicas</p>
+    </cell>
+    <cell id="1">
+     <p>Movilización de toda la sociedad</p>
+    </cell>
+    <cell id="1">
+     <p>Potenciación del Koljozes y Sovjozes</p>
+    </cell>
+    <cell id="0">
+     <p>Plan estatal frente al liberalismo capitalista</p>
+    </cell>
+    <cell id="0">
+     <p>Control de los medios de producción</p>
+    </cell>
+    <cell id="0">
+     <p>Colectivización del campo</p>
+    </cell>
+    <cell id="1">
+     <p>Desaparición del sector privado</p>
+    </cell>
+    <cell id="1">
+     <p>Autofinanciación</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="163.0" cellHeight="51.0" border="true" id="secondary">
+    <style borderStroke="7.1" markerStroke="2.7">
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xCC6600" border="0x993300" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>Planificación económica</p>
+    </cell>
+    <cell>
+     <p>Plan quinquenal</p>
+    </cell>
+    <cell>
+     <p>II Plan quinquenal</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="BUA" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="Índice" code="">
+   <description>
+    <p>Descripción de las actividades</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFCC66" background="0x990000" shadow="0x993300" />
+     </style>
+     <p>Señala en cada uno de los epífgrafes y te llevará a una actividad diferente.</p>
+    </cell>
+   </messages>
+   <settings margin="1" report="false">
+    <container bgColor="0x330000">
+     <gradient source="0x330000" dest="0x990000" angle="56" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x660000" border="true" />
+   </settings>
+   <cells rows="10" cols="2" cellWidth="390.0" cellHeight="61.0" border="false">
+    <style shadow="true" borderStroke="0.7" markerStroke="2.7">
+     <font family="Garamond" size="20" bold="true" />
+     <color foreground="0xFFCC99" background="0x660000" shadow="0x993300" border="0x660000" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="10" />
+    <cell />
+    <cell txtAlign="left,middle">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="caracteristicas" />
+     <p>1.- Primeras medidas</p>
+    </cell>
+    <cell image="LENIN.jpg" />
+    <cell txtAlign="left,middle">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="Calamidades" />
+     <p>2.- Paz de Brest-Litovsk</p>
+    </cell>
+    <cell>
+     <style shadow="true">
+      <font family="Garamond" size="22" bold="true" />
+      <color foreground="0xFFCC99" background="0x660000" shadow="0xCC6600" inactive="0x330000" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="inicio" />
+     <p>El nacimiento de la URSS</p>
+    </cell>
+    <cell txtAlign="left,middle">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="Personajes" />
+     <p>3.- Guerra civil</p>
+    </cell>
+    <cell image="troski1.jpg" />
+    <cell txtAlign="left,middle">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="nep" />
+     <p>4.- Nueva política económica</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell txtAlign="left,middle">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="sucesion" />
+     <p>a) La sucesión de Lenin</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="intro" />
+     <p>Periodo estalinista (1927-1939)</p>
+    </cell>
+    <cell txtAlign="left,middle">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="plan" />
+     <p>b) Socialización y planificación</p>
+    </cell>
+    <cell image="stalin-1.jpg" />
+    <cell txtAlign="left,middle">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="dictadura" />
+     <p>c) Dictadura de Stalin</p>
+    </cell>
+    <cell />
+    <cell txtAlign="left,middle">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="extensión" />
+     <p>d) Papel de la URSS en el mundo</p>
+    </cell>
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="Frente_oriental.gif" file="frente_oriental.gif" animated="false" />
+  <media name="glasses_gleam_smlwht.gif" file="glasses_gleam_smlwht.gif" animated="false" />
+  <media name="m_soviet.gif" file="m_soviet.gif" animated="false" />
+  <media name="notebg.gif" file="notebg.gif" animated="false" />
+  <media name="9.jpg" file="9.jpg" />
+  <media name="carte.europe.jpg" file="carte.europe.jpg" />
+  <media name="cuartel blanco.jpg" file="cuartel_blanco.jpg" />
+  <media name="denikin.jpg" file="denikin.jpg" />
+  <media name="gasmostaza.jpg" file="gasmostaza.jpg" />
+  <media name="Im_Pr_Guerra_mun_6.jpg" file="im_pr_guerra_mun_6.jpg" />
+  <media name="Im_Pr_Guerra_mun_7.jpg" file="im_pr_guerra_mun_7.jpg" />
+  <media name="infanteriarusa.jpg" file="infanteriarusa.jpg" />
+  <media name="KERENSKY.jpg" file="kerensky.jpg" />
+  <media name="koltchak.jpg" file="koltchak.jpg" />
+  <media name="kornilov.jpg" file="kornilov.jpg" />
+  <media name="Krasnov.jpg" file="krasnov.jpg" />
+  <media name="LENIN.jpg" file="lenin.jpg" />
+  <media name="lenin_plaza_roja.jpg" file="lenin_plaza_roja.jpg" />
+  <media name="octubre_rojo_interior.jpg" file="octubre_rojo_interior.jpg" />
+  <media name="operbelicas.jpg" file="operbelicas.jpg" />
+  <media name="rr15.jpg" file="rr15.jpg" />
+  <media name="stalin-1.jpg" file="stalin-1.jpg" />
+  <media name="TextoExpo.jpg" file="textoexpo.jpg" />
+  <media name="troski1.jpg" file="troski1.jpg" />
+  <media name="trotski01.jpg" file="trotski01.jpg" />
+  <media name="trotsky.jpg" file="trotsky.jpg" />
+  <media name="wrangel.jpg" file="wrangel.jpg" />
+ </mediaBag>
+</JClicProject>
+

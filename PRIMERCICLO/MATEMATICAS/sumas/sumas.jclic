@@ -1,0 +1,1920 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="sum2cif" version="0.1.3">
+ <settings>
+  <title>Sumas</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="9/30/02" />
+  <revision description="Conversión de Clic3 a JClic" date="11/22/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Virgilio Pedraz Hernández" mail="vpedraz@roble.pntic.mec.es" />
+  <organization name="CRA Vía de la Plata" city="La Garganta" state="Extremadura" />
+  <language>español</language>
+  <description>
+   <p>Paquete de actividades para trabajar las sumas con números de dos cifras. En el paquete encontramos también una sopa de letras, un rompecabezas y un crucigrama.</p>
+  </description>
+  <descriptors area="Matemáticas" level="Primaria">cálculo</descriptors>
+ </settings>
+ <sequence>
+  <item id="sum2cif.pac" name="pres.ass">
+   <description>
+    <p>SUMAS HASTA 99</p>
+   </description>
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="m2s4a.ass" />
+  <item name="m2s1a.ass" />
+  <item name="m2s2a.ass" />
+  <item name="m2s9a.ass" />
+  <item name="m2s6a.ass" />
+  <item name="m2s5a.ass" />
+  <item name="m2s3a.ass" />
+  <item name="m2s8a.ass" />
+  <item name="cdecenas.sop" />
+  <item name="m2s7a.ass" />
+  <item name="m2s10a.ass" />
+  <item name="csumas.crw" />
+  <item name="m2s11a.ass" />
+  <item name="puznum.puz">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@textGrid.WordSearch" name="cdecenas.sop">
+   <description>
+    <p>BUSCAR LAS DECENAS COMPLETAS</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>BUSCA LAS DECENAS COMPLETAS: 10, 20,...100</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>ESTUPENDO</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="10" columns="10" cellWidth="50.0" cellHeight="50.0" border="true">
+    <style>
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>**V***DIEZ</row>
+     <row>TREINTANO*</row>
+     <row>*CIEN**CC*</row>
+     <row>CINE**SUHS</row>
+     <row>**T***ENEE</row>
+     <row>**ENTASENT</row>
+     <row>BEINTVENTE</row>
+     <row>CINCUENTAN</row>
+     <row>CUARENTA*T</row>
+     <row>NOVENTA**A</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">DIEZ</clue>
+    <clue id="1">VEINTE</clue>
+    <clue id="2">TREINTA</clue>
+    <clue id="3">CUARENTA</clue>
+    <clue id="4">CINCUENTA</clue>
+    <clue id="5">SESENTA</clue>
+    <clue id="6">SETENTA</clue>
+    <clue id="7">OCHENTA</clue>
+    <clue id="8">NOVENTA</clue>
+    <clue id="9">CIEN</clue>
+   </clues>
+  </activity>
+  <activity class="@textGrid.CrossWord" name="csumas.crw">
+   <description>
+    <p>CRUCIGRAMA NUMÉRICO</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>PON UNA CIFRA EN CADA CASILLA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>¿YA SABÍAS HACER CRUCIGRAMAS?</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="5" columns="5" cellWidth="70.0" cellHeight="70.0" border="true">
+    <style>
+     <font family="Arial" size="26" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>17*11</row>
+     <row>2**90</row>
+     <row>*10*0</row>
+     <row>50*2*</row>
+     <row>50*50</row>
+    </text>
+   </textGrid>
+   <cells rows="5" cols="1" cellWidth="200.0" cellHeight="75.0" border="false" id="acrossClues">
+    <style>
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <cell id="0" item="0">
+     <p>9+8</p>
+    </cell>
+    <cell id="0" item="1">
+     <p> UNA DECENA Y UNA UNIDAD</p>
+    </cell>
+    <cell id="1" item="0">
+     <p>UN PAR</p>
+    </cell>
+    <cell id="1" item="1">
+     <p> 40+50</p>
+    </cell>
+    <cell id="2" item="0">
+     <p>UNA DECENA</p>
+    </cell>
+    <cell id="2" item="1">
+     <p> NADA</p>
+    </cell>
+    <cell id="3" item="0">
+     <p>DOS DE 25</p>
+    </cell>
+    <cell id="3" item="1">
+     <p> POSTERIOR AL 1</p>
+    </cell>
+    <cell id="4" item="0">
+     <p>20+30</p>
+    </cell>
+    <cell id="4" item="1">
+     <p> 30+20</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="200.0" cellHeight="75.0" border="false" id="downClues">
+    <style>
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <cell id="0" item="0">
+     <p>UNA DOCENA</p>
+    </cell>
+    <cell id="0" item="1">
+     <p> 33+22</p>
+    </cell>
+    <cell id="1" item="0">
+     <p>3+4</p>
+    </cell>
+    <cell id="1" item="1">
+     <p> CUATRO MONEDAS DE 25</p>
+    </cell>
+    <cell id="2" item="0">
+     <p>ANTERIOR AL 1</p>
+    </cell>
+    <cell id="3" item="0">
+     <p>9+10</p>
+    </cell>
+    <cell id="3" item="1">
+     <p> MONEDA CON AGUJERO</p>
+    </cell>
+    <cell id="4" item="0">
+     <p>CUENTA:...86,97,98, 99 Y ...</p>
+    </cell>
+    <cell id="4" item="1">
+     <p> 0+0 </p>
+    </cell>
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="m2s10a.ass">
+   <description>
+    <p>Sumas de 2 sumandos llevando. Hasta 99.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>HAZ LAS SUMAS EN PAPEL Y ESCRIBE LOS RESULTADOS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>CHACHI</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>15+26</p>
+    </cell>
+    <cell>
+     <p>33+47</p>
+    </cell>
+    <cell>
+     <p>28+34</p>
+    </cell>
+    <cell>
+     <p>56+15</p>
+    </cell>
+    <cell>
+     <p>77+18</p>
+    </cell>
+    <cell>
+     <p>46+35</p>
+    </cell>
+    <cell>
+     <p>25+65</p>
+    </cell>
+    <cell>
+     <p>19+19</p>
+    </cell>
+    <cell>
+     <p>26+27</p>
+    </cell>
+    <cell>
+     <p>37+45</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="24" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>41</p>
+    </cell>
+    <cell>
+     <p>80</p>
+    </cell>
+    <cell>
+     <p>62</p>
+    </cell>
+    <cell>
+     <p>71</p>
+    </cell>
+    <cell>
+     <p>95</p>
+    </cell>
+    <cell>
+     <p>81</p>
+    </cell>
+    <cell>
+     <p>90</p>
+    </cell>
+    <cell>
+     <p>38</p>
+    </cell>
+    <cell>
+     <p>53</p>
+    </cell>
+    <cell>
+     <p>82</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="m2s11a.ass">
+   <description>
+    <p>Sumas de 3 sumandos llevando. Hasta 99.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>HAZ LAS SUMAS EN PAPEL Y ESCRIBE LOS RESULTADOS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>¡SUPER!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>15+26+12</p>
+    </cell>
+    <cell>
+     <p>33+47+9</p>
+    </cell>
+    <cell>
+     <p>28+6+34</p>
+    </cell>
+    <cell>
+     <p>5+56+15</p>
+    </cell>
+    <cell>
+     <p>77+2+18</p>
+    </cell>
+    <cell>
+     <p>46+35+11</p>
+    </cell>
+    <cell>
+     <p>25+65+4</p>
+    </cell>
+    <cell>
+     <p>19+19+27</p>
+    </cell>
+    <cell>
+     <p>26+27+28</p>
+    </cell>
+    <cell>
+     <p>37+45+9</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="24" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>53</p>
+    </cell>
+    <cell>
+     <p>89</p>
+    </cell>
+    <cell>
+     <p>68</p>
+    </cell>
+    <cell>
+     <p>76</p>
+    </cell>
+    <cell>
+     <p>97</p>
+    </cell>
+    <cell>
+     <p>92</p>
+    </cell>
+    <cell>
+     <p>94</p>
+    </cell>
+    <cell>
+     <p>65</p>
+    </cell>
+    <cell>
+     <p>81</p>
+    </cell>
+    <cell>
+     <p>91</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="m2s1a.ass">
+   <description>
+    <p>sumas hasta 9: 2 sumandos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>HAZ LAS SUMAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="5" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="5" />
+    <cell id="3">
+     <p>2+2</p>
+    </cell>
+    <cell id="4">
+     <p>2+3</p>
+    </cell>
+    <cell id="7">
+     <p>2+6</p>
+    </cell>
+    <cell id="6">
+     <p>2+5</p>
+    </cell>
+    <cell id="6">
+     <p>3+4</p>
+    </cell>
+    <cell id="7">
+     <p>3+5</p>
+    </cell>
+    <cell id="5">
+     <p>3+3</p>
+    </cell>
+    <cell id="3">
+     <p>3+1</p>
+    </cell>
+    <cell id="6">
+     <p>4+3</p>
+    </cell>
+    <cell id="5">
+     <p>4+2</p>
+    </cell>
+    <cell id="7">
+     <p>4+4</p>
+    </cell>
+    <cell id="8">
+     <p>4+5</p>
+    </cell>
+    <cell id="8">
+     <p>5+4</p>
+    </cell>
+    <cell id="6">
+     <p>5+2</p>
+    </cell>
+    <cell id="5">
+     <p>5+1</p>
+    </cell>
+    <cell id="7">
+     <p>5+3</p>
+    </cell>
+    <cell id="5">
+     <p>6+0</p>
+    </cell>
+    <cell id="8">
+     <p>6+3</p>
+    </cell>
+    <cell id="6">
+     <p>6+1</p>
+    </cell>
+    <cell id="7">
+     <p>6+2</p>
+    </cell>
+    <cell id="7">
+     <p>7+1</p>
+    </cell>
+    <cell id="8">
+     <p>7+2</p>
+    </cell>
+    <cell id="8">
+     <p>8+1</p>
+    </cell>
+    <cell id="8">
+     <p>2+7</p>
+    </cell>
+    <cell id="8">
+     <p>3+6</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>3</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="m2s2a.ass">
+   <description>
+    <p>sumas de 10 hasta 18 2 sumandos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>HAZ LAS SUMAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="7" cols="6" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="7" />
+    <cell id="1">
+     <p>2+9</p>
+    </cell>
+    <cell id="0">
+     <p>2+8</p>
+    </cell>
+    <cell id="0">
+     <p>3+7</p>
+    </cell>
+    <cell id="2">
+     <p>3+9</p>
+    </cell>
+    <cell id="1">
+     <p>3+8</p>
+    </cell>
+    <cell id="0">
+     <p>4+6</p>
+    </cell>
+    <cell id="1">
+     <p>4+7</p>
+    </cell>
+    <cell id="2">
+     <p>4+8</p>
+    </cell>
+    <cell id="3">
+     <p>4+9</p>
+    </cell>
+    <cell id="0">
+     <p>5+5</p>
+    </cell>
+    <cell id="1">
+     <p>5+6</p>
+    </cell>
+    <cell id="2">
+     <p>5+7</p>
+    </cell>
+    <cell id="3">
+     <p>5+8</p>
+    </cell>
+    <cell id="4">
+     <p>5+9</p>
+    </cell>
+    <cell id="0">
+     <p>6+4</p>
+    </cell>
+    <cell id="1">
+     <p>6+5</p>
+    </cell>
+    <cell id="2">
+     <p>6+6</p>
+    </cell>
+    <cell id="3">
+     <p>6+7</p>
+    </cell>
+    <cell id="5">
+     <p>7+8</p>
+    </cell>
+    <cell id="6">
+     <p>7+9</p>
+    </cell>
+    <cell id="0">
+     <p>8+2</p>
+    </cell>
+    <cell id="5">
+     <p>8+7</p>
+    </cell>
+    <cell id="4">
+     <p>8+6</p>
+    </cell>
+    <cell id="1">
+     <p>8+3</p>
+    </cell>
+    <cell id="2">
+     <p>8+4</p>
+    </cell>
+    <cell id="3">
+     <p>8+5</p>
+    </cell>
+    <cell id="6">
+     <p>8+8</p>
+    </cell>
+    <cell id="7">
+     <p>8+9</p>
+    </cell>
+    <cell id="0">
+     <p>9+1</p>
+    </cell>
+    <cell id="2">
+     <p>9+3</p>
+    </cell>
+    <cell id="3">
+     <p>9+4</p>
+    </cell>
+    <cell id="4">
+     <p>9+5</p>
+    </cell>
+    <cell id="5">
+     <p>9+6</p>
+    </cell>
+    <cell id="6">
+     <p>9+7</p>
+    </cell>
+    <cell id="7">
+     <p>9+8</p>
+    </cell>
+    <cell id="8">
+     <p>9+9</p>
+    </cell>
+    <cell id="4">
+     <p>6+8</p>
+    </cell>
+    <cell id="5">
+     <p>6+9</p>
+    </cell>
+    <cell id="3">
+     <p>7+6</p>
+    </cell>
+    <cell id="2">
+     <p>7+5</p>
+    </cell>
+    <cell id="1">
+     <p>7+4</p>
+    </cell>
+    <cell id="0">
+     <p>7+3</p>
+    </cell>
+   </cells>
+   <cells rows="9" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="9" />
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>11</p>
+    </cell>
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>13</p>
+    </cell>
+    <cell>
+     <p>14</p>
+    </cell>
+    <cell>
+     <p>15</p>
+    </cell>
+    <cell>
+     <p>16</p>
+    </cell>
+    <cell>
+     <p>17</p>
+    </cell>
+    <cell>
+     <p>18</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="m2s3a.ass">
+   <description>
+    <p>sumas de 11 hasta 18: 3 sumandos. Agrupar 10.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>AGRUPA HASTA 10 PARA HACER LAS SUMAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>FENOMENAL</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="7" cols="6" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="7" />
+    <cell id="1">
+     <p>2+9+1</p>
+    </cell>
+    <cell id="3">
+     <p>2+8+4</p>
+    </cell>
+    <cell id="7">
+     <p>3+7+8</p>
+    </cell>
+    <cell id="2">
+     <p>3+9+1</p>
+    </cell>
+    <cell id="7">
+     <p>3+8+7</p>
+    </cell>
+    <cell id="4">
+     <p>4+6+5</p>
+    </cell>
+    <cell id="3">
+     <p>4+7+3</p>
+    </cell>
+    <cell id="7">
+     <p>4+8+6</p>
+    </cell>
+    <cell id="8">
+     <p>4+9+6</p>
+    </cell>
+    <cell id="3">
+     <p>5+5+4</p>
+    </cell>
+    <cell id="5">
+     <p>5+6+5</p>
+    </cell>
+    <cell id="4">
+     <p>5+7+3</p>
+    </cell>
+    <cell id="4">
+     <p>5+8+2</p>
+    </cell>
+    <cell id="8">
+     <p>5+9+5</p>
+    </cell>
+    <cell id="8">
+     <p>6+4+9</p>
+    </cell>
+    <cell id="4">
+     <p>6+5+4</p>
+    </cell>
+    <cell id="5">
+     <p>6+6+4</p>
+    </cell>
+    <cell id="5">
+     <p>6+7+3</p>
+    </cell>
+    <cell id="6">
+     <p>7+8+2</p>
+    </cell>
+    <cell id="6">
+     <p>7+9+1</p>
+    </cell>
+    <cell id="2">
+     <p>8+2+3</p>
+    </cell>
+    <cell id="6">
+     <p>8+7+2</p>
+    </cell>
+    <cell id="7">
+     <p>8+6+4</p>
+    </cell>
+    <cell id="7">
+     <p>8+3+7</p>
+    </cell>
+    <cell id="3">
+     <p>8+4+2</p>
+    </cell>
+    <cell id="7">
+     <p>8+5+5</p>
+    </cell>
+    <cell id="7">
+     <p>8+8+2</p>
+    </cell>
+    <cell id="7">
+     <p>8+9+1</p>
+    </cell>
+    <cell id="8">
+     <p>9+1+9</p>
+    </cell>
+    <cell id="2">
+     <p>9+3+1</p>
+    </cell>
+    <cell id="8">
+     <p>9+4+6</p>
+    </cell>
+    <cell id="4">
+     <p>9+5+1</p>
+    </cell>
+    <cell id="8">
+     <p>9+6+4</p>
+    </cell>
+    <cell id="8">
+     <p>9+7+3</p>
+    </cell>
+    <cell id="8">
+     <p>9+8+2</p>
+    </cell>
+    <cell id="8">
+     <p>9+9+1</p>
+    </cell>
+    <cell id="7">
+     <p>6+8+4</p>
+    </cell>
+    <cell id="8">
+     <p>6+9+4</p>
+    </cell>
+    <cell id="5">
+     <p>7+6+3</p>
+    </cell>
+    <cell id="6">
+     <p>7+5+5</p>
+    </cell>
+    <cell id="3">
+     <p>7+4+3</p>
+    </cell>
+    <cell id="4">
+     <p>7+3+5</p>
+    </cell>
+   </cells>
+   <cells rows="9" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="9" />
+    <cell>
+     <p>11</p>
+    </cell>
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>13</p>
+    </cell>
+    <cell>
+     <p>14</p>
+    </cell>
+    <cell>
+     <p>15</p>
+    </cell>
+    <cell>
+     <p>16</p>
+    </cell>
+    <cell>
+     <p>17</p>
+    </cell>
+    <cell>
+     <p>18</p>
+    </cell>
+    <cell>
+     <p>19</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="m2s4a.ass">
+   <description>
+    <p>DESCOMPOSICIÓN DEL 10 EN DOS SUMANDOS, SIN BARAJAR</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>ELIGE UN NÚMERO DE CADA COLUMNA PARA SUMAR 10</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>GENIAL</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="11" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="11" />
+    <cell id="10">
+     <p>0</p>
+    </cell>
+    <cell id="9">
+     <p>1</p>
+    </cell>
+    <cell id="8">
+     <p>2</p>
+    </cell>
+    <cell id="7">
+     <p>3</p>
+    </cell>
+    <cell id="6">
+     <p>4</p>
+    </cell>
+    <cell id="5">
+     <p>5</p>
+    </cell>
+    <cell id="4">
+     <p>6</p>
+    </cell>
+    <cell id="3">
+     <p>7</p>
+    </cell>
+    <cell id="2">
+     <p>8</p>
+    </cell>
+    <cell id="1">
+     <p>9</p>
+    </cell>
+    <cell id="0">
+     <p>10</p>
+    </cell>
+   </cells>
+   <cells rows="11" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="11" />
+    <cell>
+     <p>0</p>
+    </cell>
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>3</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="m2s5a.ass">
+   <description>
+    <p>DESCOMPOSICIÓN DEL 10 EN DOS SUMANDOS, BARAJANDO</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>BUSCA LOS NÚMEROS QUE SUMEN 10</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>GENIAL</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="11" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="11" />
+    <cell id="10">
+     <p>0</p>
+    </cell>
+    <cell id="9">
+     <p>1</p>
+    </cell>
+    <cell id="8">
+     <p>2</p>
+    </cell>
+    <cell id="7">
+     <p>3</p>
+    </cell>
+    <cell id="6">
+     <p>4</p>
+    </cell>
+    <cell id="5">
+     <p>5</p>
+    </cell>
+    <cell id="4">
+     <p>6</p>
+    </cell>
+    <cell id="3">
+     <p>7</p>
+    </cell>
+    <cell id="2">
+     <p>8</p>
+    </cell>
+    <cell id="1">
+     <p>9</p>
+    </cell>
+    <cell id="0">
+     <p>10</p>
+    </cell>
+   </cells>
+   <cells rows="11" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="11" />
+    <cell>
+     <p>0</p>
+    </cell>
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>3</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="m2s6a.ass">
+   <description>
+    <p>sumas de 12 a 19: un sumando de dos cifras y otro de una. Sin llevar </p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>HAZ LAS SUMAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="6" cols="6" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="6" />
+    <cell id="0">
+     <p>11+1</p>
+    </cell>
+    <cell id="1">
+     <p>11+2</p>
+    </cell>
+    <cell id="2">
+     <p>11+3</p>
+    </cell>
+    <cell id="3">
+     <p>11+4</p>
+    </cell>
+    <cell id="4">
+     <p>11+5</p>
+    </cell>
+    <cell id="5">
+     <p>11+6</p>
+    </cell>
+    <cell id="6">
+     <p>11+7</p>
+    </cell>
+    <cell id="7">
+     <p>11+8</p>
+    </cell>
+    <cell id="7">
+     <p>12+7</p>
+    </cell>
+    <cell id="6">
+     <p>12+6</p>
+    </cell>
+    <cell id="5">
+     <p>12+5</p>
+    </cell>
+    <cell id="4">
+     <p>12+4</p>
+    </cell>
+    <cell id="3">
+     <p>12+3</p>
+    </cell>
+    <cell id="2">
+     <p>12+2</p>
+    </cell>
+    <cell id="1">
+     <p>12+1</p>
+    </cell>
+    <cell id="7">
+     <p>13+6</p>
+    </cell>
+    <cell id="6">
+     <p>13+5</p>
+    </cell>
+    <cell id="5">
+     <p>13+4</p>
+    </cell>
+    <cell id="4">
+     <p>13+3</p>
+    </cell>
+    <cell id="3">
+     <p>13+2</p>
+    </cell>
+    <cell id="2">
+     <p>13+1</p>
+    </cell>
+    <cell id="7">
+     <p>14+5</p>
+    </cell>
+    <cell id="6">
+     <p>14+4</p>
+    </cell>
+    <cell id="5">
+     <p>14+3</p>
+    </cell>
+    <cell id="4">
+     <p>14+2</p>
+    </cell>
+    <cell id="3">
+     <p>14+1</p>
+    </cell>
+    <cell id="7">
+     <p>15+4</p>
+    </cell>
+    <cell id="6">
+     <p>15+3</p>
+    </cell>
+    <cell id="5">
+     <p>15+2</p>
+    </cell>
+    <cell id="4">
+     <p>15+1</p>
+    </cell>
+    <cell id="7">
+     <p>16+3</p>
+    </cell>
+    <cell id="6">
+     <p>16+2</p>
+    </cell>
+    <cell id="5">
+     <p>16+1</p>
+    </cell>
+    <cell id="7">
+     <p>17+2</p>
+    </cell>
+    <cell id="6">
+     <p>17+1</p>
+    </cell>
+    <cell id="7">
+     <p>18+1</p>
+    </cell>
+   </cells>
+   <cells rows="8" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="8" />
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>13</p>
+    </cell>
+    <cell>
+     <p>14</p>
+    </cell>
+    <cell>
+     <p>15</p>
+    </cell>
+    <cell>
+     <p>16</p>
+    </cell>
+    <cell>
+     <p>17</p>
+    </cell>
+    <cell>
+     <p>18</p>
+    </cell>
+    <cell>
+     <p>19</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="m2s7a.ass">
+   <description>
+    <p>sumas de 20 a 28: un sumando de dos cifras y otro de una. Llevando.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>HAZ LAS SUMAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>GUAY</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="9" cols="5" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="9" />
+    <cell id="0">
+     <p>11+9</p>
+    </cell>
+    <cell id="1">
+     <p>12+9</p>
+    </cell>
+    <cell id="0">
+     <p>12+8</p>
+    </cell>
+    <cell id="2">
+     <p>13+9</p>
+    </cell>
+    <cell id="1">
+     <p>13+8</p>
+    </cell>
+    <cell id="0">
+     <p>13+7</p>
+    </cell>
+    <cell id="0">
+     <p>14+6</p>
+    </cell>
+    <cell id="1">
+     <p>14+7</p>
+    </cell>
+    <cell id="2">
+     <p>14+8</p>
+    </cell>
+    <cell id="3">
+     <p>14+9</p>
+    </cell>
+    <cell id="0">
+     <p>15+5</p>
+    </cell>
+    <cell id="1">
+     <p>15+6</p>
+    </cell>
+    <cell id="2">
+     <p>15+7</p>
+    </cell>
+    <cell id="3">
+     <p>15+8</p>
+    </cell>
+    <cell id="4">
+     <p>15+9</p>
+    </cell>
+    <cell id="0">
+     <p>16+4</p>
+    </cell>
+    <cell id="1">
+     <p>16+5</p>
+    </cell>
+    <cell id="2">
+     <p>16+6</p>
+    </cell>
+    <cell id="3">
+     <p>16+7</p>
+    </cell>
+    <cell id="4">
+     <p>16+8</p>
+    </cell>
+    <cell id="5">
+     <p>16+9</p>
+    </cell>
+    <cell id="0">
+     <p>17+3</p>
+    </cell>
+    <cell id="1">
+     <p>17+4</p>
+    </cell>
+    <cell id="2">
+     <p>17+5</p>
+    </cell>
+    <cell id="3">
+     <p>17+6</p>
+    </cell>
+    <cell id="4">
+     <p>17+7</p>
+    </cell>
+    <cell id="5">
+     <p>17+8</p>
+    </cell>
+    <cell id="6">
+     <p>17+9</p>
+    </cell>
+    <cell id="0">
+     <p>18+2</p>
+    </cell>
+    <cell id="1">
+     <p>18+3</p>
+    </cell>
+    <cell id="2">
+     <p>18+4</p>
+    </cell>
+    <cell id="3">
+     <p>18+5</p>
+    </cell>
+    <cell id="4">
+     <p>18+6</p>
+    </cell>
+    <cell id="5">
+     <p>18+7</p>
+    </cell>
+    <cell id="6">
+     <p>18+8</p>
+    </cell>
+    <cell id="7">
+     <p>18+9</p>
+    </cell>
+    <cell id="0">
+     <p>19+1</p>
+    </cell>
+    <cell id="1">
+     <p>19+2</p>
+    </cell>
+    <cell id="2">
+     <p>19+3</p>
+    </cell>
+    <cell id="3">
+     <p>19+4</p>
+    </cell>
+    <cell id="4">
+     <p>19+5</p>
+    </cell>
+    <cell id="5">
+     <p>19+6</p>
+    </cell>
+    <cell id="6">
+     <p>19+7</p>
+    </cell>
+    <cell id="7">
+     <p>19+8</p>
+    </cell>
+    <cell id="8">
+     <p>19+9</p>
+    </cell>
+   </cells>
+   <cells rows="9" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="9" />
+    <cell>
+     <p>20</p>
+    </cell>
+    <cell>
+     <p>21</p>
+    </cell>
+    <cell>
+     <p>22</p>
+    </cell>
+    <cell>
+     <p>23</p>
+    </cell>
+    <cell>
+     <p>24</p>
+    </cell>
+    <cell>
+     <p>25</p>
+    </cell>
+    <cell>
+     <p>26</p>
+    </cell>
+    <cell>
+     <p>27</p>
+    </cell>
+    <cell>
+     <p>28</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="m2s8a.ass">
+   <description>
+    <p>sumar decenas completas. De 20 hasta 90.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>HAZ LAS SUMAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>MUY BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="6" cols="6" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="6" />
+    <cell id="0">
+     <p>10+10</p>
+    </cell>
+    <cell id="1">
+     <p>10+20</p>
+    </cell>
+    <cell id="2">
+     <p>10+30</p>
+    </cell>
+    <cell id="3">
+     <p>10+40</p>
+    </cell>
+    <cell id="4">
+     <p>10+50</p>
+    </cell>
+    <cell id="5">
+     <p>10+60</p>
+    </cell>
+    <cell id="6">
+     <p>10+70</p>
+    </cell>
+    <cell id="7">
+     <p>10+80</p>
+    </cell>
+    <cell id="1">
+     <p>20+10</p>
+    </cell>
+    <cell id="2">
+     <p>20+20</p>
+    </cell>
+    <cell id="3">
+     <p>20+30</p>
+    </cell>
+    <cell id="4">
+     <p>20+40</p>
+    </cell>
+    <cell id="5">
+     <p>20+50</p>
+    </cell>
+    <cell id="6">
+     <p>20+60</p>
+    </cell>
+    <cell id="7">
+     <p>20+70</p>
+    </cell>
+    <cell id="2">
+     <p>30+10</p>
+    </cell>
+    <cell id="3">
+     <p>30+20</p>
+    </cell>
+    <cell id="4">
+     <p>30+30</p>
+    </cell>
+    <cell id="5">
+     <p>30+40</p>
+    </cell>
+    <cell id="6">
+     <p>30+50</p>
+    </cell>
+    <cell id="7">
+     <p>30+60</p>
+    </cell>
+    <cell id="3">
+     <p>40+10</p>
+    </cell>
+    <cell id="4">
+     <p>40+20</p>
+    </cell>
+    <cell id="5">
+     <p>40+30</p>
+    </cell>
+    <cell id="6">
+     <p>40+40</p>
+    </cell>
+    <cell id="7">
+     <p>40+50</p>
+    </cell>
+    <cell id="4">
+     <p>50+10</p>
+    </cell>
+    <cell id="5">
+     <p>50+20</p>
+    </cell>
+    <cell id="6">
+     <p>50+30</p>
+    </cell>
+    <cell id="7">
+     <p>50+40</p>
+    </cell>
+    <cell id="5">
+     <p>60+10</p>
+    </cell>
+    <cell id="6">
+     <p>60+20</p>
+    </cell>
+    <cell id="7">
+     <p>60+30</p>
+    </cell>
+    <cell id="6">
+     <p>70+10</p>
+    </cell>
+    <cell id="7">
+     <p>70+20</p>
+    </cell>
+    <cell id="7">
+     <p>80+10</p>
+    </cell>
+   </cells>
+   <cells rows="8" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="8" />
+    <cell>
+     <p>20</p>
+    </cell>
+    <cell>
+     <p>30</p>
+    </cell>
+    <cell>
+     <p>40</p>
+    </cell>
+    <cell>
+     <p>50</p>
+    </cell>
+    <cell>
+     <p>60</p>
+    </cell>
+    <cell>
+     <p>70</p>
+    </cell>
+    <cell>
+     <p>80</p>
+    </cell>
+    <cell>
+     <p>90</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="m2s9a.ass">
+   <description>
+    <p>PROPIEDAD CONMUTATIVA.
+</p>
+    <p>SUMANDOS DE UNA CIFRA</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>¿QUÉ SUMAS DAN EL MISMO RESULTADO?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>GENIAL</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="11" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="11" />
+    <cell>
+     <p>0+1</p>
+    </cell>
+    <cell>
+     <p>2+0</p>
+    </cell>
+    <cell>
+     <p>2+1</p>
+    </cell>
+    <cell>
+     <p>3+1</p>
+    </cell>
+    <cell>
+     <p>3+2</p>
+    </cell>
+    <cell>
+     <p>4+2</p>
+    </cell>
+    <cell>
+     <p>3+4</p>
+    </cell>
+    <cell>
+     <p>5+3</p>
+    </cell>
+    <cell>
+     <p>6+3</p>
+    </cell>
+    <cell>
+     <p>8+2</p>
+    </cell>
+    <cell>
+     <p>9+2</p>
+    </cell>
+   </cells>
+   <cells rows="11" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="11" />
+    <cell>
+     <p>1+0</p>
+    </cell>
+    <cell>
+     <p>0+2</p>
+    </cell>
+    <cell>
+     <p>1+2</p>
+    </cell>
+    <cell>
+     <p>1+3</p>
+    </cell>
+    <cell>
+     <p>2+3</p>
+    </cell>
+    <cell>
+     <p>2+4</p>
+    </cell>
+    <cell>
+     <p>4+3</p>
+    </cell>
+    <cell>
+     <p>3+5</p>
+    </cell>
+    <cell>
+     <p>3+6</p>
+    </cell>
+    <cell>
+     <p>2+8</p>
+    </cell>
+    <cell>
+     <p>2+9</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="pres.ass">
+   <description>
+    <p>PRESENTACIÓN</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>SUMAS HASTA 99</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x0080FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="calzada.jpg">
+    <style>
+     <font family="Arial" size="30" bold="true" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@puzzles.HolePuzzle" name="puznum.puz">
+   <description>
+    <p>PUZZLE DE AGUJERO</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>PON LAS CIFRAS EN ORDEN</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>ERA DIFICIL ¿VERDAD?</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="true" image="numpuz.gif">
+    <style>
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="numpuz.gif" file="numpuz.gif" />
+  <media name="calzada.jpg" file="calzada.jpg" />
+ </mediaBag>
+</JClicProject>
+

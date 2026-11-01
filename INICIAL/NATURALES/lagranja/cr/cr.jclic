@@ -1,0 +1,1412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="cr" version="0.1.3">
+ <settings>
+  <title>La granja</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="1/3/00" />
+  <revision description="Conversión de Clic3 a JClic" date="7/2/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Gorka Fernández Alzola" mail="g-fernandezalzola@ejie.es" />
+  <organization name="Colegio Calasanz - Eskolapioen Ikastetxea" city="Vitoria - Gasteiz" />
+  <language>Español</language>
+  <description>
+   <p>Tres paquetes de actividades para educación infantil que toma como centro de interés la granja y los animales. En él se trabajan tres tipos de contenidos:</p>
+   <p>&lt;P&gt;</p>
+   <p>&lt;LI&gt;Identidad y autonomía</p>
+   <p>&lt;LI&gt;Comunicación y representación</p>
+   <p>&lt;LI&gt;Medio físico y social&lt;BR&gt;</p>
+   <p>&lt;P&gt;</p>
+   <p>La aplicación pretende familiarizar al alumno con los diferentes animales de la granja, sus nombres, los sonidos que producen, objetos de la vida cotidiana asociados con estos animales, etc. Entre las actividades hay ejercicios de matemáticas, puzzles, música...</p>
+  </description>
+  <descriptors area="Diversos" level="Infantil">animales domésticos, lectoescritura</descriptors>
+ </settings>
+ <sequence>
+  <item id="cr.pac" name="cr0.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="cr1.ass" />
+  <item name="cr2.ass" />
+  <item name="cr3.ass" />
+  <item name="cr4.ass" />
+  <item name="cr5.ass" />
+  <item name="cr6.ass" />
+  <item name="cr7.puz" />
+  <item name="cr8.puz" />
+  <item name="cr9.ass" />
+  <item name="cr10.ass" />
+  <item name="cr9.puz" />
+  <item name="cr10.puz" />
+  <item name="cr11.puz" />
+  <item name="cr12.puz" />
+  <item name="cr13.puz" />
+  <item name="cr14.ass" />
+  <item name="cr15.ass" />
+  <item name="cr16.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.Explore" name="cr0.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Haz clic en cada animal, fíjate y escucha</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="3" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell id="0" image="caballo.gif" />
+    <cell id="1" image="oveja.gif" />
+    <cell id="2" image="cerdo.gif" />
+    <cell id="3" image="pollo.gif" />
+    <cell id="4" image="conejo.gif" />
+    <cell id="5" image="vaca.gif" />
+   </cells>
+   <cells rows="4" columns="3" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="caballo.wav" />
+     <p>caballo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="oveja.wav" />
+     <p>oveja</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cerdo.wav" />
+     <p>cerdo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="pollo.wav" />
+     <p>pollo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="conejo.wav" />
+     <p>conejo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="vaca.wav" />
+     <p>vaca</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="cr1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Relaciona los animales iguales</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Bravo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="3" cellWidth="120.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="caballo.gif" />
+    <cell image="oveja.gif" />
+    <cell image="cerdo.gif" />
+    <cell image="pollo.gif" />
+    <cell image="conejo.gif" />
+    <cell image="vaca.gif" />
+   </cells>
+   <cells rows="2" columns="3" cellWidth="120.0" cellHeight="120.0" border="true" id="secondary">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="caballo.gif" />
+    <cell image="oveja.gif" />
+    <cell image="cerdo.gif" />
+    <cell image="pollo.gif" />
+    <cell image="conejo.gif" />
+    <cell image="vaca.gif" />
+   </cells>
+   <cells rows="2" columns="3" cellWidth="120.0" cellHeight="120.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="caballo.wav" />
+     <p>caballo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="oveja.wav" />
+     <p>oveja</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cerdo.wav" />
+     <p>cerdo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="pollo.wav" />
+     <p>pollo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="conejo.wav" />
+     <p>conejo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="vaca.wav" />
+     <p>vaca</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="cr10.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>¿Cuánto es?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>¡Bravo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <automation class="@arith.Arith">
+    <operand id="A" from="0" to="9">
+     <include zero="true" one="true" minusOne="false" />
+    </operand>
+    <operand id="B" from="0" to="9">
+     <include zero="true" one="true" minusOne="false" />
+    </operand>
+    <operations plus="false" minus="true" multiply="false" divide="false" />
+    <unknown result="true" first="false" last="false" operand="false" inverse="false" />
+    <result from="0" to="9" duplicates="false" />
+   </automation>
+   <cells rows="2" columns="5" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>0 + 0</p>
+    </cell>
+    <cell>
+     <p>2 + 3</p>
+    </cell>
+    <cell>
+     <p>5 + 2</p>
+    </cell>
+    <cell>
+     <p>6 + 0</p>
+    </cell>
+    <cell>
+     <p>4 + 5</p>
+    </cell>
+    <cell>
+     <p>0 + 1</p>
+    </cell>
+    <cell>
+     <p>7 + 1</p>
+    </cell>
+    <cell>
+     <p>1 + 1</p>
+    </cell>
+    <cell>
+     <p>2 + 2</p>
+    </cell>
+    <cell>
+     <p>1 + 2</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="5" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>0</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>3</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="5" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>0 + 0 = 0</p>
+    </cell>
+    <cell>
+     <p>2 + 3 = 5</p>
+    </cell>
+    <cell>
+     <p>5 + 2 = 7</p>
+    </cell>
+    <cell>
+     <p>7 + 0 = 6</p>
+    </cell>
+    <cell>
+     <p>4 + 5 = 9</p>
+    </cell>
+    <cell>
+     <p>8 + 1 = 1</p>
+    </cell>
+    <cell>
+     <p>7 + 1 = 8</p>
+    </cell>
+    <cell>
+     <p>1 + 1 = 2</p>
+    </cell>
+    <cell>
+     <p>2 + 4 = 4</p>
+    </cell>
+    <cell>
+     <p>6 + 2 = 3</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="cr10.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Atrévete con este puzzle</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Bravo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" columns="3" border="true" image="granja2.jpg">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="cr11.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Atrévete con este puzzle</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Bravo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="2" border="true" image="granja3.jpg">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="cr12.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Atrévete con este puzzle</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Bravo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="2" border="true" image="granja4.jpg">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="cr13.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Atrévete con este puzzle</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Bravo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="2" border="true" image="granja5.jpg">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.Explore" name="cr14.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Haz clic en el pentagrama y escucha atentamente</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" columns="1" border="false" image="penta1.gif" id="primary">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <ids>0</ids>
+   </cells>
+   <cells rows="4" columns="3" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <media type="PLAY_MIDI" level="1" file="animali.mid" />
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="cr15.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Relaciona el compas con el sonido correcto</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Bravo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <media type="PLAY_MIDI" level="1" file="compas1.mid" />
+    </cell>
+    <cell>
+     <media type="PLAY_MIDI" level="1" file="compas2.mid" />
+    </cell>
+    <cell>
+     <media type="PLAY_MIDI" level="1" file="compas3.mid" />
+    </cell>
+    <cell>
+     <media type="PLAY_MIDI" level="1" file="compas4.mid" />
+    </cell>
+   </cells>
+   <cells rows="1" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell image="compas1.gif" />
+    <cell image="compas2.gif" />
+    <cell image="compas3.gif" />
+    <cell image="compas4.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="cr16.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Relaciona el compas con el sonido correcto</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Bravo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <media type="PLAY_MIDI" level="1" file="compas5.mid" />
+    </cell>
+    <cell>
+     <media type="PLAY_MIDI" level="1" file="compas6.mid" />
+    </cell>
+    <cell>
+     <media type="PLAY_MIDI" level="1" file="compas7.mid" />
+    </cell>
+    <cell>
+     <media type="PLAY_MIDI" level="1" file="compas8.mid" />
+    </cell>
+   </cells>
+   <cells rows="1" columns="4" cellWidth="170.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell image="compas5.gif" />
+    <cell image="compas6.gif" />
+    <cell image="compas7.gif" />
+    <cell image="compas8.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="cr2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Relaciona el animal con su nombre</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Bravo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="3" cellWidth="120.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="caballo.gif" />
+    <cell image="oveja.gif" />
+    <cell image="cerdo.gif" />
+    <cell image="pollo.gif" />
+    <cell image="conejo.gif" />
+    <cell image="vaca.gif" />
+   </cells>
+   <cells rows="2" columns="3" cellWidth="120.0" cellHeight="120.0" border="true" id="secondary">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="caballo.wav" />
+     <p>caballo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="oveja.wav" />
+     <p>oveja</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cerdo.wav" />
+     <p>cerdo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="pollo.wav" />
+     <p>pollo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="conejo.wav" />
+     <p>conejo</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="vaca.wav" />
+     <p>vaca</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="cr3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Escribe su nombre</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>¡Bravo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="3" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="caballo.gif" />
+    <cell image="oveja.gif" />
+    <cell image="cerdo.gif" />
+    <cell image="pollo.gif" />
+    <cell image="conejo.gif" />
+    <cell image="vaca.gif" />
+   </cells>
+   <cells rows="2" columns="3" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>caballo</p>
+    </cell>
+    <cell>
+     <p>oveja</p>
+    </cell>
+    <cell>
+     <p>cerdo</p>
+    </cell>
+    <cell>
+     <p>pollo</p>
+    </cell>
+    <cell>
+     <p>conejo</p>
+    </cell>
+    <cell>
+     <p>vaca</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="cr4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Haz clic en las imágenes, fíjate y escucha</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="5" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell id="0" image="cero.gif" />
+    <cell id="1" image="uno.gif" />
+    <cell id="2" image="dos.gif" />
+    <cell id="3" image="tres.gif" />
+    <cell id="4" image="cuatro.gif" />
+    <cell id="5" image="cinco.gif" />
+    <cell id="6" image="seis.gif" />
+    <cell id="7" image="siete.gif" />
+    <cell id="8" image="ocho.gif" />
+    <cell id="9" image="nueve.gif" />
+   </cells>
+   <cells rows="2" columns="5" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell image="0.gif">
+     <media type="PLAY_AUDIO" level="1" file="cero.wav" />
+    </cell>
+    <cell image="1.gif">
+     <media type="PLAY_AUDIO" level="1" file="uno.wav" />
+    </cell>
+    <cell image="2.gif">
+     <media type="PLAY_AUDIO" level="1" file="dos.wav" />
+    </cell>
+    <cell image="3.gif">
+     <media type="PLAY_AUDIO" level="1" file="tres.wav" />
+    </cell>
+    <cell image="4.gif">
+     <media type="PLAY_AUDIO" level="1" file="cuatro.wav" />
+    </cell>
+    <cell image="5.gif">
+     <media type="PLAY_AUDIO" level="1" file="cinco.wav" />
+    </cell>
+    <cell image="6.gif">
+     <media type="PLAY_AUDIO" level="1" file="seis.wav" />
+    </cell>
+    <cell image="7.gif">
+     <media type="PLAY_AUDIO" level="1" file="siete.wav" />
+    </cell>
+    <cell image="8.gif">
+     <media type="PLAY_AUDIO" level="1" file="ocho.wav" />
+    </cell>
+    <cell image="9.gif">
+     <media type="PLAY_AUDIO" level="1" file="nueve.wav" />
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="cr5.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Relaciona los dibujos con los números</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>¡Bravo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="5" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell image="cero.gif" />
+    <cell image="uno.gif" />
+    <cell image="dos.gif" />
+    <cell image="tres.gif" />
+    <cell image="cuatro.gif" />
+    <cell image="cinco.gif" />
+    <cell image="seis.gif" />
+    <cell image="siete.gif" />
+    <cell image="ocho.gif" />
+    <cell image="nueve.gif" />
+   </cells>
+   <cells rows="2" columns="5" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell image="0.gif" />
+    <cell image="1.gif" />
+    <cell image="2.gif" />
+    <cell image="3.gif" />
+    <cell image="4.gif" />
+    <cell image="5.gif" />
+    <cell image="6.gif" />
+    <cell image="7.gif" />
+    <cell image="8.gif" />
+    <cell image="9.gif" />
+   </cells>
+   <cells rows="2" columns="5" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cero.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="uno.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="dos.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="tres.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cuatro.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cinco.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="seis.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="siete.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="ocho.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="nueve.wav" />
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="cr6.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>¿Cuantos círculos hay?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>¡Bravo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="5" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell image="cero.gif" />
+    <cell image="uno.gif" />
+    <cell image="dos.gif" />
+    <cell image="tres.gif" />
+    <cell image="cuatro.gif" />
+    <cell image="cinco.gif" />
+    <cell image="seis.gif" />
+    <cell image="siete.gif" />
+    <cell image="ocho.gif" />
+    <cell image="nueve.gif" />
+   </cells>
+   <cells rows="2" columns="5" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>0</p>
+    </cell>
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>3</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="cr7.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Ordena de menor a mayor</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="5" cellWidth="140.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell image="cero.gif" />
+    <cell image="uno.gif" />
+    <cell image="dos.gif" />
+    <cell image="tres.gif" />
+    <cell image="cuatro.gif" />
+    <cell image="cinco.gif" />
+    <cell image="seis.gif" />
+    <cell image="siete.gif" />
+    <cell image="ocho.gif" />
+    <cell image="nueve.gif" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="cr8.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>Ordena de mayor menor</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="5" cellWidth="140.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell image="nueve.gif" />
+    <cell image="ocho.gif" />
+    <cell image="siete.gif" />
+    <cell image="seis.gif" />
+    <cell image="cinco.gif" />
+    <cell image="cuatro.gif" />
+    <cell image="tres.gif" />
+    <cell image="dos.gif" />
+    <cell image="uno.gif" />
+    <cell image="cero.gif" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="cr9.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>¿Cuánto es?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>¡Bravo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <automation class="@arith.Arith">
+    <operand id="A" from="0" to="9">
+     <include zero="true" one="true" minusOne="false" />
+    </operand>
+    <operand id="B" from="0" to="9">
+     <include zero="true" one="true" minusOne="false" />
+    </operand>
+    <operations plus="true" minus="false" multiply="false" divide="false" />
+    <unknown result="true" first="false" last="false" operand="false" inverse="false" />
+    <result from="0" to="9" duplicates="false" />
+   </automation>
+   <cells rows="2" columns="5" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>9 - 5</p>
+    </cell>
+    <cell>
+     <p>7 - 2</p>
+    </cell>
+    <cell>
+     <p>3 - 1</p>
+    </cell>
+    <cell>
+     <p>4 - 4</p>
+    </cell>
+    <cell>
+     <p>8 - 7</p>
+    </cell>
+    <cell>
+     <p>5 - 2</p>
+    </cell>
+    <cell>
+     <p>9 - 2</p>
+    </cell>
+    <cell>
+     <p>8 - 2</p>
+    </cell>
+    <cell>
+     <p>9 - 0</p>
+    </cell>
+    <cell>
+     <p>8 - 0</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="5" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>0</p>
+    </cell>
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>3</p>
+    </cell>
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="5" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>9 - 5 = 4 </p>
+    </cell>
+    <cell>
+     <p>7 - 2 = 5</p>
+    </cell>
+    <cell>
+     <p>3 - 1 = 2</p>
+    </cell>
+    <cell>
+     <p>4 - 4 = 0</p>
+    </cell>
+    <cell>
+     <p>8 - 7 = 1</p>
+    </cell>
+    <cell>
+     <p>5 - 2 = 3</p>
+    </cell>
+    <cell>
+     <p>9 - 2 = 7</p>
+    </cell>
+    <cell>
+     <p>8 - 2 = 6</p>
+    </cell>
+    <cell>
+     <p>9 - 0 = 9</p>
+    </cell>
+    <cell>
+     <p>8 - 0 = 8</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="cr9.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Atrévete con este puzzle</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Bravo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="2" border="true" image="granja1.jpg">
+    <style>
+     <font family="MeMima" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="elecc.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+     <p>¿Qué área deseas trabajar?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="30" />
+      <color background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" columns="1" cellWidth="160.0" cellHeight="200.0" border="true">
+    <style>
+     <font family="MeMima" size="30" />
+     <color foreground="0x0000FF" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="ia.pac" />
+     <p>Identidad y Autonomía</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="cr.pac" />
+     <p>Comunicación y representación</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="mf.pac" />
+     <p>Medio Físico y Social</p>
+    </cell>
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="0.gif" file="0.gif" />
+  <media name="1.gif" file="1.gif" />
+  <media name="2.gif" file="2.gif" />
+  <media name="3.gif" file="3.gif" />
+  <media name="4.gif" file="4.gif" />
+  <media name="5.gif" file="5.gif" />
+  <media name="6.gif" file="6.gif" />
+  <media name="7.gif" file="7.gif" />
+  <media name="8.gif" file="8.gif" />
+  <media name="9.gif" file="9.gif" />
+  <media name="caballo.gif" file="caballo.gif" />
+  <media name="cerdo.gif" file="cerdo.gif" />
+  <media name="cero.gif" file="cero.gif" />
+  <media name="cinco.gif" file="cinco.gif" />
+  <media name="compas1.gif" file="compas1.gif" />
+  <media name="compas2.gif" file="compas2.gif" />
+  <media name="compas3.gif" file="compas3.gif" />
+  <media name="compas4.gif" file="compas4.gif" />
+  <media name="compas5.gif" file="compas5.gif" />
+  <media name="compas6.gif" file="compas6.gif" />
+  <media name="compas7.gif" file="compas7.gif" />
+  <media name="compas8.gif" file="compas8.gif" />
+  <media name="conejo.gif" file="conejo.gif" />
+  <media name="cuatro.gif" file="cuatro.gif" />
+  <media name="dos.gif" file="dos.gif" />
+  <media name="nueve.gif" file="nueve.gif" />
+  <media name="ocho.gif" file="ocho.gif" />
+  <media name="oveja.gif" file="oveja.gif" />
+  <media name="penta1.gif" file="penta1.gif" />
+  <media name="pollo.gif" file="pollo.gif" />
+  <media name="seis.gif" file="seis.gif" />
+  <media name="siete.gif" file="siete.gif" />
+  <media name="tres.gif" file="tres.gif" />
+  <media name="uno.gif" file="uno.gif" />
+  <media name="vaca.gif" file="vaca.gif" />
+  <media name="granja1.jpg" file="granja1.jpg" />
+  <media name="granja2.jpg" file="granja2.jpg" />
+  <media name="granja3.jpg" file="granja3.jpg" />
+  <media name="granja4.jpg" file="granja4.jpg" />
+  <media name="granja5.jpg" file="granja5.jpg" />
+  <media name="animali.mid" file="animali.mid" />
+  <media name="compas1.mid" file="compas1.mid" />
+  <media name="compas2.mid" file="compas2.mid" />
+  <media name="compas3.mid" file="compas3.mid" />
+  <media name="compas4.mid" file="compas4.mid" />
+  <media name="compas5.mid" file="compas5.mid" />
+  <media name="compas6.mid" file="compas6.mid" />
+  <media name="compas7.mid" file="compas7.mid" />
+  <media name="compas8.mid" file="compas8.mid" />
+  <media name="caballo.wav" file="caballo.wav" />
+  <media name="cerdo.wav" file="cerdo.wav" />
+  <media name="cero.wav" file="cero.wav" />
+  <media name="cinco.wav" file="cinco.wav" />
+  <media name="conejo.wav" file="conejo.wav" />
+  <media name="cuatro.wav" file="cuatro.wav" />
+  <media name="dos.wav" file="dos.wav" />
+  <media name="nueve.wav" file="nueve.wav" />
+  <media name="ocho.wav" file="ocho.wav" />
+  <media name="oveja.wav" file="oveja.wav" />
+  <media name="pollo.wav" file="pollo.wav" />
+  <media name="seis.wav" file="seis.wav" />
+  <media name="siete.wav" file="siete.wav" />
+  <media name="tres.wav" file="tres.wav" />
+  <media name="uno.wav" file="uno.wav" />
+  <media name="vaca.wav" file="vaca.wav" />
+ </mediaBag>
+</JClicProject>
+

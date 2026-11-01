@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="polied3e" version="0.1.3">
+ <settings>
+  <title>polied3e</title>
+  <revision description="created" date="6/3/02" />
+  <descriptors />
+ </settings>
+ <sequence>
+  <item id="polied3e.pac" name="paq32int.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="pris3eu.ass" />
+  <item name="pris4eu.ass" />
+  <item name="pris6eu.ass" />
+  <item name="pira3eu.ass" />
+  <item name="pira5eu.ass" />
+  <item name="8edreu.ass" />
+  <item name="grae1.ass" />
+  <item name="graell2.ass" />
+  <item name="noeu1.ass" />
+  <item name="noeu2.ass" />
+  <item name="paq32fi.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@text.WrittenAnswer" name="8edreu.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Fíjate en este octaedro y responde a las tres preguntas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Comprueba que  C - A + V = 2  y pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="150.0" cellHeight="140.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="8edrqc.gif" />
+    <cell image="8edrqa.gif" />
+    <cell image="8edrqv.gif" />
+   </cells>
+   <cells rows="3" cols="1" cellWidth="100.0" cellHeight="70.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="150.0" cellHeight="140.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="8edrqc1.gif" />
+    <cell image="8edrqa1.gif" />
+    <cell image="8edrqv1.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="grae1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Completa la ventana de la izquierda con elementos de la ventana de la derecha.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="5" border="false" image="grae1a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="5" rows="4" showEnclosure="true" scaleX="5.0" scaleY="4.0">
+     <enclosing>
+      <shape>rectangle:0,0,5,4</shape>
+     </enclosing>
+     <shape>rectangle:0,1,1,1</shape>
+     <shape>rectangle:2,1,2,1</shape>
+     <shape>rectangle:4,1,1,1</shape>
+     <shape>rectangle:1,2,1,1</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>M:3,2|L:3,3|L:3,4|L:4,4|L:4,3|L:4,2|X</shape>
+     <shape>rectangle:4,2,1,1</shape>
+     <shape>rectangle:0,3,1,1</shape>
+     <shape>rectangle:2,3,1,1</shape>
+     <shape>rectangle:4,3,1,1</shape>
+    </shaper>
+    <ids>0 3 4 2 4 5 6 1 3 7</ids>
+   </cells>
+   <cells rows="4" cols="2" border="true" image="grae1b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+   </cells>
+   <cells rows="4" cols="5" border="false" image="grae1c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="5" rows="4" showEnclosure="true" scaleX="5.0" scaleY="4.0">
+     <enclosing>
+      <shape>rectangle:0,0,5,4</shape>
+     </enclosing>
+     <shape>rectangle:0,1,1,1</shape>
+     <shape>rectangle:2,1,2,1</shape>
+     <shape>rectangle:4,1,1,1</shape>
+     <shape>rectangle:1,2,1,1</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>M:3,2|L:3,3|L:3,4|L:4,4|L:4,3|L:4,2|X</shape>
+     <shape>rectangle:4,2,1,1</shape>
+     <shape>rectangle:0,3,1,1</shape>
+     <shape>rectangle:2,3,1,1</shape>
+     <shape>rectangle:4,3,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="graell2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Completa la ventana de la izquierda con elementos de la ventana de la derecha.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="5" border="false" image="graell2a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="5" rows="4" showEnclosure="true" scaleX="5.0" scaleY="4.0">
+     <enclosing>
+      <shape>rectangle:0,0,5,4</shape>
+     </enclosing>
+     <shape>rectangle:0,1,1,1</shape>
+     <shape>rectangle:2,1,2,1</shape>
+     <shape>rectangle:4,1,1,1</shape>
+     <shape>rectangle:1,2,1,1</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>rectangle:3,2,1,1</shape>
+     <shape>M:4,2|L:4,3|L:4,4|L:5,4|L:5,3|L:5,2|X</shape>
+     <shape>rectangle:0,3,1,1</shape>
+     <shape>rectangle:2,3,1,1</shape>
+     <shape>rectangle:3,3,1,1</shape>
+    </shaper>
+    <ids>0 3 4 8 2 5 7 1 5 2</ids>
+   </cells>
+   <cells rows="5" cols="2" border="true" image="graell2b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+   </cells>
+   <cells rows="4" cols="5" border="false" image="graell2c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="5" rows="4" showEnclosure="true" scaleX="5.0" scaleY="4.0">
+     <enclosing>
+      <shape>rectangle:0,0,5,4</shape>
+     </enclosing>
+     <shape>rectangle:0,1,1,1</shape>
+     <shape>rectangle:2,1,2,1</shape>
+     <shape>rectangle:4,1,1,1</shape>
+     <shape>rectangle:1,2,1,1</shape>
+     <shape>rectangle:2,2,1,1</shape>
+     <shape>rectangle:3,2,1,1</shape>
+     <shape>M:4,2|L:4,3|L:4,4|L:5,4|L:5,3|L:5,2|X</shape>
+     <shape>rectangle:0,3,1,1</shape>
+     <shape>rectangle:2,3,1,1</shape>
+     <shape>rectangle:3,3,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="noeu1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Fíjate en este poliedro y responde a las tres preguntas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Calcula cuánto vale ahora  C - A + V  y pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="150.0" cellHeight="140.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="noeu1qc.gif" />
+    <cell image="noeu1qa.gif" />
+    <cell image="noeu1qv.gif" />
+   </cells>
+   <cells rows="3" cols="1" cellWidth="100.0" cellHeight="70.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>24</p>
+    </cell>
+    <cell>
+     <p>12</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="150.0" cellHeight="140.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="noeu1qc1.gif" />
+    <cell image="noeu1qa1.gif" />
+    <cell image="noeu1qv1.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="noeu2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Fíjate en este poliedro y responde a las tres preguntas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Calcula cuánto vale ahora  C - A + V  y pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="150.0" cellHeight="140.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="noeu2qc.gif" />
+    <cell image="noeu2qa.gif" />
+    <cell image="noeu2qv.gif" />
+   </cells>
+   <cells rows="3" cols="1" cellWidth="100.0" cellHeight="70.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>20</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="150.0" cellHeight="140.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="noeu2qc1.gif" />
+    <cell image="noeu2qa1.gif" />
+    <cell image="noeu2qv1.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="paq32fi.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic sobre la flecha de la derecha para volver al menú         &gt;&gt;&gt;</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="portada1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="60.0" border="false">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>FIN DEL PAQUETE 32</p>
+    </cell>
+    <cell>
+     <p>POLIEDROS: TEOREMA DE EULER</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="paq32int.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic sobre la flecha para iniciar el paquete de actividades         &gt;&gt;&gt;</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="portada1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="60.0" border="false">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>GEOCLIC - PAQUETE 32</p>
+    </cell>
+    <cell>
+     <p>POLIEDROS: TEOREMA DE EULER</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.WrittenAnswer" name="pira3eu.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Fíjate en este tetraedro y responde a las tres preguntas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Comprueba que  C - A + V = 2  y pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="150.0" cellHeight="140.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="pira3qc.gif" />
+    <cell image="pira3qa.gif" />
+    <cell image="pira3qv.gif" />
+   </cells>
+   <cells rows="3" cols="1" cellWidth="100.0" cellHeight="70.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="150.0" cellHeight="140.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="pira3qc1.gif" />
+    <cell image="pira3qa1.gif" />
+    <cell image="pira3qv1.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="pira5eu.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Fíjate en esta pirámide pentagonal y responde a las tres preguntas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Comprueba que  C - A + V = 2  y pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="150.0" cellHeight="140.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="pira5qc.gif" />
+    <cell image="pira5qa.gif" />
+    <cell image="pira5qv.gif" />
+   </cells>
+   <cells rows="3" cols="1" cellWidth="100.0" cellHeight="70.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="150.0" cellHeight="140.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="pira5qc1.gif" />
+    <cell image="pira5qa1.gif" />
+    <cell image="pira5qv1.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="pris3eu.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Fíjate en este prisma triangular y responde a las tres preguntas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Comprueba que  C - A + V = 2  y pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="150.0" cellHeight="140.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="pris3qc.gif" />
+    <cell image="pris3qa.gif" />
+    <cell image="pris3qv.gif" />
+   </cells>
+   <cells rows="3" cols="1" cellWidth="100.0" cellHeight="70.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="150.0" cellHeight="140.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="pris3qc1.gif" />
+    <cell image="pris3qa1.gif" />
+    <cell image="pris3qv1.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="pris4eu.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Fíjate en este prisma cuadrangular y responde a las tres preguntas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Comprueba que  C - A + V = 2  y pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="150.0" cellHeight="140.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="pris4qc.gif" />
+    <cell image="pris4qa.gif" />
+    <cell image="pris4qv.gif" />
+   </cells>
+   <cells rows="3" cols="1" cellWidth="100.0" cellHeight="70.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="150.0" cellHeight="140.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="pris4qc1.gif" />
+    <cell image="pris4qa1.gif" />
+    <cell image="pris4qv1.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="pris6eu.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Fíjate en este prisma hexagonal y responde a las tres preguntas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Comprueba que  C - A + V = 2  y pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="150.0" cellHeight="140.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="pris6qc.gif" />
+    <cell image="pris6qa.gif" />
+    <cell image="pris6qv.gif" />
+   </cells>
+   <cells rows="3" cols="1" cellWidth="100.0" cellHeight="70.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>18</p>
+    </cell>
+    <cell>
+     <p>12</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="150.0" cellHeight="140.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="pris6qc1.gif" />
+    <cell image="pris6qa1.gif" />
+    <cell image="pris6qv1.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="8edrqa.gif" file="8edrqa.gif" animated="false" />
+  <media name="8edrqa1.gif" file="8edrqa1.gif" animated="false" />
+  <media name="8edrqc.gif" file="8edrqc.gif" animated="false" />
+  <media name="8edrqc1.gif" file="8edrqc1.gif" animated="false" />
+  <media name="8edrqv.gif" file="8edrqv.gif" animated="false" />
+  <media name="8edrqv1.gif" file="8edrqv1.gif" animated="false" />
+  <media name="grae1a.gif" file="grae1a.gif" animated="false" />
+  <media name="grae1b.gif" file="grae1b.gif" animated="false" />
+  <media name="grae1c.gif" file="grae1c.gif" animated="false" />
+  <media name="graell2a.gif" file="graell2a.gif" animated="false" />
+  <media name="graell2b.gif" file="graell2b.gif" animated="false" />
+  <media name="graell2c.gif" file="graell2c.gif" animated="false" />
+  <media name="noeu1qa.gif" file="noeu1qa.gif" animated="false" />
+  <media name="noeu1qa1.gif" file="noeu1qa1.gif" animated="false" />
+  <media name="noeu1qc.gif" file="noeu1qc.gif" animated="false" />
+  <media name="noeu1qc1.gif" file="noeu1qc1.gif" animated="false" />
+  <media name="noeu1qv.gif" file="noeu1qv.gif" animated="false" />
+  <media name="noeu1qv1.gif" file="noeu1qv1.gif" animated="false" />
+  <media name="noeu2qa.gif" file="noeu2qa.gif" animated="false" />
+  <media name="noeu2qa1.gif" file="noeu2qa1.gif" animated="false" />
+  <media name="noeu2qc.gif" file="noeu2qc.gif" animated="false" />
+  <media name="noeu2qc1.gif" file="noeu2qc1.gif" animated="false" />
+  <media name="noeu2qv.gif" file="noeu2qv.gif" animated="false" />
+  <media name="noeu2qv1.gif" file="noeu2qv1.gif" animated="false" />
+  <media name="pira3qa.gif" file="pira3qa.gif" animated="false" />
+  <media name="pira3qa1.gif" file="pira3qa1.gif" animated="false" />
+  <media name="pira3qc.gif" file="pira3qc.gif" animated="false" />
+  <media name="pira3qc1.gif" file="pira3qc1.gif" animated="false" />
+  <media name="pira3qv.gif" file="pira3qv.gif" animated="false" />
+  <media name="pira3qv1.gif" file="pira3qv1.gif" animated="false" />
+  <media name="pira5qa.gif" file="pira5qa.gif" animated="false" />
+  <media name="pira5qa1.gif" file="pira5qa1.gif" animated="false" />
+  <media name="pira5qc.gif" file="pira5qc.gif" animated="false" />
+  <media name="pira5qc1.gif" file="pira5qc1.gif" animated="false" />
+  <media name="pira5qv.gif" file="pira5qv.gif" animated="false" />
+  <media name="pira5qv1.gif" file="pira5qv1.gif" animated="false" />
+  <media name="portada1.gif" file="portada1.gif" animated="false" />
+  <media name="pris3qa.gif" file="pris3qa.gif" animated="false" />
+  <media name="pris3qa1.gif" file="pris3qa1.gif" animated="false" />
+  <media name="pris3qc.gif" file="pris3qc.gif" animated="false" />
+  <media name="pris3qc1.gif" file="pris3qc1.gif" animated="false" />
+  <media name="pris3qv.gif" file="pris3qv.gif" animated="false" />
+  <media name="pris3qv1.gif" file="pris3qv1.gif" animated="false" />
+  <media name="pris4qa.gif" file="pris4qa.gif" animated="false" />
+  <media name="pris4qa1.gif" file="pris4qa1.gif" animated="false" />
+  <media name="pris4qc.gif" file="pris4qc.gif" animated="false" />
+  <media name="pris4qc1.gif" file="pris4qc1.gif" animated="false" />
+  <media name="pris4qv.gif" file="pris4qv.gif" animated="false" />
+  <media name="pris4qv1.gif" file="pris4qv1.gif" animated="false" />
+  <media name="pris6qa.gif" file="pris6qa.gif" animated="false" />
+  <media name="pris6qa1.gif" file="pris6qa1.gif" animated="false" />
+  <media name="pris6qc.gif" file="pris6qc.gif" animated="false" />
+  <media name="pris6qc1.gif" file="pris6qc1.gif" animated="false" />
+  <media name="pris6qv.gif" file="pris6qv.gif" animated="false" />
+  <media name="pris6qv1.gif" file="pris6qv1.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

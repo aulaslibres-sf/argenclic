@@ -1,0 +1,2893 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="geometri" version="0.1.3">
+ <settings>
+  <title>Actividades de geometría para primaria</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="10/21/99" />
+  <revision description="Conversión de Clic3 a JClic" date="7/1/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Francisco J. Vidal Ara" mail="fvidalar@pnte.cfnavarra.es" />
+  <author name="Ramón Amatriain Iriarte" mail="jamatria@pnte.cfnavarra.es" />
+  <organization name="C.P. Eulza" city="Avda. Eulza, 54" state="Navarra" />
+  <language>es</language>
+  <description>
+   <p>Esta aplicación está dirigida a los alumnos del 2º curso de primaria y consta de tres paquetes:</p>
+   <p>&lt;LI&gt;Líneas : recta, curva, ondulada, espiral, poligonal (abierta y cerrada).</p>
+   <p>&lt;LI&gt;Figuras: línea poligonal y polígono. Cuadrado, rectángulo, triángulo, pentágono, hexágono y círculo. Identificación de objetos con las formas estudiadas.</p>
+   <p>&lt;LI&gt;Cuerpos: prisma, cubo, cilindro, cono, esfera. Identificación de cuerpos con las formas estudiadas.</p>
+  </description>
+  <descriptors area-codes="mat" level="Primaria">geometría</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Esta aplicación está dirigida a los alumnos del 2º curso de primaria y consta de tres paquetes:</p>
+    <p>&lt;LI&gt;Líneas : recta, curva, ondulada, espiral, poligonal (abierta y cerrada).</p>
+    <p>&lt;LI&gt;Figuras: línea poligonal y polígono. Cuadrado, rectángulo, triángulo, pentágono, hexágono y círculo. Identificación de objetos con las formas estudiadas.</p>
+    <p>&lt;LI&gt;Cuerpos: prisma, cubo, cilindro, cono, esfera. Identificación de cuerpos con las formas estudiadas.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="geometri.pac" name="geometri.ass">
+   <description>
+    <p>Pantalla de Inicio que da paso al menu de Geometria de 2º de E.P.</p>
+   </description>
+   <jump action="STOP" id="back" />
+  </item>
+  <item id="menu.pac" name="menu.ass">
+   <description>
+    <p>Pantalla de información del menu de actividades y salida del programa.</p>
+   </description>
+   <jump action="STOP" id="forward" />
+   <jump action="STOP" id="back" />
+  </item>
+  <item id="lineas.pac" name="lineas1.ass">
+   <description>
+    <p>Conjunto de actividades que trabaja las lineas.</p>
+   </description>
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="lineas2.ass" />
+  <item name="lineas3.ass" />
+  <item name="lineas2.puz" />
+  <item name="lineas3.puz" />
+  <item name="lineas1.puz" />
+  <item name="lineas4.ass" />
+  <item name="lineas5.ass" />
+  <item name="lineas6.ass" />
+  <item name="lineas4.puz" />
+  <item name="lineas1.sop" />
+  <item name="lineas7.ass" />
+  <item name="lineas8.ass" />
+  <item name="lineas1.crw">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="figuras.pac" name="figuras1.ass">
+   <description>
+    <p>Paquete de actividades relacionadas con las figuras geometricas.</p>
+   </description>
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="figuras2.ass" />
+  <item name="figuras3.ass" />
+  <item name="figuras2.puz" />
+  <item name="figuras3.puz" />
+  <item name="figuras1.puz" />
+  <item name="figuras4.ass" />
+  <item name="figuras5.ass" />
+  <item name="figuras6.ass" />
+  <item name="figuras4.puz" />
+  <item name="figuras1.sop" />
+  <item name="figuras7.ass" />
+  <item name="figuras8.ass" />
+  <item name="figuras2.sop" />
+  <item name="figuras1.crw">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="cuerpos.pac" name="cuerpos1.ass">
+   <description>
+    <p>Pawuete de actividades que trabaja los cuerpos geometricos.</p>
+   </description>
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="cuerpos2.ass" />
+  <item name="cuerpos3.ass" />
+  <item name="cuerpos2.puz" />
+  <item name="cuerpos3.puz" />
+  <item name="cuerpos1.puz" />
+  <item name="cuerpos4.ass" />
+  <item name="cuerpos5.ass" />
+  <item name="cuerpos6.ass" />
+  <item name="cuerpos4.puz" />
+  <item name="cuerpo1.sop" />
+  <item name="cuerpos7.ass" />
+  <item name="cuerpos8.ass" />
+  <item name="cuerpos9.ass" />
+  <item name="cuerpo2.sop" />
+  <item name="cuerpos1.crw">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="salida.pac" name="salida.ass">
+   <description>
+    <p>Certificado de Honor al acabar las actividades. Ir a ver la Evaluación.</p>
+   </description>
+   <jump action="RETURN" id="forward" />
+   <jump action="RETURN" id="back" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@textGrid.WordSearch" name="cuerpo1.sop">
+   <description>
+    <p>Buscar nombres de objetos que tienen forma de cuerpo geométrico.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x008080" />
+     </style>
+     <p>Busca el nombre de 5 objetos que tienen forma de cuerpo geométrico.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x008080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFF80">
+     <image name="menu3.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="10" columns="6" cellWidth="40.0" cellHeight="40.0" border="true">
+    <style>
+     <color foreground="0xFF0000" background="0x80FFFF" />
+    </style>
+    <text>
+     <row>*BALON****</row>
+     <row>****DADOS*</row>
+     <row>**********</row>
+     <row>****JARRA*</row>
+     <row>CUCURUCHO*</row>
+     <row>*****CAJA*</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">BALON</clue>
+    <clue id="1">DADOS</clue>
+    <clue id="2">JARRA</clue>
+    <clue id="3">CUCURUCHO</clue>
+    <clue id="4">CAJA</clue>
+   </clues>
+  </activity>
+  <activity class="@textGrid.WordSearch" name="cuerpo2.sop">
+   <description>
+    <p>Al buscar los nombres de los cuerpos aparecen las imágenes.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0xFF8000" />
+     </style>
+     <p>Busca seis palabras que son cuerpos geometricos.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0xFF8000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x8080C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF80FF" border="true" />
+   </settings>
+   <textGrid rows="12" columns="7" cellWidth="30.0" cellHeight="30.0" border="true">
+    <style>
+     <color foreground="0xFF0000" background="0xFFFF80" />
+    </style>
+    <text>
+     <row>**CUBO******</row>
+     <row>*****PRISMA*</row>
+     <row>*CONO*******</row>
+     <row>************</row>
+     <row>****CILINDRO</row>
+     <row>*ESFERA*****</row>
+     <row>******DADOS*</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">CUBO</clue>
+    <clue id="1">PRISMA</clue>
+    <clue id="2">CONO</clue>
+    <clue id="3">CILINDRO</clue>
+    <clue id="4">ESFERA</clue>
+    <clue id="5">DADOS</clue>
+   </clues>
+   <cells rows="2" columns="3" border="false" image="sopacuer.gif" id="secondary">
+    <style>
+     <font family="Arial" size="19" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="cuerpos1.ass">
+   <description>
+    <p>Aprender el nombre de diversos cuerpos geométricos.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" />
+      <color foreground="0x0000FF" background="0xFFFF80" />
+     </style>
+     <p>Fíjate bien en el nombre de estos cuerpos.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" />
+      <color foreground="0x0000FF" background="0xFFFF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFF8000">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF80C0" border="true" />
+   </settings>
+   <cells rows="5" columns="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0x00FF00" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell id="0" image="prisma.gif" />
+    <cell id="1" image="cubo.gif" />
+    <cell id="2" image="cilindro.gif" />
+    <cell id="3" image="cono.gif" />
+    <cell id="4" image="esfera.gif" />
+   </cells>
+   <cells rows="4" columns="3" cellWidth="140.0" cellHeight="50.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="23" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>Prisma</p>
+    </cell>
+    <cell>
+     <p>Cubo</p>
+    </cell>
+    <cell>
+     <p>Cilindro</p>
+    </cell>
+    <cell>
+     <p>Cono</p>
+    </cell>
+    <cell>
+     <p>Esfera</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@textGrid.CrossWord" name="cuerpos1.crw">
+   <description>
+    <p>Repasando los Cuerpos Geométricos hacemos este crucigrama.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFF00" background="0x008080" />
+     </style>
+     <p>Recordando a los Cuerpos Geométricos.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFF00" background="0x008080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF8040">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF80" border="true" />
+   </settings>
+   <textGrid rows="7" columns="10" cellWidth="35.0" cellHeight="35.0" border="true">
+    <style>
+     <color foreground="0xFF0000" background="0x00FFFF" />
+    </style>
+    <text>
+     <row>******E</row>
+     <row>******S</row>
+     <row>***C**F</row>
+     <row>***I**E</row>
+     <row>***L**R</row>
+     <row>*PRISMA</row>
+     <row>*CONO**</row>
+     <row>***D***</row>
+     <row>***R***</row>
+     <row>CUBO***</row>
+    </text>
+   </textGrid>
+   <cells rows="1" columns="10" cellWidth="200.0" cellHeight="75.0" border="false" id="acrossClues">
+    <style>
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <cell id="0" item="0">
+     <p />
+    </cell>
+    <cell id="1" item="0">
+     <p />
+    </cell>
+    <cell id="2" item="0">
+     <p />
+    </cell>
+    <cell id="3" item="0">
+     <p />
+    </cell>
+    <cell id="4" item="0">
+     <p />
+    </cell>
+    <cell id="5" item="0">
+     <p>Se parece a una caja de zapatos.</p>
+    </cell>
+    <cell id="6" item="0">
+     <p>Cucurucho de helado.</p>
+    </cell>
+    <cell id="7" item="0">
+     <p />
+    </cell>
+    <cell id="8" item="0">
+     <p />
+    </cell>
+    <cell id="9" item="0">
+     <p>Dado</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="7" cellWidth="200.0" cellHeight="75.0" border="false" id="downClues">
+    <style>
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <cell id="0" item="0">
+     <p />
+    </cell>
+    <cell id="1" item="0">
+     <p />
+    </cell>
+    <cell id="2" item="0">
+     <p />
+    </cell>
+    <cell id="3" item="0">
+     <p>Lata de refresco.</p>
+    </cell>
+    <cell id="4" item="0">
+     <p />
+    </cell>
+    <cell id="5" item="0">
+     <p />
+    </cell>
+    <cell id="6" item="0">
+     <p>Bola del billar.</p>
+    </cell>
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="cuerpos1.puz">
+   <description>
+    <p>Formar una frase.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFF0000" background="0xFFFF00" />
+     </style>
+     <p>Organiza las palabras y formarás una frase.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFF0000" background="0xFFFF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF80C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF00" border="true" />
+   </settings>
+   <cells rows="5" columns="2" cellWidth="120.0" cellHeight="90.0" border="true">
+    <style>
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>La</p>
+    </cell>
+    <cell>
+     <p>bola</p>
+    </cell>
+    <cell>
+     <p>del</p>
+    </cell>
+    <cell>
+     <p>billar</p>
+    </cell>
+    <cell>
+     <p>tiene</p>
+    </cell>
+    <cell>
+     <p>la</p>
+    </cell>
+    <cell>
+     <p>forma</p>
+    </cell>
+    <cell>
+     <p>de</p>
+    </cell>
+    <cell>
+     <p>una</p>
+    </cell>
+    <cell>
+     <p>esfera.</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="cuerpos2.ass">
+   <description>
+    <p>Clasifica. Varios cuerpos perteneces a la misma clase. Asociacion compleja.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x004080" />
+     </style>
+     <p>Clasifica estos cuerpos.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x004080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x8080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF80C0" border="true" />
+   </settings>
+   <cells rows="1" columns="5" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell id="0" image="prisma.gif" />
+    <cell id="0" image="cubo.gif" />
+    <cell id="1" image="cilindro.gif" />
+    <cell id="2" image="cono.gif" />
+    <cell id="3" image="esfera.gif" />
+   </cells>
+   <cells rows="1" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color foreground="0xFF0000" background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>Prisma</p>
+    </cell>
+    <cell>
+     <p>Cilindro</p>
+    </cell>
+    <cell>
+     <p>Cono</p>
+    </cell>
+    <cell>
+     <p>Esfera</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="cuerpos2.puz">
+   <description>
+    <p>Formar un bonito paisaje.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFF0000" background="0x00FFFF" />
+     </style>
+     <p>Ordena este bonito paisaje.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFF0000" background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x8080C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="3" border="true" image="edific1.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="cuerpos3.ass">
+   <description>
+    <p>Identificar diferentes cuerpos y escribir sus nombres.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x0000FF" background="0xFF8080" />
+     </style>
+     <p>Escribe el nombre de estos cuerpos geométricos.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x0000FF" background="0xFF8080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x008000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF00" border="true" />
+   </settings>
+   <cells rows="5" columns="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell image="prisma.gif" />
+    <cell image="cubo.gif" />
+    <cell image="cilindro.gif" />
+    <cell image="cono.gif" />
+    <cell image="esfera.gif" />
+   </cells>
+   <cells rows="5" columns="1" cellWidth="140.0" cellHeight="40.0" border="true" id="answers">
+    <style>
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>Prisma</p>
+    </cell>
+    <cell>
+     <p>Cubo</p>
+    </cell>
+    <cell>
+     <p>Cilindro</p>
+    </cell>
+    <cell>
+     <p>Cono</p>
+    </cell>
+    <cell>
+     <p>Esfera</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="cuerpos3.puz">
+   <description>
+    <p>Completa la figura de este paisaje.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0xFF8080" />
+     </style>
+     <p>Ordena las piezas y veras ......</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0xFF8080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x408080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF80C0" border="true" />
+   </settings>
+   <cells rows="4" columns="3" border="true" image="edific3.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="cuerpos4.ass">
+   <description>
+    <p>Completar unas frase con el nombre del cuerpo adcuado.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0xFF0000" background="0xFFFF80" />
+     </style>
+     <p>Completa bien la frase.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0xFF0000" background="0xFFFF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x8080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0x00FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>El gorro del payaso tiene forma de un</p>
+    </cell>
+    <cell>
+     <p>Una bola de billar tiene la forma de una</p>
+    </cell>
+    <cell>
+     <p>Una caja de zapatos tiene forma de un</p>
+    </cell>
+    <cell>
+     <p>Una lata de coca cola tiene forma de un</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell image="cono.gif" />
+    <cell image="esfera.gif" />
+    <cell image="prisma.gif" />
+    <cell image="cilindro.gif" />
+   </cells>
+   <cells rows="1" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>Cono</p>
+    </cell>
+    <cell>
+     <p>Esfera</p>
+    </cell>
+    <cell>
+     <p>Prisma</p>
+    </cell>
+    <cell>
+     <p>Cilindro</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="cuerpos4.puz">
+   <description>
+    <p>Memoriza donde se encuentran 6 cuerpos.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x0080C0" />
+     </style>
+     <p>Busca las parejas de cuerpos.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x0080C0" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="sopacuer.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="hucha.gif" />
+    <cell image="jarra.gif" />
+    <cell image="dados1.gif" />
+    <cell image="cono1.gif" />
+    <cell image="jarron4.gif" />
+    <cell image="balon1.gif" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="cuerpos5.ass">
+   <description>
+    <p>Asociacion directa. Une cada jarrón con su forma.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x008000" background="0x80FFFF" />
+     </style>
+     <p>Observa la forma de los jarrones y une.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x008000" background="0x80FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFF00">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF8080" border="true" />
+   </settings>
+   <cells rows="2" columns="2" cellWidth="140.0" cellHeight="140.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="jarron1.gif" />
+    <cell image="jarron2.gif" />
+    <cell image="jarron3.gif" />
+    <cell image="jarron4.gif" />
+   </cells>
+   <cells rows="2" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>Esfera</p>
+    </cell>
+    <cell>
+     <p>Prisma</p>
+    </cell>
+    <cell>
+     <p>Cilindro</p>
+    </cell>
+    <cell>
+     <p>Cono</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="cuerpos6.ass">
+   <description>
+    <p>Identificar los objetos que son prismas.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFF00" background="0x0080C0" />
+     </style>
+     <p>¿Cuáles son prismas?.Haz clic en el que sea.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFF00" background="0x0080C0" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF8040">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="3" cellWidth="140.0" cellHeight="130.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell id="0" image="cubosp.gif" />
+    <cell id="0" image="hucha.gif" />
+    <cell id="0" image="jarra.gif" />
+    <cell id="1" image="jarron2.gif" />
+    <cell id="1" image="prisma1.gif" />
+    <cell id="1" image="dados1.gif" />
+    <cell id="0" image="jarron4.gif" />
+    <cell id="0" image="cono1.gif" />
+    <cell id="0" image="cono2.gif" />
+    <cell id="0" image="jarron1.gif" />
+    <cell id="0" image="pelota.gif" />
+    <cell id="0" image="balon1.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="cuerpos7.ass">
+   <description>
+    <p>Determinar la forma que tiene unos cuerpos.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFF00" background="0x8080FF" />
+     </style>
+     <p>Estos objetos tienen forma de ..... </p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFF00" background="0x8080FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF80C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0080C0" border="true" />
+   </settings>
+   <cells rows="4" columns="4" cellWidth="140.0" cellHeight="130.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell image="cubosp.gif" />
+    <cell image="hucha.gif" />
+    <cell image="jarra.gif" />
+    <cell image="bote.gif" />
+    <cell image="prisma1.gif" />
+    <cell image="dados1.gif" />
+    <cell image="jarron4.gif" />
+    <cell image="cono1.gif" />
+    <cell image="cono2.gif" />
+    <cell image="jarron1.gif" />
+    <cell image="pelota.gif" />
+    <cell image="balon1.gif" />
+    <cell image="balon.gif" />
+    <cell image="dados.gif" />
+    <cell image="caja.gif" />
+    <cell image="cono.gif" />
+   </cells>
+   <cells rows="4" columns="4" cellWidth="140.0" cellHeight="50.0" border="true" id="answers">
+    <style>
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell>
+     <p>Cilindro</p>
+    </cell>
+    <cell>
+     <p>Cilindro</p>
+    </cell>
+    <cell>
+     <p>Cilindro</p>
+    </cell>
+    <cell>
+     <p>Cilindro</p>
+    </cell>
+    <cell>
+     <p>Prisma</p>
+    </cell>
+    <cell>
+     <p>Prisma</p>
+    </cell>
+    <cell>
+     <p>Cono</p>
+    </cell>
+    <cell>
+     <p>Cono</p>
+    </cell>
+    <cell>
+     <p>Cono</p>
+    </cell>
+    <cell>
+     <p>Esfera</p>
+    </cell>
+    <cell>
+     <p>Esfera</p>
+    </cell>
+    <cell>
+     <p>Esfera</p>
+    </cell>
+    <cell>
+     <p>Esfera</p>
+    </cell>
+    <cell>
+     <p>Prisma</p>
+    </cell>
+    <cell>
+     <p>Prisma</p>
+    </cell>
+    <cell>
+     <p>Cono</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="cuerpos8.ass">
+   <description>
+    <p>Clasifica los elementos que perteneces al grupo.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x0000FF" background="0xFF8080" />
+     </style>
+     <p>Elije la respuesta adecuada.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x0000FF" background="0xFF8080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x008080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF8040" border="true" />
+   </settings>
+   <cells rows="3" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="4" />
+    <cell id="2" image="cubo.gif" />
+    <cell id="2" image="prisma1.gif" />
+    <cell id="4" image="rectang.gif" />
+    <cell id="3" image="cilindro.gif" />
+    <cell id="3" image="jarra.gif" />
+    <cell id="4" image="cuadrado.gif" />
+    <cell id="0" image="cono.gif" />
+    <cell id="0" image="jarron4.gif" />
+    <cell id="4" image="triangu.gif" />
+    <cell id="1" image="esfera.gif" />
+    <cell id="1" image="balon1.gif" />
+    <cell id="4" image="circulo.gif" />
+   </cells>
+   <cells rows="1" columns="5" cellWidth="140.0" cellHeight="80.0" border="true" id="secondary">
+    <style>
+     <color foreground="0xFF0000" background="0xFFFF00" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>Cono</p>
+    </cell>
+    <cell>
+     <p>Esfera</p>
+    </cell>
+    <cell>
+     <p>Prisma</p>
+    </cell>
+    <cell>
+     <p>Cilindro</p>
+    </cell>
+    <cell>
+     <p>Ninguna de las otras cuatro</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="cuerpos9.ass">
+   <description>
+    <p>Identificar los objetos que son cilindros</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>¿Cuáles son cilindros?.Haz clic en el que sea.</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x8080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF80" border="true" />
+   </settings>
+   <cells rows="4" columns="3" cellWidth="140.0" cellHeight="130.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell id="1" image="cubosp.gif" />
+    <cell id="1" image="hucha.gif" />
+    <cell id="1" image="jarra.gif" />
+    <cell id="0" image="jarron2.gif" />
+    <cell id="0" image="prisma1.gif" />
+    <cell id="0" image="dados1.gif" />
+    <cell id="0" image="jarron4.gif" />
+    <cell id="0" image="cono1.gif" />
+    <cell id="0" image="cono2.gif" />
+    <cell id="0" image="jarron1.gif" />
+    <cell id="0" image="pelota.gif" />
+    <cell id="0" image="balon1.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Explore" name="figuras1.ass">
+   <description>
+    <p>Aprende el nombre de diversas figuras</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0x008000" background="0x00FFFF" />
+     </style>
+     <p>Fijáte bien y aprende el nombre de estas figuras.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0x008000" background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x008080">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0x00FF00" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0" image="cuadrado.gif" />
+    <cell id="1" image="rectang.gif" />
+    <cell id="2" image="triangu.gif" />
+    <cell id="3" image="circulo.gif" />
+    <cell id="4" image="pentago.gif" />
+    <cell id="5" image="hexago.gif" />
+   </cells>
+   <cells rows="4" columns="3" cellWidth="140.0" cellHeight="40.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="23" />
+     <color foreground="0x0000FF" background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>Cuadrado</p>
+    </cell>
+    <cell>
+     <p>Rectángulo</p>
+    </cell>
+    <cell>
+     <p>Triángulo</p>
+    </cell>
+    <cell>
+     <p>Círculo</p>
+    </cell>
+    <cell>
+     <p>Pentágono</p>
+    </cell>
+    <cell>
+     <p>Exágono</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@textGrid.CrossWord" name="figuras1.crw">
+   <description>
+    <p>Resuelve el crucigrama a base de figuras planas.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFF00" background="0x408080" />
+     </style>
+     <p>Los nombres de los polígonos te ayudaran mucho.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFF00" background="0x408080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF8000">
+     <image name="sopafig.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF80" border="true" />
+   </settings>
+   <textGrid rows="13" columns="10" cellWidth="30.0" cellHeight="30.0" border="true">
+    <style>
+     <color foreground="0xFF0000" background="0x00FFFF" />
+    </style>
+    <text>
+     <row>*****R****E**</row>
+     <row>*****E****X**</row>
+     <row>*****CUADRADO</row>
+     <row>*****T****G**</row>
+     <row>**TRIANGULO**</row>
+     <row>*****N****N**</row>
+     <row>PENTAGONO*O**</row>
+     <row>*****U*******</row>
+     <row>CIRCULO******</row>
+     <row>*****O*******</row>
+    </text>
+   </textGrid>
+   <cells rows="1" columns="10" cellWidth="200.0" cellHeight="75.0" border="false" id="acrossClues">
+    <style>
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <cell id="0" item="0">
+     <p />
+    </cell>
+    <cell id="1" item="0">
+     <p />
+    </cell>
+    <cell id="2" item="0">
+     <p>Tiene la forma de un disquette.</p>
+    </cell>
+    <cell id="3" item="0">
+     <p />
+    </cell>
+    <cell id="4" item="0">
+     <p>La señal de peligro es un...</p>
+    </cell>
+    <cell id="5" item="0">
+     <p />
+    </cell>
+    <cell id="6" item="0">
+     <p>Parece una casita con las paredes caídas.               </p>
+    </cell>
+    <cell id="7" item="0">
+     <p />
+    </cell>
+    <cell id="8" item="0">
+     <p>Si rellenas la O me convierto en un..                        </p>
+    </cell>
+    <cell id="9" item="0">
+     <p />
+    </cell>
+   </cells>
+   <cells rows="1" columns="13" cellWidth="200.0" cellHeight="75.0" border="false" id="downClues">
+    <style>
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <cell id="0" item="0">
+     <p />
+    </cell>
+    <cell id="1" item="0">
+     <p />
+    </cell>
+    <cell id="2" item="0">
+     <p />
+    </cell>
+    <cell id="3" item="0">
+     <p />
+    </cell>
+    <cell id="4" item="0">
+     <p />
+    </cell>
+    <cell id="5" item="0">
+     <p>Tiene la forma de la pizarra.</p>
+    </cell>
+    <cell id="6" item="0">
+     <p />
+    </cell>
+    <cell id="7" item="0">
+     <p />
+    </cell>
+    <cell id="8" item="0">
+     <p />
+    </cell>
+    <cell id="9" item="0">
+     <p />
+    </cell>
+    <cell id="10" item="0">
+     <p>Tiene seis lados</p>
+    </cell>
+    <cell id="11" item="0">
+     <p />
+    </cell>
+    <cell id="12" item="0">
+     <p />
+    </cell>
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="figuras1.puz">
+   <description>
+    <p>Forma una frase correctamente.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <p>¿Qué es un cuadrado?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="cuadrado.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF8080" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="80.0" border="true">
+    <style>
+     <color foreground="0x0000FF" background="0xFFFF00" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>El cuadrado</p>
+    </cell>
+    <cell>
+     <p>es</p>
+    </cell>
+    <cell>
+     <p>un polígono</p>
+    </cell>
+    <cell>
+     <p>que</p>
+    </cell>
+    <cell>
+     <p>tiene</p>
+    </cell>
+    <cell>
+     <p>cuatro lados</p>
+    </cell>
+    <cell>
+     <p>y</p>
+    </cell>
+    <cell>
+     <p>4 vértices.</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="figuras1.sop">
+   <description>
+    <p>Busca el nombre de 6 figuras geometricas. Sopa de Letras.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x0000FF" background="0xFFFF00" />
+     </style>
+     <p>Busca el nombre de 6 figuras geométricas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x0000FF" background="0xFFFF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF8040">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00FF00" border="true" />
+   </settings>
+   <textGrid rows="14" columns="7" cellWidth="30.0" cellHeight="30.0" border="true">
+    <style>
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>*TRIANGULO****</row>
+     <row>***CUADRADO***</row>
+     <row>******CIRCULO*</row>
+     <row>**************</row>
+     <row>RECTANGULO****</row>
+     <row>****PENTAGONO*</row>
+     <row>*EXAGONO******</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">TRIANGULO</clue>
+    <clue id="1">CUADRADO</clue>
+    <clue id="2">CIRCULO</clue>
+    <clue id="3">RECTANGULO</clue>
+    <clue id="4">PENTAGONO</clue>
+    <clue id="5">EXAGONO</clue>
+   </clues>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="figuras2.ass">
+   <description>
+    <p>Relaciona cada figura con su nombre. </p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>¿Cómo se llama cada figura que ves aquí?.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x004080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="3" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="cuadrado.gif" />
+    <cell image="rectang.gif" />
+    <cell image="triangu.gif" />
+    <cell image="circulo.gif" />
+    <cell image="pentago.gif" />
+    <cell image="hexago.gif" />
+   </cells>
+   <cells rows="2" columns="3" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color foreground="0xFF0000" background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>Cuadrado</p>
+    </cell>
+    <cell>
+     <p>Rectángulo</p>
+    </cell>
+    <cell>
+     <p>Triángulo</p>
+    </cell>
+    <cell>
+     <p>Círculo</p>
+    </cell>
+    <cell>
+     <p>Pentágono</p>
+    </cell>
+    <cell>
+     <p>Exágono</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="figuras2.puz">
+   <description>
+    <p>Formas una simetria de colores.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFF00" background="0xFF8040" />
+     </style>
+     <p>Pon atención. La parte derecha es igual que la izquierda.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFF00" background="0xFF8040" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x8080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" columns="3" border="true" image="simetria.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="figuras2.sop">
+   <description>
+    <p>Al ir buscando las palabras de las figuras, aparecen las imágenes.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFF00" background="0x008080" />
+     </style>
+     <p>Busca las 6 palabras de figuras y verás las imágenes.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFF00" background="0x008080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x80FFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF8040" border="true" />
+   </settings>
+   <textGrid rows="11" columns="7" cellWidth="30.0" cellHeight="30.0" border="true">
+    <style>
+     <color foreground="0xFF0000" background="0xFFFF00" />
+    </style>
+    <text>
+     <row>TRIANGULO**</row>
+     <row>**CUADRADO*</row>
+     <row>*RECTANGULO</row>
+     <row>**PENTAGONO</row>
+     <row>***********</row>
+     <row>EXAGONO****</row>
+     <row>***CIRCULO*</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">TRIANGULO</clue>
+    <clue id="1">CUADRADO</clue>
+    <clue id="2">RECTANGULO</clue>
+    <clue id="3">PENTAGONO</clue>
+    <clue id="4">EXAGONO</clue>
+    <clue id="5">CIRCULO</clue>
+   </clues>
+   <cells rows="3" columns="2" cellWidth="120.0" cellHeight="90.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="trafic1.gif" />
+    <cell image="disqte2.gif" />
+    <cell image="pizarra.gif" />
+    <cell image="pentago.gif" />
+    <cell image="hexago.gif" />
+    <cell image="moneda.gif" />
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="figuras3.ass">
+   <description>
+    <p>Escribir el nombre de diversas figuras.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x008080" />
+     </style>
+     <p>Escribe el nombre de cada una de estas figuras. Recuerda los acentos.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x008080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF8000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="cuadrado.gif" />
+    <cell image="rectang.gif" />
+    <cell image="triangu.gif" />
+    <cell image="circulo.gif" />
+    <cell image="pentago.gif" />
+    <cell image="hexago.gif" />
+   </cells>
+   <cells rows="3" columns="2" cellWidth="140.0" cellHeight="40.0" border="true" id="answers">
+    <style>
+     <color foreground="0xFFFF00" background="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>Cuadrado</p>
+    </cell>
+    <cell>
+     <p>Rectángulo</p>
+    </cell>
+    <cell>
+     <p>Triángulo</p>
+    </cell>
+    <cell>
+     <p>Círculo</p>
+    </cell>
+    <cell>
+     <p>Pentágono</p>
+    </cell>
+    <cell>
+     <p>Exágono</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="figuras3.puz">
+   <description>
+    <p>Formas una simetria de colores.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0080C0" />
+     </style>
+     <p>Pon atención. Vamos a formar una simetría.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0080C0" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x008080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x8080C0" border="true" />
+   </settings>
+   <cells rows="3" columns="3" border="true" image="simetria.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="figuras4.ass">
+   <description>
+    <p>Relaciona cada imágen con su forma correspondiente.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0xFFFF80" background="0x0080FF" />
+     </style>
+     <p>¿A quién se parece cada imagen?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0xFFFF80" background="0x0080FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x008080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell id="0" image="triangu2.gif" />
+    <cell id="0" image="ceda.gif" />
+    <cell id="1" image="certif.gif" />
+    <cell id="1" image="pizarra.gif" />
+    <cell id="2" image="disqte1.gif" />
+    <cell id="2" image="disqte2.gif" />
+    <cell id="3" image="moneda.gif" />
+    <cell id="3" image="prohibid.gif" />
+   </cells>
+   <cells rows="1" columns="4" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color foreground="0x0000FF" background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>Triángulo</p>
+    </cell>
+    <cell>
+     <p>Rectángulo</p>
+    </cell>
+    <cell>
+     <p>Cuadrado</p>
+    </cell>
+    <cell>
+     <p>Círculo</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="figuras4.puz">
+   <description>
+    <p>Memoriza donde se encuentran las 6 parejas de figuras.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Recuerda.¿Donde se encuentran las parejas de figuras?</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="sopafig.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="cuadrado.gif" />
+    <cell image="rectang.gif" />
+    <cell image="triangu.gif" />
+    <cell image="circulo.gif" />
+    <cell image="pentago.gif" />
+    <cell image="hexago.gif" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="figuras5.ass">
+   <description>
+    <p>Indicar cuantos lados tiene cada figura.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0xFFFF00" background="0xFF80FF" />
+     </style>
+     <p>¿Cuántos lados tiene cada figuras?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0xFFFF00" background="0xFF80FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x8080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF80C0" border="true" />
+   </settings>
+   <cells rows="2" columns="3" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell id="1" image="cuadrado.gif" />
+    <cell id="1" image="rectang.gif" />
+    <cell id="0" image="triangu.gif" />
+    <cell id="0" image="circulo.gif" />
+    <cell id="2" image="pentago.gif" />
+    <cell id="3" image="hexago.gif" />
+   </cells>
+   <cells rows="1" columns="4" cellWidth="140.0" cellHeight="70.0" border="true" id="secondary">
+    <style>
+     <color foreground="0xFF0000" background="0x80FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>3 lados</p>
+    </cell>
+    <cell>
+     <p>4 lados</p>
+    </cell>
+    <cell>
+     <p>5 lados</p>
+    </cell>
+    <cell>
+     <p>6 lados</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="figuras6.ass">
+   <description>
+    <p>Distinguir entre Polígono y línea poligonal.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xC0C0C0" background="0x004080" />
+     </style>
+     <p>¿Polígono?¿Línea poligonal? Observálos bien.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xC0C0C0" background="0x004080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x408080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF8080" border="true" />
+   </settings>
+   <cells rows="5" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell id="0" image="triangu.gif" />
+    <cell id="0" image="cuadrado.gif" />
+    <cell id="0" image="rectang.gif" />
+    <cell id="1" image="poligon3.gif" />
+    <cell id="1" image="poligon5.gif" />
+    <cell id="1" image="escalera.gif" />
+    <cell id="1" image="triang.gif" />
+    <cell id="0" image="pentago.gif" />
+    <cell id="1" image="pentago1.gif" />
+    <cell id="1" image="poligonl.gif" />
+   </cells>
+   <cells rows="2" columns="1" cellWidth="170.0" cellHeight="80.0" border="true" id="secondary">
+    <style>
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell>
+     <p>Polígono.</p>
+    </cell>
+    <cell>
+     <p>Línea poligonal.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="figuras7.ass">
+   <description>
+    <p>Identificar las figuras que son polígonos.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x0000FF" background="0xFF8000" />
+     </style>
+     <p>¿Qué figuras son polígonos?.Haz clic en ellas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x0000FF" background="0xFF8000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x004080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell id="1" image="triangu.gif" />
+    <cell id="1" image="cuadrado.gif" />
+    <cell id="1" image="rectang.gif" />
+    <cell id="0" image="poligon3.gif" />
+    <cell id="0" image="poligon5.gif" />
+    <cell id="0" image="escalera.gif" />
+    <cell id="0" image="triang.gif" />
+    <cell id="1" image="pentago.gif" />
+    <cell id="0" image="pentago1.gif" />
+    <cell id="0" image="poligonl.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="figuras8.ass">
+   <description>
+    <p>Identificar el número de vértices en diferentes figuras.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x8000FF" />
+     </style>
+     <p>Los vértices unen los lados de un polígono.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x8000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x008080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF00" border="true" />
+   </settings>
+   <cells rows="5" columns="2" cellWidth="130.0" cellHeight="90.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell id="0" image="triangu.gif" />
+    <cell id="0" image="trafic1.gif" />
+    <cell id="1" image="pizarra.gif" />
+    <cell id="1" image="disqte1.gif" />
+    <cell id="2" image="pentago.gif" />
+    <cell id="2" image="pentago1.gif" />
+    <cell id="3" image="hexago.gif" />
+    <cell id="4" image="nube2.gif" />
+    <cell id="4" image="prohibid.gif" />
+    <cell id="4" image="reloj.gif" />
+   </cells>
+   <cells rows="5" columns="1" cellWidth="130.0" cellHeight="90.0" border="true" id="secondary">
+    <style>
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>3 Vértices</p>
+    </cell>
+    <cell>
+     <p>4 Vértices</p>
+    </cell>
+    <cell>
+     <p>5 Vértices</p>
+    </cell>
+    <cell>
+     <p>6 Vértices</p>
+    </cell>
+    <cell>
+     <p>No tiene vértices</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="geometri.ass">
+   <description>
+    <p>Informacion sobre las actividades a realizar.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Vamos a trabajar con la Geometría</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="3" border="false" image="geomtri.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@panels.Explore" name="lineas1.ass">
+   <description>
+    <p>Aprende el nombre de las líneas.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x0000FF" background="0xFF80C0" />
+     </style>
+     <p>Fíjate en el nombre de estas líneas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x0000FF" background="0xFF80C0" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x00FFFF">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0x408080" border="true" />
+   </settings>
+   <cells rows="5" columns="1" cellWidth="130.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell id="0" image="recta.gif" />
+    <cell id="1" image="curva.gif" />
+    <cell id="2" image="ondulada.gif" />
+    <cell id="3" image="espiral.gif" />
+    <cell id="4" image="poligonl.gif" />
+   </cells>
+   <cells rows="5" columns="1" cellWidth="130.0" cellHeight="50.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>Recta</p>
+    </cell>
+    <cell>
+     <p>Curva</p>
+    </cell>
+    <cell>
+     <p>Ondulada</p>
+    </cell>
+    <cell>
+     <p>Espiral</p>
+    </cell>
+    <cell>
+     <p>Poligonal</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@textGrid.CrossWord" name="lineas1.crw">
+   <description>
+    <p>Localiza el nombre de 6 lineas en el crucigrama.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0x00FF00" background="0xFF8080" />
+     </style>
+     <p>Localiza el nombre de cinco líneas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0x00FF00" background="0xFF8080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFF80">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF8040" border="true" />
+   </settings>
+   <textGrid rows="10" columns="6" cellWidth="40.0" cellHeight="40.0" border="true">
+    <style>
+     <color foreground="0xFFFF00" background="0xFF0000" />
+    </style>
+    <text>
+     <row>**RECTA***</row>
+     <row>*ONDULADA*</row>
+     <row>ESPIRAL***</row>
+     <row>****V*****</row>
+     <row>****A*****</row>
+     <row>POLIGONAL*</row>
+    </text>
+   </textGrid>
+   <cells rows="1" columns="6" cellWidth="200.0" cellHeight="75.0" border="false" id="acrossClues">
+    <style>
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <cell id="0" item="0">
+     <p>Todos los puntos siguen la misma dirección.</p>
+    </cell>
+    <cell id="1" item="0">
+     <p>Se parece a las olas del mar.</p>
+    </cell>
+    <cell id="2" item="0">
+     <p>Es cuerpo del caracol es...</p>
+    </cell>
+    <cell id="3" item="0">
+     <p />
+    </cell>
+    <cell id="4" item="0">
+     <p />
+    </cell>
+    <cell id="5" item="0">
+     <p>Las montañas tienen forma</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="10" cellWidth="200.0" cellHeight="75.0" border="false" id="downClues">
+    <style>
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <cell id="0" item="0">
+     <p />
+    </cell>
+    <cell id="1" item="0">
+     <p />
+    </cell>
+    <cell id="2" item="0">
+     <p />
+    </cell>
+    <cell id="3" item="0">
+     <p />
+    </cell>
+    <cell id="4" item="0">
+     <p>La cabeza tiene forma.</p>
+    </cell>
+    <cell id="5" item="0">
+     <p />
+    </cell>
+    <cell id="6" item="0">
+     <p />
+    </cell>
+    <cell id="7" item="0">
+     <p />
+    </cell>
+    <cell id="8" item="0">
+     <p />
+    </cell>
+    <cell id="9" item="0">
+     <p />
+    </cell>
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="lineas1.puz">
+   <description>
+    <p>Forma una frase con 8 palabras.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x0000FF" background="0x00FFFF" />
+     </style>
+     <p>Con estas 8 palabras forma una frase.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x0000FF" background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x00FFFF">
+     <image name="ondulada.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="true">
+    <style>
+     <color foreground="0xFF0000" background="0xFFFF00" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Las</p>
+    </cell>
+    <cell>
+     <p>olas</p>
+    </cell>
+    <cell>
+     <p>del</p>
+    </cell>
+    <cell>
+     <p>mar</p>
+    </cell>
+    <cell>
+     <p>forman</p>
+    </cell>
+    <cell>
+     <p>una</p>
+    </cell>
+    <cell>
+     <p>línea</p>
+    </cell>
+    <cell>
+     <p>ondulada.</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="lineas1.sop">
+   <description>
+    <p>Busca el nombre de 5 lineas.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0xFF0000" background="0xFFFF80" />
+     </style>
+     <p>Busca el nombre de 5 líneas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0xFF0000" background="0xFFFF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF80FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="12" columns="6" cellWidth="40.0" cellHeight="40.0" border="true">
+    <style>
+     <color foreground="0xFF0000" background="0x00FFFF" />
+    </style>
+    <text>
+     <row>*RECTA******</row>
+     <row>***CURVA****</row>
+     <row>**ONDULADA**</row>
+     <row>************</row>
+     <row>*****ESPIRAL</row>
+     <row>POLIGONAL***</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">RECTA</clue>
+    <clue id="1">CURVA</clue>
+    <clue id="2">ONDULADA</clue>
+    <clue id="3">ESPIRAL</clue>
+    <clue id="4">POLIGONAL</clue>
+   </clues>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="lineas2.ass">
+   <description>
+    <p>Identificar cada línea con su nombre.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Une cada línea con su nombre.</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x0080C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" columns="5" cellWidth="134.0" cellHeight="90.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell image="recta.gif" />
+    <cell image="curva.gif" />
+    <cell image="ondulada.gif" />
+    <cell image="espiral.gif" />
+    <cell image="poligonl.gif" />
+   </cells>
+   <cells rows="1" columns="5" cellWidth="134.0" cellHeight="90.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="20" bold="true" italic="true" />
+     <color background="0x80FF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>Recta</p>
+    </cell>
+    <cell>
+     <p>Curva</p>
+    </cell>
+    <cell>
+     <p>Ondulada</p>
+    </cell>
+    <cell>
+     <p>Espiral</p>
+    </cell>
+    <cell>
+     <p>Poligonal</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="5" cellWidth="134.0" cellHeight="90.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>Recta</p>
+    </cell>
+    <cell>
+     <p>Curva</p>
+    </cell>
+    <cell>
+     <p>Ondulada</p>
+    </cell>
+    <cell>
+     <p>Espiral</p>
+    </cell>
+    <cell>
+     <p>Poligonal</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="lineas2.puz">
+   <description>
+    <p>Puzle de una casa con líneas.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0x0000FF" background="0xFFFF00" />
+     </style>
+     <p>Con líneas también se hacen dibujos.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0x0000FF" background="0xFFFF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x00FFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" columns="3" border="true" image="casa.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="lineas3.ass">
+   <description>
+    <p>Escribir el nombre de los diferentes tipos de líneas.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFF0000" background="0xFFFF80" />
+     </style>
+     <p>Escribe el nombre de cada una de estas líneas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFF0000" background="0xFFFF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF80C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" columns="1" cellWidth="130.0" cellHeight="90.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0x008040" background="0x00FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell image="recta.gif" />
+    <cell image="curva.gif" />
+    <cell image="ondulada.gif" />
+    <cell image="espiral.gif" />
+    <cell image="poligonl.gif" />
+   </cells>
+   <cells rows="5" columns="1" cellWidth="130.0" cellHeight="50.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="20" />
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>Recta</p>
+    </cell>
+    <cell>
+     <p>Curva</p>
+    </cell>
+    <cell>
+     <p>Ondulada</p>
+    </cell>
+    <cell>
+     <p>Espiral</p>
+    </cell>
+    <cell>
+     <p>Poligonal</p>
+    </cell>
+   </cells>
+   <cells rows="5" columns="1" cellWidth="130.0" cellHeight="90.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>Recta</p>
+    </cell>
+    <cell>
+     <p>Curva</p>
+    </cell>
+    <cell>
+     <p>Ondulada</p>
+    </cell>
+    <cell>
+     <p>Espiral</p>
+    </cell>
+    <cell>
+     <p>Poligonal</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="lineas3.puz">
+   <description>
+    <p>Puzle de una casa con líneas.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0x0000FF" background="0xFFFF00" />
+     </style>
+     <p>¿Sabrías encontrar el dibujo?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0x0000FF" background="0xFFFF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x00FFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" columns="3" border="true" image="casa.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="lineas4.ass">
+   <description>
+    <p>Clasifica las lineas en abiertas y cerradas.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0xFFFF00" background="0x8080FF" />
+     </style>
+     <p>Clasifica esta líneas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0xFFFF00" background="0x8080FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF80FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x408080" border="true" />
+   </settings>
+   <cells rows="2" columns="4" cellWidth="130.0" cellHeight="90.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell id="0" image="recta.gif" />
+    <cell id="0" image="curva.gif" />
+    <cell id="0" image="ondulada.gif" />
+    <cell id="1" image="triang.gif" />
+    <cell id="0" image="espiral.gif" />
+    <cell id="0" image="poligonl.gif" />
+    <cell id="1" image="circunf.gif" />
+    <cell id="1" image="pentago.gif" />
+   </cells>
+   <cells rows="1" columns="2" cellWidth="130.0" cellHeight="90.0" border="true" id="secondary">
+    <style>
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>Línea abierta.</p>
+    </cell>
+    <cell>
+     <p>Línea cerrada.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="lineas4.puz">
+   <description>
+    <p>Memorizar 4 tipos de líneas.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0xFF0000" background="0x00FFFF" />
+     </style>
+     <p>Busca 4 parejas de líneas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0xFF0000" background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x008080">
+     <image name="menu1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF80C0" border="true" />
+   </settings>
+   <cells rows="4" columns="1" cellWidth="130.0" cellHeight="90.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="recta.gif" />
+    <cell image="curva.gif" />
+    <cell image="ondulada.gif" />
+    <cell image="espiral.gif" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="lineas5.ass">
+   <description>
+    <p>Identificar lineas restas, curvas y poligonales.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0xFFFF00" background="0xFF80C0" />
+     </style>
+     <p>Clasifica estas líneas.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0xFFFF00" background="0xFF80C0" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF8000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF8080" border="true" />
+   </settings>
+   <cells rows="2" columns="3" cellWidth="130.0" cellHeight="90.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell id="0" image="recta2.gif" />
+    <cell id="0" image="recta3.gif" />
+    <cell id="1" image="circunf.gif" />
+    <cell id="1" image="ondulada.gif" />
+    <cell id="2" image="barco.gif" />
+    <cell id="2" image="escalera.gif" />
+   </cells>
+   <cells rows="1" columns="3" cellWidth="140.0" cellHeight="90.0" border="true" id="secondary">
+    <style>
+     <color foreground="0xFF0000" background="0x00FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>Línea recta</p>
+    </cell>
+    <cell>
+     <p>Línea curva</p>
+    </cell>
+    <cell>
+     <p>Línea poligonal</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="lineas6.ass">
+   <description>
+    <p>Distinguir las lineas poligonales: abiertas y cerradas</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0x0000FF" background="0xFFFF00" />
+     </style>
+     <p>Elige la respuesta adecuada.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0x0000FF" background="0xFFFF00" />
+     </style>
+     <p>Muy Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x8080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x8080C0" border="true" />
+   </settings>
+   <cells rows="2" columns="4" cellWidth="120.0" cellHeight="85.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell id="0" image="escalera.gif" />
+    <cell id="0" image="poligon2.gif" />
+    <cell id="0" image="poligon3.gif" />
+    <cell id="0" image="poligon4.gif" />
+    <cell id="1" image="pentago1.gif" />
+    <cell id="1" image="poligon5.gif" />
+    <cell id="1" image="poligon6.gif" />
+    <cell id="1" image="triang.gif" />
+   </cells>
+   <cells rows="1" columns="2" cellWidth="140.0" cellHeight="85.0" border="true" id="secondary">
+    <style>
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>Línea Poligonal abierta</p>
+    </cell>
+    <cell>
+     <p>Línea Poligonal cerrada</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="lineas7.ass">
+   <description>
+    <p>Discriminar las líneas que son curvas cerradas</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0x0000FF" background="0xFFFF00" />
+     </style>
+     <p>¿Qué líneas son curvas cerradas?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" />
+      <color foreground="0x0000FF" background="0xFFFF00" />
+     </style>
+     <p>Muy Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x008080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="4" cellWidth="130.0" cellHeight="90.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell id="1" image="circunf.gif" />
+    <cell id="1" image="nube1.gif" />
+    <cell id="1" image="nube2.gif" />
+    <cell id="1" image="huevo.gif" />
+    <cell id="0" image="espiral2.gif" />
+    <cell id="0" image="ondulada.gif" />
+    <cell id="0" image="espiral.gif" />
+    <cell id="0" image="curva.gif" />
+   </cells>
+   <cells rows="2" columns="4" cellWidth="130.0" cellHeight="90.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <p>Circunferencia</p>
+    </cell>
+    <cell>
+     <p>Nube negra</p>
+    </cell>
+    <cell>
+     <p>Nube azul</p>
+    </cell>
+    <cell>
+     <p>Huevo</p>
+    </cell>
+    <cell>
+     <p>Caracol</p>
+    </cell>
+    <cell>
+     <p>Olas</p>
+    </cell>
+    <cell>
+     <p>Laberinto</p>
+    </cell>
+    <cell>
+     <p>Arco</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="lineas8.ass">
+   <description>
+    <p>Curvas abiertas y cerradas. Discriminar.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <p>Elige correctamente la respuesta.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x8080C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00FFFF" border="true" />
+   </settings>
+   <cells rows="2" columns="4" cellWidth="130.0" cellHeight="90.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell id="1" image="circunf.gif" />
+    <cell id="1" image="nube1.gif" />
+    <cell id="1" image="nube2.gif" />
+    <cell id="1" image="huevo.gif" />
+    <cell id="0" image="espiral2.gif" />
+    <cell id="0" image="ondulada.gif" />
+    <cell id="0" image="espiral.gif" />
+    <cell id="0" image="curva.gif" />
+   </cells>
+   <cells rows="1" columns="2" cellWidth="130.0" cellHeight="90.0" border="true" id="secondary">
+    <style>
+     <color foreground="0xFF0000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>Curva abierta</p>
+    </cell>
+    <cell>
+     <p>Curva cerrada</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="menu.ass">
+   <description>
+    <p>Menus que podemos elegir al inicio del programa de Geometria.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>¿Qué es lo que quieres hacer?</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFF0000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFF00" border="true" />
+   </settings>
+   <cells rows="2" columns="2" cellWidth="150.0" cellHeight="200.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="menu1.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="lineas.pac" />
+    </cell>
+    <cell image="menu2.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="figuras.pac" />
+    </cell>
+    <cell image="menu3.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="cuerpos.pac" />
+    </cell>
+    <cell image="menusal.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="salida.pac" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="salida.ass">
+   <description>
+    <p>Imágen que da la despedida a la Geometria de 2º.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x0000FF" background="0x80FF00" />
+     </style>
+     <p>Ahora podrás comprobar los resultados en la ventana de informes.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x0000FF" background="0x80FF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="3" border="false" image="certif1.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="balon.gif" file="balon.gif" animated="false" />
+  <media name="balon1.gif" file="balon1.gif" animated="false" />
+  <media name="barco.gif" file="barco.gif" animated="false" />
+  <media name="bote.gif" file="bote.gif" animated="false" />
+  <media name="caja.gif" file="caja.gif" animated="false" />
+  <media name="casa.gif" file="casa.gif" animated="false" />
+  <media name="ceda.gif" file="ceda.gif" animated="false" />
+  <media name="certif.gif" file="certif.gif" animated="false" />
+  <media name="certif1.gif" file="certif1.gif" animated="false" />
+  <media name="cilindro.gif" file="cilindro.gif" animated="false" />
+  <media name="circulo.gif" file="circulo.gif" animated="false" />
+  <media name="circunf.gif" file="circunf.gif" animated="false" />
+  <media name="cono.gif" file="cono.gif" animated="false" />
+  <media name="cono1.gif" file="cono1.gif" animated="false" />
+  <media name="cono2.gif" file="cono2.gif" animated="false" />
+  <media name="cuadrado.gif" file="cuadrado.gif" animated="false" />
+  <media name="cubo.gif" file="cubo.gif" animated="false" />
+  <media name="cubosp.gif" file="cubosp.gif" animated="false" />
+  <media name="curva.gif" file="curva.gif" animated="false" />
+  <media name="dados.gif" file="dados.gif" animated="false" />
+  <media name="dados1.gif" file="dados1.gif" animated="false" />
+  <media name="disqte1.gif" file="disqte1.gif" animated="false" />
+  <media name="disqte2.gif" file="disqte2.gif" animated="false" />
+  <media name="edific1.gif" file="edific1.gif" animated="false" />
+  <media name="edific3.gif" file="edific3.gif" animated="false" />
+  <media name="escalera.gif" file="escalera.gif" animated="false" />
+  <media name="esfera.gif" file="esfera.gif" animated="false" />
+  <media name="espiral.gif" file="espiral.gif" animated="false" />
+  <media name="espiral2.gif" file="espiral2.gif" animated="false" />
+  <media name="geomtri.gif" file="geomtri.gif" animated="false" />
+  <media name="hexago.gif" file="hexago.gif" animated="false" />
+  <media name="hucha.gif" file="hucha.gif" animated="false" />
+  <media name="huevo.gif" file="huevo.gif" animated="false" />
+  <media name="jarra.gif" file="jarra.gif" animated="false" />
+  <media name="jarron1.gif" file="jarron1.gif" animated="false" />
+  <media name="jarron2.gif" file="jarron2.gif" animated="false" />
+  <media name="jarron3.gif" file="jarron3.gif" animated="false" />
+  <media name="jarron4.gif" file="jarron4.gif" animated="false" />
+  <media name="menu1.gif" file="menu1.gif" animated="false" />
+  <media name="menu2.gif" file="menu2.gif" animated="false" />
+  <media name="menu3.gif" file="menu3.gif" animated="false" />
+  <media name="menusal.gif" file="menusal.gif" animated="false" />
+  <media name="moneda.gif" file="moneda.gif" animated="false" />
+  <media name="nube1.gif" file="nube1.gif" animated="false" />
+  <media name="nube2.gif" file="nube2.gif" animated="false" />
+  <media name="ondulada.gif" file="ondulada.gif" animated="false" />
+  <media name="pelota.gif" file="pelota.gif" animated="false" />
+  <media name="pentago.gif" file="pentago.gif" animated="false" />
+  <media name="pentago1.gif" file="pentago1.gif" animated="false" />
+  <media name="pizarra.gif" file="pizarra.gif" animated="false" />
+  <media name="poligon2.gif" file="poligon2.gif" animated="false" />
+  <media name="poligon3.gif" file="poligon3.gif" animated="false" />
+  <media name="poligon4.gif" file="poligon4.gif" animated="false" />
+  <media name="poligon5.gif" file="poligon5.gif" animated="false" />
+  <media name="poligon6.gif" file="poligon6.gif" animated="false" />
+  <media name="poligonl.gif" file="poligonl.gif" animated="false" />
+  <media name="prisma.gif" file="prisma.gif" animated="false" />
+  <media name="prisma1.gif" file="prisma1.gif" animated="false" />
+  <media name="prohibid.gif" file="prohibid.gif" animated="false" />
+  <media name="recta.gif" file="recta.gif" animated="false" />
+  <media name="recta2.gif" file="recta2.gif" animated="false" />
+  <media name="recta3.gif" file="recta3.gif" animated="false" />
+  <media name="rectang.gif" file="rectang.gif" animated="false" />
+  <media name="reloj.gif" file="reloj.gif" animated="false" />
+  <media name="simetria.gif" file="simetria.gif" animated="false" />
+  <media name="sopacuer.gif" file="sopacuer.gif" animated="false" />
+  <media name="sopafig.gif" file="sopafig.gif" animated="false" />
+  <media name="trafic1.gif" file="trafic1.gif" animated="false" />
+  <media name="triang.gif" file="triang.gif" animated="false" />
+  <media name="triangu.gif" file="triangu.gif" animated="false" />
+  <media name="triangu2.gif" file="triangu2.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

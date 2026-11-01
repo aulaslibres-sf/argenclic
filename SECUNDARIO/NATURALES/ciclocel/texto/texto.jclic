@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="texto" version="0.1.3">
+ <settings>
+  <title>Ciclo celular en células somáticas</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="9/9/02" />
+  <revision description="Conversión de Clic3 a JClic" date="11/4/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Yolanda Giraldo Claros" mail="gcyoly@yahoo.com" />
+  <organization name="Universidad Antonio Nariño" city="Popayán" country="Colombia" />
+  <language>es</language>
+  <description>
+   <p>Paquete de actividades para el complicado aprendizaje del ciclo celular. Dentro del paquete encontramos diferentes tipos de actividades: de texto, asociaciones, crucigramas, sopas de letras y rompecabezas. De este modo se permite que el alumno se familiarice con el complicado vocabulario de este tema de manera más entretenida y motivadora.</p>
+  </description>
+  <descriptors area-codes="exp" level="Secundaria">biología</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Paquete de actividades para el complicado aprendizaje del ciclo celular. Dentro del paquete encontramos diferentes tipos de actividades: de texto, asociaciones, crucigramas, sopas de letras y rompecabezas. De este modo se permite que el alumno se familiarice con el complicado vocabulario de este tema de manera más entretenida y motivadora.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="texto.pac" name="selmulti.txa">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="teoria.txa" />
+  <item name="nombre.txa">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@text.FillInBlanks" name="nombre.txa">
+   <description>
+    <p>Actividad de llenar huecos con casillas</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="32" />
+      <color foreground="0xFF8040" background="0x000000" />
+     </style>
+     <p>Escribe el nombre de cada fase de la mitosis en la cual se encuentra la célula</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="32" />
+      <color foreground="0xFF8040" background="0x000000" />
+     </style>
+     <p>Las identificaste muy bien!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <image name="fondore.gif" tiled="true" />
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <size width="700" height="400" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" foreground="0x000000" background="0xFFFFFF" italic="false" size="30" bold="false" family="Arial" tabWidth="36" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <cell width="140" height="140" border="false" image="metafase.gif">
+       <style shadow="true">
+        <font family="Courier New" size="20" bold="true" />
+        <color foreground="0x0000A0" background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+       </style>
+      </cell>
+      <text />
+      <cell width="140" height="140" border="false" image="profase.gif">
+       <style shadow="true">
+        <font family="Courier New" size="20" bold="true" />
+        <color foreground="0x0000A0" background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+       </style>
+      </cell>
+      <text />
+      <cell width="140" height="140" border="false" image="telofs1.gif">
+       <style shadow="true">
+        <font family="Courier New" size="20" bold="true" />
+        <color foreground="0x0000A0" background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+       </style>
+      </cell>
+     </p>
+     <p>
+      <text />
+      <target>
+       <answer>Metafase</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>Metafase</text>
+      </target>
+      <text />
+      <target>
+       <answer>Profase</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>Profase</text>
+      </target>
+      <text />
+      <target>
+       <answer>Telofase</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text> Telofase</text>
+      </target>
+     </p>
+     <p>
+      <cell width="140" height="140" border="false" image="interfas.gif">
+       <style shadow="true">
+        <font family="Courier New" size="20" bold="true" />
+        <color foreground="0x0000A0" background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+       </style>
+      </cell>
+      <text />
+      <cell width="140" height="140" border="false" image="anafase.gif">
+       <style shadow="true">
+        <font family="Courier New" size="20" bold="true" />
+        <color foreground="0x0000A0" background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+       </style>
+      </cell>
+      <text />
+      <cell width="140" height="140" border="false" image="telofs2.gif">
+       <style shadow="true">
+        <font family="Courier New" size="20" bold="true" />
+        <color foreground="0x0000A0" background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+       </style>
+      </cell>
+     </p>
+     <p>
+      <text />
+      <target>
+       <answer>Interfase</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <text>Interfase</text>
+      </target>
+      <text />
+      <target>
+       <answer>Anafase</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>Anafase</text>
+      </target>
+      <text />
+      <target>
+       <answer>Citocinesis</answer>
+       <response fill="_" length="11" maxLength="11" />
+       <text>Citocinesis</text>
+      </target>
+     </p>
+     <p />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="selmulti.txa" autoJump="true" forceOkToAdvance="true">
+   <description>
+    <p>Actividad con progresión limitada a aciertos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="32" />
+      <color foreground="0x800080" />
+     </style>
+     <p>Selecciona la respuesta correcta</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="32" />
+      <color foreground="0x800080" />
+     </style>
+     <p>Lo has logrado!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="prairie.gif" tiled="true" />
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true">
+     <size width="700" height="500" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" foreground="0x000000" background="0xE1E1E1" italic="false" size="14" bold="false" family="Arial" tabWidth="12" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <cell width="2" height="2" border="false">
+       <style>
+        <font family="Comic Sans MS" size="36" />
+        <color foreground="0x800080" background="0xE1E1E1" inactive="0xFF80C0" alternative="0xFF80C0" />
+       </style>
+      </cell>
+      <cell width="600" height="55" border="false">
+       <style>
+        <font family="Comic Sans MS" size="36" />
+        <color foreground="0x800080" background="0xE1E1E1" inactive="0xFF80C0" alternative="0xFF80C0" />
+       </style>
+       <p>TEMA MITOSIS</p>
+       <p>SELECCIONA LA RESPUESTA CORRECTA</p>
+      </cell>
+     </p>
+     <p />
+     <p>
+      <text>La </text>
+      <target>
+       <answer>Metafase II</answer>
+       <optionList>
+        <option>Anafase</option>
+        <option>Metafase II</option>
+        <option>Profase</option>
+        <option>Metafase</option>
+        <option>Telofase</option>
+       </optionList>
+       <text>Metafase II</text>
+      </target>
+      <text> no pertenece a la mitosis.</text>
+     </p>
+     <p />
+     <p>
+      <text>Durante la Profase la membrana nuclear </text>
+      <target>
+       <answer>empieza a disolverse</answer>
+       <optionList>
+        <option>aparece</option>
+        <option>desaparece completamente</option>
+        <option>empieza a disolverse</option>
+        <option>empieza a aparecer</option>
+        <option>es completa</option>
+       </optionList>
+       <text>empieza a disolverse</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <text>En la </text>
+      <target>
+       <answer>anafase</answer>
+       <optionList>
+        <option>telofase</option>
+        <option>metafase</option>
+        <option>interfase</option>
+        <option>profase</option>
+        <option>citocinesis</option>
+        <option>anafase</option>
+       </optionList>
+       <text>anafase</text>
+      </target>
+      <text> los cromosomas se separan y se mueven a los lados opuestos de la célula.</text>
+     </p>
+     <p />
+     <p>
+      <text>El </text>
+      <target>
+       <answer>centrómero</answer>
+       <optionList>
+        <option>centriolo</option>
+        <option>cromosoma</option>
+        <option>kinetocoro</option>
+        <option>centrómero</option>
+        <option>nucleolo</option>
+       </optionList>
+       <text>centrómero</text>
+      </target>
+      <text> une dos cromátidas para formar un cromosoma.</text>
+     </p>
+     <p />
+     <p>
+      <text>En la </text>
+      <target>
+       <answer>Citocinesis</answer>
+       <optionList>
+        <option>Anafase</option>
+        <option>Citocinesis</option>
+        <option>Profase</option>
+        <option>Metafase</option>
+        <option>Interfase</option>
+       </optionList>
+       <text>Citocinesis</text>
+      </target>
+      <text> se da la división del citoplasma originándose dos   células hijas.</text>
+     </p>
+     <p />
+     <p>
+      <text>En metafase se pueden observar las siguientes partes, excepto: </text>
+      <target>
+       <answer>membrana nuclear</answer>
+       <optionList>
+        <option>cromosomas </option>
+        <option>membrana nuclear</option>
+        <option>fibras del huso</option>
+        <option>centrómero</option>
+        <option>membrana plasmática</option>
+       </optionList>
+       <text>membrana nuclear</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <text>Si una célula entra en mitosis con 20 cromosomas, termina con </text>
+      <target>
+       <answer>20</answer>
+       <optionList>
+        <option>10</option>
+        <option>40</option>
+        <option>20</option>
+        <option>30</option>
+       </optionList>
+       <text>20</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <text>Los humanos tienen </text>
+      <target>
+       <answer>23</answer>
+       <optionList>
+        <option>46</option>
+        <option>20</option>
+        <option>23</option>
+        <option>42</option>
+        <option>56</option>
+       </optionList>
+       <text>23</text>
+      </target>
+      <text> pares de cromosomas.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="teoria.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="32" />
+      <color background="0xC5AA8F" />
+     </style>
+     <p>Llena los espacios vacíos según correspoda.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="32" />
+      <color background="0xC5AA8F" />
+     </style>
+     <p>Muy bien, no tienes problemas con el reconocimiento de las fases del ciclo celular.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="snakeski.gif" tiled="true" />
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0x804040" transparent="true" border="false">
+     <size width="600" height="431" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" foreground="0x000000" background="0xC5AA8F" italic="false" size="29" bold="false" family="Arial" tabWidth="16" />
+    <style name="target" base="default" foreground="0x000000" target="true" background="0xEAFBE1" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0x800040" />
+    <section>
+     <p>
+      <text>La célula es la unidad </text>
+      <target>
+       <answer>funcional</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <text>funcional</text>
+      </target>
+      <text>, estructural y </text>
+      <target>
+       <answer>reproductiva</answer>
+       <response fill="_" length="12" maxLength="12" />
+       <text>reproductiva</text>
+      </target>
+      <text> de todo ser vivo.</text>
+     </p>
+     <p />
+     <p>
+      <text>Los seres vivos tienen dos tipos de </text>
+      <target>
+       <answer>células</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>células</text>
+      </target>
+      <text>: somáticas y </text>
+      <target>
+       <answer>germinales</answer>
+       <response fill="_" length="10" maxLength="10" />
+       <text>germinales</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <text>Las etapas del ciclo celular son: </text>
+      <target>
+       <answer>Interfase</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <text>Interfase</text>
+      </target>
+      <text> y </text>
+      <target>
+       <answer>Mitosis</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>Mitosis</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p />
+     <p>
+      <text>Las fases de la </text>
+      <target>
+       <answer>mitosis</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>mitosis</text>
+      </target>
+      <text> son: Profase, </text>
+      <target>
+       <answer>Metafase</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>Metafase</text>
+      </target>
+      <text>, </text>
+      <target>
+       <answer>Anafase</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>Anafase</text>
+      </target>
+      <text>, Telofase.</text>
+     </p>
+     <p />
+     <p>
+      <text>En </text>
+      <target>
+       <answer>G2</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>G2</text>
+      </target>
+      <text>, se da la reparación del ADN recién sintetizado.</text>
+     </p>
+     <p />
+     <p>
+      <text>En </text>
+      <target>
+       <answer>Metafase</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>Metafase</text>
+      </target>
+      <text> los cromosomas se encuentran alineados en el centro de la célula.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="anafase.gif" file="anafase.gif" animated="false" />
+  <media name="fondore.gif" file="fondore.gif" animated="false" />
+  <media name="interfas.gif" file="interfas.gif" animated="false" />
+  <media name="metafase.gif" file="metafase.gif" animated="false" />
+  <media name="prairie.gif" file="prairie.gif" animated="false" />
+  <media name="profase.gif" file="profase.gif" animated="false" />
+  <media name="snakeski.gif" file="snakeski.gif" animated="false" />
+  <media name="telofs1.gif" file="telofs1.gif" animated="false" />
+  <media name="telofs2.gif" file="telofs2.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

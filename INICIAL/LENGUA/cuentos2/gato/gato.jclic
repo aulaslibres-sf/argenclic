@@ -1,0 +1,1165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="gato" version="0.1.3">
+ <settings>
+  <title>Cuentos</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="9/19/02" />
+  <revision description="Conversión de Clic3 a JClic" date="11/20/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Juan Oliete Andreu" mail="cpgarzaragoza@educa.aragob.es" />
+  <organization name="CP Gloria Arenillas" mail=" cpgarzaragoza@educa.aragob.es" city="Zaragoza" />
+  <language>español</language>
+  <description>
+   <p>Paquete de actividades para la lectura comprensiva de cuatro historias muy cortas:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;La fiesta del gato</p>
+   <p>&lt;LI&gt;Todonegro y todocolor</p>
+   <p>&lt;LI&gt;El conejo friolero</p>
+   <p>&lt;LI&gt;El burro y la vaca</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area="Lenguas" level="Infantil, Primaria">cuento</descriptors>
+ </settings>
+ <sequence>
+  <item id="gato.pac" name="gpor.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="g1.ass" />
+  <item name="g2.ass" />
+  <item name="g3.ass" />
+  <item name="g4.ass" />
+  <item name="g5.ass" />
+  <item name="g6.ass" />
+  <item name="g7.ass" />
+  <item name="g11.ass" />
+  <item name="g22.ass" />
+  <item name="g31.ass" />
+  <item name="g41.ass" />
+  <item name="g51.ass" />
+  <item name="g61.ass" />
+  <item name="g1m.ass" />
+  <item name="g2m.ass" />
+  <item name="g3m.ass" />
+  <item name="g4m.ass" />
+  <item name="g5m.ass" />
+  <item name="g6m.ass" />
+  <item name="g1.puz" />
+  <item name="g2.puz" />
+  <item name="g3.puz" />
+  <item name="g4.puz" />
+  <item name="g5.puz" />
+  <item name="g6.puz" />
+  <item name="gfin.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="g1.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x80FFFF">
+     <image name="g1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF8040" border="true">
+     <position x="-250" y="200" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="640.0" cellHeight="110.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>Pensó el gato: "voy a invitar a mis amigos a comer"</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="g1.puz">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x80FFFF">
+     <image name="g1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x8080FF" border="true">
+     <position x="-250" y="150" />
+    </window>
+   </settings>
+   <cells rows="1" cols="6" cellWidth="140.0" cellHeight="50.0" border="true">
+    <style>
+     <color background="0xFF8080" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>quiero</p>
+    </cell>
+    <cell>
+     <p>invitar</p>
+    </cell>
+    <cell>
+     <p>a</p>
+    </cell>
+    <cell>
+     <p>mis</p>
+    </cell>
+    <cell>
+     <p>queridos</p>
+    </cell>
+    <cell>
+     <p>amigos</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="g11.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x00FF00">
+     <image name="g1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFF80" border="true">
+     <position x="-250" y="150" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="660.0" cellHeight="140.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" />
+     <color foreground="0xFF8040" background="0x400080" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>El gato quería invitar a sus ...</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color foreground="0x0000FF" background="0xFF8080" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>amigos</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="660.0" cellHeight="140.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>El gato quería invitar a sus amigos</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="g1m.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+     <p>TU SI QUE SABES</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x80FF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="700.0" cellHeight="500.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="21" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="g1.gif" />
+   </cells>
+   <cells rows="4" cols="1" cellWidth="700.0" cellHeight="270.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color background="0xFF8080" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>quería invitar a sus amigos</p>
+    </cell>
+    <cell>
+     <p>quería hacer un dibujo</p>
+    </cell>
+    <cell>
+     <p>quería ponerse a comer</p>
+    </cell>
+    <cell>
+     <p>quería invitar a sus primos</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="g2.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x80FFFF">
+     <image name="g2.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF8040" border="true">
+     <position x="-250" y="200" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="640.0" cellHeight="110.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>"escribiré las invitaciones con lápices de colores"</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="g2.puz">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x80FFFF">
+     <image name="g2.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x8080FF" border="true">
+     <position x="-250" y="150" />
+    </window>
+   </settings>
+   <cells rows="1" cols="6" cellWidth="140.0" cellHeight="50.0" border="true">
+    <style>
+     <color background="0xFF8080" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>les </p>
+    </cell>
+    <cell>
+     <p>escribiré</p>
+    </cell>
+    <cell>
+     <p>una </p>
+    </cell>
+    <cell>
+     <p>invitación</p>
+    </cell>
+    <cell>
+     <p>muy</p>
+    </cell>
+    <cell>
+     <p>bonita</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="g22.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x00FF00">
+     <image name="g2.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFF80" border="true">
+     <position x="-250" y="150" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="670.0" cellHeight="140.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" />
+     <color foreground="0xFF8040" background="0x400080" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>iba a escribir las ...</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color foreground="0x0000FF" background="0xFF8080" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>invitaciones</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="670.0" cellHeight="140.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>iba a escribir las invitaciones</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="g2m.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+     <p>TU SI QUE SABES</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x80FF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="700.0" cellHeight="500.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="21" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="g2.gif" />
+   </cells>
+   <cells rows="4" cols="1" cellWidth="700.0" cellHeight="270.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color background="0xFF8080" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>iba a hacer las invitaciones</p>
+    </cell>
+    <cell>
+     <p>no quería invitaciones</p>
+    </cell>
+    <cell>
+     <p>iba a dibujar un caballo</p>
+    </cell>
+    <cell>
+     <p>tenía muchos colores</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="g3.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x80FFFF">
+     <image name="g3.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF8040" border="true">
+     <position x="-250" y="200" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="640.0" cellHeight="110.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>"en azul quedará precioso"</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="g3.puz">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x80FFFF">
+     <image name="g3.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x8080FF" border="true">
+     <position x="-250" y="150" />
+    </window>
+   </settings>
+   <cells rows="1" cols="6" cellWidth="140.0" cellHeight="50.0" border="true">
+    <style>
+     <color background="0xFF8080" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>Quiso</p>
+    </cell>
+    <cell>
+     <p>empezar</p>
+    </cell>
+    <cell>
+     <p>con</p>
+    </cell>
+    <cell>
+     <p>el </p>
+    </cell>
+    <cell>
+     <p>lápiz</p>
+    </cell>
+    <cell>
+     <p>azul</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="g31.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x00FF00">
+     <image name="g3.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFF80" border="true">
+     <position x="-250" y="150" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="670.0" cellHeight="140.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" />
+     <color foreground="0xFF8040" background="0x400080" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>quiso empezar con el color ...</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color foreground="0x0000FF" background="0xFF8080" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>azul</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="670.0" cellHeight="140.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>quiso empezar con el color azul</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="g3m.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+     <p>TU SI QUE SABES</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x80FF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="700.0" cellHeight="500.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="21" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="g3.gif" />
+   </cells>
+   <cells rows="4" cols="1" cellWidth="700.0" cellHeight="270.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color background="0xFF8080" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>cogió la pintura azul</p>
+    </cell>
+    <cell>
+     <p>iba a pintar una nube</p>
+    </cell>
+    <cell>
+     <p>quería pintar el mar</p>
+    </cell>
+    <cell>
+     <p>hay que sacarle mina</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="g4.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x80FFFF">
+     <image name="g4.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF8040" border="true">
+     <position x="-250" y="200" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="640.0" cellHeight="110.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>"quizá quede mejor con color rojo"</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="g4.puz">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x80FFFF">
+     <image name="g4.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x8080FF" border="true">
+     <position x="-250" y="150" />
+    </window>
+   </settings>
+   <cells rows="1" cols="5" cellWidth="140.0" cellHeight="50.0" border="true">
+    <style>
+     <color background="0xFF8080" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>Quedará</p>
+    </cell>
+    <cell>
+     <p>mejor</p>
+    </cell>
+    <cell>
+     <p>de</p>
+    </cell>
+    <cell>
+     <p>color</p>
+    </cell>
+    <cell>
+     <p>rojo</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="g41.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x00FF00">
+     <image name="g4.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFF80" border="true">
+     <position x="-250" y="150" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="670.0" cellHeight="140.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" />
+     <color foreground="0xFF8040" background="0x400080" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>pensó que sería mejor con el ...</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color foreground="0x0000FF" background="0xFF8080" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>rojo|color rojo</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="670.0" cellHeight="140.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>pensó que sería mejor con el rojo</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="g4m.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+     <p>TU SI QUE SABES</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x80FF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="700.0" cellHeight="500.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="21" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="2" image="g4.gif" />
+   </cells>
+   <cells rows="4" cols="1" cellWidth="700.0" cellHeight="270.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color background="0xFF8080" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>sería mejor con el color amarillo</p>
+    </cell>
+    <cell>
+     <p>va a pintar un autobús rojo</p>
+    </cell>
+    <cell>
+     <p>probaré con el rojo, es más bonito</p>
+    </cell>
+    <cell>
+     <p>va a pintar una estrella de color rojo</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="g5.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x80FFFF">
+     <image name="g5.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF8040" border="true">
+     <position x="-250" y="200" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="640.0" cellHeight="110.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>de pronto se acordó de que no sabía escribir</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="g5.puz">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x80FFFF">
+     <image name="g5.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x8080FF" border="true">
+     <position x="-250" y="150" />
+    </window>
+   </settings>
+   <cells rows="1" cols="5" cellWidth="140.0" cellHeight="50.0" border="true">
+    <style>
+     <color background="0xFF8080" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>Pero</p>
+    </cell>
+    <cell>
+     <p>si</p>
+    </cell>
+    <cell>
+     <p>no</p>
+    </cell>
+    <cell>
+     <p>sé</p>
+    </cell>
+    <cell>
+     <p>escribir</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="g51.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x00FF00">
+     <image name="g5.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFF80" border="true">
+     <position x="-250" y="150" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="480.0" cellHeight="140.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" />
+     <color foreground="0xFF8040" background="0x400080" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>se acordó de que no ....</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="440.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color foreground="0x0000FF" background="0xFF8080" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>sabía escribir|sabia escribir</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="480.0" cellHeight="140.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>se acordó de que no sabía escribir</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="g5m.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+     <p>TU SI QUE SABES</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x80FF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="700.0" cellHeight="500.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="21" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="g5.gif" />
+   </cells>
+   <cells rows="4" cols="1" cellWidth="700.0" cellHeight="270.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color background="0xFF8080" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>no sabía escribir</p>
+    </cell>
+    <cell>
+     <p>no quería escribir</p>
+    </cell>
+    <cell>
+     <p>no sabía que poner</p>
+    </cell>
+    <cell>
+     <p>no le gustaban los colores</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="g6.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x80FFFF">
+     <image name="g6.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF8040" border="true">
+     <position x="-250" y="200" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="700.0" cellHeight="110.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>y les tuvo que llamar por teléfono</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="g6.puz">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x80FFFF">
+     <image name="g6.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x8080FF" border="true">
+     <position x="-250" y="150" />
+    </window>
+   </settings>
+   <cells rows="1" cols="6" cellWidth="140.0" cellHeight="50.0" border="true">
+    <style>
+     <color background="0xFF8080" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>Ya</p>
+    </cell>
+    <cell>
+     <p>sé.</p>
+    </cell>
+    <cell>
+     <p>Les</p>
+    </cell>
+    <cell>
+     <p>haré</p>
+    </cell>
+    <cell>
+     <p>una</p>
+    </cell>
+    <cell>
+     <p>llamada.</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="g61.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x00FF00">
+     <image name="g6.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFF80" border="true">
+     <position x="-250" y="150" />
+    </window>
+   </settings>
+   <cells rows="1" cols="1" cellWidth="490.0" cellHeight="140.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" />
+     <color foreground="0xFF8040" background="0x400080" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>y les tuvo que llamar ...</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="310.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color foreground="0x0000FF" background="0xFF8080" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>por teléfono|por telefono</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="490.0" cellHeight="140.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>y les tuvo que llamar por teléfono</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="g6m.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+     <p>TU SI QUE SABES</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x80FF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FFFF" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="700.0" cellHeight="500.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="21" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="g6.gif" />
+   </cells>
+   <cells rows="4" cols="1" cellWidth="700.0" cellHeight="270.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color background="0xFF8080" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>les llamó por teléfono</p>
+    </cell>
+    <cell>
+     <p>encargó una pizza</p>
+    </cell>
+    <cell>
+     <p>habló con su abuela</p>
+    </cell>
+    <cell>
+     <p>dejó un mensaje en el contestador</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="g7.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x408080">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF80FF" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="534.0" cellHeight="500.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="21" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="g1.gif" />
+    <cell image="g2.gif" />
+    <cell image="g3.gif" />
+    <cell image="g4.gif" />
+    <cell image="g5.gif" />
+    <cell image="g6.gif" />
+   </cells>
+   <cells rows="1" cols="6" cellWidth="534.0" cellHeight="500.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>Pensó el gato: "voy a invitar a mis amigos a comer"</p>
+    </cell>
+    <cell>
+     <p>"escribiré las invitaciones con lápices de colores"</p>
+    </cell>
+    <cell>
+     <p>"en azul quedará precioso"</p>
+    </cell>
+    <cell>
+     <p>"quizá quede mejor con color rojo"</p>
+    </cell>
+    <cell>
+     <p>de pronto se acordó de que no sabía escribir</p>
+    </cell>
+    <cell>
+     <p>y les tuvo que llamar por teléfono</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="gfin.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x80FFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF8040" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="gfin.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="gpor.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x80FFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF8040" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="portgat.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="g1.gif" file="g1.gif" />
+  <media name="g2.gif" file="g2.gif" />
+  <media name="g3.gif" file="g3.gif" />
+  <media name="g4.gif" file="g4.gif" />
+  <media name="g5.gif" file="g5.gif" />
+  <media name="g6.gif" file="g6.gif" />
+  <media name="gfin.gif" file="gfin.gif" />
+  <media name="portgat.gif" file="portgat.gif" />
+ </mediaBag>
+</JClicProject>
+

@@ -1,0 +1,4053 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="animalp" version="0.1.3">
+ <settings>
+  <title>Los animales - 2</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="5/28/99" />
+  <revision description="Conversión de Clic3 a JClic" date="7/10/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Javier Rey Bacaicoa" mail="javier.rey@retemail.es" />
+  <author name="Javier Donezar Desojo" mail="iesnavar@pnte.cfnavarra.es" />
+  <author name="Ramón Martín Carrero" mail="iesnavar@pnte.cfnavarra.es" />
+  <organization name="IES Navarro Villoslada" mail="iesnavar@pnte.cfnavarra.es" url="http://www.pnte.cfnavarra.es/iesnavar/" city="Pamplona" state="Navarra" />
+  <language>es</language>
+  <description>
+   <p>Aplicación sobre los animales organizada en dos paquetes de actividades sobre los animales: en uno de ellos se ha desarrollado un sistema de claves de clasificación que permite determinar a qué familia pertenece un animal a partir de sus características, y el otro contiene ejercicios diversos sobre los conceptos utilizados para la clasificación.&lt;BR&gt;</p>
+   <p>Es necesario configurar el monitor a 800x600 y 256 colores.</p>
+  </description>
+  <descriptors area-codes="exp" level="Primaria, Secundaria">zoología</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Aplicación sobre los animales organizada en dos paquetes de actividades sobre los animales: en uno de ellos se ha desarrollado un sistema de claves de clasificación que permite determinar a qué familia pertenece un animal a partir de sus características, y el otro contiene ejercicios diversos sobre los conceptos utilizados para la clasificación.&lt;BR&gt;</p>
+    <p>Es necesario configurar el monitor a 800x600 y 256 colores.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="animalp.pac" name="portada.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="portada2.ass">
+   <jump action="STOP" id="forward" />
+  </item>
+  <item id="animales.pac" name="peces01.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="animal20.ass" />
+  <item name="animal21.ass" />
+  <item name="animal00.txa" />
+  <item name="anfib01.ass" />
+  <item name="animal01.txa" />
+  <item name="animal02.txa" />
+  <item name="animal03.txa" />
+  <item name="reptil01.ass" />
+  <item name="animal04.ass" />
+  <item name="animal05.ass" />
+  <item name="animal06.ass" />
+  <item name="aves01.ass" />
+  <item name="animal07.ass" />
+  <item name="animal08.ass" />
+  <item name="animal09.ass" />
+  <item name="animal10.ass" />
+  <item name="mamif01.ass" />
+  <item name="animal11.ass" />
+  <item name="animal12.ass" />
+  <item name="animal13.ass" />
+  <item name="animal14.ass" />
+  <item name="animal15.ass" />
+  <item name="animal16.ass" />
+  <item name="marinos.sop" />
+  <item name="animal17.ass" />
+  <item name="animal18.ass" />
+  <item name="animal19.ass" />
+  <item name="caliente.sop" />
+  <item name="animal04.txa" />
+  <item name="animal-1.puz" />
+  <item name="fin.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.Identify" name="anfib01.ass">
+   <description>
+    <p>Propiedades de los anfibios</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Señala las características de los anfibios</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="filedone.wav" />
+     <p>¡Bravo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="4" columns="3" cellWidth="140.0" cellHeight="100.0" border="false" id="primary">
+    <style>
+     <font family="Arial Narrow" size="20" />
+     <color foreground="0x000080" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="fanfa.wav" />
+     <p>Piel desnuda</p>
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="fanfa.wav" />
+     <p>Las larvas respiran por branquias</p>
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="fanfa.wav" />
+     <p>Los adultos respiran por pulmones</p>
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="fanfa.wav" />
+     <p>Respiran también por la piel</p>
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="fanfa.wav" />
+     <p>Se reproducen por huevos</p>
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="fanfa.wav" />
+     <p>Disponen de patas</p>
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="fanfa.wav" />
+     <p>Su piel siempre está húmeda</p>
+    </cell>
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="glass.wav" />
+     <p>Sangre caliente</p>
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="fanfa.wav" />
+     <p>Sangre fría</p>
+    </cell>
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="glass.wav" />
+     <p>No tienen esqueleto</p>
+    </cell>
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="risa.wav" />
+     <p>Tienen plumas</p>
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="fanfa.wav" />
+     <p>Sufren metamorfosis</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="animal-1.puz">
+   <description>
+    <p>esquema general</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Ordena este esquema</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" columns="3" border="false" image="esquema.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="animal00.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Busca nombres y grupo de estos animales</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="bien.wav" />
+     <p>¡Perfecto!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="540" height="311" />
+    </window>
+   </settings>
+   <evaluator class="@ComplexEvaluator" />
+   <document>
+    <style name="default" italic="false" background="0xFFFFFF" size="17" family="Arial" foreground="0x000000" bold="false" tabWidth="16" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text />
+      <cell width="140" height="200" border="false" image="tigre3.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text />
+      <cell width="140" height="200" border="false" image="mono.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text />
+      <cell width="140" height="195" border="false" image="oruga.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text />
+     </p>
+     <p>
+      <text />
+      <target>
+       <answer>tigre</answer>
+       <optionList>
+        <option>tigre</option>
+        <option>gato</option>
+        <option>león</option>
+        <option>leopardo</option>
+        <option>guepardo</option>
+       </optionList>
+       <text>tigre</text>
+      </target>
+      <text />
+      <target>
+       <answer>chimpancé</answer>
+       <optionList>
+        <option>chimpancé</option>
+        <option>orangután</option>
+        <option>tití</option>
+        <option>gorila</option>
+        <option>macaco</option>
+       </optionList>
+       <text>mono</text>
+      </target>
+      <text />
+      <target>
+       <answer>oruga</answer>
+       <optionList>
+        <option>gusano</option>
+        <option>babosa</option>
+        <option>lombriz</option>
+        <option>tenia</option>
+        <option>oruga</option>
+       </optionList>
+       <text>oruga</text>
+      </target>
+     </p>
+     <p />
+     <p>
+      <text />
+      <target>
+       <answer>mamíferos</answer>
+       <optionList>
+        <option>peces</option>
+        <option>anfibios</option>
+        <option>reptiles</option>
+        <option>aves</option>
+        <option>mamíferos</option>
+       </optionList>
+       <text>mamíferos</text>
+      </target>
+      <text />
+      <target>
+       <answer>mamíferos</answer>
+       <optionList>
+        <option>peces</option>
+        <option>anfibios</option>
+        <option>reptiles</option>
+        <option>aves</option>
+        <option>mamíferos</option>
+       </optionList>
+       <text>mamíferos</text>
+      </target>
+      <text />
+      <target>
+       <answer>insectos</answer>
+       <optionList>
+        <option>arácnidos</option>
+        <option>insectos</option>
+        <option>miriápodos</option>
+        <option>crustáceos</option>
+       </optionList>
+       <text>insectos</text>
+      </target>
+     </p>
+     <p />
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.FillInBlanks" name="animal01.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Busca nombres y grupo de estos animales</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="bien.wav" />
+     <p>¡Perfecto!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <evaluator class="@ComplexEvaluator" />
+   <document>
+    <style name="default" italic="false" background="0xFFFFFF" size="17" family="Arial" foreground="0x000000" bold="false" tabWidth="16" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text />
+      <cell width="140" height="200" border="false" image="ardilla9.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text />
+      <cell width="140" height="200" border="false" image="camello5.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text />
+      <cell width="140" height="200" border="false" image="abeja1.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text />
+     </p>
+     <p>
+      <text />
+      <target>
+       <answer>ardilla</answer>
+       <optionList>
+        <option>nutria</option>
+        <option>comadreja</option>
+        <option>ardilla</option>
+        <option>conejo</option>
+        <option>tejón</option>
+       </optionList>
+       <text>  ardilla</text>
+      </target>
+      <text />
+      <target>
+       <answer>dromedario</answer>
+       <optionList>
+        <option>camello</option>
+        <option>dromedario</option>
+        <option>llama</option>
+        <option>caballo</option>
+       </optionList>
+       <text>dromedario</text>
+      </target>
+      <text />
+      <target>
+       <answer>abeja</answer>
+       <optionList>
+        <option>avispa</option>
+        <option>abejorro</option>
+        <option>abeja</option>
+        <option>mosca</option>
+        <option>mosquito</option>
+       </optionList>
+       <text>abeja</text>
+      </target>
+     </p>
+     <p />
+     <p>
+      <text />
+      <target>
+       <answer>mamíferos</answer>
+       <optionList>
+        <option>peces</option>
+        <option>anfibios</option>
+        <option>reptiles</option>
+        <option>aves</option>
+        <option>mamíferos</option>
+       </optionList>
+       <text>mamíferos</text>
+      </target>
+      <text />
+      <target>
+       <answer>mamíferos</answer>
+       <optionList>
+        <option>peces</option>
+        <option>anfibios</option>
+        <option>reptiles</option>
+        <option>aves</option>
+        <option>mamíferos</option>
+       </optionList>
+       <text>mamíferos</text>
+      </target>
+      <text />
+      <target>
+       <answer>insectos</answer>
+       <optionList>
+        <option>arácnidos</option>
+        <option>insectos</option>
+        <option>miriápodos</option>
+        <option>crustáceos</option>
+       </optionList>
+       <text>insectos</text>
+      </target>
+     </p>
+     <p />
+     <p />
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.FillInBlanks" name="animal02.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Busca nombres y grupo de estos animales</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="applause.wav" />
+     <p>¡Perfecto!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <evaluator class="@ComplexEvaluator" />
+   <document>
+    <style name="default" italic="false" background="0xFFFFFF" size="17" family="Arial" foreground="0x000000" bold="false" tabWidth="16" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text />
+      <cell width="140" height="200" border="false" image="ave23.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text />
+      <cell width="140" height="200" border="false" image="arana4.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text />
+      <cell width="140" height="200" border="false" image="caiman7.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text />
+     </p>
+     <p>
+      <text />
+      <target>
+       <answer>pajarillo</answer>
+       <optionList>
+        <option>águila</option>
+        <option>pajarillo</option>
+        <option>cuervo</option>
+        <option>pato</option>
+        <option>grulla</option>
+       </optionList>
+       <text>pajarillo</text>
+      </target>
+      <text />
+      <target>
+       <answer>araña</answer>
+       <optionList>
+        <option>escolopendra</option>
+        <option>escarabajo</option>
+        <option>chinche</option>
+        <option>araña</option>
+        <option>ciempiés</option>
+       </optionList>
+       <text>araña</text>
+      </target>
+      <text />
+      <target>
+       <answer>cocodrilo</answer>
+       <optionList>
+        <option>cocodrilo</option>
+        <option>lagartija</option>
+        <option>lagarto</option>
+        <option>salamandra</option>
+        <option>iguana</option>
+       </optionList>
+       <text> cocodrilo</text>
+      </target>
+     </p>
+     <p />
+     <p>
+      <text />
+      <target>
+       <answer>aves</answer>
+       <optionList>
+        <option>peces</option>
+        <option>anfibios</option>
+        <option>reptiles</option>
+        <option>aves</option>
+        <option>mamíferos</option>
+       </optionList>
+       <text>mamíferos</text>
+      </target>
+      <text />
+      <target>
+       <answer>arácnidos</answer>
+       <optionList>
+        <option>arácnidos</option>
+        <option>mariposas</option>
+        <option>crustáceos</option>
+        <option>moluscos</option>
+        <option>miriápodos</option>
+       </optionList>
+       <text>mamíferos</text>
+      </target>
+      <text />
+      <target>
+       <answer>reptiles</answer>
+       <optionList>
+        <option>peces</option>
+        <option>anfibios</option>
+        <option>reptiles</option>
+        <option>aves</option>
+        <option>mamíferos</option>
+       </optionList>
+       <text>reptiles</text>
+      </target>
+     </p>
+     <p />
+     <p />
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.FillInBlanks" name="animal03.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Busca nombres y grupo de estos animales</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="bien.wav" />
+     <p>¡Perfecto!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <evaluator class="@ComplexEvaluator" />
+   <document>
+    <style name="default" italic="false" background="0xFFFFFF" size="17" family="Arial" foreground="0x000000" bold="false" tabWidth="16" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text />
+      <cell width="140" height="200" border="false" image="buho3.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text />
+      <cell width="140" height="200" border="false" image="alce1.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text />
+      <cell width="140" height="200" border="false" image="caball11.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text />
+     </p>
+     <p>
+      <text />
+      <target>
+       <answer>buho</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <info mode="onError" maxTime="10">
+        <cell hAlign="left" width="140" height="100">
+         <style>
+          <color background="0xFFFFFF" />
+         </style>
+         <p>Caza por la noche. Sus grandes ojos le permiten una excelente visión en la oscuridad.</p>
+        </cell>
+       </info>
+       <text>buho</text>
+      </target>
+      <text />
+      <target>
+       <answer>alce</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <info mode="onError" delay="2" maxTime="5">
+        <cell hAlign="left" width="140" height="100">
+         <style>
+          <color background="0xFFFFFF" />
+         </style>
+         <p>Gran cérvido de las tierras muy frías del Norte. No se llama ciervo. Empieza por AL...</p>
+        </cell>
+       </info>
+       <text>alce</text>
+      </target>
+      <text />
+      <target>
+       <answer>caballo</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>caballo</text>
+      </target>
+     </p>
+     <p />
+     <p>
+      <text />
+      <target>
+       <answer>aves</answer>
+       <optionList>
+        <option>peces</option>
+        <option>anfibios</option>
+        <option>reptiles</option>
+        <option>aves</option>
+        <option>mamíferos</option>
+       </optionList>
+       <text>mamíferos</text>
+      </target>
+      <text />
+      <target>
+       <answer>mamíferos</answer>
+       <optionList>
+        <option>peces</option>
+        <option>anfibios</option>
+        <option>reptiles</option>
+        <option>aves</option>
+        <option>mamíferos</option>
+       </optionList>
+       <text>mamíferos</text>
+      </target>
+      <text />
+      <target>
+       <answer>mamíferos</answer>
+       <optionList>
+        <option>peces</option>
+        <option>anfibios</option>
+        <option>reptiles</option>
+        <option>aves</option>
+        <option>mamíferos</option>
+       </optionList>
+       <text>reptiles</text>
+      </target>
+     </p>
+     <p />
+     <p />
+    </section>
+   </document>
+  </activity>
+  <activity class="@panels.Identify" name="animal04.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Haz clic en todos los peces</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="145.0" cellHeight="225.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0" image="ave21.gif" />
+    <cell id="0" image="aguil.gif" />
+    <cell id="0" image="boxer.gif" />
+    <cell id="1" image="angelot1.gif" />
+    <cell id="1" image="caballi4.gif" />
+    <cell id="0" image="cangrej6.gif" />
+    <cell id="0" image="ballen9.gif" />
+    <cell id="0" image="gorgosr.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="animal04.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aleluya.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false">
+     <size width="613" height="330" />
+    </window>
+   </settings>
+   <evaluator class="@ComplexEvaluator" />
+   <document>
+    <style name="default" italic="false" background="0xFFFFFF" size="17" family="Arial" foreground="0x000000" bold="false" tabWidth="16" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text />
+     </p>
+     <p />
+     <p />
+     <p>
+      <text />
+      <cell width="145" height="75" border="true" image="esquelet.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+     </p>
+     <p />
+     <p>
+      <text>Viendo este esqueleto selecciona los datos correctos en las listas:</text>
+     </p>
+     <p />
+     <p>
+      <target>
+       <answer>vertebrado</answer>
+       <optionList>
+        <option>vertebrado</option>
+        <option>artrópodo</option>
+        <option>anélido</option>
+        <option>miriápodo</option>
+       </optionList>
+       <text>vertebrado</text>
+      </target>
+      <text />
+      <target>
+       <answer>sangre caliente</answer>
+       <optionList>
+        <option>sangre caliente</option>
+        <option>sangre fría</option>
+        <option>no tiene sangre</option>
+       </optionList>
+       <text>sangre caliente</text>
+      </target>
+      <text />
+      <target>
+       <answer>terrestre</answer>
+       <optionList>
+        <option>marítimo</option>
+        <option>de agua dulce</option>
+        <option>volador</option>
+        <option>terrestre</option>
+       </optionList>
+       <text>terrestre</text>
+      </target>
+      <text />
+      <target>
+       <answer>mamífero</answer>
+       <optionList>
+        <option>pez</option>
+        <option>anfibio</option>
+        <option>reptil</option>
+        <option>ave</option>
+        <option>mamífero</option>
+       </optionList>
+       <text>mamífero</text>
+      </target>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="animal05.ass">
+   <description>
+    <p>Respiración </p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Une cada animal con su tipo de respiración</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="bien.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="170.0" cellHeight="200.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="3" image="abeja4.gif" />
+    <cell id="1" image="boxer.gif" />
+    <cell id="0" image="angelot1.gif" />
+    <cell id="1" image="pato5.gif" />
+    <cell id="1" image="ave23.gif" />
+    <cell id="2" image="rana1.gif" />
+   </cells>
+   <cells rows="1" columns="4" cellWidth="140.0" cellHeight="122.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>Branquial</p>
+    </cell>
+    <cell>
+     <p>Pulmonar</p>
+    </cell>
+    <cell>
+     <p>Cutánea</p>
+    </cell>
+    <cell>
+     <p>Traqueal</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="animal06.ass">
+   <description>
+    <p>Sangre caliente y fría</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Une cada animal con su tipo de sangre</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="170.0" cellHeight="200.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0" image="pavo7.gif" />
+    <cell id="1" image="caiman7.gif" />
+    <cell id="1" image="rana5.gif" />
+    <cell id="1" image="pez27.gif" />
+    <cell id="0" image="leopard1.gif" />
+    <cell id="0" image="toro1.gif" />
+   </cells>
+   <cells rows="1" columns="2" cellWidth="140.0" cellHeight="122.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>Caliente</p>
+    </cell>
+    <cell>
+     <p>Fría</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="animal07.ass">
+   <description>
+    <p>Esqueleto</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Une cada animal con su tipo</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="170.0" cellHeight="200.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0" image="rata.gif" />
+    <cell id="0" image="tucan2.gif" />
+    <cell id="0" image="tortuga7.gif" />
+    <cell id="1" image="saltamo.gif" />
+    <cell id="1" image="pulpo.gif" />
+    <cell id="1" image="libelul3.gif" />
+   </cells>
+   <cells rows="1" columns="2" cellWidth="140.0" cellHeight="122.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>vertebrado</p>
+    </cell>
+    <cell>
+     <p>invertebrado</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="animal08.ass">
+   <description>
+    <p>Hábitat</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Une cada animal con su lugar de vida preferente</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="170.0" cellHeight="200.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="1" image="tiburon6.gif" />
+    <cell id="0" image="tigre3.gif" />
+    <cell id="1" image="pinguin6.gif" />
+    <cell id="0" image="perrprad.gif" />
+    <cell id="2" image="mirlo.gif" />
+    <cell id="2" image="halcon4.gif" />
+   </cells>
+   <cells rows="1" columns="3" cellWidth="140.0" cellHeight="122.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>Tierra</p>
+    </cell>
+    <cell>
+     <p>Agua</p>
+    </cell>
+    <cell>
+     <p>Aire</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="animal09.ass">
+   <description>
+    <p>Piel</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Une cada animal con su tipo de piel</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="170.0" cellHeight="200.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="2" image="jabali.gif" />
+    <cell id="2" image="elefant1.gif" />
+    <cell id="1" image="cisne.gif" />
+    <cell id="1" image="ave19.gif" />
+    <cell id="2" image="ballen9.gif" />
+    <cell id="0" image="pez37.gif" />
+   </cells>
+   <cells rows="1" columns="3" cellWidth="140.0" cellHeight="122.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>escamas</p>
+    </cell>
+    <cell>
+     <p>plumas</p>
+    </cell>
+    <cell>
+     <p>pelo</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="animal10.ass">
+   <description>
+    <p>Piel</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Haz clic en todos los animales que llevan pelo</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="145.0" cellHeight="225.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0" image="ave21.gif" />
+    <cell id="0" image="aguil.gif" />
+    <cell id="1" image="boxer.gif" />
+    <cell id="0" image="angelot1.gif" />
+    <cell id="0" image="caballi4.gif" />
+    <cell id="0" image="cangrej6.gif" />
+    <cell id="1" image="ballen9.gif" />
+    <cell id="0" image="gorgosr.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="animal11.ass">
+   <description>
+    <p>Piel</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Haz clic en todos los animales que tienen escamas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="145.0" cellHeight="225.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0" image="ave21.gif" />
+    <cell id="0" image="aguil.gif" />
+    <cell id="0" image="boxer.gif" />
+    <cell id="1" image="angelot1.gif" />
+    <cell id="1" image="caballi4.gif" />
+    <cell id="0" image="cangrej6.gif" />
+    <cell id="0" image="ballen9.gif" />
+    <cell id="1" image="gorgosr.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="animal12.ass">
+   <description>
+    <p>Locomoción</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Busca animales que principalmente se mueven mediante aletas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="145.0" cellHeight="225.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0" image="ave21.gif" />
+    <cell id="0" image="aguil.gif" />
+    <cell id="0" image="boxer.gif" />
+    <cell id="1" image="angelot1.gif" />
+    <cell id="1" image="caballi4.gif" />
+    <cell id="0" image="cangrej6.gif" />
+    <cell id="1" image="ballen9.gif" />
+    <cell id="0" image="gorgosr.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="animal13.ass">
+   <description>
+    <p>Locomoción</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Busca animales que principalmente se mueven mediante alas y patas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="145.0" cellHeight="225.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="1" image="ave21.gif" />
+    <cell id="1" image="aguil.gif" />
+    <cell id="0" image="boxer.gif" />
+    <cell id="0" image="angelot1.gif" />
+    <cell id="0" image="caballi4.gif" />
+    <cell id="0" image="cangrej6.gif" />
+    <cell id="0" image="ballen9.gif" />
+    <cell id="0" image="gorgosr.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="animal14.ass">
+   <description>
+    <p>clasificación</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Une cada animal con el de su mismo grupo</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" columns="1" cellWidth="238.0" cellHeight="225.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="cuernos1.gif" />
+    <cell image="loro8.gif" />
+    <cell image="mosca1.gif" />
+   </cells>
+   <cells rows="3" columns="1" cellWidth="254.0" cellHeight="225.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="ballen9.gif" />
+    <cell image="pollito.gif" />
+    <cell image="insecto8.gif" />
+   </cells>
+   <cells rows="3" columns="1" cellWidth="238.0" cellHeight="225.0" border="false" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>mamíferos</p>
+    </cell>
+    <cell>
+     <p>aves</p>
+    </cell>
+    <cell>
+     <p>insectos</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="animal15.ass">
+   <description>
+    <p>Alimentación</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x400040" background="0xFFFFFF" />
+     </style>
+     <p>Busca animales herbívoros</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x400040" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aleluya.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="145.0" cellHeight="225.0" border="false" id="primary">
+    <style>
+     <color foreground="0x8000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0" image="oso1.gif" />
+    <cell id="0" image="osopola1.gif" />
+    <cell id="1" image="conejo3.gif" />
+    <cell id="1" image="panda1.gif" />
+    <cell id="1" image="gorila.gif" />
+    <cell id="1" image="jirafa2.gif" />
+    <cell id="0" image="ballen9.gif" />
+    <cell id="1" image="oruga.gif" />
+   </cells>
+   <cells rows="4" columns="2" cellWidth="145.0" cellHeight="225.0" border="false" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>no</p>
+    </cell>
+    <cell>
+     <p>no</p>
+    </cell>
+    <cell>
+     <p>Conejo</p>
+    </cell>
+    <cell>
+     <p>Oso panda</p>
+    </cell>
+    <cell>
+     <p>Gorila</p>
+    </cell>
+    <cell>
+     <p>Jirafa</p>
+    </cell>
+    <cell>
+     <p>no</p>
+    </cell>
+    <cell>
+     <p>oruga</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="animal16.ass">
+   <description>
+    <p>Alimentación</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Busca animales omnívoros (que comen de todo)</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="145.0" cellHeight="225.0" border="false" id="primary">
+    <style>
+     <color foreground="0x8000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="1" image="oso1.gif" />
+    <cell id="1" image="nidogall.gif" />
+    <cell id="0" image="conejo3.gif" />
+    <cell id="0" image="panda1.gif" />
+    <cell id="0" image="caiman7.gif" />
+    <cell id="0" image="jirafa2.gif" />
+    <cell id="0" image="insecto8.gif" />
+    <cell id="0" image="oruga.gif" />
+   </cells>
+   <cells rows="4" columns="2" cellWidth="145.0" cellHeight="225.0" border="false" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Oso</p>
+    </cell>
+    <cell>
+     <p>Gallina</p>
+    </cell>
+    <cell image="conejo3.gif" />
+    <cell image="panda1.gif" />
+    <cell image="caiman7.gif" />
+    <cell image="jirafa2.gif" />
+    <cell image="insecto8.gif" />
+    <cell image="oruga.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="animal17.ass">
+   <description>
+    <p>Alimentación carnívoros</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x400040" background="0xFFFFFF" />
+     </style>
+     <p>Busca animales carnívoros</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x400040" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="145.0" cellHeight="225.0" border="false" id="primary">
+    <style>
+     <color foreground="0x8000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="1" image="halcon4.gif" />
+    <cell id="0" image="nidogall.gif" />
+    <cell id="0" image="conejo3.gif" />
+    <cell id="0" image="panda1.gif" />
+    <cell id="1" image="caiman7.gif" />
+    <cell id="0" image="jirafa2.gif" />
+    <cell id="1" image="coyote2.gif" />
+    <cell id="0" image="canguro.gif" />
+   </cells>
+   <cells rows="4" columns="2" cellWidth="145.0" cellHeight="225.0" border="false" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Águila</p>
+    </cell>
+    <cell image="nidogall.gif" />
+    <cell image="conejo3.gif" />
+    <cell image="panda1.gif" />
+    <cell>
+     <p>Caimán</p>
+    </cell>
+    <cell image="jirafa2.gif" />
+    <cell>
+     <p>Coyote</p>
+    </cell>
+    <cell image="canguro.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="animal18.ass">
+   <description>
+    <p>Alimentación de restos orgánicos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0x400040" background="0xFFFFFF" />
+     </style>
+     <p>Busca animales que reciclan restos orgánicos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0x400040" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="gallo.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="145.0" cellHeight="225.0" border="false" id="primary">
+    <style>
+     <color foreground="0x8000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0" image="halcon4.gif" />
+    <cell id="1" image="insecto8.gif" />
+    <cell id="1" image="mosca1.gif" />
+    <cell id="1" image="buitre.gif" />
+    <cell id="0" image="caiman7.gif" />
+    <cell id="0" image="jirafa2.gif" />
+    <cell id="0" image="tucan2.gif" />
+    <cell id="0" image="toro1.gif" />
+   </cells>
+   <cells rows="4" columns="2" cellWidth="145.0" cellHeight="225.0" border="false" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell image="halcon4.gif" />
+    <cell>
+     <p>Geotrupes (come excrementos)</p>
+    </cell>
+    <cell>
+     <p>mosca (todo tipo de restos)</p>
+    </cell>
+    <cell>
+     <p>Buitre (cadáveres)</p>
+    </cell>
+    <cell image="caiman7.gif" />
+    <cell image="jirafa2.gif" />
+    <cell image="tucan2.gif" />
+    <cell image="toro1.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="animal19.ass">
+   <description>
+    <p>Alimentación de restos orgánicos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Une cada animal con su tipo de reproducción</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="145.0" cellHeight="180.0" border="false" id="primary">
+    <style>
+     <color foreground="0x8000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0" image="pulpo.gif" />
+    <cell id="0" image="somorguj.gif" />
+    <cell id="0" image="tricrtp.gif" />
+    <cell id="1" image="zorro.gif" />
+    <cell id="0" image="saltamo.gif" />
+    <cell id="1" image="perrprad.gif" />
+    <cell id="0" image="pez36.gif" />
+    <cell id="0" image="gayo.gif" />
+   </cells>
+   <cells rows="2" columns="1" cellWidth="140.0" cellHeight="50.0" border="true" id="secondary">
+    <style>
+     <color foreground="0x8000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell>
+     <p>ovíparo</p>
+    </cell>
+    <cell>
+     <p>vivíparo</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="145.0" cellHeight="180.0" border="false" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Pulpo. Moluscos</p>
+    </cell>
+    <cell>
+     <p>Somormujo. Aves</p>
+    </cell>
+    <cell>
+     <p>Triceratops. Reptiles</p>
+    </cell>
+    <cell>
+     <p>Zorro. Mamíferos</p>
+    </cell>
+    <cell>
+     <p>Saltamontes. Insectos</p>
+    </cell>
+    <cell>
+     <p>Perrillo de las praderas. Mamíferos</p>
+    </cell>
+    <cell>
+     <p>peces</p>
+    </cell>
+    <cell>
+     <p>aves</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BUA" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="animal20.ass">
+   <description>
+    <p>Textos de nombres de invertebrados. Clasificar</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="22" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>UNE CADA ANIMAL CON SU GRUPO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="22" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="bien.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="4" columns="5" cellWidth="170.0" cellHeight="50.0" border="false" id="primary">
+    <style>
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="5" />
+    <cell id="0">
+     <p>ÁCARO</p>
+    </cell>
+    <cell id="2">
+     <p>AVISPA</p>
+    </cell>
+    <cell id="1">
+     <p>CANGREJO</p>
+    </cell>
+    <cell id="1">
+     <p>CENTOLLO</p>
+    </cell>
+    <cell id="3">
+     <p>CIEMPIÉS</p>
+    </cell>
+    <cell id="2">
+     <p>CUCARACHA</p>
+    </cell>
+    <cell id="3">
+     <p>ESCOLOPENDRA</p>
+    </cell>
+    <cell id="1">
+     <p>GAMBA</p>
+    </cell>
+    <cell id="0">
+     <p>ESCORPIÓN</p>
+    </cell>
+    <cell id="2">
+     <p>POLILLA</p>
+    </cell>
+    <cell id="2">
+     <p>PIOJO</p>
+    </cell>
+    <cell id="2">
+     <p>PULGA</p>
+    </cell>
+    <cell id="2">
+     <p>TÁBANO</p>
+    </cell>
+    <cell id="0">
+     <p>TARÁNTULA</p>
+    </cell>
+    <cell id="2">
+     <p>TERMITA</p>
+    </cell>
+    <cell id="4">
+     <p>MEJILLÓN</p>
+    </cell>
+    <cell id="4">
+     <p>ALMEJA</p>
+    </cell>
+    <cell id="4">
+     <p>OSTRA</p>
+    </cell>
+    <cell id="4">
+     <p>VIEIRA</p>
+    </cell>
+    <cell id="4">
+     <p>CARACOL</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="5" cellWidth="140.0" cellHeight="70.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFF8000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>ARÁCNIDOS</p>
+    </cell>
+    <cell>
+     <p>CRUSTÁCEOS</p>
+    </cell>
+    <cell>
+     <p>INSECTOS</p>
+    </cell>
+    <cell>
+     <p>MIRIÁPODOS</p>
+    </cell>
+    <cell>
+     <p>MOLUSCOS</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="animal21.ass">
+   <description>
+    <p>Textos de nombres de vertebrados. Clasificar</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="22" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>UNE CADA ANIMAL CON SU GRUPO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="22" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="filedone.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="4" columns="5" cellWidth="170.0" cellHeight="50.0" border="false" id="primary">
+    <style>
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="5" />
+    <cell id="0">
+     <p>ANGULA</p>
+    </cell>
+    <cell id="0">
+     <p>ATÚN</p>
+    </cell>
+    <cell id="3">
+     <p>AVESTRUZ</p>
+    </cell>
+    <cell id="0">
+     <p>BARBO</p>
+    </cell>
+    <cell id="0">
+     <p>BESUGO</p>
+    </cell>
+    <cell id="2">
+     <p>BOA</p>
+    </cell>
+    <cell id="4">
+     <p>BURRO</p>
+    </cell>
+    <cell id="2">
+     <p>CAMALEÓN</p>
+    </cell>
+    <cell id="3">
+     <p>CIGÜEÑA</p>
+    </cell>
+    <cell id="4">
+     <p>DELFÍN</p>
+    </cell>
+    <cell id="4">
+     <p>FOCA</p>
+    </cell>
+    <cell id="4">
+     <p>MURCIÉLAGO</p>
+    </cell>
+    <cell id="4">
+     <p>BALLENA</p>
+    </cell>
+    <cell id="3">
+     <p>PELÍCANO</p>
+    </cell>
+    <cell id="1">
+     <p>SAPO</p>
+    </cell>
+    <cell id="3">
+     <p>GOLONDRINA</p>
+    </cell>
+    <cell id="4">
+     <p>VISÓN</p>
+    </cell>
+    <cell id="2">
+     <p>VÍBORA</p>
+    </cell>
+    <cell id="4">
+     <p>CANGURO</p>
+    </cell>
+    <cell id="3">
+     <p>PATO</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="5" cellWidth="140.0" cellHeight="70.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFF8000" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>PECES</p>
+    </cell>
+    <cell>
+     <p>ANFIBIOS</p>
+    </cell>
+    <cell>
+     <p>REPTILES</p>
+    </cell>
+    <cell>
+     <p>AVES</p>
+    </cell>
+    <cell>
+     <p>MAMÍFEROS</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@panels.Identify" name="aves01.ass">
+   <description>
+    <p>Propiedades de las aves</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Señala las características de las aves</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="filedone.wav" />
+     <p>¡Genial!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="4" columns="3" cellWidth="140.0" cellHeight="100.0" border="false" id="primary">
+    <style>
+     <font family="Arial Narrow" size="20" />
+     <color foreground="0x000080" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell id="1">
+     <p>Piel recubierta de plumas</p>
+    </cell>
+    <cell id="1">
+     <p>Respiración por pulmones</p>
+    </cell>
+    <cell id="1">
+     <p>Tienen alas</p>
+    </cell>
+    <cell id="0">
+     <p>Todos son capaces de volar</p>
+    </cell>
+    <cell id="1">
+     <p>Se reproducen por huevos</p>
+    </cell>
+    <cell id="1">
+     <p>Disponen de 2 patas</p>
+    </cell>
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="risa.wav" />
+     <p>Tienen también aletas natatorias</p>
+    </cell>
+    <cell id="1">
+     <p>Huesos ligeros (huecos) para facilitar el vuelo</p>
+    </cell>
+    <cell id="1">
+     <p>Sangre caliente</p>
+    </cell>
+    <cell id="0">
+     <p>Sangre fría</p>
+    </cell>
+    <cell id="0">
+     <p>Tienen mamas</p>
+    </cell>
+    <cell id="1">
+     <p>Patas con 4 dedos (1 hacia atrás)</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="caliente.sop">
+   <description>
+    <p>Animales de sangre caliente</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>Busca animales de sangre caliente</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <textGrid rows="11" columns="8" cellWidth="30.0" cellHeight="30.0" border="false">
+    <style>
+     <font family="Arial Narrow" size="20" />
+     <color foreground="0x000080" background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>MURCIELAGO*</row>
+     <row>***********</row>
+     <row>C**ZURTSEVA</row>
+     <row>A**********</row>
+     <row>B**ONIUGNIP</row>
+     <row>R***O******</row>
+     <row>A**S*******</row>
+     <row>**O**BUITRE</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">OSO</clue>
+    <clue id="1">CABRA</clue>
+    <clue id="2">PINGUINO</clue>
+    <clue id="3">BUITRE</clue>
+    <clue id="4">MURCIELAGO</clue>
+    <clue id="5">AVESTRUZ</clue>
+   </clues>
+   <cells rows="2" columns="3" border="false" image="sopa1.gif" id="secondary">
+    <style>
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="claves1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0x0000FF" background="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0x0000FF" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="210.0" cellHeight="220.0" border="false">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="claves2.ass" />
+     <p>Animal con esqueleto (interno o externo)</p>
+    </cell>
+    <cell image="brntsr2.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="claves2.ass" />
+    </cell>
+    <cell />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="claves10.ass" />
+     <p>Animal sin esqueleto (como mucho un caparazón)</p>
+    </cell>
+    <cell image="pulpo.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="claves10.ass" />
+    </cell>
+    <cell image="inicio.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="claves10.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>SIN ESQUELETO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="210.0" cellHeight="220.0" border="false">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="claves11.ass" />
+     <p>Con caparazón externo</p>
+    </cell>
+    <cell image="caparazo.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="claves11.ass" />
+    </cell>
+    <cell />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="desgusan.ass" />
+     <p>Sin ningún tipo de caparazón o partes duras</p>
+    </cell>
+    <cell image="gusanos.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="desgusan.ass" />
+    </cell>
+    <cell image="inicio.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="claves11.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>SIN ESQUELETO PERO CON CAPARAZÓN</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="210.0" cellHeight="220.0" border="false">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="desequin.ass" />
+     <p>Cuerpo simétrico, con 5 o más partes que tienen un eje central. El caparazón cubre todo el cuerpo</p>
+    </cell>
+    <cell image="estrell8.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="desequin.ass" />
+    </cell>
+    <cell />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="claves12.ass" />
+     <p>Cuerpo diferente. El caparazón cubre todo, parte o es interno al cuerpo</p>
+    </cell>
+    <cell image="caracol1.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="claves12.ass" />
+    </cell>
+    <cell image="inicio.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="claves12.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>MOLUSCOS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="210.0" cellHeight="220.0" border="false">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="descefal.ass" />
+     <p>Sin caparazón visible (interno). Prolongaciones largas con ventosas</p>
+    </cell>
+    <cell image="pulpo.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="descefal.ass" />
+    </cell>
+    <cell />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="claves13.ass" />
+     <p>Con caparazón visible</p>
+    </cell>
+    <cell image="capara.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="claves13.ass" />
+    </cell>
+    <cell image="inicio.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="claves13.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>MOLUSCOS CON CAPARAZÓN EXTERNO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="220.0" cellHeight="220.0" border="false">
+    <style>
+     <font family="Comic Sans MS" size="31" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="desgaste.ass" />
+     <p>Caparazón en espiral. El animal puede recogerse en su interior </p>
+    </cell>
+    <cell image="caracol1.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="desgaste.ass" />
+    </cell>
+    <cell />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="desbival.ass" />
+     <p>Caparazón en forma de dos hojas (valvas) que se abren y cierran</p>
+    </cell>
+    <cell image="concha1.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="desbival.ass" />
+    </cell>
+    <cell image="inicio.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="claves2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>ANIMALES CON ESQUELETO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="180.0" cellHeight="213.0" border="false">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="claves3.ass" />
+     <p>Esqueleto interno VERTEBRADOS</p>
+    </cell>
+    <cell image="canela.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="claves3.ass" />
+    </cell>
+    <cell />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="claves7.ass" />
+     <p>Esqueleto externo (que ayuda al movimiento, con articulaciones) ARTROPODOS</p>
+    </cell>
+    <cell image="cangrej6.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="claves7.ass" />
+    </cell>
+    <cell image="inicio.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="claves3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>VERTEBRADOS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="180.0" cellHeight="213.0" border="false">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="claves4.ass" />
+     <p>Animales con sangre caliente</p>
+    </cell>
+    <cell image="cebra1.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="claves4.ass" />
+    </cell>
+    <cell />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="claves5.ass" />
+     <p>Animales de sangre fría</p>
+    </cell>
+    <cell image="caiman7.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="claves5.ass" />
+    </cell>
+    <cell image="inicio.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="claves4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>VERTEBRADOS DE SANGRE CALIENTE</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="180.0" cellHeight="213.0" border="false">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="desaves.ass" />
+     <p>Con plumas y con alas. Ponen huevos</p>
+    </cell>
+    <cell image="pato5.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="desaves.ass" />
+    </cell>
+    <cell />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="desmamif.ass" />
+     <p>Con pelo. Nacen vivos.</p>
+    </cell>
+    <cell image="cabra1.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="desmamif.ass" />
+    </cell>
+    <cell image="inicio.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="claves5.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>VERTEBRADOS DE SANGRE FRIA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="180.0" cellHeight="213.0" border="false">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="despeces.ass" />
+     <p>Viven siempre en el agua. Respiran por branquias. Sin patas</p>
+    </cell>
+    <cell image="pez36.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="despeces.ass" />
+    </cell>
+    <cell />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="claves6.ass" />
+     <p>Sin todos esos caracteres a la vez</p>
+    </cell>
+    <cell image="anfirep1.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="claves6.ass" />
+    </cell>
+    <cell image="inicio.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="claves6.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>VERTEBRADOS DE SANGRE FRÍA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="140.0" cellHeight="184.0" border="false">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="desanfi.ass" />
+     <p>Piel desnuda y húmeda. Las larvas viven en el agua (renacuajos)</p>
+    </cell>
+    <cell image="rana5.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="desanfi.ass" />
+    </cell>
+    <cell />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="desrepti.ass" />
+     <p>Piel recubierta de escamas o placas duras.</p>
+    </cell>
+    <cell image="vibora01.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="desrepti.ass" />
+    </cell>
+    <cell image="inicio.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="claves7.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>ARTRÓPODOS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="140.0" cellHeight="184.0" border="false">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="claves8.ass" />
+     <p>Animales con seis o con ocho patas.</p>
+    </cell>
+    <cell image="arana4.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="claves8.ass" />
+    </cell>
+    <cell />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="claves9.ass" />
+     <p>Con 10 o más patas.</p>
+    </cell>
+    <cell image="milpies.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="claves9.ass" />
+    </cell>
+    <cell image="inicio.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="claves8.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>INSECTOS Y ARÁCNIDOS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="140.0" cellHeight="184.0" border="false">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="desinsec.ass" />
+     <p>Con seis patas.</p>
+    </cell>
+    <cell image="insecto8.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="desinsec.ass" />
+    </cell>
+    <cell />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="desaracn.ass" />
+     <p>Con 8 patas (a veces 2 palpos delante que no sirven para andar).</p>
+    </cell>
+    <cell image="arana4.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="desaracn.ass" />
+    </cell>
+    <cell image="inicio.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="claves9.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>CRUSTÁCEOS Y MIRIÁPODOS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="3" columns="2" cellWidth="140.0" cellHeight="184.0" border="false">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="descrust.ass" />
+     <p>Cuerpo con parte anterior diferente (cefalotórax), de la que salen las patas</p>
+    </cell>
+    <cell image="camaron.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="descrust.ass" />
+    </cell>
+    <cell />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="desmiria.ass" />
+     <p>Dividido en muchas partes iguales (segmentos) con patas en todas ellas.</p>
+    </cell>
+    <cell image="milpies.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="desmiria.ass" />
+    </cell>
+    <cell image="inicio.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.Explore" name="desanfi.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>ANFIBIOS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="5" columns="7" border="false" image="desanfib.gif" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="7" />
+    <ids>0 6 2 3 4 1 1 2 4 3 0 5 0 5 5 6 6 3 7 7 7 5 0 0 0 7 6 5 6 4 8 7 0 2 3</ids>
+   </cells>
+   <cells rows="4" columns="3" cellWidth="200.0" cellHeight="355.0" border="false" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>Piel desnuda, sin escamas, plumas ni pelo</p>
+    </cell>
+    <cell>
+     <p>Sufren metamorfosis (cambios de larva - adulto)</p>
+    </cell>
+    <cell>
+     <p>Las crías (cabezones), respiran por branquias</p>
+    </cell>
+    <cell>
+     <p>Los adultos respiran por pulmones y piel </p>
+    </cell>
+    <cell>
+     <p>Son animales de sangre fría</p>
+    </cell>
+    <cell>
+     <p>Fueron los primeros vertebrados terrestres</p>
+    </cell>
+    <cell>
+     <p>La piel debe permanecer húmeda para poder respirar</p>
+    </cell>
+    <cell>
+     <p>Se reproducen por huevos puestos en el agua</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="desaracn.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>ARÁCNIDOS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="5" columns="7" border="false" image="desaracn.gif" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="7" />
+    <ids>0 0 0 0 0 0 0 0 4 4 7 6 0 0 2 0 0 0 4 1 0 7 0 0 0 0 0 1 3 3 8 0 0 0 6</ids>
+   </cells>
+   <cells rows="4" columns="3" cellWidth="200.0" cellHeight="355.0" border="false" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>Artrópodos con 8 patas marchadoras. Además pueden tener más apéndices</p>
+    </cell>
+    <cell>
+     <p>No tienen antenas, pero sí palpos para ayudarse en la captura</p>
+    </cell>
+    <cell>
+     <p>Las arañas y escorpiones son carnívoros</p>
+    </cell>
+    <cell>
+     <p>Los ácaros suelen ser parásitos de otras especies</p>
+    </cell>
+    <cell>
+     <p>Los escorpiones tienen los palpos con pinzas semejantes a las de los cangrejos</p>
+    </cell>
+    <cell>
+     <p>Se reproducen por huevos</p>
+    </cell>
+    <cell>
+     <p>Tienen mudas a lo largo de la vida (cambian de esqueleto externo)</p>
+    </cell>
+    <cell>
+     <p>Las arañas tienen unas glándulas (hileras) que segregan una seda con la que tejen telarañas</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="desaves.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>AVES</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="5" columns="7" border="false" image="desaves.gif" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="7" />
+    <ids>0 6 4 6 0 3 7 7 0 0 9 5 0 0 0 8 0 1 0 0 4 6 7 2 2 5 5 1 2 3 10 4 0 5 0</ids>
+   </cells>
+   <cells rows="4" columns="3" cellWidth="200.0" cellHeight="355.0" border="false" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>Poseen plumas que les cubren la piel</p>
+    </cell>
+    <cell>
+     <p>Las extremidades anteriores sirven para el vuelo (alas)</p>
+    </cell>
+    <cell>
+     <p>No todas las aves pueden volar</p>
+    </cell>
+    <cell>
+     <p>Se reproducen mediante huevos, generalmente con cáscaras duras</p>
+    </cell>
+    <cell>
+     <p>Son animales de sangre caliente</p>
+    </cell>
+    <cell>
+     <p>En las patas tienen 4 dedos, uno de ellos dirigido hacia atrás</p>
+    </cell>
+    <cell>
+     <p>Tienen pico de consistencia córnea, sin dientes</p>
+    </cell>
+    <cell>
+     <p>Respiran por pulmones</p>
+    </cell>
+    <cell>
+     <p>Los huesos huecos les hacen más ligeros para el vuelo</p>
+    </cell>
+    <cell>
+     <p>Tienen buena visión estereoscópica</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+    <cell />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="desbival.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>BIVALVOS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="5" columns="7" border="false" image="desbival.gif" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="7" />
+    <ids>0 0 1 1 0 0 4 2 2 3 0 0 0 5 0 0 4 6 6 6 0 4 0 0 0 0 0 0 0 0 0 0 0 7 7</ids>
+   </cells>
+   <cells rows="8" columns="1" cellWidth="200.0" cellHeight="355.0" border="false" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="8" rows="1" />
+    <cell>
+     <p>Caparazón formado por dos valvas unidas en un punto que pueden cerrarse y abrirse</p>
+    </cell>
+    <cell>
+     <p>El interior de las valvas está recubierto de una sustancia blanca, el nácar</p>
+    </cell>
+    <cell>
+     <p>Las ostras producen capas de nácar en torno a impurezas, dando lugar a las perlas</p>
+    </cell>
+    <cell>
+     <p>Se alimentan filtrando el agua que les rodea y extrayendo las sustancias alimenticias</p>
+    </cell>
+    <cell>
+     <p>Se reproducen por huevos</p>
+    </cell>
+    <cell>
+     <p>Son siempre animales acuáticos. La mayor parte son de aguas saladas</p>
+    </cell>
+    <cell>
+     <p>Algunos tienen una sola valva y una ventosa que los une fuertemente a la roca (ej. las lapas)</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="descefal.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>CEFALÓPODOS (PULPOS, CALAMARES...)</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="5" columns="7" border="false" image="descefal.gif" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="7" />
+    <ids>0 0 0 0 0 0 0 0 0 0 0 0 2 2 0 0 3 3 5 0 0 0 0 3 0 4 5 0 1 0 0 0 0 6 7</ids>
+   </cells>
+   <cells rows="4" columns="3" cellWidth="200.0" cellHeight="355.0" border="false" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>Algunos presentan caparazón externo, pero son excepción</p>
+    </cell>
+    <cell>
+     <p>Muchos tienen una "pluma" interna que les da algo de rigidez</p>
+    </cell>
+    <cell>
+     <p>Poseen numerosas prolongaciones con ventosas que les permiten sujetarse</p>
+    </cell>
+    <cell>
+     <p>Se reproducen mediante huevos</p>
+    </cell>
+    <cell>
+     <p>Son animales de vida acuática</p>
+    </cell>
+    <cell>
+     <p>Tienen bien desarrollado el sentido visual</p>
+    </cell>
+    <cell>
+     <p>Suelen segregar líquidos oscuros que los ocultan para huír en caso de alarma</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="descrust.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>CRUSTÁCEOS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="5" columns="7" border="false" image="descrust.gif" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="7" />
+    <ids>0 -1 0 5 5 -1 0 0 5 5 0 1 5 2 2 4 4 3 2 2 0 3 3 2 0 0 0 1 4 4 6 -1 0 4 4</ids>
+   </cells>
+   <cells rows="7" columns="1" cellWidth="200.0" cellHeight="355.0" border="false" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="7" rows="1" />
+    <cell>
+     <p>Tienen el cuerpo dividido en dos zonas, cefalotórax y abdomen</p>
+    </cell>
+    <cell>
+     <p>Respiran por branquias</p>
+    </cell>
+    <cell>
+     <p>Las patas marchadoras se insertan en la parte inferior del cefalotórax</p>
+    </cell>
+    <cell>
+     <p>Se reproducen mediante huevos</p>
+    </cell>
+    <cell>
+     <p>La mayor parte son acuáticos, aunque hay algunos terrestres, como la cochinilla de la humedad</p>
+    </cell>
+    <cell>
+     <p>Existen gran variedad de tamaños y formas</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="desequin.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>EQUINODERMOS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="5" columns="7" border="false" image="desequin.gif" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="7" />
+    <ids>0 0 0 0 0 0 1 2 3 0 0 1 0 0 0 0 0 0 1 0 0 2 0 2 1 0 0 0 4 4 5 0 0 4 4</ids>
+   </cells>
+   <cells rows="6" columns="1" cellWidth="200.0" cellHeight="355.0" border="false" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>Un caparazón recubre parte o todo el cuerpo</p>
+    </cell>
+    <cell>
+     <p>El caparazón no ayuda al animal a moverse, sólo lo protege</p>
+    </cell>
+    <cell>
+     <p>Estructura radial (un centro con radios simétricos)</p>
+    </cell>
+    <cell>
+     <p>Los erizos de mar y las estrellas marinas son de este grupo</p>
+    </cell>
+    <cell>
+     <p>En los erizos, la maraña de púas oculta la forma simétrica radial</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="desgaste.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>GASTERÓPODOS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="5" columns="7" border="false" image="desgaste.gif" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="7" />
+    <ids>1 3 0 0 3 0 0 0 2 1 1 0 0 0 0 0 0 0 0 0 4 4 0 0 0 0 0 3 0 0 6 0 5 5 0</ids>
+   </cells>
+   <cells rows="7" columns="1" cellWidth="200.0" cellHeight="355.0" border="false" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="7" rows="1" />
+    <cell>
+     <p>Caparazón con forma espiral en el cual se puede retraer todo el animal</p>
+    </cell>
+    <cell>
+     <p>Se reproducen por huevos</p>
+    </cell>
+    <cell>
+     <p>Prolongaciones retráctiles en cuyos extremos tienen los órganos visuales</p>
+    </cell>
+    <cell>
+     <p>Los caracoles son hermafroditas (tienen los dos sexos en un mismo animal)</p>
+    </cell>
+    <cell>
+     <p>Hay  especies terrestres y acuáticas</p>
+    </cell>
+    <cell>
+     <p>Se desplazan arrastrándose</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="desgusan.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>ANÉLIDOS, NEMÁTODOS, CELENTÉREOS...</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="5" columns="7" border="false" image="desgusan.gif" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="7" />
+    <ids>0 0 -1 -1 -1 1 1 -1 4 4 2 3 -1 4 4 2 3 -1 4 0 2 3 1 0 0 -1 2 5 5 5 6 2 5 5 5</ids>
+   </cells>
+   <cells rows="7" columns="1" cellWidth="200.0" cellHeight="355.0" border="false" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="7" rows="1" />
+    <cell>
+     <p>Son muchos tipos diferentes, carentes de esqueleto</p>
+    </cell>
+    <cell>
+     <p>En muchos tipos el cuerpo está formado por segmentos semejantes</p>
+    </cell>
+    <cell>
+     <p>Grupos importantes son anélidos, nemátodos, platelmintos, celentéreos...</p>
+    </cell>
+    <cell>
+     <p>Las lombrices pertenecen a los anélidos</p>
+    </cell>
+    <cell>
+     <p>Las anémonas son celentéreos</p>
+    </cell>
+    <cell>
+     <p>Las sanguijuelas son anélidos no segmentados</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="desinsec.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>INSECTOS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="5" columns="7" border="false" image="desinsec.gif" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="7" />
+    <ids>-1 -1 7 1 1 -1 7 7 1 1 5 0 2 -1 -1 4 1 -1 -1 -1 0 -1 -1 2 0 0 5 1 -1 0 8 -1 5 5 0</ids>
+   </cells>
+   <cells rows="5" columns="2" cellWidth="200.0" cellHeight="355.0" border="false" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>Tienen 6 patas articuladas que salen del tórax</p>
+    </cell>
+    <cell>
+     <p>Algunos desarrollan 1 ó 2 pares de alas en el tórax</p>
+    </cell>
+    <cell>
+     <p>Cabeza con 1 par de antenas</p>
+    </cell>
+    <cell>
+     <p>Se reproducen mediante huevos</p>
+    </cell>
+    <cell>
+     <p>Ojos compuestos</p>
+    </cell>
+    <cell>
+     <p>Respiración traqueal</p>
+    </cell>
+    <cell>
+     <p>Algunos presentan metamorfosis</p>
+    </cell>
+    <cell>
+     <p>Las larvas son de formas variadas</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+    <cell />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="desmamif.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>MAMÍFEROS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="5" columns="7" border="false" image="desmamif.gif" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="7" />
+    <ids>2 2 4 3 3 1 2 4 7 7 4 5 4 1 7 0 1 1 1 1 4 4 7 0 0 7 6 6 0 3 9 6 8 6 8</ids>
+   </cells>
+   <cells rows="5" columns="2" cellWidth="200.0" cellHeight="355.0" border="false" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>Piel recubierta de pelo en mayor o menor extensión</p>
+    </cell>
+    <cell>
+     <p>Las hembras alimentan las crías con leche de las mamas</p>
+    </cell>
+    <cell>
+     <p>Hay mamíferos adaptados al vuelo</p>
+    </cell>
+    <cell>
+     <p>Hay mamíferos adaptados a la vida en el agua</p>
+    </cell>
+    <cell>
+     <p>Nacen vivos. Las crías se desarrollan dentro de la madre</p>
+    </cell>
+    <cell>
+     <p>Son animales de sangre caliente</p>
+    </cell>
+    <cell>
+     <p>Boca habitualmente provista de dientes de formas variables</p>
+    </cell>
+    <cell>
+     <p>Tamaños muy variados (hasta 35 m en las ballenas)</p>
+    </cell>
+    <cell>
+     <p>Respiran por pulmones</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="desmiria.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>MIRIÁPODOS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="5" columns="7" border="false" image="desmiria.gif" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="7" />
+    <ids>0 0 0 0 0 0 0 1 0 0 0 3 1 0 0 0 0 0 2 2 0 1 2 0 0 0 0 1 3 0 4 0 0 0 0</ids>
+   </cells>
+   <cells rows="5" columns="1" cellWidth="200.0" cellHeight="355.0" border="false" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="1" />
+    <cell>
+     <p>Estructura en segmentos semejantes que se repiten a lo largo del cuerpo</p>
+    </cell>
+    <cell>
+     <p>Cada segmento tiene uno (ciempiés) o dos (milpiés) pares de patas</p>
+    </cell>
+    <cell>
+     <p>Algunos son venenosos, como la escolopendra</p>
+    </cell>
+    <cell>
+     <p>Se reproducen por huevos</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="despeces.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>PECES</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="5" columns="7" border="false" image="despeces.gif" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="7" />
+    <ids>0 1 4 5 5 3 1 4 5 5 3 3 3 2 2 0 6 6 2 2 4 6 6 2 3 5 4 4 6 6 7 4 4 6 2</ids>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="200.0" cellHeight="355.0" border="false" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Piel recubierta de escamas</p>
+    </cell>
+    <cell>
+     <p>Respiran por branquias, a través de las cuales circula el agua</p>
+    </cell>
+    <cell>
+     <p>Tienen aletas (laterales, dorsales, caudales), que facilitan la natación</p>
+    </cell>
+    <cell>
+     <p>Se reproducen mediante huevos</p>
+    </cell>
+    <cell>
+     <p>Son animales de sangre fría</p>
+    </cell>
+    <cell>
+     <p>Algunos (tiburones), tienen esqueletos cartilaginosos</p>
+    </cell>
+    <cell>
+     <p>Viven exclusivamente en el agua</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="desrepti.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>REPTILES</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="5" columns="7" border="false" image="desrepti.gif" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="7" />
+    <ids>5 5 -1 2 -1 6 6 -1 2 2 4 4 -1 3 3 1 1 7 7 0 0 3 -1 -1 -1 -1 -1 0 1 2 8 1 0 4 3</ids>
+   </cells>
+   <cells rows="3" columns="3" cellWidth="200.0" cellHeight="355.0" border="false" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>Piel recubierta de escamas o placas duras</p>
+    </cell>
+    <cell>
+     <p>Las patas (si existen) ayudan a la locomoción </p>
+    </cell>
+    <cell>
+     <p>A este grupo pertenecieron los dinosaurios (ya extinguidos)</p>
+    </cell>
+    <cell>
+     <p>Se reproducen mediante huevos</p>
+    </cell>
+    <cell>
+     <p>Son animales de sangre fría</p>
+    </cell>
+    <cell>
+     <p>Hay muchos reptiles que carecen de patas (ofidios)</p>
+    </cell>
+    <cell>
+     <p>Respiran por pulmones</p>
+    </cell>
+    <cell>
+     <p>Abundan las especies carnívoras</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animalp.pac" />
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="fin.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000A0" background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>ESPERAMOS QUE LO HAYAS DISFRUTADO</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="30" bold="true" />
+      <color foreground="0x0000A0" background="0xFFFFFF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="1" columns="1" border="false" image="fin.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.Identify" name="mamif01.ass">
+   <description>
+    <p>Propiedades de los mamíferos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Señala las características de los mamíferos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="filedone.wav" />
+     <p>¡Bravo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="4" columns="3" cellWidth="140.0" cellHeight="100.0" border="false" id="primary">
+    <style>
+     <font family="Arial Narrow" size="20" />
+     <color foreground="0x000080" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell id="0">
+     <p>Piel recubierta de plumas</p>
+    </cell>
+    <cell id="1">
+     <p>Piel provista de pelo</p>
+    </cell>
+    <cell id="1">
+     <p>Respiración por pulmones</p>
+    </cell>
+    <cell id="0">
+     <p>Todos son capaces de volar</p>
+    </cell>
+    <cell id="0">
+     <p>Se reproducen por huevos</p>
+    </cell>
+    <cell id="1">
+     <p>Las crías salen vivas del vientre materno</p>
+    </cell>
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="risa.wav" />
+     <p>Tienen branquias y escamas, y son verdes</p>
+    </cell>
+    <cell id="0">
+     <p>Huesos ligeros (huecos) para facilitar el vuelo</p>
+    </cell>
+    <cell id="1">
+     <p>Sangre caliente</p>
+    </cell>
+    <cell id="0">
+     <p>Sangre fría</p>
+    </cell>
+    <cell id="1">
+     <p>Tienen mamas para alimentar las crías</p>
+    </cell>
+    <cell id="0">
+     <p>Patas con 4 dedos (1 hacia atrás)</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="marinos.sop">
+   <description>
+    <p>Animales que viven en el mar</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>Busca animales que viven en el mar</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <textGrid rows="11" columns="8" cellWidth="30.0" cellHeight="30.0" border="false">
+    <style>
+     <font family="Arial Narrow" size="20" />
+     <color foreground="0x000080" background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>*BALLENA***</row>
+     <row>A**********</row>
+     <row>N**NORUBIT*</row>
+     <row>E**********</row>
+     <row>M*******ZEP</row>
+     <row>O**********</row>
+     <row>N***PULPO**</row>
+     <row>A*CANGREJO*</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">TIBURON</clue>
+    <clue id="1">ANEMONA</clue>
+    <clue id="2">PULPO</clue>
+    <clue id="3">BALLENA</clue>
+    <clue id="4">PEZ</clue>
+    <clue id="5">CANGREJO</clue>
+   </clues>
+   <cells rows="2" columns="3" border="false" image="sopa2.gif" id="secondary">
+    <style>
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="peces01.ass">
+   <description>
+    <p>Propiedades de los peces</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Señala las características de los peces</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="filedone.wav" />
+     <p>¡Inmejorable!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="4" columns="3" cellWidth="140.0" cellHeight="100.0" border="false" id="primary">
+    <style>
+     <font family="Arial Narrow" size="17" bold="true" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell id="1">
+     <p>Piel con escamas</p>
+    </cell>
+    <cell id="1">
+     <p>Respiran por branquias</p>
+    </cell>
+    <cell id="1">
+     <p>Se desplazan con aletas</p>
+    </cell>
+    <cell id="1">
+     <p>Se reproducen por huevos</p>
+    </cell>
+    <cell id="0">
+     <p>Disponen de patas</p>
+    </cell>
+    <cell id="0">
+     <p>No tienen columna vertebral</p>
+    </cell>
+    <cell id="0">
+     <p>Son hervíboros</p>
+    </cell>
+    <cell id="0">
+     <p>Sangre caliente</p>
+    </cell>
+    <cell id="1">
+     <p>Sangre fría</p>
+    </cell>
+    <cell id="0">
+     <p>Son vivíparos</p>
+    </cell>
+    <cell id="0">
+     <p>No tienen esqueleto</p>
+    </cell>
+    <cell id="0">
+     <p>Tienen plumas</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="portada.ass">
+   <description>
+    <p>Portada alternativa</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="jungla.wav" />
+     <p />
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="1" columns="1" border="false" image="portada2.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="portada2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+     <p>Selecciona lo que quieres trabajar</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF0000" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="2" columns="2" cellWidth="229.0" cellHeight="220.0" border="false">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="claves1.ass" />
+     <p>CLASIFICAR</p>
+    </cell>
+    <cell image="brntsr2.gif">
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="claves1.ass" />
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animales.pac" />
+     <p>EJERCICIOS</p>
+    </cell>
+    <cell image="camello4.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="animales.pac" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.Identify" name="reptil01.ass">
+   <description>
+    <p>Propiedades de los reptiles</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Señala las características de los reptiles</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="filedone.wav" />
+     <p>Bueno....... ¡Cuánto sabes!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="false" />
+   </settings>
+   <cells rows="4" columns="3" cellWidth="140.0" cellHeight="100.0" border="false" id="primary">
+    <style>
+     <font family="Arial Narrow" size="20" />
+     <color foreground="0x000080" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell id="1">
+     <p>Piel con escamas duras</p>
+    </cell>
+    <cell id="0">
+     <p>Las larvas respiran por branquias</p>
+    </cell>
+    <cell id="1">
+     <p>Respiran por pulmones</p>
+    </cell>
+    <cell id="1">
+     <p>Se reproducen por huevos</p>
+    </cell>
+    <cell id="1">
+     <p>Algunos disponen de patas</p>
+    </cell>
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="risa.wav" />
+     <p>Desarrollan 2 pares de alas</p>
+    </cell>
+    <cell id="0">
+     <p>Su piel siempre está húmeda</p>
+    </cell>
+    <cell id="0">
+     <p>Sangre caliente</p>
+    </cell>
+    <cell id="1">
+     <p>Sangre fría</p>
+    </cell>
+    <cell id="0">
+     <p>Tienen mamas</p>
+    </cell>
+    <cell id="0">
+     <p>Tienen plumas</p>
+    </cell>
+    <cell id="1">
+     <p>Las patas ayudan en la locomoción </p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="abeja1.gif" file="abeja1.gif" animated="false" />
+  <media name="abeja4.gif" file="abeja4.gif" animated="false" />
+  <media name="aguil.gif" file="aguil.gif" animated="false" />
+  <media name="alce1.gif" file="alce1.gif" animated="false" />
+  <media name="anfirep1.gif" file="anfirep1.gif" animated="false" />
+  <media name="angelot1.gif" file="angelot1.gif" animated="false" />
+  <media name="arana4.gif" file="arana4.gif" animated="false" />
+  <media name="ardilla9.gif" file="ardilla9.gif" animated="false" />
+  <media name="ave19.gif" file="ave19.gif" animated="false" />
+  <media name="ave21.gif" file="ave21.gif" animated="false" />
+  <media name="ave23.gif" file="ave23.gif" animated="false" />
+  <media name="ballen9.gif" file="ballen9.gif" animated="false" />
+  <media name="boxer.gif" file="boxer.gif" animated="false" />
+  <media name="brntsr2.gif" file="brntsr2.gif" animated="false" />
+  <media name="buho3.gif" file="buho3.gif" animated="false" />
+  <media name="buitre.gif" file="buitre.gif" animated="false" />
+  <media name="caball11.gif" file="caball11.gif" animated="false" />
+  <media name="caballi4.gif" file="caballi4.gif" animated="false" />
+  <media name="cabra1.gif" file="cabra1.gif" animated="false" />
+  <media name="caiman7.gif" file="caiman7.gif" animated="false" />
+  <media name="camaron.gif" file="camaron.gif" animated="false" />
+  <media name="camello4.gif" file="camello4.gif" animated="false" />
+  <media name="camello5.gif" file="camello5.gif" animated="false" />
+  <media name="canela.gif" file="canela.gif" animated="false" />
+  <media name="cangrej6.gif" file="cangrej6.gif" animated="false" />
+  <media name="canguro.gif" file="canguro.gif" animated="false" />
+  <media name="capara.gif" file="capara.gif" animated="false" />
+  <media name="caparazo.gif" file="caparazo.gif" animated="false" />
+  <media name="caracol1.gif" file="caracol1.gif" animated="false" />
+  <media name="cebra1.gif" file="cebra1.gif" animated="false" />
+  <media name="cisne.gif" file="cisne.gif" animated="false" />
+  <media name="concha1.gif" file="concha1.gif" animated="false" />
+  <media name="conejo3.gif" file="conejo3.gif" animated="false" />
+  <media name="coyote2.gif" file="coyote2.gif" animated="false" />
+  <media name="cuernos1.gif" file="cuernos1.gif" animated="false" />
+  <media name="desanfib.gif" file="desanfib.gif" animated="false" />
+  <media name="desaracn.gif" file="desaracn.gif" animated="false" />
+  <media name="desaves.gif" file="desaves.gif" animated="false" />
+  <media name="desbival.gif" file="desbival.gif" animated="false" />
+  <media name="descefal.gif" file="descefal.gif" animated="false" />
+  <media name="descrust.gif" file="descrust.gif" animated="false" />
+  <media name="desequin.gif" file="desequin.gif" animated="false" />
+  <media name="desgaste.gif" file="desgaste.gif" animated="false" />
+  <media name="desgusan.gif" file="desgusan.gif" animated="false" />
+  <media name="desinsec.gif" file="desinsec.gif" animated="false" />
+  <media name="desmamif.gif" file="desmamif.gif" animated="false" />
+  <media name="desmiria.gif" file="desmiria.gif" animated="false" />
+  <media name="despeces.gif" file="despeces.gif" animated="false" />
+  <media name="desrepti.gif" file="desrepti.gif" animated="false" />
+  <media name="elefant1.gif" file="elefant1.gif" animated="false" />
+  <media name="esquelet.gif" file="esquelet.gif" animated="false" />
+  <media name="esquema.gif" file="esquema.gif" animated="false" />
+  <media name="estrell8.gif" file="estrell8.gif" animated="false" />
+  <media name="fin.gif" file="fin.gif" animated="false" />
+  <media name="gayo.gif" file="gayo.gif" animated="false" />
+  <media name="gorgosr.gif" file="gorgosr.gif" animated="false" />
+  <media name="gorila.gif" file="gorila.gif" animated="false" />
+  <media name="gusanos.gif" file="gusanos.gif" animated="false" />
+  <media name="halcon4.gif" file="halcon4.gif" animated="false" />
+  <media name="inicio.gif" file="inicio.gif" animated="false" />
+  <media name="insecto8.gif" file="insecto8.gif" animated="false" />
+  <media name="jabali.gif" file="jabali.gif" animated="false" />
+  <media name="jirafa2.gif" file="jirafa2.gif" animated="false" />
+  <media name="leopard1.gif" file="leopard1.gif" animated="false" />
+  <media name="libelul3.gif" file="libelul3.gif" animated="false" />
+  <media name="loro8.gif" file="loro8.gif" animated="false" />
+  <media name="milpies.gif" file="milpies.gif" animated="false" />
+  <media name="mirlo.gif" file="mirlo.gif" animated="false" />
+  <media name="mono.gif" file="mono.gif" animated="false" />
+  <media name="mosca1.gif" file="mosca1.gif" animated="false" />
+  <media name="nidogall.gif" file="nidogall.gif" animated="false" />
+  <media name="oruga.gif" file="oruga.gif" animated="false" />
+  <media name="oso1.gif" file="oso1.gif" animated="false" />
+  <media name="osopola1.gif" file="osopola1.gif" animated="false" />
+  <media name="panda1.gif" file="panda1.gif" animated="false" />
+  <media name="pato5.gif" file="pato5.gif" animated="false" />
+  <media name="pavo7.gif" file="pavo7.gif" animated="false" />
+  <media name="perrprad.gif" file="perrprad.gif" animated="false" />
+  <media name="pez27.gif" file="pez27.gif" animated="false" />
+  <media name="pez36.gif" file="pez36.gif" animated="false" />
+  <media name="pez37.gif" file="pez37.gif" animated="false" />
+  <media name="pinguin6.gif" file="pinguin6.gif" animated="false" />
+  <media name="pollito.gif" file="pollito.gif" animated="false" />
+  <media name="portada2.gif" file="portada2.gif" animated="false" />
+  <media name="pulpo.gif" file="pulpo.gif" animated="false" />
+  <media name="rana1.gif" file="rana1.gif" animated="false" />
+  <media name="rana5.gif" file="rana5.gif" animated="false" />
+  <media name="rata.gif" file="rata.gif" animated="false" />
+  <media name="saltamo.gif" file="saltamo.gif" animated="false" />
+  <media name="somorguj.gif" file="somorguj.gif" animated="false" />
+  <media name="sopa1.gif" file="sopa1.gif" animated="false" />
+  <media name="sopa2.gif" file="sopa2.gif" animated="false" />
+  <media name="tiburon6.gif" file="tiburon6.gif" animated="false" />
+  <media name="tigre3.gif" file="tigre3.gif" animated="false" />
+  <media name="toro1.gif" file="toro1.gif" animated="false" />
+  <media name="tortuga7.gif" file="tortuga7.gif" animated="false" />
+  <media name="tricrtp.gif" file="tricrtp.gif" animated="false" />
+  <media name="tucan2.gif" file="tucan2.gif" animated="false" />
+  <media name="vibora01.gif" file="vibora01.gif" animated="false" />
+  <media name="zorro.gif" file="zorro.gif" animated="false" />
+  <media name="aleluya.wav" file="aleluya.wav" />
+  <media name="applause.wav" file="applause.wav" />
+  <media name="bien.wav" file="bien.wav" />
+  <media name="fanfa.wav" file="fanfa.wav" />
+  <media name="filedone.wav" file="filedone.wav" />
+  <media name="gallo.wav" file="gallo.wav" />
+  <media name="glass.wav" file="glass.wav" />
+  <media name="jungla.wav" file="jungla.wav" />
+  <media name="muybien.wav" file="muybien.wav" />
+  <media name="risa.wav" file="risa.wav" />
+ </mediaBag>
+</JClicProject>
+

@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="movim1e" version="0.1.3">
+ <settings>
+  <title>movim1e</title>
+  <revision description="created" date="5/30/02" />
+  <descriptors />
+ </settings>
+ <sequence>
+  <item id="movim1e.pac" name="paq13int.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="movim1.ass" />
+  <item name="movim2.ass" />
+  <item name="movim3.ass" />
+  <item name="movim4.ass" />
+  <item name="trans0.ass" />
+  <item name="transl1.ass" />
+  <item name="trans21.ass" />
+  <item name="trans5.ass" />
+  <item name="trans7.ass" />
+  <item name="trans8.ass" />
+  <item name="paq13fi.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.Identify" name="movim1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica en qué casillas se ha realizado alguna traslación.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="movim1a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <ids>1 0 0 1 0 0</ids>
+   </cells>
+   <cells rows="2" cols="3" border="true" image="movim1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="movim2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica en qué casillas se ha realizado alguna traslación.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="movim2a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <ids>1 0 0 1 0 0</ids>
+   </cells>
+   <cells rows="2" cols="3" border="true" image="movim2c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="movim3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Identifica parejas de figuras relacionadas por traslaciones.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="6" border="false" image="movim3a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="4" />
+    <ids>1 0 0 1 1 1 1 1 1 0 1 0 0 1 0 1 0 0 0 0 0 1 1 0</ids>
+   </cells>
+   <cells rows="4" cols="6" border="false" image="movim3c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="6" rows="4" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="movim4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Relaciona cada vector con la traslación correspondiente.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" border="true" image="movim4a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <ids>0 1 2 3 4 5</ids>
+   </cells>
+   <cells rows="3" cols="2" border="true" image="movim4b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <cells rows="3" cols="2" border="true" image="movim4c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="paq13fi.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic sobre la flecha de la derecha para volver al menú         &gt;&gt;&gt;</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="portada1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="60.0" border="false">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>FIN DEL PAQUETE 13</p>
+    </cell>
+    <cell>
+     <p>TRASLACIONES EN EL PLANO</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="paq13int.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic sobre la flecha para iniciar el paquete de actividades         &gt;&gt;&gt;</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="portada1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="60.0" border="false">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>GEOCLIC - PAQUETE 13</p>
+    </cell>
+    <cell>
+     <p>TRASLACIONES EN EL PLANO</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="trans0.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Relaciona cada vector con sus componentes.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="movim9a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <ids>6 4 0 2 1 3 5 7 4</ids>
+   </cells>
+   <cells rows="4" cols="2" border="true" image="movim9b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+   </cells>
+   <cells rows="3" cols="3" border="false" image="movim9c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="trans21.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Escribe el vector traslación que lleva el triángulo A sobre el triángulo B (Pon los paréntesis y no pongas espacios en blanco).</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="false" image="trans2a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <cells rows="2" cols="2" cellWidth="100.0" cellHeight="70.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>(-3,1)</p>
+    </cell>
+    <cell>
+     <p>(-4,-5)</p>
+    </cell>
+    <cell>
+     <p>(6,4)</p>
+    </cell>
+    <cell>
+     <p>(-8,4)</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" border="false" image="trans2c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="trans5.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Haz clic en el sitio aproximado donde va a parar esta figura si se le aplica una traslación de vector (6,8).</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="8" border="false" image="trans5a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="8" rows="4" showEnclosure="true" scaleX="8.0" scaleY="4.0">
+     <enclosing>
+      <shape>rectangle:0,0,8,4</shape>
+     </enclosing>
+     <shape>M:0,0|L:0,1|L:0,2|L:0,3|L:0,4|L:8,4|L:8,3|L:8,2|L:8,1|L:8,0|L:6,0|L:6,1|L:5,1|L:5,0|X</shape>
+     <shape>rectangle:5,0,1,1</shape>
+    </shaper>
+    <ids>0 1</ids>
+   </cells>
+   <cells rows="4" cols="8" border="false" image="trans5c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="8" rows="4" showEnclosure="true" scaleX="8.0" scaleY="4.0">
+     <enclosing>
+      <shape>rectangle:0,0,8,4</shape>
+     </enclosing>
+     <shape>M:0,0|L:0,1|L:0,2|L:0,3|L:0,4|L:8,4|L:8,3|L:8,2|L:8,1|L:8,0|L:6,0|L:6,1|L:5,1|L:5,0|X</shape>
+     <shape>rectangle:5,0,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@panels.Identify" name="trans7.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Haz clic en el sitio aproximado donde va a parar esta figura si se le aplica una traslación de vector (-6,6).</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="8" border="false" image="trans7a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="8" rows="4" showEnclosure="true" scaleX="8.0" scaleY="4.0">
+     <enclosing>
+      <shape>rectangle:0,0,8,4</shape>
+     </enclosing>
+     <shape>M:0,0|L:0,1|L:0,2|L:0,3|L:0,4|L:8,4|L:8,3|L:8,2|L:8,1|L:8,0|L:2,0|L:2,1|L:1,1|L:1,0|X</shape>
+     <shape>rectangle:1,0,1,1</shape>
+    </shaper>
+    <ids>0 1</ids>
+   </cells>
+   <cells rows="4" cols="8" border="false" image="trans7c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="8" rows="4" showEnclosure="true" scaleX="8.0" scaleY="4.0">
+     <enclosing>
+      <shape>rectangle:0,0,8,4</shape>
+     </enclosing>
+     <shape>M:0,0|L:0,1|L:0,2|L:0,3|L:0,4|L:8,4|L:8,3|L:8,2|L:8,1|L:8,0|L:2,0|L:2,1|L:1,1|L:1,0|X</shape>
+     <shape>rectangle:1,0,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@panels.Identify" name="trans8.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Haz clic en el sitio aproximado donde va a parar esta figura si se le aplica una traslación de vector (-1,-6).</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="8" border="false" image="trans8a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="8" rows="4" showEnclosure="true" scaleX="8.0" scaleY="4.0">
+     <enclosing>
+      <shape>rectangle:0,0,8,4</shape>
+     </enclosing>
+     <shape>M:0,0|L:0,1|L:0,2|L:0,3|L:0,4|L:3,4|L:3,3|L:4,3|L:4,4|L:8,4|L:8,3|L:8,2|L:8,1|L:8,0|X</shape>
+     <shape>rectangle:3,3,1,1</shape>
+    </shaper>
+    <ids>0 1</ids>
+   </cells>
+   <cells rows="4" cols="8" border="false" image="trans8c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="8" rows="4" showEnclosure="true" scaleX="8.0" scaleY="4.0">
+     <enclosing>
+      <shape>rectangle:0,0,8,4</shape>
+     </enclosing>
+     <shape>M:0,0|L:0,1|L:0,2|L:0,3|L:0,4|L:3,4|L:3,3|L:4,3|L:4,4|L:8,4|L:8,3|L:8,2|L:8,1|L:8,0|X</shape>
+     <shape>rectangle:3,3,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="transl1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Relaciona cada vector traslación con sus componentes.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="false" image="transl1a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <ids>0 1 2 3</ids>
+   </cells>
+   <cells rows="4" cols="2" border="true" image="transl1b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+   </cells>
+   <cells rows="2" cols="2" border="false" image="transl1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="movim1a.gif" file="movim1a.gif" animated="false" />
+  <media name="movim1c.gif" file="movim1c.gif" animated="false" />
+  <media name="movim2a.gif" file="movim2a.gif" animated="false" />
+  <media name="movim2c.gif" file="movim2c.gif" animated="false" />
+  <media name="movim3a.gif" file="movim3a.gif" animated="false" />
+  <media name="movim3c.gif" file="movim3c.gif" animated="false" />
+  <media name="movim4a.gif" file="movim4a.gif" animated="false" />
+  <media name="movim4b.gif" file="movim4b.gif" animated="false" />
+  <media name="movim4c.gif" file="movim4c.gif" animated="false" />
+  <media name="movim9a.gif" file="movim9a.gif" animated="false" />
+  <media name="movim9b.gif" file="movim9b.gif" animated="false" />
+  <media name="movim9c.gif" file="movim9c.gif" animated="false" />
+  <media name="portada1.gif" file="portada1.gif" animated="false" />
+  <media name="trans2a.gif" file="trans2a.gif" animated="false" />
+  <media name="trans2c.gif" file="trans2c.gif" animated="false" />
+  <media name="trans5a.gif" file="trans5a.gif" animated="false" />
+  <media name="trans5c.gif" file="trans5c.gif" animated="false" />
+  <media name="trans7a.gif" file="trans7a.gif" animated="false" />
+  <media name="trans7c.gif" file="trans7c.gif" animated="false" />
+  <media name="trans8a.gif" file="trans8a.gif" animated="false" />
+  <media name="trans8c.gif" file="trans8c.gif" animated="false" />
+  <media name="transl1a.gif" file="transl1a.gif" animated="false" />
+  <media name="transl1b.gif" file="transl1b.gif" animated="false" />
+  <media name="transl1c.gif" file="transl1c.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

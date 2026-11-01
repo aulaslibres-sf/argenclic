@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="mas_menos_cuarto_6" version="0.1.3">
+ <settings>
+  <title>Las horas del reloj</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="2/15/08" />
+  <revision description="Conversión de Clic3 a JClic" date="2/15/08">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Tomás Fernández García" mail="tfernandez411@telefonica.net" />
+  <organization name="CP Ausiàs March" city="Alacant" state="País Valencià" />
+  <language>español</language>
+  <description>
+   <p>Proyecto de actividades dirigido a educación primaria  que teine como objetivo principal el aprendizaje y uso del reloj de forma práctica y sistemática. El proyecto tiene más de ciento cincuenta actividades y está dividido en seis partes:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Historia de relojes</p>
+   <p>&lt;LI&gt;En punto</p>
+   <p>&lt;LI&gt;Y media</p>
+   <p>&lt;LI&gt;Y cuarto, menos cuarto</p>
+   <p>&lt;LI&gt;Otras horas</p>
+   <p>&lt;LI&gt;Internet</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area="Matemáticas" level="Primaria (6-12)">tiempo</descriptors>
+  <skin file="@orange.xml" />
+ </settings>
+ <sequence>
+  <item id="start" name="puzzle digital">
+   <jump tag="fin" project="mas menos cuarto 5.jclic" id="back" />
+  </item>
+  <item name="cuanto tiempo pasa_2" />
+  <item name="orden_2" />
+  <item name="cuanto tiempo pasa_3" />
+  <item name="orden_3" />
+  <item name="cuanto tiempo pasa_4" />
+  <item name="orden 4" />
+  <item id="fin" name="final 1er ciclo">
+   <jump tag="inicio" project="horas.zip" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.ComplexAssociation" name="cuanto tiempo pasa_2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFCC66" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="cuanto ha pasado.wav" />
+     <p>¿CUÁNTO  TIEMPO  HA  PASADO  ENTRE  LOS  DOS  RELOJES?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="estupendo.wav" />
+     <p>¡¡¡  ESTUPENDO !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo2.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="282.0" cellHeight="135.0" border="false" id="primary">
+    <style borderStroke="2.9" markerStroke="2.7">
+     <color background="0xFFFFFF" shadow="0xFFFFFF" inactive="0xFFFFFF" border="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="1" border="false" image="van ana 7.jpg" />
+    <cell id="4" border="false" image="van ana 8.jpg" />
+    <cell id="1" border="false" image="van ana 9.jpg" />
+   </cells>
+   <cells rows="2" cols="4" cellWidth="112.0" cellHeight="87.0" border="true" id="secondary">
+    <style borderStroke="3.6" markerStroke="2.7">
+     <color background="0xFFFFCC" inactive="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>2 horas </p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>1 hora y media</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>3 horas y media</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>1 hora</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>Media hora</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>2 horas y media</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>5 horas</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>5 horas y media</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="cuanto tiempo pasa_3" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFCC66" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="cuanto ha pasado.wav" />
+     <p>¿CUÁNTO  TIEMPO  HA  PASADO  ENTRE  LOS  DOS  RELOJES?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="correcto.wav" />
+     <p>¡¡¡  CORRECTO !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo2.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="282.0" cellHeight="135.0" border="false" id="primary">
+    <style borderStroke="2.9" markerStroke="2.7">
+     <color background="0xFFFFFF" shadow="0xFFFFFF" inactive="0xFFFFFF" border="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="5" border="false" image="van dig 4.jpg" />
+    <cell id="1" border="false" image="van dig 5.jpg" />
+    <cell id="5" border="false" image="van dig 6.jpg" />
+   </cells>
+   <cells rows="2" cols="4" cellWidth="112.0" cellHeight="87.0" border="true" id="secondary">
+    <style borderStroke="3.6" markerStroke="2.7">
+     <color background="0xFFFFCC" inactive="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>2 horas y tres cuartos</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>2 horas y media</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>3 horas y media</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>2 horas</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>2 horas y un cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>1 hora y tres cuartos</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>1 horas y un cuarto</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>1 hora y media</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="cuanto tiempo pasa_4" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFCC66" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="cuanto ha pasado.wav" />
+     <p>¿CUÁNTO  TIEMPO  HA  PASADO  ENTRE  LOS  DOS  RELOJES?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="muy bien.wav" />
+     <p>¡¡¡  MUY BIEN !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo2.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="282.0" cellHeight="135.0" border="false" id="primary">
+    <style borderStroke="2.9" markerStroke="2.7">
+     <color background="0xFFFFFF" shadow="0xFFFFFF" inactive="0xFFFFFF" border="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="0" border="false" image="van ana dig 4.jpg" />
+    <cell id="2" border="false" image="van ana dig 5.jpg" />
+    <cell id="5" border="false" image="van ana dig 6.jpg" />
+   </cells>
+   <cells rows="2" cols="4" cellWidth="112.0" cellHeight="87.0" border="true" id="secondary">
+    <style borderStroke="3.6" markerStroke="2.7">
+     <color background="0xFFFFCC" inactive="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>2 horas </p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>2 horas y tres cuartos</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>2 horas y media</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>1 hora</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>3 horas</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>1 hora y tres cuartos</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>1 hora y media</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.7" markerStroke="2.7">
+      <color background="0xFFFFCC" border="0x0066FF" />
+     </style>
+     <p>2 horas y cuarto</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="final 1er ciclo" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="1" file="final.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="443.0" cellHeight="125.0" border="false">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFF0000" background="0xFFFFFF" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell image="ALEGRIA.jpg">
+     <style>
+      <font family="Century Gothic" size="17" bold="true" />
+      <color foreground="0xFF3333" background="0xFFFFFF" border="0xFFFFFF" />
+     </style>
+     <p>¡¡  ENHORABUENA  !! </p>
+     <p>HAS TERMINADO LAS ACTIVIDADES DE ESTE GRUPO.</p>
+    </cell>
+    <cell txtAlign="middle,top" imgAlign="middle,top" image="flecha adelante.jpg">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0x0033FF" background="0xFFFFFF" border="0xFFFFFF" />
+     </style>
+     <p>............ PINCHA EN                      Y DESPUÉS ELIJE </p>
+     <p>                                                                                              OTRO PAQUETE DE ACTIVIDADES</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.Order" name="orden 4" code="" type="orderParagraphs">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFCC66" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="ordena horas 4-00.wav" />
+     <p>ORDENA ESTAS HORAS DE MÁS TEMPRANO A MÁS TARDE </p>
+     <p>Comienza por las 4 en punto</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="muy bien.wav" />
+     <p>¡¡¡  MUY      BIEN  !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo2.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true">
+     <size width="249" height="334" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" size="18" family="Arial" tabWidth="12" bold="false" italic="false" background="0xFFFFFF" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p family="Arial" background="0xFFFFFF">
+      <target>Las 4 en punto.</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>Las 4 y media.</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>Las 5 menos cuarto.</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>Las 5 y cuarto.</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>Las 6 menos cuarto.</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>Las 6 en punto.</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>Las 6 y cuarto.</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>Las 6 y media.</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>Las 7 en punto.</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>Las 7 y cuarto. </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>Las 7 y media.</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>Las 8 menos cuarto.</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>Las 8 y cuarto.</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF" />
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="orden_2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFCC66" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="ordena horas 1-45.wav" />
+     <p>ORDENA ESTAS HORAS DE MÁS TEMPRANO A MÁS TARDE </p>
+     <p>Comienza por las 2 menos cuarto</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="correcto.wav" />
+     <p>¡¡¡  CORRECTO   !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo2.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="1" cols="8" border="false" image="orden 3.jpg">
+    <style borderStroke="2.9" markerStroke="2.7">
+     <color background="0xFFFFFF" shadow="0xFFFFFF" inactive="0xFFFFFF" border="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="8" rows="1" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="orden_3" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFCC66" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="ordena horas 4-45.wav" />
+     <p>ORDENA ESTAS HORAS DE MÁS TEMPRANO A MÁS TARDE </p>
+     <p>Comienza en las 5 menos cuarto</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="estupendo.wav" />
+     <p>¡¡¡  ESTUPENDO   !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo2.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="1" cols="9" border="false" image="orden 4.jpg">
+    <style borderStroke="2.9" markerStroke="2.7">
+     <color background="0xFFFFFF" shadow="0xFFFFFF" inactive="0xFFFFFF" border="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="9" rows="1" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="puzzle digital" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFCC66" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="animate y forma puzzle.wav" />
+     <p>ANÍMATE Y FORMA EL PUZZLE DEL RELOJ</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="lo conseguiste.wav" />
+     <p>¡¡ LO CONSEGUISTE !!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo2.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="false" image="relojes 3.jpg">
+    <style borderStroke="2.9" markerStroke="2.7">
+     <color background="0xFFFFFF" shadow="0xFFFFFF" inactive="0xFFFFFF" border="0x3399FF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="ALEGRIA.jpg" file="alegria.jpg" />
+  <media name="flecha adelante.jpg" file="i02_flecha_adelante.jpg" />
+  <media name="orden 3.jpg" file="orden_3.jpg" />
+  <media name="orden 4.jpg" file="orden_4.jpg" />
+  <media name="relojes 3.jpg" file="relojes_3.jpg" />
+  <media name="tiempo.jpg" file="i02_tiempo.jpg" />
+  <media name="tiempo2.jpg" file="tiempo2.jpg" />
+  <media name="van ana 7.jpg" file="van_ana_7.jpg" />
+  <media name="van ana 8.jpg" file="van_ana_8.jpg" />
+  <media name="van ana 9.jpg" file="van_ana_9.jpg" />
+  <media name="van ana dig 4.jpg" file="van_ana_dig_4.jpg" />
+  <media name="van ana dig 5.jpg" file="van_ana_dig_5.jpg" />
+  <media name="van ana dig 6.jpg" file="van_ana_dig_6.jpg" />
+  <media name="van dig 4.jpg" file="van_dig_4.jpg" />
+  <media name="van dig 5.jpg" file="van_dig_5.jpg" />
+  <media name="van dig 6.jpg" file="van_dig_6.jpg" />
+  <media name="animate y forma puzzle.wav" file="animate_y_forma_puzzle.wav" />
+  <media name="correcto.wav" file="correcto.wav" />
+  <media name="cuanto ha pasado.wav" file="cuanto_ha_pasado.wav" />
+  <media name="estupendo.wav" file="estupendo.wav" />
+  <media name="final.wav" file="final.wav" />
+  <media name="lo conseguiste.wav" file="lo_conseguiste.wav" />
+  <media name="muy bien.wav" file="muy_bien.wav" />
+  <media name="ordena horas 1-45.wav" file="ordena_horas_1_45.wav" />
+  <media name="ordena horas 4-00.wav" file="ordena_horas_4_00.wav" />
+  <media name="ordena horas 4-45.wav" file="ordena_horas_4_45.wav" />
+ </mediaBag>
+</JClicProject>
+

@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="paint" version="0.1.3">
+ <settings>
+  <title>¿Cuánto sabés de Paint?</title>
+  <revision description="created" date="5/3/05" />
+  <author name="Alejandro Dellafiore" mail="adellafiore@hotmail.com" url="www.argenclic.com.ar" organization="ArgenClic" />
+  <description>
+   <p>Paquete que repasa las herramientas de PaintBrush</p>
+  </description>
+  <descriptors area="Informática" level="Inicial, EGB" />
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Paquete que repasa las herramientas de PaintBrush</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="paint.pac" name="caratula.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="exppaint.ass" />
+  <item name="herram1.ass" />
+  <item name="herram2.ass" />
+  <item name="herram3.ass" />
+  <item name="herram4.ass" />
+  <item name="herram5.ass" />
+  <item name="herram6.ass" />
+  <item name="textopai.txa" />
+  <item name="sopapain.sop" />
+  <item name="memotest.puz" />
+  <item name="usos.ass" />
+  <item name="usos2.ass" />
+  <item name="usos3.ass" />
+  <item name="usos4.ass" />
+  <item name="usos5.ass" />
+  <item name="memo2t.puz" />
+  <item name="final.ass">
+   <jump tag="paint.pac" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="caratula.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Tahoma" size="32" />
+      <color foreground="0x408080" />
+     </style>
+     <p>¿Vamos a repasar las herramientas del PAINT?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Tahoma" size="32" />
+      <color foreground="0x408080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="false" image="tapon2.gif">
+    <style>
+     <font family="Arial" size="12" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@panels.Explore" name="exppaint.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>RECORDAMOS NUESTRA HOJA DE PAINT - Señala y lee</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="7" cols="7" border="false" image="pantalla.gif" id="primary">
+    <style>
+     <font family="Arial" size="15" />
+     <color foreground="0xFFFFFF" background="0x0000A0" />
+    </style>
+    <shaper class="@Holes" cols="7" rows="7" scaleX="7.0" scaleY="7.0">
+     <enclosing>
+      <shape>rectangle:0,0,7,7</shape>
+     </enclosing>
+     <shape>rectangle:1,0,5,1</shape>
+     <shape>rectangle:6,0,1,1</shape>
+     <shape>M:0,1|L:0,2|L:0,3|L:0,4|L:0,5|L:0,6|L:1,6|L:1,5|L:1,4|L:1,3|L:1,2|L:1,1|X</shape>
+     <shape>M:1,1|L:1,2|L:1,3|L:1,4|L:1,5|L:6,5|L:6,4|L:6,3|L:6,2|L:6,1|X</shape>
+     <shape>M:6,1|L:6,2|L:6,3|L:6,4|L:6,5|L:6,6|L:7,6|L:7,5|L:7,4|L:7,3|L:7,2|L:7,1|X</shape>
+     <shape>rectangle:1,5,5,1</shape>
+     <shape>rectangle:1,6,1,1</shape>
+     <shape>rectangle:2,6,4,1</shape>
+    </shaper>
+    <ids>1 5 0 3 6 7 4 2</ids>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="251.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="15" />
+     <color foreground="0xFFFFFF" background="0x0000A0" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>BARRA DE HERRAMIENTAS</p>
+    </cell>
+    <cell>
+     <p>BARRA DE MENUES</p>
+    </cell>
+    <cell>
+     <p>PALETA DE COLORES</p>
+    </cell>
+    <cell>
+     <p>HOJA DE TRABAJO</p>
+    </cell>
+    <cell>
+     <p>COLORES ACTIVOS</p>
+    </cell>
+    <cell>
+     <p>BOTONES MINIMIZAR-MAXIMIZAR-CERRAR</p>
+    </cell>
+    <cell>
+     <p>BARRA DESPLAZAMIENTO VERTICAL</p>
+    </cell>
+    <cell>
+     <p>BARRA DESPLAZAMIENTO HORIZONTAL</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="final.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial Narrow" size="30" bold="true" />
+      <color foreground="0xFFFF00" background="0x800040" />
+     </style>
+     <p>Adiós amiguito!</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial Narrow" size="30" bold="true" />
+      <color foreground="0xFFFF00" background="0x800040" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="false" image="tapita.gif">
+    <style>
+     <font family="Arial Narrow" size="30" bold="true" />
+     <color foreground="0xFFFF00" background="0x800040" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="herram1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Tahoma" size="32" />
+      <color foreground="0x0000FF" />
+     </style>
+     <p>RELACIONA CADA BOTON CON SU USO.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Tahoma" size="32" />
+      <color foreground="0x0000FF" />
+     </style>
+     <p>¡CORRECTO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="2" cellWidth="100.0" cellHeight="90.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell image="bgoma.gif" />
+    <cell image="bselecc.gif" />
+    <cell image="blapiz.gif" />
+    <cell image="baerog.gif" />
+    <cell image="brelleno.gif" />
+    <cell image="bpincel.gif" />
+    <cell image="btexto.gif" />
+    <cell image="blibre.gif" />
+   </cells>
+   <cells rows="4" cols="2" cellWidth="200.0" cellHeight="90.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell image="goma.gif" />
+    <cell image="selecc.gif" />
+    <cell image="lapiz.gif" />
+    <cell image="aerog.gif" />
+    <cell image="relleno.gif" />
+    <cell image="pincel.gif" />
+    <cell image="texto.gif" />
+    <cell image="libre.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="herram2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Tahoma" size="32" />
+      <color foreground="0x0000FF" />
+     </style>
+     <p>RELACIONA CADA BOTON CON SU USO.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Tahoma" size="32" />
+      <color foreground="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="2" cellWidth="100.0" cellHeight="90.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell image="bcurva.gif" />
+    <cell image="bcuadra.gif" />
+    <cell image="bgotero.gif" />
+    <cell image="blupa.gif" />
+    <cell image="bcuadred.gif" />
+    <cell image="bflibre.gif" />
+    <cell image="blinea.gif" />
+    <cell image="bovalo.gif" />
+   </cells>
+   <cells rows="4" cols="2" cellWidth="200.0" cellHeight="90.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell image="curva.gif" />
+    <cell image="cuadrado.gif" />
+    <cell image="gotero.gif" />
+    <cell image="lupa.gif" />
+    <cell image="cuadred.gif" />
+    <cell image="poligono.gif" />
+    <cell image="linea.gif" />
+    <cell image="ovalo.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="herram3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+     </style>
+     <p>¿CON QUÉ HERRAMIENTA ESCRIBO MI NOMBRE?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+     </style>
+     <p>¡BIEN HECHO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="130.0" cellHeight="110.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="16" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0" image="bgoma.gif" />
+    <cell id="0" image="bselecc.gif" />
+    <cell id="0" image="blapiz.gif" />
+    <cell id="1" image="btexto.gif" />
+    <cell id="0" image="brelleno.gif" />
+    <cell id="0" image="bpincel.gif" />
+    <cell id="0" image="baerog.gif" />
+    <cell id="0" image="blibre.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="herram4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+     </style>
+     <p>¿CON QUÉ HERRAMIENTA BORRO?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+     </style>
+     <p>¡Excelente!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="130.0" cellHeight="110.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="16" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0" image="btexto.gif" />
+    <cell id="0" image="bcuadra.gif" />
+    <cell id="0" image="blapiz.gif" />
+    <cell id="1" image="bgoma.gif" />
+    <cell id="0" image="brelleno.gif" />
+    <cell id="0" image="bpincel.gif" />
+    <cell id="0" image="baerog.gif" />
+    <cell id="0" image="blibre.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="herram5.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+     </style>
+     <p>¿CON QUÉ HERRAMIENTA DIBUJO UN CIRCULO?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="16" bold="true" />
+     </style>
+     <p>¡Vamos todavía!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="130.0" cellHeight="110.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="16" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0" image="btexto.gif" />
+    <cell id="0" image="blupa.gif" />
+    <cell id="0" image="blapiz.gif" />
+    <cell id="1" image="bovalo.gif" />
+    <cell id="0" image="brelleno.gif" />
+    <cell id="0" image="bpincel.gif" />
+    <cell id="0" image="bgoma.gif" />
+    <cell id="0" image="blibre.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="herram6.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+     </style>
+     <p>SEÑALA LA HERRAMIENTA QUE PERMITE HACER UN CUADRADO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+     </style>
+     <p>¡ Correcto !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000A0" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="130.0" cellHeight="110.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="15" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0" image="bcurva.gif" />
+    <cell id="0" image="bgotero.gif" />
+    <cell id="1" image="bcuadra.gif" />
+    <cell id="0" image="blupa.gif" />
+    <cell id="0" image="bcuadred.gif" />
+    <cell id="0" image="bflibre.gif" />
+    <cell id="0" image="blinea.gif" />
+    <cell id="0" image="bovalo.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="memo2t.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Tahoma" size="32" />
+      <color foreground="0x800040" />
+     </style>
+     <p>¿Cómo andamos de memoria?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Tahoma" size="32" />
+      <color foreground="0x800040" />
+     </style>
+     <p>¡ Muy bueno!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="memo2.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" inactive="0x9D3CFF" alternative="0x9D3CFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="memotest.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Tahoma" size="32" />
+      <color foreground="0x800040" />
+     </style>
+     <p>¿Cómo andamos de memoria?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Tahoma" size="32" />
+      <color foreground="0x800040" />
+     </style>
+     <p>¡ Muy bueno!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="memo.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" inactive="0x0080FF" alternative="0x0080FF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="sopapain.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Tahoma" size="31" />
+      <color foreground="0xFFFFFF" background="0x800040" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>BUSCA EL NOMBRE DE 10 HERRAMIENTAS DEL PAINT</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Tahoma" size="31" />
+      <color foreground="0xFFFFFF" background="0x800040" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>¡ QUÉ GRAN ESFUERZO !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="18" columns="10" cellWidth="30.0" cellHeight="30.0" border="true">
+    <style>
+     <font family="Tahoma" size="32" />
+     <color foreground="0x0000A0" background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>*RELLENO-COLOR****</row>
+     <row>***A********V***G*</row>
+     <row>***PINCEL***A***O*</row>
+     <row>***I****I***L***T*</row>
+     <row>***Z****N**GOMA*E*</row>
+     <row>********E*******R*</row>
+     <row>****RECTANGULO**O*</row>
+     <row>******************</row>
+     <row>**AEROGRAFO*******</row>
+     <row>********CURVA*****</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">RELLENO-COLOR</clue>
+    <clue id="1">LAPIZ</clue>
+    <clue id="2">PINCEL</clue>
+    <clue id="3">OVALO</clue>
+    <clue id="4">GOMA</clue>
+    <clue id="5">GOTERO</clue>
+    <clue id="6">RECTANGULO</clue>
+    <clue id="7">AEROGRAFO</clue>
+    <clue id="8">CURVA</clue>
+    <clue id="9">LINEA</clue>
+   </clues>
+  </activity>
+  <activity class="@text.FillInBlanks" name="textopai.txa" autoJump="true" forceOkToAdvance="true">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Tahoma" size="32" />
+      <color foreground="0xFF0000" />
+     </style>
+     <p>ELIGE DE LA LISTA LA HERRAMIENTA CORRECTA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Tahoma" size="32" />
+      <color foreground="0xFF0000" />
+     </style>
+     <p>¡Buenísimo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF8080">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true">
+     <size width="540" height="350" />
+    </window>
+   </settings>
+   <document>
+    <style name="target" base="default" background="0xFFFFFF" target="true" foreground="0x0000FF" />
+    <style name="default" background="0xFFFFFF" foreground="0x000000" tabWidth="12" bold="false" size="15" family="Arial" italic="false" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0xFFFFFF" name="default" foreground="0x000000" family="Arial" size="15" bold="false" italic="false">
+      <cell txtAlign="left,middle" imgAlign="left,middle" width="520" height="60" border="false">
+       <style>
+        <font family="Arial" size="20" bold="true" />
+        <color foreground="0xFF0000" background="0xFFFFFF" inactive="0xFFFFFF" alternative="0xFFFFFF" />
+       </style>
+       <p>        Indica la herramienta correcta a utilizar:</p>
+      </cell>
+     </p>
+     <p background="0xFFFFFF" name="default" foreground="0x000000" family="Arial" size="15" bold="false" italic="false" />
+     <p background="0xFFFFFF" name="default" foreground="0x000000" family="Arial" size="15" bold="false" italic="false">
+      <text>  »  Con la  </text>
+      <target>
+       <answer>goma</answer>
+       <optionList>
+        <option>lapiz</option>
+        <option>goma</option>
+        <option>rectángulo</option>
+        <option>selección</option>
+        <option>piara</option>
+        <option>enjambre</option>
+       </optionList>
+       <text>goma</text>
+      </target>
+      <text> puedo borrar un elemento</text>
+     </p>
+     <p background="0xFFFFFF" name="default" foreground="0x000000" family="Arial" size="15" bold="false" italic="false" />
+     <p background="0xFFFFFF" name="default" foreground="0x000000" family="Arial" size="15" bold="false" italic="false">
+      <text>  »  Con el </text>
+      <target>
+       <answer>rectángulo</answer>
+       <optionList>
+        <option>goma</option>
+        <option>selección</option>
+        <option>rectángulo</option>
+        <option>aerógrafo</option>
+        <option>ovalo</option>
+       </optionList>
+       <text>rectangulo</text>
+      </target>
+      <text> puedo construir un cuadrado</text>
+     </p>
+     <p background="0xFFFFFF" name="default" foreground="0x000000" family="Arial" size="15" bold="false" italic="false" />
+     <p background="0xFFFFFF" name="default" foreground="0x000000" family="Arial" size="15" bold="false" italic="false">
+      <text>  »  Con el</text>
+      <target>
+       <answer>lápiz</answer>
+       <optionList>
+        <option>goma</option>
+        <option>relleno color</option>
+        <option>aerógrafo</option>
+        <option>gotero</option>
+        <option>lápiz</option>
+       </optionList>
+       <text> lapiz</text>
+      </target>
+      <text> puedo dibujar</text>
+     </p>
+     <p background="0xFFFFFF" name="default" foreground="0x000000" family="Arial" size="15" bold="false" italic="false" />
+     <p background="0xFFFFFF" name="default" foreground="0x000000" family="Arial" size="15" bold="false" italic="false">
+      <text>  »  Con </text>
+      <target>
+       <answer>selección</answer>
+       <optionList>
+        <option>ovalo</option>
+        <option>rectángulo</option>
+        <option>selección</option>
+        <option>aerógrafo</option>
+        <option>lápiz</option>
+       </optionList>
+       <text>selección</text>
+      </target>
+      <text> puedo cortar un dibujo</text>
+     </p>
+     <p background="0xFFFFFF" name="default" foreground="0x000000" family="Arial" size="15" bold="false" italic="false" />
+     <p background="0xFFFFFF" name="default" foreground="0x000000" family="Arial" size="15" bold="false" italic="false">
+      <text>  »  Con el </text>
+      <target>
+       <answer>gotero</answer>
+       <optionList>
+        <option>relleno color</option>
+        <option>gotero</option>
+        <option>aerógrafo</option>
+        <option>selección</option>
+       </optionList>
+       <text>gotero</text>
+      </target>
+      <text> tomo un color</text>
+     </p>
+     <p background="0xFFFFFF" name="default" foreground="0x000000" family="Arial" size="15" bold="false" italic="false" />
+     <p background="0xFFFFFF" name="default" foreground="0x000000" family="Arial" size="15" bold="false" italic="false">
+      <text>  »  Con  </text>
+      <target>
+       <answer>relleno color</answer>
+       <optionList>
+        <option>texto</option>
+        <option>gotero</option>
+        <option>relleno color</option>
+        <option>lupa</option>
+       </optionList>
+       <text>relleno color</text>
+      </target>
+      <text> puedo pintar un dibujo</text>
+     </p>
+     <p background="0xFFFFFF" name="default" foreground="0x000000" family="Arial" size="15" bold="false" italic="false" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.Identify" name="usos.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+     </style>
+     <p>SEÑALA LA HERRAMIENTA QUE UTILICÉ</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+     </style>
+     <p>¡CORRECTO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <image name="conque2.gif" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000A0" border="true">
+     <position x="800" y="600" />
+    </window>
+   </settings>
+   <cells rows="4" cols="2" cellWidth="76.0" cellHeight="64.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="15" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell id="1" image="bcuadra.gif" />
+    <cell id="0" image="bselecc.gif" />
+    <cell id="0" image="blapiz.gif" />
+    <cell id="0" image="btexto.gif" />
+    <cell id="0" image="baerog.gif" />
+    <cell id="0" image="bpincel.gif" />
+    <cell id="0" image="bcurva.gif" />
+    <cell id="0" image="bcuadred.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="usos2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+     </style>
+     <p>SEÑALA LA HERRAMIENTA QUE UTILICÉ</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+     </style>
+     <p>¡CORRECTO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <image name="conque3.gif" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000A0" border="true">
+     <position x="800" y="600" />
+    </window>
+   </settings>
+   <cells rows="4" cols="2" cellWidth="76.0" cellHeight="64.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="15" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell id="0" image="bcuadra.gif" />
+    <cell id="0" image="bselecc.gif" />
+    <cell id="0" image="blapiz.gif" />
+    <cell id="0" image="btexto.gif" />
+    <cell id="1" image="bovalo.gif" />
+    <cell id="0" image="bflibre.gif" />
+    <cell id="0" image="bcurva.gif" />
+    <cell id="0" image="bcuadred.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="usos3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+     </style>
+     <p>SEÑALA LA HERRAMIENTA QUE UTILICÉ</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+     </style>
+     <p>¡CORRECTO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <image name="conque4.gif" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000A0" border="true">
+     <position x="800" y="600" />
+    </window>
+   </settings>
+   <cells rows="4" cols="2" cellWidth="76.0" cellHeight="64.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="15" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell id="0" image="bcuadra.gif" />
+    <cell id="0" image="bselecc.gif" />
+    <cell id="0" image="blapiz.gif" />
+    <cell id="0" image="btexto.gif" />
+    <cell id="0" image="baerog.gif" />
+    <cell id="1" image="bpincel.gif" />
+    <cell id="0" image="bcurva.gif" />
+    <cell id="0" image="bcuadred.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="usos4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+     </style>
+     <p>SEÑALA LA HERRAMIENTA QUE UTILICÉ</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+     </style>
+     <p>¡CORRECTO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <image name="conque51.gif" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000A0" border="true">
+     <position x="800" y="600" />
+    </window>
+   </settings>
+   <cells rows="4" cols="2" cellWidth="76.0" cellHeight="64.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="15" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell id="0" image="bcuadra.gif" />
+    <cell id="0" image="bselecc.gif" />
+    <cell id="0" image="blapiz.gif" />
+    <cell id="1" image="btexto.gif" />
+    <cell id="0" image="baerog.gif" />
+    <cell id="0" image="bpincel.gif" />
+    <cell id="0" image="bcurva.gif" />
+    <cell id="0" image="bcuadred.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="usos5.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+     </style>
+     <p>SEÑALA LA HERRAMIENTA QUE UTILICÉ</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+     </style>
+     <p>¡CORRECTO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <image name="conque7.gif" tiled="false" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000A0" border="true">
+     <position x="800" y="600" />
+    </window>
+   </settings>
+   <cells rows="4" cols="2" cellWidth="76.0" cellHeight="64.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="15" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell id="0" image="bcuadra.gif" />
+    <cell id="0" image="bselecc.gif" />
+    <cell id="0" image="blapiz.gif" />
+    <cell id="0" image="btexto.gif" />
+    <cell id="1" image="baerog.gif" />
+    <cell id="0" image="bpincel.gif" />
+    <cell id="0" image="bcurva.gif" />
+    <cell id="0" image="bcuadred.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="aerog.gif" file="aerog.gif" animated="false" />
+  <media name="baerog.gif" file="baerog.gif" animated="false" />
+  <media name="bcuadra.gif" file="bcuadra.gif" animated="false" />
+  <media name="bcuadred.gif" file="bcuadred.gif" animated="false" />
+  <media name="bcurva.gif" file="bcurva.gif" animated="false" />
+  <media name="bflibre.gif" file="bflibre.gif" animated="false" />
+  <media name="bgoma.gif" file="bgoma.gif" animated="false" />
+  <media name="bgotero.gif" file="bgotero.gif" animated="false" />
+  <media name="blapiz.gif" file="blapiz.gif" animated="false" />
+  <media name="blibre.gif" file="blibre.gif" animated="false" />
+  <media name="blinea.gif" file="blinea.gif" animated="false" />
+  <media name="blupa.gif" file="blupa.gif" animated="false" />
+  <media name="bovalo.gif" file="bovalo.gif" animated="false" />
+  <media name="bpincel.gif" file="bpincel.gif" animated="false" />
+  <media name="brelleno.gif" file="brelleno.gif" animated="false" />
+  <media name="bselecc.gif" file="bselecc.gif" animated="false" />
+  <media name="btexto.gif" file="btexto.gif" animated="false" />
+  <media name="conque2.gif" file="conque2.gif" animated="false" />
+  <media name="conque3.gif" file="conque3.gif" animated="false" />
+  <media name="conque4.gif" file="conque4.gif" animated="false" />
+  <media name="conque51.gif" file="conque51.gif" animated="false" />
+  <media name="conque7.gif" file="conque7.gif" animated="false" />
+  <media name="cuadrado.gif" file="cuadrado.gif" animated="false" />
+  <media name="cuadred.gif" file="cuadred.gif" animated="false" />
+  <media name="curva.gif" file="curva.gif" animated="false" />
+  <media name="goma.gif" file="goma.gif" animated="false" />
+  <media name="gotero.gif" file="gotero.gif" animated="false" />
+  <media name="lapiz.gif" file="lapiz.gif" animated="false" />
+  <media name="libre.gif" file="libre.gif" animated="false" />
+  <media name="linea.gif" file="linea.gif" animated="false" />
+  <media name="lupa.gif" file="lupa.gif" animated="false" />
+  <media name="memo.gif" file="memo.gif" animated="false" />
+  <media name="memo2.gif" file="memo2.gif" animated="false" />
+  <media name="ovalo.gif" file="ovalo.gif" animated="false" />
+  <media name="pantalla.gif" file="pantalla.gif" animated="false" />
+  <media name="pincel.gif" file="pincel.gif" animated="false" />
+  <media name="poligono.gif" file="poligono.gif" animated="false" />
+  <media name="relleno.gif" file="relleno.gif" animated="false" />
+  <media name="selecc.gif" file="selecc.gif" animated="false" />
+  <media name="tapita.gif" file="tapita.gif" animated="false" />
+  <media name="tapon2.gif" file="tapon2.gif" animated="false" />
+  <media name="texto.gif" file="texto.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

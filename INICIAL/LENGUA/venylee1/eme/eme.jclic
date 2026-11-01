@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="eme" version="0.1.3">
+ <settings>
+  <title>Ven a leer 1, 2 y 3</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="10/7/02" />
+  <revision description="Conversión de Clic3 a JClic" date="12/18/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Rosa Ana Santiago Vicario" mail="rosv@wanadoo.es" />
+  <organization name="CP Marqués de Camarasa" city="Castrojeriz" state="Castilla y León" />
+  <language>español</language>
+  <description>
+   <p>Estas aplicaciones van dirigidas especialmente para niños y niñas de Educación Especial o que sin serlo, tengan ciertas dificultades en el aprendizaje de la técnica lecto-escritora. &lt;BR&gt;Así mismo pueden utilizarse en el último nivel de E.I. y 1º de E.P. como refuerzo a la lectura y escritura.</p>
+   <p>&lt;BR&gt;</p>
+   <p>Se pretende que los alumnos adquieran las siguientes destrezas repartidas en los tres paquetes de actividades:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Discriminación, identificación e interiorización de las sílabas directas: p, s, l, m, t, n, d, ll, h, b, v, ñ.</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area="Lenguas" level="Infantil, Primaria">aprendizaje de la lengua, lengua castellana</descriptors>
+ </settings>
+ <sequence>
+  <item id="eme.pac" name="perro.puz">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="m1.ass" />
+  <item name="m2.ass" />
+  <item name="m3.ass" />
+  <item name="m4.ass" />
+  <item name="m5.ass" />
+  <item name="m6.ass" />
+  <item name="m7.ass" />
+  <item name="m8.ass" />
+  <item name="m9.ass" />
+  <item name="final.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@puzzles.ExchangePuzzle" name="perro.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_MIDI" level="2" file="daskling.mid" />
+     <p>Resuelve el puzzle...</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Tú ya me conoces...</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xF0FDA6">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="2" border="false" image="perro1~1.jpg">
+    <style>
+     <font family="MeMima" size="37" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.Explore" name="m1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color foreground="0x000080" background="0xFFFFFF" />
+     </style>
+     <p>Pincha y lee...</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color foreground="0x000080" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="paloma.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xB1DAE7" border="false" />
+   </settings>
+   <cells rows="5" cols="2" cellWidth="180.0" cellHeight="90.0" border="false" id="primary">
+    <style>
+     <font family="MeMima" size="37" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell id="0" image="mama.gif" />
+    <cell id="1" image="suma.gif" />
+    <cell id="2" image="mulo.gif" />
+    <cell id="3" image="mesa.gif" />
+    <cell id="4" image="mapa.gif" />
+    <cell id="5" image="lame.gif" />
+    <cell id="6" image="muela.gif" />
+    <cell id="7" image="paloma.gif" />
+    <cell id="8" image="mula.gif" />
+    <cell id="9" image="lima.gif" />
+   </cells>
+   <cells rows="2" cols="5" cellWidth="140.0" cellHeight="80.0" border="false" id="secondary">
+    <style>
+     <font family="MeMima" size="35" bold="true" />
+     <color foreground="0x000080" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>mama</p>
+    </cell>
+    <cell>
+     <p>suma</p>
+    </cell>
+    <cell>
+     <p>mulo</p>
+    </cell>
+    <cell>
+     <p>mesa</p>
+    </cell>
+    <cell>
+     <p>mapa</p>
+    </cell>
+    <cell>
+     <p>lame</p>
+    </cell>
+    <cell>
+     <p>muela</p>
+    </cell>
+    <cell>
+     <p>paloma</p>
+    </cell>
+    <cell>
+     <p>mula</p>
+    </cell>
+    <cell>
+     <p>lima</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="m2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color foreground="0x004080" background="0xFFFFFF" />
+     </style>
+     <p>Aquí tienes más palabras ¡Apréndelas!...</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color foreground="0x004080" background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="eme.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xB0E2E3" border="false" />
+   </settings>
+   <cells rows="5" cols="2" cellWidth="180.0" cellHeight="90.0" border="false" id="primary">
+    <style>
+     <font family="MeMima" size="37" bold="true" />
+     <color foreground="0x004080" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell id="0" image="masa.gif" />
+    <cell id="1" image="asoma.gif" />
+    <cell id="2" image="puma.gif" />
+    <cell id="3" image="loma.gif" />
+    <cell id="4" image="miau.gif" />
+    <cell id="5" image="muu.gif" />
+    <cell id="6" image="amapola.gif" />
+    <cell id="7" image="amalia.gif" />
+    <cell id="8" image="eme.gif" />
+    <cell id="9" image="paloma.gif" />
+   </cells>
+   <cells rows="2" cols="5" cellWidth="140.0" cellHeight="80.0" border="false" id="secondary">
+    <style>
+     <font family="MeMima" size="35" bold="true" />
+     <color foreground="0x004080" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>masa</p>
+    </cell>
+    <cell>
+     <p>asoma</p>
+    </cell>
+    <cell>
+     <p>puma</p>
+    </cell>
+    <cell>
+     <p>loma</p>
+    </cell>
+    <cell>
+     <p>miau</p>
+    </cell>
+    <cell>
+     <p>muu</p>
+    </cell>
+    <cell>
+     <p>amapola</p>
+    </cell>
+    <cell>
+     <p>amalia</p>
+    </cell>
+    <cell>
+     <p>eme</p>
+    </cell>
+    <cell>
+     <p>paloma</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="m3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color background="0xFFFF80" />
+     </style>
+     <p>Ahora escribes tú...</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color background="0xFFFF80" />
+     </style>
+     <p>¡Genial! Sigue...</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xF29639">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="140.0" cellHeight="100.0" border="false" id="primary">
+    <style>
+     <font family="MeMima" size="37" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell image="masa.gif" />
+    <cell image="asoma.gif" />
+    <cell image="puma.gif" />
+    <cell image="loma.gif" />
+    <cell image="miau.gif" />
+    <cell image="muu.gif" />
+    <cell image="amapola.gif" />
+    <cell image="amalia.gif" />
+    <cell image="eme.gif" />
+    <cell image="paloma.gif" />
+   </cells>
+   <cells rows="2" cols="5" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <font family="MeMima" size="37" bold="true" />
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>masa</p>
+    </cell>
+    <cell>
+     <p>asoma</p>
+    </cell>
+    <cell>
+     <p>puma</p>
+    </cell>
+    <cell>
+     <p>loma</p>
+    </cell>
+    <cell>
+     <p>miau</p>
+    </cell>
+    <cell>
+     <p>muu</p>
+    </cell>
+    <cell>
+     <p>amapola</p>
+    </cell>
+    <cell>
+     <p>amalia</p>
+    </cell>
+    <cell>
+     <p>eme</p>
+    </cell>
+    <cell>
+     <p>paloma</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="m4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Une correctamente.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Vas muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x80FFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="140.0" cellHeight="100.0" border="false" id="primary">
+    <style>
+     <font family="MeMima" size="37" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell image="mama.gif" />
+    <cell image="suma.gif" />
+    <cell image="mulo.gif" />
+    <cell image="mesa.gif" />
+    <cell image="mapa.gif" />
+    <cell image="lame.gif" />
+    <cell image="muela.gif" />
+    <cell image="paloma.gif" />
+    <cell image="mula.gif" />
+    <cell image="lima.gif" />
+   </cells>
+   <cells rows="2" cols="5" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="MeMima" size="35" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>mama</p>
+    </cell>
+    <cell>
+     <p>suma</p>
+    </cell>
+    <cell>
+     <p>mulo</p>
+    </cell>
+    <cell>
+     <p>mesa</p>
+    </cell>
+    <cell>
+     <p>mapa</p>
+    </cell>
+    <cell>
+     <p>lame</p>
+    </cell>
+    <cell>
+     <p>muela</p>
+    </cell>
+    <cell>
+     <p>paloma</p>
+    </cell>
+    <cell>
+     <p>mula</p>
+    </cell>
+    <cell>
+     <p>lima</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="m5.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color background="0x23ED93" />
+     </style>
+     <p>Une cada dibujo con su nombre</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color background="0x23ED93" />
+     </style>
+     <p>¡Vas muy bien!, adelante...</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xB3F16D">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="156.0" cellHeight="100.0" border="false" id="primary">
+    <style>
+     <font family="MeMima" size="37" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell image="masa.gif" />
+    <cell image="asoma.gif" />
+    <cell image="puma.gif" />
+    <cell image="loma.gif" />
+    <cell image="miau.gif" />
+    <cell image="muu.gif" />
+    <cell image="amapola.gif" />
+    <cell image="amalia.gif" />
+    <cell image="eme.gif" />
+    <cell image="paloma.gif" />
+   </cells>
+   <cells rows="2" cols="5" cellWidth="140.0" cellHeight="90.0" border="false" id="secondary">
+    <style>
+     <font family="MeMima" size="35" bold="true" />
+     <color background="0x23ED93" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>masa</p>
+    </cell>
+    <cell>
+     <p>asoma</p>
+    </cell>
+    <cell>
+     <p>puma</p>
+    </cell>
+    <cell>
+     <p>loma</p>
+    </cell>
+    <cell>
+     <p>miau</p>
+    </cell>
+    <cell>
+     <p>muu</p>
+    </cell>
+    <cell>
+     <p>amapola</p>
+    </cell>
+    <cell>
+     <p>amalia</p>
+    </cell>
+    <cell>
+     <p>eme</p>
+    </cell>
+    <cell>
+     <p>paloma</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="m6.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color background="0xEE9DE2" />
+     </style>
+     <p>Ahora escribe...</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color background="0xEE9DE2" />
+     </style>
+     <p>¡Fenomenal!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="eme.gif" tiled="true" />
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="140.0" cellHeight="100.0" border="false" id="primary">
+    <style>
+     <font family="MeMima" size="37" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell image="mama.gif" />
+    <cell image="suma.gif" />
+    <cell image="mulo.gif" />
+    <cell image="mesa.gif" />
+    <cell image="mapa.gif" />
+    <cell image="lame.gif" />
+    <cell image="muela.gif" />
+    <cell image="paloma.gif" />
+    <cell image="mula.gif" />
+    <cell image="lima.gif" />
+   </cells>
+   <cells rows="2" cols="5" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <font family="MeMima" size="37" bold="true" />
+     <color background="0xEE9DE2" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>mama</p>
+    </cell>
+    <cell>
+     <p>suma</p>
+    </cell>
+    <cell>
+     <p>mulo</p>
+    </cell>
+    <cell>
+     <p>mesa</p>
+    </cell>
+    <cell>
+     <p>mapa</p>
+    </cell>
+    <cell>
+     <p>lame</p>
+    </cell>
+    <cell>
+     <p>muela</p>
+    </cell>
+    <cell>
+     <p>paloma</p>
+    </cell>
+    <cell>
+     <p>mula</p>
+    </cell>
+    <cell>
+     <p>lima</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="m7.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Busca mulo - muela - mapa</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡Bravo, bravísimo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="lisa.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="140.0" cellHeight="100.0" border="false" id="primary">
+    <style>
+     <font family="MeMima" size="35" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell id="0">
+     <p>mama</p>
+    </cell>
+    <cell id="0">
+     <p>suma</p>
+    </cell>
+    <cell id="1">
+     <p>mulo</p>
+    </cell>
+    <cell id="0">
+     <p>mesa</p>
+    </cell>
+    <cell id="1">
+     <p>mapa</p>
+    </cell>
+    <cell id="0">
+     <p>lame</p>
+    </cell>
+    <cell id="1">
+     <p>muela</p>
+    </cell>
+    <cell id="0">
+     <p>paloma</p>
+    </cell>
+    <cell id="0">
+     <p>mula</p>
+    </cell>
+    <cell id="0">
+     <p>lima</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="m8.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color background="0x80FFFF" />
+     </style>
+     <p>Busca - amapola - amalia - paloma</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color background="0x80FFFF" />
+     </style>
+     <p>¿Ha sido difícil?</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="amalia.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="32" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell id="0">
+     <p>masa</p>
+    </cell>
+    <cell id="0">
+     <p>asoma</p>
+    </cell>
+    <cell id="0">
+     <p>puma</p>
+    </cell>
+    <cell id="0">
+     <p>loma</p>
+    </cell>
+    <cell id="0">
+     <p>miau</p>
+    </cell>
+    <cell id="0">
+     <p>muu</p>
+    </cell>
+    <cell id="1">
+     <p>amapola</p>
+    </cell>
+    <cell id="1">
+     <p>amalia</p>
+    </cell>
+    <cell id="0">
+     <p>eme</p>
+    </cell>
+    <cell id="1">
+     <p>paloma</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="m9.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color background="0xE7C29A" />
+     </style>
+     <p>Encuentra - lame - mulo - lima</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="MeMima" size="37" bold="true" />
+      <color background="0xE7C29A" />
+     </style>
+     <p>¡ Muy bien !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xEFA578">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" transparent="true" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="140.0" cellHeight="100.0" border="false" id="primary">
+    <style>
+     <font family="MeMima" size="35" bold="true" />
+     <color background="0xEED593" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell id="0">
+     <p>mama</p>
+    </cell>
+    <cell id="0">
+     <p>suma</p>
+    </cell>
+    <cell id="1">
+     <p>mulo</p>
+    </cell>
+    <cell id="0">
+     <p>mesa</p>
+    </cell>
+    <cell id="0">
+     <p>mapa</p>
+    </cell>
+    <cell id="1">
+     <p>lame</p>
+    </cell>
+    <cell id="0">
+     <p>muela</p>
+    </cell>
+    <cell id="0">
+     <p>paloma</p>
+    </cell>
+    <cell id="0">
+     <p>mula</p>
+    </cell>
+    <cell id="1">
+     <p>lima</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="amalia.gif" file="amalia.gif" />
+  <media name="amapola.gif" file="amapola.gif" />
+  <media name="asoma.gif" file="asoma.gif" />
+  <media name="eme.gif" file="eme.gif" />
+  <media name="lame.gif" file="lame.gif" />
+  <media name="lima.gif" file="lima.gif" />
+  <media name="lisa.gif" file="lisa.gif" />
+  <media name="loma.gif" file="loma.gif" />
+  <media name="mama.gif" file="mama.gif" />
+  <media name="mapa.gif" file="mapa.gif" />
+  <media name="masa.gif" file="masa.gif" />
+  <media name="mesa.gif" file="mesa.gif" />
+  <media name="miau.gif" file="miau.gif" />
+  <media name="muela.gif" file="muela.gif" />
+  <media name="mula.gif" file="mula.gif" />
+  <media name="mulo.gif" file="mulo.gif" />
+  <media name="muu.gif" file="muu.gif" />
+  <media name="paloma.gif" file="paloma.gif" />
+  <media name="puma.gif" file="puma.gif" />
+  <media name="suma.gif" file="suma.gif" />
+  <media name="perro1~1.jpg" file="perro1_1.jpg" />
+  <media name="daskling.mid" file="daskling.mid" />
+ </mediaBag>
+</JClicProject>
+

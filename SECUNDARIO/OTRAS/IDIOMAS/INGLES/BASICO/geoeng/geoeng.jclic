@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="geoeng" version="0.1.3">
+ <settings>
+  <title>Geography in English</title>
+  <revision description="Creation of the package of activities using Clic 3.0" date="5/31/01" />
+  <revision description="Converted from Clic3 to JClic" date="6/4/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Crisanto Carrera Amo" mail="ccarrer7@pie.xtec.es" />
+  <organization name="CEIP Can Parera" mail="a8038077@centres.xtec.es" url="http://www.xtec.es/centres/a8038077" city="Montornès del Vallès" state="Catalunya" />
+  <language>english</language>
+  <description>
+   <p>Clic activities about physic and politic geography in English. The package is organized in three parts:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Europe</p>
+   <p>&lt;LI&gt;United Kingdom</p>
+   <p>&lt;LI&gt;United States of America</p>
+   <p>&lt;/UL&gt;</p>
+   <p>The activities use maps, graphics and pictures to learn about the names of countries, states and cities.</p>
+  </description>
+  <descriptors area-codes="soc" level="Primary school, Secondary school">political geography, physical geography, English language</descriptors>
+  <meta_langs>english</meta_langs>
+  <descriptions>
+   <description language="english">
+    <p>Clic activities about physic and politic geography in English. The package is organized in three parts:</p>
+    <p>&lt;UL&gt;</p>
+    <p>&lt;LI&gt;Europe</p>
+    <p>&lt;LI&gt;United Kingdom</p>
+    <p>&lt;LI&gt;United States of America</p>
+    <p>&lt;/UL&gt;</p>
+    <p>The activities use maps, graphics and pictures to learn about the names of countries, states and cities.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="geoeng.pac" name="cover1.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="cover2.ass">
+   <jump action="STOP" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="cover1.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="25" />
+      <color foreground="0x0000FF" background="0x00FFFF" shadow="0xFFFF80" inactive="0xFFFF80" alternative="0xFFFF80" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="25" />
+      <color foreground="0x0000FF" background="0x00FFFF" shadow="0xFFFF80" inactive="0xFFFF80" alternative="0xFFFF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x008000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" transparent="true" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="cover1.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.Identify" name="cover2.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="25" />
+      <color foreground="0x0000FF" background="0x00FFFF" shadow="0xFFFF80" inactive="0xFFFF80" alternative="0xFFFF80" />
+     </style>
+     <p>Choose one of these  activities</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="25" />
+      <color foreground="0x0000FF" background="0x00FFFF" shadow="0xFFFF80" inactive="0xFFFF80" alternative="0xFFFF80" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x004080">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFF8040" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="300.0" cellHeight="100.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="0" image="boto1.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="europe1.pac" params="europe1/europe1.jclic" />
+    </cell>
+    <cell id="0" image="boto2.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="culture1.pac" params="culture1/culture1.jclic" />
+    </cell>
+    <cell id="0" image="boto3.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="usa.pac" params="usa/usa.jclic" />
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="boto1.gif" file="boto1.gif" animated="false" />
+  <media name="boto2.gif" file="boto2.gif" animated="false" />
+  <media name="boto3.gif" file="boto3.gif" animated="false" />
+  <media name="cover1.gif" file="cover1.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

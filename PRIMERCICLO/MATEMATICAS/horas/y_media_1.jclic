@@ -1,0 +1,1322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="y_media_1" version="0.1.3">
+ <settings>
+  <title>Las horas del reloj</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="2/15/08" />
+  <revision description="Conversión de Clic3 a JClic" date="2/14/08">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Tomás Fernández García" mail="tfernandez411@telefonica.net" />
+  <organization name="CP Ausiàs March" city="Alacant" state="País Valencià" />
+  <language>español</language>
+  <description>
+   <p>Proyecto de actividades dirigido a educación primaria  que teine como objetivo principal el aprendizaje y uso del reloj de forma práctica y sistemática. El proyecto tiene más de ciento cincuenta actividades y está dividido en seis partes:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Historia de relojes</p>
+   <p>&lt;LI&gt;En punto</p>
+   <p>&lt;LI&gt;Y media</p>
+   <p>&lt;LI&gt;Y cuarto, menos cuarto</p>
+   <p>&lt;LI&gt;Otras horas</p>
+   <p>&lt;LI&gt;Internet</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area="Matemáticas" level="Primaria (6-12)">tiempo</descriptors>
+  <skin file="@orange.xml" />
+ </settings>
+ <sequence>
+  <item id="start" name="partes reloj analogico">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="Partes reloj digital" />
+  <item name="Media hora" />
+  <item name="Mediahora_1" />
+  <item name="Media hora_2" />
+  <item id="fin" name="Media hora 3">
+   <jump tag="start" project="y_media_2.jclic" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="Media hora" code="">
+   <description>
+    <p>¿Cuándo es una hora en punto?</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="lee atent.wav" />
+     <p>LEE ATENTAMENTE</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo5.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="434.0" cellHeight="191.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell txtAlign="middle,bottom" image="RELOJ medias.jpg">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" />
+      <color foreground="0xFF00CC" background="0xFFFFFF" />
+     </style>
+     <p>1 hora  =  2 medias hora</p>
+    </cell>
+    <cell txtAlign="left,middle" border="true">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xFFFFCC" />
+     </style>
+     <p>La esfera completa del reloj representa 1 hora.</p>
+     <p>                                                                                   Podemos dividirla en dos partes, cada una será media hora.</p>
+     <p>                                                                                                                                                   </p>
+     <p>                                                                              </p>
+     <p>Una hora son 60 minutos. Media hora son, por tanto, 30 minutos.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.Explore" name="Media hora 3" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="pincha y lee aten.wav" />
+     <p>¿CUÁNDO   SON   "Y  MEDIA"?</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo5.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="352.0" cellHeight="185.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell id="0" txtAlign="middle,bottom" border="true" image="ana5-30.jpg">
+     <style borderStroke="1.4" markerStroke="2.7">
+      <font family="Arial" size="20" />
+      <color foreground="0xFF00CC" background="0x99FFFF" inactive="0x6699FF" border="0x3399FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="5-30.wav" />
+     <p>RELOJ    ANALÓGICO</p>
+    </cell>
+    <cell id="1" txtAlign="middle,bottom" image="DIGITA05-30.jpg">
+     <style borderStroke="2.2" markerStroke="2.7">
+      <font family="Arial" size="20" />
+      <color foreground="0xFF00CC" background="0xFFFFCC" inactive="0x6699FF" border="0x3399FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="5-30.wav" />
+     <p>RELOJ       DIGITAL</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="329.0" cellHeight="244.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell txtAlign="left,middle">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="16" />
+      <color background="0x99FFFF" border="0x3399FF" />
+     </style>
+     <p> LAS 5 Y MEDIA</p>
+     <p>                                                                    La aguja horaria está entre las 5 y las 6.</p>
+     <p>                                      </p>
+     <p>                                                                         La aguja minutera está en las 6 (siempre en este caso)</p>
+     <p>                     </p>
+     <p>                            </p>
+     <p>                                                                                  Son las 5 y media, pues le falta media hora para llegar a las 6 en punto.</p>
+    </cell>
+    <cell txtAlign="left,middle">
+     <style borderStroke="2.6" markerStroke="5.0">
+      <font family="Arial" size="16" />
+      <color background="0xFFFFCC" border="0x3399FF" />
+     </style>
+     <p> LAS 5 Y MEDIA</p>
+     <p>                                                                            El número que indica las horas es el 5.</p>
+     <p>                                      </p>
+     <p>                                                                            El número que marca los minutos nos indica que han pasado 30 minutos de las 5 en punto. Cuándo son horas "y media" siempre aparece el 30 (la mitad de la esfera del reloj)</p>
+     <p>                     </p>
+     <p>                            </p>
+     <p>                                                                                  Son las 5 y media, pues le falta media hora para llegar a las 6:00 .</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="Media hora_2" code="">
+   <description>
+    <p>¿Cuándo es una hora en punto?</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="lee atent.wav" />
+     <p>LEE ATENTAMENTE</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo5.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="338.0" cellHeight="222.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell txtAlign="middle,top" image="mediahora.gif">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="16" />
+      <color foreground="0xCC0033" background="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell txtAlign="left,middle" border="true">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0x3399FF" />
+     </style>
+     <p>HA PASADO MEDIA HORA</p>
+     <p>                                                                                                     </p>
+     <p>La aguja minutera(azul) ha pasado de las 12 a las 6 (media esfera del reloj), por tanto, ha pasado media hora.</p>
+     <p>                                                                                                                                                            </p>
+     <p>                                                                                                            La aguja horaria - roja - se ha colocado en medio, entre las 12 y la 1 (le falta medio camino para llegar a las doce) </p>
+     <p>                                                                                                       </p>
+     <p>                                                                                                           Son las 12 y media. </p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.FillInBlanks" name="Mediahora_1" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="abre vent y comp tex.wav" />
+     <p>ABRE LAS VENTANAS Y COMPLETA EL TEXTO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien hecho.wav" />
+     <p>¡¡¡    BIEN  HECHO   !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo5.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true">
+     <size width="494" height="323" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Comic Sans MS" italic="false" background="0x99FFFF" tabWidth="12" size="18" bold="false" />
+    <style name="target" base="default" target="true" background="0xFFFFCC" foreground="0x0000FF" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p family="Arial" Alignment="1" background="0xFFFFFF">
+      <text family="Arial" background="0x99FFFF" size="18" foreground="0x000000" bold="false">MEDIA HORA</text>
+     </p>
+     <p family="Arial" Alignment="0" background="0xFFFFFF" />
+     <p family="Arial" Alignment="0" background="0xFFFFFF">
+      <text family="Arial" background="0x99FFFF" size="18" foreground="0x000000" bold="false">La esfera completa del reloj representa </text>
+      <target>
+       <answer>1 hora</answer>
+       <optionList>
+        <option>24 horas</option>
+        <option>12 horas</option>
+        <option>1 hora</option>
+        <option>6 horas</option>
+       </optionList>
+       <text>1 hora</text>
+      </target>
+      <text family="Arial" background="0x99FFFF" size="18" foreground="0x000000" bold="false">.</text>
+     </p>
+     <p family="Arial" Alignment="0" background="0xFFFFFF">
+      <text family="Arial" background="0x99FFFF" size="18" foreground="0x000000" bold="false">                                                                                   Podemos dividirla en </text>
+      <target>
+       <answer>2 partes</answer>
+       <optionList>
+        <option>1 parte</option>
+        <option>2 partes</option>
+        <option>3 partes</option>
+        <option>4 partes</option>
+        <option>12 partes</option>
+       </optionList>
+       <text>2 partes</text>
+      </target>
+      <text family="Arial" background="0x99FFFF" size="18" foreground="0x000000" bold="false">, cada una será </text>
+      <target>
+       <answer>media</answer>
+       <optionList>
+        <option>un cuarto de</option>
+        <option>3 cuartos de</option>
+        <option>media</option>
+        <option>4 cuartos de</option>
+       </optionList>
+       <text>media</text>
+      </target>
+      <text family="Arial" background="0x99FFFF" size="18" foreground="0x000000" bold="false"> hora.</text>
+     </p>
+     <p family="Arial" Alignment="0" background="0xFFFFFF">
+      <text family="Arial" background="0x99FFFF" size="18" foreground="0x000000" bold="false">                                                                                                                                                   </text>
+     </p>
+     <p family="Arial" Alignment="0" background="0xFFFFFF">
+      <text family="Arial" background="0x99FFFF" size="18" foreground="0x000000" bold="false">Una hora son </text>
+      <target>
+       <answer>60 minutos</answer>
+       <optionList>
+        <option>10 minutos</option>
+        <option>15 minutos</option>
+        <option>30 minutos</option>
+        <option>45 minutos</option>
+        <option>60 minutos</option>
+       </optionList>
+       <text>60 minutos</text>
+      </target>
+      <text family="Arial" background="0x99FFFF" size="18" foreground="0x000000" bold="false">. Media hora son, por tanto, </text>
+      <target>
+       <answer>30 minutos</answer>
+       <optionList>
+        <option>10 minutos</option>
+        <option>15 minutos</option>
+        <option>30 minutos</option>
+        <option>45 minutos</option>
+        <option>60 minutos</option>
+       </optionList>
+       <text>30 minutos</text>
+      </target>
+      <text family="Arial" background="0x99FFFF" size="18" foreground="0x000000" bold="false">.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.Explore" name="Partes reloj digital" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="clica para saber.wav" />
+     <p>CLICA PARA SABER EL NOMBRE DE LAS PARTES COLOREADAS</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo5.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="16" cols="16" border="false" image="reloj digital2.jpg" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="16" rows="16" />
+    <ids>-1 -1 -1 3 4 5 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 0 -1 0 -1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 0 0 -1 0 -1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1 0 -1 -1 1 1 1 -1 -1 -1 -1 -1 -1 -1 0 0 -1 0 -1 -1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 2 2 -1 2 2 2 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 2 2 -1 2 2 2 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1</ids>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="254.0" cellHeight="137.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell txtAlign="left,middle">
+     <style>
+      <font family="Arial" size="18" />
+      <color background="0xFF0033" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="num que ind la hora.wav" />
+     <p>Digitos que indican la hora</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial" size="18" />
+      <color foreground="0xFFFFFF" background="0x3333FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="num que ind los min.wav" />
+     <p>Dígitos que indican los minutos.</p>
+    </cell>
+    <cell txtAlign="left,middle">
+     <style>
+      <font family="Arial" size="18" />
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="num que ind calenda.wav" />
+     <p>Dígitos del calendario. Indican el número y el nombre del día.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="partes reloj analogico" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="clica para saber.wav" />
+     <p>CLICA PARA SABER EL NOMBRE DE LAS PARTES COLOREADAS</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo5.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="30" cols="29" border="false" image="partes reloj_2.jpg" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="29" rows="30" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell id="4" />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell id="4" />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell id="4" />
+    <cell />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell />
+    <cell id="4" />
+    <cell />
+    <cell id="4" />
+    <cell />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="0">
+     <p>aguja minutera</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell id="4" />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell id="4" />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="0" />
+    <cell id="0" />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell id="1" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="0" />
+    <cell id="0" />
+    <cell />
+    <cell id="4" />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="1" />
+    <cell id="1" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="0" />
+    <cell id="0" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="1" />
+    <cell id="1" />
+    <cell id="2" />
+    <cell />
+    <cell />
+    <cell id="0" />
+    <cell id="0" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="1" />
+    <cell />
+    <cell id="0" />
+    <cell id="0" />
+    <cell />
+    <cell id="3" />
+    <cell id="3" />
+    <cell id="3" />
+    <cell id="3" />
+    <cell id="3" />
+    <cell />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="1" />
+    <cell id="1" />
+    <cell />
+    <cell id="3" />
+    <cell id="3" />
+    <cell id="3" />
+    <cell id="3" />
+    <cell id="3" />
+    <cell />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="0" />
+    <cell id="0" />
+    <cell />
+    <cell />
+    <cell id="1" />
+    <cell id="1" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="2" />
+    <cell id="2" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="2" />
+    <cell id="2" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="2" />
+    <cell id="2" />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="2" />
+    <cell id="2" />
+    <cell />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="2" />
+    <cell id="2" />
+    <cell />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell id="4" />
+    <cell id="4" />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+   </cells>
+   <cells rows="5" cols="1" cellWidth="197.0" cellHeight="63.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color foreground="0xFFFFFF" background="0x3333FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="aguja min.wav" />
+     <p>Aguja minutera: Marca los minutos</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFF0033" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="aguja hor.wav" />
+     <p>Aguja horaria: marca las horas</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0x00CC33" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="aguja seg.wav" />
+     <p>Aguja segundera: marca los segundos</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFF66" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="calen ana.wav" />
+     <p>Calendario: muestra el nombre y el número del día</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFF6600" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="numero que ind la hora.wav" />
+     <p>Dígito que indica cada hora del día</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="mediahora.gif" file="mediahora.gif" />
+  <media name="ana5-30.jpg" file="ana5_30.jpg" />
+  <media name="DIGITA05-30.jpg" file="digita05_30.jpg" />
+  <media name="partes reloj_2.jpg" file="partes_reloj_2.jpg" />
+  <media name="reloj digital2.jpg" file="reloj_digital2.jpg" />
+  <media name="RELOJ medias.jpg" file="reloj_medias.jpg" />
+  <media name="tiempo5.jpg" file="tiempo5.jpg" />
+  <media name="5-30.wav" file="5_30.wav" />
+  <media name="abre vent y comp tex.wav" file="abre_vent_y_comp_tex.wav" />
+  <media name="aguja hor.wav" file="aguja_hor.wav" />
+  <media name="aguja min.wav" file="aguja_min.wav" />
+  <media name="aguja seg.wav" file="aguja_seg.wav" />
+  <media name="bien hecho.wav" file="bien_hecho.wav" />
+  <media name="calen ana.wav" file="calen_ana.wav" />
+  <media name="clica para saber.wav" file="clica_para_saber.wav" />
+  <media name="lee atent.wav" file="lee_atent.wav" />
+  <media name="num que ind calenda.wav" file="num_que_ind_calenda.wav" />
+  <media name="num que ind la hora.wav" file="num_que_ind_la_hora.wav" />
+  <media name="num que ind los min.wav" file="num_que_ind_los_min.wav" />
+  <media name="numero que ind la hora.wav" file="no_que_ind_la_hora.wav" />
+  <media name="pincha y lee aten.wav" file="pincha_y_lee_aten.wav" />
+ </mediaBag>
+</JClicProject>
+

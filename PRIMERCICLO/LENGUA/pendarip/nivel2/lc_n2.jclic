@@ -1,0 +1,2489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="lc_n2" version="0.1.3">
+ <settings>
+  <title>Lectura compresnsiva</title>
+  <revision description="created" date="11/21/07" />
+  <revision description="Publicación en la zonaClic (http://clic.xtec.cat)" date="9/30/10">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <organization name="Asociación Barro" mail="asociacionbarro@asociaciones.org" url="http://www.asociacionbarro.org.es/" city="Madrid" state="Madrid" />
+  <language>español</language>
+  <description>
+   <p>Actividades JClic de lectoescritura, ortografía y gramática con textos y vocabulario de la cultura gitana. Las actividades están estructuradas en tres niveles de dificultad creciente.</p>
+  </description>
+  <descriptors area="Lenguas" level="Primaria (6-12)">aprendizaje de la lengua, lengua castellana, comprensión lectora</descriptors>
+ </settings>
+ <sequence>
+  <item id="inicio" name="pantalla 1">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="cuento 1" />
+  <item name="cuento 2" />
+  <item name="cuento 3" />
+  <item id="Conclusión" name="Pantalla 8" />
+  <item id="Conclusión 2" name="Pantalla 9" />
+  <item id="Conclusión 3" name="pantalla 10" />
+  <item id="Cocnlusión 4" name="Pantalla 11" />
+  <item id="Preguntas" name="Pantalla 7" delay="3" />
+  <item id="Colocar párrafos" name="pantalla 3" delay="3" />
+  <item name="pantalla 3.1" />
+  <item id="Puzzle doble" name="pantalla 4" delay="3" />
+  <item name="abecedario" />
+  <item id="Ortografía" name="Pantalla 5" delay="3" />
+  <item name="c/q" />
+  <item name="c/q 2" />
+  <item name="c/q 3" />
+  <item name="Información m/n" />
+  <item name="mp/mb" />
+  <item name="dictado palabras" />
+  <item id="Memory" name="Pantalla 6" delay="3" />
+  <item name="Género" />
+  <item name="género 2" />
+  <item name="Número" />
+  <item name="Número 2" />
+  <item name="Adjetivos" />
+  <item name="dictado conclusión" />
+  <item id="Puzzle conclusión" name="pantalla 12" />
+  <item name="bibliografía1">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.Identify" name="Adjetivos" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="48" />
+      <color background="0xCCCCFF" />
+     </style>
+     <p>Pincha sobre los  adjetivos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="48" />
+      <color background="0xFF0099" />
+     </style>
+     <p>Muy bien!!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCC0099">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xCCCCFF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="4" cols="4" cellWidth="400.0" cellHeight="200.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Comic Sans MS" size="20" bold="true" />
+     <color background="0xCCCC00" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell id="1">
+     <p>Alta</p>
+    </cell>
+    <cell id="1">
+     <p>Largo</p>
+    </cell>
+    <cell id="0">
+     <p>Barro</p>
+    </cell>
+    <cell id="0">
+     <p>Cabeza</p>
+    </cell>
+    <cell id="0">
+     <p>Horno</p>
+    </cell>
+    <cell id="0">
+     <p>Arena</p>
+    </cell>
+    <cell id="1">
+     <p>Triste</p>
+    </cell>
+    <cell id="1">
+     <p>Blanca</p>
+    </cell>
+    <cell id="0">
+     <p>Montaña</p>
+    </cell>
+    <cell id="1">
+     <p>Oscuros</p>
+    </cell>
+    <cell id="0">
+     <p>Mundo</p>
+    </cell>
+    <cell id="0">
+     <p>Persona</p>
+    </cell>
+    <cell id="1">
+     <p>Guapa</p>
+    </cell>
+    <cell id="0">
+     <p>Agua</p>
+    </cell>
+    <cell id="1">
+     <p>Pálidos</p>
+    </cell>
+    <cell id="1">
+     <p>Moreno</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="4" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="4" />
+    <cell>
+     <style>
+      <font family="Arial" size="20" />
+      <color background="0xFF99FF" />
+     </style>
+     <p>Adjetivo </p>
+     <p>Femenino Singular</p>
+    </cell>
+    <cell>
+     <p>Adjetivo</p>
+     <p>Masculino singular</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell />
+    <cell />
+    <cell>
+     <p>Adjetivo</p>
+     <p>Masculino singular</p>
+    </cell>
+    <cell>
+     <p>Adjetivo </p>
+     <p>Femenino Singular</p>
+    </cell>
+    <cell />
+    <cell>
+     <p>Adjetivo </p>
+     <p>Masculino Plural</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell>
+     <p>Adjetivo </p>
+     <p>Femenino Singular</p>
+    </cell>
+    <cell />
+    <cell>
+     <p>Adjetivo </p>
+     <p>Masculino Plural</p>
+    </cell>
+    <cell>
+     <p>Adjetivo</p>
+     <p>Masculino singular</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Género" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="48" />
+      <color background="0x3300FF" />
+     </style>
+     <p>Une cada palabra con su género</p>
+    </cell>
+    <cell txtAlign="middle,bottom" imgAlign="middle,top" image="Risa en movimiento.gif" type="final">
+     <style>
+      <font family="Comic Sans MS" size="48" bold="true" />
+      <color background="0x33CC00" />
+     </style>
+     <p>Que control!!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x99CC00">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xCC99FF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="5" cols="2" cellWidth="600.0" cellHeight="200.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Comic Sans MS" size="20" bold="true" />
+     <color background="0xCC99FF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell id="1">
+     <p>Montaña</p>
+    </cell>
+    <cell id="0">
+     <p>Brazo</p>
+    </cell>
+    <cell id="1">
+     <p>Arena</p>
+    </cell>
+    <cell id="0">
+     <p>Horno</p>
+    </cell>
+    <cell id="1">
+     <p>Figurita</p>
+    </cell>
+    <cell id="1">
+     <p>Máquina</p>
+    </cell>
+    <cell id="0">
+     <p>Río</p>
+    </cell>
+    <cell id="1">
+     <p>Mujer</p>
+    </cell>
+    <cell id="1">
+     <p>Puerta</p>
+    </cell>
+    <cell id="0">
+     <p>Barro</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="400.0" cellHeight="200.0" border="true" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="20" bold="true" />
+     <color background="0x9999FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>Masculino</p>
+    </cell>
+    <cell>
+     <p>Femenino</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>Podemos poner delante el artículo "la"</p>
+    </cell>
+    <cell>
+     <p>Podemos poner delante el artículo "el"</p>
+    </cell>
+    <cell>
+     <p>Podemos poner delante el artículo "la"</p>
+    </cell>
+    <cell>
+     <p>Podemos poner delante el artículo "el"</p>
+    </cell>
+    <cell>
+     <p>Podemos poner delante el artículo "la"</p>
+    </cell>
+    <cell>
+     <p>Podemos poner delante el artículo "la"</p>
+    </cell>
+    <cell>
+     <p>Podemos poner delante el artículo "el"</p>
+    </cell>
+    <cell>
+     <p>Podemos poner delante el artículo "la"</p>
+    </cell>
+    <cell>
+     <p>Podemos poner delante el artículo "la"</p>
+    </cell>
+    <cell>
+     <p>Podemos poner delante el artículo "el"</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="Información m/n" code="">
+   <description />
+   <messages>
+    <cell image="leyendo.gif" type="initial">
+     <style>
+      <color background="0xCCCCFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x9999FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xCC99FF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="900.0" cellHeight="600.0" border="true">
+    <style>
+     <font family="Comic Sans MS" size="48" />
+     <color background="0xCC00CC" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>Se escribe "m" en lugar de "n" delante de -b y -p</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Número" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="48" />
+      <color background="0x3300FF" />
+     </style>
+     <p>Une cada palabra con su número</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="48" />
+      <color background="0xFF0066" />
+     </style>
+     <p>GUAUUUU!!!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCC99FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x99CC00" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="5" cols="2" cellWidth="600.0" cellHeight="200.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="20" bold="true" />
+     <color background="0xCC99FF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell id="1">
+     <p>Montañas</p>
+    </cell>
+    <cell id="1">
+     <p>Brazos</p>
+    </cell>
+    <cell id="1">
+     <p>Hombres</p>
+    </cell>
+    <cell id="0">
+     <p>Horno</p>
+    </cell>
+    <cell id="1">
+     <p>Figuritas</p>
+    </cell>
+    <cell id="0">
+     <p>Máquina</p>
+    </cell>
+    <cell id="0">
+     <p>Río</p>
+    </cell>
+    <cell id="1">
+     <p>Mujeres</p>
+    </cell>
+    <cell id="0">
+     <p>Puerta</p>
+    </cell>
+    <cell id="0">
+     <p>Barro</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="400.0" cellHeight="200.0" border="true" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="20" bold="true" />
+     <color background="0x9999FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>Singular</p>
+    </cell>
+    <cell>
+     <p>Plural</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>Nos referimos a más de una montaña</p>
+    </cell>
+    <cell>
+     <p>Nos referimos a más de un brazo</p>
+    </cell>
+    <cell>
+     <p>Nos referimos a más de un hombre</p>
+    </cell>
+    <cell>
+     <p>Nos referimos a un solo horno</p>
+    </cell>
+    <cell>
+     <p>Nos referimos a más de una figurita</p>
+    </cell>
+    <cell>
+     <p>Nos referimos a un sola máquina</p>
+    </cell>
+    <cell>
+     <p>Nos referimos a un solo río</p>
+    </cell>
+    <cell>
+     <p>Nos referimos a más de una mujer</p>
+    </cell>
+    <cell>
+     <p>Nos referimos a una sola puerta</p>
+    </cell>
+    <cell>
+     <p>Nos referimos a un solo barro</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="Número 2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="48" />
+      <color background="0xFFFF00" />
+     </style>
+     <p>Cambia el número a estas palabras</p>
+    </cell>
+    <cell image="alabar.gif" type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x9900CC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF99" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="8" cols="1" cellWidth="900.0" cellHeight="200.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="36" />
+     <color background="0xCCCCFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="8" />
+    <cell id="0">
+     <p>Mujer</p>
+    </cell>
+    <cell id="1">
+     <p>Gitano</p>
+    </cell>
+    <cell id="2">
+     <p>Mágicos</p>
+    </cell>
+    <cell id="3">
+     <p>Oscuros</p>
+    </cell>
+    <cell id="4">
+     <p>Contenta</p>
+    </cell>
+    <cell id="5">
+     <p>Morena</p>
+    </cell>
+    <cell id="6">
+     <p>Blanca</p>
+    </cell>
+    <cell id="7">
+     <p>Negro</p>
+    </cell>
+   </cells>
+   <cells rows="8" cols="1" cellWidth="900.0" cellHeight="200.0" border="true" id="answers">
+    <style>
+     <font family="Comic Sans MS" size="24" bold="true" />
+     <color background="0xCCFFCC" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="8" />
+    <cell>
+     <p>Mujeres</p>
+    </cell>
+    <cell>
+     <p>Gitanos</p>
+    </cell>
+    <cell>
+     <p>Mágico</p>
+    </cell>
+    <cell>
+     <p>oscuro</p>
+    </cell>
+    <cell>
+     <p>Contentas</p>
+    </cell>
+    <cell>
+     <p>Morenas</p>
+    </cell>
+    <cell>
+     <p>Blancas</p>
+    </cell>
+    <cell>
+     <p>Negros</p>
+    </cell>
+   </cells>
+   <cells rows="8" cols="1" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="8" />
+    <cell image="aplausos.gif" />
+    <cell image="aplausos.gif" />
+    <cell image="aplausos.gif" />
+    <cell image="aplausos.gif" />
+    <cell image="aplausos.gif" />
+    <cell image="aplausos.gif" />
+    <cell image="aplausos.gif" />
+    <cell image="aplausos.gif" />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="Pantalla 11" code="">
+   <description />
+   <messages>
+    <cell image="Barró.JPG" type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x99CCFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x99CC00" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="639.0" cellHeight="469.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="60" bold="true" />
+      <color background="0x99CC00" />
+     </style>
+     <p>y un horno mágico.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Pantalla 5" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color background="0x99CCFF" />
+     </style>
+     <p>Señala las palabras que se escriben con B y las que se escriben con V</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color background="0x99CCFF" />
+     </style>
+     <p>Como controlas!!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Comic Sans MS" size="17" />
+      <color background="0x99CCFF" />
+     </style>
+     <p>Inténtalo de nuevo</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxActions="16" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0x99CC00">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0x66CCFF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="6" cols="2" cellWidth="300.0" cellHeight="75.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="20" bold="true" />
+     <color background="0x66CCFF" inactive="0x6699FF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="6" />
+    <cell id="0">
+     <style>
+      <font family="Comic Sans MS" size="20" bold="true" />
+      <color background="0x66CCFF" inactive="0x66CC00" />
+     </style>
+     <p>ca_eza</p>
+    </cell>
+    <cell id="0">
+     <style>
+      <font family="Comic Sans MS" size="20" bold="true" />
+      <color background="0x66CCFF" />
+     </style>
+     <p>_lanco</p>
+    </cell>
+    <cell id="0">
+     <style>
+      <font family="Comic Sans MS" size="20" bold="true" />
+      <color background="0x66CCFF" />
+     </style>
+     <p>hom_res</p>
+    </cell>
+    <cell id="0">
+     <style>
+      <font family="Comic Sans MS" size="20" bold="true" />
+      <color background="0x66CCFF" />
+     </style>
+     <p>_razo</p>
+    </cell>
+    <cell id="0">
+     <style>
+      <font family="Comic Sans MS" size="20" bold="true" />
+      <color background="0x66CCFF" />
+     </style>
+     <p>_arro</p>
+    </cell>
+    <cell id="0">
+     <style>
+      <font family="Comic Sans MS" size="20" bold="true" />
+      <color background="0x66CCFF" />
+     </style>
+     <p>a_rir</p>
+    </cell>
+    <cell id="1">
+     <style>
+      <font family="Comic Sans MS" size="20" bold="true" />
+      <color background="0x66CCFF" />
+     </style>
+     <p>_ivir</p>
+    </cell>
+    <cell id="1">
+     <style>
+      <font family="Comic Sans MS" size="20" bold="true" />
+      <color background="0x66CCFF" />
+     </style>
+     <p>lle_ar</p>
+    </cell>
+    <cell id="1">
+     <style>
+      <font family="Comic Sans MS" size="20" bold="true" />
+      <color background="0x66CCFF" />
+     </style>
+     <p>_entanal</p>
+    </cell>
+    <cell id="1">
+     <style>
+      <font family="Comic Sans MS" size="20" bold="true" />
+      <color background="0x66CCFF" />
+     </style>
+     <p>estu_ieron</p>
+    </cell>
+    <cell id="1">
+     <style>
+      <font family="Comic Sans MS" size="20" bold="true" />
+      <color background="0x66CCFF" />
+     </style>
+     <p>nue_o</p>
+    </cell>
+    <cell id="1">
+     <style>
+      <font family="Comic Sans MS" size="20" bold="true" />
+      <color background="0x66CCFF" />
+     </style>
+     <p>in_entar</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="200.0" cellHeight="90.0" border="true" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="20" bold="true" />
+     <color background="0x00CCFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="17" bold="true" />
+      <color background="0x99CC00" />
+     </style>
+     <p>B</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="20" bold="true" />
+      <color background="0x99CC00" />
+     </style>
+     <p>v</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="6" />
+    <cell>
+     <p>Cabeza</p>
+    </cell>
+    <cell>
+     <p>Blanco</p>
+    </cell>
+    <cell>
+     <p>Hombres</p>
+    </cell>
+    <cell>
+     <p>Brazo</p>
+    </cell>
+    <cell>
+     <p>Barro</p>
+    </cell>
+    <cell>
+     <p>Abrir</p>
+    </cell>
+    <cell>
+     <p>Vivir</p>
+    </cell>
+    <cell>
+     <p>Llevar</p>
+    </cell>
+    <cell>
+     <p>Ventanal</p>
+    </cell>
+    <cell>
+     <p>Estuvieron</p>
+    </cell>
+    <cell>
+     <p>Nuevo</p>
+    </cell>
+    <cell>
+     <p>Inventar</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="Pantalla 6" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="28" />
+      <color background="0x99CCFF" />
+     </style>
+     <p>Pincha en los recuadors y encuentra las parejas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="26" />
+      <color background="0x99CCFF" />
+     </style>
+     <p>Qué memoriaaaa!!!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color background="0x99CCFF" />
+     </style>
+     <p>Ohhh, prueba de nuevo</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x99CC00">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x99CCFF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="200.0" cellHeight="200.0" border="true" id="primary">
+    <style>
+     <color background="0xCC99FF" shadow="0xFF99FF" inactive="0xCC99FF" alternative="0xCC99FF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell image="razas 10.jpg">
+     <style>
+      <font family="Lucida Handwriting" size="17" />
+      <color background="0xCC99FF" inactive="0xCC99FF" />
+     </style>
+    </cell>
+    <cell image="razas 11.jpg">
+     <style>
+      <font family="Lucida Handwriting" size="17" />
+      <color background="0xCC99FF" inactive="0xCC99FF" />
+     </style>
+    </cell>
+    <cell image="razas 12.jpg">
+     <style>
+      <font family="Lucida Handwriting" size="17" />
+      <color background="0xCC99FF" inactive="0xCC99FF" />
+     </style>
+    </cell>
+    <cell image="razas 13.jpg">
+     <style>
+      <font family="Lucida Handwriting" size="17" />
+      <color background="0xCC99FF" inactive="0xCC99FF" />
+     </style>
+    </cell>
+    <cell image="razas 2.jpg">
+     <style>
+      <font family="Lucida Handwriting" size="17" />
+      <color background="0xCC99FF" inactive="0xCC99FF" />
+     </style>
+    </cell>
+    <cell image="razas 3.jpg">
+     <style>
+      <font family="Lucida Handwriting" size="17" />
+      <color background="0xCC99FF" inactive="0xCC99FF" />
+     </style>
+    </cell>
+    <cell image="razas 4.jpg">
+     <style>
+      <font family="Lucida Handwriting" size="17" />
+      <color background="0xCC99FF" inactive="0xCC99FF" />
+     </style>
+    </cell>
+    <cell image="razas 5.jpg">
+     <style>
+      <font family="Lucida Handwriting" size="17" />
+      <color background="0xCC99FF" inactive="0xCC99FF" />
+     </style>
+    </cell>
+    <cell image="razas 6.jpg">
+     <style>
+      <font family="Lucida Handwriting" size="17" />
+      <color background="0xCC99FF" inactive="0xCC99FF" />
+     </style>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="Pantalla 7" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="36" />
+      <color background="0x99CC00" />
+     </style>
+     <p>Elige la respuesta correcta</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="28" />
+      <color background="0x99CC00" />
+     </style>
+     <p>Qué control......</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color background="0x99CC00" />
+     </style>
+     <p>UYYYYYYYYYYY!!!!! Casi, casi....</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="60" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0x99CC00">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x99CCFF" border="true">
+     <size width="727" height="510" />
+    </window>
+    <skin file="@blue.xml" />
+   </settings>
+   <document>
+    <style name="default" bold="false" italic="false" family="Arial" tabWidth="12" background="0x99CCFF" size="11" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" background="0x99CCFF" />
+    <style name="targetError" base="target" foreground="0xFF0000" background="0xFFFFFF" />
+    <section>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Comic Sans MS" background="0x99CCFF" size="16">Cómo era la mujer que creaba las figuras? </text>
+      <target>
+       <answer>Alta, guapa, de cabellos largos y oscuros</answer>
+       <optionList>
+        <option>Baja, guapa, de cabellos largos y oscuros</option>
+        <option>Alta, guapa, de cabellos largos y oscuros</option>
+        <option>Alta, guapa, de cabellos cortos claros</option>
+       </optionList>
+       <text>Alta, guapa, de cabellos largos y oscuros</text>
+      </target>
+      <text family="Comic Sans MS" background="0x99CCFF" size="16">.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Comic Sans MS" background="0x99CCFF" size="16">¿Cómo nació la raza blanca? </text>
+      <target>
+       <answer>La mujer estaba impaciente y abrió el horno antes de tiempo.</answer>
+       <optionList>
+        <option>La mujer estaba impaciente  y cerró el horno antes de timpo</option>
+        <option>La mujer estaba impaciente y abrió el horno antes de tiempo.</option>
+        <option>La mujer estaba pacienteY abrió el horno después de tiempo</option>
+       </optionList>
+       <text>La mujer estaba impaciente y abrió el horno antes de tiempo.</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Comic Sans MS" background="0x99CCFF" size="16">¿Con qué materiales fabricó la raza blanca? </text>
+      <target>
+       <answer>Con arena y agua.</answer>
+       <optionList>
+        <option>Con arena y agua.</option>
+        <option>Con cemento y agua</option>
+        <option>Con harina y chocolate</option>
+       </optionList>
+       <text>Con arena y agua.</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Comic Sans MS" background="0x99CCFF" size="16">¿Cómo nació la raza negra? </text>
+      <target>
+       <answer>La mujer se distrajo mirando un pájaro y tardó en abrir el horno.</answer>
+       <optionList>
+        <option>La mujer se distrajo mirando un pájaro y tardó en abrir el horno.</option>
+        <option>La mujer se distrajo mirando una mariposa y tardó en abrir el horno.</option>
+        <option>La mujer se distrajo mirando un pájaro y abrió antes de tiempo el horno.</option>
+       </optionList>
+       <text>La mujer se distrajo mirando un pájaro y tardó en abrir el horno.</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Comic Sans MS" background="0x99CCFF" size="16">¿Con qué materiales fabricó las figuritas de raza negra? </text>
+      <target>
+       <answer>Con arena y agua.</answer>
+       <optionList>
+        <option>Con harina y chocolate</option>
+        <option>Con cemento y agua</option>
+        <option>Con arena y agua.</option>
+       </optionList>
+       <text>Con arena y agua.</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Comic Sans MS" background="0x99CCFF" size="16">¿Cómo nació la raza gitana? </text>
+      <target>
+       <answer>La mujer inventó una máquina para medir el tiempo para saber cuándo estaban listas las figuritas.</answer>
+       <optionList>
+        <option>La mujer inventó una máquina para medir el tiempo para saber cuándo estaban listas las figuritas.</option>
+        <option>La mujer inventó una máquina para medir el tiempo para poder irse de paseo.</option>
+        <option>La mujer inventó una máquina para amasar figuritas.</option>
+       </optionList>
+       <text>La mujer inventó una máquina para medir el tiempo para saber cuándo estaban listas las figuritas.</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Comic Sans MS" background="0x99CCFF" size="16">¿Con qué materiales fabricó las figuritas de raza gitana? </text>
+      <target>
+       <answer>Con arena y agua.</answer>
+       <optionList>
+        <option>Con cemento y agua.</option>
+        <option>Con arena y agua.</option>
+        <option>Con harina y chocolate.</option>
+       </optionList>
+       <text>Con arena y agua.</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="Pantalla 8" code="">
+   <description />
+   <messages>
+    <cell image="Barró.JPG" type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x99CC00">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x99CCFF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="639.0" cellHeight="469.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="48" bold="true" />
+      <color background="0x99CCFF" />
+     </style>
+     <p>Todas las personas blancas,negras,amarillas, gitanas,hindúes, ecuatorianas... estamos hechas de la misma manera...</p>
+     <p>   </p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="Pantalla 9" code="">
+   <description />
+   <messages>
+    <cell image="Barró.JPG" type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x99CCFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x99CC00" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="639.0" cellHeight="469.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="60" bold="true" />
+      <color background="0x99CC00" />
+     </style>
+     <p>Con un río entero de agua ...</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="abecedario" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="48" />
+      <color background="0x99CC00" />
+     </style>
+     <p>Coloca las letras del abecedario</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="48" />
+      <color background="0x99CC00" />
+     </style>
+     <p>Muy bien!!!!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x9900CC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x99CC00" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="4" cols="7" border="true" image="Dibujo MARCA AGUA 2.JPG">
+    <style>
+     <font family="Comic Sans MS" size="72" bold="true" />
+     <color inactive="0xCC00FF" />
+    </style>
+    <shaper class="@Rectangular" cols="7" rows="4" />
+    <cell>
+     <p>A</p>
+    </cell>
+    <cell>
+     <p>B</p>
+    </cell>
+    <cell>
+     <p>C</p>
+    </cell>
+    <cell>
+     <p>D</p>
+    </cell>
+    <cell>
+     <p>E</p>
+    </cell>
+    <cell>
+     <p>F</p>
+    </cell>
+    <cell>
+     <p>G</p>
+    </cell>
+    <cell>
+     <p>H</p>
+    </cell>
+    <cell>
+     <p>I</p>
+    </cell>
+    <cell>
+     <p>J</p>
+    </cell>
+    <cell>
+     <p>K</p>
+    </cell>
+    <cell>
+     <p>L</p>
+    </cell>
+    <cell>
+     <p>M</p>
+    </cell>
+    <cell>
+     <p>N</p>
+    </cell>
+    <cell>
+     <p>Ñ</p>
+    </cell>
+    <cell>
+     <p>O</p>
+    </cell>
+    <cell>
+     <p>P</p>
+    </cell>
+    <cell>
+     <p>Q</p>
+    </cell>
+    <cell>
+     <p>R</p>
+    </cell>
+    <cell>
+     <p>S</p>
+    </cell>
+    <cell>
+     <p>T</p>
+    </cell>
+    <cell>
+     <p>U</p>
+    </cell>
+    <cell>
+     <p>V</p>
+    </cell>
+    <cell>
+     <p>W</p>
+    </cell>
+    <cell>
+     <p>X</p>
+    </cell>
+    <cell>
+     <p>Y</p>
+    </cell>
+    <cell>
+     <p>Z</p>
+    </cell>
+    <cell>
+     <p>FIN</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="bibliografía1" code="">
+   <description />
+   <messages>
+    <cell image="Barró.JPG" type="initial">
+     <style>
+      <font family="Comic Sans MS" size="28" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x0066FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0099CC" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="tpm3.JPG">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color background="0xCCFF99" />
+     </style>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.WrittenAnswer" name="c/q" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="48" />
+      <color background="0x9999FF" />
+     </style>
+     <p>Forma los diminutivos de estas palaras con -ito o -ita</p>
+    </cell>
+    <cell image="gorra con aplausos.gif" type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x9999FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xCCFF00" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="800.0" cellHeight="200.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="20" bold="true" />
+     <color background="0xCC99FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <p>rosco</p>
+    </cell>
+    <cell id="1">
+     <p>mosca</p>
+    </cell>
+    <cell id="2">
+     <p>boca</p>
+    </cell>
+    <cell id="3">
+     <p>poco</p>
+    </cell>
+    <cell id="4">
+     <p>roca</p>
+    </cell>
+    <cell id="5">
+     <p>blanco</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="800.0" cellHeight="200.0" border="true" id="answers">
+    <style>
+     <font family="Comic Sans MS" size="20" bold="true" />
+     <color background="0xCC99FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>rosquito</p>
+    </cell>
+    <cell>
+     <p>mosquita</p>
+    </cell>
+    <cell>
+     <p>boquita</p>
+    </cell>
+    <cell>
+     <p>poquito</p>
+    </cell>
+    <cell>
+     <p>roquita</p>
+    </cell>
+    <cell>
+     <p>blanquito</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell image="ganaOscar.gif" />
+    <cell image="ganaOscar.gif" />
+    <cell image="ganaOscar.gif">
+     <style>
+      <font family="Comic Sans MS" size="48" />
+      <color background="0xCC99FF" />
+     </style>
+    </cell>
+    <cell image="ganaOscar.gif" />
+    <cell image="ganaOscar.gif" />
+    <cell image="ganaOscar.gif" />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="c/q 2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="28" bold="true" />
+      <color background="0xCCCCFF" />
+     </style>
+     <p>Forma palabras con ce y que</p>
+    </cell>
+    <cell image="muy bien.gif" type="final">
+     <style>
+      <color background="0xCCCCFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF99FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xCCCCFF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="4" cols="2" cellWidth="400.0" cellHeight="200.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Comic Sans MS" size="48" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell id="1">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color background="0xCC99FF" inactive="0xCCCCFF" />
+     </style>
+     <p>_so</p>
+    </cell>
+    <cell id="1">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color background="0xFF9900" inactive="0xCCCCFF" />
+     </style>
+     <p>bo_rón</p>
+    </cell>
+    <cell id="0">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color background="0x009999" inactive="0xCCCCFF" />
+     </style>
+     <p>pe_ra</p>
+    </cell>
+    <cell id="0">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color background="0xCCCC00" inactive="0xCCCCFF" />
+     </style>
+     <p>re_ta</p>
+    </cell>
+    <cell id="1">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color background="0xFF3333" inactive="0xCCCCFF" />
+     </style>
+     <p>pa_te</p>
+    </cell>
+    <cell id="1">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color background="0x66FF33" inactive="0xCCCCFF" />
+     </style>
+     <p>pe_ña</p>
+    </cell>
+    <cell id="0">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color background="0x990099" inactive="0xCCCCFF" />
+     </style>
+     <p>_rilla</p>
+    </cell>
+    <cell id="1">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color background="0x00FFFF" inactive="0xCCCCFF" />
+     </style>
+     <p>_rido</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="400.0" cellHeight="200.0" border="true" id="secondary">
+    <style>
+     <font family="Comic Sans MS" size="48" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color background="0xFFFFCC" inactive="0xCCCCFF" />
+     </style>
+     <p>ce</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color background="0x6699FF" inactive="0xCCCCFF" />
+     </style>
+     <p>que</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <p>queso</p>
+    </cell>
+    <cell>
+     <p>boquerón</p>
+    </cell>
+    <cell>
+     <p>pecera</p>
+    </cell>
+    <cell>
+     <p>receta</p>
+    </cell>
+    <cell>
+     <p>paquete</p>
+    </cell>
+    <cell>
+     <p>pequeña</p>
+    </cell>
+    <cell>
+     <p>cerilla</p>
+    </cell>
+    <cell>
+     <p>querido</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="c/q 3" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="48" />
+      <color background="0x00CC99" />
+     </style>
+     <p>Forma palabras con ci o qui</p>
+    </cell>
+    <cell image="gorra con aplausos.gif" type="final">
+     <style>
+      <color background="0x00CC99" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFF99">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00CC99" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="4" cols="2" cellWidth="400.0" cellHeight="200.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell id="1">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color background="0x6699FF" inactive="0xCCCCFF" />
+     </style>
+     <p>to_lla</p>
+    </cell>
+    <cell id="1">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color background="0xFF9999" inactive="0xCCCCFF" />
+     </style>
+     <p>ta_lla</p>
+    </cell>
+    <cell id="0">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color background="0xCC33FF" inactive="0xCCCCFF" />
+     </style>
+     <p>_ne</p>
+    </cell>
+    <cell id="0">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color background="0xFFFF00" inactive="0xCCCCFF" />
+     </style>
+     <p>bo_na</p>
+    </cell>
+    <cell id="0">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color background="0x9999FF" inactive="0xCCCCFF" />
+     </style>
+     <p>pa_encia</p>
+    </cell>
+    <cell id="1">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color background="0x99FF99" inactive="0xCCCCFF" />
+     </style>
+     <p>_mica</p>
+    </cell>
+    <cell id="0">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color background="0xCC0000" inactive="0xCCCCFF" />
+     </style>
+     <p>_ma</p>
+    </cell>
+    <cell id="0">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color background="0xCC00CC" inactive="0xCCCCFF" />
+     </style>
+     <p>_ruela</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="400.0" cellHeight="200.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color background="0x99CC00" inactive="0xCCCCFF" />
+     </style>
+     <p>ci</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color background="0xFF6666" inactive="0xCCCCFF" />
+     </style>
+     <p>qui</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <p>toquilla</p>
+    </cell>
+    <cell>
+     <p>taquilla</p>
+    </cell>
+    <cell>
+     <p>cine</p>
+    </cell>
+    <cell>
+     <p>bocina</p>
+    </cell>
+    <cell>
+     <p>paciencia</p>
+    </cell>
+    <cell>
+     <p>química</p>
+    </cell>
+    <cell>
+     <p>cima</p>
+    </cell>
+    <cell>
+     <p>ciruela</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.Identify" name="cuento 1" code="" type="identifyWords">
+   <description />
+   <messages>
+    <cell image="leyendo.gif" type="initial">
+     <style>
+      <color background="0xCCFF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x9966FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x66CC00" border="true">
+     <size width="900" height="600" />
+    </window>
+    <skin file="@blue.xml" />
+   </settings>
+   <checkButton />
+   <document>
+    <style name="default" bold="false" italic="false" tabWidth="12" family="Comic Sans MS" background="0xCCCCFF" size="20" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p Alignment="1" family="Arial" background="0xFFFFFF">
+      <text bold="false" family="Comic Sans MS" background="0xCCCCFF" size="26">Cuento Popular Gitano</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text bold="false" family="Comic Sans MS" background="0xCCCCFF" size="20">	Hace mucho tiempo había una mujer alta, guapa de cabellos largos y oscuros, que vivía sola y muy triste en el mundo. Se puso a pensar la manera de paliar su situación. Tanto pensó que una idea se le ocurrió.</text>
+     </p>
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <text bold="false" family="Comic Sans MS" background="0xCCCCFF" size="20">	Cogió una montaña de arena y un gran río de agua, los unió y los mezcló. De la mezcla resultó barro. Fabricó figuritas con cabeza, dos brazos, dos piernas, pies... Hizo millones y millones de figuritas. Las llevó a una gran cocina en cuyo interior tenía un horno mágico. Metió las figuritas dentro y esperó. No esperó demasiado porque estaba muy impaciente. Abrió la puerta y las figuritas salieron. Estas aprendieron a andar, escribir... poco a poco. Y como habían estado tan poco tiempo en el horno, sus caritas y cuerpos eran pálidos. Así nacieron las personas, hombres y mujeres de raza blanca</text>
+      <text bold="false" family="Comic Sans MS" size="20">.</text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.Identify" name="cuento 2" code="" type="identifyWords">
+   <description />
+   <messages>
+    <cell image="leyendo.gif" type="initial">
+     <style>
+      <color background="0xCC99FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x66CC00">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x9966FF" border="true">
+     <size width="900" height="600" />
+    </window>
+    <skin file="@blue.xml" />
+   </settings>
+   <checkButton />
+   <document>
+    <style name="default" bold="false" italic="false" tabWidth="12" family="Comic Sans MS" background="0xCCCCFF" size="20" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="14">	</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Comic Sans MS" size="22">	</text>
+      <text family="Comic Sans MS" background="0xCCCCFF" size="22">La mujer morena estaba muy contenta e ilusionada, y de nuevo volvió hacer la misma tarea. Cogió una montaña de arena y un gran río de agua y los mezcló. Con la mezcla resultante hizo millones y millones de figuritas con cabeza, dos piernas, dos brazos... las metió en su horno mágico y esperó. Durante la espera se distrajo con un bello pájaro multicolor que pasaba delante de su ventanal. Tanto esperó, que las figuritas pasaron mucho tiempo dentro del horno. Al abrirlo salieron todas ellas. Igualmente aprendieron a escribir, pensar, sumar... poco a poco. Como estuvieron mucho tiempo salieron muy oscuras. De esta forma nacieron las personas, hombres y mujeres de raza negra.</text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.Identify" name="cuento 3" code="" type="identifyWords">
+   <description />
+   <messages>
+    <cell image="leyendo.gif" type="initial">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x9933FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x9933FF" border="true">
+     <size width="900" height="600" />
+    </window>
+    <skin file="@blue.xml" />
+   </settings>
+   <checkButton />
+   <document>
+    <style name="default" bold="false" italic="false" tabWidth="12" family="Comic Sans MS" background="0xCCCCFF" size="20" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="14">	</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Comic Sans MS" background="0xCCCCFF" size="22">	La mujer estaba ya muy contenta porque tenía ya personas, pero lo intentó una vez más; mezcló el gran río y la montaña de arena, y con el barro resultante nuevamente modeló figuritas iguales a las anteriores, con dos piernas, cabeza, dos brazos... las metió en el horno y esperó. Mientras esperaba se inventó una máquina para poder medir el tiempo. Con esto sabía en que momento estarían listas. Cuando llegó el momento, abrió el horno y salieron. De la misma forma aprendieron a escribir, sumar, multiplicar, leer... poco a poco. Estas figuritas no salieron ni con la piel negra, ni con la piel blanca, sino ligeramente tostados y morenitos. Así salieron los hombres y mujeres de raza gitana.</text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.WrittenAnswer" name="dictado conclusión" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="18" />
+      <color background="0xCCCCFF" />
+     </style>
+     <p>Pincha en cada imagen y escribe lo que oyes. ¡Ojo con las tildes, comas y puntos!</p>
+    </cell>
+    <cell txtAlign="middle,bottom" imgAlign="middle,top" image="11970_emoticonos-emotik_com.gif" type="final">
+     <style>
+      <font family="Comic Sans MS" size="48" />
+      <color background="0xCCCCFF" />
+     </style>
+     <p>muy bien!!!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xCCFFCC" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="600.0" cellHeight="200.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="28" />
+     <color background="0xFFCCFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0" image="images.jpg">
+     <media type="PLAY_AUDIO" level="1" file="conclusión 1 - copia.mp3" />
+    </cell>
+    <cell id="1" image="razas 11.jpg">
+     <media type="PLAY_AUDIO" level="1" file="conclusión 2.mp3" />
+    </cell>
+    <cell id="2" image="razas 6.jpg">
+     <media type="PLAY_AUDIO" level="1" file="conclusión 3.mp3" />
+    </cell>
+    <cell id="3" image="razas 8.jpg">
+     <media type="PLAY_AUDIO" level="1" file="conclusión 4.mp3" />
+    </cell>
+    <cell id="4" image="razas.jpg">
+     <media type="PLAY_AUDIO" level="1" file="conclusión 5.mp3" />
+    </cell>
+    <cell id="5" image="razas 3.jpg">
+     <media type="PLAY_AUDIO" level="1" file="conclusión 6.mp3" />
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="999.0" cellHeight="200.0" border="true" id="answers">
+    <style>
+     <font family="Comic Sans MS" size="22" />
+     <color background="0xCC99FF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="22" />
+      <color background="0xCC66FF" />
+     </style>
+     <p>Todas las personas blancas, negras</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="24" />
+      <color background="0xCC66FF" />
+     </style>
+     <p>amarillas, gitanas, hindúes, ecuatorianas</p>
+    </cell>
+    <cell>
+     <p>estamos hechas de la misma manera</p>
+    </cell>
+    <cell>
+     <p>con un río entero de agua</p>
+    </cell>
+    <cell>
+     <p>con una gran montaña de arena</p>
+    </cell>
+    <cell>
+     <p>y con un horno mágico</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>Todas las personas blancas, negras,</p>
+    </cell>
+    <cell>
+     <p>amarillas,gitanas, hindúes, ecuatorianas</p>
+    </cell>
+    <cell>
+     <p>estamos hechas de la misma manera</p>
+    </cell>
+    <cell>
+     <p>con un río entero de agua</p>
+    </cell>
+    <cell>
+     <p>con una gran montaña de arena</p>
+    </cell>
+    <cell>
+     <p>y con un horno mágico.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="dictado palabras" code="">
+   <description />
+   <messages>
+    <cell imgAlign="left,middle" avoidOverlapping="true" image="Perro con orejas.jpg" type="initial">
+     <style>
+      <font family="Comic Sans MS" size="28" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Escribe las palabras que escuches</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="Perro con orejas.jpg" type="final">
+     <style>
+      <font family="Comic Sans MS" size="48" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡¡¡¡¡GUAUUUUUUUUUUU!!!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCCCFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xCC99FF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="10" cols="1" cellWidth="400.0" cellHeight="75.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="10" />
+    <cell id="0" image="Perro con orejas.jpg">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0x9999FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Romper.mp3" />
+    </cell>
+    <cell id="1" image="Perro con orejas.jpg">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFCCFF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Campo.mp3" />
+    </cell>
+    <cell id="2" image="Perro con orejas.jpg">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xCCFF99" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bombilla.mp3" />
+    </cell>
+    <cell id="3" image="Perro con orejas.jpg">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFF9999" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="cántaro.mp3" />
+    </cell>
+    <cell id="4" image="Perro con orejas.jpg">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFF99" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="cambio.mp3" />
+    </cell>
+    <cell id="5" image="Perro con orejas.jpg">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xCC99FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="sombrero.mp3" />
+    </cell>
+    <cell id="6" image="Perro con orejas.jpg">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFF33FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="lámpara.mp3" />
+    </cell>
+    <cell id="7" image="Perro con orejas.jpg">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="cantar.mp3" />
+    </cell>
+    <cell id="8" image="Perro con orejas.jpg">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFF66CC" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="pinrel.mp3" />
+    </cell>
+    <cell id="9" image="Perro con orejas.jpg">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xCC00CC" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="chunga.mp3" />
+    </cell>
+   </cells>
+   <cells rows="10" cols="1" cellWidth="600.0" cellHeight="75.0" border="true" id="answers">
+    <style>
+     <font family="Comic Sans MS" size="28" />
+     <color background="0x00CCCC" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="10" />
+    <cell>
+     <p>romper</p>
+    </cell>
+    <cell>
+     <p>campo</p>
+    </cell>
+    <cell>
+     <p>bombilla</p>
+    </cell>
+    <cell>
+     <p>cántaro</p>
+    </cell>
+    <cell>
+     <p>cambio</p>
+    </cell>
+    <cell>
+     <p>sombrero</p>
+    </cell>
+    <cell>
+     <p>lámpara</p>
+    </cell>
+    <cell>
+     <p>cantar</p>
+    </cell>
+    <cell>
+     <p>pinrel</p>
+    </cell>
+    <cell>
+     <p>chunga</p>
+    </cell>
+   </cells>
+   <cells rows="10" cols="1" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="10" />
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="28" />
+      <color background="0xCC00CC" />
+     </style>
+     <p>romper</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="28" />
+      <color background="0xCC00CC" />
+     </style>
+     <p>campo</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="28" />
+      <color background="0xCC00CC" />
+     </style>
+     <p>bombilla</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="28" />
+      <color background="0xCC00CC" />
+     </style>
+     <p>cántaro</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="28" />
+      <color background="0xCC00CC" />
+     </style>
+     <p>cambio</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="28" />
+      <color background="0xCC00CC" />
+     </style>
+     <p>sombrero</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="28" />
+      <color background="0xCC00CC" />
+     </style>
+     <p>lámpara</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="28" />
+      <color background="0xCC00CC" />
+     </style>
+     <p>cantar</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="28" />
+      <color background="0xCC00CC" />
+     </style>
+     <p>pinrel</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="28" />
+      <color background="0xCC00CC" />
+     </style>
+     <p>chunga</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="género 2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="48" />
+      <color background="0xFF99CC" />
+     </style>
+     <p>Cambia el género a estas palabras</p>
+    </cell>
+    <cell image="ganaOscar.gif" type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCC00CC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF66" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="8" cols="1" cellWidth="900.0" cellHeight="200.0" border="true" id="primary">
+    <style>
+     <font family="Comic Sans MS" size="24" bold="true" />
+     <color background="0xCCFF99" inactive="0xFF99CC" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="8" />
+    <cell id="0">
+     <p>Mujer</p>
+    </cell>
+    <cell id="1">
+     <p>Gitano</p>
+    </cell>
+    <cell id="2">
+     <p>Mágico</p>
+    </cell>
+    <cell id="3">
+     <p>Oscuro</p>
+    </cell>
+    <cell id="4">
+     <p>Contenta</p>
+    </cell>
+    <cell id="5">
+     <p>Morena</p>
+    </cell>
+    <cell id="6">
+     <p>Blanca</p>
+    </cell>
+    <cell id="7">
+     <p>Negro</p>
+    </cell>
+   </cells>
+   <cells rows="8" cols="1" cellWidth="900.0" cellHeight="200.0" border="true" id="answers">
+    <style>
+     <font family="Comic Sans MS" size="24" bold="true" />
+     <color background="0x00CCCC" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="8" />
+    <cell>
+     <p>Hombre</p>
+    </cell>
+    <cell>
+     <p>Gitana</p>
+    </cell>
+    <cell>
+     <p>Mágica</p>
+    </cell>
+    <cell>
+     <p>oscura</p>
+    </cell>
+    <cell>
+     <p>Contento</p>
+    </cell>
+    <cell>
+     <p>Moreno</p>
+    </cell>
+    <cell>
+     <p>Blanco</p>
+    </cell>
+    <cell>
+     <p>Negra</p>
+    </cell>
+   </cells>
+   <cells rows="8" cols="1" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="8" />
+    <cell image="ganaOscar.gif">
+     <style>
+      <color background="0xCCFF99" />
+     </style>
+    </cell>
+    <cell image="ganaOscar.gif" />
+    <cell image="ganaOscar.gif" />
+    <cell image="ganaOscar.gif" />
+    <cell image="ganaOscar.gif" />
+    <cell image="ganaOscar.gif" />
+    <cell image="ganaOscar.gif" />
+    <cell image="ganaOscar.gif" />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="mp/mb" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="48" />
+      <color background="0x009999" />
+     </style>
+     <p>Completa las  palabras</p>
+    </cell>
+    <cell image="ok.gif" type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFF66">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF66CC" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="400.0" cellHeight="200.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell id="1">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color background="0xCCFF99" inactive="0xFF00CC" />
+     </style>
+     <p>Ca_po</p>
+    </cell>
+    <cell id="1">
+     <style>
+      <font family="Comic Sans MS" size="28" />
+      <color background="0xCC0066" inactive="0xFF00CC" />
+     </style>
+     <p>bo_billa</p>
+    </cell>
+    <cell id="0">
+     <style>
+      <font family="Comic Sans MS" size="28" bold="true" />
+      <color background="0x00CCCC" inactive="0xFF00CC" />
+     </style>
+     <p>ba_co</p>
+    </cell>
+    <cell id="1">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color background="0xFFFF00" inactive="0xFF00CC" />
+     </style>
+     <p>lá_para</p>
+    </cell>
+    <cell id="0">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color background="0x990099" inactive="0xFF00CC" />
+     </style>
+     <p>cá_taro</p>
+    </cell>
+    <cell id="1">
+     <style>
+      <font family="Comic Sans MS" size="24" bold="true" />
+      <color background="0xCC66FF" inactive="0xFF00CC" />
+     </style>
+     <p>ho_bre</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="400.0" cellHeight="200.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color background="0xCC99FF" inactive="0xFF00CC" />
+     </style>
+     <p>n</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color background="0xFF9933" inactive="0xFF00CC" />
+     </style>
+     <p>m</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>Se escribe m delante de "p"</p>
+    </cell>
+    <cell>
+     <p>Se escribe m delante de "b"</p>
+    </cell>
+    <cell>
+     <p>Banco</p>
+    </cell>
+    <cell>
+     <p>Se escribe m delante de "p"</p>
+    </cell>
+    <cell>
+     <p>Cántaro</p>
+    </cell>
+    <cell>
+     <p>Se escribe m delante de "b"</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="pantalla 1" code="">
+   <description />
+   <messages>
+    <cell image="Barró.JPG" type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x99CC00">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x99CCFF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="Dibujo MARCA AGUA 2.JPG">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <style>
+      <font family="Lucida Handwriting" size="48" bold="true" />
+     </style>
+     <p>Cuento Popular Gitano</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="pantalla 10" code="">
+   <description />
+   <messages>
+    <cell image="Barró.JPG" type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x99CC00">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x99CCFF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="639.0" cellHeight="469.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="60" bold="true" />
+      <color background="0x99CCFF" />
+     </style>
+     <p>Con una gran montaña de arena...</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="pantalla 12" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="24" />
+      <color background="0x99CCFF" />
+     </style>
+     <p>Y para terminar  realiza este puzzle</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="48" />
+      <color background="0x99CCFF" />
+     </style>
+     <p>Muy bien!  ¿Te ha gustado?</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Comic Sans MS" size="28" />
+      <color background="0x99CCFF" />
+     </style>
+     <p>Ohhh! </p>
+    </cell>
+   </messages>
+   <settings margin="17" dragCells="true" maxTime="30" countDownTime="true" maxActions="10" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0x99CC00">
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0x99CCFF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="Conclusión2.JPG">
+    <style>
+     <color background="0x99CC00" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@text.Order" name="pantalla 3" code="" type="orderParagraphs">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color background="0x99CCFF" />
+     </style>
+     <p>Ordena los párrafos del cuento</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color background="0x99CCFF" />
+     </style>
+     <p>Fantástico!!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color background="0x99CCFF" />
+     </style>
+     <p>Ooooh! Inténtalo otra vez!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="30" countDownTime="true" maxActions="4" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0x99CC00">
+     <counters time="true" actions="false" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="727" height="505" />
+    </window>
+    <skin file="@blue.xml" />
+   </settings>
+   <checkButton>Comprueba tu trabajo</checkButton>
+   <document>
+    <style name="default" bold="false" italic="false" tabWidth="12" family="Comic Sans MS" background="0x99CCFF" size="16" />
+    <style name="target" base="default" foreground="0x000000" target="true" />
+    <style name="targetError" base="target" foreground="0xCC0000" background="0x99CCFF" />
+    <section>
+     <p Alignment="1" family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0x99CCFF"> </text>
+      <text bold="true" family="Arial" background="0x99CCFF" size="22">Cuento popular gitano</text>
+     </p>
+     <p Alignment="1" family="Arial" background="0xFFFFFF" />
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <target>	Hace mucho tiempo había una mujer alta, guapa de cabellos largos y oscuros, que vivía sola y muy triste en el mundo. Se puso a pensar la manera de paliar su situación. Tanto pensó que una idea se le ocurrió.</target>
+     </p>
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <target>	Cogió una montaña de arena y un gran río de agua, los unió y los mezcló. De la mezcla resultó barro. Fabricó figuritas con cabeza, dos brazos, dos piernas, pies... Hizo millones y millones de figuritas. Las llevó a una gran cocina en cuyo interior tenía un horno mágico. Metió las figuritas dentro y esperó.</target>
+      <text family="Arial" background="0x99CCFF"> </text>
+     </p>
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <target>	No esperó demasiado porque estaba muy impaciente. Abrió la puerta y las figuritas salieron. Estas aprendieron a andar, escribir... poco a poco. Y como habían estado tan poco tiempo en el horno, sus caritas y cuerpos eran pálidos. Así nacieron las personas, hombres y mujeres de raza blanca.</target>
+      <text family="Arial" background="0x99CCFF">	</text>
+     </p>
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <target>	La mujer morena estaba muy contenta e ilusionada, y de nuevo volvió hacer la misma tarea. Cogió una montaña de arena y un gran río de agua y los mezcló. Con la mezcla resultante hizo millones y millones de figuritas con cabeza, dos piernas, dos brazos... las metió en su horno mágico y esperó.</target>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@text.Order" name="pantalla 3.1" code="" type="orderParagraphs">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color background="0x99CCFF" />
+     </style>
+     <p>Ordena los párrafos del cuento</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color background="0x99CCFF" />
+     </style>
+     <p>Fantástico!!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color background="0x99CCFF" />
+     </style>
+     <p>Ooooh! Inténtalo otra vez!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="30" countDownTime="true" maxActions="4" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0x99CC00">
+     <counters time="true" actions="false" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="727" height="505" />
+    </window>
+    <skin file="@blue.xml" />
+   </settings>
+   <checkButton>Comprueba tu trabajo</checkButton>
+   <document>
+    <style name="default" bold="false" italic="false" tabWidth="12" family="Comic Sans MS" background="0x99CCFF" size="16" />
+    <style name="target" base="default" foreground="0x000000" target="true" />
+    <style name="targetError" base="target" foreground="0xCC0000" background="0x99CCFF" />
+    <section>
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <target>	</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>	Durante la espera se distrajo con un bello pájaro multicolor que pasaba delante de su ventanal. Tanto esperó, que las figuritas pasaron mucho tiempo dentro del horno. Al abrirlo salieron todas ellas. Igualmente aprendieron a escribir, pensar, sumar... poco a poco. Como estuvieron mucho tiempo salieron muy oscuras. De esta forma nacieron las personas, hombres y mujeres de raza negra.</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <target>	La mujer estaba ya muy contenta porque tenía ya personas, pero lo intentó una vez más; mezcló el gran río y la montaña de arena, y con el barro resultante nuevamente modeló figuritas iguales a las anteriores, con dos piernas, cabeza, dos brazos... las metió en el horno y esperó. </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <target>		Mientras esperaba se inventó una máquina para poder medir el tiempo. Con esto sabía en que momento estarían listas. Cuando llegó el momento, abrió el horno y salieron. De la misma forma aprendieron a escribir, sumar, multiplicar, leer... poco a poco. Estas figuritas no salieron ni con la piel negra, ni con la piel blanca, sino ligeramente tostados y morenitos. Así salieron los hombres y mujeres de raza gitana.</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="pantalla 4" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="36" />
+      <color background="0x66CCFF" />
+     </style>
+     <p>Realiza este puzzle</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color background="0x66CCFF" />
+     </style>
+     <p>Estupendo!!!!!!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Comic Sans MS" size="36" />
+      <color background="0x66CCFF" />
+     </style>
+     <p>Ánimo, casi lo consigues</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" maxTime="75" countDownTime="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x99CC00">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x66CCFF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="4" cols="4" border="true" image="Dibujo.JPG">
+    <style>
+     <color background="0xCCFFFF" inactive="0xCCFFFF" alternative="0xCC99FF" />
+    </style>
+    <shaper class="@ClassicJigSaw" cols="4" rows="4" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="11970_emoticonos-emotik_com.gif" file="11970_emoticonos_emotik_com.gif" />
+  <media name="alabar.gif" file="alabar.gif" />
+  <media name="aplausos.gif" file="aplausos.gif" />
+  <media name="ganaOscar.gif" file="ganaoscar.gif" />
+  <media name="gorra con aplausos.gif" file="gorra_con_aplausos.gif" />
+  <media name="leyendo.gif" file="leyendo.gif" />
+  <media name="muy bien.gif" file="muy_bien.gif" />
+  <media name="ok.gif" file="ok.gif" />
+  <media name="Risa en movimiento.gif" file="risa_en_movimiento.gif" />
+  <media name="Barró.JPG" file="barro.jpg" />
+  <media name="Conclusión2.JPG" file="conclusion2.jpg" />
+  <media name="Dibujo MARCA AGUA 2.JPG" file="dibujo_marca_agua_2.jpg" />
+  <media name="Dibujo.JPG" file="dibujo.jpg" />
+  <media name="images.jpg" file="images.jpg" />
+  <media name="Perro con orejas.jpg" file="perro_con_orejas.jpg" />
+  <media name="razas 10.jpg" file="razas_10.jpg" />
+  <media name="razas 11.jpg" file="razas_11.jpg" />
+  <media name="razas 12.jpg" file="razas_12.jpg" />
+  <media name="razas 13.jpg" file="razas_13.jpg" />
+  <media name="razas 2.jpg" file="razas_2.jpg" />
+  <media name="razas 3.jpg" file="razas_3.jpg" />
+  <media name="razas 4.jpg" file="razas_4.jpg" />
+  <media name="razas 5.jpg" file="razas_5.jpg" />
+  <media name="razas 6.jpg" file="razas_6.jpg" />
+  <media name="razas 8.jpg" file="razas_8.jpg" />
+  <media name="razas.jpg" file="razas.jpg" />
+  <media name="tpm3.JPG" file="tpm3.jpg" />
+  <media name="bombilla.mp3" file="bombilla.mp3" />
+  <media name="cambio.mp3" file="cambio.mp3" />
+  <media name="Campo.mp3" file="campo.mp3" />
+  <media name="cantar.mp3" file="cantar.mp3" />
+  <media name="chunga.mp3" file="chunga.mp3" />
+  <media name="conclusión 1 - copia.mp3" file="conclusion_1___copia.mp3" />
+  <media name="conclusión 2.mp3" file="conclusion_2.mp3" />
+  <media name="conclusión 3.mp3" file="conclusion_3.mp3" />
+  <media name="conclusión 4.mp3" file="conclusion_4.mp3" />
+  <media name="conclusión 5.mp3" file="conclusion_5.mp3" />
+  <media name="conclusión 6.mp3" file="conclusion_6.mp3" />
+  <media name="cántaro.mp3" file="cantaro.mp3" />
+  <media name="lámpara.mp3" file="lampara.mp3" />
+  <media name="pinrel.mp3" file="pinrel.mp3" />
+  <media name="Romper.mp3" file="romper.mp3" />
+  <media name="sombrero.mp3" file="sombrero.mp3" />
+ </mediaBag>
+</JClicProject>
+

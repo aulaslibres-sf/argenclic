@@ -1,0 +1,1819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="inventos" version="0.1.3">
+ <settings>
+  <title>Los inventos</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="4/24/06" />
+  <revision description="Conversión de Clic3 a JClic" date="4/24/06">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Francisco García-Pozuelo Díaz" />
+  <author name="Juana Rello Serrano" mail="918816785@telefonica.net" />
+  <organization name="CP Luis Vives" mail="cp.luis.vives4@centros2.pntic.mec.es" url="http://centros2.pntic.mec.es/cp.luis.vives4/index.html" city="Alcalá de Henares" state="Madrid" />
+  <language>es</language>
+  <description>
+   <p>Proyecto de 27 actividades para estudiar los diferentes tipos de máquinas y algunos inventos e inventores.</p>
+  </description>
+  <descriptors area-codes="soc" level-codes="PRI">inventos</descriptors>
+  <skin file="@blue.xml" />
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Proyecto de 27 actividades para estudiar los diferentes tipos de máquinas y algunos inventos e inventores.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="start" name="portada">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="01" />
+  <item name="02" />
+  <item name="03" />
+  <item name="04" />
+  <item name="05" />
+  <item name="06" />
+  <item name="08" />
+  <item name="07" />
+  <item name="09" />
+  <item name="10" />
+  <item name="11" delay="10" navButtons="back" />
+  <item name="12" />
+  <item name="13" />
+  <item name="14" />
+  <item name="15" />
+  <item name="24" />
+  <item name="16" />
+  <item name="17" />
+  <item name="18" />
+  <item name="19" />
+  <item name="20" />
+  <item name="21" />
+  <item name="22" />
+  <item name="23" />
+  <item name="25" />
+  <item name="26" />
+  <item name="27" />
+  <item name="final">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@text.FillInBlanks" name="01" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" bold="true" />
+      <gradient source="0xFFFF99" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Completa el texto</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="28" bold="true" />
+      <color foreground="0xFF0000" />
+      <gradient source="0x6666FF" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="Edison.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="544" height="339" />
+    </window>
+    <skin file="@blue.xml" />
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="16" tabWidth="12" bold="true" background="0xFFFF99" italic="false" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p family="Arial" background="0xFFFFFF" />
+     <p Alignment="1" family="Arial" background="0xFFFFFF">
+      <cell avoidOverlapping="true" width="300" height="45">
+       <style shadow="true">
+        <font family="Arial" size="36" bold="true" />
+        <color foreground="0xFF0000" />
+        <gradient source="0x6666FF" dest="0xFFFFFF" angle="50" cycles="2" />
+       </style>
+       <p>Las máquinas</p>
+      </cell>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFF99">Utilizamos </text>
+      <target>
+       <answer>máquinas</answer>
+       <optionList>
+        <option>máquinas</option>
+        <option>amigos</option>
+        <option>animales</option>
+       </optionList>
+       <text>máquinas</text>
+      </target>
+      <text family="Arial" background="0xFFFF99"> para  hacer la vida más fácil.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFF99">Las máquinas </text>
+      <target>
+       <answer>sencillas</answer>
+       <optionList>
+        <option>complicadas</option>
+        <option>eléctricas</option>
+        <option>sencillas</option>
+       </optionList>
+       <text>sencillas</text>
+      </target>
+      <text family="Arial" background="0xFFFF99"> tienen un mecanismo simple. Utilizan la </text>
+      <target>
+       <answer>fuerza</answer>
+       <optionList>
+        <option>electricidad</option>
+        <option>gasolina</option>
+        <option>fuerza</option>
+       </optionList>
+       <text>fuerza</text>
+      </target>
+      <text family="Arial" background="0xFFFF99"> producida por animales. Las máquinas </text>
+      <target>
+       <answer>complejas</answer>
+       <optionList>
+        <option>sencillas</option>
+        <option>complejas</option>
+        <option>industriales</option>
+       </optionList>
+       <text>complejas</text>
+      </target>
+      <text family="Arial" background="0xFFFF99"> necesitan </text>
+      <target>
+       <answer>energía</answer>
+       <optionList>
+        <option>fuerza</option>
+        <option>calor</option>
+        <option>energía</option>
+       </optionList>
+       <text>energía</text>
+      </target>
+      <text family="Arial" background="0xFFFF99"> que proporcionan los combustibles o la electricidad.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFF99">Las </text>
+      <target>
+       <answer>herramientas</answer>
+       <optionList>
+        <option>herramientas</option>
+        <option>aspiradoras</option>
+        <option>bicicletas</option>
+       </optionList>
+       <text>herramientas</text>
+      </target>
+      <text family="Arial" background="0xFFFF99"> son máquinas sencillas que nos ayudan a utilizar nuestra fuerza de forma eficaz.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="02" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" bold="true" />
+      <gradient source="0xFFFF99" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Relaciona las máquinas con su tipo de máquinas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="28" bold="true" />
+      <color foreground="0xFF0000" />
+      <gradient source="0x6666FF" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x003333">
+     <gradient source="0x003333" dest="0xFFFFFF" angle="0" cycles="50" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0x000000" dest="0xFFFFFF" angle="46" />
+    </window>
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="220.0" cellHeight="167.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="18" bold="true" />
+     <color background="0xFFFFFF" alternative="0xFF0033" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="1" image="lomotora.gif" />
+    <cell id="1" image="telefono.gif" />
+    <cell id="1" image="radio.gif" />
+    <cell id="0" image="carretilla.jpg" />
+    <cell id="0" image="tijeras.jpg" />
+    <cell id="0" image="pozo.jpg" />
+   </cells>
+   <cells rows="1" cols="2" cellWidth="228.0" cellHeight="113.0" border="false" id="secondary">
+    <style shadow="true" transparent="true">
+     <font family="Arial" size="36" bold="true" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell>
+     <p>Máquina sencilla</p>
+    </cell>
+    <cell>
+     <p>Máquina compleja</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>Locomotora</p>
+    </cell>
+    <cell>
+     <p>Teléfono</p>
+    </cell>
+    <cell>
+     <p>Radio</p>
+    </cell>
+    <cell>
+     <p>Carretilla</p>
+    </cell>
+    <cell>
+     <p>Tijeras</p>
+    </cell>
+    <cell>
+     <p>Polea</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.Order" name="03" code="" type="orderWords" amongParagraphs="true">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" bold="true" />
+      <gradient source="0xFFFF99" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Ordena las palabras de este texto</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="28" bold="true" />
+      <color foreground="0xFF0000" />
+      <gradient source="0x6666FF" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xFFFF99" dest="0xFFFFFF" angle="35" cycles="10" />
+     <image name="tijeras.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0x000000" dest="0xFFFFFF" angle="46" />
+     <size width="560" height="301" />
+    </window>
+    <skin file="@orange.xml" />
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" family="Arial" size="16" tabWidth="12" bold="true" background="0xFFFF99" italic="false" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p Alignment="1" family="Arial" background="0xFFFFFF">
+      <cell width="450" height="40">
+       <style shadow="true" transparent="true">
+        <font family="Arial" size="28" bold="true" />
+        <color foreground="0xFF6600" background="0xFF0000" shadow="0x6666FF" />
+       </style>
+       <p>Máquinas sencillas y complejas</p>
+      </cell>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFFFF">Las máquinas pueden ser: </text>
+      <target>sencillas</target>
+      <text family="Arial" background="0xFFFFFF"> y complejas.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFFFF">Las máquinas sencillas están formadas por </text>
+      <target>palancas</target>
+      <text family="Arial" background="0xFFFFFF"> y </text>
+      <target>poleas.</target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFFFF">Las palancas pueden ser de </text>
+      <target>primer</target>
+      <text family="Arial" background="0xFFFFFF"> género, </text>
+      <target>segundo</target>
+      <text family="Arial" background="0xFFFFFF"> género y </text>
+      <target>tercer</target>
+      <text family="Arial" background="0xFFFFFF"> género.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFFFF">Las máquinas </text>
+      <target>complejas</target>
+      <text family="Arial" background="0xFFFFFF"> pueden ser de varios tipos: </text>
+      <target>vehículos,</target>
+      <text family="Arial" background="0xFFFFFF"> aparatos </text>
+      <target>eléctricos,</target>
+      <text family="Arial" background="0xFFFFFF"> aparatos de </text>
+      <target>telecomunicación,</target>
+      <text family="Arial" background="0xFFFFFF"> </text>
+      <target>instrumentos</target>
+      <text family="Arial" background="0xFFFFFF"> de medida y observación.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.Explore" name="04" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,top" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" bold="true" />
+      <gradient source="0xFFFF99" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Haz clic en las partes de la palanca</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x9999FF">
+     <gradient source="0x9999FF" dest="0xFFFFFF" angle="35" cycles="10" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x3300FF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="palanca1.gif" id="primary">
+    <style borderStroke="5.1" markerStroke="2.7">
+     <color border="0xFF0000" />
+    </style>
+    <shaper class="@Holes" cols="4" rows="3">
+     <shape comment="0">rectangle:0.345538,0.041667,0.114416,0.510417</shape>
+     <shape comment="1">ellipse:0.141876,0.729167,0.043478,0.177083</shape>
+     <shape comment="2">rectangle:0.04119,0.197917,0.125858,0.385417</shape>
+     <shape comment="3">ellipse:0.693364,0.177083,0.118993,0.5625</shape>
+     <shape comment="4">rectangle:0.919908,0.041667,0.059497,0.458333</shape>
+     <shape comment="5">ellipse:0.805492,0.729167,0.029748,0.125</shape>
+    </shaper>
+    <ids>0 1 2 2 0 1</ids>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="349.0" cellHeight="36.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>Fuerza</p>
+    </cell>
+    <cell>
+     <p>Punto de apoyo</p>
+    </cell>
+    <cell>
+     <p>Resistencia</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="05" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,top" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" bold="true" />
+      <gradient source="0xFFFF99" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Identifica los  elementos de la palanca</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="28" bold="true" />
+      <color foreground="0xFF0000" />
+      <gradient source="0x6666FF" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x9999FF">
+     <gradient source="0x9999FF" dest="0xFFFFFF" angle="35" cycles="10" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x3300FF" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="palanca1.gif" id="primary">
+    <style borderStroke="5.1" markerStroke="2.7">
+     <font family="Arial" size="17" bold="true" />
+     <color inactive="0x3300FF" alternative="0x6600FF" border="0xFF0000" />
+    </style>
+    <shaper class="@Holes" cols="4" rows="3">
+     <shape comment="0">rectangle:0.345538,0.041667,0.114416,0.510417</shape>
+     <shape comment="1">ellipse:0.141876,0.729167,0.043478,0.177083</shape>
+     <shape comment="2">rectangle:0.04119,0.197917,0.125858,0.385417</shape>
+     <shape comment="3">ellipse:0.693364,0.177083,0.118993,0.5625</shape>
+     <shape comment="4">rectangle:0.919908,0.041667,0.059497,0.458333</shape>
+     <shape comment="5">ellipse:0.805492,0.729167,0.029748,0.125</shape>
+    </shaper>
+    <ids>0 1 2 2 0 1</ids>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="192.0" cellHeight="48.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="36" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>Fuerza</p>
+    </cell>
+    <cell>
+     <p>Punto de apoyo</p>
+    </cell>
+    <cell>
+     <p>Resistencia</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="06" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,top" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" bold="true" />
+      <gradient source="0xFFFF99" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Escribe  los  elementos de la palanca</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="28" bold="true" />
+      <color foreground="0xFF0000" />
+      <gradient source="0x6666FF" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="popeye_polea.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="palanca1.gif" id="primary">
+    <style borderStroke="4.7" markerStroke="5.0">
+     <color inactive="0x3300FF" border="0xFF0000" />
+    </style>
+    <shaper class="@Holes" cols="4" rows="3">
+     <shape comment="0">rectangle:0.345538,0.041667,0.114416,0.510417</shape>
+     <shape comment="1">ellipse:0.141876,0.729167,0.043478,0.177083</shape>
+     <shape comment="2">rectangle:0.04119,0.197917,0.125858,0.385417</shape>
+    </shaper>
+    <ids>0 1 2</ids>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="163.0" cellHeight="85.0" border="true" id="answers">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Arial" size="26" bold="true" />
+     <color background="0xFFFF99" inactive="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>fuerza</p>
+    </cell>
+    <cell>
+     <p>punto de apoyo</p>
+    </cell>
+    <cell>
+     <p>resistencia</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="07" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" bold="true" />
+      <gradient source="0xFFFF99" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Escribe el género de palanca</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="28" bold="true" />
+      <color foreground="0xFF0000" />
+      <gradient source="0x6666FF" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="popeye_polea.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="183.0" cellHeight="156.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="0" image="palanca1b.jpg" />
+    <cell id="1" image="segundogrado1.jpg" />
+    <cell id="2" image="tercergrado3.jpg" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="192.0" cellHeight="47.0" border="true" id="answers">
+    <style borderStroke="0.7" markerStroke="7.8">
+     <font family="Arial" size="22" bold="true" />
+     <color foreground="0xFF6600" background="0xFFFFCC" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>primer género</p>
+    </cell>
+    <cell>
+     <p>segundo género</p>
+    </cell>
+    <cell>
+     <p>tercer género</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="tijeras.jpg" />
+    <cell image="carretilla.jpg" />
+    <cell image="Pinzas12.jpg" />
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="08" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" bold="true" />
+      <gradient source="0xFFFF99" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Descubre las palancas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="28" bold="true" />
+      <color foreground="0xFF0000" />
+      <gradient source="0x6666FF" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="popeye_polea.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="184.0" cellHeight="147.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="0" image="palanca1b.jpg" />
+    <cell id="1" image="segundogrado1.jpg" />
+    <cell id="2" image="tercergrado3.jpg" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="187.0" cellHeight="79.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="7.8">
+     <font family="Arial" size="22" bold="true" />
+     <color foreground="0xFF6600" background="0xFFFFCC" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>Primer género: punto de apoyo entre fuerza y resistencia</p>
+    </cell>
+    <cell>
+     <p>Segundo género:  resistencia  entre fuerza y  punto de apoyo.</p>
+    </cell>
+    <cell>
+     <p>Tercer  género:  fuerza  entre resistencia y  punto de apoyo.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="09" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" bold="true" />
+      <gradient source="0xFFFF99" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Relaciona  el género de las palancas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="28" bold="true" />
+      <color foreground="0xFF0000" />
+      <gradient source="0x6666FF" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="popeye_polea.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="183.0" cellHeight="156.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="0" image="palanca1b.jpg" />
+    <cell id="1" image="segundogrado1.jpg" />
+    <cell id="2" image="tercergrado3.jpg" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="187.0" cellHeight="79.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="7.8">
+     <font family="Arial" size="22" bold="true" />
+     <color foreground="0xFF6600" background="0xFFFFCC" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>Primer género: punto de apoyo entre fuerza y resistencia</p>
+    </cell>
+    <cell>
+     <p>Segundo género:  resistencia  entre fuerza y  punto de apoyo.</p>
+    </cell>
+    <cell>
+     <p>Tercer  género:  fuerza  entre resistencia y  punto de apoyo.</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell image="tijeras.jpg" />
+    <cell image="carretilla.jpg" />
+    <cell image="Pinzas12.jpg" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="10" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" bold="true" />
+      <gradient source="0xFFFF99" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Señala las palancas de primer grado</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="28" bold="true" />
+      <color foreground="0xFF0000" />
+      <gradient source="0x6666FF" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Bravo</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="aeorplano.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x6666FF" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="159.0" cellHeight="118.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Arial" size="18" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="0" image="martillo1.jpg" />
+    <cell id="1" image="pinzas-starter-1435.jpg" />
+    <cell image="Pinzas12.jpg" />
+    <cell id="0" image="popeye_polea.gif" />
+    <cell id="1" image="primergrado3.jpg" />
+    <cell id="0" image="primergrado4.jpg" />
+    <cell id="1" image="primergrado5.jpg" />
+    <cell id="1" image="primergrado6.jpg" />
+    <cell id="0" image="segundogrado3.jpg" />
+   </cells>
+   <cells rows="3" cols="3" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="11" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" bold="true" />
+      <gradient source="0xFFFF99" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Lee atentamente</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="44767BuritonJan98.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="550.0" cellHeight="328.0" border="true">
+    <style>
+     <font family="Arial" size="26" bold="true" />
+     <color background="0xFFFFCC" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell txtAlign="left,middle">
+     <p>Hoy utilizamos habitualmente  los siguientes aparatos: </p>
+     <p>	vehículos (coches, trenes, aviones)</p>
+     <p>aparatos de telecomunicaciones (teléfono,  ordenador)                                  </p>
+     <p>instrumentos de observación (telescopio, mocroscopio).</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.Order" name="12" code="" type="orderWords" amongParagraphs="true">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" bold="true" />
+      <gradient source="0xFFFF99" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Ahora ordena las palabras</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="28" bold="true" />
+      <color foreground="0xFF0000" />
+      <gradient source="0x6666FF" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Bravo</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="44767BuritonJan98.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x6666FF" border="true">
+     <position x="0" y="0" />
+     <size width="756" height="266" />
+    </window>
+    <skin file="@orange.xml" />
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" family="Arial" size="24" tabWidth="12" bold="true" background="0xFFFF99" italic="false" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFFFF">Hoy utilizamos habitualmente  los siguientes aparatos: </text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFFFF">	</text>
+      <target>vehículos</target>
+      <text family="Arial" background="0xFFFFFF"> (coches, trenes, aviones)</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFFFF">	aparatos de </text>
+      <target>telecomunicaciones</target>
+      <text family="Arial" background="0xFFFFFF"> (teléfono,  ordenador)                                  </text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFFFF">	</text>
+      <target>instrumentos</target>
+      <text family="Arial" background="0xFFFFFF"> de observación (telescopio, mocroscopio).</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="13" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" bold="true" />
+      <gradient source="0xFFFF99" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Busca las parejas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="28" bold="true" />
+      <color foreground="0xFF0000" />
+      <gradient source="0x6666FF" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="aeorplano.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x6666FF" border="true" />
+    <skin file="@green.xml" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="155.0" cellHeight="157.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Arial" size="18" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell image="44767BuritonJan98.jpg" />
+    <cell image="bombilla.gif" />
+    <cell image="cartera.jpg" />
+    <cell image="martillo.jpg" />
+    <cell image="Martin_1950s_clock-radio.jpg" />
+    <cell image="telefono.gif" />
+    <cell image="telescopio.jpg" />
+    <cell image="carretilla.jpg" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="14" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" bold="true" />
+      <gradient source="0xFFFF99" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Descubre el invento de cada personaje</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x9999FF" dest="0xFFFFFF" angle="35" cycles="10" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="172.0" cellHeight="130.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="1.4">
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0" image="bell1.jpg" />
+    <cell id="1" image="edison1.jpg" />
+    <cell id="2" image="gutenberg.jpg" />
+    <cell id="3" image="marconi1.jpg" />
+    <cell id="4" image="galileo_hist.gif" />
+    <cell id="5" image="stephenson.jpg" />
+   </cells>
+   <cells rows="1" cols="6" cellWidth="123.0" cellHeight="177.0" border="true" id="secondary">
+    <style>
+     <color background="0xCCCCFF" inactive="0xFFFF99" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="telefono.gif" />
+    <cell image="bombilla.gif" />
+    <cell image="imprenta.jpg" />
+    <cell image="radio.gif" />
+    <cell image="telescopio.jpg" />
+    <cell image="locomotora.jpg" />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="15" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true" borderStroke="0.7" markerStroke="5.6">
+      <font family="Arial" size="22" bold="true" />
+      <gradient source="0xFFFF99" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Descubre el invento y el  nombre de cada personaje</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xFF3333" dest="0xFFFFFF" angle="0" cycles="50" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="173.0" cellHeight="130.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0" image="bell1.jpg" />
+    <cell id="1" image="edison1.jpg" />
+    <cell id="2" image="gutenberg.jpg" />
+    <cell id="3" avoidOverlapping="true" image="marconi1.jpg" />
+    <cell id="4" avoidOverlapping="true" image="galileo_hist.gif" />
+    <cell id="5" avoidOverlapping="true" image="stephenson.jpg" />
+   </cells>
+   <cells rows="1" cols="6" cellWidth="123.0" cellHeight="177.0" border="true" id="secondary">
+    <style shadow="true" borderStroke="0.7" markerStroke="2.7">
+     <font family="dialog" size="36" />
+     <color background="0xCCCCFF" inactive="0xFFFF99" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="telefono.gif">
+     <p>Bell</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="bombilla.gif">
+     <p>Edison</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="imprenta.jpg">
+     <p>Gutenberg</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="radio.gif">
+     <p>Marconi</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="telescopio.jpg">
+     <p>Galileo</p>
+    </cell>
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="locomotora.jpg">
+     <p>Stephenson</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="16" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" bold="true" />
+      <gradient source="0xFFFF99" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Escribe el nombre de la máquina</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="26" bold="true" />
+      <color background="0xCC00CC" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x9999FF" dest="0xFFFFFF" angle="35" cycles="10" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+    <skin file="@blue.xml" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="213.0" cellHeight="165.0" border="true" id="primary">
+    <style borderStroke="5.2" markerStroke="2.7">
+     <color background="0xFFFFFF" border="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0" image="locomotora.jpg" />
+    <cell id="1" image="imprenta.jpg" />
+    <cell id="2" image="bombilla.gif" />
+    <cell id="3" image="telescopio.jpg" />
+    <cell id="4" image="radio1.jpg" />
+    <cell id="5" image="telefono.gif" />
+   </cells>
+   <cells rows="1" cols="6" cellWidth="86.0" cellHeight="79.0" border="true" id="answers">
+    <style shadow="true">
+     <font family="dialog" size="36" bold="true" />
+     <color background="0xCCCCFF" inactive="0xFFFF99" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>locomotora</p>
+    </cell>
+    <cell>
+     <p>Imprenta</p>
+    </cell>
+    <cell>
+     <p>Bombilla</p>
+    </cell>
+    <cell>
+     <p>Telescopio</p>
+    </cell>
+    <cell>
+     <p>Radio</p>
+    </cell>
+    <cell>
+     <p>Teléfono</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="stephenson.jpg" />
+    <cell image="gutenberg.jpg" />
+    <cell image="edison1.jpg" />
+    <cell image="galileo_hist.gif" />
+    <cell image="marconi1.jpg" />
+    <cell image="bell1.jpg" />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="17" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" bold="true" />
+      <gradient source="0xFFFF99" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Busca el nombre de seis inventores</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="26" bold="true" />
+      <color background="0xCC00CC" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x9999FF" dest="0xFFFFFF" angle="35" cycles="10" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x6666FF" transparent="true" border="false" />
+   </settings>
+   <textGrid rows="10" columns="10" cellWidth="44.0" cellHeight="28.0" border="false">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFF3333" background="0xFFFF99" />
+    </style>
+    <text>
+     <row>STEPHENSON</row>
+     <row>*****E****</row>
+     <row>***BDG**M*</row>
+     <row>***IEA**A*</row>
+     <row>**S**L**R*</row>
+     <row>*O***IL*C*</row>
+     <row>N****L**O*</row>
+     <row>*****E**N*</row>
+     <row>*****O**I*</row>
+     <row>GUTENBERG*</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">STEPHENSON</clue>
+    <clue id="1">BELL</clue>
+    <clue id="2">MARCONI</clue>
+    <clue id="3">GUTENBERG</clue>
+    <clue id="4">GALILEO</clue>
+    <clue id="5">EDISON</clue>
+   </clues>
+   <cells rows="1" cols="6" cellWidth="106.0" cellHeight="136.0" border="true" id="secondary">
+    <style borderStroke="5.2" markerStroke="2.7">
+     <color background="0xFF0000" border="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="stephenson.jpg" />
+    <cell image="bell1.jpg" />
+    <cell image="marconi.jpg" />
+    <cell image="gutenberg.jpg" />
+    <cell image="galileo_hist.gif" />
+    <cell image="edison1.jpg" />
+   </cells>
+   <layout position="AUB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="18" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" bold="true" />
+      <gradient source="0xFFFF99" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Busca seis inventos</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="26" bold="true" />
+      <color background="0xCC00CC" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x9999FF" dest="0xFFFFFF" angle="35" cycles="10" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x6666FF" transparent="true" border="false" />
+   </settings>
+   <textGrid rows="10" columns="10" cellWidth="44.0" cellHeight="28.0" border="false">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFF3333" background="0xFFFF99" />
+    </style>
+    <text>
+     <row>LOCOMOTORA</row>
+     <row>******E*A*</row>
+     <row>******L*D*</row>
+     <row>******E*I*</row>
+     <row>******F*O*</row>
+     <row>TELESCOPIO</row>
+     <row>******N***</row>
+     <row>ALLIBMOB**</row>
+     <row>IMPRENTA**</row>
+     <row>**********</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">LOCOMOTORA</clue>
+    <clue id="1">RADIO</clue>
+    <clue id="2">TELEFONO</clue>
+    <clue id="3">IMPRENTA</clue>
+    <clue id="4">TELESCOPIO</clue>
+    <clue id="5">BOMBILLA</clue>
+   </clues>
+   <cells rows="1" cols="6" cellWidth="100.0" cellHeight="136.0" border="true" id="secondary">
+    <style borderStroke="2.4" markerStroke="2.7">
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFF0000" border="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell image="locomotora.jpg" />
+    <cell image="radio.gif" />
+    <cell image="telefono.gif" />
+    <cell image="imprenta.jpg" />
+    <cell image="telescopio.jpg" />
+    <cell image="bombilla.gif" />
+   </cells>
+   <layout position="AUB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="19" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" bold="true" />
+      <gradient source="0xFFFF99" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Reconstruye la locomotora</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="26" bold="true" />
+      <color background="0xCC00CC" />
+     </style>
+     <p>Bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x9999FF" dest="0xFFFFFF" angle="35" cycles="10" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x6666FF" transparent="true" border="true" />
+   </settings>
+   <cells rows="4" cols="4" border="true" image="locmotora3.jpg">
+    <style borderStroke="2.0" markerStroke="1.4">
+     <color background="0xFFFF99" border="0xFF0000" />
+    </style>
+    <shaper class="@ClassicJigSaw" cols="4" rows="4" randomLines="true" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="20" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" bold="true" />
+      <gradient source="0xFFFF99" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Haz esta otra locomotora</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="26" bold="true" />
+      <color background="0xCC00CC" />
+     </style>
+     <p>Bravo</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x9999FF" dest="0xFFFFFF" angle="35" cycles="10" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x6666FF" transparent="true" border="true" />
+   </settings>
+   <cells rows="4" cols="4" border="true" image="locomotora.jpg">
+    <style borderStroke="2.0" markerStroke="1.4">
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFF99" inactive="0xFFFF99" border="0xFF0000" />
+    </style>
+    <shaper class="@TriangularJigSaw" cols="4" rows="4" randomLines="true" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="21" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" bold="true" />
+      <gradient source="0xFFFF99" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Relaciona cada personaje con su invento</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="26" bold="true" />
+      <color background="0xCC00CC" />
+     </style>
+     <p>Bravo</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x9999FF" dest="0xFFFFFF" angle="35" cycles="10" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x6666FF" transparent="true" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="171.0" cellHeight="135.0" border="false" id="primary">
+    <style borderStroke="2.0" markerStroke="2.7">
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFFFF" inactive="0xFFFF99" border="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0" image="bell1.jpg" />
+    <cell id="1" image="edison1.jpg" />
+    <cell id="2" image="gutenberg.jpg" />
+    <cell id="3" avoidOverlapping="true" image="marconi1.jpg" />
+    <cell id="4" avoidOverlapping="true" image="galileo_hist.gif" />
+    <cell id="5" avoidOverlapping="true" image="stephenson.jpg" />
+   </cells>
+   <cells rows="1" cols="6" cellWidth="115.0" cellHeight="151.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="72" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="telefono.gif" />
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="bombilla.gif" />
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="imprenta.jpg" />
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="radio.gif" />
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="telescopio.jpg" />
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="locomotora.jpg" />
+   </cells>
+   <cells rows="2" cols="3" border="true" image="aeorplano.jpg" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell txtAlign="middle,bottom">
+     <p>Hermanos</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell txtAlign="middle,top">
+     <p>Wright</p>
+    </cell>
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="22" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFFFF99" />
+     </style>
+     <p>Reconstruye la figura de Gutenberg</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Book Antiqua" size="20" bold="true" />
+      <color background="0x9966FF" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFF3333">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF00CC" border="true" />
+   </settings>
+   <cells rows="5" cols="4" border="true" image="gutenberg.jpg">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color inactive="0xFFFFCC" />
+    </style>
+    <shaper class="@JigSaw" cols="4" rows="5" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="23" code="" forceOkToAdvance="true">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="dialog" size="20" bold="true" />
+      <color background="0xFFFF66" />
+     </style>
+     <p>Escribe el invento de cada inventor</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="22" bold="true" />
+      <color foreground="0xCCFFFF" background="0xFF6600" shadow="0xCCCCFF" alternative="0x3333FF" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="Edison.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="473" height="425" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" family="Arial" size="16" tabWidth="12" bold="true" background="0xFFFF99" italic="false" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xFFFFFF" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p Alignment="2" family="Arial" background="0xFFFFFF">
+      <cell txtAlign="middle,top" imgAlign="middle,bottom" width="100" height="140" image="Edison.jpg">
+       <style>
+        <font family="Arial" size="17" bold="true" />
+       </style>
+       <p>¿Qué inventó cada uno?</p>
+      </cell>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFF66">Gutenberg inventó la </text>
+      <target>
+       <answer>imprenta</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <info mode="onError">
+        <cell width="80" height="105" image="imprenta.jpg" />
+       </info>
+       <text>imprenta</text>
+      </target>
+      <text family="Arial" background="0xFFFF66">.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFF66">Galileo inventó el </text>
+      <target>
+       <answer>telescopio</answer>
+       <response fill="_" length="10" maxLength="10" />
+       <info mode="onError">
+        <cell width="95" height="89" image="telescopio.jpg" />
+       </info>
+       <text>telescopio</text>
+      </target>
+      <text family="Arial" background="0xFFFF66">.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFF66">Edison inventó la </text>
+      <target>
+       <answer>bombilla</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <info mode="onError">
+        <cell width="92" height="140" image="bombilla.gif" />
+       </info>
+       <text>bombilla</text>
+      </target>
+      <text family="Arial" background="0xFFFF66">.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFF66">Bell inventó el </text>
+      <target>
+       <answer>teléfono</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <info mode="onError">
+        <cell width="93" height="82" image="telefono.gif" />
+       </info>
+       <text>teléfono</text>
+      </target>
+      <text family="Arial" background="0xFFFF66">.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFF66">Marconi inventó la </text>
+      <target>
+       <answer>radio</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <info mode="onError">
+        <cell width="95" height="72" image="radio.gif" />
+       </info>
+       <text>radio</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFF66">Stephenson inventó la </text>
+      <target>
+       <answer>locomotora</answer>
+       <response fill="_" length="10" maxLength="10" />
+       <info mode="onError">
+        <cell width="100" height="67" image="locmotora3.jpg" />
+       </info>
+       <text>locomotora</text>
+      </target>
+      <text family="Arial" background="0xFFFF66">.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFF66">Los hermanos Wright inventaron el </text>
+      <target>
+       <answer>avión</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <info mode="onError">
+        <cell width="115" height="89" image="aeorplano.jpg" />
+       </info>
+       <text>avión</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF" />
+     <p family="Arial" background="0xFFFFFF" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="24" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" bold="true" />
+      <gradient source="0xFFFF99" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Escribe el nombre del inventor</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <helpWindow showSolution="false">
+     <p>bell, edison, guternberg, marconi, galileo, stephenson</p>
+    </helpWindow>
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xFF3333" dest="0xFFFFFF" angle="35" cycles="10" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0000" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="220.0" cellHeight="165.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0" image="bell1.jpg" />
+    <cell id="1" image="edison1.jpg" />
+    <cell id="2" image="gutenberg.jpg" />
+    <cell id="3" avoidOverlapping="true" image="marconi1.jpg" />
+    <cell id="4" avoidOverlapping="true" image="galileo_hist.gif" />
+    <cell id="5" avoidOverlapping="true" image="stephenson.jpg" />
+   </cells>
+   <cells rows="1" cols="6" cellWidth="106.0" cellHeight="58.0" border="true" id="answers">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" bold="true" />
+     <color foreground="0xFF3333" background="0xFFFFCC" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>Bell</p>
+    </cell>
+    <cell>
+     <p>Edison</p>
+    </cell>
+    <cell>
+     <p>Gutenberg</p>
+    </cell>
+    <cell>
+     <p>Marconi</p>
+    </cell>
+    <cell>
+     <p>Galileo</p>
+    </cell>
+    <cell>
+     <p>Stephenson</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="telefono.gif" />
+    <cell image="bombilla.gif" />
+    <cell image="imprenta.jpg" />
+    <cell image="radio.gif" />
+    <cell image="telescopio.jpg" />
+    <cell image="locomotora.jpg" />
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="25" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" bold="true" />
+      <gradient source="0xFFFF99" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Busca las parejas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="28" bold="true" />
+      <color foreground="0xFF0000" />
+      <gradient source="0x6666FF" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="aeorplano.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x6666FF" border="true" />
+    <skin file="@green.xml" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="196.0" cellHeight="178.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Arial" size="18" bold="true" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="bell1.jpg" />
+    <cell image="edison1.jpg" />
+    <cell image="galileo_hist.gif" />
+    <cell image="gutenberg.jpg" />
+    <cell image="marconi1.jpg" />
+    <cell image="stephenson.jpg" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="26" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" bold="true" />
+      <gradient source="0xFFFF99" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Empareja el inventor con su invento</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="28" bold="true" />
+      <color foreground="0xFF0000" />
+      <gradient source="0x6666FF" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="aeorplano.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x6666FF" border="true" />
+    <skin file="@green.xml" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="200.0" cellHeight="182.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Arial" size="18" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="bell1.jpg" />
+    <cell image="edison1.jpg" />
+    <cell image="galileo_hist.gif" />
+    <cell image="gutenberg.jpg" />
+    <cell image="marconi1.jpg" />
+    <cell image="stephenson.jpg" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="50.0" cellHeight="30.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="telefono.gif" />
+    <cell image="bombilla.gif" />
+    <cell image="telescopio.jpg" />
+    <cell image="imprenta.jpg" />
+    <cell image="radio.gif" />
+    <cell image="44767BuritonJan98.jpg" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="27" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" bold="true" />
+      <gradient source="0xFFFF99" dest="0xFFFFFF" angle="50" cycles="2" />
+     </style>
+     <p>Escribe el tipo de máquina y espera una sorpresa</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="26" bold="true" />
+      <color background="0xCC00CC" />
+     </style>
+     <p>Muy bien</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0x9999FF" dest="0xFFFFFF" angle="35" cycles="10" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x6666FF" transparent="true" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="580.0" cellHeight="382.0" border="false" id="primary">
+    <style borderStroke="2.0" markerStroke="1.4">
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFF99" inactive="0xFFFF99" border="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="carro.png" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="287.0" cellHeight="83.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="24" bold="true" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>máquina sencilla</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="final" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style transparent="true">
+      <font family="Arial" size="17" bold="true" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="Edison.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="457.0" cellHeight="191.0" border="false">
+    <style transparent="true" borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="36" bold="true" />
+     <color foreground="0xFF0033" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell txtAlign="middle,bottom">
+     <p>fin</p>
+     <p>este proyecto continua con un enlace a actividades de hot potatoes.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="portada" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="28" bold="true" />
+      <color background="0xFFFF66" />
+     </style>
+     <p>Francisco García-Pozuelo / Juana Rello</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x9999FF">
+     <gradient source="0x006666" dest="0x003333" angle="0" cycles="50" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="2" cellWidth="265.0" cellHeight="326.0" border="false">
+    <style shadow="true">
+     <font family="Book Antiqua" size="72" bold="true" />
+     <color background="0xFFFFCC" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="locomotora.jpg" />
+    <cell>
+     <p>Máquinas </p>
+     <p>e </p>
+     <p>inventos</p>
+    </cell>
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="bombilla.gif" file="bombilla.gif" animated="false" />
+  <media name="galileo_hist.gif" file="galileo_hist.gif" animated="false" />
+  <media name="lomotora.gif" file="lomotora.gif" animated="false" />
+  <media name="palanca1.gif" file="palanca1.gif" animated="false" />
+  <media name="popeye_polea.gif" file="popeye_polea.gif" animated="false" />
+  <media name="radio.gif" file="radio.gif" animated="false" />
+  <media name="telefono.gif" file="telefono.gif" animated="false" />
+  <media name="44767BuritonJan98.jpg" file="44767buritonjan98.jpg" />
+  <media name="aeorplano.jpg" file="aeorplano.jpg" />
+  <media name="bell1.jpg" file="bell1.jpg" />
+  <media name="carretilla.jpg" file="carretilla.jpg" />
+  <media name="cartera.jpg" file="cartera.jpg" />
+  <media name="Edison.jpg" file="edison.jpg" />
+  <media name="edison1.jpg" file="edison1.jpg" />
+  <media name="gutenberg.jpg" file="gutenberg.jpg" />
+  <media name="imprenta.jpg" file="imprenta.jpg" />
+  <media name="locmotora3.jpg" file="locmotora3.jpg" />
+  <media name="locomotora.jpg" file="locomotora.jpg" />
+  <media name="marconi.jpg" file="marconi.jpg" />
+  <media name="marconi1.jpg" file="marconi1.jpg" />
+  <media name="martillo.jpg" file="martillo.jpg" />
+  <media name="martillo1.jpg" file="martillo1.jpg" />
+  <media name="Martin_1950s_clock-radio.jpg" file="martin_1950s_clock-radio.jpg" />
+  <media name="palanca1b.jpg" file="palanca1b.jpg" />
+  <media name="pinzas-starter-1435.jpg" file="pinzas-starter-1435.jpg" />
+  <media name="Pinzas12.jpg" file="pinzas12.jpg" />
+  <media name="pozo.jpg" file="pozo.jpg" />
+  <media name="primergrado3.jpg" file="primergrado3.jpg" />
+  <media name="primergrado4.jpg" file="primergrado4.jpg" />
+  <media name="primergrado5.jpg" file="primergrado5.jpg" />
+  <media name="primergrado6.jpg" file="primergrado6.jpg" />
+  <media name="radio1.jpg" file="radio1.jpg" />
+  <media name="segundogrado1.jpg" file="segundogrado1.jpg" />
+  <media name="segundogrado3.jpg" file="segundogrado3.jpg" />
+  <media name="stephenson.jpg" file="stephenson.jpg" />
+  <media name="telescopio.jpg" file="telescopio.jpg" />
+  <media name="tercergrado3.jpg" file="tercergrado3.jpg" />
+  <media name="tijeras.jpg" file="tijeras.jpg" />
+  <media name="carro.png" file="carro.png" />
+ </mediaBag>
+</JClicProject>
+

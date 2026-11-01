@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="circum1e" version="0.1.3">
+ <settings>
+  <title>circum1e</title>
+  <revision description="created" date="5/30/02" />
+  <descriptors />
+ </settings>
+ <sequence>
+  <item id="circum1e.pac" name="paq05int.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="circu1.ass" />
+  <item name="circu2.ass" />
+  <item name="circu5.ass" />
+  <item name="circu4.ass" />
+  <item name="circu7.ass" />
+  <item name="circu10.ass" />
+  <item name="circu3.ass" />
+  <item name="circu6.ass" />
+  <item name="circu8.ass" />
+  <item name="circu9.ass" />
+  <item name="circ11.ass" />
+  <item name="paq05fi.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.SimpleAssociation" name="circ11.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Arriba tienes las explicaciones para determinar el CENTRO de una circunferencia. Lleva cada dibujo a su lugar correspondiente.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" border="true" image="circ11a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="circ11b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <cells rows="1" cols="4" border="true" image="circ1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="circu1.ass">
+   <description>
+    <p>Assenyaler elements d'una circumferència</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Señala cada elemento de la circunferencia (o respecto de la circunferencia).</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="7" cols="1" cellWidth="110.0" cellHeight="70.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" inactive="0xFF0000" alternative="0xFF0000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell id="3">
+     <p>Radio</p>
+    </cell>
+    <cell id="4">
+     <p>Diámetro</p>
+    </cell>
+    <cell id="1">
+     <p>Arco</p>
+    </cell>
+    <cell id="2">
+     <p>Cuerda</p>
+    </cell>
+    <cell id="7">
+     <p>Recta tangente</p>
+    </cell>
+    <cell id="5">
+     <p>Recta secante</p>
+    </cell>
+    <cell id="0">
+     <p>Recta exterior</p>
+    </cell>
+   </cells>
+   <cells rows="8" cols="1" border="false" image="circ1_b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="8" />
+   </cells>
+   <cells rows="7" cols="1" cellWidth="110.0" cellHeight="70.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell>
+     <p>Radio</p>
+    </cell>
+    <cell>
+     <p>Diámetro</p>
+    </cell>
+    <cell>
+     <p>Arco</p>
+    </cell>
+    <cell>
+     <p>Cuerda</p>
+    </cell>
+    <cell>
+     <p>Recta tangente</p>
+    </cell>
+    <cell>
+     <p>Recta secante</p>
+    </cell>
+    <cell>
+     <p>Recta exterior</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="circu10.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Cuánto miden los segmentos marcados con un interrogante?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="false" image="circ10a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <ids>8 2 5 9</ids>
+   </cells>
+   <cells rows="16" cols="1" cellWidth="50.0" cellHeight="26.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="16" />
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>3</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>11</p>
+    </cell>
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>13</p>
+    </cell>
+    <cell>
+     <p>14</p>
+    </cell>
+    <cell>
+     <p>15</p>
+    </cell>
+    <cell>
+     <p>16</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" border="false" image="circ10c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" primary="false" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="circu2.ass">
+   <description>
+    <p>Geometria de la circumferència i del cercle</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Relaciona cada figura con su nombre.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="2" cellWidth="400.0" cellHeight="270.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <p>Circunferencia</p>
+    </cell>
+    <cell>
+     <p>Círculo</p>
+    </cell>
+    <cell>
+     <p>Semicircunferencia</p>
+    </cell>
+    <cell>
+     <p>Semicírculo</p>
+    </cell>
+    <cell>
+     <p>Sector circular</p>
+    </cell>
+    <cell>
+     <p>Segmento circular</p>
+    </cell>
+    <cell>
+     <p>Corona circular</p>
+    </cell>
+    <cell>
+     <p>Circunferencias concéntricas</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="2" cellWidth="400.0" cellHeight="270.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell image="circumf1.gif" />
+    <cell image="cercle1.gif" />
+    <cell image="s_crcmf1.gif" />
+    <cell image="s_cercl1.gif" />
+    <cell image="sector1.gif" />
+    <cell image="seg_circ.gif" />
+    <cell image="corona1.gif" />
+    <cell image="concentr.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="circu3.ass">
+   <description>
+    <p>Geometria de la circumferència i del cercle</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Cuál es la posición relativa de cada par de circunferencias?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" border="true" image="circ3a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="140.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>Tangentes exteriores</p>
+    </cell>
+    <cell>
+     <p>Exteriores</p>
+    </cell>
+    <cell>
+     <p>Interiores no concéntricas</p>
+    </cell>
+    <cell>
+     <p>Tangentes interiores</p>
+    </cell>
+    <cell>
+     <p>Concéntricas</p>
+    </cell>
+    <cell>
+     <p>Secantes</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="circu4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Substituye cada interrogante por el tipo de triángulo correspondiente.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="circ4a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <ids>1 1 3 3</ids>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="120.0" cellHeight="70.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>EQUILÁTERO</p>
+    </cell>
+    <cell>
+     <p>ISÓSCELES</p>
+    </cell>
+    <cell>
+     <p>ESCALENO</p>
+    </cell>
+    <cell>
+     <p>RECTÁNGULO</p>
+    </cell>
+    <cell>
+     <p>ACUTÁNGULO</p>
+    </cell>
+    <cell>
+     <p>OBTUSÁNGULO</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" border="true" image="circ4c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="circu5.ass">
+   <description>
+    <p>Geometria de la circumferència i del cercle</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Relaciona cada figura con algún elemento de la ventana de la derecha.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" border="true" image="circ5a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <cells rows="3" cols="2" cellWidth="110.0" cellHeight="140.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>FLECHA</p>
+    </cell>
+    <cell>
+     <p>LÚNULA</p>
+    </cell>
+    <cell>
+     <p>CUADRANTE DEL CÍRCULO</p>
+    </cell>
+    <cell>
+     <p>OCTANTE DEL CÍRCULO</p>
+    </cell>
+    <cell>
+     <p>RECTAS TANGENTES EXTERIORES</p>
+    </cell>
+    <cell>
+     <p>RECTAS TANGENTES INTERIORES</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="circu6.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Cuál es la distancia entre los centros de dos circunferencies en relación con sus radios?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" border="true" image="circ6a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <cells rows="3" cols="2" border="true" image="circ6b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <cells rows="3" cols="2" border="true" image="circ6c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="circu7.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Cuánto miden los segmentos marcados con un interrogante?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="circ7a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <ids>11 8 7 6 4 10</ids>
+   </cells>
+   <cells rows="19" cols="1" cellWidth="35.0" cellHeight="23.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="19" />
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>1.5</p>
+    </cell>
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>2.5</p>
+    </cell>
+    <cell>
+     <p>3</p>
+    </cell>
+    <cell>
+     <p>3.5</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>4.5</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>5.5</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>6.5</p>
+    </cell>
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>7.5</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>8.5</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>9.5</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" border="true" image="circ7c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="circu8.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Cómo está situado el polígono respecto de la circunferencia?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="circ8a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <ids>0 1 2 0 1 2</ids>
+   </cells>
+   <cells rows="3" cols="1" border="true" image="circ8b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="circu9.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Cómo está situada la circunferencia respecto del polígono?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="circ8a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <ids>1 0 2 1 0 2</ids>
+   </cells>
+   <cells rows="3" cols="1" border="true" image="circ9b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="paq05fi.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic sobre la flecha de la derecha para volver al menú         &gt;&gt;&gt;</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="portada1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="60.0" border="false">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>FIN DEL PAQUETE 5</p>
+    </cell>
+    <cell>
+     <p>CIRCUNFERENCIA Y CÍRCULO</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="paq05int.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic sobre la flecha para iniciar el paquete de actividades         &gt;&gt;&gt;</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="portada1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="60.0" border="false">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>GEOCLIC - PAQUETE 5</p>
+    </cell>
+    <cell>
+     <p>CIRCUNFERENCIA Y CÍRCULO</p>
+    </cell>
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="cercle1.gif" file="cercle1.gif" animated="false" />
+  <media name="circ10a.gif" file="circ10a.gif" animated="false" />
+  <media name="circ10c.gif" file="circ10c.gif" animated="false" />
+  <media name="circ11a.gif" file="circ11a.gif" animated="false" />
+  <media name="circ11b.gif" file="circ11b.gif" animated="false" />
+  <media name="circ1_b.gif" file="circ1_b.gif" animated="false" />
+  <media name="circ1c.gif" file="circ1c.gif" animated="false" />
+  <media name="circ3a.gif" file="circ3a.gif" animated="false" />
+  <media name="circ4a.gif" file="circ4a.gif" animated="false" />
+  <media name="circ4c.gif" file="circ4c.gif" animated="false" />
+  <media name="circ5a.gif" file="circ5a.gif" animated="false" />
+  <media name="circ6a.gif" file="circ6a.gif" animated="false" />
+  <media name="circ6b.gif" file="circ6b.gif" animated="false" />
+  <media name="circ6c.gif" file="circ6c.gif" animated="false" />
+  <media name="circ7a.gif" file="circ7a.gif" animated="false" />
+  <media name="circ7c.gif" file="circ7c.gif" animated="false" />
+  <media name="circ8a.gif" file="circ8a.gif" animated="false" />
+  <media name="circ8b.gif" file="circ8b.gif" animated="false" />
+  <media name="circ9b.gif" file="circ9b.gif" animated="false" />
+  <media name="circumf1.gif" file="circumf1.gif" animated="false" />
+  <media name="concentr.gif" file="concentr.gif" animated="false" />
+  <media name="corona1.gif" file="corona1.gif" animated="false" />
+  <media name="portada1.gif" file="portada1.gif" animated="false" />
+  <media name="s_cercl1.gif" file="s_cercl1.gif" animated="false" />
+  <media name="s_crcmf1.gif" file="s_crcmf1.gif" animated="false" />
+  <media name="sector1.gif" file="sector1.gif" animated="false" />
+  <media name="seg_circ.gif" file="seg_circ.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

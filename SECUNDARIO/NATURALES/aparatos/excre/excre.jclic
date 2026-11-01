@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="excre" version="0.1.3">
+ <settings>
+  <title>Aparatos del cuerpo humano</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="4/4/00" />
+  <revision description="Traducción Español" date="4/4/00">
+   <author name="Aurelio Salvador Baselga" mail="asalvado@roble.pntic.mec.es" />
+  </revision>
+  <revision description="Conversión de Clic3 a JClic" date="7/11/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Ferran Estruch Mascarell" mail="46002842@centres.cult.gva.es" />
+  <organization name="CP Verge del Remei" mail="46002842@centres.cult.gva.es" city="Castelló de Rugat" state="País Valencià" />
+  <language>es</language>
+  <description>
+   <p>Paquete de actividades de Clic sobre los diferentes aparatos del cuerpo humano.  Dividido en seis secciones, una por cada aparato:</p>
+   <p>&lt;LI&gt;Aparato digestivo</p>
+   <p>&lt;LI&gt;Aparato circulatorio</p>
+   <p>&lt;LI&gt;Aparato locomotor</p>
+   <p>&lt;LI&gt;Aparato respiratorio</p>
+   <p>&lt;LI&gt;Aparato excretor</p>
+   <p>&lt;LI&gt;Aparato reproductor</p>
+  </description>
+  <descriptors area-codes="exp" level="Secundaria">anatomía</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Paquete de actividades de Clic sobre los diferentes aparatos del cuerpo humano.  Dividido en seis secciones, una por cada aparato:</p>
+    <p>&lt;LI&gt;Aparato digestivo</p>
+    <p>&lt;LI&gt;Aparato circulatorio</p>
+    <p>&lt;LI&gt;Aparato locomotor</p>
+    <p>&lt;LI&gt;Aparato respiratorio</p>
+    <p>&lt;LI&gt;Aparato excretor</p>
+    <p>&lt;LI&gt;Aparato reproductor</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="excre.pac" name="excret/presenta.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="excret/apexc.puz" />
+  <item name="excret/apexcr.ass" />
+  <item name="excret/apexcr1.ass" />
+  <item name="excret/funciona.puz" />
+  <item name="excret/orapex.sop" />
+  <item name="excret/orgapex.ass" />
+  <item name="excret/pell.ass" />
+  <item name="excret/pell1.ass" />
+  <item name="excret/ronyo.puz" />
+  <item name="excret/orina.ass" />
+  <item name="excret/higien.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@puzzles.ExchangePuzzle" name="excret\apexc.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x003737" />
+     </style>
+     <p>ORDENA LES PIEZAS DEL APARATO EXCRETOR. </p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x003737" />
+     </style>
+     <p>MUY BIEN . REPASA EL NOMBRE DE CADA ÓRGANO Y SIGUE ADELANTE.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x008080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xA8FFBE" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="false" image="excret\apexc.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="excret\apexcr.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>ENCUENTRA EL NOMBRE DE CADA ÓRGANO.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+     <p>¡ FANTÁSTICO !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFD2">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF00" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell id="0">
+     <p>RIÑÓN</p>
+    </cell>
+    <cell id="1">
+     <p>ARTERIA RENAL</p>
+    </cell>
+    <cell id="2">
+     <p>VENA RENAL</p>
+    </cell>
+    <cell id="3">
+     <p>URÉTER</p>
+    </cell>
+    <cell id="4">
+     <p>VEJIGA</p>
+    </cell>
+    <cell id="5">
+     <p>URETRA</p>
+    </cell>
+   </cells>
+   <cells rows="12" cols="7" border="false" image="excret\apexcr1.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="7" rows="12" showEnclosure="true" scaleX="7.0" scaleY="12.0">
+     <enclosing>
+      <shape>rectangle:0,0,7,12</shape>
+     </enclosing>
+     <shape>rectangle:4,3,1,1</shape>
+     <shape>rectangle:3,0,1,1</shape>
+     <shape>rectangle:2,0,1,1</shape>
+     <shape>rectangle:2,5,1,1</shape>
+     <shape>rectangle:3,9,1,1</shape>
+     <shape>rectangle:2,10,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="excret\apexcr1.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0x800040" />
+     </style>
+     <p>ESCRIBE EL NOMBRE DE CADA UNO DE LOS ÓRGANOS DEL APARATO EXCRETOR.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0x800040" />
+     </style>
+     <p>¡ FANTÁSTICO !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFD9EC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF82C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" border="false" image="excret\apexc01.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <cells rows="3" cols="2" cellWidth="220.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>VENA RENAL</p>
+    </cell>
+    <cell>
+     <p>RIÑÓN|RIÑON</p>
+    </cell>
+    <cell>
+     <p>URÉTER|URETER</p>
+    </cell>
+    <cell>
+     <p>ARTERIA RENAL</p>
+    </cell>
+    <cell>
+     <p>VEJIGA</p>
+    </cell>
+    <cell>
+     <p>URETRA</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="2" border="false" image="excret\apexc.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="excret\funciona.puz">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color background="0xEFEDAD" />
+     </style>
+     <p>LEE ATENTAMENTE Y ORDENA TODO EL PROCESO </p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color background="0xEFEDAD" />
+     </style>
+     <p>¡ MUY BIEN !</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xD1DFFE">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x82AFFB" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="80.0" border="true">
+    <style shadow="true">
+     <color foreground="0xFFFF00" background="0x0072E3" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>LA ARTERIA RENAL LLEVA LA SANGRE A LOS RIÑONES</p>
+    </cell>
+    <cell>
+     <p>LOS RIÑONES FILTRAN LAS SUSTANCIAS PERJUDICIALES DE LA SANGRE</p>
+    </cell>
+    <cell>
+     <p>LA ORINA SALE DE LOS RIÑONES POR LOS URÉTERES</p>
+    </cell>
+    <cell>
+     <p>LA ORINA SE ALMACENA EN LA VEJIGA</p>
+    </cell>
+    <cell>
+     <p>LA ORINA SE EXPULSA POR LA URETRA</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="excret\higien.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x29C596" />
+     </style>
+     <p>ENCUENTRA 4 MEDIDAS DE HIGIENE DEL APARATO EXCRETOR.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x29C596" />
+     </style>
+     <p>¡ MUY BIEN !. ¡ RECUÉRDALO !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xB1EBD6">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="2" cellWidth="260.0" cellHeight="80.0" border="true" id="primary">
+    <style>
+     <color foreground="0xFF0000" background="0xFFFFDB" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell id="1">
+     <p>Beber, diariamente, abundante cantidad de agua.</p>
+    </cell>
+    <cell id="0">
+     <p>Evitar el tabaco.</p>
+    </cell>
+    <cell id="1">
+     <p>Mantener limpia la piel.</p>
+    </cell>
+    <cell id="1">
+     <p>No abusar del café.</p>
+    </cell>
+    <cell id="0">
+     <p>Limpiarse bien los dientes.</p>
+    </cell>
+    <cell id="0">
+     <p>Hacer ejercicio físico.</p>
+    </cell>
+    <cell id="1">
+     <p>No abusar de la carne.</p>
+    </cell>
+    <cell id="0">
+     <p>Reposar después de comer.</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="2" cellWidth="260.0" cellHeight="80.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <p>El agua hace que el riñón trabaje con más comodidad.</p>
+    </cell>
+    <cell />
+    <cell>
+     <p>La ducha limpia los poros por donde sale el sudor.</p>
+    </cell>
+    <cell>
+     <p>El exceso de café hace que el riñón trabaje mal.</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell>
+     <p>Comer demasiada carne puede producir enfermedades como la gota, la artritis y el ácido úrico.</p>
+    </cell>
+    <cell />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="excret\orapex.sop">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0x800000" />
+     </style>
+     <p>LOCALIZA 5 ÓRGANOS DEL APARATO EXCRETOR</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0x800000" />
+     </style>
+     <p>¡ ADELANTE !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF0000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="8" columns="8" cellWidth="40.0" cellHeight="40.0" border="true">
+    <style>
+     <color background="0xFFFFBD" inactive="0xFF8040" alternative="0xFF8040" />
+    </style>
+    <text>
+     <row>UVEJIGAR</row>
+     <row>RPOROS*I</row>
+     <row>É***U**Ñ</row>
+     <row>T***R**O</row>
+     <row>E***E**N</row>
+     <row>R***T**E</row>
+     <row>E***R**S</row>
+     <row>S***A***</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">RIÑONES</clue>
+    <clue id="1">URÉTERES</clue>
+    <clue id="2">VEJIGA</clue>
+    <clue id="3">URETRA</clue>
+    <clue id="4">POROS</clue>
+   </clues>
+  </activity>
+  <activity class="@panels.Identify" name="excret\orgapex.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0x4F4F9D" />
+     </style>
+     <p>DESCUBRE 3 ÓRGANOS QUE NO FORMAN PARTE DEL APARATO EXCRETOR.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0x4F4F9D" />
+     </style>
+     <p>¡ MUY BIEN !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xB5B5DB">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="2" cellWidth="220.0" cellHeight="90.0" border="true" id="primary">
+    <style shadow="true">
+     <color foreground="0xFFFFFF" background="0x006FA4" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell id="0">
+     <p>VEJIGA</p>
+    </cell>
+    <cell id="1">
+     <p>RETINA</p>
+    </cell>
+    <cell id="0">
+     <p>GLÁNDULAS SUDORÍPARAS</p>
+    </cell>
+    <cell id="0">
+     <p>URÉTERES</p>
+    </cell>
+    <cell id="1">
+     <p>DIAFRAGMA</p>
+    </cell>
+    <cell id="1">
+     <p>AURÍCULA</p>
+    </cell>
+    <cell id="0">
+     <p>RIÑONES</p>
+    </cell>
+    <cell id="0">
+     <p>URETRA</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="2" cellWidth="220.0" cellHeight="90.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell />
+    <cell>
+     <p>La RETINA es una membrana del ojo.</p>
+    </cell>
+    <cell />
+    <cell />
+    <cell>
+     <p>El DIAFRAGMA es un músculo que interviene en la respiración.</p>
+    </cell>
+    <cell>
+     <p>LA AURÍCULA es una de las cavidades del corazón.</p>
+    </cell>
+    <cell />
+    <cell />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="excret\orina.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color background="0xFF8040" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>LOCALIZA 3 COMPONENTES QUE NO SON DE LA ORINA.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color background="0xFF8040" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+     </style>
+     <p>ESTOS SÍ SON DE LA ORINA. ¡ SIGUE ADELANTE !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFC6AA">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="175.0" cellHeight="100.0" border="true" id="primary">
+    <style shadow="true">
+     <color foreground="0xFF0000" background="0xFFFFBF" shadow="0xC0C0C0" inactive="0xC0C0C0" alternative="0xC0C0C0" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell id="0">
+     <p>UREA</p>
+    </cell>
+    <cell id="0">
+     <p>SAL</p>
+    </cell>
+    <cell id="0">
+     <p>AGUA</p>
+    </cell>
+    <cell id="1">
+     <p>AZÚCAR</p>
+    </cell>
+    <cell id="1">
+     <p>AZAFRÁN</p>
+    </cell>
+    <cell id="1">
+     <p>DIÓXIDO DE CARBONO</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="175.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell />
+    <cell />
+    <cell />
+    <cell>
+     <p>Es perjudicial para el cuerpo perder AZÚCAR por la orina.</p>
+    </cell>
+    <cell>
+     <p>El AZAFRÁN es un colorante para la cocina.</p>
+    </cell>
+    <cell>
+     <p>El DIÓXIDO DE CARBONO se elimina por los pulmones.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="excret\pell.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFF80" background="0x000040" />
+     </style>
+     <p>OBSERVA E INFÓRMATE DE LOS ÓRGANOS QUE HAY EN LA PIEL.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFF80" background="0x000040" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x000080">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="false" image="excret\pell.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="excret\pell1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFF80" background="0x264D4D" />
+     </style>
+     <p>ASOCIA CON CADA UNO DE LOS ÓRGANOS.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFF80" background="0x264D4D" />
+     </style>
+     <p>¡ MUY BIEN !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC7E2E2">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x408080" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFDDDD0" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>Órgano que recubre todo el cuerpo.</p>
+    </cell>
+    <cell>
+     <p>Por ellos sale el sudor.</p>
+    </cell>
+    <cell>
+     <p>Parte externa de la piel.</p>
+    </cell>
+    <cell>
+     <p>Fabrican el sudor.</p>
+    </cell>
+    <cell>
+     <p>Detectan el tacto, el dolor, etc.</p>
+    </cell>
+    <cell>
+     <p>Líquido formado por agua y sales minerales.</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFDF4CC" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>LA PIEL</p>
+    </cell>
+    <cell>
+     <p>LOS POROS</p>
+    </cell>
+    <cell>
+     <p>EPIDERMIS</p>
+    </cell>
+    <cell>
+     <p>GLÁNDULAS SUDORÍPARAS</p>
+    </cell>
+    <cell>
+     <p>TERMINACIONES NERVIOSAS</p>
+    </cell>
+    <cell>
+     <p>SUDOR</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="excret\presenta.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <p>LA EXCRECIÓN ES UNA PARTE IMPORTANTE DE LA NUTRICIÓN. ¡CONÓCELA!</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="excret\presenta.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="excret\ronyo.puz">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0x0000A0" />
+     </style>
+     <p>ORDENA LAS PIEZAS Y OBSERVA EL INTERIOR DE UN RIÑÓN.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFFFFFF" background="0x0000A0" />
+     </style>
+     <p>¡ MAGNÍFICO !</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xB0D8FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x007AF4" border="true" />
+   </settings>
+   <cells rows="3" cols="2" border="true" image="excret\ronyo.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="excret/apexc.gif" file="excret_apexc.gif" animated="false" />
+  <media name="excret/apexc01.gif" file="excret_apexc01.gif" animated="false" />
+  <media name="excret/apexcr1.gif" file="excret_apexcr1.gif" animated="false" />
+  <media name="excret/pell.gif" file="excret_pell.gif" animated="false" />
+  <media name="excret/presenta.gif" file="excret_presenta.gif" animated="false" />
+  <media name="excret/ronyo.gif" file="excret_ronyo.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

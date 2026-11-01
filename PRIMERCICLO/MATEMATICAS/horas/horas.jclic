@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="horas" version="0.1.3">
+ <settings>
+  <title>Las horas del reloj</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="2/15/08" />
+  <revision description="Conversión de Clic3 a JClic" date="2/15/08">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Tomás Fernández García" mail="tfernandez411@telefonica.net" />
+  <organization name="CP Ausiàs March" city="Alacant" state="País Valencià" />
+  <language>español</language>
+  <description>
+   <p>Proyecto de actividades dirigido a educación primaria  que teine como objetivo principal el aprendizaje y uso del reloj de forma práctica y sistemática. El proyecto tiene más de ciento cincuenta actividades y está dividido en seis partes:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Historia de relojes</p>
+   <p>&lt;LI&gt;En punto</p>
+   <p>&lt;LI&gt;Y media</p>
+   <p>&lt;LI&gt;Y cuarto, menos cuarto</p>
+   <p>&lt;LI&gt;Otras horas</p>
+   <p>&lt;LI&gt;Internet</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area="Matemáticas" level="Primaria (6-12)">tiempo</descriptors>
+  <skin file="@orange.xml" />
+ </settings>
+ <sequence>
+  <item id="start" name="Portada">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="destinatario" />
+  <item id="inicio" name="eleccion">
+   <jump action="STOP" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="Portada" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="las horas del.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="tiempo.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="portada.jpg">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <style borderStroke="2.2" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xFFCC00" alternative="0x000000" border="0x6666FF" />
+     </style>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="destinatario" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xCCCC00" />
+     </style>
+     <p>PINCHA EN LA FOTO ADECUADA</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="tiempo.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="false" image="ELECC DOCENTE ALUMNO.jpg">
+    <style borderStroke="2.4" markerStroke="2.7">
+     <color foreground="0xFF0000" background="0xFFFFFF" border="0x3366FF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="eleccion" />
+    </cell>
+    <cell>
+     <media type="URL" level="1" file="horas.htm" />
+    </cell>
+    <cell />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="eleccion" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="por donde.wav" />
+     <p>¿POR   DÓNDE   EMPEZAMOS?</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="tiempo.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="320.0" cellHeight="151.0" border="true">
+    <style borderStroke="2.4" markerStroke="2.7">
+     <color foreground="0xFF0000" background="0xFFFFFF" border="0x3366FF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell border="true" image="Hria relojes.jpg">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="start" params="historia_del_reloj.jclic" />
+    </cell>
+    <cell border="true" image="RELOJ EN PUNTO.jpg">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="start" params="enpunto1.jclic" />
+    </cell>
+    <cell image="RELOJ Y MEDIA.jpg">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="start" params="y_media_1.jclic" />
+    </cell>
+    <cell image="RELOJ CUARTOS1.jpg">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="start" params="mas_menos_cuarto_1.jclic" />
+    </cell>
+    <cell image="OTRAS HORAS.jpg">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="start" params="otras_horas_1.jclic" />
+    </cell>
+    <cell txtAlign="left,middle" imgAlign="right,middle" avoidOverlapping="true" image="reloj roto.jpg">
+     <media type="URL" level="1" file="http://es.wikipedia.org/wiki/Reloj" />
+     <p>Si quieres y puedes usar INTERNET, pincha en esta casilla y tendrás más información sobre los relojes.</p>
+    </cell>
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="ELECC DOCENTE ALUMNO.jpg" file="elecc_docente_alumno.jpg" />
+  <media name="Hria relojes.jpg" file="hria_relojes.jpg" />
+  <media name="OTRAS HORAS.jpg" file="otras_horas.jpg" />
+  <media name="portada.jpg" file="portada.jpg" />
+  <media name="RELOJ CUARTOS1.jpg" file="reloj_cuartos1.jpg" />
+  <media name="RELOJ EN PUNTO.jpg" file="reloj_en_punto.jpg" />
+  <media name="reloj roto.jpg" file="reloj_roto.jpg" />
+  <media name="RELOJ Y MEDIA.jpg" file="reloj_y_media.jpg" />
+  <media name="tiempo.jpg" file="tiempo.jpg" />
+  <media name="las horas del.wav" file="las_horas_del.wav" />
+  <media name="por donde.wav" file="por_donde.wav" />
+ </mediaBag>
+</JClicProject>
+

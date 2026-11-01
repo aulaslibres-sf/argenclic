@@ -1,0 +1,4400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="menu" version="0.1.3">
+ <settings>
+  <title>Numeración romana</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="11/24/97" />
+  <revision description="Conversión de Clic3 a JClic" date="3/20/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Luís Pérez Gutiérrez" mail="lperez@pie.xtec.es" />
+  <organization name="CEIP Can Massallera" mail="a8034412@centres.xtec.es" url="http://www.xtec.es/centres/a8034412" city="Sant Boi de Llobregat" state="Catalunya" />
+  <language>es</language>
+  <description>
+   <p>Cinco paquetes de actividades para trabajar la numeración romana: en el primero se explican los conceptos básicos para entender su funcionamiento, y en los otros cuatro se proponen actividades clasificadas por niveles:&lt;BR&gt;</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Del I al XX</p>
+   <p>&lt;LI&gt;Del XX al C</p>
+   <p>&lt;LI&gt;del C al M</p>
+   <p>&lt;LI&gt;del M al MMMCMXCIX</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area-codes="mat" level="Primaria, Secundaria">fundamentos de las matemáticas</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Cinco paquetes de actividades para trabajar la numeración romana: en el primero se explican los conceptos básicos para entender su funcionamiento, y en los otros cuatro se proponen actividades clasificadas por niveles:&lt;BR&gt;</p>
+    <p>&lt;UL&gt;</p>
+    <p>&lt;LI&gt;Del I al XX</p>
+    <p>&lt;LI&gt;Del XX al C</p>
+    <p>&lt;LI&gt;del C al M</p>
+    <p>&lt;LI&gt;del M al MMMCMXCIX</p>
+    <p>&lt;/UL&gt;</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="menu.pac" name="menu.ass">
+   <description>
+    <p>Paquet de numeració romana des de l'1 fins el 3.999</p>
+   </description>
+   <jump action="STOP" id="forward" />
+   <jump action="STOP" id="back" />
+  </item>
+  <item id="romans0.pac" name="r001.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="r002.ass" />
+  <item name="r003.ass" />
+  <item name="r004.ass" />
+  <item name="r005.ass" />
+  <item name="r006.ass" />
+  <item name="puzle0.puz">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="romans1.pac" name="r101.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="r102.ass" />
+  <item name="r103.ass" />
+  <item name="r104.ass" />
+  <item name="r105.ass" />
+  <item name="r106.ass" />
+  <item name="r107.ass" />
+  <item name="r108.ass" />
+  <item name="r109.ass" />
+  <item name="puzle1.puz">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="romans2.pac" name="r201.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="r202.ass" />
+  <item name="r203.ass" />
+  <item name="r204.ass" />
+  <item name="r205.ass" />
+  <item name="r206.ass" />
+  <item name="r207.ass" />
+  <item name="r208.ass" />
+  <item name="r209.ass" />
+  <item name="r210.ass" />
+  <item name="puzle2.puz">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="romans3.pac" name="r301.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="r302.ass" />
+  <item name="r303.ass" />
+  <item name="r304.ass" />
+  <item name="r305.ass" />
+  <item name="r306.ass" />
+  <item name="r307.ass" />
+  <item name="r308.ass" />
+  <item name="r309.ass" />
+  <item name="r310.ass" />
+  <item name="puzle3.puz">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="romans4.pac" name="r401.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="r402.ass" />
+  <item name="r403.ass" />
+  <item name="r404.ass" />
+  <item name="r405.ass" />
+  <item name="r406.ass" />
+  <item name="r407.ass" />
+  <item name="r408.ass" />
+  <item name="r409.ass" />
+  <item name="r410.ass" />
+  <item name="puzle4.puz">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="menu.ass">
+   <description>
+    <p>Menú de la numeració romana
+</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¿Qué nivel quieres trabajar?</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x008080" transparent="true" border="false" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="500.0" cellHeight="59.0" border="false">
+    <style shadow="true">
+     <font family="Arial" size="20" />
+     <color foreground="0xFFFFFF" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell image="cap.gif" />
+    <cell image="nivell0.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="romans0.pac" />
+    </cell>
+    <cell image="nivell1.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="romans1.pac" />
+    </cell>
+    <cell image="nivell2.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="romans2.pac" />
+    </cell>
+    <cell image="nivell3.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="romans3.pac" />
+    </cell>
+    <cell image="nivell4.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="romans4.pac" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puzle0.puz">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x008080" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Reconstruye el rompecabezas</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x008080" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="5" border="false" image="segovia.jpg">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puzle1.puz">
+   <description>
+    <p>Rellotge amb numeració romana</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Reconstruye el rompecabezas</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="4" border="false" image="rellotge.gif">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puzle2.puz">
+   <description>
+    <p>Imatge del Colisèum</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Reconstruye el rompecabezas</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="4" border="false" image="coliseum.gif">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="4" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puzle3.puz">
+   <description>
+    <p>Teatre romà de Mérida</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Reconstruye el rompecabezas</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="false" image="merida.jpg">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puzle4.puz">
+   <description>
+    <p>Arc de triomf de Tit a Roma
+</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Reconstruye el rompecabezas</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="5" border="false" image="arc.jpg">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="4" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="r001.ass">
+   <description>
+    <p>Pantalla informativa</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x008080" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Recuerda que...</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x008080" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="nivell0a.gif">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="r002.ass">
+   <description>
+    <p>Pantalla informativa</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x008080" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Recuerda que...</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x008080" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="nivell0b.gif">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="r003.ass">
+   <description>
+    <p>Pantalla informativa</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x008080" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Recuerda que...</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x008080" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="nivell0c.gif">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="r004.ass">
+   <description>
+    <p>Pantalla informativa</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x008080" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Recuerda que...</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x008080" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="nivell0d.gif">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="r005.ass">
+   <description>
+    <p>Pantalla informativa</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x008080" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Recuerda que...</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x008080" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="nivell0e.gif">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="r006.ass">
+   <description>
+    <p>Pantalla informativa</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x008080" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Recuerda que...</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x008080" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="nivell0f.gif">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="r101.ass">
+   <description>
+    <p>Numeración romana del 1 al 10</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Relaciona</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="125.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>3</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="125.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>I</p>
+    </cell>
+    <cell>
+     <p>II</p>
+    </cell>
+    <cell>
+     <p>III</p>
+    </cell>
+    <cell>
+     <p>IV</p>
+    </cell>
+    <cell>
+     <p>V</p>
+    </cell>
+    <cell>
+     <p>VI</p>
+    </cell>
+    <cell>
+     <p>VII</p>
+    </cell>
+    <cell>
+     <p>VIII</p>
+    </cell>
+    <cell>
+     <p>IX</p>
+    </cell>
+    <cell>
+     <p>X</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="r102.ass">
+   <description>
+    <p>Numeración romana del 1 al 10</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Escribe con numeración romana</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="125.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>3</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="250.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="50" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>I</p>
+    </cell>
+    <cell>
+     <p>II</p>
+    </cell>
+    <cell>
+     <p>III</p>
+    </cell>
+    <cell>
+     <p>IV</p>
+    </cell>
+    <cell>
+     <p>V</p>
+    </cell>
+    <cell>
+     <p>VI</p>
+    </cell>
+    <cell>
+     <p>VII</p>
+    </cell>
+    <cell>
+     <p>VIII</p>
+    </cell>
+    <cell>
+     <p>IX</p>
+    </cell>
+    <cell>
+     <p>X</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="r103.ass">
+   <description>
+    <p>Numeración romana del 1 al 10</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Escribe con cifras</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="125.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>I</p>
+    </cell>
+    <cell>
+     <p>II</p>
+    </cell>
+    <cell>
+     <p>III</p>
+    </cell>
+    <cell>
+     <p>IV</p>
+    </cell>
+    <cell>
+     <p>V</p>
+    </cell>
+    <cell>
+     <p>VI</p>
+    </cell>
+    <cell>
+     <p>VII</p>
+    </cell>
+    <cell>
+     <p>VIII</p>
+    </cell>
+    <cell>
+     <p>IX</p>
+    </cell>
+    <cell>
+     <p>X</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="250.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="50" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>3</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="r104.ass">
+   <description>
+    <p>Numeración romana del 1 al 10</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Relaciona</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="125.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>3</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>14</p>
+    </cell>
+    <cell>
+     <p>17</p>
+    </cell>
+    <cell>
+     <p>19</p>
+    </cell>
+    <cell>
+     <p>20</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="125.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>III</p>
+    </cell>
+    <cell>
+     <p>IV</p>
+    </cell>
+    <cell>
+     <p>V</p>
+    </cell>
+    <cell>
+     <p>VIII</p>
+    </cell>
+    <cell>
+     <p>IX</p>
+    </cell>
+    <cell>
+     <p>XII</p>
+    </cell>
+    <cell>
+     <p>XIV</p>
+    </cell>
+    <cell>
+     <p>XVII</p>
+    </cell>
+    <cell>
+     <p>XIX</p>
+    </cell>
+    <cell>
+     <p>XX</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="r105.ass">
+   <description>
+    <p>Escribe el valor con numeración romana</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Escribe con numeración romana</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="125.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>3</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>14</p>
+    </cell>
+    <cell>
+     <p>17</p>
+    </cell>
+    <cell>
+     <p>19</p>
+    </cell>
+    <cell>
+     <p>20</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="250.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="50" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>III</p>
+    </cell>
+    <cell>
+     <p>IV</p>
+    </cell>
+    <cell>
+     <p>V</p>
+    </cell>
+    <cell>
+     <p>VIII</p>
+    </cell>
+    <cell>
+     <p>IX</p>
+    </cell>
+    <cell>
+     <p>XII</p>
+    </cell>
+    <cell>
+     <p>XIV</p>
+    </cell>
+    <cell>
+     <p>XVII</p>
+    </cell>
+    <cell>
+     <p>XIX</p>
+    </cell>
+    <cell>
+     <p>XX</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="r106.ass">
+   <description>
+    <p>Escribe el valor romano con cifras</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Escribe con cifras</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="125.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>II</p>
+    </cell>
+    <cell>
+     <p>IV</p>
+    </cell>
+    <cell>
+     <p>VI</p>
+    </cell>
+    <cell>
+     <p>IX</p>
+    </cell>
+    <cell>
+     <p>X</p>
+    </cell>
+    <cell>
+     <p>XIII</p>
+    </cell>
+    <cell>
+     <p>XIV</p>
+    </cell>
+    <cell>
+     <p>XV</p>
+    </cell>
+    <cell>
+     <p>XVI</p>
+    </cell>
+    <cell>
+     <p>XIX</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="250.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="50" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>13</p>
+    </cell>
+    <cell>
+     <p>14</p>
+    </cell>
+    <cell>
+     <p>15</p>
+    </cell>
+    <cell>
+     <p>16</p>
+    </cell>
+    <cell>
+     <p>19</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="r107.ass">
+   <description>
+    <p>Trabajar la numeración romana hasta el 10.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Relaciona</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="2" cellWidth="200.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>3</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="2" cellWidth="400.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>I</p>
+    </cell>
+    <cell>
+     <p>II</p>
+    </cell>
+    <cell>
+     <p>III</p>
+    </cell>
+    <cell>
+     <p>IV</p>
+    </cell>
+    <cell>
+     <p>V</p>
+    </cell>
+    <cell>
+     <p>VI</p>
+    </cell>
+    <cell>
+     <p>VII</p>
+    </cell>
+    <cell>
+     <p>VIII</p>
+    </cell>
+    <cell>
+     <p>IX</p>
+    </cell>
+    <cell>
+     <p>X</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="r108.ass">
+   <description>
+    <p>Trabajar la numeración romana hasta el 20.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Relaciona</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="2" cellWidth="200.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>11</p>
+    </cell>
+    <cell>
+     <p>14</p>
+    </cell>
+    <cell>
+     <p>15</p>
+    </cell>
+    <cell>
+     <p>19</p>
+    </cell>
+    <cell>
+     <p>20</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="2" cellWidth="400.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>IV</p>
+    </cell>
+    <cell>
+     <p>V</p>
+    </cell>
+    <cell>
+     <p>VI</p>
+    </cell>
+    <cell>
+     <p>IX</p>
+    </cell>
+    <cell>
+     <p>X</p>
+    </cell>
+    <cell>
+     <p>XI</p>
+    </cell>
+    <cell>
+     <p>XIV</p>
+    </cell>
+    <cell>
+     <p>XV</p>
+    </cell>
+    <cell>
+     <p>XIX</p>
+    </cell>
+    <cell>
+     <p>XX</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@panels.Identify" name="r109.ass">
+   <description>
+    <p>Localiza los errores</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Señala los errores</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="4" cellWidth="153.0" cellHeight="50.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="5" />
+    <cell id="0">
+     <p>1 = I</p>
+    </cell>
+    <cell id="0">
+     <p>2 = II</p>
+    </cell>
+    <cell id="0">
+     <p>3 = III</p>
+    </cell>
+    <cell id="1">
+     <p>4 = IIII</p>
+    </cell>
+    <cell id="1">
+     <p>5 = X</p>
+    </cell>
+    <cell id="0">
+     <p>6 = VI</p>
+    </cell>
+    <cell id="0">
+     <p>7 = VII</p>
+    </cell>
+    <cell id="1">
+     <p>8 = XIII</p>
+    </cell>
+    <cell id="0">
+     <p>9 = IX</p>
+    </cell>
+    <cell id="1">
+     <p>10 = V</p>
+    </cell>
+    <cell id="1">
+     <p>11 = II</p>
+    </cell>
+    <cell id="0">
+     <p>12 = XII</p>
+    </cell>
+    <cell id="1">
+     <p>13 = VVIII</p>
+    </cell>
+    <cell id="0">
+     <p>14 = XIV</p>
+    </cell>
+    <cell id="0">
+     <p>15 = XV</p>
+    </cell>
+    <cell id="1">
+     <p>16 = XI</p>
+    </cell>
+    <cell id="0">
+     <p>17 = XVII</p>
+    </cell>
+    <cell id="0">
+     <p>18 = XVIII</p>
+    </cell>
+    <cell id="1">
+     <p>19 = XXI</p>
+    </cell>
+    <cell id="1">
+     <p>20 = XVV</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="r201.ass">
+   <description>
+    <p>Numeració romana amb les desenes 10-100
+</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Relaciona</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="125.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>20</p>
+    </cell>
+    <cell>
+     <p>30</p>
+    </cell>
+    <cell>
+     <p>40</p>
+    </cell>
+    <cell>
+     <p>50</p>
+    </cell>
+    <cell>
+     <p>60</p>
+    </cell>
+    <cell>
+     <p>70</p>
+    </cell>
+    <cell>
+     <p>80</p>
+    </cell>
+    <cell>
+     <p>90</p>
+    </cell>
+    <cell>
+     <p>100</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="125.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>X</p>
+    </cell>
+    <cell>
+     <p>XX</p>
+    </cell>
+    <cell>
+     <p>XXX</p>
+    </cell>
+    <cell>
+     <p>XL</p>
+    </cell>
+    <cell>
+     <p>L</p>
+    </cell>
+    <cell>
+     <p>LX</p>
+    </cell>
+    <cell>
+     <p>LXX</p>
+    </cell>
+    <cell>
+     <p>LXXX</p>
+    </cell>
+    <cell>
+     <p>XC</p>
+    </cell>
+    <cell>
+     <p>C</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="r202.ass">
+   <description>
+    <p>Escriu el valor de les desenes amb numeració romana</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Escribe con numeración romana</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="125.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>20</p>
+    </cell>
+    <cell>
+     <p>30</p>
+    </cell>
+    <cell>
+     <p>40</p>
+    </cell>
+    <cell>
+     <p>50</p>
+    </cell>
+    <cell>
+     <p>60</p>
+    </cell>
+    <cell>
+     <p>70</p>
+    </cell>
+    <cell>
+     <p>80</p>
+    </cell>
+    <cell>
+     <p>90</p>
+    </cell>
+    <cell>
+     <p>100</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="250.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="50" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>X</p>
+    </cell>
+    <cell>
+     <p>XX</p>
+    </cell>
+    <cell>
+     <p>XXX</p>
+    </cell>
+    <cell>
+     <p>XL</p>
+    </cell>
+    <cell>
+     <p>L</p>
+    </cell>
+    <cell>
+     <p>LX</p>
+    </cell>
+    <cell>
+     <p>LXX</p>
+    </cell>
+    <cell>
+     <p>LXXX</p>
+    </cell>
+    <cell>
+     <p>XC</p>
+    </cell>
+    <cell>
+     <p>C</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="r203.ass">
+   <description>
+    <p>Escriu el valor de les desenes amb xifres</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Escribe con cifras</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="125.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>X</p>
+    </cell>
+    <cell>
+     <p>XX</p>
+    </cell>
+    <cell>
+     <p>XXX</p>
+    </cell>
+    <cell>
+     <p>XL</p>
+    </cell>
+    <cell>
+     <p>L</p>
+    </cell>
+    <cell>
+     <p>LX</p>
+    </cell>
+    <cell>
+     <p>LXX</p>
+    </cell>
+    <cell>
+     <p>LXXX</p>
+    </cell>
+    <cell>
+     <p>XC</p>
+    </cell>
+    <cell>
+     <p>C</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="250.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="50" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>20</p>
+    </cell>
+    <cell>
+     <p>30</p>
+    </cell>
+    <cell>
+     <p>40</p>
+    </cell>
+    <cell>
+     <p>50</p>
+    </cell>
+    <cell>
+     <p>60</p>
+    </cell>
+    <cell>
+     <p>70</p>
+    </cell>
+    <cell>
+     <p>80</p>
+    </cell>
+    <cell>
+     <p>90</p>
+    </cell>
+    <cell>
+     <p>100</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="r204.ass">
+   <description>
+    <p>Numeració romana fins a 50</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Relaciona</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="2" cellWidth="200.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>14</p>
+    </cell>
+    <cell>
+     <p>19</p>
+    </cell>
+    <cell>
+     <p>26</p>
+    </cell>
+    <cell>
+     <p>33</p>
+    </cell>
+    <cell>
+     <p>38</p>
+    </cell>
+    <cell>
+     <p>39</p>
+    </cell>
+    <cell>
+     <p>41</p>
+    </cell>
+    <cell>
+     <p>44</p>
+    </cell>
+    <cell>
+     <p>49</p>
+    </cell>
+    <cell>
+     <p>50</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="2" cellWidth="400.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>XIV</p>
+    </cell>
+    <cell>
+     <p>XIX</p>
+    </cell>
+    <cell>
+     <p>XXVI</p>
+    </cell>
+    <cell>
+     <p>XXXIII</p>
+    </cell>
+    <cell>
+     <p>XXXVIII</p>
+    </cell>
+    <cell>
+     <p>XXXIX</p>
+    </cell>
+    <cell>
+     <p>XLI</p>
+    </cell>
+    <cell>
+     <p>XLIV</p>
+    </cell>
+    <cell>
+     <p>XLIX</p>
+    </cell>
+    <cell>
+     <p>L</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="r205.ass">
+   <description>
+    <p>Escriu amb numeració romana fins a 50</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Escribe con numeración romana</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="125.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>14</p>
+    </cell>
+    <cell>
+     <p>19</p>
+    </cell>
+    <cell>
+     <p>26</p>
+    </cell>
+    <cell>
+     <p>33</p>
+    </cell>
+    <cell>
+     <p>38</p>
+    </cell>
+    <cell>
+     <p>39</p>
+    </cell>
+    <cell>
+     <p>41</p>
+    </cell>
+    <cell>
+     <p>44</p>
+    </cell>
+    <cell>
+     <p>49</p>
+    </cell>
+    <cell>
+     <p>50</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="250.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="50" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>XIV</p>
+    </cell>
+    <cell>
+     <p>XIX</p>
+    </cell>
+    <cell>
+     <p>XXVI</p>
+    </cell>
+    <cell>
+     <p>XXXIII</p>
+    </cell>
+    <cell>
+     <p>XXXVIII</p>
+    </cell>
+    <cell>
+     <p>XXXIX</p>
+    </cell>
+    <cell>
+     <p>XLI</p>
+    </cell>
+    <cell>
+     <p>XLIV</p>
+    </cell>
+    <cell>
+     <p>XLIX</p>
+    </cell>
+    <cell>
+     <p>L</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="r206.ass">
+   <description>
+    <p>Escriu amb numeració romana fins a 50</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Escribe con cifras</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="125.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>XIV</p>
+    </cell>
+    <cell>
+     <p>XIX</p>
+    </cell>
+    <cell>
+     <p>XXVI</p>
+    </cell>
+    <cell>
+     <p>XXXIII</p>
+    </cell>
+    <cell>
+     <p>XXXVIII</p>
+    </cell>
+    <cell>
+     <p>XXXIX</p>
+    </cell>
+    <cell>
+     <p>XLI</p>
+    </cell>
+    <cell>
+     <p>XLIV</p>
+    </cell>
+    <cell>
+     <p>XLIX</p>
+    </cell>
+    <cell>
+     <p>L</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="250.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="50" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>14</p>
+    </cell>
+    <cell>
+     <p>19</p>
+    </cell>
+    <cell>
+     <p>26</p>
+    </cell>
+    <cell>
+     <p>33</p>
+    </cell>
+    <cell>
+     <p>38</p>
+    </cell>
+    <cell>
+     <p>39</p>
+    </cell>
+    <cell>
+     <p>41</p>
+    </cell>
+    <cell>
+     <p>44</p>
+    </cell>
+    <cell>
+     <p>49</p>
+    </cell>
+    <cell>
+     <p>50</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="r207.ass">
+   <description>
+    <p>Numeració romana fins a 100</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Relaciona</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="2" cellWidth="200.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>54</p>
+    </cell>
+    <cell>
+     <p>66</p>
+    </cell>
+    <cell>
+     <p>72</p>
+    </cell>
+    <cell>
+     <p>81</p>
+    </cell>
+    <cell>
+     <p>93</p>
+    </cell>
+    <cell>
+     <p>99</p>
+    </cell>
+    <cell>
+     <p>77</p>
+    </cell>
+    <cell>
+     <p>58</p>
+    </cell>
+    <cell>
+     <p>65</p>
+    </cell>
+    <cell>
+     <p>88</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="2" cellWidth="400.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>LIV</p>
+    </cell>
+    <cell>
+     <p>LXVI</p>
+    </cell>
+    <cell>
+     <p>LXXII</p>
+    </cell>
+    <cell>
+     <p>LXXXI</p>
+    </cell>
+    <cell>
+     <p>XCIII</p>
+    </cell>
+    <cell>
+     <p>XCIX</p>
+    </cell>
+    <cell>
+     <p>LXXVII</p>
+    </cell>
+    <cell>
+     <p>LVIII</p>
+    </cell>
+    <cell>
+     <p>LXV</p>
+    </cell>
+    <cell>
+     <p>LXXXVIII</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="r208.ass">
+   <description>
+    <p>Numeració romana fins a 100</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Escribe con numeración romana</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="125.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>54</p>
+    </cell>
+    <cell>
+     <p>66</p>
+    </cell>
+    <cell>
+     <p>72</p>
+    </cell>
+    <cell>
+     <p>81</p>
+    </cell>
+    <cell>
+     <p>93</p>
+    </cell>
+    <cell>
+     <p>99</p>
+    </cell>
+    <cell>
+     <p>77</p>
+    </cell>
+    <cell>
+     <p>58</p>
+    </cell>
+    <cell>
+     <p>65</p>
+    </cell>
+    <cell>
+     <p>88</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="250.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="50" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>LIV</p>
+    </cell>
+    <cell>
+     <p>LXVI</p>
+    </cell>
+    <cell>
+     <p>LXXII</p>
+    </cell>
+    <cell>
+     <p>LXXXI</p>
+    </cell>
+    <cell>
+     <p>XCIII</p>
+    </cell>
+    <cell>
+     <p>XCIX</p>
+    </cell>
+    <cell>
+     <p>LXXVII</p>
+    </cell>
+    <cell>
+     <p>LVIII</p>
+    </cell>
+    <cell>
+     <p>LXV</p>
+    </cell>
+    <cell>
+     <p>LXXXVIII</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="r209.ass">
+   <description>
+    <p>Numeració romana fins a 100</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Escribe con cifras</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="125.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>LIV</p>
+    </cell>
+    <cell>
+     <p>LXVI</p>
+    </cell>
+    <cell>
+     <p>LXXII</p>
+    </cell>
+    <cell>
+     <p>LXXXI</p>
+    </cell>
+    <cell>
+     <p>XCIII</p>
+    </cell>
+    <cell>
+     <p>XCIX</p>
+    </cell>
+    <cell>
+     <p>LXXVII</p>
+    </cell>
+    <cell>
+     <p>LVIII</p>
+    </cell>
+    <cell>
+     <p>LXV</p>
+    </cell>
+    <cell>
+     <p>LXXXVIII</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="250.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="50" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>54</p>
+    </cell>
+    <cell>
+     <p>66</p>
+    </cell>
+    <cell>
+     <p>72</p>
+    </cell>
+    <cell>
+     <p>81</p>
+    </cell>
+    <cell>
+     <p>93</p>
+    </cell>
+    <cell>
+     <p>99</p>
+    </cell>
+    <cell>
+     <p>77</p>
+    </cell>
+    <cell>
+     <p>58</p>
+    </cell>
+    <cell>
+     <p>65</p>
+    </cell>
+    <cell>
+     <p>88</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="r210.ass">
+   <description>
+    <p>Localiza los errores</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Señala los errores</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x004040" border="true" />
+   </settings>
+   <cells rows="5" cols="3" cellWidth="205.0" cellHeight="50.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="5" />
+    <cell id="0">
+     <p>24 = XXIV</p>
+    </cell>
+    <cell id="1">
+     <p>30 = III</p>
+    </cell>
+    <cell id="0">
+     <p>39 = XXXIX</p>
+    </cell>
+    <cell id="1">
+     <p>40 = XXXX</p>
+    </cell>
+    <cell id="0">
+     <p>45 = XLV</p>
+    </cell>
+    <cell id="0">
+     <p>50 = L</p>
+    </cell>
+    <cell id="1">
+     <p>56 = LXI</p>
+    </cell>
+    <cell id="1">
+     <p>60 = LVV</p>
+    </cell>
+    <cell id="0">
+     <p>61 = LXI</p>
+    </cell>
+    <cell id="0">
+     <p>70 = LXX</p>
+    </cell>
+    <cell id="0">
+     <p>77 = LXVII</p>
+    </cell>
+    <cell id="1">
+     <p>80 = VXXX</p>
+    </cell>
+    <cell id="1">
+     <p>90 = LXXXX</p>
+    </cell>
+    <cell id="1">
+     <p>99 = IC</p>
+    </cell>
+    <cell id="0">
+     <p>100 = C</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="r301.ass">
+   <description>
+    <p>Numeració romana amb les desenes 10-100
+</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Relaciona</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="2" cellWidth="200.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>100</p>
+    </cell>
+    <cell>
+     <p>200</p>
+    </cell>
+    <cell>
+     <p>300</p>
+    </cell>
+    <cell>
+     <p>400</p>
+    </cell>
+    <cell>
+     <p>500</p>
+    </cell>
+    <cell>
+     <p>600</p>
+    </cell>
+    <cell>
+     <p>700</p>
+    </cell>
+    <cell>
+     <p>800</p>
+    </cell>
+    <cell>
+     <p>900</p>
+    </cell>
+    <cell>
+     <p>1000</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="2" cellWidth="400.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>C</p>
+    </cell>
+    <cell>
+     <p>CC</p>
+    </cell>
+    <cell>
+     <p>CCC</p>
+    </cell>
+    <cell>
+     <p>CD</p>
+    </cell>
+    <cell>
+     <p>D</p>
+    </cell>
+    <cell>
+     <p>DC</p>
+    </cell>
+    <cell>
+     <p>DCC</p>
+    </cell>
+    <cell>
+     <p>DCCC</p>
+    </cell>
+    <cell>
+     <p>CM</p>
+    </cell>
+    <cell>
+     <p>M</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="r302.ass">
+   <description>
+    <p>Escriu el valor de les desenes amb numeració romana</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Escribe con numeración romana</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="125.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>100</p>
+    </cell>
+    <cell>
+     <p>200</p>
+    </cell>
+    <cell>
+     <p>300</p>
+    </cell>
+    <cell>
+     <p>400</p>
+    </cell>
+    <cell>
+     <p>500</p>
+    </cell>
+    <cell>
+     <p>600</p>
+    </cell>
+    <cell>
+     <p>700</p>
+    </cell>
+    <cell>
+     <p>800</p>
+    </cell>
+    <cell>
+     <p>900</p>
+    </cell>
+    <cell>
+     <p>1000</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="250.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="50" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>C</p>
+    </cell>
+    <cell>
+     <p>CC</p>
+    </cell>
+    <cell>
+     <p>CCC</p>
+    </cell>
+    <cell>
+     <p>CD</p>
+    </cell>
+    <cell>
+     <p>D</p>
+    </cell>
+    <cell>
+     <p>DC</p>
+    </cell>
+    <cell>
+     <p>DCC</p>
+    </cell>
+    <cell>
+     <p>DCCC</p>
+    </cell>
+    <cell>
+     <p>CM</p>
+    </cell>
+    <cell>
+     <p>M</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="r303.ass">
+   <description>
+    <p>Escriu el valor de les desenes amb xifres</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Escribe con cifras</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="125.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>C</p>
+    </cell>
+    <cell>
+     <p>CC</p>
+    </cell>
+    <cell>
+     <p>CCC</p>
+    </cell>
+    <cell>
+     <p>CD</p>
+    </cell>
+    <cell>
+     <p>D</p>
+    </cell>
+    <cell>
+     <p>DC</p>
+    </cell>
+    <cell>
+     <p>DCC</p>
+    </cell>
+    <cell>
+     <p>DCCC</p>
+    </cell>
+    <cell>
+     <p>CM</p>
+    </cell>
+    <cell>
+     <p>M</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="250.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="50" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>100</p>
+    </cell>
+    <cell>
+     <p>200</p>
+    </cell>
+    <cell>
+     <p>300</p>
+    </cell>
+    <cell>
+     <p>400</p>
+    </cell>
+    <cell>
+     <p>500</p>
+    </cell>
+    <cell>
+     <p>600</p>
+    </cell>
+    <cell>
+     <p>700</p>
+    </cell>
+    <cell>
+     <p>800</p>
+    </cell>
+    <cell>
+     <p>900</p>
+    </cell>
+    <cell>
+     <p>1000</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="r304.ass">
+   <description>
+    <p>Numeració romana fins a 500</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Relaciona</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="2" cellWidth="200.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>144</p>
+    </cell>
+    <cell>
+     <p>196</p>
+    </cell>
+    <cell>
+     <p>262</p>
+    </cell>
+    <cell>
+     <p>339</p>
+    </cell>
+    <cell>
+     <p>383</p>
+    </cell>
+    <cell>
+     <p>391</p>
+    </cell>
+    <cell>
+     <p>415</p>
+    </cell>
+    <cell>
+     <p>447</p>
+    </cell>
+    <cell>
+     <p>498</p>
+    </cell>
+    <cell>
+     <p>500</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="2" cellWidth="400.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>CXLIV</p>
+    </cell>
+    <cell>
+     <p>CXCVI</p>
+    </cell>
+    <cell>
+     <p>CCLXII</p>
+    </cell>
+    <cell>
+     <p>CCCXXXIX</p>
+    </cell>
+    <cell>
+     <p>CCCLXXXIII</p>
+    </cell>
+    <cell>
+     <p>CCCXCI</p>
+    </cell>
+    <cell>
+     <p>CDXV</p>
+    </cell>
+    <cell>
+     <p>CDXLVII</p>
+    </cell>
+    <cell>
+     <p>CDXCVIII</p>
+    </cell>
+    <cell>
+     <p>D</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="r305.ass">
+   <description>
+    <p>Escriu amb numeració romana fins a 500</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Escribe con numeración romana</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="125.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>144</p>
+    </cell>
+    <cell>
+     <p>196</p>
+    </cell>
+    <cell>
+     <p>262</p>
+    </cell>
+    <cell>
+     <p>339</p>
+    </cell>
+    <cell>
+     <p>383</p>
+    </cell>
+    <cell>
+     <p>391</p>
+    </cell>
+    <cell>
+     <p>415</p>
+    </cell>
+    <cell>
+     <p>447</p>
+    </cell>
+    <cell>
+     <p>498</p>
+    </cell>
+    <cell>
+     <p>500</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="250.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="50" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>CXLIV</p>
+    </cell>
+    <cell>
+     <p>CXCVI</p>
+    </cell>
+    <cell>
+     <p>CCLXII</p>
+    </cell>
+    <cell>
+     <p>CCCXXXIX</p>
+    </cell>
+    <cell>
+     <p>CCCLXXXIII</p>
+    </cell>
+    <cell>
+     <p>CCCXCI</p>
+    </cell>
+    <cell>
+     <p>CDXV</p>
+    </cell>
+    <cell>
+     <p>CDXLVII</p>
+    </cell>
+    <cell>
+     <p>CDXCVIII</p>
+    </cell>
+    <cell>
+     <p>D</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="r306.ass">
+   <description>
+    <p>Escriu amb numeració romana fins a 500</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Escribe con cifras</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="250.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>CXLIV</p>
+    </cell>
+    <cell>
+     <p>CXCVI</p>
+    </cell>
+    <cell>
+     <p>CCLXII</p>
+    </cell>
+    <cell>
+     <p>CCCXXXIX</p>
+    </cell>
+    <cell>
+     <p>CCCLXXXIII</p>
+    </cell>
+    <cell>
+     <p>CCCXCI</p>
+    </cell>
+    <cell>
+     <p>CDXCVIII</p>
+    </cell>
+    <cell>
+     <p>D</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="250.0" cellHeight="200.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="50" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>144</p>
+    </cell>
+    <cell>
+     <p>196</p>
+    </cell>
+    <cell>
+     <p>262</p>
+    </cell>
+    <cell>
+     <p>339</p>
+    </cell>
+    <cell>
+     <p>383</p>
+    </cell>
+    <cell>
+     <p>391</p>
+    </cell>
+    <cell>
+     <p>498</p>
+    </cell>
+    <cell>
+     <p>500</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="r307.ass">
+   <description>
+    <p>Numeració romana fins a 1000</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Relaciona</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="2" cellWidth="200.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>514</p>
+    </cell>
+    <cell>
+     <p>626</p>
+    </cell>
+    <cell>
+     <p>732</p>
+    </cell>
+    <cell>
+     <p>841</p>
+    </cell>
+    <cell>
+     <p>953</p>
+    </cell>
+    <cell>
+     <p>969</p>
+    </cell>
+    <cell>
+     <p>777</p>
+    </cell>
+    <cell>
+     <p>588</p>
+    </cell>
+    <cell>
+     <p>695</p>
+    </cell>
+    <cell>
+     <p>1000</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="2" cellWidth="400.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>DXIV</p>
+    </cell>
+    <cell>
+     <p>DCXXVI</p>
+    </cell>
+    <cell>
+     <p>DCCXXXII</p>
+    </cell>
+    <cell>
+     <p>DCCCXLI</p>
+    </cell>
+    <cell>
+     <p>CMLIII</p>
+    </cell>
+    <cell>
+     <p>CMLXIX</p>
+    </cell>
+    <cell>
+     <p>DCCLXXVII</p>
+    </cell>
+    <cell>
+     <p>DLXXXVIII</p>
+    </cell>
+    <cell>
+     <p>DCXCV</p>
+    </cell>
+    <cell>
+     <p>M</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="r308.ass">
+   <description>
+    <p>Numeració romana fins a 1000</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Escribe con numeración romana</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="125.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>514</p>
+    </cell>
+    <cell>
+     <p>626</p>
+    </cell>
+    <cell>
+     <p>732</p>
+    </cell>
+    <cell>
+     <p>841</p>
+    </cell>
+    <cell>
+     <p>953</p>
+    </cell>
+    <cell>
+     <p>969</p>
+    </cell>
+    <cell>
+     <p>777</p>
+    </cell>
+    <cell>
+     <p>588</p>
+    </cell>
+    <cell>
+     <p>695</p>
+    </cell>
+    <cell>
+     <p>1000</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="250.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="50" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>DXIV</p>
+    </cell>
+    <cell>
+     <p>DCXXVI</p>
+    </cell>
+    <cell>
+     <p>DCCXXXII</p>
+    </cell>
+    <cell>
+     <p>DCCCXLI</p>
+    </cell>
+    <cell>
+     <p>CMLIII</p>
+    </cell>
+    <cell>
+     <p>CMLXIX</p>
+    </cell>
+    <cell>
+     <p>DCCLXXVII</p>
+    </cell>
+    <cell>
+     <p>DLXXXVIII</p>
+    </cell>
+    <cell>
+     <p>DCXCV</p>
+    </cell>
+    <cell>
+     <p>M</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="r309.ass">
+   <description>
+    <p>Numeració romana fins a 1000</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Escribe con cifras</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="250.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>DXIV</p>
+    </cell>
+    <cell>
+     <p>DCXXVI</p>
+    </cell>
+    <cell>
+     <p>DCCXXXII</p>
+    </cell>
+    <cell>
+     <p>DCCCXLI</p>
+    </cell>
+    <cell>
+     <p>CMLIII</p>
+    </cell>
+    <cell>
+     <p>DLXXXVIII</p>
+    </cell>
+    <cell>
+     <p>DCXCV</p>
+    </cell>
+    <cell>
+     <p>M</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="250.0" cellHeight="200.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="50" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>514</p>
+    </cell>
+    <cell>
+     <p>626</p>
+    </cell>
+    <cell>
+     <p>732</p>
+    </cell>
+    <cell>
+     <p>841</p>
+    </cell>
+    <cell>
+     <p>953</p>
+    </cell>
+    <cell>
+     <p>588</p>
+    </cell>
+    <cell>
+     <p>695</p>
+    </cell>
+    <cell>
+     <p>1000</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Identify" name="r310.ass">
+   <description>
+    <p>Localiza los errores</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Señala los errores</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x004040" border="true" />
+   </settings>
+   <cells rows="5" cols="3" cellWidth="205.0" cellHeight="50.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="5" />
+    <cell id="0">
+     <p>150 = CL</p>
+    </cell>
+    <cell id="1">
+     <p>200 = XX</p>
+    </cell>
+    <cell id="0">
+     <p>225 = CCXXV</p>
+    </cell>
+    <cell id="1">
+     <p>300 = CCLL</p>
+    </cell>
+    <cell id="0">
+     <p>330 = CCCXXX</p>
+    </cell>
+    <cell id="0">
+     <p>400 = CD</p>
+    </cell>
+    <cell id="1">
+     <p>464 = CDLXI</p>
+    </cell>
+    <cell id="1">
+     <p>500 = L</p>
+    </cell>
+    <cell id="0">
+     <p>573 = DLXXIII</p>
+    </cell>
+    <cell id="0">
+     <p>600 = DC</p>
+    </cell>
+    <cell id="0">
+     <p>616 = DCXVI</p>
+    </cell>
+    <cell id="1">
+     <p>700 = DLL</p>
+    </cell>
+    <cell id="0">
+     <p>791 = DCCXCI</p>
+    </cell>
+    <cell id="1">
+     <p>800 = DXXX</p>
+    </cell>
+    <cell id="0">
+     <p>900 = CM</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="r401.ass">
+   <description>
+    <p>Numeració romana. 0 -3999</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Relaciona</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="125.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>1000</p>
+    </cell>
+    <cell>
+     <p>2000</p>
+    </cell>
+    <cell>
+     <p>3000</p>
+    </cell>
+    <cell>
+     <p>1500</p>
+    </cell>
+    <cell>
+     <p>2500</p>
+    </cell>
+    <cell>
+     <p>3500</p>
+    </cell>
+    <cell>
+     <p>1200</p>
+    </cell>
+    <cell>
+     <p>2400</p>
+    </cell>
+    <cell>
+     <p>3900</p>
+    </cell>
+    <cell>
+     <p>1800</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="125.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>M</p>
+    </cell>
+    <cell>
+     <p>MM</p>
+    </cell>
+    <cell>
+     <p>MMM</p>
+    </cell>
+    <cell>
+     <p>MD</p>
+    </cell>
+    <cell>
+     <p>MMD</p>
+    </cell>
+    <cell>
+     <p>MMMD</p>
+    </cell>
+    <cell>
+     <p>MCC</p>
+    </cell>
+    <cell>
+     <p>MMCD</p>
+    </cell>
+    <cell>
+     <p>MMMCM</p>
+    </cell>
+    <cell>
+     <p>MDCCC</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="r402.ass">
+   <description>
+    <p>Escriu numeració romana</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Escribe con numeración romana</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="250.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>1000</p>
+    </cell>
+    <cell>
+     <p>2000</p>
+    </cell>
+    <cell>
+     <p>3000</p>
+    </cell>
+    <cell>
+     <p>1500</p>
+    </cell>
+    <cell>
+     <p>2500</p>
+    </cell>
+    <cell>
+     <p>3500</p>
+    </cell>
+    <cell>
+     <p>1200</p>
+    </cell>
+    <cell>
+     <p>2400</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="250.0" cellHeight="200.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="50" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>M</p>
+    </cell>
+    <cell>
+     <p>MM</p>
+    </cell>
+    <cell>
+     <p>MMM</p>
+    </cell>
+    <cell>
+     <p>MD</p>
+    </cell>
+    <cell>
+     <p>MMD</p>
+    </cell>
+    <cell>
+     <p>MMMD</p>
+    </cell>
+    <cell>
+     <p>MCC</p>
+    </cell>
+    <cell>
+     <p>MMCD</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="r403.ass">
+   <description>
+    <p>Escriu el valor de les desenes amb xifres</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Escribe con cifras</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="250.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>M</p>
+    </cell>
+    <cell>
+     <p>MM</p>
+    </cell>
+    <cell>
+     <p>MMM</p>
+    </cell>
+    <cell>
+     <p>MD</p>
+    </cell>
+    <cell>
+     <p>MMD</p>
+    </cell>
+    <cell>
+     <p>MMMD</p>
+    </cell>
+    <cell>
+     <p>MCC</p>
+    </cell>
+    <cell>
+     <p>MMCD</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="250.0" cellHeight="200.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="50" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>1000|1.000</p>
+    </cell>
+    <cell>
+     <p>2000|2.000</p>
+    </cell>
+    <cell>
+     <p>3000|3.000</p>
+    </cell>
+    <cell>
+     <p>1500|1.500</p>
+    </cell>
+    <cell>
+     <p>2500|2.500</p>
+    </cell>
+    <cell>
+     <p>3500|3.500</p>
+    </cell>
+    <cell>
+     <p>1200|1.200</p>
+    </cell>
+    <cell>
+     <p>2400|2.400</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="r404.ass">
+   <description>
+    <p>Numeració romana fins a 3999</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Relaciona</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="2" cellWidth="200.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>1174</p>
+    </cell>
+    <cell>
+     <p>1465</p>
+    </cell>
+    <cell>
+     <p>2004</p>
+    </cell>
+    <cell>
+     <p>2852</p>
+    </cell>
+    <cell>
+     <p>3015</p>
+    </cell>
+    <cell>
+     <p>3999</p>
+    </cell>
+    <cell>
+     <p>1643</p>
+    </cell>
+    <cell>
+     <p>1781</p>
+    </cell>
+    <cell>
+     <p>2218</p>
+    </cell>
+    <cell>
+     <p>3501</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="2" cellWidth="400.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>MCLXXIV</p>
+    </cell>
+    <cell>
+     <p>MCDLXV</p>
+    </cell>
+    <cell>
+     <p>MMIV</p>
+    </cell>
+    <cell>
+     <p>MMDCCCLII</p>
+    </cell>
+    <cell>
+     <p>MMMXV</p>
+    </cell>
+    <cell>
+     <p>MMMCMXCIX</p>
+    </cell>
+    <cell>
+     <p>MDCXLIII</p>
+    </cell>
+    <cell>
+     <p>MDCCLXXXI</p>
+    </cell>
+    <cell>
+     <p>MMCCXVIII</p>
+    </cell>
+    <cell>
+     <p>MMMDI</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="r405.ass">
+   <description>
+    <p>Escriu amb numeració romana fins a 3999</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Escribe con numeración romana</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="250.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>2004</p>
+    </cell>
+    <cell>
+     <p>2852</p>
+    </cell>
+    <cell>
+     <p>3015</p>
+    </cell>
+    <cell>
+     <p>3999</p>
+    </cell>
+    <cell>
+     <p>1643</p>
+    </cell>
+    <cell>
+     <p>1781</p>
+    </cell>
+    <cell>
+     <p>2520</p>
+    </cell>
+    <cell>
+     <p>3244</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="250.0" cellHeight="200.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="50" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>MMIV</p>
+    </cell>
+    <cell>
+     <p>MMDCCCLII</p>
+    </cell>
+    <cell>
+     <p>MMMXV</p>
+    </cell>
+    <cell>
+     <p>MMMCMXCIX</p>
+    </cell>
+    <cell>
+     <p>MDCXLIII</p>
+    </cell>
+    <cell>
+     <p>MDCCLXXXI</p>
+    </cell>
+    <cell>
+     <p>MMDXX</p>
+    </cell>
+    <cell>
+     <p>MMMCCXLIV</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="r406.ass">
+   <description>
+    <p>Escriu amb numeració romana fins a 500</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Escribe con cifras</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="2" cellWidth="250.0" cellHeight="75.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <p>MCLXXIV</p>
+    </cell>
+    <cell>
+     <p>MCDLXV</p>
+    </cell>
+    <cell>
+     <p>MMIV</p>
+    </cell>
+    <cell>
+     <p>MMDCCCLII</p>
+    </cell>
+    <cell>
+     <p>MMMXV</p>
+    </cell>
+    <cell>
+     <p>MMMCMXCIX</p>
+    </cell>
+    <cell>
+     <p>MDCXLIII</p>
+    </cell>
+    <cell>
+     <p>MMMCCXLIV</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="2" cellWidth="250.0" cellHeight="300.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="50" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <p>1174|1.174</p>
+    </cell>
+    <cell>
+     <p>1465|1.465</p>
+    </cell>
+    <cell>
+     <p>2004|2.004</p>
+    </cell>
+    <cell>
+     <p>2852|2.852</p>
+    </cell>
+    <cell>
+     <p>3015|3.015</p>
+    </cell>
+    <cell>
+     <p>3999|3.999</p>
+    </cell>
+    <cell>
+     <p>1643|1.643</p>
+    </cell>
+    <cell>
+     <p>3244|3.244</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="r407.ass">
+   <description>
+    <p>Numeració romana fins a 3999</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Relaciona</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="2" cellWidth="200.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>1919</p>
+    </cell>
+    <cell>
+     <p>1235</p>
+    </cell>
+    <cell>
+     <p>2090</p>
+    </cell>
+    <cell>
+     <p>2614</p>
+    </cell>
+    <cell>
+     <p>3004</p>
+    </cell>
+    <cell>
+     <p>3333</p>
+    </cell>
+    <cell>
+     <p>1116</p>
+    </cell>
+    <cell>
+     <p>2222</p>
+    </cell>
+    <cell>
+     <p>2989</p>
+    </cell>
+    <cell>
+     <p>1429</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="2" cellWidth="400.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>MCMXIX</p>
+    </cell>
+    <cell>
+     <p>MCCXXXV</p>
+    </cell>
+    <cell>
+     <p>MMXC</p>
+    </cell>
+    <cell>
+     <p>MMDCXIV</p>
+    </cell>
+    <cell>
+     <p>MMMIV</p>
+    </cell>
+    <cell>
+     <p>MMMCCCXXXIII</p>
+    </cell>
+    <cell>
+     <p>MCXVI</p>
+    </cell>
+    <cell>
+     <p>MMCCXXII</p>
+    </cell>
+    <cell>
+     <p>MMCMLXXXIX</p>
+    </cell>
+    <cell>
+     <p>MCDXXIX</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="r408.ass">
+   <description>
+    <p>Numeració romana fins a 3999</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Escribe con numeración romana</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="250.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>1919</p>
+    </cell>
+    <cell>
+     <p>2614</p>
+    </cell>
+    <cell>
+     <p>3004</p>
+    </cell>
+    <cell>
+     <p>3333</p>
+    </cell>
+    <cell>
+     <p>1116</p>
+    </cell>
+    <cell>
+     <p>2222</p>
+    </cell>
+    <cell>
+     <p>2989</p>
+    </cell>
+    <cell>
+     <p>1429</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="250.0" cellHeight="200.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="50" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>MCMXIX</p>
+    </cell>
+    <cell>
+     <p>MMDCXIV</p>
+    </cell>
+    <cell>
+     <p>MMMIV</p>
+    </cell>
+    <cell>
+     <p>MMMCCCXXXIII</p>
+    </cell>
+    <cell>
+     <p>MCXVI</p>
+    </cell>
+    <cell>
+     <p>MMCCXXII</p>
+    </cell>
+    <cell>
+     <p>MMCMLXXXIX</p>
+    </cell>
+    <cell>
+     <p>MCDXXIX</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="r409.ass">
+   <description>
+    <p>Numeració romana fins a 3999</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Escribe con cifras</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="2" cellWidth="250.0" cellHeight="75.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008080" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <p>MCMXIX</p>
+    </cell>
+    <cell>
+     <p>MCCXXXV</p>
+    </cell>
+    <cell>
+     <p>MMXC</p>
+    </cell>
+    <cell>
+     <p>MMDCXIV</p>
+    </cell>
+    <cell>
+     <p>MMMIV</p>
+    </cell>
+    <cell>
+     <p>MMMCCCXXXIII</p>
+    </cell>
+    <cell>
+     <p>MCXVI</p>
+    </cell>
+    <cell>
+     <p>MMCCXXII</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="2" cellWidth="250.0" cellHeight="300.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="50" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <p>1919|1.919</p>
+    </cell>
+    <cell>
+     <p>1235|1.235</p>
+    </cell>
+    <cell>
+     <p>2090|2.090</p>
+    </cell>
+    <cell>
+     <p>2614|2.614</p>
+    </cell>
+    <cell>
+     <p>3004|3.004</p>
+    </cell>
+    <cell>
+     <p>3333|3.333</p>
+    </cell>
+    <cell>
+     <p>1116|1.116</p>
+    </cell>
+    <cell>
+     <p>2222|2.222</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Identify" name="r410.ass">
+   <description>
+    <p>Localiza los errores</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>Señala los errores</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <font family="Arial" size="16" bold="true" />
+      <color foreground="0xFFFFFF" background="0x004000" shadow="0x000000" inactive="0x000000" alternative="0x000000" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x004040" border="true" />
+   </settings>
+   <cells rows="6" cols="2" cellWidth="300.0" cellHeight="50.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color foreground="0xFFFFFF" background="0x008040" inactive="0x004040" alternative="0x004040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="6" />
+    <cell id="0">
+     <p>1051 = MLI</p>
+    </cell>
+    <cell id="1">
+     <p>1400 = MXC</p>
+    </cell>
+    <cell id="1">
+     <p>1733 = MDCCVVVIII</p>
+    </cell>
+    <cell id="0">
+     <p>1900 = MCM</p>
+    </cell>
+    <cell id="1">
+     <p>2010 = CCX</p>
+    </cell>
+    <cell id="1">
+     <p>2255 = MMCCL</p>
+    </cell>
+    <cell id="0">
+     <p>2500 = MMD</p>
+    </cell>
+    <cell id="1">
+     <p>2970 = MMXMLII</p>
+    </cell>
+    <cell id="0">
+     <p>3165 = MMMCLXV</p>
+    </cell>
+    <cell id="1">
+     <p>3300 = MMMXXX</p>
+    </cell>
+    <cell id="0">
+     <p>3600 = MMMDC</p>
+    </cell>
+    <cell id="1">
+     <p>3999 = MMMCMIX</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="cap.gif" file="cap.gif" animated="false" />
+  <media name="coliseum.gif" file="coliseum.gif" animated="false" />
+  <media name="nivell0.gif" file="nivell0.gif" animated="false" />
+  <media name="nivell0a.gif" file="nivell0a.gif" animated="false" />
+  <media name="nivell0b.gif" file="nivell0b.gif" animated="false" />
+  <media name="nivell0c.gif" file="nivell0c.gif" animated="false" />
+  <media name="nivell0d.gif" file="nivell0d.gif" animated="false" />
+  <media name="nivell0e.gif" file="nivell0e.gif" animated="false" />
+  <media name="nivell0f.gif" file="nivell0f.gif" animated="false" />
+  <media name="nivell1.gif" file="nivell1.gif" animated="false" />
+  <media name="nivell2.gif" file="nivell2.gif" animated="false" />
+  <media name="nivell3.gif" file="nivell3.gif" animated="false" />
+  <media name="nivell4.gif" file="nivell4.gif" animated="false" />
+  <media name="rellotge.gif" file="rellotge.gif" animated="false" />
+  <media name="arc.jpg" file="arc.jpg" />
+  <media name="merida.jpg" file="merida.jpg" />
+  <media name="segovia.jpg" file="segovia.jpg" />
+ </mediaBag>
+</JClicProject>
+

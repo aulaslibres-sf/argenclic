@@ -1,0 +1,1401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="frances" version="0.1.3">
+ <settings>
+  <title>Activités de Français</title>
+  <revision description="Creation of the package of activities using Clic 3.0" date="1/20/00" />
+  <revision description="Converted from Clic3 to JClic" date="5/8/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Julio Nieto" mail="jcnieto@mundivia.es" />
+  <language>french</language>
+  <description>
+   <p>French language activities.  The different exercises treat topics such as:  Grammar, vocabulary, text assembling, French culture and regions of France.</p>
+  </description>
+  <descriptors level="Secondary school">French language</descriptors>
+  <meta_langs>french</meta_langs>
+  <descriptions>
+   <description language="french">
+    <p>French language activities.  The different exercises treat topics such as:  Grammar, vocabulary, text assembling, French culture and regions of France.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="frances.pac" name="franctit.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="carte.puz" />
+  <item name="texte1.txa" />
+  <item name="texte2.txa" />
+  <item name="texte3.txa" />
+  <item name="zapatos.txa" />
+  <item name="carte.puz" />
+  <item name="franpuz1.puz" />
+  <item name="franse1.puz" />
+  <item name="frase2.puz" />
+  <item name="argument.puz" />
+  <item name="queneau.puz" />
+  <item name="hypote1.ass" />
+  <item name="hypote2.ass" />
+  <item name="actes.ass" />
+  <item name="france.ass" />
+  <item name="5sports.sop" />
+  <item name="semaine.crw">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@textGrid.WordSearch" name="5sports.sop">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Trouve le nom de 7 sports</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Parfait</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x8080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="18" columns="9" cellWidth="30.0" cellHeight="30.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>GYMNASTIQUE****N**</row>
+     <row>***************A**</row>
+     <row>****TENNIS*****T**</row>
+     <row>S**************A**</row>
+     <row>K**************T**</row>
+     <row>I**************I**</row>
+     <row>***FOOT-BALL***O**</row>
+     <row>***************N**</row>
+     <row>VOILE*********GOLF</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">GYMNASTIQUE</clue>
+    <clue id="1">TENNIS</clue>
+    <clue id="2">FOOT-BALL</clue>
+    <clue id="3">VOILE</clue>
+    <clue id="4">GOLF</clue>
+    <clue id="5">SKI</clue>
+    <clue id="6">NATATION</clue>
+   </clues>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="actes.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Mettez en rapport les phrases et les "Actes de paroles"</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>PARFAIT</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF0080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="7" cols="1" cellWidth="549.0" cellHeight="145.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell id="0">
+     <p>C'est combien, la cafétière?</p>
+    </cell>
+    <cell id="1">
+     <p>Cinquante francs.</p>
+    </cell>
+    <cell id="2">
+     <p>Mais si vous prenez le sucrier, je fais le tout à 60 F.</p>
+    </cell>
+    <cell id="2">
+     <p>trente francs pour les deux.</p>
+    </cell>
+    <cell id="2">
+     <p>Disons ...40F. le tout</p>
+    </cell>
+    <cell id="3">
+     <p>D'accord pour 40F</p>
+    </cell>
+    <cell id="2">
+     <p>Et en plus je vous donne le carton pour emballage</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="386.0" cellHeight="145.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>Demander une information</p>
+    </cell>
+    <cell>
+     <p>Donner une information</p>
+    </cell>
+    <cell>
+     <p>Faire un proposition</p>
+    </cell>
+    <cell>
+     <p>Accepter</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="argument.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="14" bold="true" />
+      <color background="0x80FFFF" />
+     </style>
+     <p>RECONSTRUISEZ LE TEXTE SUIVANT</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="14" bold="true" />
+      <color background="0x80FFFF" />
+     </style>
+     <p>TRÈS BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="2" cellWidth="180.0" cellHeight="115.0" border="true">
+    <style>
+     <font family="Arial" size="14" bold="true" />
+     <color background="0x80FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <p>SELON BEAUCOUP DE PERSONNES SERIEUSES, la situation de la lecture en France est préoccupante.</p>
+    </cell>
+    <cell>
+     <p>ELLES APPUIENT LEUR RÉFLEXION SUR CE PREMIER FAIT : les ventes des éditeurs ont fortement baissé ces dernières années.</p>
+    </cell>
+    <cell>
+     <p>DE MEME, ON NE PEUT LE NIER, de nombreuses librairies ferment, la fréquentation des bibliothèques publiques baisse.</p>
+    </cell>
+    <cell>
+     <p>POURTANT, SELON D'AUTRES, IL EXISTE QUELQUES RAISONS D'ESPÉRER : tout le monde ou presque sait lire de nos jours ;</p>
+    </cell>
+    <cell>
+     <p>de plus, des progrès concernant la diffusion des livres sur tout le erritoire se sont réalisés.</p>
+    </cell>
+    <cell>
+     <p>CEPENDANT, 58 % des Français ne lisent pas ou pratiquement pas : ils sont des non-lecteurs. </p>
+    </cell>
+    <cell>
+     <p>NUL NE PEUT EN DISCONVENIR, la concurrence de la télévision est une menace terrible, surtout pour la jeunesse. </p>
+    </cell>
+    <cell>
+     <p>C'EST POURQUOI, POUR MA PART, J'AURAIS TENDANCE A PENSER QUE malgré quelques lueurs d'espoir, le livre est loin de connaître le rayonnement qu'il mériterait.</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="carte.puz">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>CARTE DE FRANCE</p>
+    </cell>
+    <cell image="reussi.gif" type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x80FFFF">
+     <image name="beigecl.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="true" image="francia.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="france.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>RÉGIONS DE FRANCE</p>
+    </cell>
+    <cell image="reussi.gif" type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>Bretagne</p>
+    </cell>
+    <cell>
+     <p>Normandie</p>
+    </cell>
+    <cell>
+     <p>Alsace</p>
+    </cell>
+    <cell>
+     <p>Poitou</p>
+    </cell>
+    <cell>
+     <p>Auvergne</p>
+    </cell>
+    <cell>
+     <p>Savoie</p>
+    </cell>
+    <cell>
+     <p>Aquitaine</p>
+    </cell>
+    <cell>
+     <p>Languedoc</p>
+    </cell>
+    <cell>
+     <p>Provence</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="3" border="true" image="francia.gif" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="franctit.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x0080FF">
+     <image name="clicbe~1.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="actclic.gif">
+    <style>
+     <font family="Arial" size="53" bold="true" />
+     <color foreground="0xFFFFFF" background="0xFF8080" inactive="0x0000A0" alternative="0x0000A0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="franpuz1.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x004080" />
+     </style>
+     <p>REMETTEZ DANS L'ORDRE LE DIALOGUE ENTRE LE VOYAGEUR EL L'EMPLOYÉE</p>
+    </cell>
+    <cell image="g_nial.gif" type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x004080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x80FFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="7" cols="2" cellWidth="300.0" cellHeight="115.0" border="true">
+    <style>
+     <color foreground="0xFFFFFF" background="0x004080" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="7" />
+    <cell>
+     <p>LE VOYAGER:Madame, je voudrais un billet pour Génève.</p>
+    </cell>
+    <cell>
+     <p>L'EMPLOYÉE: Oui, vous partez quand?</p>
+    </cell>
+    <cell>
+     <p>V: Dimanche, si possible.</p>
+    </cell>
+    <cell>
+     <p>E: Oui, vous avez un avion á 16 heures. Et vous revenez quand?</p>
+    </cell>
+    <cell>
+     <p>V:Je ne sais pas, je verrai. Un billet aller seulement.</p>
+    </cell>
+    <cell>
+     <p>E: Très bien.</p>
+    </cell>
+    <cell>
+     <p>V: Ça coûte combien?</p>
+    </cell>
+    <cell>
+     <p>E: Mille deux cents.</p>
+    </cell>
+    <cell>
+     <p>V: Tenez , voilà.</p>
+    </cell>
+    <cell>
+     <p>E: Non, passez à la caisse.</p>
+    </cell>
+    <cell>
+     <p>V: Où ça?</p>
+    </cell>
+    <cell>
+     <p>E. Là à droite</p>
+    </cell>
+    <cell>
+     <p>V: Ah! Merci</p>
+    </cell>
+    <cell>
+     <p>E: Bon voyage!</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="franse1.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0xFF0080" />
+     </style>
+     <p>REMETTEZ DANS L'ORDRE cette phrase</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0xFF0080" />
+     </style>
+     <p>PARFAIT</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="10" cols="2" cellWidth="300.0" cellHeight="115.0" border="true">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0x004080" background="0x00FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="10" />
+    <cell>
+     <p>C'est</p>
+    </cell>
+    <cell>
+     <p>avec</p>
+    </cell>
+    <cell>
+     <p>quelque</p>
+    </cell>
+    <cell>
+     <p>étonnement</p>
+    </cell>
+    <cell>
+     <p>qu'on</p>
+    </cell>
+    <cell>
+     <p>remarquait</p>
+    </cell>
+    <cell>
+     <p>accroché </p>
+    </cell>
+    <cell>
+     <p>à </p>
+    </cell>
+    <cell>
+     <p>la</p>
+    </cell>
+    <cell>
+     <p>porte</p>
+    </cell>
+    <cell>
+     <p>de </p>
+    </cell>
+    <cell>
+     <p>ce</p>
+    </cell>
+    <cell>
+     <p>caveau</p>
+    </cell>
+    <cell>
+     <p>funéraire</p>
+    </cell>
+    <cell>
+     <p>l'écriteau:</p>
+    </cell>
+    <cell>
+     <p>"JE</p>
+    </cell>
+    <cell>
+     <p>REVIENS</p>
+    </cell>
+    <cell>
+     <p>DANS</p>
+    </cell>
+    <cell>
+     <p>UN </p>
+    </cell>
+    <cell>
+     <p>INSTANT".</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="frase2.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0xFF0080" />
+     </style>
+     <p>REMETTEZ DANS L'ORDRE cette phrase</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0xFF0080" />
+     </style>
+     <p>PARFAIT</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="10" cols="1" cellWidth="300.0" cellHeight="115.0" border="true">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0x004080" background="0x00FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="10" />
+    <cell>
+     <p>La </p>
+    </cell>
+    <cell>
+     <p>publicité</p>
+    </cell>
+    <cell>
+     <p>est</p>
+    </cell>
+    <cell>
+     <p>un </p>
+    </cell>
+    <cell>
+     <p>phénomène</p>
+    </cell>
+    <cell>
+     <p>propre</p>
+    </cell>
+    <cell>
+     <p>aux</p>
+    </cell>
+    <cell>
+     <p>sociétés</p>
+    </cell>
+    <cell>
+     <p>de </p>
+    </cell>
+    <cell>
+     <p>consommation.</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="hypote1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x80FFFF" />
+     </style>
+     <p>COMPLÉTEZ LES PHRASES SUIVANTES, EN UTILISANT LA FORME VERBALE QUI CONVIENT</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x80FFFF" />
+     </style>
+     <p>PARFAIT</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF0080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="145.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>Si tu prenais le métro tous les jours</p>
+    </cell>
+    <cell>
+     <p>Si Pierre pouvait acheter cette voiture de luxe</p>
+    </cell>
+    <cell>
+     <p>S'il appreneait à nager</p>
+    </cell>
+    <cell>
+     <p>Si tu déjeunais tous les jours dans ce restaurant</p>
+    </cell>
+    <cell>
+     <p>S'il allait en Colombie</p>
+    </cell>
+    <cell>
+     <p>Si vous fumiez moins</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="145.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>tu ferais une sérieuse économie</p>
+    </cell>
+    <cell>
+     <p>il réaliserait son rêve</p>
+    </cell>
+    <cell>
+     <p>il irait seul à la piscine</p>
+    </cell>
+    <cell>
+     <p>tu finirais para voir des brûlures d'estomac</p>
+    </cell>
+    <cell>
+     <p>il acheterait une émeraude</p>
+    </cell>
+    <cell>
+     <p>vous ne tousseriez pas de cette façon</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="hypote2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>COMPLÉTEZ LES PHRASES SUIVANTES, EN UTILISANT LA FORME VERBALE QUI CONVIENT</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>PARFAIT</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF0080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="145.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>Si tu.............. le métro tous les jours, tu ferais une sérieuse économie. (prendre)</p>
+    </cell>
+    <cell>
+     <p>Si Pierre ............... acheter cette voiture de luxe, il réaliserait son rêve.(pouvoir)</p>
+    </cell>
+    <cell>
+     <p>S'il .................... à nager, il irait seul à la piscine.(apprendre)</p>
+    </cell>
+    <cell>
+     <p>Si tu  ..................  tous les jours dans ce restaurant,tu finirais para voir des brûlures d'estomac. (déjeuner)</p>
+    </cell>
+    <cell>
+     <p>S'il ................  en Colombie,,il acheterait une émeraude. (aller)</p>
+    </cell>
+    <cell>
+     <p>Si vous  .............. moins,vous ne tousseriez pas de cette façon.(fumer)</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="145.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>prenais</p>
+    </cell>
+    <cell>
+     <p>pouvait</p>
+    </cell>
+    <cell>
+     <p>apprenait</p>
+    </cell>
+    <cell>
+     <p>déjeunais</p>
+    </cell>
+    <cell>
+     <p>allait</p>
+    </cell>
+    <cell>
+     <p>fumiez</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="145.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>Si tu prenais le métro tous les jours,tu ferais une sérieuse économie</p>
+    </cell>
+    <cell>
+     <p>Si Pierre pouvais acheter cette voiture de luxe, il réaliserait son rêve</p>
+    </cell>
+    <cell>
+     <p>S'il apprenait. à nager, il irait seul à la piscine</p>
+    </cell>
+    <cell>
+     <p>Si tu déjeunais  tous les jours dans ce restaurant,tu finirais para voir des brûlures d'estomac</p>
+    </cell>
+    <cell>
+     <p>S'il allait  en Colombieil acheterait une émeraude</p>
+    </cell>
+    <cell>
+     <p>Si vous  fumiez moins,vous ne tousseriez pas de cette façon</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="queneau.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="14" bold="true" />
+      <color background="0x80FFFF" />
+     </style>
+     <p>QUENEAU: (Pour faire un poème)</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="14" bold="true" />
+      <color background="0x80FFFF" />
+     </style>
+     <p>TRÈS BIEN</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x0080FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="6" cols="2" cellWidth="180.0" cellHeight="115.0" border="true">
+    <style>
+     <font family="Arial" size="14" bold="true" />
+     <color background="0x80FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="6" />
+    <cell>
+     <p>Prenez un mot, prenez-en deux</p>
+    </cell>
+    <cell>
+     <p>faites-les cuir' comme des oeufs</p>
+    </cell>
+    <cell>
+     <p>prenez un petit bout de sens</p>
+    </cell>
+    <cell>
+     <p>puis un grand morceau d'innocence</p>
+    </cell>
+    <cell>
+     <p>faites chauffer au petit feu</p>
+    </cell>
+    <cell>
+     <p>au petit feu de la technique</p>
+    </cell>
+    <cell>
+     <p>versez la sauce énigmatique</p>
+    </cell>
+    <cell>
+     <p>soupoudrez de quelques étoiles</p>
+    </cell>
+    <cell>
+     <p>poivrez et puis mettez des voiles</p>
+    </cell>
+    <cell>
+     <p>où voulez-vous donc en venir?</p>
+    </cell>
+    <cell>
+     <p>À écrire.</p>
+    </cell>
+    <cell>
+     <p>Vraiment? à écrire?</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.CrossWord" name="semaine.crw">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Les jours, les heures...</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>FÉLICITATONS, tu as réussi!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF8080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="12" columns="10" cellWidth="30.0" cellHeight="30.0" border="true">
+    <style>
+     <font family="Arial" size="26" bold="true" />
+     <color background="0x80FFFF" />
+    </style>
+    <text>
+     <row>*SAMEDI*****</row>
+     <row>*E*A********</row>
+     <row>*MERCREDI***</row>
+     <row>*A*D***I****</row>
+     <row>MIDI***MOIS*</row>
+     <row>*N*****A****</row>
+     <row>JEUDI*AN*J**</row>
+     <row>*******C*O**</row>
+     <row>*******HEURE</row>
+     <row>*******E*R**</row>
+    </text>
+   </textGrid>
+   <cells rows="10" cols="1" cellWidth="200.0" cellHeight="75.0" border="false" id="acrossClues">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <cell id="0" item="0">
+     <p>Le... est la fin de la semaine</p>
+    </cell>
+    <cell id="1" item="0">
+     <p>Voyelle</p>
+    </cell>
+    <cell id="1" item="1">
+     <p> voyelle</p>
+    </cell>
+    <cell id="2" item="0">
+     <p>Les jeunes Français ne vont pas au collège l'apres-midi du</p>
+    </cell>
+    <cell id="3" item="0">
+     <p>voy.</p>
+    </cell>
+    <cell id="3" item="1">
+     <p>consonne.</p>
+    </cell>
+    <cell id="3" item="2">
+     <p>voy.</p>
+    </cell>
+    <cell id="4" item="0">
+     <p>Il est... (12 heures)</p>
+    </cell>
+    <cell id="4" item="1">
+     <p> il a 30 ou 31 jours.</p>
+    </cell>
+    <cell id="5" item="0">
+     <p>Cons.</p>
+    </cell>
+    <cell id="5" item="1">
+     <p> voy.</p>
+    </cell>
+    <cell id="6" item="0">
+     <p>Après mercredi et avant vendredi</p>
+    </cell>
+    <cell id="6" item="1">
+     <p> il a 12 mois</p>
+    </cell>
+    <cell id="6" item="2">
+     <p> cons.</p>
+    </cell>
+    <cell id="7" item="0">
+     <p>cons.</p>
+    </cell>
+    <cell id="7" item="1">
+     <p> voy.</p>
+    </cell>
+    <cell id="8" item="0">
+     <p>Il est une...</p>
+    </cell>
+    <cell id="9" item="0">
+     <p>voy</p>
+    </cell>
+    <cell id="9" item="1">
+     <p> con.</p>
+    </cell>
+   </cells>
+   <cells rows="12" cols="1" cellWidth="200.0" cellHeight="75.0" border="false" id="downClues">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <cell id="0" item="0">
+     <p>consonne</p>
+    </cell>
+    <cell id="0" item="1">
+     <p> cons</p>
+    </cell>
+    <cell id="1" item="0">
+     <p>Elle a 7 jours</p>
+    </cell>
+    <cell id="2" item="0">
+     <p>voy.</p>
+    </cell>
+    <cell id="2" item="1">
+     <p> voy.</p>
+    </cell>
+    <cell id="2" item="2">
+     <p> cons. </p>
+    </cell>
+    <cell id="2" item="3">
+     <p> voy.</p>
+    </cell>
+    <cell id="3" item="0">
+     <p>Le deuxième jour de la semaine</p>
+    </cell>
+    <cell id="3" item="1">
+     <p> cons.</p>
+    </cell>
+    <cell id="4" item="0">
+     <p>voy.</p>
+    </cell>
+    <cell id="4" item="1">
+     <p> cons.</p>
+    </cell>
+    <cell id="4" item="2">
+     <p> voy.</p>
+    </cell>
+    <cell id="5" item="0">
+     <p>cons.</p>
+    </cell>
+    <cell id="5" item="1">
+     <p>cons.</p>
+    </cell>
+    <cell id="6" item="0">
+     <p>voy.</p>
+    </cell>
+    <cell id="6" item="1">
+     <p> voy</p>
+    </cell>
+    <cell id="6" item="2">
+     <p> voy</p>
+    </cell>
+    <cell id="7" item="0">
+     <p>On ne travaille pas le...</p>
+    </cell>
+    <cell id="8" item="0">
+     <p>voy.</p>
+    </cell>
+    <cell id="8" item="1">
+     <p> voy.</p>
+    </cell>
+    <cell id="8" item="2">
+     <p> voy</p>
+    </cell>
+    <cell id="9" item="0">
+     <p>voy.</p>
+    </cell>
+    <cell id="9" item="1">
+     <p> Un... a 24 heures</p>
+    </cell>
+    <cell id="10" item="0">
+     <p>cons.</p>
+    </cell>
+    <cell id="10" item="1">
+     <p> cons.</p>
+    </cell>
+    <cell id="11" item="0">
+     <p>voy</p>
+    </cell>
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="texte1.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x80FFFF" />
+     </style>
+     <p>Complétez le texte suivant</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x80FFFF" />
+     </style>
+     <p>Formidable!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0000A0">
+     <image name="beigecl.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" size="17" italic="false" foreground="0x000000" background="0xFFFFFF" bold="false" family="Arial" tabWidth="16" />
+    <style name="target" base="default" foreground="0x0000FF" background="0xFFFFFF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <cell hAlign="left" width="340" height="30" border="true">
+       <style>
+        <font family="Arial" size="21" bold="true" />
+        <color foreground="0xFFFFFF" background="0x800040" />
+       </style>
+       <p>Qu'est-ce qu'ils font?</p>
+      </cell>
+     </p>
+     <p />
+     <p />
+     <p>
+      <text>Les cinq </text>
+      <target>
+       <answer>copains</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <info>
+        <cell hAlign="left" width="112" height="26">
+         <style>
+          <color background="0xFFFFFF" />
+         </style>
+         <p>camarades</p>
+        </cell>
+       </info>
+       <text>copains</text>
+      </target>
+      <text> de " Bande FM" sont </text>
+      <target>
+       <answer>chez</answer>
+       <optionList>
+        <option>entre</option>
+        <option>chez</option>
+        <option>dans la maison</option>
+       </optionList>
+       <text>chez</text>
+      </target>
+      <text> Coralie. Le professeur de danse de Coralie est </text>
+      <target>
+       <answer>d'accord</answer>
+       <optionList>
+        <option>fort</option>
+        <option>d'accord</option>
+        <option>assis</option>
+       </optionList>
+       <text>d'accord</text>
+      </target>
+      <text>; son </text>
+      <target>
+       <answer>cours</answer>
+       <optionList>
+        <option>classe</option>
+        <option>cours</option>
+        <option>sport</option>
+       </optionList>
+       <text>cours</text>
+      </target>
+      <text> est le jeudi soir. Karim </text>
+      <target>
+       <answer>arrête</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <info>
+        <cell width="96" height="36">
+         <style>
+          <color background="0xFFFFFF" />
+         </style>
+         <p>arrêter</p>
+        </cell>
+       </info>
+       <text>arrête</text>
+      </target>
+      <text> le foot et Olivier ne fait plus de tennis le samedi. Mais tout </text>
+      <target>
+       <answer>dépend</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <info>
+        <cell hAlign="left" width="140" height="100">
+         <style>
+          <color background="0xFFFFFF" />
+         </style>
+         <p>dépendre</p>
+        </cell>
+       </info>
+       <text>dépend</text>
+      </target>
+      <text> du père de Mathieu. Aujourd'hui, qu'est-ce qu'ils</text>
+      <target>
+       <answer> font</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <info>
+        <cell hAlign="left" width="50" height="23">
+         <style>
+          <color background="0xFFFFFF" />
+         </style>
+         <p>Faire</p>
+        </cell>
+       </info>
+       <text> font</text>
+      </target>
+      <text>? Olivier regarde le </text>
+      <target>
+       <answer>programme</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <text>programme</text>
+      </target>
+      <text> de télévison. Coralie </text>
+      <target>
+       <answer>a envie</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <info>
+        <cell width="140" height="24">
+         <style>
+          <color background="0xFFFFFF" />
+         </style>
+         <p>avoir envie</p>
+        </cell>
+       </info>
+       <text>a envie</text>
+      </target>
+      <text> d'aller au cinéma.</text>
+     </p>
+     <p />
+     <p>
+      <cell hAlign="left" width="360" height="30" border="true">
+       <style>
+        <font family="Arial" size="21" bold="true" />
+        <color foreground="0xFFFFFF" background="0x800040" />
+       </style>
+       <p>Rythmes jeunes Lec. 21</p>
+      </cell>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.Identify" name="texte2.txa" type="identifyWords">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0xFF0080" />
+     </style>
+     <p>Signalez les formes de passé simple qui apparaissent dans le texte</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0xFF0080" />
+     </style>
+     <p>Parfait</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF0080">
+     <image name="beigecl.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" size="17" italic="false" foreground="0x000000" background="0x00FFFF" bold="false" family="Arial" tabWidth="16" />
+    <style name="target" base="default" foreground="0x0000FF" background="0xC0C0C0" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <cell hAlign="left" width="204" height="30" border="true">
+       <style shadow="true">
+        <font family="Arial" size="20" bold="true" />
+        <color foreground="0xFFFFFF" background="0x800080" />
+       </style>
+       <p>PASSÉ SIMPLE</p>
+      </cell>
+     </p>
+     <p />
+     <p>
+      <text>L'avion était sur la piste.</text>
+     </p>
+     <p>
+      <text>Le passage </text>
+      <target>descendit</target>
+      <text> de l'avion.</text>
+     </p>
+     <p>
+      <text>Il </text>
+      <target>entra</target>
+      <text> dans l'aéroport avec les autres passagers.</text>
+     </p>
+     <p>
+      <text>André et Claire l'attendaient dans le hall.</text>
+     </p>
+     <p>
+      <text>Il </text>
+      <target>sortit</target>
+      <text> de l'aéroport.</text>
+     </p>
+     <p>
+      <text>Il </text>
+      <target>monta</target>
+      <text> dans un taxi.</text>
+     </p>
+     <p>
+      <text>Il était 9 heures quand il </text>
+      <target>arriva</target>
+      <text> à l'hôtel</text>
+     </p>
+     <p>
+      <text>Il </text>
+      <target>fit</target>
+      <text> très beau avant-hier:je me </text>
+      <target>levai</target>
+      <text> tôt</text>
+     </p>
+     <p />
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.Order" name="texte3.txa" type="orderWords" amongParagraphs="true">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>METTEZ LES MOTS À LEUR PLACE</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>PARFAIT</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="beigecl.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" size="13" italic="false" foreground="0x000000" background="0xFFFFFF" bold="true" family="Arial" tabWidth="16" />
+    <style name="target" base="default" foreground="0x0000FF" background="0xFFFFFF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <cell hAlign="left" width="304" height="29" border="true">
+       <style>
+        <font family="Arial" size="27" bold="true" />
+        <color foreground="0xFFFFFF" background="0x8080FF" />
+       </style>
+       <p>LA PAIRE DE CHAUSSURES</p>
+      </cell>
+     </p>
+     <p />
+     <p>
+      <text>Il était une fois une paire de </text>
+      <target>chaussures</target>
+      <text> qui étaient </text>
+      <target>mariées</target>
+      <text> ensemble. La chaussure droite, qui était le monsieur,s'appelait </text>
+      <target>Nicolas</target>
+      <text>, et la chaussure gauche, qui était la dame, s'appelait </text>
+      <target>Tina</target>
+      <text>.</text>
+     </p>
+     <p>
+      <text>Elles </text>
+      <target>habitaient</target>
+      <text> une belle boîte en carton où elles étaient roulées dans du </text>
+      <target>papier</target>
+      <text> de soie. Elles s'y trouvaient parfaitement heureuses, et elles espéraient bien que ça durerait </text>
+      <target>toujours</target>
+      <text>.</text>
+     </p>
+     <p>
+      <text>Mais voilà qu'un beau matin une vendeuse les sortit de leur boîte afin de les </text>
+      <target>essayer</target>
+      <text> à une dame. La dame les mit, fit quelques pas avec, puis, voyant qu'elles lui allaient bien, elle dit:</text>
+     </p>
+     <p>
+      <text>- Je les achète.</text>
+     </p>
+     <p>
+      <text>- Faut-il vous les envelopper? </text>
+      <target>demanda</target>
+      <text> la vendeuse.</text>
+     </p>
+     <p>
+      <text>- Inutile dit la dame. Je rentre avec.</text>
+     </p>
+     <p>
+      <text>Elle paya et sortit, avec les chaussures </text>
+      <target>neuves</target>
+      <text> aux pieds</text>
+     </p>
+     <p />
+     <p>
+      <text>PIERRE GRIPARI</text>
+     </p>
+     <p />
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@text.Order" name="zapatos.txa" type="orderParagraphs">
+   <messages>
+    <cell type="previous">
+     <style />
+     <p>Lis le texte, puis fais clic sur l'écran et mets en ordre les paragraphes</p>
+    </cell>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Parfait!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF0080">
+     <image name="beigecl.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="700" height="420" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <prevScreen maxTime="30" />
+   <document>
+    <style name="default" size="10" italic="false" foreground="0x0000A0" background="0xFFFFFF" bold="false" family="Arial" tabWidth="16" />
+    <style name="target" base="default" foreground="0x400040" background="0xFFFFFF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <cell hAlign="left" width="231" height="45" border="true">
+       <style shadow="true">
+        <font family="Arial" size="20" />
+        <color foreground="0xFFFFFF" background="0x0080FF" />
+       </style>
+       <p>LA PAIRE DE CHAUSSURES</p>
+      </cell>
+     </p>
+     <p />
+     <p>
+      <text>Il était une fois une paire de chaussures qui étaient mariées ensemble.</text>
+     </p>
+     <p />
+     <p>
+      <target>La chaussure droite, qui était le monsieur,s'appelait Nicolas, et la chaussure gauche, qui était la dame, s'appelait Tina.</target>
+     </p>
+     <p />
+     <p>
+      <target>Elles habitaient une belle boîte en carton où elles étaient roulées dans du papier de soie. </target>
+     </p>
+     <p />
+     <p>
+      <target>Elles s'y trouvaient parfaitement heureuses, et elles espéraient bien que ça durerait toujours.</target>
+     </p>
+     <p />
+     <p>
+      <target>Mais voilà qu'un beau matin une vendeuse les sortit de leur boîte afin de les essayer à une dame. La dame les mit, fit quelques pas avec, puis, voyant qu'elles lui allaient bien, elle dit:</target>
+     </p>
+     <p />
+     <p>
+      <target>- Je les achète.</target>
+     </p>
+     <p />
+     <p>
+      <target>- Faut-il vous les envelopper? demanda la vendeuse.</target>
+     </p>
+     <p />
+     <p>
+      <target>- Inutile dit la dame. Je rentre avec.</target>
+     </p>
+     <p />
+     <p>
+      <target>Elle paya et sortit, avec les chaussures neuves aux pieds</target>
+     </p>
+     <p />
+     <p />
+     <p>
+      <target>PIERRE GRIPARI</target>
+     </p>
+     <p />
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="actclic.gif" file="actclic.gif" animated="false" />
+  <media name="beigecl.gif" file="beigecl.gif" animated="false" />
+  <media name="clicbe~1.gif" file="clicbe_1.gif" animated="false" />
+  <media name="francia.gif" file="francia.gif" animated="false" />
+  <media name="g_nial.gif" file="g_nial.gif" animated="false" />
+  <media name="reussi.gif" file="reussi.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="intrfrac" version="0.1.3">
+ <settings>
+  <title>Introducción a las fracciones</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="10/6/05" />
+  <revision description="Conversión de Clic3 a JClic" date="11/15/05">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="José Ignacio Leiva" mail="jileiva@vtr.net" />
+  <organization name="Mackay School" mail="info@mackay.cl" url="http://www.mackay.cl/" city="Viña del mar" country="Chile" />
+  <language>es</language>
+  <description>
+   <p>Paquete con ejemplos, definiciones y ejercicios de fracciones para repasar o introducir al alumno en las fracciones.</p>
+  </description>
+  <descriptors area-codes="mat" level-codes="PRI">fracciones</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Paquete con ejemplos, definiciones y ejercicios de fracciones para repasar o introducir al alumno en las fracciones.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="intrfrac.pac" name="intro.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="rom1.puz" />
+  <item name="info1.ass" />
+  <item name="act1.ass" />
+  <item name="sop1.sop" />
+  <item name="res1.ass" />
+  <item name="info2.ass" />
+  <item name="info3.ass" />
+  <item name="res2.ass" />
+  <item name="res3.ass" />
+  <item name="res5.ass" />
+  <item name="res6.ass" />
+  <item name="res7.ass" />
+  <item name="sop2.sop" />
+  <item name="puzz2.puz" />
+  <item name="infoul.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.SimpleAssociation" name="act1.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Asocia la imágen con cada fracción</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCC99" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="im1.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <cells rows="2" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>5/8</p>
+    </cell>
+    <cell>
+     <p>3/8</p>
+    </cell>
+    <cell>
+     <p>6/8</p>
+    </cell>
+    <cell>
+     <p>4/8 </p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>5/8</p>
+    </cell>
+    <cell>
+     <p>3/8</p>
+    </cell>
+    <cell>
+     <p>6/8</p>
+    </cell>
+    <cell>
+     <p>4/8 </p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="info1.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Lee la información</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCC99" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="4" border="false" image="im2.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="info2.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Lee la información.</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCC99" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="4" border="false" image="imin4.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="info3.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Sigue leyendo.</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCC99" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="4" border="false" image="info3.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="infoul.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>¡Chao!</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCC99" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="im6.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="intro.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>¡Bienvenido!</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFCC">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCC99" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="intro.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="puzz2.puz" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Arma el puzzle.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCC99" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="im6.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="res1.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Escribe la fracción que corresponde a cada dibujo.Ej:3/4.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Qué bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCC99" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="im5.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <ids>0 1 2 3</ids>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <p>2/4</p>
+    </cell>
+    <cell>
+     <p>3/4</p>
+    </cell>
+    <cell>
+     <p>7/8</p>
+    </cell>
+    <cell>
+     <p>6/8</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="res2.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Escribe si es propia o impropia.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCC99" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0">
+     <p>1/2  </p>
+    </cell>
+    <cell id="1">
+     <p>4/6</p>
+    </cell>
+    <cell id="2">
+     <p>7/9</p>
+    </cell>
+    <cell id="3">
+     <p>3/2</p>
+    </cell>
+    <cell id="4">
+     <p>6/9</p>
+    </cell>
+    <cell id="5">
+     <p>7/4</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>propia</p>
+    </cell>
+    <cell>
+     <p>propia</p>
+    </cell>
+    <cell>
+     <p>propia</p>
+    </cell>
+    <cell>
+     <p>impropia</p>
+    </cell>
+    <cell>
+     <p>propia</p>
+    </cell>
+    <cell>
+     <p>impropia</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="res3.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Responde.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCC99" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="290.0" cellHeight="220.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <p>¿Cómo se llaman las fracciones que tienen el denominador mayor que el numerador?</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>propias</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="res5.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Responde.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Super!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCC99" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="200.0" cellHeight="180.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <p>¿Cómo se llaman las fracciones que tienen el denominador menor que el numerador?</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>impropias</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="res6.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Escribe el número.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Has aprendido mucho!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCC99" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="370.0" cellHeight="250.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <p>Si Luisa y María tienen una pizza dividida en 8 partes, Luisa come 3/8 y María 2/8 de pizza¿Cuántos pedazos sobraron?</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>3</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="res7.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Responde.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Super!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCC99" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="370.0" cellHeight="250.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <p>Mario tiene un acuario dividido en 4 partes iguales, si lleno la mitad ¿A que fraccion corresponde? </p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>2/4</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="rom1.puz" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Arma el puzzle.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCC99" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="3" border="true" image="intro.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="sop1.sop" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Busca 4 nombres de fracciones.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Super!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCC99" transparent="true" border="false" />
+   </settings>
+   <textGrid rows="13" columns="10" cellWidth="20.0" cellHeight="20.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>UU******D*D**</row>
+     <row>*N******O*O**</row>
+     <row>*MC*****S*S**</row>
+     <row>*E*U****T*C**</row>
+     <row>*D**A***E*U**</row>
+     <row>*I***R**R*A**</row>
+     <row>*O****T*C*R**</row>
+     <row>*******OI*T**</row>
+     <row>********O*O**</row>
+     <row>********S*S**</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">UNCUARTO</clue>
+    <clue id="1">DOSTERCIOS</clue>
+    <clue id="2">UNMEDIO</clue>
+    <clue id="3">DOSCUARTOS</clue>
+   </clues>
+  </activity>
+  <activity class="@textGrid.WordSearch" name="sop2.sop" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Encuentra 5 palabras que tengan que ver con las fracciones.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>¡Bravo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFCC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCC99" transparent="true" border="false" />
+   </settings>
+   <textGrid rows="17" columns="10" cellWidth="140.0" cellHeight="100.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>**NDENOMINADORF*P</row>
+     <row>***U**********R*R</row>
+     <row>****M*********A*O</row>
+     <row>*****E********C*P</row>
+     <row>******R*******C*I</row>
+     <row>*******A******I*A</row>
+     <row>********D*****O*S</row>
+     <row>*********O****N**</row>
+     <row>**********R******</row>
+     <row>IMPROPIAS********</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">DENOMINADOR</clue>
+    <clue id="1">NUMERADOR</clue>
+    <clue id="2">IMPROPIAS</clue>
+    <clue id="3">PROPIAS</clue>
+    <clue id="4">FRACCION</clue>
+   </clues>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="im1.gif" file="im1.gif" animated="false" />
+  <media name="im2.gif" file="im2.gif" animated="false" />
+  <media name="im5.gif" file="im5.gif" animated="false" />
+  <media name="im6.gif" file="im6.gif" animated="false" />
+  <media name="imin4.gif" file="imin4.gif" animated="false" />
+  <media name="info3.gif" file="info3.gif" animated="false" />
+  <media name="intro.gif" file="intro.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

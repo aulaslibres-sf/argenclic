@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="posesive" version="0.1.3">
+ <settings>
+  <title>Let's have fun possessives!</title>
+  <revision description="Creation of the package of activities using Clic 3.0" date="2/19/01" />
+  <revision description="Converted from Clic3 to JClic" date="3/14/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <organization name="Colegio Orvalle" mail="orvalle@orvalle.es" url="http://www.orvalle.es" city="Las Rozas" state="Madrid" />
+  <language>english</language>
+  <description>
+   <p>Package of activities to work the possessive pronoun in English. This activities are destined to Secondary school.</p>
+  </description>
+  <descriptors level="Secondary school">English language, grammar</descriptors>
+  <meta_langs>english</meta_langs>
+  <descriptions>
+   <description language="english">
+    <p>Package of activities to work the possessive pronoun in English. This activities are destined to Secondary school.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="posesive.pac" name="cero.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="mistake.ass" />
+  <item name="reone.ass" />
+  <item name="three.ass" />
+  <item name="refour.puz" />
+  <item name="five.sop" />
+  <item name="six.txa" />
+  <item name="seven.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="cero.ass">
+   <messages>
+    <cell image="orv.gif" type="initial">
+     <style>
+      <font family="Arial" size="20" />
+      <color background="0xFFFFFF" />
+     </style>
+     <media type="PLAY_MIDI" level="2" file="minuet1.mid" />
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" />
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="escudo2.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="200.0" cellHeight="50.0" border="false">
+    <style>
+     <font family="Arial" size="30" bold="true" italic="true" />
+     <color foreground="0xFFFF00" background="0x008000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>Colegio Orvalle</p>
+    </cell>
+    <cell>
+     <p>Avda./Andraitx,1</p>
+    </cell>
+    <cell>
+     <p>Las Rozas</p>
+    </cell>
+    <cell>
+     <p>28230</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@textGrid.WordSearch" name="five.sop">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Find the hidden possessive adjectives and pronouns. There are eight.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="great!.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFF0080">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="8" columns="8" cellWidth="300.0" cellHeight="300.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>***RUO**</row>
+     <row>***MY*I*</row>
+     <row>****O*T*</row>
+     <row>****U*S*</row>
+     <row>THEIR***</row>
+     <row>****SREH</row>
+     <row>*******I</row>
+     <row>MINE***S</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">OUR</clue>
+    <clue id="1">MY</clue>
+    <clue id="2">THEIR</clue>
+    <clue id="3">MINE</clue>
+    <clue id="4">HERS</clue>
+    <clue id="5">ITS</clue>
+    <clue id="6">HIS</clue>
+    <clue id="7">YOURS</clue>
+   </clues>
+  </activity>
+  <activity class="@panels.InformationScreen" name="mistake.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <media type="PLAY_MIDI" level="2" file="alf.mid" />
+     <p>Want to listen to some music?</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="l_usa.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="700.0" cellHeight="300.0" border="false">
+    <style>
+     <font family="Times New Roman" size="30" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>Let's have fun with possessives!</p>
+    </cell>
+    <cell>
+     <p>We'll learn about adjectives and pronouns.</p>
+    </cell>
+    <cell>
+     <p>It's very easy,you'll see.</p>
+    </cell>
+    <cell>
+     <p>Good luck!</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="refour.puz">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Put this paragraph in the correct order. </p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="mary.wav" />
+     <p>Fantastic!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x008000">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+   </settings>
+   <cells rows="5" cols="4" cellWidth="140.0" cellHeight="100.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="5" />
+    <cell>
+     <p>Hello!</p>
+    </cell>
+    <cell>
+     <p>My</p>
+    </cell>
+    <cell>
+     <p> name is Mary</p>
+    </cell>
+    <cell>
+     <p> and I'm 13.</p>
+    </cell>
+    <cell>
+     <p>I have a brother.</p>
+    </cell>
+    <cell>
+     <p> His</p>
+    </cell>
+    <cell>
+     <p> name is John.</p>
+    </cell>
+    <cell>
+     <p>Our</p>
+    </cell>
+    <cell>
+     <p> mother is 38.</p>
+    </cell>
+    <cell>
+     <p> Her</p>
+    </cell>
+    <cell>
+     <p> name is Anne. </p>
+    </cell>
+    <cell>
+     <p>Tom is</p>
+    </cell>
+    <cell>
+     <p> our</p>
+    </cell>
+    <cell>
+     <p> father.</p>
+    </cell>
+    <cell>
+     <p> The dog is</p>
+    </cell>
+    <cell>
+     <p> mine.</p>
+    </cell>
+    <cell>
+     <p> Its</p>
+    </cell>
+    <cell>
+     <p> name is Smokey.</p>
+    </cell>
+    <cell>
+     <p>What about you?</p>
+    </cell>
+    <cell>
+     <p>Good-bye!</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="reone.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Join the possessive adjectives and pronouns to the correct subject pronoun.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="great!.wav" />
+     <p>Wasn't that easy? Great!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="united~1.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="8" cols="1" cellWidth="700.0" cellHeight="300.0" border="false" id="primary">
+    <style>
+     <font family="Times New Roman" size="30" bold="true" />
+     <color background="0x0080C0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="8" />
+    <cell>
+     <p>My</p>
+    </cell>
+    <cell>
+     <p>Your</p>
+    </cell>
+    <cell>
+     <p>His</p>
+    </cell>
+    <cell>
+     <p>Hers</p>
+    </cell>
+    <cell>
+     <p>Its</p>
+    </cell>
+    <cell>
+     <p>Our</p>
+    </cell>
+    <cell>
+     <p>Yours</p>
+    </cell>
+    <cell>
+     <p>Theirs  </p>
+    </cell>
+   </cells>
+   <cells rows="8" cols="1" cellWidth="700.0" cellHeight="300.0" border="false" id="secondary">
+    <style>
+     <font family="Times New Roman" size="30" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="8" />
+    <cell>
+     <p>I</p>
+    </cell>
+    <cell>
+     <p>You</p>
+    </cell>
+    <cell>
+     <p>He</p>
+    </cell>
+    <cell>
+     <p>She</p>
+    </cell>
+    <cell>
+     <p>It</p>
+    </cell>
+    <cell>
+     <p>We</p>
+    </cell>
+    <cell>
+     <p>You</p>
+    </cell>
+    <cell>
+     <p>They</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="seven.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x800000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x80FF00" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="100.0" border="false">
+    <style>
+     <font family="Times New Roman" size="30" bold="true" />
+     <color background="0x80FF00" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>You've completed all the tasks!</p>
+    </cell>
+    <cell>
+     <p>This means you should know a lot more.</p>
+    </cell>
+    <cell>
+     <p>We hope you have enjoyed every minute.</p>
+    </cell>
+    <cell>
+     <p>That's all folks!</p>
+    </cell>
+    <cell>
+     <p>Look for your results and see how well you've done.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.FillInBlanks" name="six.txa">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Fill in the blanks the correct possessive form.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="great!.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFF00">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <checkButton>press here to check</checkButton>
+   <document>
+    <style name="default" family="Arial" size="17" bold="false" background="0xFFFFFF" foreground="0x000000" italic="false" tabWidth="16" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <text>1. Paul has a car. It's </text>
+      <target>
+       <answer>his</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>his</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p>
+      <text>2. Mary and Susan bought an apartment. It's </text>
+      <target>
+       <answer>theirs</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text>theirs</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p>
+      <text>3. We live in a house. </text>
+      <target>
+       <answer>Our</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>Our</text>
+      </target>
+      <text> house is very big.</text>
+     </p>
+     <p>
+      <text>4. This is Jane's. It's </text>
+      <target>
+       <answer>her</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>her</text>
+      </target>
+      <text> pencil.</text>
+     </p>
+     <p>
+      <text>5. Whose is this backpack, Peter? Is it </text>
+      <target>
+       <answer>yours</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text>yours</text>
+      </target>
+      <text>?</text>
+     </p>
+     <p>
+      <text>6. I like hotdogs but </text>
+      <target>
+       <answer>my</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>my</text>
+      </target>
+      <text> mother doesn't.</text>
+     </p>
+     <p>
+      <text>7. The dog hurt </text>
+      <target>
+       <answer>its</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>its</text>
+      </target>
+      <text> leg.</text>
+     </p>
+     <p>
+      <text>8. Can I borrow </text>
+      <target>
+       <answer>your</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>your</text>
+      </target>
+      <text> hat for the wedding, Ann? Thank you.</text>
+     </p>
+     <p>
+      <text>9. David gave me a ride in his new car yesterday.</text>
+     </p>
+     <p>
+      <text>10. Give it to me.  It's </text>
+      <target>
+       <answer>mine</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>mine</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p>
+      <text>11. Where is Paula? This book is </text>
+      <target>
+       <answer>hers</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>hers</text>
+      </target>
+      <text>.</text>
+     </p>
+     <p>
+      <text>12. I love </text>
+      <target>
+       <answer>my</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>my</text>
+      </target>
+      <text> grandparents. I enjoy staying at</text>
+      <target>
+       <answer> their</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text> their</text>
+      </target>
+      <text> house.</text>
+     </p>
+     <p>
+      <text>13. These exams are</text>
+      <target>
+       <answer> ours</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text> ours</text>
+      </target>
+      <text>.  We took it this morning.</text>
+     </p>
+     <p>
+      <text>14. Please, neighbours get</text>
+      <target>
+       <answer> your</answer>
+       <response fill="_" length="5" maxLength="5" />
+       <text> your</text>
+      </target>
+      <text> dog out of my garden!</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="three.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Which is the correct possessive you hear?</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>you are a champion!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF00FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="mine.wav" />
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="your.wav" />
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="hers.wav" />
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="yours.wav" />
+    </cell>
+    <cell id="4">
+     <media type="PLAY_AUDIO" level="1" file="their.wav" />
+    </cell>
+   </cells>
+   <cells rows="8" cols="1" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="Times New Roman" size="30" />
+     <color background="0x00FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="8" />
+    <cell>
+     <p>Mine</p>
+    </cell>
+    <cell>
+     <p>Your</p>
+    </cell>
+    <cell>
+     <p>Hers</p>
+    </cell>
+    <cell>
+     <p>Yours</p>
+    </cell>
+    <cell>
+     <p>Their</p>
+    </cell>
+    <cell>
+     <p>My</p>
+    </cell>
+    <cell>
+     <p>Her</p>
+    </cell>
+    <cell>
+     <p>Theirs</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="escudo2.gif" file="escudo2.gif" animated="false" />
+  <media name="l_usa.gif" file="l_usa.gif" animated="false" />
+  <media name="orv.gif" file="orv.gif" animated="false" />
+  <media name="united~1.gif" file="united_1.gif" animated="false" />
+  <media name="alf.mid" file="alf.mid" />
+  <media name="minuet1.mid" file="minuet1.mid" />
+  <media name="great!.wav" file="great_.wav" />
+  <media name="hers.wav" file="hers.wav" />
+  <media name="mary.wav" file="mary.wav" />
+  <media name="mine.wav" file="mine.wav" />
+  <media name="their.wav" file="their.wav" />
+  <media name="your.wav" file="your.wav" />
+  <media name="yours.wav" file="yours.wav" />
+ </mediaBag>
+</JClicProject>
+

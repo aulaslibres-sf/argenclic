@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="movim7e" version="0.1.3">
+ <settings>
+  <title>movim7e</title>
+  <revision description="created" date="5/31/02" />
+  <descriptors />
+ </settings>
+ <sequence>
+  <item id="movim7e.pac" name="paq19int.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="simebg4.ass" />
+  <item name="simbg11.ass" />
+  <item name="simbg10.ass" />
+  <item name="abc2.ass" />
+  <item name="simero3.ass" />
+  <item name="abcsc3.ass" />
+  <item name="simrot4.ass" />
+  <item name="simrot1.ass" />
+  <item name="simrot3.ass" />
+  <item name="simrot2.ass" />
+  <item name="paq19fi.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.Identify" name="abc2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Qué letras tienen simetría axial?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" cols="5" border="true" image="abc2a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="5" rows="5" showEnclosure="true" scaleX="5.0" scaleY="5.0">
+     <enclosing>
+      <shape>rectangle:0,0,5,5</shape>
+     </enclosing>
+     <shape>M:0,0|L:0,1|L:1,1|L:1,2|L:0,2|L:0,3|L:0,4|L:0,5|L:1,5|L:1,4|L:1,3|L:2,3|L:2,4|L:2,5|L:3,5|L:3,4|L:4,4|L:4,5|L:5,5|L:5,4|L:5,3|L:4,3|L:4,2|L:5,2|L:5,1|L:4,1|L:4,0|X</shape>
+     <shape>rectangle:4,0,1,1</shape>
+     <shape>rectangle:0,1,1,1</shape>
+     <shape>rectangle:4,2,1,1</shape>
+     <shape>rectangle:1,3,1,1</shape>
+     <shape>rectangle:1,4,1,1</shape>
+     <shape>rectangle:3,4,1,1</shape>
+    </shaper>
+    <ids>0 1 1 1 1 1 1</ids>
+   </cells>
+   <cells rows="5" cols="5" border="true" image="abc2c.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="5" rows="5" showEnclosure="true" scaleX="5.0" scaleY="5.0">
+     <enclosing>
+      <shape>rectangle:0,0,5,5</shape>
+     </enclosing>
+     <shape>M:0,0|L:0,1|L:1,1|L:1,2|L:0,2|L:0,3|L:0,4|L:0,5|L:1,5|L:1,4|L:1,3|L:2,3|L:2,4|L:2,5|L:3,5|L:3,4|L:4,4|L:4,5|L:5,5|L:5,4|L:5,3|L:4,3|L:4,2|L:5,2|L:5,1|L:4,1|L:4,0|X</shape>
+     <shape>rectangle:4,0,1,1</shape>
+     <shape>rectangle:0,1,1,1</shape>
+     <shape>rectangle:4,2,1,1</shape>
+     <shape>rectangle:1,3,1,1</shape>
+     <shape>rectangle:1,4,1,1</shape>
+     <shape>rectangle:3,4,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@panels.Identify" name="abcsc3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Qué símbolos tienen centro de simetría?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="abc3a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <ids>0 0 1 1 0 0 0 0 0 0 0 1</ids>
+   </cells>
+   <cells rows="3" cols="4" border="true" image="abcsc3c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="paq19fi.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic sobre la flecha de la derecha para volver al menú         &gt;&gt;&gt;</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="portada1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="60.0" border="false">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>FIN DEL PAQUETE 19</p>
+    </cell>
+    <cell>
+     <p>FIGURAS PLANAS CON SIMETRÍAS DIVERSAS</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="paq19int.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Haz clic sobre la flecha para iniciar el paquete de actividades         &gt;&gt;&gt;</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <image name="portada1.gif" tiled="false" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="250.0" cellHeight="60.0" border="false">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>GEOCLIC - PAQUETE 19</p>
+    </cell>
+    <cell>
+     <p>FIGURAS PLANAS CON SIMETRÍAS DIVERSAS</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.WrittenAnswer" name="simbg10.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Cuántos ejes de simetría tiene cada figura? (Escribe un 0 si crees que no tiene ninguno).</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="simbg10a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="65.0" cellHeight="34.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>0</p>
+    </cell>
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>3</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" border="true" image="simbg10c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="simbg11.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Cuántos ejes de simetría tiene cada figura?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="simbg11a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <ids>1 1 2 11 0 3</ids>
+   </cells>
+   <cells rows="12" cols="1" cellWidth="75.0" cellHeight="34.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="12" />
+    <cell>
+     <p>NINGUNO</p>
+    </cell>
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>3</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>INFINITOS</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" border="true" image="simbg11c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="simebg4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Cuántos ejes de simetría tiene cada figura?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="simebg4a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <ids>7 8 8 1 10 10</ids>
+   </cells>
+   <cells rows="12" cols="1" cellWidth="75.0" cellHeight="34.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="12" />
+    <cell>
+     <p>NINGUNO</p>
+    </cell>
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>3</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>INFINITOS</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" border="true" image="simebg4c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="simero3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Qué figuras tienen simetría de rotación? Indica el ángulo más pequeño que deja la figura invariante.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="simero3a.gif" id="primary">
+    <style>
+     <font family="Arial" size="10" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <ids>2 6 5 0 2 2</ids>
+   </cells>
+   <cells rows="8" cols="1" cellWidth="82.0" cellHeight="50.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="10" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="8" />
+    <cell>
+     <p>SIN SIMETRíA DE ROTAC.</p>
+    </cell>
+    <cell>
+     <p>SIMETRíA DE ROTAC. 180°</p>
+    </cell>
+    <cell>
+     <p>SIMETRíA DE ROTAC. 120°</p>
+    </cell>
+    <cell>
+     <p>SIMETRíA DE ROTAC. 90°</p>
+    </cell>
+    <cell>
+     <p>SIMETRíA DE ROTAC. 72°</p>
+    </cell>
+    <cell>
+     <p>SIMETRíA DE ROTAC. 60°</p>
+    </cell>
+    <cell>
+     <p>SIMETRíA DE ROTAC. 45°</p>
+    </cell>
+    <cell>
+     <p>SIMETRíA DE ROTAC. Cualquier ángulo</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" border="true" image="simero3c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="simrot1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Qué tipo de simetría tiene cada figura?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="simrot1a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <ids>0 1 2 3</ids>
+   </cells>
+   <cells rows="4" cols="1" border="true" image="simrot1b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+   </cells>
+   <cells rows="2" cols="2" border="true" image="simrot1c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="simrot2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Qué tipo de simetría tiene cada figura?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="simrot2a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <ids>3 0 2 1</ids>
+   </cells>
+   <cells rows="4" cols="1" border="true" image="simrot1b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+   </cells>
+   <cells rows="2" cols="2" border="true" image="simrot2c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="simrot3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Qué tipo de simetría tiene cada figura?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="simrot3a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <ids>2 2 0 0</ids>
+   </cells>
+   <cells rows="4" cols="1" border="true" image="simrot1b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+   </cells>
+   <cells rows="2" cols="2" border="true" image="simrot3c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="simrot4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>¿Qué tipo de simetría tiene cada figura?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" border="true" image="simrot4a.gif" id="primary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <ids>2 0 1 3</ids>
+   </cells>
+   <cells rows="4" cols="1" border="true" image="simrot1b.gif" id="secondary">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+   </cells>
+   <cells rows="2" cols="2" border="true" image="simrot4c.gif" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+   </cells>
+   <scramble times="31" primary="true" secondary="false" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="abc2a.gif" file="abc2a.gif" animated="false" />
+  <media name="abc2c.gif" file="abc2c.gif" animated="false" />
+  <media name="abc3a.gif" file="abc3a.gif" animated="false" />
+  <media name="abcsc3c.gif" file="abcsc3c.gif" animated="false" />
+  <media name="portada1.gif" file="portada1.gif" animated="false" />
+  <media name="simbg10a.gif" file="simbg10a.gif" animated="false" />
+  <media name="simbg10c.gif" file="simbg10c.gif" animated="false" />
+  <media name="simbg11a.gif" file="simbg11a.gif" animated="false" />
+  <media name="simbg11c.gif" file="simbg11c.gif" animated="false" />
+  <media name="simebg4a.gif" file="simebg4a.gif" animated="false" />
+  <media name="simebg4c.gif" file="simebg4c.gif" animated="false" />
+  <media name="simero3a.gif" file="simero3a.gif" animated="false" />
+  <media name="simero3c.gif" file="simero3c.gif" animated="false" />
+  <media name="simrot1a.gif" file="simrot1a.gif" animated="false" />
+  <media name="simrot1b.gif" file="simrot1b.gif" animated="false" />
+  <media name="simrot1c.gif" file="simrot1c.gif" animated="false" />
+  <media name="simrot2a.gif" file="simrot2a.gif" animated="false" />
+  <media name="simrot2c.gif" file="simrot2c.gif" animated="false" />
+  <media name="simrot3a.gif" file="simrot3a.gif" animated="false" />
+  <media name="simrot3c.gif" file="simrot3c.gif" animated="false" />
+  <media name="simrot4a.gif" file="simrot4a.gif" animated="false" />
+  <media name="simrot4c.gif" file="simrot4c.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

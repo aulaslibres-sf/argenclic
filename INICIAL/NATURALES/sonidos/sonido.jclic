@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="sonido" version="0.1.3">
+ <settings>
+  <title>Reconocimiento de sonidos</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="7/24/98" />
+  <revision description="Conversión de Clic3 a JClic" date="4/11/02">
+   <author name="Equip Clic" mail="clic@xtec.cat" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Celestino Arteta" mail="celestino@ctv.es" />
+  <author name="Grupo de trabajo de logopedas" />
+  <organization name="CAP Tafalla" mail="cap.tafalla@pnte.cfnavarra.es" city="Tafalla" state="Navarra" />
+  <language>Español</language>
+  <description>
+   <p>Materiales de logopedia para trabajar la discriminación auditiva. Se presentan unos cuarenta sonidos que hay que identificar y asociar con las imágenes.</p>
+  </description>
+  <descriptors area="Diversos" level="Infantil, Primaria">comprensión oral, educación especial</descriptors>
+ </settings>
+ <sequence>
+  <item id="sonido.pac" name="portada.ass" delay="3">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="soni1.ass" delay="3" />
+  <item name="soni2.ass" delay="3" />
+  <item name="soni3.ass" delay="3" />
+  <item name="soni4.ass" delay="3" />
+  <item name="soni5.ass" delay="3" />
+  <item name="soni6.ass" delay="3" />
+  <item name="sonido.ass" delay="3" />
+  <item name="soni7.ass" delay="3" />
+  <item name="soni8.ass" delay="3" />
+  <item name="soni9.ass" delay="3" />
+  <item name="soni10.ass" delay="3">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="portada.ass">
+   <messages>
+    <cell image="soles.gif" type="initial">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+      <color background="0x0000FF" />
+     </style>
+     <media type="PLAY_MIDI" level="2" file="181.mid" />
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="13" bold="true" />
+      <color background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x0080FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="tafalla.gif">
+    <style>
+     <font family="Arial" size="13" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="soni1.ass">
+   <messages>
+    <cell image="soles.gif" type="initial">
+     <style>
+      <font family="Impact" size="32" italic="true" />
+      <color background="0x0000FF" />
+     </style>
+    </cell>
+    <cell image="soles.gif" type="final">
+     <style>
+      <font family="Impact" size="32" italic="true" />
+      <color background="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x00FF40">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000FF" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="102.0" cellHeight="152.0" border="true" id="primary">
+    <style>
+     <font family="Impact" size="32" italic="true" />
+     <color background="0xFFFF00" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="telefono.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="timbre.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="avion.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="mono.wav" />
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="158.0" cellHeight="148.0" border="true" id="secondary">
+    <style>
+     <font family="Impact" size="32" italic="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="telefono.gif">
+     <p />
+    </cell>
+    <cell image="timbre1.gif" />
+    <cell image="avion.gif" />
+    <cell image="mono.gif" />
+   </cells>
+   <cells rows="2" cols="2" cellWidth="102.0" cellHeight="152.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="muybien.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="guay.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="bravo.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="aplauso.wav" />
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="soni10.ass">
+   <messages>
+    <cell image="soles.gif" type="initial">
+     <style>
+      <font family="Impact" size="32" italic="true" />
+      <color background="0x0000FF" />
+     </style>
+    </cell>
+    <cell image="soles.gif" type="final">
+     <style>
+      <font family="Impact" size="32" italic="true" />
+      <color background="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x00FF40">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000FF" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="96.0" cellHeight="148.0" border="true" id="primary">
+    <style>
+     <font family="Impact" size="32" italic="true" />
+     <color background="0xFFFF00" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="tractor.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="poli.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="moto2.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cocheca.wav" />
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="155.0" cellHeight="151.0" border="true" id="secondary">
+    <style>
+     <font family="Impact" size="32" italic="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="tractor.gif" />
+    <cell image="policia.gif" />
+    <cell image="moto.gif" />
+    <cell image="cochecar.gif" />
+   </cells>
+   <cells rows="2" cols="2" cellWidth="96.0" cellHeight="148.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="guay.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="bravo.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="aplauso.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="muybien.wav" />
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="soni2.ass">
+   <messages>
+    <cell image="soles.gif" type="initial">
+     <style>
+      <font family="Impact" size="32" italic="true" />
+      <color background="0x0000FF" />
+     </style>
+    </cell>
+    <cell image="soles.gif" type="final">
+     <style>
+      <font family="Impact" size="32" italic="true" />
+      <color background="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="bravo.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x00FF40">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000FF" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="89.0" cellHeight="145.0" border="true" id="primary">
+    <style>
+     <font family="Impact" size="32" italic="true" />
+     <color background="0xFFFF00" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="elefante.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="toro.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="gato.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="feria.wav" />
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="150.0" cellHeight="156.0" border="true" id="secondary">
+    <style>
+     <font family="Impact" size="32" italic="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="elefante.gif" />
+    <cell image="vaca.gif" />
+    <cell image="gato.gif" />
+    <cell image="feria.gif" />
+   </cells>
+   <cells rows="2" cols="2" cellWidth="89.0" cellHeight="145.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="bravo.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="muybien.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="guay.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="guay.wav" />
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="soni3.ass">
+   <messages>
+    <cell image="soles.gif" type="initial">
+     <style>
+      <font family="Impact" size="32" italic="true" />
+      <color background="0x0000FF" />
+     </style>
+    </cell>
+    <cell image="soles.gif" type="final">
+     <style>
+      <font family="Impact" size="32" italic="true" />
+      <color background="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x00FF40">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000FF" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="101.0" cellHeight="139.0" border="true" id="primary">
+    <style>
+     <font family="Impact" size="32" italic="true" />
+     <color background="0xFFFF00" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="ambula.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="barco.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="campana.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="caballo.wav" />
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="157.0" cellHeight="146.0" border="true" id="secondary">
+    <style>
+     <font family="Impact" size="32" italic="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="ambula.gif" />
+    <cell image="barco.gif" />
+    <cell image="timbre.gif" />
+    <cell image="caballo.gif" />
+   </cells>
+   <cells rows="2" cols="2" cellWidth="101.0" cellHeight="139.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="bravo.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="muybien.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="guay.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="guay.wav" />
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="soni4.ass">
+   <messages>
+    <cell image="soles.gif" type="initial">
+     <style>
+      <font family="Impact" size="32" italic="true" />
+      <color background="0x0000FF" />
+     </style>
+    </cell>
+    <cell image="soles.gif" type="final">
+     <style>
+      <font family="Impact" size="32" italic="true" />
+      <color background="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x00FF40">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000FF" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="99.0" cellHeight="148.0" border="true" id="primary">
+    <style>
+     <font family="Impact" size="32" italic="true" />
+     <color background="0xFFFF00" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="olas.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="pajaro.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="tren.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="bocina.wav" />
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="155.0" cellHeight="154.0" border="true" id="secondary">
+    <style>
+     <font family="Impact" size="32" italic="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="s_ola1.gif" />
+    <cell image="pajaro.gif" />
+    <cell image="tren.gif" />
+    <cell image="coche.gif" />
+   </cells>
+   <cells rows="2" cols="2" cellWidth="99.0" cellHeight="148.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="guay.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="bravo.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="aplauso.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="muybien.wav" />
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="soni5.ass">
+   <messages>
+    <cell image="soles.gif" type="initial">
+     <style>
+      <font family="Impact" size="32" italic="true" />
+      <color background="0x0000FF" />
+     </style>
+    </cell>
+    <cell image="soles.gif" type="final">
+     <style>
+      <font family="Impact" size="32" italic="true" />
+      <color background="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x00FF40">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000FF" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="97.0" cellHeight="145.0" border="true" id="primary">
+    <style>
+     <font family="Impact" size="32" italic="true" />
+     <color background="0xFFFF00" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="grillo.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="gallina.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="martillo.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="helicop.wav" />
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="154.0" cellHeight="150.0" border="true" id="secondary">
+    <style>
+     <font family="Impact" size="32" italic="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="grillo.gif" />
+    <cell image="gallina.gif" />
+    <cell image="martillo.gif" />
+    <cell image="helicop.gif" />
+   </cells>
+   <cells rows="2" cols="2" cellWidth="97.0" cellHeight="145.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="guay.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="bravo.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="muybien.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="bravo.wav" />
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="soni6.ass">
+   <messages>
+    <cell image="soles.gif" type="initial">
+     <style>
+      <font family="Impact" size="32" italic="true" />
+      <color background="0x0000FF" />
+     </style>
+    </cell>
+    <cell image="soles.gif" type="final">
+     <style>
+      <font family="Impact" size="32" italic="true" />
+      <color background="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x00FF40">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000FF" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="89.0" cellHeight="141.0" border="true" id="primary">
+    <style>
+     <font family="Impact" size="32" italic="true" />
+     <color background="0xFFFF00" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="aguavaso.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="crisroto.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="reloj.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="tormenta.wav" />
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="155.0" cellHeight="141.0" border="true" id="secondary">
+    <style>
+     <font family="Impact" size="32" italic="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="grifo.gif" />
+    <cell image="crisroto.gif" />
+    <cell image="reloj.gif" />
+    <cell image="tormenta.gif" />
+   </cells>
+   <cells rows="2" cols="2" cellWidth="89.0" cellHeight="141.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="guay.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="bravo.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="guay.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="guay.wav" />
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="soni7.ass">
+   <messages>
+    <cell image="soles.gif" type="initial">
+     <style>
+      <font family="Impact" size="32" italic="true" />
+      <color background="0x0000FF" />
+     </style>
+    </cell>
+    <cell image="soles.gif" type="final">
+     <style>
+      <font family="Impact" size="32" italic="true" />
+      <color background="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="bravo.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x00FF40">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000FF" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="89.0" cellHeight="132.0" border="true" id="primary">
+    <style>
+     <font family="Impact" size="32" italic="true" />
+     <color background="0xFFFF00" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="tambor.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="trompet.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="flauta.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="puerta.wav" />
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="157.0" cellHeight="132.0" border="true" id="secondary">
+    <style>
+     <font family="Impact" size="32" italic="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="tambor.gif" />
+    <cell image="trompeta.gif" />
+    <cell image="flauta.gif" />
+    <cell image="puerta.gif" />
+   </cells>
+   <cells rows="2" cols="2" cellWidth="89.0" cellHeight="132.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="bravo.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="muybien.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="guay.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="guay.wav" />
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="soni8.ass">
+   <messages>
+    <cell image="soles.gif" type="initial">
+     <style>
+      <font family="Impact" size="32" italic="true" />
+      <color background="0x0000FF" />
+     </style>
+    </cell>
+    <cell image="soles.gif" type="final">
+     <style>
+      <font family="Impact" size="32" italic="true" />
+      <color background="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x00FF40">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000FF" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="103.0" cellHeight="130.0" border="true" id="primary">
+    <style>
+     <font family="Impact" size="32" italic="true" />
+     <color background="0xFFFF00" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="hombre.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="llorando.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="risas.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="mujer.wav" />
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="142.0" cellHeight="133.0" border="true" id="secondary">
+    <style>
+     <font family="Impact" size="32" italic="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="hombre.gif" />
+    <cell image="llorar.gif" />
+    <cell image="ni_orie.gif" />
+    <cell image="mujer.gif" />
+   </cells>
+   <cells rows="2" cols="2" cellWidth="103.0" cellHeight="130.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="guay.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="bravo.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="aplauso.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="muybien.wav" />
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="soni9.ass">
+   <messages>
+    <cell image="soles.gif" type="initial">
+     <style>
+      <font family="Impact" size="32" italic="true" />
+      <color background="0x0000FF" />
+     </style>
+    </cell>
+    <cell image="soles.gif" type="final">
+     <style>
+      <font family="Impact" size="32" italic="true" />
+      <color background="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x00FF40">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000FF" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="96.0" cellHeight="148.0" border="true" id="primary">
+    <style>
+     <font family="Impact" size="32" italic="true" />
+     <color background="0xFFFF00" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="os.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="porc.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="serp.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="mussol.wav" />
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="147.0" cellHeight="151.0" border="true" id="secondary">
+    <style>
+     <font family="Impact" size="32" italic="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="oso.gif" />
+    <cell image="cerdo.gif" />
+    <cell image="boa.gif" />
+    <cell image="buho.gif" />
+   </cells>
+   <cells rows="2" cols="2" cellWidth="96.0" cellHeight="148.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="guay.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="bravo.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="aplauso.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="muybien.wav" />
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="sonido.ass">
+   <messages>
+    <cell image="soles.gif" type="initial">
+     <style>
+      <font family="Impact" size="32" italic="true" />
+      <color background="0x0000FF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Impact" size="32" italic="true" />
+      <color background="0x0000FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="bravo.wav" />
+     <p>!bravo¡</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x00FF40">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000FF" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="113.0" cellHeight="156.0" border="true" id="primary">
+    <style>
+     <font family="Impact" size="32" italic="true" />
+     <color background="0xFFFF00" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="leon.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="perro.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="oveja.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="pato.wav" />
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="159.0" cellHeight="158.0" border="true" id="secondary">
+    <style>
+     <font family="Impact" size="32" italic="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="leon.gif" />
+    <cell image="perro.gif" />
+    <cell image="oveja.gif" />
+    <cell image="pato.gif" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="ambula.gif" file="ambula.gif" animated="false" />
+  <media name="avion.gif" file="avion.gif" animated="false" />
+  <media name="barco.gif" file="barco.gif" animated="false" />
+  <media name="boa.gif" file="boa.gif" animated="false" />
+  <media name="buho.gif" file="buho.gif" animated="false" />
+  <media name="caballo.gif" file="caballo.gif" animated="false" />
+  <media name="cerdo.gif" file="cerdo.gif" animated="false" />
+  <media name="coche.gif" file="coche.gif" animated="false" />
+  <media name="cochecar.gif" file="cochecar.gif" animated="false" />
+  <media name="crisroto.gif" file="crisroto.gif" animated="false" />
+  <media name="elefante.gif" file="elefante.gif" animated="false" />
+  <media name="feria.gif" file="feria.gif" animated="false" />
+  <media name="flauta.gif" file="flauta.gif" animated="false" />
+  <media name="gallina.gif" file="gallina.gif" animated="false" />
+  <media name="gato.gif" file="gato.gif" animated="false" />
+  <media name="grifo.gif" file="grifo.gif" animated="false" />
+  <media name="grillo.gif" file="grillo.gif" animated="false" />
+  <media name="helicop.gif" file="helicop.gif" animated="false" />
+  <media name="hombre.gif" file="hombre.gif" animated="false" />
+  <media name="leon.gif" file="leon.gif" animated="false" />
+  <media name="llorar.gif" file="llorar.gif" animated="false" />
+  <media name="martillo.gif" file="martillo.gif" animated="false" />
+  <media name="mono.gif" file="mono.gif" animated="false" />
+  <media name="moto.gif" file="moto.gif" animated="false" />
+  <media name="mujer.gif" file="mujer.gif" animated="false" />
+  <media name="ni_orie.gif" file="ni_orie.gif" animated="false" />
+  <media name="oso.gif" file="oso.gif" animated="false" />
+  <media name="oveja.gif" file="oveja.gif" animated="false" />
+  <media name="pajaro.gif" file="pajaro.gif" animated="false" />
+  <media name="pato.gif" file="pato.gif" animated="false" />
+  <media name="perro.gif" file="perro.gif" animated="false" />
+  <media name="policia.gif" file="policia.gif" animated="false" />
+  <media name="puerta.gif" file="puerta.gif" animated="false" />
+  <media name="reloj.gif" file="reloj.gif" animated="false" />
+  <media name="s_ola1.gif" file="s_ola1.gif" animated="false" />
+  <media name="soles.gif" file="soles.gif" animated="false" />
+  <media name="tafalla.gif" file="tafalla.gif" animated="false" />
+  <media name="tambor.gif" file="tambor.gif" animated="false" />
+  <media name="telefono.gif" file="telefono.gif" animated="false" />
+  <media name="timbre.gif" file="timbre.gif" animated="false" />
+  <media name="timbre1.gif" file="timbre1.gif" animated="false" />
+  <media name="tormenta.gif" file="tormenta.gif" animated="false" />
+  <media name="tractor.gif" file="tractor.gif" animated="false" />
+  <media name="tren.gif" file="tren.gif" animated="false" />
+  <media name="trompeta.gif" file="trompeta.gif" animated="false" />
+  <media name="vaca.gif" file="vaca.gif" animated="false" />
+  <media name="181.mid" file="181.mid" />
+  <media name="aguavaso.wav" file="aguavaso.wav" />
+  <media name="ambula.wav" file="ambula.wav" />
+  <media name="aplauso.wav" file="aplauso.wav" />
+  <media name="avion.wav" file="avion.wav" />
+  <media name="barco.wav" file="barco.wav" />
+  <media name="bocina.wav" file="bocina.wav" />
+  <media name="bravo.wav" file="bravo.wav" />
+  <media name="caballo.wav" file="caballo.wav" />
+  <media name="campana.wav" file="campana.wav" />
+  <media name="cocheca.wav" file="cocheca.wav" />
+  <media name="crisroto.wav" file="crisroto.wav" />
+  <media name="elefante.wav" file="elefante.wav" />
+  <media name="feria.wav" file="feria.wav" />
+  <media name="flauta.wav" file="flauta.wav" />
+  <media name="gallina.wav" file="gallina.wav" />
+  <media name="gato.wav" file="gato.wav" />
+  <media name="grillo.wav" file="grillo.wav" />
+  <media name="guay.wav" file="guay.wav" />
+  <media name="helicop.wav" file="helicop.wav" />
+  <media name="hombre.wav" file="hombre.wav" />
+  <media name="leon.wav" file="leon.wav" />
+  <media name="llorando.wav" file="llorando.wav" />
+  <media name="martillo.wav" file="martillo.wav" />
+  <media name="mono.wav" file="mono.wav" />
+  <media name="moto2.wav" file="moto2.wav" />
+  <media name="mujer.wav" file="mujer.wav" />
+  <media name="mussol.wav" file="mussol.wav" />
+  <media name="muybien.wav" file="muybien.wav" />
+  <media name="olas.wav" file="olas.wav" />
+  <media name="os.wav" file="os.wav" />
+  <media name="oveja.wav" file="oveja.wav" />
+  <media name="pajaro.wav" file="pajaro.wav" />
+  <media name="pato.wav" file="pato.wav" />
+  <media name="perro.wav" file="perro.wav" />
+  <media name="poli.wav" file="poli.wav" />
+  <media name="porc.wav" file="porc.wav" />
+  <media name="puerta.wav" file="puerta.wav" />
+  <media name="reloj.wav" file="reloj.wav" />
+  <media name="risas.wav" file="risas.wav" />
+  <media name="serp.wav" file="serp.wav" />
+  <media name="tambor.wav" file="tambor.wav" />
+  <media name="telefono.wav" file="telefono.wav" />
+  <media name="timbre.wav" file="timbre.wav" />
+  <media name="tormenta.wav" file="tormenta.wav" />
+  <media name="toro.wav" file="toro.wav" />
+  <media name="tractor.wav" file="tractor.wav" />
+  <media name="tren.wav" file="tren.wav" />
+  <media name="trompet.wav" file="trompet.wav" />
+ </mediaBag>
+</JClicProject>
+

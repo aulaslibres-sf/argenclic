@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="coshuma" version="0.1.3">
+ <settings>
+  <title>Aparatos del cuerpo humano</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="4/4/00" />
+  <revision description="Traducción Español" date="5/25/00">
+   <author name="Aurelio Salvador Baselga" mail="asalvado@roble.pntic.mec.es" />
+  </revision>
+  <revision description="Conversión de Clic3 a JClic" date="7/11/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Ferran Estruch Mascarell" mail="46002842@centres.cult.gva.es" />
+  <organization name="CP Verge del Remei" mail="46002842@centres.cult.gva.es" city="Castelló de Rugat" state="País Valencià" />
+  <language>es</language>
+  <description>
+   <p>Paquete de actividades de Clic sobre los diferentes aparatos del cuerpo humano.  Dividido en seis secciones, una por cada aparato:</p>
+   <p>&lt;LI&gt;Aparato digestivo</p>
+   <p>&lt;LI&gt;Aparato circulatorio</p>
+   <p>&lt;LI&gt;Aparato locomotor</p>
+   <p>&lt;LI&gt;Aparato respiratorio</p>
+   <p>&lt;LI&gt;Aparato excretor</p>
+   <p>&lt;LI&gt;Aparato reproductor</p>
+  </description>
+  <descriptors area-codes="exp" level="Secundaria">anatomía</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Paquete de actividades de Clic sobre los diferentes aparatos del cuerpo humano.  Dividido en seis secciones, una por cada aparato:</p>
+    <p>&lt;LI&gt;Aparato digestivo</p>
+    <p>&lt;LI&gt;Aparato circulatorio</p>
+    <p>&lt;LI&gt;Aparato locomotor</p>
+    <p>&lt;LI&gt;Aparato respiratorio</p>
+    <p>&lt;LI&gt;Aparato excretor</p>
+    <p>&lt;LI&gt;Aparato reproductor</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="coshuma.pac" name="menu.ass">
+   <jump action="STOP" id="forward" />
+   <jump action="STOP" id="back" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="menu.ass">
+   <messages>
+    <cell type="initial">
+     <style shadow="true">
+      <color foreground="0xFF0000" background="0x000000" />
+     </style>
+     <p>ESCOGE EL PAQUETE DE ACTIVIDADES QUE QUIERAS.</p>
+    </cell>
+    <cell type="final">
+     <style shadow="true">
+      <color foreground="0xFF0000" background="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x000000" border="false" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="175.0" cellHeight="175.0" border="true">
+    <style>
+     <color background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="mendig1.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="digest.pac" params="digest/digest.jclic" />
+    </cell>
+    <cell image="mencor.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="circula.pac" params="circula/circula.jclic" />
+    </cell>
+    <cell image="mencrani.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="locom.pac" params="locom/locom.jclic" />
+    </cell>
+    <cell image="menexcr1.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="excre.pac" params="excre/excre.jclic" />
+    </cell>
+    <cell image="menrepr.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="reprod.pac" params="reprod/reprod.jclic" />
+    </cell>
+    <cell image="menresp1.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="resp.pac" params="resp/resp.jclic" />
+    </cell>
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="mencor.gif" file="mencor.gif" animated="false" />
+  <media name="mencrani.gif" file="mencrani.gif" animated="false" />
+  <media name="mendig1.gif" file="mendig1.gif" animated="false" />
+  <media name="menexcr1.gif" file="menexcr1.gif" animated="false" />
+  <media name="menrepr.gif" file="menrepr.gif" animated="false" />
+  <media name="menresp1.gif" file="menresp1.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

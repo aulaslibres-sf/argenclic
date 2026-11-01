@@ -1,0 +1,1690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="restaur" version="0.1.3">
+ <settings>
+  <title>Allons au restaurant</title>
+  <revision description="Creation of the package of activities using Clic 3.0" date="9/19/05" />
+  <revision description="Converted from Clic3 to JClic" date="9/26/05">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Mónica Bustamante Alonso-Pimentel" mail="monica.bustaman@terra.es" />
+  <language>french</language>
+  <description>
+   <p>In this package, we find activities to learn French starting form the most important foods and beverages. To listen and repeat conversations that happen in a bar or restaurant. The activities also introduce intercultural aspects from the French gastronomy, including the most famous recipe, the "quiche Lorraine". Additionally, there are some exercises to use and distinguish the partitive article.</p>
+  </description>
+  <descriptors area-codes="lleng" level-codes="PRI">French language</descriptors>
+  <meta_langs>french</meta_langs>
+  <descriptions>
+   <description language="french">
+    <p>In this package, we find activities to learn French starting form the most important foods and beverages. To listen and repeat conversations that happen in a bar or restaurant. The activities also introduce intercultural aspects from the French gastronomy, including the most famous recipe, the "quiche Lorraine". Additionally, there are some exercises to use and distinguish the partitive article.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="dos.pac" name="portares.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="comis.ass" />
+  <item name="margot.ass" />
+  <item name="bechamel.txa" />
+  <item name="plats.sop" />
+  <item name="quiche.sop" />
+  <item name="recette.txa" />
+  <item name="trouart.txa" />
+  <item name="pots.txa" />
+  <item name="restsym.txa" />
+  <item name="infmicro.txa" />
+  <item name="record.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@text.Order" name="bechamel.txa" code="" type="orderWords">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="22" bold="true" />
+      <color background="0x0080FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="chimes.wav" />
+     <p>Ordonnez les éléments</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="22" bold="true" />
+      <color background="0x0080FF" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso.wav" />
+     <p>Bravo!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondo1.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="613" height="419" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="default" background="0xFFFFFF" family="Arial" size="20" italic="false" tabWidth="16" foreground="0x000000" bold="false" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0xFFFFFF" family="Arial" size="20" italic="false" bold="false" foreground="0x000000">
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="false" foreground="0x000000">   La France est bien connue pour </text>
+      <target>sa</target>
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="false" foreground="0x000000"> gastronomie.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="20" italic="false" bold="false" foreground="0x000000">
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="false" foreground="0x000000">   Nous </text>
+      <target>ne</target>
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="false" foreground="0x000000"> savons </text>
+      <target>pas</target>
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="false" foreground="0x000000"> que, parfois, les </text>
+      <target>mots</target>
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="false" foreground="0x000000"> que nous utilisons pour désigner des plats viennent directement </text>
+      <target>du</target>
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="false" foreground="0x000000"> français. Par exemple, la bechamel est une </text>
+      <target>sauce</target>
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="false" foreground="0x000000"> typiquement </text>
+      <target>française</target>
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="false" foreground="0x000000">, et la quiche une tarte qui </text>
+      <target>vient</target>
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="false" foreground="0x000000"> de la Lorraine. La mousse au chocolat, </text>
+      <target>délicieuse</target>
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="false" foreground="0x000000">, se prépare partout </text>
+      <target>en</target>
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="false" foreground="0x000000"> France. D'autres plats sont en principe </text>
+      <target>originaires</target>
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="false" foreground="0x000000"> d'une région ou une ville concrètes: par exemple, la crêpe </text>
+      <target>est</target>
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="false" foreground="0x000000"> née en Bretagne, la vichyssoise </text>
+      <target>à</target>
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="false" foreground="0x000000"> Vichy, la fondue </text>
+      <target>de</target>
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="false" foreground="0x000000"> fromage en Suisse (mais la fondue </text>
+      <target>bourguignone</target>
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="false" foreground="0x000000"> en Bourgogne), le cassoulet à </text>
+      <target>la</target>
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="false" foreground="0x000000"> campagne du Sud-ouest… Il </text>
+      <target>y</target>
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="false" foreground="0x000000"> a aussi des préparations considérées internationales: pensez à l'</text>
+      <target>omelette</target>
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="false" foreground="0x000000"> ! </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="20" italic="false" bold="false" foreground="0x000000" />
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="comis.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial Black" size="30" />
+      <color background="0x008080" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="chimes.wav" />
+     <p>Écrivez le nom de chaque produit, ou au singulier ou au pluriel. Si l'image disparaît quand vous cliquez sur elle, votre réponse est correcte.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial Black" size="30" />
+      <color background="0x008080" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso.wav" />
+     <p>BIEN FAIT!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x008080">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+   </settings>
+   <cells rows="3" cols="4" cellWidth="178.0" cellHeight="152.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell image="queso.gif" />
+    <cell image="fruta.gif" />
+    <cell image="platano.gif" />
+    <cell image="pan.gif" />
+    <cell image="carne.gif" />
+    <cell image="pescado.gif" />
+    <cell image="patatas.gif" />
+    <cell image="salade.gif" />
+    <cell image="tomate.gif" />
+    <cell image="huevos.gif" />
+    <cell image="yogur.gif" />
+    <cell image="sauciss.gif" />
+   </cells>
+   <cells rows="3" cols="4" cellWidth="127.0" cellHeight="44.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>fromage</p>
+    </cell>
+    <cell>
+     <p>fruits</p>
+    </cell>
+    <cell>
+     <p>banane</p>
+    </cell>
+    <cell>
+     <p>pain</p>
+    </cell>
+    <cell>
+     <p>viande</p>
+    </cell>
+    <cell>
+     <p>poisson</p>
+    </cell>
+    <cell>
+     <p>pommes de terre</p>
+    </cell>
+    <cell>
+     <p>salade</p>
+    </cell>
+    <cell>
+     <p>tomate</p>
+    </cell>
+    <cell>
+     <p>oeufs</p>
+    </cell>
+    <cell>
+     <p>yaourts</p>
+    </cell>
+    <cell>
+     <p>saucisson</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="infmicro.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondo5.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <size width="528" height="500" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" background="0xFFFFFF" family="Arial" size="20" italic="false" tabWidth="16" foreground="0x000000" bold="true" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0xFFFFFF" family="Arial" size="20" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="true" foreground="0x000000">VOICI L'ACTIVITÉ QUE VOUS ALLEZ FAIRE ENSUITE:</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="20" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Arial" size="20" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Arial" size="20" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="true" foreground="0x000000"> QUAND VOUS CLIQUEZ SUR </text>
+      <cell width="70" height="20" border="false" image="minialt.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="true" foreground="0x000000">,VOUS ENTENDEZ UNE PHRASE; </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="20" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="true" foreground="0x000000">QUAND VOUS CLIQUEZ SUR </text>
+      <cell width="70" height="33" border="false">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+       <media type="UNKNOWN" level="1" />
+      </cell>
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="true" foreground="0x000000">, VOUS POUVEZ RÉPÉTER ET ENREGISTRER VOTRE VOIX; </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="20" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="true" foreground="0x000000">QUAND VOUS CLIQUEZ SUR </text>
+      <cell width="140" height="39" border="false">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+       <media type="UNKNOWN" level="1" />
+      </cell>
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="true" foreground="0x000000">, VOUS  ÉCOUTEZ CE QUE VOUS AVEZ ENREGISTRÉ. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="20" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Arial" size="20" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Arial" size="20" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Arial" size="20" italic="false" bold="true" foreground="0x000000">CLIQUEZ SUR LA FLÈCHE À DROITE POUR COMMENCER.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="margot.ass" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0x0080C0" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="chimes.wav" />
+     <p>ÉCOUTEZ LES DIFFÉRENTES PARTIES D'UNE CONVERSATION AU CAFÉ ET RELIEZ</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0x0080C0" />
+     </style>
+     <p>ÉCOUTEZ LA CONVERSATION COMPLÈTE</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0080C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x0080C0" border="false" />
+   </settings>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="200.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cafe1.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cafe2.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cafe3.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cafe4.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cafe5.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cafe6.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cafe7.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cafe8.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cafe9.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="cafe10.wav" />
+    </cell>
+   </cells>
+   <cells rows="2" cols="5" cellWidth="250.0" cellHeight="200.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="2" />
+    <cell>
+     <p>Margot commande une boisson</p>
+    </cell>
+    <cell>
+     <p>Il n'y a pas la boisson que Margot veut</p>
+    </cell>
+    <cell>
+     <p>Le garçon propose une boisson différente</p>
+    </cell>
+    <cell>
+     <p>Margot accepte</p>
+    </cell>
+    <cell>
+     <p>Margot demande à Renaud </p>
+    </cell>
+    <cell>
+     <p>Renaud veut une bière</p>
+    </cell>
+    <cell>
+     <p>Margot demande à Patrick</p>
+    </cell>
+    <cell>
+     <p>Patrick veut un Coca</p>
+    </cell>
+    <cell>
+     <p>Margot demande à Vincent (Vincent est un peu spécial)</p>
+    </cell>
+    <cell>
+     <p>Vincent répond</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="plats.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial Black" size="44" />
+      <color background="0xFF8080" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="chimes.wav" />
+     <p>CHERCHEZ DANS LA SOUPE 8 NOMS DE PLATS FRANÇAIS (si vous ne trouvez pas, révisez l'activité précédente). QUAND VOUS TROUVEREZ UN PLAT, VOUS ALLEZ CONNAÎTRE SES INGRÉDIENTS. BON COURAGE!</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial Black" size="44" />
+      <color background="0xFF8080" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso.wav" />
+     <p>BON CHERCHEUR! / BONNE CHERCHEUSE!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="gorrococ.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="12" columns="10" cellWidth="40.0" cellHeight="40.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>ESIOSSYHCIVL</row>
+     <row>T****M*E***E</row>
+     <row>*E**O*T****M</row>
+     <row>F*LU*TEPERCA</row>
+     <row>*OSUEQUICHEH</row>
+     <row>*SNLO******C</row>
+     <row>E*ED*S*****E</row>
+     <row>*M**U*S****B</row>
+     <row>O****E*A****</row>
+     <row>********C***</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">BECHAMEL</clue>
+    <clue id="1">CASSOULET</clue>
+    <clue id="2">CREPE</clue>
+    <clue id="3">FONDUE</clue>
+    <clue id="4">MOUSSE</clue>
+    <clue id="5">OMELETTE</clue>
+    <clue id="6">QUICHE</clue>
+    <clue id="7">VICHYSSOISE</clue>
+   </clues>
+   <cells rows="2" cols="4" cellWidth="160.0" cellHeight="170.0" border="false" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>BÉCHAMEL: de la farine, du beurre, du lait, un peu de sel</p>
+    </cell>
+    <cell>
+     <p>CASSOULET: des haricots blancs, de la charcuterie</p>
+    </cell>
+    <cell>
+     <p>CREPE: de la farine, des oeufs, du lait, un peu de sel</p>
+    </cell>
+    <cell>
+     <p>FONDUE: du vin blanc, des fromages râpés, un peu d'ail (optionnel), un peu de kirsch (optionnel)</p>
+    </cell>
+    <cell>
+     <p>MOUSSE: du chocolat noir, du beurre, des oeufs, du sucre</p>
+    </cell>
+    <cell>
+     <p>OMELETTE: des oeufs, un peu d'huile, un peu de sel</p>
+    </cell>
+    <cell>
+     <p>QUICHE: de la farine, des oeufs, de la levure, de la crème fraîche, des lardons ou des morceaux de bacon</p>
+    </cell>
+    <cell>
+     <p>VICHYSSOISE: des poireaux, de la crème fraîche, du lait, du sel et du poivre</p>
+    </cell>
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="portares.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial Black" size="37" />
+      <color background="0xFFFFFF" />
+     </style>
+     <p>CLIQUEZ SUR LA FLÈCHE POUR COMMENCER</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial Black" size="37" />
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="frdrap.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="700.0" cellHeight="400.0" border="true">
+    <style shadow="true">
+     <font family="Courier New" size="50" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>ALLONS AU RESTAURANT!</p>
+    </cell>
+    <cell>
+     <p>Los documentos sonoros que escucharás en algunas de las actividades son del método "Panorama 1"</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.Identify" name="pots.txa" type="identifyWords">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x808040" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="chimes.wav" />
+     <p>À CHAQUE IMAGE CORRESPONDENT DEUX OPTIONS CORRECTES. CLIQUEZ SUR LES MOTS ADÉQUATS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x808040" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso.wav" />
+     <p>Très Bien! Ce n'était pas facile!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x804040">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="450" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="target" base="default" background="0xC0C0C0" target="true" foreground="0x0000FF" />
+    <style name="default" background="0xFFFFFF" family="Arial" size="17" italic="false" tabWidth="16" foreground="0x000000" bold="false" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="false" foreground="0x000000">
+      <cell width="140" height="80" border="false" image="vino.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text>	  </text>
+      <cell width="140" height="80" border="false" image="cigar.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text>      </text>
+      <cell width="140" height="80" border="false" image="leche.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text>  de le vin			un paquet des cigarettes         </text>
+      <target>du</target>
+      <text> </text>
+      <target>lait</target>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="false" foreground="0x000000">
+      <text>une bouteille du vin		</text>
+      <target>des</target>
+      <text> </text>
+      <target>cigarettes</target>
+      <text>	             de la lait</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="false" foreground="0x000000">
+      <target>du</target>
+      <text> </text>
+      <target>vin</target>
+      <text>			</text>
+      <target>un</target>
+      <text> </text>
+      <target>paquet</target>
+      <text> </text>
+      <target>de</target>
+      <text> </text>
+      <target>cigarettes</target>
+      <text>           un verre de la lait</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="false" foreground="0x000000">
+      <target>une</target>
+      <text> </text>
+      <target>bouteille</target>
+      <text> </text>
+      <target>de</target>
+      <text> </text>
+      <target>vin</target>
+      <text>		de cigarettes	             </text>
+      <target>un</target>
+      <text> </text>
+      <target>verre</target>
+      <text> </text>
+      <target>de</target>
+      <text> </text>
+      <target>lait</target>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="false" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="false" foreground="0x000000">
+      <cell width="140" height="100" border="false" image="cafe.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text>     </text>
+      <cell width="140" height="88" border="false" image="boite.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text>   </text>
+      <cell width="140" height="100" border="false" image="pot.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="false" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="false" foreground="0x000000">
+      <text>de le café		        boîtes de conserves	     </text>
+      <target>des</target>
+      <text> </text>
+      <target>légumes</target>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="false" foreground="0x000000">
+      <text>une tasse du café	        </text>
+      <target>des</target>
+      <text> </text>
+      <target>conserves</target>
+      <text>	     	     un pot des légumes </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="false" foreground="0x000000">
+      <target>une</target>
+      <text> </text>
+      <target>tasse</target>
+      <text> </text>
+      <target>de</target>
+      <text> </text>
+      <target>café</target>
+      <text>              </text>
+      <target>des</target>
+      <text> </text>
+      <target>boîtes</target>
+      <text> </text>
+      <target>de</target>
+      <text> </text>
+      <target>conserves</target>
+      <text>         </text>
+      <target>un</target>
+      <text> </text>
+      <target>pot</target>
+      <text> </text>
+      <target>de</target>
+      <text> </text>
+      <target>légumes</target>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="false" foreground="0x000000">
+      <target>du</target>
+      <text> </text>
+      <target>café</target>
+      <text>		        des boîtes des conserves       légumes</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="false" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="false" foreground="0x000000">
+      <text>                          </text>
+      <cell width="140" height="80" border="false" image="yogur.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+      <text>                 </text>
+      <cell width="140" height="80" border="false" image="chocolat.gif">
+       <style>
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="false" foreground="0x000000">
+      <text>		</text>
+      <target>des</target>
+      <text> </text>
+      <target>yaourts</target>
+      <text>		</text>
+      <target>du</target>
+      <text> </text>
+      <target>chocolat</target>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="false" foreground="0x000000">
+      <text>		</text>
+      <target>des</target>
+      <text> </text>
+      <target>pots</target>
+      <text> </text>
+      <target>de</target>
+      <text> </text>
+      <target>yaourt</target>
+      <text>		une tablette du chocolat</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="false" foreground="0x000000">
+      <text>		des pots des yaourt		de la chocolat</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="false" foreground="0x000000">
+      <text>		yaourts			</text>
+      <target>une</target>
+      <text> </text>
+      <target>tablette</target>
+      <text> </text>
+      <target>de</target>
+      <text> </text>
+      <target>chocolat</target>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="false" foreground="0x000000">
+      <text>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@textGrid.WordSearch" name="quiche.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x0080C0" />
+     </style>
+     <p>Trouvez les 9 ingrédients de la Quiche Lorraine. La recette est dans l'activité suivante.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x0080C0" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso.wav" />
+     <p>bon appétit!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondopu.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="11" columns="7" cellWidth="37.0" cellHeight="41.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>ELARDONSELS</row>
+     <row>GTOPWENIRAF</row>
+     <row>AFEMERCERGB</row>
+     <row>MESKEVOEUFS</row>
+     <row>OAJFTIALEUN</row>
+     <row>RRPUTOHVBUX</row>
+     <row>FVYRLPSCVAR</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">FROMAGE</clue>
+    <clue id="1">FARINE</clue>
+    <clue id="2">LARDONS</clue>
+    <clue id="3">FARINE</clue>
+    <clue id="4">POIVRE</clue>
+    <clue id="5">SEL</clue>
+    <clue id="6">CREME</clue>
+    <clue id="7">OEUFS</clue>
+    <clue id="8">BEURRE</clue>
+    <clue id="9">LAIT</clue>
+   </clues>
+  </activity>
+  <activity class="@text.FillInBlanks" name="recette.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="19" bold="true" />
+      <color background="0xFF8000" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="chimes.wav" />
+     <p>COMPLÉTEZ AVEC DES ARTICLES OU DES PRÉPOSITIONS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="19" bold="true" />
+      <color background="0xFF8000" />
+     </style>
+     <p>Bon appétit!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <image name="quiche.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="500" />
+    </window>
+   </settings>
+   <document>
+    <style name="target" base="default" background="0xC0C0C0" target="true" foreground="0x0000FF" />
+    <style name="default" background="0xFFFFFF" family="Arial" size="14" italic="false" tabWidth="16" foreground="0x000000" bold="true" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0xFFFFFF" family="Arial" size="14" name="default" italic="false" bold="true" foreground="0x000000">
+      <cell width="440" height="35" border="true">
+       <style>
+        <color background="0xFF8040" />
+       </style>
+       <p>QUICHE LORRAINE</p>
+      </cell>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="14" name="default" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Arial" size="14" name="default" italic="false" bold="true" foreground="0x000000">
+      <text>INGRÉDIENTS POUR </text>
+      <target>
+       <answer>LA</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>LA</text>
+      </target>
+      <text> PÂTE BRISE</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="14" name="default" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Arial" size="14" name="default" italic="false" bold="true" foreground="0x000000">
+      <text>200 gr. </text>
+      <target>
+       <answer>de</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>de</text>
+      </target>
+      <text> farine</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="14" name="default" italic="false" bold="true" foreground="0x000000">
+      <text>1 oeuf</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="14" name="default" italic="false" bold="true" foreground="0x000000">
+      <text>100 gr. </text>
+      <target>
+       <answer>de</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>de</text>
+      </target>
+      <text> beurre</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="14" name="default" italic="false" bold="true" foreground="0x000000">
+      <text>1 verre </text>
+      <target>
+       <answer>d'</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>d'</text>
+      </target>
+      <text>eau</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="14" name="default" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Arial" size="14" name="default" italic="false" bold="true" foreground="0x000000">
+      <text>INGRÉDIENTS POUR </text>
+      <target>
+       <answer>LE</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>LE</text>
+      </target>
+      <text> RESTE</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="14" name="default" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Arial" size="14" name="default" italic="false" bold="true" foreground="0x000000">
+      <text>200 gr. </text>
+      <target>
+       <answer>de</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>de</text>
+      </target>
+      <text> lardons</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="14" name="default" italic="false" bold="true" foreground="0x000000">
+      <text>200 gr. </text>
+      <target>
+       <answer>de</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>de</text>
+      </target>
+      <text> gruyère</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="14" name="default" italic="false" bold="true" foreground="0x000000">
+      <text>1pot </text>
+      <target>
+       <answer>de</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>de</text>
+      </target>
+      <text> crème fraîche</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="14" name="default" italic="false" bold="true" foreground="0x000000">
+      <text>4 oeufs</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="14" name="default" italic="false" bold="true" foreground="0x000000">
+      <text>1 verre </text>
+      <target>
+       <answer>de</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>de</text>
+      </target>
+      <text> lait</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="14" name="default" italic="false" bold="true" foreground="0x000000">
+      <text>sel</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="14" name="default" italic="false" bold="true" foreground="0x000000">
+      <text>poivre</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="14" name="default" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Arial" size="14" name="default" italic="false" bold="true" foreground="0x000000">
+      <text>PRÉPARATION</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="14" name="default" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Arial" size="14" name="default" italic="false" bold="true" foreground="0x000000">
+      <text>Mélager </text>
+      <target>
+       <answer>les</answer>
+       <response fill="_" length="2" maxLength="3" />
+       <text>les</text>
+      </target>
+      <text> ingrédients </text>
+      <target>
+       <answer>de</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>de</text>
+      </target>
+      <text> </text>
+      <target>
+       <answer>la</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>la</text>
+      </target>
+      <text> pâte brise et formez </text>
+      <target>
+       <answer>une</answer>
+       <response fill="_" length="2" maxLength="3" />
+       <text>une</text>
+      </target>
+      <text> boule que vous étendrez </text>
+      <target>
+       <answer>sur</answer>
+       <response fill="_" length="2" maxLength="3" />
+       <text>sur</text>
+      </target>
+      <text> </text>
+      <target>
+       <answer>un</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>un</text>
+      </target>
+      <text> moule; </text>
+      <target>
+       <answer>sur</answer>
+       <response fill="_" length="2" maxLength="3" />
+       <text>sur</text>
+      </target>
+      <text> cette pâte, versez </text>
+      <target>
+       <answer>le</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>le</text>
+      </target>
+      <text> reste </text>
+      <target>
+       <answer>des</answer>
+       <response fill="_" length="2" maxLength="3" />
+       <text>des</text>
+      </target>
+      <text> ingrédients préalablement mélangés. Ajoutez </text>
+      <target>
+       <answer>du</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>du</text>
+      </target>
+      <text> sel et </text>
+      <target>
+       <answer>du</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>du</text>
+      </target>
+      <text> poivre.Mettez </text>
+      <target>
+       <answer>au</answer>
+       <response fill="_" length="2" maxLength="2" />
+       <text>au</text>
+      </target>
+      <text> four chaud </text>
+      <target>
+       <answer>pendant</answer>
+       <response fill="_" length="2" maxLength="7" />
+       <text>pendant</text>
+      </target>
+      <text> 45 minutes.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="record.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="25" bold="true" />
+      <color background="0x004080" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="chimes.wav" />
+     <p>VOUS POUVEZ COMMENCER L'ACTIVITÉ. Cliquez sur "i" seulement à la fin</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="25" bold="true" />
+      <color background="0x004080" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" infoCmd="repeter.txt" report="false">
+    <container bgColor="0x004080">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="3" cols="8" cellWidth="140.0" cellHeight="100.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="8" rows="3" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="produc1.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="produc2.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="produc3.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="produc4.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="produc5.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="produc6.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="produc7.wav" />
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="produc8.wav" />
+    </cell>
+    <cell>
+     <media type="RECORD_AUDIO" level="1" buffer="0" length="9" />
+    </cell>
+    <cell>
+     <media type="RECORD_AUDIO" level="1" buffer="1" length="9" />
+    </cell>
+    <cell>
+     <media type="RECORD_AUDIO" level="1" buffer="2" length="9" />
+    </cell>
+    <cell>
+     <media type="RECORD_AUDIO" level="1" buffer="3" length="9" />
+    </cell>
+    <cell>
+     <media type="RECORD_AUDIO" level="1" buffer="4" length="9" />
+    </cell>
+    <cell>
+     <media type="RECORD_AUDIO" level="1" buffer="5" length="9" />
+    </cell>
+    <cell>
+     <media type="RECORD_AUDIO" level="1" buffer="6" length="9" />
+    </cell>
+    <cell>
+     <media type="RECORD_AUDIO" level="1" buffer="7" length="9" />
+    </cell>
+    <cell>
+     <media type="PLAY_RECORDED_AUDIO" level="1" buffer="0" />
+    </cell>
+    <cell>
+     <media type="PLAY_RECORDED_AUDIO" level="1" buffer="1" />
+    </cell>
+    <cell>
+     <media type="PLAY_RECORDED_AUDIO" level="1" buffer="2" />
+    </cell>
+    <cell>
+     <media type="PLAY_RECORDED_AUDIO" level="1" buffer="3" />
+    </cell>
+    <cell>
+     <media type="PLAY_RECORDED_AUDIO" level="1" buffer="4" />
+    </cell>
+    <cell>
+     <media type="PLAY_RECORDED_AUDIO" level="1" buffer="5" />
+    </cell>
+    <cell>
+     <media type="PLAY_RECORDED_AUDIO" level="1" buffer="6" />
+    </cell>
+    <cell>
+     <media type="PLAY_RECORDED_AUDIO" level="1" buffer="7" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.FillInBlanks" name="restsym.txa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x408080" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="chimes.wav" />
+     <p>Instructions: partie supérieure du tableau</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x408080" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso.wav" />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x408080">
+     <image name="mantel.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <size width="625" height="500" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" background="0xFFFFFF" family="Arial" size="15" italic="false" tabWidth="16" foreground="0x000000" bold="true" />
+    <style name="target" base="default" background="0xC0C0C0" target="true" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">
+      <cell width="600" height="75" border="false">
+       <style>
+        <font family="Arial" size="13" bold="true" />
+        <color background="0x408080" />
+       </style>
+       <p>MONSIEUR ET MADAME VONT DANS UN PETIT RESTAURANT SYMPATHIQUE. CLIQUEZ SUR LE HAUT- PARLEUR POUR ÉCOUTER LA SCÈNE ET COMPLÉTEZ LES DÉTAILS DU TEXTE.</p>
+      </cell>
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">                                                            </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">GARÇON: Bonjour, Monsieur, Dame. C'est pour </text>
+      <target>
+       <answer>déjeuner</answer>
+       <response fill="_" length="12" maxLength="8" />
+       <text>déjeuner</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">?</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">HOMME: Oui, </text>
+      <target>
+       <answer>on</answer>
+       <response fill="_" length="12" maxLength="2" />
+       <text>on</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000"> peut se mettre là-bas, au fond de la salle?</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">GARÇON: Ah non, ces tables sont </text>
+      <target>
+       <answer>réservées</answer>
+       <response fill="_" length="12" maxLength="9" />
+       <text>réservées</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">. Mettez-vous ici...</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">FEMME: Non, pas au milieu de la salle. </text>
+      <target>
+       <answer>Mettons</answer>
+       <response fill="_" length="12" maxLength="7" />
+       <text>Mettons</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">-nous là, sur le côté!</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">GARÇON: </text>
+      <target>
+       <answer>Comme</answer>
+       <response fill="_" length="12" maxLength="5" />
+       <text>Comme</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000"> vous voulez... Vous voulez un </text>
+      <target>
+       <answer>apéritif</answer>
+       <response fill="_" length="12" maxLength="8" />
+       <text>apéritif</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">?</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">HOMME ET FEMME: Non, merci.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">GARÇON: Alors, voici le </text>
+      <target>
+       <answer>menu</answer>
+       <response fill="_" length="12" maxLength="4" />
+       <text>menu</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">HOMME: Alors, voyons... </text>
+      <target>
+       <answer>Jambon</answer>
+       <response fill="_" length="12" maxLength="6" />
+       <text>Jambon</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000"> de pays, salade </text>
+      <target>
+       <answer>verte</answer>
+       <response fill="_" length="12" maxLength="5" />
+       <text>verte</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">, salade de </text>
+      <target>
+       <answer>tomates/tomate</answer>
+       <response fill="_" length="12" maxLength="7" />
+       <text>tomates</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">. Qu'est-ce que tu prends?</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">FEMME: Une salade </text>
+      <target>
+       <answer>verte</answer>
+       <response fill="_" length="12" maxLength="5" />
+       <text>verte</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">HOMME: Donc, une salade </text>
+      <target>
+       <answer>verte</answer>
+       <response fill="_" length="12" maxLength="5" />
+       <text>verte</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000"> et... un </text>
+      <target>
+       <answer>jambon</answer>
+       <response fill="_" length="12" maxLength="6" />
+       <text>jambon</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000"> de pays.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">GARÇON: Très bien, et ensuite?</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">FEMME: Une </text>
+      <target>
+       <answer>omelette</answer>
+       <response fill="_" length="12" maxLength="8" />
+       <text>omelette</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000"> aux champignons.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">HOMME: Eh bien, moi </text>
+      <target>
+       <answer>aussi</answer>
+       <response fill="_" length="12" maxLength="5" />
+       <text>aussi</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">GARÇON: Et </text>
+      <target>
+       <answer>comme</answer>
+       <response fill="_" length="12" maxLength="5" />
+       <text>comme</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000"> boisson? Tu veux boire un peu de vin?</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">FEMME: Ah oui, je veux bien, mais juste un </text>
+      <target>
+       <answer>verre</answer>
+       <response fill="_" length="12" maxLength="5" />
+       <text>verre</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">... et du </text>
+      <target>
+       <answer>rouge</answer>
+       <response fill="_" length="12" maxLength="5" />
+       <text>rouge</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">, s'il te plaît.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">HOMME: Alors, une demi-</text>
+      <target>
+       <answer>bouteille</answer>
+       <response fill="_" length="12" maxLength="9" />
+       <text>bouteille</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000"> de rouge.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">GARÇON: Du vin de pays, ça va </text>
+      <target>
+       <answer>aller</answer>
+       <response fill="_" length="12" maxLength="5" />
+       <text>aller</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">?</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">HOMME: Oui oui, c'est </text>
+      <target>
+       <answer>parfait</answer>
+       <response fill="_" length="12" maxLength="7" />
+       <text>parfait</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">FEMME: Et une carafe </text>
+      <target>
+       <answer>d'</answer>
+       <response fill="_" length="12" maxLength="2" />
+       <text>d'</text>
+      </target>
+      <text background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000">eau, s'il vous plaît.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Arial" size="15" italic="false" bold="true" foreground="0x000000" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="trouart.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x004080" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="chimes.wav" />
+     <p>DANS CE TEXTE, IL MANQUE BEAUCOUP D'ARTICLES OU DES PRÉPOSITIONS! COMPLÉTEZ-LES</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x004080" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="aplauso.wav" />
+     <p>TERMINÉ! BRAVO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondo3.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <size width="700" height="500" />
+    </window>
+   </settings>
+   <document>
+    <style name="target" base="default" background="0xC0C0C0" target="true" foreground="0x0000FF" />
+    <style name="default" background="0xFFFFFF" family="Arial" size="17" italic="false" tabWidth="16" foreground="0x000000" bold="true" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="true" foreground="0x000000">
+      <text>1.	Pour faire </text>
+      <target>
+       <answer>une</answer>
+       <answer>la</answer>
+       <response fill="_" length="6" maxLength="5" />
+       <text>une</text>
+      </target>
+      <text> bechamel, il faut </text>
+      <target>
+       <answer>de la</answer>
+       <response fill="_" length="6" maxLength="5" />
+       <text>de la</text>
+      </target>
+      <text> farine, </text>
+      <target>
+       <answer>du</answer>
+       <response fill="_" length="6" maxLength="2" />
+       <text>du</text>
+      </target>
+      <text> beurre, </text>
+      <target>
+       <answer>un</answer>
+       <response fill="_" length="6" maxLength="2" />
+       <text>un</text>
+      </target>
+      <text> peu </text>
+      <target>
+       <answer>de</answer>
+       <response fill="_" length="6" maxLength="2" />
+       <text>de</text>
+      </target>
+      <text> sel, mais pas </text>
+      <target>
+       <answer>d'</answer>
+       <response fill="_" length="6" maxLength="2" />
+       <text>d'</text>
+      </target>
+      <text>eau.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="true" foreground="0x000000">
+      <text>2.	Dans </text>
+      <target>
+       <answer>le</answer>
+       <answer>un</answer>
+       <response fill="_" length="6" maxLength="2" />
+       <text>le</text>
+      </target>
+      <text> cassoulet, il y a </text>
+      <target>
+       <answer>des</answer>
+       <response fill="_" length="6" maxLength="3" />
+       <text>des</text>
+      </target>
+      <text> haricots blancs et </text>
+      <target>
+       <answer>de la</answer>
+       <response fill="_" length="6" maxLength="5" />
+       <text>de la</text>
+      </target>
+      <text> charcuterie; il n'y a pas </text>
+      <target>
+       <answer>de</answer>
+       <response fill="_" length="6" maxLength="2" />
+       <text>de</text>
+      </target>
+      <text> légumes verts.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="true" foreground="0x000000">
+      <text>3.	On prépare la pâte </text>
+      <target>
+       <answer>des</answer>
+       <response fill="_" length="6" maxLength="3" />
+       <text>des</text>
+      </target>
+      <text> crêpes avec </text>
+      <target>
+       <answer>de la</answer>
+       <response fill="_" length="6" maxLength="5" />
+       <text>de la</text>
+      </target>
+      <text> farine, </text>
+      <target>
+       <answer>des</answer>
+       <response fill="_" length="6" maxLength="3" />
+       <text>des</text>
+      </target>
+      <text> oeufs et </text>
+      <target>
+       <answer>du</answer>
+       <response fill="_" length="6" maxLength="2" />
+       <text>du</text>
+      </target>
+      <text> lait. Parfois, on met aussi </text>
+      <target>
+       <answer>un</answer>
+       <response fill="_" length="6" maxLength="2" />
+       <text>un</text>
+      </target>
+      <text> peu </text>
+      <target>
+       <answer>d'</answer>
+       <response fill="_" length="6" maxLength="2" />
+       <text>d'</text>
+      </target>
+      <text>eau.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="true" foreground="0x000000">
+      <text>4.	Pour préparer </text>
+      <target>
+       <answer>une</answer>
+       <answer>la</answer>
+       <response fill="_" length="6" maxLength="3" />
+       <text>une</text>
+      </target>
+      <text> fondue </text>
+      <target>
+       <answer>de</answer>
+       <response fill="_" length="6" maxLength="2" />
+       <text>de</text>
+      </target>
+      <text> fromage, prenez juste </text>
+      <target>
+       <answer>du</answer>
+       <response fill="_" length="6" maxLength="2" />
+       <text>du</text>
+      </target>
+      <text> vin blanc et </text>
+      <target>
+       <answer>des</answer>
+       <response fill="_" length="6" maxLength="3" />
+       <text>des</text>
+      </target>
+      <text> fromages. Ne mettez pas </text>
+      <target>
+       <answer>de</answer>
+       <response fill="_" length="6" maxLength="2" />
+       <text>de</text>
+      </target>
+      <text> sel.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="true" foreground="0x000000">
+      <text>5.	Voici </text>
+      <target>
+       <answer>les</answer>
+       <response fill="_" length="6" maxLength="3" />
+       <text>les</text>
+      </target>
+      <text> ingrédients d'</text>
+      <target>
+       <answer>une</answer>
+       <response fill="_" length="6" maxLength="3" />
+       <text>une</text>
+      </target>
+      <text> bonne mousse: </text>
+      <target>
+       <answer>du</answer>
+       <response fill="_" length="6" maxLength="2" />
+       <text>du</text>
+      </target>
+      <text> chocolat (au lait ou noir), </text>
+      <target>
+       <answer>du</answer>
+       <response fill="_" length="6" maxLength="5" />
+       <text>du</text>
+      </target>
+      <text> beurre, </text>
+      <target>
+       <answer>des</answer>
+       <response fill="_" length="6" maxLength="3" />
+       <text>des</text>
+      </target>
+      <text> oeufs, </text>
+      <target>
+       <answer>du</answer>
+       <response fill="_" length="6" maxLength="2" />
+       <text>du</text>
+      </target>
+      <text> sucre. </text>
+      <target>
+       <answer>Les</answer>
+       <response fill="_" length="6" maxLength="3" />
+       <text>Les</text>
+      </target>
+      <text> jaunes et </text>
+      <target>
+       <answer>les</answer>
+       <response fill="_" length="6" maxLength="3" />
+       <text>les</text>
+      </target>
+      <text> blancs </text>
+      <target>
+       <answer>des</answer>
+       <response fill="_" length="6" maxLength="3" />
+       <text>des</text>
+      </target>
+      <text> oeufs doivent être séparés. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="true" foreground="0x000000">
+      <text>6.	Qu'est-ce que vous devez avoir pour faire </text>
+      <target>
+       <answer>une</answer>
+       <response fill="_" length="6" maxLength="3" />
+       <text>une</text>
+      </target>
+      <text> omelette ? Et bien, seulement </text>
+      <target>
+       <answer>un</answer>
+       <response fill="_" length="6" maxLength="2" />
+       <text>un</text>
+      </target>
+      <text> peu </text>
+      <target>
+       <answer>d'</answer>
+       <response fill="_" length="6" maxLength="2" />
+       <text>d'</text>
+      </target>
+      <text>huile et </text>
+      <target>
+       <answer>un</answer>
+       <response fill="_" length="6" maxLength="2" />
+       <text>un</text>
+      </target>
+      <text> œuf !</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="true" foreground="0x000000">
+      <text>7.	Il y a </text>
+      <target>
+       <answer>des</answer>
+       <response fill="_" length="6" maxLength="3" />
+       <text>des</text>
+      </target>
+      <text> recettes </text>
+      <target>
+       <answer>de</answer>
+       <response fill="_" length="6" maxLength="2" />
+       <text>de</text>
+      </target>
+      <text> quiche très variées. </text>
+      <target>
+       <answer>La</answer>
+       <response fill="_" length="6" maxLength="2" />
+       <text>La</text>
+      </target>
+      <text> quiche préparée avec </text>
+      <target>
+       <answer>des</answer>
+       <response fill="_" length="6" maxLength="3" />
+       <text>des</text>
+      </target>
+      <text> lardons est excellente.</text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="true" foreground="0x000000" />
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="true" foreground="0x000000">
+      <text>8.	La crème vichyssoise est très simple. Pour la préparer, utilisez </text>
+      <target>
+       <answer>des</answer>
+       <response fill="_" length="6" maxLength="3" />
+       <text>des</text>
+      </target>
+      <text> poireaux bien frais. </text>
+     </p>
+     <p background="0xFFFFFF" family="Arial" size="17" name="default" italic="false" bold="true" foreground="0x000000" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="boite.gif" file="boite.gif" animated="false" />
+  <media name="cafe.gif" file="cafe.gif" animated="false" />
+  <media name="carne.gif" file="carne.gif" animated="false" />
+  <media name="chocolat.gif" file="chocolat.gif" animated="false" />
+  <media name="cigar.gif" file="cigar.gif" animated="false" />
+  <media name="fondo1.gif" file="fondo1.gif" animated="false" />
+  <media name="fondo3.gif" file="fondo3.gif" animated="false" />
+  <media name="fondo5.gif" file="fondo5.gif" animated="false" />
+  <media name="fondopu.gif" file="fondopu.gif" animated="false" />
+  <media name="frdrap.gif" file="frdrap.gif" animated="false" />
+  <media name="fruta.gif" file="fruta.gif" animated="false" />
+  <media name="gorrococ.gif" file="gorrococ.gif" animated="false" />
+  <media name="huevos.gif" file="huevos.gif" animated="false" />
+  <media name="leche.gif" file="leche.gif" animated="false" />
+  <media name="mantel.gif" file="mantel.gif" animated="false" />
+  <media name="minialt.gif" file="minialt.gif" animated="false" />
+  <media name="pan.gif" file="pan.gif" animated="false" />
+  <media name="patatas.gif" file="patatas.gif" animated="false" />
+  <media name="pescado.gif" file="pescado.gif" animated="false" />
+  <media name="platano.gif" file="platano.gif" animated="false" />
+  <media name="pot.gif" file="pot.gif" animated="false" />
+  <media name="queso.gif" file="queso.gif" animated="false" />
+  <media name="quiche.gif" file="quiche.gif" animated="false" />
+  <media name="salade.gif" file="salade.gif" animated="false" />
+  <media name="sauciss.gif" file="sauciss.gif" animated="false" />
+  <media name="tomate.gif" file="tomate.gif" animated="false" />
+  <media name="vino.gif" file="vino.gif" animated="false" />
+  <media name="yogur.gif" file="yogur.gif" animated="false" />
+  <media name="aplauso.wav" file="aplauso.wav" />
+  <media name="cafe1.wav" file="cafe1.wav" />
+  <media name="cafe10.wav" file="cafe10.wav" />
+  <media name="cafe2.wav" file="cafe2.wav" />
+  <media name="cafe3.wav" file="cafe3.wav" />
+  <media name="cafe4.wav" file="cafe4.wav" />
+  <media name="cafe5.wav" file="cafe5.wav" />
+  <media name="cafe6.wav" file="cafe6.wav" />
+  <media name="cafe7.wav" file="cafe7.wav" />
+  <media name="cafe8.wav" file="cafe8.wav" />
+  <media name="cafe9.wav" file="cafe9.wav" />
+  <media name="chimes.wav" file="chimes.wav" />
+  <media name="produc1.wav" file="produc1.wav" />
+  <media name="produc2.wav" file="produc2.wav" />
+  <media name="produc3.wav" file="produc3.wav" />
+  <media name="produc4.wav" file="produc4.wav" />
+  <media name="produc5.wav" file="produc5.wav" />
+  <media name="produc6.wav" file="produc6.wav" />
+  <media name="produc7.wav" file="produc7.wav" />
+  <media name="produc8.wav" file="produc8.wav" />
+ </mediaBag>
+</JClicProject>
+

@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="paquete1" version="0.1.3">
+ <settings>
+  <title>Trabajar en el laboratorio de química</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="6/16/03" />
+  <revision description="Conversión de Clic3 a JClic" date="6/18/03">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Olga Valiente Francés" mail="ovaliente@educa.aragon.es" />
+  <organization name="Centro de Profesores y Recursos de Andorra" mail="cprandorra@educa.aragon.es" url="http://www.educa.aragob.es/cprandor/" city="Andorra" state="Aragón" />
+  <language>es</language>
+  <description>
+   <p>Las actividades de esta aplicación están orientadas a que los alumnos conozcan el material básico que se utiliza en un laboratorio de química para realizar las diferentes prácticas. Sus objetivos son:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Conocer y cumplir las normas de seguridad para trabajar en un laboratorio escolar de química.</p>
+   <p>&lt;LI&gt;Descubrir el significado de los pictogramas que aparecen en las etiquetas de los productos químicos.</p>
+   <p>&lt;LI&gt;Familiarizarse con el modo de trabajar en el laboratorio.</p>
+   <p>&lt;LI&gt;Aprender que llevar a cabo experiencias químicas puede resultar peligroso si no se toman una serie de medidas de seguridad.</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area-codes="exp" level-codes="PRI, SEC">experimentación, química</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Las actividades de esta aplicación están orientadas a que los alumnos conozcan el material básico que se utiliza en un laboratorio de química para realizar las diferentes prácticas. Sus objetivos son:</p>
+    <p>&lt;UL&gt;</p>
+    <p>&lt;LI&gt;Conocer y cumplir las normas de seguridad para trabajar en un laboratorio escolar de química.</p>
+    <p>&lt;LI&gt;Descubrir el significado de los pictogramas que aparecen en las etiquetas de los productos químicos.</p>
+    <p>&lt;LI&gt;Familiarizarse con el modo de trabajar en el laboratorio.</p>
+    <p>&lt;LI&gt;Aprender que llevar a cabo experiencias químicas puede resultar peligroso si no se toman una serie de medidas de seguridad.</p>
+    <p>&lt;/UL&gt;</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="paquete1.pac" name="portadam.txa">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="fotos1.ass" />
+  <item name="fotos2.ass" />
+  <item name="fotos3.ass" />
+  <item name="fotos4.ass" />
+  <item name="fotos5.ass" />
+  <item name="fotos6.ass" />
+  <item name="fotos7.ass" />
+  <item name="fotos8.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.Explore" name="fotos1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="53" />
+      <color foreground="0x800040" background="0xFFFF80" />
+     </style>
+     <p>Haz clic en el nombre del material y aparecerá su fotografía</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="53" />
+      <color foreground="0x800040" background="0xFFFF80" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡MUY BIEN! </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFF80">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0x800040" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="480.0" cellHeight="390.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="23" />
+     <color foreground="0xFFFFFF" background="0x800040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="tubos.wav" />
+     <p>tubos de ensayo </p>
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="pipetas.wav" />
+     <p>pipetas </p>
+    </cell>
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="vasos.wav" />
+     <p>vasos de precipitados </p>
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="reactivo.wav" />
+     <p>reactivos químicos </p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="480.0" cellHeight="390.0" border="false" id="secondary">
+    <style>
+     <color foreground="0xFFFFFF" background="0x800040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="vasos.jpg" />
+    <cell image="tubos.jpg" />
+    <cell image="pipetas.jpg" />
+    <cell image="reacti.jpg" />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="fotos2.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="45" />
+      <color foreground="0x800040" background="0xFFFF80" />
+     </style>
+     <p>Haz clic en la fotografía para saber el nombre del material</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="45" />
+      <color foreground="0x800040" background="0xFFFF80" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x800040" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="323.0" cellHeight="240.0" border="false" id="primary">
+    <style>
+     <color foreground="0xFFFF80" background="0x800040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell id="1" image="buretas.jpg" />
+    <cell id="3" image="erlenm.jpg" />
+    <cell id="2" image="probetas.jpg" />
+    <cell id="0" image="escobip.jpg" />
+   </cells>
+   <cells rows="2" cols="2" cellWidth="296.0" cellHeight="240.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="45" />
+     <color foreground="0xFFFFFF" background="0x800040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="escobi.wav" />
+     <p>escobilla </p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="buretaco.wav" />
+     <p>bureta con soporte</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="probetas.wav" />
+     <p>probetas </p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="erlenmey.wav" />
+     <p>erlenmeyer</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="fotos3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="53" />
+      <color foreground="0x800040" background="0xFFFF80" />
+     </style>
+     <p>Identifica los materiales de las fotografías</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="53" />
+      <color foreground="0x800040" background="0xFFFF80" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡MUY BIEN! </p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFF80">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x800040" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="480.0" cellHeight="390.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="23" />
+     <color foreground="0xFFFFFF" background="0x800040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="tubos.wav" />
+     <p>tubos de ensayo </p>
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="pipetas.wav" />
+     <p>pipetas </p>
+    </cell>
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="vasos.wav" />
+     <p>vasos de precipitados </p>
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="reactivo.wav" />
+     <p>reactivos químicos </p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="480.0" cellHeight="390.0" border="false" id="secondary">
+    <style>
+     <color foreground="0xFFFFFF" background="0x800040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="vasos.jpg" />
+    <cell image="tubos.jpg" />
+    <cell image="pipetas.jpg" />
+    <cell image="reacti.jpg" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="fotos4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="53" />
+      <color foreground="0x800040" background="0xFFFF80" />
+     </style>
+     <p>Identifica los materiales de las fotografías</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="53" />
+      <color foreground="0x800040" background="0xFFFF80" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFF80">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x800040" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="434.0" cellHeight="400.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="21" bold="true" />
+     <color foreground="0xFFFFFF" background="0x800040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell id="1" image="buretas.jpg" />
+    <cell id="3" image="erlenm.jpg" />
+    <cell id="2" image="probetas.jpg" />
+    <cell id="0" image="escobip.jpg" />
+   </cells>
+   <cells rows="2" cols="2" cellWidth="548.0" cellHeight="400.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="25" />
+     <color foreground="0xFFFFFF" background="0x800040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="escobi.wav" />
+     <p>escobilla </p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="buretaco.wav" />
+     <p>bureta con soporte</p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="probetas.wav" />
+     <p>probetas </p>
+    </cell>
+    <cell>
+     <media type="PLAY_AUDIO" level="1" file="erlenmey.wav" />
+     <p>erlenmeyer</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="BA" />
+  </activity>
+  <activity class="@panels.Explore" name="fotos5.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="45" />
+      <color foreground="0x800040" background="0xFFFF80" />
+     </style>
+     <p>Haz clic en el nombre del material para ver su fotografia</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="45" />
+      <color foreground="0x800040" background="0xFFFF80" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x800040" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="200.0" cellHeight="240.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="53" />
+     <color foreground="0xFFFFFF" background="0x800040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="cuchar.wav" />
+     <p>cucharilla </p>
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="frasco.wav" />
+     <p>frasco lavador </p>
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="pinzas.wav" />
+     <p>pinzas </p>
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="embudo.wav" />
+     <p>embudo </p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="296.0" cellHeight="240.0" border="false" id="secondary">
+    <style>
+     <color foreground="0xFFFF80" background="0x800040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="cucharip.jpg" />
+    <cell image="embudop.jpg" />
+    <cell image="lavadorp.jpg" />
+    <cell image="pinzasp.jpg" />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="fotos6.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="45" />
+      <color foreground="0x800040" background="0xFFFF80" />
+     </style>
+     <p>Haz clic en el nombre del material para ver su fotografia</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="45" />
+      <color foreground="0x800040" background="0xFFFF80" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x800040" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="200.0" cellHeight="240.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="53" />
+     <color foreground="0xFFFFFF" background="0x800040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="tapones.wav" />
+     <p>tapones </p>
+    </cell>
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="gafas.wav" />
+     <p>gafas protectoras </p>
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="filtros.wav" />
+     <p>papel de filtro </p>
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="mechero.wav" />
+     <p>mechero Busner</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="296.0" cellHeight="240.0" border="false" id="secondary">
+    <style>
+     <color foreground="0xFFFF80" background="0x800040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="gafasp.jpg" />
+    <cell image="taponp.jpg" />
+    <cell image="filtrosp.jpg" />
+    <cell image="mecherop.jpg" />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="fotos7.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="53" />
+      <color foreground="0x800040" background="0xFFFF80" />
+     </style>
+     <p>Identifica los materiales de las fotografías</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="53" />
+      <color foreground="0x800040" background="0xFFFF80" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFF80">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x800040" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="260.0" cellHeight="500.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="42" bold="true" />
+     <color foreground="0xFFFFFF" background="0x800040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="tapones.wav" />
+     <p>tapones </p>
+    </cell>
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="gafas.wav" />
+     <p>gafas protectoras </p>
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="filtros.wav" />
+     <p>papel de filtro </p>
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="mechero.wav" />
+     <p>mechero Busner</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="700.0" cellHeight="500.0" border="false" id="secondary">
+    <style>
+     <color foreground="0xFFFFFF" background="0x800040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="gafasp.jpg" />
+    <cell image="taponp.jpg" />
+    <cell image="filtrosp.jpg" />
+    <cell image="mecherop.jpg" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="fotos8.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="53" />
+      <color foreground="0x800040" background="0xFFFF80" />
+     </style>
+     <p>Identifica los materiales de las fotografías</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="53" />
+      <color foreground="0x800040" background="0xFFFF80" />
+     </style>
+     <media type="PLAY_AUDIO" level="2" file="muybien.wav" />
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFF80">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x800040" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="260.0" cellHeight="500.0" border="false" id="primary">
+    <style>
+     <font family="Arial" size="42" bold="true" />
+     <color foreground="0xFFFFFF" background="0x800040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell id="0">
+     <media type="PLAY_AUDIO" level="1" file="cuchar.wav" />
+     <p>cucharilla </p>
+    </cell>
+    <cell id="2">
+     <media type="PLAY_AUDIO" level="1" file="frasco.wav" />
+     <p>frasco lavador </p>
+    </cell>
+    <cell id="3">
+     <media type="PLAY_AUDIO" level="1" file="pinzas.wav" />
+     <p>pinzas </p>
+    </cell>
+    <cell id="1">
+     <media type="PLAY_AUDIO" level="1" file="embudo.wav" />
+     <p>embudo </p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="2" cellWidth="700.0" cellHeight="500.0" border="false" id="secondary">
+    <style>
+     <color foreground="0xFFFFFF" background="0x800040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="cucharip.jpg" />
+    <cell image="embudop.jpg" />
+    <cell image="lavadorp.jpg" />
+    <cell image="pinzasp.jpg" />
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="portadam.txa">
+   <messages>
+    <cell type="initial">
+     <style />
+     <media type="PLAY_AUDIO" level="2" file="musica1.wav" />
+     <p> </p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="pipetas.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="628" height="398" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" size="24" background="0x800040" family="Arial" bold="false" foreground="0xFFFFFF" italic="false" tabWidth="14" />
+    <style name="target" base="default" target="true" background="0xC0C0C0" foreground="0x0000FF" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p>
+      <text>                    </text>
+      <cell width="332" height="86" border="true">
+       <style>
+        <font family="Arial" size="37" bold="true" />
+        <color foreground="0x800040" background="0xFFFFFF" />
+       </style>
+       <p>MATERIAL  DE</p>
+       <p>LABORATORIO</p>
+      </cell>
+     </p>
+     <p />
+     <p>
+      <text>	Para trabajar en el Laboratorio de Química se necesita una serie de materiales indispensables para llevar a cabo las experiencias y las prácticas.</text>
+     </p>
+     <p>
+      <text>	A través de estas actividades conoceremos diferentes materiales que usaremos en nuestro trabajo en el laboratorio de química. La mayor parte es de cristal por lo que hay que tener especial cuidado tanto en la manipulación como en su limpieza.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="buretas.jpg" file="buretas.jpg" />
+  <media name="cucharip.jpg" file="cucharip.jpg" />
+  <media name="embudop.jpg" file="embudop.jpg" />
+  <media name="erlenm.jpg" file="erlenm.jpg" />
+  <media name="escobip.jpg" file="escobip.jpg" />
+  <media name="filtrosp.jpg" file="filtrosp.jpg" />
+  <media name="gafasp.jpg" file="gafasp.jpg" />
+  <media name="lavadorp.jpg" file="lavadorp.jpg" />
+  <media name="mecherop.jpg" file="mecherop.jpg" />
+  <media name="pinzasp.jpg" file="pinzasp.jpg" />
+  <media name="pipetas.jpg" file="pipetas.jpg" />
+  <media name="probetas.jpg" file="probetas.jpg" />
+  <media name="reacti.jpg" file="reacti.jpg" />
+  <media name="taponp.jpg" file="taponp.jpg" />
+  <media name="tubos.jpg" file="tubos.jpg" />
+  <media name="vasos.jpg" file="vasos.jpg" />
+  <media name="buretaco.wav" file="buretaco.wav" />
+  <media name="cuchar.wav" file="cuchar.wav" />
+  <media name="embudo.wav" file="embudo.wav" />
+  <media name="erlenmey.wav" file="erlenmey.wav" />
+  <media name="escobi.wav" file="escobi.wav" />
+  <media name="filtros.wav" file="filtros.wav" />
+  <media name="frasco.wav" file="frasco.wav" />
+  <media name="gafas.wav" file="gafas.wav" />
+  <media name="mechero.wav" file="mechero.wav" />
+  <media name="musica1.wav" file="musica1.wav" />
+  <media name="muybien.wav" file="muybien.wav" />
+  <media name="pinzas.wav" file="pinzas.wav" />
+  <media name="pipetas.wav" file="pipetas.wav" />
+  <media name="probetas.wav" file="probetas.wav" />
+  <media name="reactivo.wav" file="reactivo.wav" />
+  <media name="tapones.wav" file="tapones.wav" />
+  <media name="tubos.wav" file="tubos.wav" />
+  <media name="vasos.wav" file="vasos.wav" />
+ </mediaBag>
+</JClicProject>
+

@@ -1,0 +1,1336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="losali~1" version="0.1.3">
+ <settings>
+  <title>Los alimentos</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="3/9/99" />
+  <revision description="Conversión de Clic3 a JClic" date="7/2/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Ramiro Garijo Tarancón" mail="rgarijo.3017@cajarural.com" />
+  <language>es</language>
+  <description>
+   <p>Paquete de actividades basado en el libro de texto "Los Alimentos" para 3º de primaria de la editorial EDEBE. Trabaja temas como el origen de los alimentos, los gustos, las tiendas donde los venden, maneras de conservarlos...</p>
+  </description>
+  <descriptors area-codes="exp" level="Primaria">alimentos, higiene</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Paquete de actividades basado en el libro de texto "Los Alimentos" para 3º de primaria de la editorial EDEBE. Trabaja temas como el origen de los alimentos, los gustos, las tiendas donde los venden, maneras de conservarlos...</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="losali~1.pac" name="portada.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="pag1.ass" />
+  <item name="pag2.ass" />
+  <item name="pag3.ass" />
+  <item name="pag4.ass" />
+  <item name="pag5.puz" />
+  <item name="pag6.ass" />
+  <item name="pag7.ass" />
+  <item name="pag8.ass" />
+  <item name="pag9.ass" />
+  <item name="pag10.ass" />
+  <item name="pag11.sop" />
+  <item name="pag12.ass" />
+  <item name="pag13.ass" />
+  <item name="pag14.ass" />
+  <item name="pag15.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.ComplexAssociation" name="pag1.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0x800000" background="0xFFFFFF" />
+     </style>
+     <p>Relaciona alimentos con sabores</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0x800000" background="0xFFFFFF" />
+     </style>
+     <p>¡¡¡¡ Muy bien !!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x80FF80" border="true" />
+   </settings>
+   <cells rows="3" columns="4" cellWidth="700.0" cellHeight="476.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="24" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="4" />
+    <cell id="1">
+     <p>sal</p>
+    </cell>
+    <cell id="0">
+     <p>azucar</p>
+    </cell>
+    <cell id="2">
+     <p>escarola</p>
+    </cell>
+    <cell id="3">
+     <p>limón</p>
+    </cell>
+    <cell id="0">
+     <p>cereza</p>
+    </cell>
+    <cell id="1">
+     <p>anchoa</p>
+    </cell>
+    <cell id="2">
+     <p>alcachofa</p>
+    </cell>
+    <cell id="0">
+     <p>mermelada</p>
+    </cell>
+    <cell id="1">
+     <p>bacalao</p>
+    </cell>
+    <cell id="0">
+     <p>flan</p>
+    </cell>
+    <cell id="3">
+     <p>naranja</p>
+    </cell>
+    <cell id="0">
+     <p>chocolate</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="354.0" cellHeight="499.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>DULCE</p>
+    </cell>
+    <cell>
+     <p>SALADO</p>
+    </cell>
+    <cell>
+     <p>AMARGO</p>
+    </cell>
+    <cell>
+     <p>ACIDO</p>
+    </cell>
+   </cells>
+   <cells rows="3" columns="4" cellWidth="700.0" cellHeight="476.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="4" />
+    <cell>
+     <p>SAL=SALADO</p>
+    </cell>
+    <cell>
+     <p>AZUCAR0=DULCE</p>
+    </cell>
+    <cell>
+     <p>ESCAROLA=AMARGO</p>
+    </cell>
+    <cell>
+     <p>LIMÓN=ACIDO</p>
+    </cell>
+    <cell>
+     <p>CEREZA=DULCE</p>
+    </cell>
+    <cell>
+     <p>ANCHOA=SALADO</p>
+    </cell>
+    <cell>
+     <p>ALCACHOFAS=AMARGO</p>
+    </cell>
+    <cell>
+     <p>MERMELADA=DULCE</p>
+    </cell>
+    <cell>
+     <p>BACALAO=SALADO</p>
+    </cell>
+    <cell>
+     <p>FLAN=DULCE</p>
+    </cell>
+    <cell>
+     <p>NARANJA=ACIDO</p>
+    </cell>
+    <cell>
+     <p>CHOCOLATE=DULCE</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="pag10.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF80" />
+     </style>
+     <p>¿Con cúales de estos componentes se hace el pan?:lechuga, harina o azucar</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF80" />
+     </style>
+     <p>¡¡¡ Buen panadero  ¡¡¡</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF80" border="true" />
+   </settings>
+   <cells rows="1" columns="1" border="true" image="10pan.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+   <cells rows="1" columns="1" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>harina</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="1" cellWidth="140.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>El pan se hace con harina, sal,levadura y agua</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="pag11.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF80" />
+     </style>
+     <p>Busca productos que se comen crudos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF80" />
+     </style>
+     <p>¡¡ Muy bien !!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="10" columns="9" cellWidth="57.0" cellHeight="56.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>Z*******U*</row>
+     <row>SANDIA**V*</row>
+     <row>L*N*****A*</row>
+     <row>E**A****S*</row>
+     <row>C***H*****</row>
+     <row>H***TOMATE</row>
+     <row>U***PERA**</row>
+     <row>G******I**</row>
+     <row>A*******A*</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">ZANAHORIA</clue>
+    <clue id="1">SANDIA</clue>
+    <clue id="2">UVAS</clue>
+    <clue id="3">LECHUGA</clue>
+    <clue id="4">TOMATE</clue>
+    <clue id="5">PERA</clue>
+   </clues>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="pag12.ass">
+   <description>
+    <p>Conocer las clasificaciónde los animales por la alimentación</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="19" bold="true" />
+      <color background="0xFFFF80" />
+     </style>
+     <p>Relaciona los que come cada animal ,con el dibujo representativo</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="19" bold="true" />
+      <color background="0xFFFF80" />
+     </style>
+     <p>¡ Estupendo !</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF00FF" border="true" />
+   </settings>
+   <cells rows="3" columns="3" cellWidth="485.0" cellHeight="448.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="1">
+     <p>vaca</p>
+    </cell>
+    <cell id="2">
+     <p>gato</p>
+    </cell>
+    <cell id="1">
+     <p>cerdo</p>
+    </cell>
+    <cell id="0">
+     <p>lobo</p>
+    </cell>
+    <cell id="0">
+     <p>león</p>
+    </cell>
+    <cell id="2">
+     <p>ser humano</p>
+    </cell>
+    <cell id="1">
+     <p>caballo</p>
+    </cell>
+    <cell id="2">
+     <p>gallina</p>
+    </cell>
+    <cell id="1">
+     <p>conejo</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="3" cellWidth="689.0" cellHeight="459.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell image="11carne.gif" />
+    <cell image="2esca.gif" />
+    <cell image="carne2.gif" />
+   </cells>
+   <cells rows="3" columns="3" cellWidth="485.0" cellHeight="448.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>Vaca=plantas</p>
+    </cell>
+    <cell>
+     <p>Gato=plantas y carne</p>
+    </cell>
+    <cell>
+     <p>Cerdo=Plantas</p>
+    </cell>
+    <cell>
+     <p>Lobo=carne</p>
+    </cell>
+    <cell>
+     <p>León=carne</p>
+    </cell>
+    <cell>
+     <p>Ser humano=plantas y carne</p>
+    </cell>
+    <cell>
+     <p>Caballo=Plantas</p>
+    </cell>
+    <cell>
+     <p>Gallina=plantas ycarne</p>
+    </cell>
+    <cell>
+     <p>Conejo=plantas</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="pag13.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFF80" />
+     </style>
+     <p>Completa la frase</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFF80" />
+     </style>
+     <p>¡¡¡ Fenomenal !!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x800080" border="true" />
+   </settings>
+   <cells rows="1" columns="1" cellWidth="369.0" cellHeight="241.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="21" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>Los animales que comen plantas se llaman___________</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="1" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>herbívoros</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="1" cellWidth="369.0" cellHeight="241.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>Los animales que comen plantas se llaman"herbívoros"</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="pag14.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF80" />
+     </style>
+     <p>Relaciona cada animal con el grupo que le corresponde</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF80" />
+     </style>
+     <p> ¿ Te gustan los animales ?</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="4" cellWidth="448.0" cellHeight="181.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell id="2">
+     <p>gato</p>
+    </cell>
+    <cell id="0">
+     <p>cerdo</p>
+    </cell>
+    <cell id="0">
+     <p>caballo</p>
+    </cell>
+    <cell id="2">
+     <p>lobo</p>
+    </cell>
+    <cell id="1">
+     <p>ser humano</p>
+    </cell>
+    <cell id="1">
+     <p>oso</p>
+    </cell>
+    <cell id="0">
+     <p>vaca</p>
+    </cell>
+    <cell id="0">
+     <p>conejo</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="3" cellWidth="209.0" cellHeight="191.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>Herbívoro</p>
+    </cell>
+    <cell>
+     <p>Omnívoro</p>
+    </cell>
+    <cell>
+     <p>Carnívoro</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="4" cellWidth="448.0" cellHeight="181.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <p>gato=carnívoro</p>
+    </cell>
+    <cell>
+     <p>cerdo=herbívoro</p>
+    </cell>
+    <cell>
+     <p>caballo=herbívoro</p>
+    </cell>
+    <cell>
+     <p>Lobo=carnívoro</p>
+    </cell>
+    <cell>
+     <p>ser humano=Omnivoro</p>
+    </cell>
+    <cell>
+     <p>Oso=carnívoro</p>
+    </cell>
+    <cell>
+     <p>Vaca=Herbívoro</p>
+    </cell>
+    <cell>
+     <p>Conejo=Herbívoro</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="pag15.ass">
+   <description>
+    <p>Identificar los alimentos que producen caries</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFF80" />
+     </style>
+     <p>Relaciona los alimentos que producen caries con la enfermedad y los que no producen con el cepillos de dientes</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFF80" />
+     </style>
+     <p>¡Muy Bien!  ¡No olvides lavarte los dientes después de las comidas¡</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="4" cellWidth="208.0" cellHeight="174.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell id="0">
+     <p>verdura</p>
+    </cell>
+    <cell id="1">
+     <p>pastel</p>
+    </cell>
+    <cell id="0">
+     <p>manzana</p>
+    </cell>
+    <cell id="0">
+     <p>carne</p>
+    </cell>
+    <cell id="1">
+     <p>chicle</p>
+    </cell>
+    <cell id="0">
+     <p>pescado</p>
+    </cell>
+    <cell id="0">
+     <p>huevo</p>
+    </cell>
+    <cell id="1">
+     <p>caramelo</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="1" cellWidth="350.0" cellHeight="465.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell image="limpia.gif" />
+    <cell image="caries2.gif" />
+   </cells>
+   <cells rows="2" columns="4" cellWidth="208.0" cellHeight="174.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="4" />
+    <cell>
+     <p>Verdura</p>
+    </cell>
+    <cell>
+     <p>pastel</p>
+    </cell>
+    <cell>
+     <p>manzana</p>
+    </cell>
+    <cell>
+     <p>carne</p>
+    </cell>
+    <cell>
+     <p>chicle</p>
+    </cell>
+    <cell>
+     <p>pescado</p>
+    </cell>
+    <cell>
+     <p>huevo</p>
+    </cell>
+    <cell>
+     <p>caramelo</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="pag2.ass">
+   <description>
+    <p>Enseña al alumno donde se localizan los sabores en la lengua</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFFFF80" />
+     </style>
+     <p>Cliquea en las diferentes parte de la lengua y te dirá la  localiza los sabores en la lengua</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFFFF80" />
+     </style>
+     <p>!!!!  Fenomenal ¡¡¡¡</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" columns="7" border="true" image="2lengua.gif" id="primary">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <ids>4 4 4 2 0 3 1</ids>
+   </cells>
+   <cells rows="1" columns="5" cellWidth="258.0" cellHeight="240.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="27" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell image="2limon.gif" />
+    <cell image="2flan.gif" />
+    <cell image="2esca.gif" />
+    <cell image="2lengu.gif" />
+    <cell>
+     <p>No tiene relación</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="pag3.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF80" />
+     </style>
+     <p>Completa las frases</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF80" />
+     </style>
+     <p>¡¡¡¡  Fenomenal  !!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF80FF" border="true" />
+   </settings>
+   <cells rows="1" columns="1" cellWidth="343.0" cellHeight="176.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>El aire entra por la nariz a traves de las__________________</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="1" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>fosas nasales</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="1" cellWidth="343.0" cellHeight="176.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>El aire entra por la nariz a traves de la "fosa nasal"</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="pag4.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="33" bold="true" />
+      <color background="0xFF80C0" />
+     </style>
+     <p>Relaciona los alimentos con su origen</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="33" bold="true" />
+      <color background="0xFF80C0" />
+     </style>
+     <p> ¡¡¡¡ Fantástico !!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x00FF40" border="true" />
+   </settings>
+   <cells rows="4" columns="3" cellWidth="547.0" cellHeight="428.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell id="2">
+     <p>agua</p>
+    </cell>
+    <cell id="0">
+     <p>lechuga</p>
+    </cell>
+    <cell id="0">
+     <p>pera</p>
+    </cell>
+    <cell id="0">
+     <p>col</p>
+    </cell>
+    <cell id="1">
+     <p>sardina</p>
+    </cell>
+    <cell id="2">
+     <p>sal</p>
+    </cell>
+    <cell id="1">
+     <p>pollo</p>
+    </cell>
+    <cell id="0">
+     <p>azucar</p>
+    </cell>
+    <cell id="1">
+     <p>atún</p>
+    </cell>
+    <cell id="1">
+     <p>ternera</p>
+    </cell>
+    <cell id="1">
+     <p>merluza</p>
+    </cell>
+    <cell id="1">
+     <p>cordero</p>
+    </cell>
+   </cells>
+   <cells rows="3" columns="1" cellWidth="187.0" cellHeight="369.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>Origen Vegetal</p>
+    </cell>
+    <cell>
+     <p>Origen Animal</p>
+    </cell>
+    <cell>
+     <p>Origen Mineral</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="3" cellWidth="547.0" cellHeight="428.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="3" />
+    <cell>
+     <p>agua=mineral</p>
+    </cell>
+    <cell>
+     <p>lechuga=vegetal</p>
+    </cell>
+    <cell>
+     <p>pera=vegetal</p>
+    </cell>
+    <cell>
+     <p>col=vegetal</p>
+    </cell>
+    <cell>
+     <p>sardina=animal</p>
+    </cell>
+    <cell>
+     <p>sal=mineral</p>
+    </cell>
+    <cell>
+     <p>pollo=animal</p>
+    </cell>
+    <cell>
+     <p>azucar=vegetal</p>
+    </cell>
+    <cell>
+     <p>atún=animal</p>
+    </cell>
+    <cell>
+     <p>ternera=animal</p>
+    </cell>
+    <cell>
+     <p>merluza=animal</p>
+    </cell>
+    <cell>
+     <p>cordero=animal</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="pag5.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color background="0x80FFFF" />
+     </style>
+     <p>Realiza el puzzle</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="30" bold="true" />
+      <color background="0x80FFFF" />
+     </style>
+     <p> ¡  Estupendo !</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="4" columns="3" border="true" image="portada.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="pag6.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFF80" />
+     </style>
+     <p>Relaciona cada alimento con la comida correspondiente</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFF80" />
+     </style>
+     <p>¡¡¡ Eres un buen cocienro !!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x008000" border="true" />
+   </settings>
+   <cells rows="2" columns="5" cellWidth="324.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell id="0">
+     <p>leche</p>
+    </cell>
+    <cell id="1">
+     <p>macarrones</p>
+    </cell>
+    <cell id="0">
+     <p>galletas</p>
+    </cell>
+    <cell id="1">
+     <p>lechuga</p>
+    </cell>
+    <cell id="1">
+     <p>manzana</p>
+    </cell>
+    <cell id="1">
+     <p>pan</p>
+    </cell>
+    <cell id="1">
+     <p>carne</p>
+    </cell>
+    <cell id="1">
+     <p>pescado</p>
+    </cell>
+    <cell id="1">
+     <p>huevo</p>
+    </cell>
+    <cell id="1">
+     <p>yogur</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>Desayuno</p>
+    </cell>
+    <cell>
+     <p>Comida o Cena</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="5" cellWidth="324.0" cellHeight="100.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>LECHE=Desayuno</p>
+    </cell>
+    <cell>
+     <p>Macarrones=Comida</p>
+    </cell>
+    <cell>
+     <p>Galletas=Desayuno</p>
+    </cell>
+    <cell>
+     <p>Lechuga=Comida</p>
+    </cell>
+    <cell>
+     <p>Manzana=Comida</p>
+    </cell>
+    <cell>
+     <p>Pan=Comida</p>
+    </cell>
+    <cell>
+     <p>Carne=Comida</p>
+    </cell>
+    <cell>
+     <p>Pescado=Cena</p>
+    </cell>
+    <cell>
+     <p>Huevo=Cena</p>
+    </cell>
+    <cell>
+     <p>Yogur=Comida</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="pag7.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF80" />
+     </style>
+     <p>Cada alimento con su tienda</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF80" />
+     </style>
+     <p> ¡Muy Bien , pero hay que ayudar a realizar la compra!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x0000A0" border="true" />
+   </settings>
+   <cells rows="2" columns="5" cellWidth="677.0" cellHeight="360.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="15" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell id="2">
+     <p>1 barra de pan</p>
+    </cell>
+    <cell id="4">
+     <p>1 docena de huevos</p>
+    </cell>
+    <cell id="4">
+     <p>6 pechugas</p>
+    </cell>
+    <cell id="1">
+     <p>1 litro de aceite</p>
+    </cell>
+    <cell id="0">
+     <p>1 kg zanahorias</p>
+    </cell>
+    <cell id="0">
+     <p>3 lechugas</p>
+    </cell>
+    <cell id="0">
+     <p>1kg de tomates</p>
+    </cell>
+    <cell id="6">
+     <p>1 chorizo</p>
+    </cell>
+    <cell id="6">
+     <p>6 chuletas</p>
+    </cell>
+    <cell id="3">
+     <p>1Kg sardinas</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="7" cellWidth="351.0" cellHeight="214.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="15" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell>
+     <p>Frutería</p>
+    </cell>
+    <cell>
+     <p>Ultramarinos</p>
+    </cell>
+    <cell>
+     <p>Panadería</p>
+    </cell>
+    <cell>
+     <p>Pescadería</p>
+    </cell>
+    <cell>
+     <p>Pollería</p>
+    </cell>
+    <cell>
+     <p>Chacutería</p>
+    </cell>
+    <cell>
+     <p>Carnicería</p>
+    </cell>
+   </cells>
+   <cells rows="2" columns="5" cellWidth="677.0" cellHeight="360.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="2" rows="5" />
+    <cell>
+     <p>pan=Panadería</p>
+    </cell>
+    <cell>
+     <p>Huevos=Pollería</p>
+    </cell>
+    <cell>
+     <p>Pollo=Pollería</p>
+    </cell>
+    <cell>
+     <p>Aceite=Ultramarinos</p>
+    </cell>
+    <cell>
+     <p>Zanahorias=Frutería</p>
+    </cell>
+    <cell>
+     <p>Lechugas=Frutería</p>
+    </cell>
+    <cell>
+     <p>Tomates=Frutería</p>
+    </cell>
+    <cell>
+     <p>Chorizo=Charcutería</p>
+    </cell>
+    <cell>
+     <p>Cordero==Carnicería</p>
+    </cell>
+    <cell>
+     <p>Sardinas=Pescadería</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="pag8.ass">
+   <description>
+    <p>Aprender a reconocerlos alimentos perecederos</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="19" bold="true" />
+      <color background="0x80FFFF" />
+     </style>
+     <p>Coloca cada alimento en su sitio</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="19" bold="true" />
+      <color background="0x80FFFF" />
+     </style>
+     <p>¡Debes ayudarle a tus padres!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x004080" border="true" />
+   </settings>
+   <cells rows="3" columns="5" cellWidth="475.0" cellHeight="232.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="19" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="5" />
+    <cell id="0">
+     <p>huevos</p>
+    </cell>
+    <cell id="1">
+     <p>patatas</p>
+    </cell>
+    <cell id="1">
+     <p>judias verdes</p>
+    </cell>
+    <cell id="0">
+     <p>trucha</p>
+    </cell>
+    <cell id="0">
+     <p>mantequilla</p>
+    </cell>
+    <cell id="1">
+     <p>chorizo</p>
+    </cell>
+    <cell id="1">
+     <p>cebollas</p>
+    </cell>
+    <cell id="0">
+     <p>leche</p>
+    </cell>
+    <cell id="1">
+     <p>ajos</p>
+    </cell>
+    <cell id="1">
+     <p>sal</p>
+    </cell>
+    <cell id="0">
+     <p>lechuga</p>
+    </cell>
+    <cell id="1">
+     <p>harina</p>
+    </cell>
+    <cell id="0">
+     <p>guisantes</p>
+    </cell>
+    <cell id="1">
+     <p>azúcar</p>
+    </cell>
+    <cell id="1">
+     <p>café</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="2" cellWidth="580.0" cellHeight="500.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell image="7frigo.gif" />
+    <cell image="estan.gif" />
+   </cells>
+   <cells rows="3" columns="5" cellWidth="475.0" cellHeight="232.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="3" rows="5" />
+    <cell>
+     <p>leche=frigo</p>
+    </cell>
+    <cell>
+     <p>patatas=armario</p>
+    </cell>
+    <cell>
+     <p>judias=armario</p>
+    </cell>
+    <cell>
+     <p>trucha=frigo</p>
+    </cell>
+    <cell>
+     <p>mantequilla=frigo</p>
+    </cell>
+    <cell>
+     <p>chorizo=armario</p>
+    </cell>
+    <cell>
+     <p>cebollas=armario</p>
+    </cell>
+    <cell>
+     <p>leche=frigo</p>
+    </cell>
+    <cell>
+     <p>ajos=armario</p>
+    </cell>
+    <cell>
+     <p>sal=armario</p>
+    </cell>
+    <cell>
+     <p>lechuga=frigo</p>
+    </cell>
+    <cell>
+     <p>harina=armario</p>
+    </cell>
+    <cell>
+     <p>guisantes=frigo</p>
+    </cell>
+    <cell>
+     <p>azucar=armario</p>
+    </cell>
+    <cell>
+     <p>café=armario</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="pag9.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color background="0x80FFFF" />
+     </style>
+     <p>Completa la frase</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="18" bold="true" />
+      <color background="0x80FFFF" />
+     </style>
+     <p> ¡¡¡¡ Estupendo !!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" columns="1" cellWidth="498.0" cellHeight="215.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>Los alimentos frescos, como los huevos, pescado,etc deben guardarse en el___________</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="1" cellWidth="227.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>frigorífico</p>
+    </cell>
+   </cells>
+   <cells rows="1" columns="1" cellWidth="498.0" cellHeight="215.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>Los alimentos frescos, como los huevos, pescado, etc deben guardarse en el "frigorífico"</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="portada.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+     <p>"Los alimentos". 3º Primaria.EDEBE.Cliquea y comienza.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x00FF80">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" columns="1" border="true" image="portada.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="10pan.gif" file="10pan.gif" animated="false" />
+  <media name="11carne.gif" file="11carne.gif" animated="false" />
+  <media name="2esca.gif" file="2esca.gif" animated="false" />
+  <media name="2flan.gif" file="2flan.gif" animated="false" />
+  <media name="2lengu.gif" file="2lengu.gif" animated="false" />
+  <media name="2lengua.gif" file="2lengua.gif" animated="false" />
+  <media name="2limon.gif" file="2limon.gif" animated="false" />
+  <media name="7frigo.gif" file="7frigo.gif" animated="false" />
+  <media name="caries2.gif" file="caries2.gif" animated="false" />
+  <media name="carne2.gif" file="carne2.gif" animated="false" />
+  <media name="estan.gif" file="estan.gif" animated="false" />
+  <media name="limpia.gif" file="limpia.gif" animated="false" />
+  <media name="portada.gif" file="portada.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

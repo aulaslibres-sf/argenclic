@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca Aulas Libres - Proyecto ArgenClic</title>
+  <link rel="SHORTCUT ICON" href="../../recursos/favicon.ico"> <!-- Asumiendo que tienes un favicon -->
+  <style>
+    /* Estilos generales para mejorar la legibilidad y el diseño */
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #333;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 960px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    header {
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    header h1 {
+      color: #000099;
+      margin-bottom: 10px;
+    }
+    .activity-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .activity-item {
+      background-color: #e0f7fa; /* Color de fondo para los elementos */
+      padding: 15px;
+      border-radius: 5px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+    .activity-item:nth-child(odd) {
+      background-color: #ffffff; /* Alternar color de fondo */
+    }
+    .activity-item a {
+      font-weight: bold;
+      color: #006600; /* Color para los enlaces de actividad */
+      display: block;
+      padding: 10px 0;
+    }
+    .activity-item:hover {
+      background-color: #cceeff;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+      background-color: #333;
+      color: #fff;
+      border-radius: 8px;
+    }
+    footer a {
+      color: #fff;
+      margin: 0 10px;
+    }
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+    .logo-container img {
+      max-height: 70px;
+      vertical-align: middle;
+    }
+    .nav-menu {
+      background-color: #003366;
+      text-align: center;
+      padding: 10px 0;
+    }
+    .nav-menu a {
+      color: white;
+      font-weight: bold;
+      margin: 0 15px;
+      text-decoration: none;
+      padding: 5px 0;
+      transition: color 0.3s ease;
+    }
+    .nav-menu a:hover {
+      color: #ffd700;
+      text-decoration: none;
+    }
+  </style>
+  <script>
+    // Función para cambiar imágenes (si aún es necesaria, se puede modernizar con CSS)
+    CI=new Image(206,130);
+    CIOn=new Image(206,130);
+    argenclic=new Image(400,146);
+    argenclicOn=new Image(400,146);
+
+    CI.src="../../recursos/disco1.png"; // Imagen por defecto para el logo principal
+    CIOn.src="../../recursos/disco2.png"; // Imagen al pasar el ratón sobre el logo principal
+    argenclic.src="../../recursos/disco2.png";
+    argenclicOn.src="../../recursos/disco1.png";
+
+    function cambia(nombre, activa) {
+      document.images[nombre].src = activa.src;
+    }
+
+    // Google Analytics (mantener si es necesario)
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-311272-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ====== MENÚ DE NAVEGACIÓN GLOBAL ====== -->
+  <nav class="nav-menu">
+    <a href="../../index.html">Inicio</a>
+    <a href="../../niveles.html">Jugar</a>
+    <a href="../../proyecto.html">Proyecto</a>
+    <a href="../../tecnica.html">Técnica</a>
+    <a href="../../descarga.html">Descarga</a>
+    <a href="../../creditos.html">Créditos</a>
+  </nav>
+  <!-- ====== FIN MENÚ ====== -->
+
+  <div class="container">
+    <header>
+      <h1>Matemáticas</h1> <!-- Título específico para matesegun.html -->
+      <div class="logo-container">
+        <!-- Enlace y cambio de imagen actualizados -->
+        <a target="_blank" href="http://proyecto.aulaslibres.ar/" onmouseout="cambia('primera',CI);" onmouseover="cambia('primera',CIOn);">
+          <img name="primera" src="../../recursos/disco1.png" alt="Proyecto Aulas Libres Logo" style="width: 206px; height: 130px;">
+        </a>
+        <img src="../../recursos/Logo-AulasLibres-chico98x90.png" alt="Aulas Libres Logo">
+      </div>
+      <h2>SELECCIONE LA ACTIVIDAD</h2>
+    </header>
+
+    <main>
+      <div class="activity-grid">
+        <!-- Contenido de actividades de matesegun.html -->
+        <div class="activity-item">
+          <a href="angulos/index.html" target="_blank">ÁNGULOS</a>
+        </div>
+        <div class="activity-item">
+          <a href="binmates/index.html" target="_blank">BINGO MATEMÁTICO</a>
+        </div>
+        <div class="activity-item">
+          <a href="intrfrac/index.html" target="_blank">INTRODUCCIÓN A FRACCIONES</a>
+        </div>
+        <div class="activity-item">
+          <a href="fracc/index.html" target="_blank">FRACCIONES I</a>
+        </div>
+        <div class="activity-item">
+          <a href="fracci/index.html" target="_blank">FRACCIONES II</a>
+        </div>
+        <div class="activity-item">
+          <a href="fraccio1/index.html" target="_blank">FRACCIONES III</a>
+        </div>
+        <div class="activity-item">
+          <a href="fraccio2/index.html">FRACCIONES IV</a>
+        </div>
+        <div class="activity-item">
+          <a href="fraccion/index.html" target="_blank">NÚMEROS RACIONALES</a>
+        </div>
+        <div class="activity-item">
+          <a href="geo2prim/index.html" target="_blank">GEOMETRÍA</a>
+        </div>
+        <div class="activity-item">
+          <a href="encrenum/index.html" target="_blank">CRUCIGRAMAS NUMÉRICOS</a>
+        </div>
+        <div class="activity-item">
+          <a href="mates2c/index.html" target="_blank">MATEMÁTICAS DE 2º CICLO</a>
+        </div>
+        <div class="activity-item">
+          <a href="matsexto/index.html" target="_blank">MATEMÁTICAS DE 6º</a>
+        </div>
+        <div class="activity-item">
+          <a href="meditemp/index.html" target="_blank">MEDIDA DEL TIEMPO</a>
+        </div>
+        <div class="activity-item">
+          <a href="nivelmat/index.html" target="_blank">EJERCICIOS DE NIVELACIÓN</a>
+        </div>
+        <div class="activity-item">
+          <a href="poligoes/index.html" target="_blank">POLÍGONOS</a>
+        </div>
+        <div class="activity-item">
+          <a href="potencia/index.html" target="_blank">POTENCIAS</a>
+        </div>
+        <div class="activity-item">
+          <a href="prisma/index.html" target="_blank">PRISMA</a>
+        </div>
+        <div class="activity-item">
+          <a href="probcast/index.html" target="_blank">PROBLEMAS I</a>
+        </div>
+        <div class="activity-item">
+          <a href="problems/index.html" target="_blank">PROBLEMAS II</a>
+        </div>
+        <div class="activity-item">
+          <a href="romanos/index.html" target="_blank">NÚMEROS ROMANOS</a>
+        </div>
+        <div class="activity-item">
+          <a href="tetrav/index.html" target="_blank">ROMPECABEZAS NUMÉRICOS</a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        <a href="../../index.html">Inicio</a> |
+        <a href="../../descarga.html">Descarga</a> |
+        <a href="../../creditos.html">Créditos</a>
+      </p>
+      <p>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
+          <img alt="Licencia de Creative Commons" src="../../recursos/cc.png">
+        </a>
+      </p>
+      <p>Esta obra está licenciada bajo <a style="color:white;" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">CC BY-NC-SA 2.5 Argentina</a>.</p>
+    </footer>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="folkch" version="0.1.3">
+ <settings>
+  <title>El folklore musical de Chile</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="11/21/00" />
+  <revision description="Conversión de Clic3 a JClic" date="11/17/05">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Míriam Castillo Castillo" mail="jmcaro@ctcinternet.cl" />
+  <organization name="Escuela Cardenal José María Caro" url="http://www.ctio.noao.edu/AURA/redlaser/jmcaro/jmcaro.html" city="Coquimbo" country="Xile" />
+  <language>es</language>
+  <description>
+   <p>En este paquete de actividades se presentan las formas musicales del folklore Chileno organizadas por zonas: Zona norte, zona central, zona sur y zona insular (isla de Pascua).&lt;BR&gt;</p>
+   <p>Entre otras se trabajan la cueca, el trote, el cachimbo el taquirari, la tonada, el corrido, el vals, la música araucana mapuche, la pericona y los cantos de origen polinesio.&lt;BR&gt;</p>
+   <p>También se presentan algunos de los instrumentos populares utilizados para interpretar la música.</p>
+  </description>
+  <descriptors area-codes="mus" level-codes="PRI, SEC">audición musical</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>En este paquete de actividades se presentan las formas musicales del folklore Chileno organizadas por zonas: Zona norte, zona central, zona sur y zona insular (isla de Pascua).&lt;BR&gt;</p>
+    <p>Entre otras se trabajan la cueca, el trote, el cachimbo el taquirari, la tonada, el corrido, el vals, la música araucana mapuche, la pericona y los cantos de origen polinesio.&lt;BR&gt;</p>
+    <p>También se presentan algunos de los instrumentos populares utilizados para interpretar la música.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="folk.pac" name="tapa.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="paquete.puz">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="paquete.puz" code="">
+   <description>
+    <p>Puzzle con un texto</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="198.0" cellHeight="113.0" border="true">
+    <style borderStroke="1.5" markerStroke="2.7">
+     <font family="Times New Roman" size="31" bold="true" />
+     <color foreground="0xFFFFFF" background="0x400080" inactive="0x000000" alternative="0x000000" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="tapa.ass" />
+     <p>INICIO</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="znorte.pac" params="znorte/znorte.jclic" />
+     <p>ZONA NORTE</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="zcentral.pac" params="zcentral/zcentral.jclic" />
+     <p>ZONA CENTRAL</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="zonasur.pac" params="zonasur/zonasur.jclic" />
+     <p>ZONA SUR</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="zinsular.pac" params="zinsular/zinsular.jclic" />
+     <p>ZONA INSULAR</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="evaluar.pac" params="evaluar/evaluar.jclic" />
+     <p>EVALUACION</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="tapa.ass" code="">
+   <description>
+    <p>"FOLKLORE</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="21" bold="true" />
+      <color foreground="0x400080" background="0xB7FFFF" />
+     </style>
+     <p>¡BIENVENIDO AL FOLKLORE DE MI PAIS!</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="21" bold="true" />
+      <color foreground="0x400080" background="0xB7FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xECD9FF">
+     <image name="dancueca.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="540.0" cellHeight="300.0" border="true">
+    <style>
+     <font family="Arial" size="21" bold="true" />
+     <color foreground="0x400080" background="0xB7FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>"EL FOLKLORE MUSICAL DE CHILE"          PROFESORA: MIRIAM CASTILLO CASTILLO   ESCUELA: CARDENAL JOSE MARIA CARO   CIUDAD: COQUIMBO   PAIS:CHILE</p>
+    </cell>
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="dancueca.gif" file="dancueca.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

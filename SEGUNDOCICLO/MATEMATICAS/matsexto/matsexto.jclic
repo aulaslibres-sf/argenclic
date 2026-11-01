@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="matsex" version="0.1.3">
+ <settings>
+  <title>Matemáticas - 6º primaria</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="12/21/99" />
+  <revision description="Conversión de Clic3 a JClic" date="5/14/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Moncho Marín Calvo" mail="jmac0011@encina.pntic.mec.es" />
+  <organization name="CP San Lorenzo de Ezcaray" mail="cp.sanlorenzo@larioja.org" url="http://centros2.pntic.mec.es/cp.de.ezcaray/" city="Ezcaray" state="La Rioja" />
+  <language>es</language>
+  <description>
+   <p>Actividades de repaso de los contenidos del currículum de matemáticas de 6º  de primaria:&lt;BR&gt;</p>
+   <p>&lt;LI&gt;&lt;B&gt;ARITMÉTICA&lt;/B&gt;&lt;BR&gt;Repaso General - Cálculo - Fracciones - Proporcionalidad&lt;BR&gt;</p>
+   <p>&lt;LI&gt;&lt;B&gt;LAS MEDIDAS&lt;/B&gt;&lt;BR&gt;Repaso General - Sistema Métrico Decimal - Sistema Sexagesimal&lt;BR&gt;</p>
+   <p>&lt;LI&gt;&lt;B&gt;GEOMETRÍA&lt;/B&gt;&lt;BR&gt;Repaso General - Rectas, ángulos y figuras planas - Poliedros y cuerpos redondos - Problemas</p>
+  </description>
+  <descriptors area-codes="mat" level="Primaria">fundamentos de las matemáticas, aritmética</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Actividades de repaso de los contenidos del currículum de matemáticas de 6º  de primaria:&lt;BR&gt;</p>
+    <p>&lt;LI&gt;&lt;B&gt;ARITMÉTICA&lt;/B&gt;&lt;BR&gt;Repaso General - Cálculo - Fracciones - Proporcionalidad&lt;BR&gt;</p>
+    <p>&lt;LI&gt;&lt;B&gt;LAS MEDIDAS&lt;/B&gt;&lt;BR&gt;Repaso General - Sistema Métrico Decimal - Sistema Sexagesimal&lt;BR&gt;</p>
+    <p>&lt;LI&gt;&lt;B&gt;GEOMETRÍA&lt;/B&gt;&lt;BR&gt;Repaso General - Rectas, ángulos y figuras planas - Poliedros y cuerpos redondos - Problemas</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="matsex.pac" name="pantmat.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="menumat.ass">
+   <jump action="STOP" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="menumat.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFF80FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="250.0" cellHeight="100.0" border="true">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="aritmenu.pac" params="aritmenu/aritmenu.jclic" />
+     <p>ARITMÉTICA </p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="meditmenu.pac" params="meditmenu/meditmenu.jclic" />
+     <p>LAS MEDIDAS </p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="geomenu.pac" params="geomenu/geomenu.jclic" />
+     <p>GEOMETRÍA </p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="pantmat.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Actividades de repaso y control.</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xB0B0FF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="portmat.gif">
+    <style>
+     <color background="0x80FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="portmat.gif" file="portmat.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

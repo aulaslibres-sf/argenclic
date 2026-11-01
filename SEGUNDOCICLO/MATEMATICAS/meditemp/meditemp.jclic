@@ -1,0 +1,2133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="meditemp" version="0.1.3">
+ <settings>
+  <title>Medir el tiempo</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="12/14/06" />
+  <revision description="Conversión de Clic3 a JClic" date="12/14/06">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Benito García Peinado" mail="benito.garcia@wanadoo.es" />
+  <organization name="C.P.PR Pablo de Olavide" mail="11004118.averroes@juntadeandalucia.es" url="http://www.juntadeandalucia.es/averroes/polavide/" city="Prado del Rey - Cádiz" state="Andalucía" />
+  <language>es</language>
+  <description>
+   <p>Conjunto de actividades relacionadas con el tema de la medida del tiempo. El proyecto está creado para ser utilizado en quinto de educación primaria y está basado en el libro de actividades &lt;I&gt; SM. Proyecto: Planeta Amigo&lt;/I&gt;.</p>
+  </description>
+  <descriptors area-codes="mat" level-codes="PRI">tiempo</descriptors>
+  <skin file="@orange.xml" />
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Conjunto de actividades relacionadas con el tema de la medida del tiempo. El proyecto está creado para ser utilizado en quinto de educación primaria y está basado en el libro de actividades &lt;I&gt; SM. Proyecto: Planeta Amigo&lt;/I&gt;.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="start" name="inicio" delay="10" />
+  <item id="menu" name="menu" navButtons="none" />
+  <item id="puzleinicio" name="puzlereloj" delay="1" navButtons="none" />
+  <item name="tiempopasa" />
+  <item name="unidadtiempo1" delay="1" navButtons="none" />
+  <item name="unidadtiempo_2" delay="1" navButtons="none" />
+  <item name="unidadtiempo_3" delay="1" navButtons="none" />
+  <item name="unidades" delay="1" navButtons="none" />
+  <item name="orden_unidad" delay="1" navButtons="none" />
+  <item name="meses" />
+  <item name="meses_2" />
+  <item name="estaciones" delay="1" navButtons="none" />
+  <item name="problema1" delay="1" navButtons="none" />
+  <item name="problema_2" delay="1" navButtons="none" />
+  <item name="edadJuan" delay="1" navButtons="none" />
+  <item name="operaciones" delay="1" navButtons="none" />
+  <item name="operaciones_2" delay="1" navButtons="none" />
+  <item name="operaciones_3" delay="1" navButtons="none" />
+  <item name="memo" delay="1" navButtons="none" />
+  <item name="problema_3" delay="1" navButtons="none" />
+  <item name="problema_4" delay="1" navButtons="none" />
+  <item name="problema_5" delay="1" navButtons="none" />
+  <item name="Quijote" delay="1" navButtons="none" />
+  <item name="horas en minutos" delay="1" navButtons="none" />
+  <item name="esigualque" delay="1" navButtons="none" />
+  <item name="esigualque_2" delay="1" navButtons="none" />
+  <item name="esigualque_3" delay="1" navButtons="none" />
+  <item name="papiro" delay="1" />
+  <item name="problema_6" delay="1" navButtons="none" />
+  <item name="problema_7" delay="1" navButtons="none" />
+  <item name="roma" delay="2" navButtons="none" />
+  <item name="problema_8" delay="1" navButtons="none" />
+  <item name="azteca" delay="1" navButtons="none" />
+  <item name="problema_9" delay="1" navButtons="none" />
+  <item id="puzlefinal" name="puzlecadiz" delay="1" navButtons="fwd">
+   <jump tag="menu" id="forward" />
+  </item>
+  <item id="credit" name="creditos" delay="10">
+   <jump tag="menu" id="forward" />
+   <jump tag="menu" id="back" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@associations.ComplexAssociation" name="Quijote" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Asocia la pregunta con la respuesta apropiada.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Genial!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>¡No se puede acertar siempre!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+   </settings>
+   <cells rows="1" cols="2" cellWidth="420.0" cellHeight="266.0" border="false" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color foreground="0x000066" background="0xFFFFFF" inactive="0xFFFFFF" border="0x000066" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell imgAlign="right,middle" avoidOverlapping="true" image="Quijote.jpg">
+     <p>En 1605 se publicó la primera edición de "El ingenioso Hidalgo Don Quijote de la Mancha"</p>
+    </cell>
+    <cell id="0">
+     <p>¿En qué año se cumplió el primer centenario de su edición?</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="4" cellWidth="206.0" cellHeight="102.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="24" />
+     <color foreground="0xFFFFFF" background="0x000066" inactive="0xFFFFFF" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>En 1.705. Cien años después.</p>
+    </cell>
+    <cell>
+     <p>En 1.715.</p>
+    </cell>
+    <cell>
+     <p>En 1.615. Diez años después.</p>
+    </cell>
+    <cell>
+     <p>En 1.706, un año después.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="azteca" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Civilizaciones antiguas: Machu Pichu.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Buen trabajo!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>Se acabó el tiempo.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" maxTime="40" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="450px-Peru_Machu_Picchu_Sunset.jpg">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="creditos" code="">
+   <description />
+   <messages>
+    <cell avoidOverlapping="true" image="creditos.jpg" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0xFFFFFF" border="0xFFFFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="550.0" cellHeight="145.0" border="true">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="18" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell imgAlign="left,middle" avoidOverlapping="true" image="jclic_logo.gif">
+     <p>Unidad elaborada por Benito García Peinado. </p>
+     <p>Maestro de Apoyo a la Integración.</p>
+    </cell>
+    <cell imgAlign="left,middle" avoidOverlapping="true" image="marcagrp.gif">
+     <p>C.E.PR. Pablo de Olavide. </p>
+     <p>http://www.juntadeandalucia.es/averroes/polavide</p>
+    </cell>
+    <cell imgAlign="left,middle" avoidOverlapping="true" image="logo_portada01.gif">
+     <media type="URL" level="1" file="http://www.juntadeandalucia.es/averroes" />
+     <p>Estamos integrados en la red de centros de Averroes.</p>
+    </cell>
+    <cell>
+     <p>Bibliografía:</p>
+     <p>Cuaderno de trabajo. Matemáticas. 5º Curso. Proyecto Planeta Amigo. Ed. SM.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="edadJuan" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Asocia el problema con la respuesta corecta.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Fenomenal!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>Demasiadas oportunidades.</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="40" countDownTime="true" maxActions="2" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="648.0" cellHeight="94.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color foreground="0x000066" background="0xFFFFFF" inactive="0xFFFFFF" border="0x000066" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <p>Juan nació hace exactamente 60 meses. Calcula los años que tiene y los días que ha vivido.</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="336.0" cellHeight="104.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="20" />
+     <color foreground="0xFFFFFF" background="0x000066" inactive="0xFFFFFF" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>60 meses son cinco años. </p>
+     <p>Es decir, 1825 días.</p>
+    </cell>
+    <cell>
+     <p>60 meses son cinco años.</p>
+     <p>Es decir, 1835 días.</p>
+    </cell>
+    <cell>
+     <p>60 meses son seis años. </p>
+     <p>Es decir, 2190 días.</p>
+    </cell>
+    <cell>
+     <p>60 meses son seis años.</p>
+     <p>Es decir, 1725 días.</p>
+    </cell>
+    <cell>
+     <p>60 meses son cinco años.</p>
+     <p>Es decir, 1855 días.</p>
+    </cell>
+    <cell>
+     <p>60 meses son cinco años.</p>
+     <p>Es decir, 1815 días.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="esigualque" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Responde a estas cuestiones</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Buen trabajo!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>¡Nadie es perfecto!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="120" countDownTime="true" maxActions="6" countDownActions="true" report="true" reportActions="false">
+    <helpWindow showSolution="false">
+     <p>Una década son 10 años. No olvides escribir la respuesta con tilde en la palabra década.</p>
+    </helpWindow>
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="374.0" cellHeight="88.0" border="false" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color foreground="0x000066" background="0xFFFFFF" inactive="0xFFFFFF" border="0x000066" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>¿Cuántas décadas hay en 4 lustros?</p>
+    </cell>
+    <cell>
+     <p>¿Cuántas décadas hay en 5 siglos?</p>
+    </cell>
+    <cell>
+     <p>¿Y en un milenio?</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="418.0" cellHeight="95.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="24" />
+     <color foreground="0xFFFFFF" background="0x000066" inactive="0xFFFFFF" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>2|dos|dos décadas|2 décadas|2 decadas|dos decadas</p>
+    </cell>
+    <cell>
+     <p>50|50 décadas|50 decadas|cincuenta|cincuenta décadas|cincuenta decadas</p>
+    </cell>
+    <cell>
+     <p>100|cien|100 décadas|100 decadas|cien decadas|cien décadas</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="esigualque_2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Responde a estas cuestiones</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Buen trabajo!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>¡Nadie es perfecto!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="120" countDownTime="true" maxActions="6" countDownActions="true" report="true" reportActions="false">
+    <helpWindow showSolution="false">
+     <p>Una década son 10 años. No olvides escribir la respuesta con tilde en la palabra década.</p>
+    </helpWindow>
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="374.0" cellHeight="88.0" border="false" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color foreground="0x000066" background="0xFFFFFF" inactive="0xFFFFFF" border="0x000066" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>¿Cuántos años tienen 4 lustros?</p>
+    </cell>
+    <cell>
+     <p>¿Cuántos años hay en 5 siglos?</p>
+    </cell>
+    <cell>
+     <p>¿Y en un milenio?</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="418.0" cellHeight="95.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="24" />
+     <color foreground="0xFFFFFF" background="0x000066" inactive="0xFFFFFF" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>20|veinte|veinte años|20 años</p>
+    </cell>
+    <cell>
+     <p>500|500 años|quinientos|quinientos años </p>
+    </cell>
+    <cell>
+     <p>1000|mil|1.000 años|1000 años|mil años</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="esigualque_3" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Responde a estas cuestiones</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Buen trabajo!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>¡Nadie es perfecto!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="120" countDownTime="true" maxActions="6" countDownActions="true" report="true" reportActions="false">
+    <helpWindow showSolution="false">
+     <p>Una década son 10 años. No olvides escribir la respuesta con tilde en la palabra década.</p>
+    </helpWindow>
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="374.0" cellHeight="88.0" border="false" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color foreground="0x000066" background="0xFFFFFF" inactive="0xFFFFFF" border="0x000066" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>¿Cuántos meses tienen 4 lustros?</p>
+    </cell>
+    <cell>
+     <p>¿Cuántos meses hay en 5 siglos?</p>
+    </cell>
+    <cell>
+     <p>¿Y en un milenio?</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="418.0" cellHeight="95.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="24" />
+     <color foreground="0xFFFFFF" background="0x000066" inactive="0xFFFFFF" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>240|doscientos cuarenta|doscientos cuaenta meses|240 meses</p>
+    </cell>
+    <cell>
+     <p>6000|seis mil|6.000|6.000 meses|seis mil meses|6000 meses </p>
+    </cell>
+    <cell>
+     <p>12000|doce mil|12.000 meses|12000 meses|doce mil meses</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="estaciones" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Asocia las estaciones con la imagen que la representa.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Era fácil!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="213.0" cellHeight="163.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color foreground="0x000066" background="0xFFFFFF" inactive="0xFFFFFF" border="0x000066" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="rosas.jpg" />
+    <cell image="otono.jpg" />
+    <cell image="Nadar.jpg" />
+    <cell image="invierno 03.jpg" />
+   </cells>
+   <cells rows="1" cols="4" cellWidth="219.0" cellHeight="79.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="24" />
+     <color foreground="0xFFFFFF" background="0x000066" inactive="0xFFFFFF" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>Primavera</p>
+    </cell>
+    <cell>
+     <p>Otoño</p>
+    </cell>
+    <cell>
+     <p>Verano</p>
+    </cell>
+    <cell>
+     <p>Invierno</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="horas en minutos" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Convierte las horas en minutos y calcula.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>Bien en cálculo.</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>¡Nadie es perfecto!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="60" countDownTime="true" maxActions="8" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="282.0" cellHeight="95.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color foreground="0x000066" background="0xFFFFFF" inactive="0xFFFFFF" border="0x000066" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>6 horas </p>
+    </cell>
+    <cell>
+     <p>2 horas</p>
+    </cell>
+    <cell>
+     <p>3 horas</p>
+    </cell>
+    <cell>
+     <p>4 horas y 10 minutos</p>
+    </cell>
+    <cell>
+     <p>5 horas y siete minutos</p>
+    </cell>
+    <cell>
+     <p>9 horas y treinta minutos</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="171.0" cellHeight="90.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="24" />
+     <color foreground="0xFFFFFF" background="0x000066" inactive="0xFFFFFF" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>360 minutos</p>
+    </cell>
+    <cell>
+     <p>120 minutos</p>
+    </cell>
+    <cell>
+     <p>180 minutos</p>
+    </cell>
+    <cell>
+     <p>250 minutos</p>
+    </cell>
+    <cell>
+     <p>307 minutos</p>
+    </cell>
+    <cell>
+     <p>570 minutos</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="inicio" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Bienvenid@</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="900.0" cellHeight="485.0" border="true">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color foreground="0x000066" background="0xFFFFFF" inactive="0xFFFFFF" border="0x000066" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell imgAlign="left,middle" avoidOverlapping="true" image="class.jpg">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Tahoma" size="36" bold="true" />
+      <color background="0xFFFFFF" border="0xFFFFFF" />
+     </style>
+     <p>La medida del tiempo.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@memory.MemoryGame" name="memo" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Asocia</p>
+    </cell>
+    <cell imgAlign="left,middle" avoidOverlapping="true" image="37.gif" type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Genial!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF9900" transparent="true" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="201.0" cellHeight="201.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" border="0x000066" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell image="TUTMASK.JPG" />
+    <cell image="Quijote.jpg" />
+    <cell image="h13476_m.jpg" />
+    <cell image="G-Museo09.jpg" />
+    <cell image="2.jpg" />
+    <cell image="Astronautaluna.jpg" />
+    <cell image="arte-romana-the-poetess-2400167.jpg" />
+    <cell image="alfabet_fen1.jpg" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="menu" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Escoge una opción.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="358.0" cellHeight="158.0" border="true">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell imgAlign="left,middle" avoidOverlapping="true" image="pclock.jpg">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="puzleinicio" />
+     <p>Empezar a jugar</p>
+    </cell>
+    <cell image="creditos.jpg">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="credit" />
+    </cell>
+    <cell imgAlign="left,middle" avoidOverlapping="true" image="hora.gif">
+     <media type="EXIT" level="1" />
+     <p>Salir del Juego</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="meses" code="">
+   <description />
+   <messages>
+    <cell imgAlign="left,middle" avoidOverlapping="true" image="hora.gif" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>lee con atención.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="611.0" cellHeight="454.0" border="false">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell imgAlign="left,middle" avoidOverlapping="true" image="image02.jpg">
+     <p>Cada año tiene doce meses.</p>
+     <p>Todos los meses tienen 30 o 31 días salvo febrero, que puede tener 28 o 29 días. En este caso hablamos de años bisiestos.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="meses_2" code="">
+   <description />
+   <messages>
+    <cell imgAlign="left,middle" avoidOverlapping="true" image="hora.gif" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>lee con atención.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="611.0" cellHeight="454.0" border="false">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell imgAlign="left,middle" avoidOverlapping="true" image="image01.jpg">
+     <p>Cada año tiene 365 días. Los años bisiestos tienen 366 días. Enero, Marzo, Mayo, Julio, Agosto, Octubre y Diciembre tienen 31 días.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@text.WrittenAnswer" name="operaciones" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Realiza esta operación. Recuerda: 60 minutos = 1 hora.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Genial!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>Demasiadas oportunidades.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="false">
+     <p>20 h + 7 min + 18 s</p>
+    </helpWindow>
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="592.0" cellHeight="68.0" border="false" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color foreground="0x000066" background="0xFFFFFF" inactive="0xFFFFFF" border="0x000066" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>12 h + 14 min + 46 s + 7 h + 52 min + 32 s</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="407.0" cellHeight="81.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="24" />
+     <color foreground="0xFFFFFF" background="0x000066" inactive="0xFFFFFF" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>20 h + 7 min + 18 s</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="operaciones_2" code="">
+   <description />
+   <messages>
+    <cell imgAlign="left,middle" avoidOverlapping="true" image="Cronómetro.jpg" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Realiza esta operación. Recuerda: 60 minutos = 1 hora.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Genial!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>Demasiadas oportunidades.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="false">
+     <p>19 h + 5 min + 12 s</p>
+    </helpWindow>
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="592.0" cellHeight="68.0" border="false" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color foreground="0x000066" background="0xFFFFFF" inactive="0xFFFFFF" border="0x000066" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>3 h + 26 min + 15 h + 39 min + 12 s</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="407.0" cellHeight="81.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="24" />
+     <color foreground="0xFFFFFF" background="0x000066" inactive="0xFFFFFF" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>19 h + 5 min + 12 s</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="operaciones_3" code="">
+   <description />
+   <messages>
+    <cell imgAlign="left,middle" avoidOverlapping="true" image="Cronómetro.jpg" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Realiza esta operación. Recuerda: 60 minutos = 1 hora.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Genial!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>Demasiadas oportunidades.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="false">
+     <p>14 h + 27 min + 9 s</p>
+    </helpWindow>
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="592.0" cellHeight="68.0" border="false" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color foreground="0x000066" background="0xFFFFFF" inactive="0xFFFFFF" border="0x000066" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>23 h + 12 min + 37 s - 8h + 45 min + 28 s</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="407.0" cellHeight="81.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="24" />
+     <color foreground="0xFFFFFF" background="0x000066" inactive="0xFFFFFF" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>14 h + 27 min + 9 s</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.Order" name="orden_unidad" code="" type="orderParagraphs">
+   <description />
+   <messages>
+    <cell type="previous">
+     <style>
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Observa con atención. Luego tendrás que ordenar estas unidades de tiempo.</p>
+    </cell>
+    <cell imgAlign="left,middle" avoidOverlapping="true" image="37.gif" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Ordena estas unidades de tiempo de menor a mayor.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Genial!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>Se acabó el tiempo.</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="180" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF9900" transparent="true" border="true">
+     <size width="325" height="411" />
+    </window>
+    <skin file="@orange.xml" />
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <prevScreen maxTime="25" />
+   <document>
+    <style name="default" size="28" background="0xFFFFFF" tabWidth="14" family="Arial" italic="false" bold="false" />
+    <style name="target" base="default" background="0xFFFFFF" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p Alignment="1" background="0xFFFFFF" family="Arial">
+      <target>día</target>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Arial">
+      <target>semana</target>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Arial">
+      <target>quincena</target>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Arial">
+      <target>mes</target>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Arial">
+      <target>trimestre</target>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Arial">
+      <target>año</target>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Arial">
+      <target>lustro</target>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Arial">
+      <target>década</target>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Arial">
+      <target>siglo</target>
+     </p>
+     <p Alignment="1" background="0xFFFFFF" family="Arial">
+      <target>milenio</target>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@BasicEvaluator" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="papiro" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Civilizaciones antiguas: Egipto.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Buen trabajo!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>Se acabó el tiempo.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" maxTime="40" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="papiro.gif">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="problema1" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Responde por escrito.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Perfecto!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>¡Otra vez será!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="60" countDownTime="true" maxActions="5" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="459.0" cellHeight="95.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color foreground="0x000066" background="0xFFFFFF" inactive="0xFFFFFF" border="0x000066" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>Pedro nació hace 84 meses exactamente. Calcula los años que tiene.</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="555.0" cellHeight="133.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="24" />
+     <color foreground="0xFFFFFF" background="0x000066" inactive="0xFFFFFF" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>7|7 años|siete|siete años|</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="problema_2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Responde por escrito.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Perfecto!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>¡Otra vez será!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="60" countDownTime="true" maxActions="5" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="459.0" cellHeight="95.0" border="false" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color foreground="0x000066" background="0xFFFFFF" inactive="0xFFFFFF" border="0x000066" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>María, la hermana de Pedro es tres años menor que él. Calcula los años que tiene María.</p>
+    </cell>
+    <cell>
+     <p>¿Cuántos meses hace que nació María?</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="555.0" cellHeight="133.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="24" />
+     <color foreground="0xFFFFFF" background="0x000066" inactive="0xFFFFFF" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>4|4 años|cuatro|cuatro años|</p>
+    </cell>
+    <cell>
+     <p>48|48 meses|cuarenta y ocho meses|cuarenta y ocho</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="problema_3" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Responde por escrito.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Perfecto!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>¡Otra vez será!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="60" countDownTime="true" maxActions="5" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="529.0" cellHeight="322.0" border="false" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color foreground="0x000066" background="0xFFFFFF" inactive="0xFFFFFF" border="0x000066" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell imgAlign="left,middle" avoidOverlapping="true" image="Abuelo.jpg">
+     <p>El abuelo de Laura nació en el año 1940. ¿Qué edad tendrá en el año 2010? </p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="555.0" cellHeight="133.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="24" />
+     <color foreground="0xFFFFFF" background="0x000066" inactive="0xFFFFFF" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>70|70 años|setenta|setenta años|</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="problema_4" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Responde por escrito.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Perfecto!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>¡Otra vez será!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="60" countDownTime="true" maxActions="5" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="529.0" cellHeight="322.0" border="false" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color foreground="0x000066" background="0xFFFFFF" inactive="0xFFFFFF" border="0x000066" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell imgAlign="left,middle" avoidOverlapping="true" image="Astronautaluna.jpg">
+     <p>El primer hombre que pisó la Luna lo hizo en el año 1968. El segundo vuelo que llegó con éxito a la Luna lo hizo diez años más tarde. ¿En qué año ocurrió?</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="555.0" cellHeight="133.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="24" />
+     <color foreground="0xFFFFFF" background="0x000066" inactive="0xFFFFFF" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>En el año 1978|1978|mil novecientos setenta y ocho|En el 1978|1.978|En el año 1.978|En el 1.978</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="problema_5" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Responde por escrito.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Perfecto!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>¡Otra vez será!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="60" countDownTime="true" maxActions="5" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="529.0" cellHeight="322.0" border="false" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color foreground="0x000066" background="0xFFFFFF" inactive="0xFFFFFF" border="0x000066" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell imgAlign="left,middle" avoidOverlapping="true" image="Llama.jpg">
+     <p>Las olimpiadas se celebran cada cuatro años. Si las últimas se han celebrado en el año 2004, ¿cuándo se celebrarán las próximas?</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="555.0" cellHeight="133.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="24" />
+     <color foreground="0xFFFFFF" background="0x000066" inactive="0xFFFFFF" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>En el año 2008|2008|dos mil ocho|En el 2008|2.008|En el año 2.008|En el 2.008</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="problema_6" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Responde por escrito.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Perfecto!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>¡Otra vez será!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="60" countDownTime="true" maxActions="5" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="529.0" cellHeight="322.0" border="false" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color foreground="0x000066" background="0xFFFFFF" inactive="0xFFFFFF" border="0x000066" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell imgAlign="left,middle" avoidOverlapping="true" image="SENIOR.JPG">
+     <p>Averigua qué edad tendrá Rogelia en el año 2010 si en 1992 tenía 70 años.</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="555.0" cellHeight="133.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="24" />
+     <color foreground="0xFFFFFF" background="0x000066" inactive="0xFFFFFF" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>88|88 años|ochenta y ocho|ochenta y ocho años</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="problema_7" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Responde por escrito.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Perfecto!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>¡Otra vez será!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="60" countDownTime="true" maxActions="5" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="722.0" cellHeight="251.0" border="false" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color foreground="0x000066" background="0xFFFFFF" inactive="0xFFFFFF" border="0x000066" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell imgAlign="left,middle" avoidOverlapping="true" image="Tn0074.jpg">
+     <p>Averigua qué edad tendrá Juana en el año 2008 si en 1992 tenía 9 años.</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="555.0" cellHeight="133.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="24" />
+     <color foreground="0xFFFFFF" background="0x000066" inactive="0xFFFFFF" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>25|25 años|veinticinco|veinticinco años</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="problema_8" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Responde por escrito.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Perfecto!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>¡Otra vez será!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="60" countDownTime="true" maxActions="5" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="722.0" cellHeight="251.0" border="false" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color foreground="0x000066" background="0xFFFFFF" inactive="0xFFFFFF" border="0x000066" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell imgAlign="left,middle" avoidOverlapping="true" image="Cronómetro.jpg">
+     <p>Un atleta ha mejorado su marca en 2 segundos. Si su anterior marca era de 2 minutos exactos, ¿Cuál es su tiempo actualmente?</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="555.0" cellHeight="133.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="24" />
+     <color foreground="0xFFFFFF" background="0x000066" inactive="0xFFFFFF" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>1 minuto y 58 segundos|Un minuto y cincuenta y ocho segundos|un min y 58 seg|un min y 58 s</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="problema_9" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Responde por escrito.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Perfecto!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>¡Otra vez será!</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="60" countDownTime="true" maxActions="5" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="722.0" cellHeight="251.0" border="false" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color foreground="0x000066" background="0xFFFFFF" inactive="0xFFFFFF" border="0x000066" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" imgAlign="left,middle" avoidOverlapping="true" image="Reloj.jpg">
+     <p>¿Cuánto tiempo transcurre desde las tres y media de la tarde hasta las cinco menos cuarto?</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="555.0" cellHeight="133.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="24" />
+     <color foreground="0xFFFFFF" background="0x000066" inactive="0xFFFFFF" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>una hora y cuarto|75 minutos|una hora y quince minutos|1 h + 15 min| una hora y 15 minutos|1 hora y cuarto|1 hora y 15 minutos</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puzlecadiz" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Haz este puzzle para terminar.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>Felicidades, has completado el trabajo.</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>Sólo es cuentión de entrenamiento.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="2" cols="4" border="true" image="CA82.JPG">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color foreground="0x000066" background="0xFFFFFF" inactive="0xFFFFFF" border="0x000066" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puzlereloj" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Realiza este puzle</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Perfecto!</p>
+    </cell>
+    <cell imgAlign="left,middle" avoidOverlapping="true" image="37.gif" type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>Se acabó el tiempo.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="pclock.jpg">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="roma" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Civilizaciones antiguas: Imperio Romano.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Buen trabajo!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>Se acabó el tiempo.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" maxTime="40" countDownTime="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="350px-Roman_Empire_Map.png">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="tiempopasa" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Lee.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="835.0" cellHeight="364.0" border="true">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color foreground="0x000066" background="0xFFFFFF" inactive="0xFFFFFF" border="0x000066" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell imgAlign="left,middle" avoidOverlapping="true" image="CA82.JPG">
+     <p>El tiempo pasa y las ciudades y pueblos van cambiando. Los inventos y las nuevas tecnologías hacen que vivamos de manera distinta a como se vivía hace unos años. </p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@textGrid.WordSearch" name="unidades" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Busca 12 unidades de tiempo. ¡Es difícil...!</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Genial!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>Se acabó el tiempo.</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="150" countDownTime="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <textGrid rows="10" columns="10" cellWidth="64.0" cellHeight="42.0" border="false">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>MINUTO*MES</row>
+     <row>TI***Ñ**S*</row>
+     <row>R*L**A*IE*</row>
+     <row>I*UE**G*M*</row>
+     <row>E*S*NLA*AA</row>
+     <row>N*T*OI*RND</row>
+     <row>I*R*D*O*AA</row>
+     <row>O*O**H***C</row>
+     <row>*********E</row>
+     <row>SEGUNDO**D</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">AÑO</clue>
+    <clue id="1">TRIENIO</clue>
+    <clue id="2">LUSTRO</clue>
+    <clue id="3">DECADA</clue>
+    <clue id="4">SIGLO</clue>
+    <clue id="5">MILENIO</clue>
+    <clue id="6">MES</clue>
+    <clue id="7">SEMANA</clue>
+    <clue id="8">DIA</clue>
+    <clue id="9">HORA</clue>
+    <clue id="10">MINUTO</clue>
+    <clue id="11">SEGUNDO</clue>
+   </clues>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="unidadtiempo1" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Asocia</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Buen trabajo!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>Demasiados intentos.</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxActions="8" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="206.0" cellHeight="61.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>día</p>
+    </cell>
+    <cell>
+     <p>año</p>
+    </cell>
+    <cell>
+     <p>Noviembre</p>
+    </cell>
+    <cell>
+     <p>Marzo</p>
+    </cell>
+    <cell>
+     <p>semana</p>
+    </cell>
+    <cell>
+     <p>una hora</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="236.0" cellHeight="68.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="24" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>24 horas</p>
+    </cell>
+    <cell>
+     <p>12 meses</p>
+    </cell>
+    <cell>
+     <p>30 días</p>
+    </cell>
+    <cell>
+     <p>31 días</p>
+    </cell>
+    <cell>
+     <p>7 días</p>
+    </cell>
+    <cell>
+     <p>60 minutos</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="unidadtiempo_2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Asocia</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Buen trabajo!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>Demasiados intentos.</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxActions="8" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="206.0" cellHeight="61.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>un minuto</p>
+    </cell>
+    <cell>
+     <p>una década</p>
+    </cell>
+    <cell>
+     <p>Un trimestre</p>
+    </cell>
+    <cell>
+     <p>un sexenio</p>
+    </cell>
+    <cell>
+     <p>una quincena</p>
+    </cell>
+    <cell>
+     <p>un lustro</p>
+    </cell>
+   </cells>
+   <cells rows="6" cols="1" cellWidth="236.0" cellHeight="68.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="24" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell>
+     <p>60 segundos</p>
+    </cell>
+    <cell>
+     <p>10 años</p>
+    </cell>
+    <cell>
+     <p>3 meses</p>
+    </cell>
+    <cell>
+     <p>6 años</p>
+    </cell>
+    <cell>
+     <p>15 días</p>
+    </cell>
+    <cell>
+     <p>5 años</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="unidadtiempo_3" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="22" />
+      <color foreground="0xFFFFFF" background="0x000066" border="0xFFFFFF" />
+     </style>
+     <p>Asocia</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="26" />
+      <color foreground="0x000066" background="0xFFFFFF" border="0x000066" />
+     </style>
+     <p>¡Buen trabajo!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="22" />
+      <color background="0xFF9900" />
+     </style>
+     <p>Demasiados intentos.</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxActions="8" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0xFFFFFF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" transparent="true" border="false" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="7" cols="1" cellWidth="206.0" cellHeight="61.0" border="true" id="primary">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <font family="Arial" size="22" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell>
+     <p>un milenio</p>
+    </cell>
+    <cell>
+     <p>un siglo</p>
+    </cell>
+    <cell>
+     <p>Un semestre</p>
+    </cell>
+    <cell>
+     <p>un trienio</p>
+    </cell>
+    <cell>
+     <p>dos años</p>
+    </cell>
+    <cell>
+     <p>un lustro</p>
+    </cell>
+    <cell>
+     <p>una década</p>
+    </cell>
+   </cells>
+   <cells rows="7" cols="1" cellWidth="236.0" cellHeight="68.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="24" />
+     <color background="0xFFFFFF" inactive="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell>
+     <p>mil años</p>
+    </cell>
+    <cell>
+     <p>100 años</p>
+    </cell>
+    <cell>
+     <p>6 meses</p>
+    </cell>
+    <cell>
+     <p>3 años</p>
+    </cell>
+    <cell>
+     <p>24 meses</p>
+    </cell>
+    <cell>
+     <p>5 años</p>
+    </cell>
+    <cell>
+     <p>10 años</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="37.gif" file="37.gif" animated="false" />
+  <media name="hora.gif" file="hora.gif" animated="false" />
+  <media name="jclic_logo.gif" file="jclic_logo.gif" animated="false" />
+  <media name="logo_portada01.gif" file="logo_portada01.gif" animated="false" />
+  <media name="marcagrp.gif" file="marcagrp.gif" animated="false" />
+  <media name="papiro.gif" file="papiro.gif" animated="false" />
+  <media name="2.jpg" file="2.jpg" />
+  <media name="450px-Peru_Machu_Picchu_Sunset.jpg" file="450px-peru_machu_picchu_sunset.jpg" />
+  <media name="Abuelo.jpg" file="abuelo.jpg" />
+  <media name="alfabet_fen1.jpg" file="alfabet_fen1.jpg" />
+  <media name="arte-romana-the-poetess-2400167.jpg" file="arte-romana-the-poetess-2400167.jpg" />
+  <media name="Astronautaluna.jpg" file="astronautaluna.jpg" />
+  <media name="CA82.JPG" file="ca82.jpg" />
+  <media name="class.jpg" file="class.jpg" />
+  <media name="creditos.jpg" file="creditos.jpg" />
+  <media name="Cronómetro.jpg" file="cronometro.jpg" />
+  <media name="G-Museo09.jpg" file="g-museo09.jpg" />
+  <media name="h13476_m.jpg" file="h13476_m.jpg" />
+  <media name="image01.jpg" file="image01.jpg" />
+  <media name="image02.jpg" file="image02.jpg" />
+  <media name="invierno 03.jpg" file="invierno_03.jpg" />
+  <media name="Llama.jpg" file="llama.jpg" />
+  <media name="Nadar.jpg" file="nadar.jpg" />
+  <media name="otono.jpg" file="otono.jpg" />
+  <media name="pclock.jpg" file="pclock.jpg" />
+  <media name="Quijote.jpg" file="quijote.jpg" />
+  <media name="Reloj.jpg" file="reloj.jpg" />
+  <media name="rosas.jpg" file="rosas.jpg" />
+  <media name="SENIOR.JPG" file="senior.jpg" />
+  <media name="Tn0074.jpg" file="tn0074.jpg" />
+  <media name="TUTMASK.JPG" file="tutmask.jpg" />
+  <media name="350px-Roman_Empire_Map.png" file="350px-roman_empire_map.png" />
+ </mediaBag>
+</JClicProject>
+

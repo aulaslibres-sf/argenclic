@@ -1,0 +1,3431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="portada" version="0.1.3">
+ <settings>
+  <title>De la lletra de pal a la lletra lligada</title>
+  <revision description="Creació del paquet d'activitats en Clic 3.0" date="3/19/99" />
+  <revision description="Conversió de Clic3 a JClic" date="3/8/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Juan Palomino Reinoso" mail="jpalomin@pie.xtec.es" />
+  <organization name="CEIP Santa Maria de Cervelló" mail="a8016240@centres.xtec.es" url="http://www.xtec.es/centres/a8016240" city="Cervelló" state="Catalunya" />
+  <language>Català</language>
+  <description>
+   <p>Paquet per conèixer i treballar les diferències entre la lletra lligada i la lletra "de pal". S'organitza en dos blocs: "Lletres" i "Noms". En el primer es treballen les lletres una per una, i en el segon es presenten els noms dels companys de la classe escrits en els dos tipus de lletra. Per a cada un d'aquests blocs hi ha tres paquets: "Observa", "Relaciona" i "Escriu".&lt;BR&gt;</p>
+   <p>En el bloc "Noms" hi apareixen els dels nens i nenes de l'escola on s'ha creat el paquet. Per a fer-lo servir correctament cal descompactar-lo (amb el ClicPac) i modificar les activitats per tal que hi apareguin els del grup que l'hagi d'utilitzar.</p>
+  </description>
+  <descriptors level="Infantil, Primària">llengua catalana, lectoescriptura</descriptors>
+ </settings>
+ <sequence>
+  <item id="portada.pac" name="portada.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="menu1.ass">
+   <jump action="STOP" id="forward" />
+  </item>
+  <item id="lletres.pac" name="menu21.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item id="explo1.pac" name="explo11.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="explo12.ass" />
+  <item name="explo13.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="relac1.pac" name="relac1.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="relac11.ass" />
+  <item name="relac12.ass" />
+  <item name="relac13.ass" />
+  <item name="relac14.ass" />
+  <item name="relac15.ass" />
+  <item name="relac16.ass" />
+  <item name="relac17.ass" />
+  <item name="relac18.ass" />
+  <item name="relac19.ass" />
+  <item name="relac110.ass" />
+  <item name="relac111.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="escriu1.pac" name="escriu1.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="escriu11.ass" />
+  <item name="escriu12.ass" />
+  <item name="escriu13.ass" />
+  <item name="escriu14.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="noms.pac" name="menu22.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item id="explo2.pac" name="explo21.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="explo22.ass" />
+  <item name="explo23.ass" />
+  <item name="explo24.ass" />
+  <item name="explo25.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="relac2.pac" name="relac21.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="relac22.ass" />
+  <item name="relac23.ass" />
+  <item name="relac24.ass" />
+  <item name="relac25.ass" />
+  <item name="relac26.ass" />
+  <item name="relac27.ass" />
+  <item name="relac28.ass" />
+  <item name="relac29.ass" />
+  <item name="relac210.ass" />
+  <item name="relac211.ass" />
+  <item name="relac212.ass" />
+  <item name="relac213.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+  <item id="escriu2.pac" name="escriu21.ass">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="escriu22.ass" />
+  <item name="escriu23.ass" />
+  <item name="escriu24.ass" />
+  <item name="escriu25.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="escriu1.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="4" columns="3" border="false" image="cartel3.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@text.WrittenAnswer" name="escriu11.ass">
+   <messages>
+    <cell image="ordre3.gif" type="initial">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>a</p>
+    </cell>
+    <cell>
+     <p>b</p>
+    </cell>
+    <cell>
+     <p>c</p>
+    </cell>
+    <cell>
+     <p>d</p>
+    </cell>
+    <cell>
+     <p>e</p>
+    </cell>
+    <cell>
+     <p>f</p>
+    </cell>
+    <cell>
+     <p>g</p>
+    </cell>
+    <cell>
+     <p>h</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="34" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>A</p>
+    </cell>
+    <cell>
+     <p>B</p>
+    </cell>
+    <cell>
+     <p>C</p>
+    </cell>
+    <cell>
+     <p>D</p>
+    </cell>
+    <cell>
+     <p>E</p>
+    </cell>
+    <cell>
+     <p>F</p>
+    </cell>
+    <cell>
+     <p>G</p>
+    </cell>
+    <cell>
+     <p>H</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="escriu12.ass">
+   <messages>
+    <cell image="ordre3.gif" type="initial">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>i</p>
+    </cell>
+    <cell>
+     <p>j</p>
+    </cell>
+    <cell>
+     <p>k</p>
+    </cell>
+    <cell>
+     <p>l</p>
+    </cell>
+    <cell>
+     <p>m</p>
+    </cell>
+    <cell>
+     <p>n</p>
+    </cell>
+    <cell>
+     <p>o</p>
+    </cell>
+    <cell>
+     <p>p</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="34" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>I</p>
+    </cell>
+    <cell>
+     <p>J</p>
+    </cell>
+    <cell>
+     <p>K</p>
+    </cell>
+    <cell>
+     <p>L</p>
+    </cell>
+    <cell>
+     <p>M</p>
+    </cell>
+    <cell>
+     <p>N</p>
+    </cell>
+    <cell>
+     <p>O</p>
+    </cell>
+    <cell>
+     <p>P</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="escriu13.ass">
+   <messages>
+    <cell image="ordre3.gif" type="initial">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>q</p>
+    </cell>
+    <cell>
+     <p>r</p>
+    </cell>
+    <cell>
+     <p>s</p>
+    </cell>
+    <cell>
+     <p>t</p>
+    </cell>
+    <cell>
+     <p>u</p>
+    </cell>
+    <cell>
+     <p>v</p>
+    </cell>
+    <cell>
+     <p>w</p>
+    </cell>
+    <cell>
+     <p>x</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="34" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Q</p>
+    </cell>
+    <cell>
+     <p>R</p>
+    </cell>
+    <cell>
+     <p>S</p>
+    </cell>
+    <cell>
+     <p>T</p>
+    </cell>
+    <cell>
+     <p>U</p>
+    </cell>
+    <cell>
+     <p>V</p>
+    </cell>
+    <cell>
+     <p>W</p>
+    </cell>
+    <cell>
+     <p>X</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="escriu14.ass">
+   <messages>
+    <cell image="ordre3.gif" type="initial">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>y</p>
+    </cell>
+    <cell>
+     <p>z</p>
+    </cell>
+    <cell>
+     <p>a</p>
+    </cell>
+    <cell>
+     <p>b</p>
+    </cell>
+    <cell>
+     <p>c</p>
+    </cell>
+    <cell>
+     <p>d</p>
+    </cell>
+    <cell>
+     <p>e</p>
+    </cell>
+    <cell>
+     <p>f</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="34" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Y</p>
+    </cell>
+    <cell>
+     <p>Z</p>
+    </cell>
+    <cell>
+     <p>A</p>
+    </cell>
+    <cell>
+     <p>B</p>
+    </cell>
+    <cell>
+     <p>C</p>
+    </cell>
+    <cell>
+     <p>D</p>
+    </cell>
+    <cell>
+     <p>E</p>
+    </cell>
+    <cell>
+     <p>F</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="escriu21.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="3" border="false" image="cartel6.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@text.WrittenAnswer" name="escriu22.ass">
+   <messages>
+    <cell image="ordre3.gif" type="initial">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="160.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Tania</p>
+    </cell>
+    <cell>
+     <p>Sergio</p>
+    </cell>
+    <cell>
+     <p>Jonatan</p>
+    </cell>
+    <cell>
+     <p>Jaume</p>
+    </cell>
+    <cell>
+     <p>Meritxell</p>
+    </cell>
+    <cell>
+     <p>Natalia</p>
+    </cell>
+    <cell>
+     <p>Ferran</p>
+    </cell>
+    <cell>
+     <p>Pol</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="28" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>TANIA</p>
+    </cell>
+    <cell>
+     <p>SERGIO</p>
+    </cell>
+    <cell>
+     <p>JONATAN</p>
+    </cell>
+    <cell>
+     <p>JAUME</p>
+    </cell>
+    <cell>
+     <p>MERITXELL</p>
+    </cell>
+    <cell>
+     <p>NATALIA</p>
+    </cell>
+    <cell>
+     <p>FERRAN</p>
+    </cell>
+    <cell>
+     <p>POL</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="escriu23.ass">
+   <messages>
+    <cell image="ordre3.gif" type="initial">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="160.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Judith</p>
+    </cell>
+    <cell>
+     <p>Dulce Nombre</p>
+    </cell>
+    <cell>
+     <p>Oriol</p>
+    </cell>
+    <cell>
+     <p>Eric</p>
+    </cell>
+    <cell>
+     <p>Tamar</p>
+    </cell>
+    <cell>
+     <p>Mireia</p>
+    </cell>
+    <cell>
+     <p>Antonio</p>
+    </cell>
+    <cell>
+     <p>Victor</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="28" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>JUDITH</p>
+    </cell>
+    <cell>
+     <p>DULCE NOMBRE</p>
+    </cell>
+    <cell>
+     <p>ORIOL</p>
+    </cell>
+    <cell>
+     <p>ERIC</p>
+    </cell>
+    <cell>
+     <p>TAMAR</p>
+    </cell>
+    <cell>
+     <p>MIREIA</p>
+    </cell>
+    <cell>
+     <p>ANTONIO</p>
+    </cell>
+    <cell>
+     <p>VICTOR</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="escriu24.ass">
+   <messages>
+    <cell image="ordre3.gif" type="initial">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="160.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Cristian</p>
+    </cell>
+    <cell>
+     <p>Jessica</p>
+    </cell>
+    <cell>
+     <p>Daniel</p>
+    </cell>
+    <cell>
+     <p>Gerard</p>
+    </cell>
+    <cell>
+     <p>Rocio</p>
+    </cell>
+    <cell>
+     <p>Adria</p>
+    </cell>
+    <cell>
+     <p>Yolanda</p>
+    </cell>
+    <cell>
+     <p>Francesc</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="28" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>CRISTIAN</p>
+    </cell>
+    <cell>
+     <p>JESSICA</p>
+    </cell>
+    <cell>
+     <p>DANIEL</p>
+    </cell>
+    <cell>
+     <p>GERARD</p>
+    </cell>
+    <cell>
+     <p>ROCIO</p>
+    </cell>
+    <cell>
+     <p>ADRIA</p>
+    </cell>
+    <cell>
+     <p>YOLANDA</p>
+    </cell>
+    <cell>
+     <p>FRANCESC</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="escriu25.ass">
+   <messages>
+    <cell image="ordre3.gif" type="initial">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="160.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Laia</p>
+    </cell>
+    <cell>
+     <p>Alejandro</p>
+    </cell>
+    <cell>
+     <p>Marta</p>
+    </cell>
+    <cell>
+     <p>Alex</p>
+    </cell>
+    <cell>
+     <p>Marina</p>
+    </cell>
+    <cell>
+     <p>Merce</p>
+    </cell>
+    <cell>
+     <p>Cristina</p>
+    </cell>
+    <cell>
+     <p>Laura</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <font family="Arial" size="28" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>LAIA</p>
+    </cell>
+    <cell>
+     <p>ALEJANDRO</p>
+    </cell>
+    <cell>
+     <p>MARTA</p>
+    </cell>
+    <cell>
+     <p>ALEX</p>
+    </cell>
+    <cell>
+     <p>MARINA</p>
+    </cell>
+    <cell>
+     <p>MERCE</p>
+    </cell>
+    <cell>
+     <p>CRISTINA</p>
+    </cell>
+    <cell>
+     <p>LAURA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="explo11.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="4" columns="3" border="false" image="cartel1.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@panels.Explore" name="explo12.ass">
+   <messages>
+    <cell image="ordre1.gif" type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" columns="3" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="32" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="3" />
+    <cell id="0">
+     <p>A</p>
+    </cell>
+    <cell id="1">
+     <p>B</p>
+    </cell>
+    <cell id="2">
+     <p>C</p>
+    </cell>
+    <cell id="3">
+     <p>D</p>
+    </cell>
+    <cell id="4">
+     <p>E</p>
+    </cell>
+    <cell id="5">
+     <p>F</p>
+    </cell>
+    <cell id="6">
+     <p>G</p>
+    </cell>
+    <cell id="7">
+     <p>H</p>
+    </cell>
+    <cell id="8">
+     <p>I</p>
+    </cell>
+    <cell id="9">
+     <p>J</p>
+    </cell>
+    <cell id="10">
+     <p>K</p>
+    </cell>
+    <cell id="11">
+     <p>L</p>
+    </cell>
+    <cell id="12">
+     <p>M</p>
+    </cell>
+    <cell id="13">
+     <p>N</p>
+    </cell>
+    <cell id="14">
+     <p>O</p>
+    </cell>
+   </cells>
+   <cells rows="5" columns="3" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="MeMima" size="53" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="3" />
+    <cell>
+     <p>a</p>
+    </cell>
+    <cell>
+     <p>b</p>
+    </cell>
+    <cell>
+     <p>c</p>
+    </cell>
+    <cell>
+     <p>d</p>
+    </cell>
+    <cell>
+     <p>e</p>
+    </cell>
+    <cell>
+     <p>f</p>
+    </cell>
+    <cell>
+     <p>g</p>
+    </cell>
+    <cell>
+     <p>h</p>
+    </cell>
+    <cell>
+     <p>i</p>
+    </cell>
+    <cell>
+     <p>j</p>
+    </cell>
+    <cell>
+     <p>k</p>
+    </cell>
+    <cell>
+     <p>l</p>
+    </cell>
+    <cell>
+     <p>m</p>
+    </cell>
+    <cell>
+     <p>n</p>
+    </cell>
+    <cell>
+     <p>o</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="explo13.ass">
+   <messages>
+    <cell image="ordre1.gif" type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="5" columns="3" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="32" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="3" />
+    <cell id="0">
+     <p>P</p>
+    </cell>
+    <cell id="1">
+     <p>Q</p>
+    </cell>
+    <cell id="2">
+     <p>R</p>
+    </cell>
+    <cell id="3">
+     <p>S</p>
+    </cell>
+    <cell id="4">
+     <p>T</p>
+    </cell>
+    <cell id="5">
+     <p>U</p>
+    </cell>
+    <cell id="6">
+     <p>V</p>
+    </cell>
+    <cell id="7">
+     <p>W</p>
+    </cell>
+    <cell id="8">
+     <p>X</p>
+    </cell>
+    <cell id="9">
+     <p>Y</p>
+    </cell>
+    <cell id="10">
+     <p>Z</p>
+    </cell>
+    <cell id="11">
+     <p>A</p>
+    </cell>
+    <cell id="12">
+     <p>B</p>
+    </cell>
+    <cell id="13">
+     <p>C</p>
+    </cell>
+    <cell id="14">
+     <p>D</p>
+    </cell>
+   </cells>
+   <cells rows="5" columns="3" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="MeMima" size="53" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="3" />
+    <cell>
+     <p>p</p>
+    </cell>
+    <cell>
+     <p>q</p>
+    </cell>
+    <cell>
+     <p>r</p>
+    </cell>
+    <cell>
+     <p>s</p>
+    </cell>
+    <cell>
+     <p>t</p>
+    </cell>
+    <cell>
+     <p>u</p>
+    </cell>
+    <cell>
+     <p>v</p>
+    </cell>
+    <cell>
+     <p>w</p>
+    </cell>
+    <cell>
+     <p>x</p>
+    </cell>
+    <cell>
+     <p>y</p>
+    </cell>
+    <cell>
+     <p>z</p>
+    </cell>
+    <cell>
+     <p>a</p>
+    </cell>
+    <cell>
+     <p>b</p>
+    </cell>
+    <cell>
+     <p>c</p>
+    </cell>
+    <cell>
+     <p>d</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="explo21.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="3" border="false" image="cartel4.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@panels.Explore" name="explo22.ass">
+   <messages>
+    <cell image="ordre1.gif" type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="160.0" cellHeight="75.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="26" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0">
+     <p>TANIA</p>
+    </cell>
+    <cell id="1">
+     <p>SERGIO</p>
+    </cell>
+    <cell id="2">
+     <p>JONATAN</p>
+    </cell>
+    <cell id="3">
+     <p>JAUME</p>
+    </cell>
+    <cell id="4">
+     <p>MERITXELL</p>
+    </cell>
+    <cell id="5">
+     <p>NATALIA</p>
+    </cell>
+    <cell id="6">
+     <p>FERRAN</p>
+    </cell>
+    <cell id="7">
+     <p>POL</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="MeMima" size="53" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Tania</p>
+    </cell>
+    <cell>
+     <p>Sergio</p>
+    </cell>
+    <cell>
+     <p>Jonatan</p>
+    </cell>
+    <cell>
+     <p>Jaume</p>
+    </cell>
+    <cell>
+     <p>Meritxell</p>
+    </cell>
+    <cell>
+     <p>Natalia</p>
+    </cell>
+    <cell>
+     <p>Ferran</p>
+    </cell>
+    <cell>
+     <p>Pol</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="explo23.ass">
+   <messages>
+    <cell image="ordre1.gif" type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="160.0" cellHeight="75.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="26" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0">
+     <p>JUDITH</p>
+    </cell>
+    <cell id="1">
+     <p>DULCE NOMBRE</p>
+    </cell>
+    <cell id="2">
+     <p>ORIOL</p>
+    </cell>
+    <cell id="3">
+     <p>ERIC</p>
+    </cell>
+    <cell id="4">
+     <p>TAMAR</p>
+    </cell>
+    <cell id="5">
+     <p>MIREIA</p>
+    </cell>
+    <cell id="6">
+     <p>ANTONIO</p>
+    </cell>
+    <cell id="7">
+     <p>VICTOR</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="MeMima" size="53" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Judith</p>
+    </cell>
+    <cell>
+     <p>Dulce Nombre</p>
+    </cell>
+    <cell>
+     <p>Oriol</p>
+    </cell>
+    <cell>
+     <p>Eric</p>
+    </cell>
+    <cell>
+     <p>Tamar</p>
+    </cell>
+    <cell>
+     <p>Mireia</p>
+    </cell>
+    <cell>
+     <p>Antonio</p>
+    </cell>
+    <cell>
+     <p>Victor</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="explo24.ass">
+   <messages>
+    <cell image="ordre1.gif" type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="160.0" cellHeight="75.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="26" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0">
+     <p>CRISTIAN</p>
+    </cell>
+    <cell id="1">
+     <p>JESSICA</p>
+    </cell>
+    <cell id="2">
+     <p>DANIEL</p>
+    </cell>
+    <cell id="3">
+     <p>GERARD</p>
+    </cell>
+    <cell id="4">
+     <p>ROCIO</p>
+    </cell>
+    <cell id="5">
+     <p>ADRIA</p>
+    </cell>
+    <cell id="6">
+     <p>YOLANDA</p>
+    </cell>
+    <cell id="7">
+     <p>FRANCESC</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="MeMima" size="53" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Cristian</p>
+    </cell>
+    <cell>
+     <p>Jessica</p>
+    </cell>
+    <cell>
+     <p>Daniel</p>
+    </cell>
+    <cell>
+     <p>Gerard</p>
+    </cell>
+    <cell>
+     <p>Rocio</p>
+    </cell>
+    <cell>
+     <p>Adria</p>
+    </cell>
+    <cell>
+     <p>Yolanda</p>
+    </cell>
+    <cell>
+     <p>Francesc</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="explo25.ass">
+   <messages>
+    <cell image="ordre1.gif" type="initial">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF00" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="160.0" cellHeight="75.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="26" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0">
+     <p>LAIA</p>
+    </cell>
+    <cell id="1">
+     <p>ALEJANDRO</p>
+    </cell>
+    <cell id="2">
+     <p>MARTA</p>
+    </cell>
+    <cell id="3">
+     <p>ALEX</p>
+    </cell>
+    <cell id="4">
+     <p>MARINA</p>
+    </cell>
+    <cell id="5">
+     <p>MERCE</p>
+    </cell>
+    <cell id="6">
+     <p>CRISTINA</p>
+    </cell>
+    <cell id="7">
+     <p>LAURA</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="100.0" border="false" id="secondary">
+    <style>
+     <font family="MeMima" size="53" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Laia</p>
+    </cell>
+    <cell>
+     <p>Alejandro</p>
+    </cell>
+    <cell>
+     <p>Marta</p>
+    </cell>
+    <cell>
+     <p>Alex</p>
+    </cell>
+    <cell>
+     <p>Marina</p>
+    </cell>
+    <cell>
+     <p>Merce</p>
+    </cell>
+    <cell>
+     <p>Cristina</p>
+    </cell>
+    <cell>
+     <p>Laura</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="menu1.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" columns="2" cellWidth="300.0" cellHeight="150.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell image="lletres.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="lletres.pac" />
+    </cell>
+    <cell image="noms.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="noms.pac" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="menu21.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="2" cellWidth="250.0" cellHeight="125.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="menu1.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="explo1.pac" />
+    </cell>
+    <cell image="menu2.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="relac1.pac" />
+    </cell>
+    <cell image="menu3.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="escriu1.pac" />
+    </cell>
+    <cell image="enrera.gif" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="menu22.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" columns="2" cellWidth="250.0" cellHeight="125.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="menu4.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="explo2.pac" />
+    </cell>
+    <cell image="menu5.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="relac2.pac" />
+    </cell>
+    <cell image="menu6.gif">
+     <media type="RUN_CLIC_PACKAGE" level="1" file="escriu2.pac" />
+    </cell>
+    <cell image="enrera.gif" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="portada.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="3" border="false" image="portada.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="relac1.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="4" columns="3" border="false" image="cartel2.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="relac11.ass">
+   <messages>
+    <cell image="ordre2.gif" type="initial">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="27" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>A</p>
+    </cell>
+    <cell>
+     <p>B</p>
+    </cell>
+    <cell>
+     <p>C</p>
+    </cell>
+    <cell>
+     <p>D</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>a</p>
+    </cell>
+    <cell>
+     <p>b</p>
+    </cell>
+    <cell>
+     <p>c</p>
+    </cell>
+    <cell>
+     <p>d</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="relac110.ass">
+   <messages>
+    <cell image="ordre2.gif" type="initial">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="80.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="27" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Q</p>
+    </cell>
+    <cell>
+     <p>R</p>
+    </cell>
+    <cell>
+     <p>S</p>
+    </cell>
+    <cell>
+     <p>T</p>
+    </cell>
+    <cell>
+     <p>U</p>
+    </cell>
+    <cell>
+     <p>V</p>
+    </cell>
+    <cell>
+     <p>W</p>
+    </cell>
+    <cell>
+     <p>X</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="80.0" border="true" id="secondary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>q</p>
+    </cell>
+    <cell>
+     <p>r</p>
+    </cell>
+    <cell>
+     <p>s</p>
+    </cell>
+    <cell>
+     <p>t</p>
+    </cell>
+    <cell>
+     <p>u</p>
+    </cell>
+    <cell>
+     <p>v</p>
+    </cell>
+    <cell>
+     <p>w</p>
+    </cell>
+    <cell>
+     <p>x</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="relac111.ass">
+   <messages>
+    <cell image="ordre2.gif" type="initial">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="80.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="27" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Y</p>
+    </cell>
+    <cell>
+     <p>Z</p>
+    </cell>
+    <cell>
+     <p>A</p>
+    </cell>
+    <cell>
+     <p>B</p>
+    </cell>
+    <cell>
+     <p>C</p>
+    </cell>
+    <cell>
+     <p>D</p>
+    </cell>
+    <cell>
+     <p>E</p>
+    </cell>
+    <cell>
+     <p>F</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="80.0" border="true" id="secondary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>y</p>
+    </cell>
+    <cell>
+     <p>z</p>
+    </cell>
+    <cell>
+     <p>a</p>
+    </cell>
+    <cell>
+     <p>b</p>
+    </cell>
+    <cell>
+     <p>c</p>
+    </cell>
+    <cell>
+     <p>d</p>
+    </cell>
+    <cell>
+     <p>e</p>
+    </cell>
+    <cell>
+     <p>f</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="relac12.ass">
+   <messages>
+    <cell image="ordre2.gif" type="initial">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="27" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>E</p>
+    </cell>
+    <cell>
+     <p>F</p>
+    </cell>
+    <cell>
+     <p>G</p>
+    </cell>
+    <cell>
+     <p>H</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>e</p>
+    </cell>
+    <cell>
+     <p>f</p>
+    </cell>
+    <cell>
+     <p>g</p>
+    </cell>
+    <cell>
+     <p>h</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="relac13.ass">
+   <messages>
+    <cell image="ordre2.gif" type="initial">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="27" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>I</p>
+    </cell>
+    <cell>
+     <p>J</p>
+    </cell>
+    <cell>
+     <p>K</p>
+    </cell>
+    <cell>
+     <p>L</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>i</p>
+    </cell>
+    <cell>
+     <p>j</p>
+    </cell>
+    <cell>
+     <p>k</p>
+    </cell>
+    <cell>
+     <p>l</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="relac14.ass">
+   <messages>
+    <cell image="ordre2.gif" type="initial">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="27" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>M</p>
+    </cell>
+    <cell>
+     <p>N</p>
+    </cell>
+    <cell>
+     <p>O</p>
+    </cell>
+    <cell>
+     <p>P</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>m</p>
+    </cell>
+    <cell>
+     <p>n</p>
+    </cell>
+    <cell>
+     <p>o</p>
+    </cell>
+    <cell>
+     <p>p</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="relac15.ass">
+   <messages>
+    <cell image="ordre2.gif" type="initial">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="27" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>Q</p>
+    </cell>
+    <cell>
+     <p>R</p>
+    </cell>
+    <cell>
+     <p>S</p>
+    </cell>
+    <cell>
+     <p>T</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>q</p>
+    </cell>
+    <cell>
+     <p>r</p>
+    </cell>
+    <cell>
+     <p>s</p>
+    </cell>
+    <cell>
+     <p>t</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="relac16.ass">
+   <messages>
+    <cell image="ordre2.gif" type="initial">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="27" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>U</p>
+    </cell>
+    <cell>
+     <p>V</p>
+    </cell>
+    <cell>
+     <p>W</p>
+    </cell>
+    <cell>
+     <p>X</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>u</p>
+    </cell>
+    <cell>
+     <p>v</p>
+    </cell>
+    <cell>
+     <p>w</p>
+    </cell>
+    <cell>
+     <p>x</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="relac17.ass">
+   <messages>
+    <cell image="ordre2.gif" type="initial">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="27" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>Y</p>
+    </cell>
+    <cell>
+     <p>Z</p>
+    </cell>
+    <cell>
+     <p>A</p>
+    </cell>
+    <cell>
+     <p>B</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>y</p>
+    </cell>
+    <cell>
+     <p>z</p>
+    </cell>
+    <cell>
+     <p>a</p>
+    </cell>
+    <cell>
+     <p>b</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="relac18.ass">
+   <messages>
+    <cell image="ordre2.gif" type="initial">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="80.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="27" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>A</p>
+    </cell>
+    <cell>
+     <p>B</p>
+    </cell>
+    <cell>
+     <p>C</p>
+    </cell>
+    <cell>
+     <p>D</p>
+    </cell>
+    <cell>
+     <p>E</p>
+    </cell>
+    <cell>
+     <p>F</p>
+    </cell>
+    <cell>
+     <p>G</p>
+    </cell>
+    <cell>
+     <p>H</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="80.0" border="true" id="secondary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>a</p>
+    </cell>
+    <cell>
+     <p>b</p>
+    </cell>
+    <cell>
+     <p>c</p>
+    </cell>
+    <cell>
+     <p>d</p>
+    </cell>
+    <cell>
+     <p>e</p>
+    </cell>
+    <cell>
+     <p>f</p>
+    </cell>
+    <cell>
+     <p>g</p>
+    </cell>
+    <cell>
+     <p>h</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="relac19.ass">
+   <messages>
+    <cell image="ordre2.gif" type="initial">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="80.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="27" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>I</p>
+    </cell>
+    <cell>
+     <p>J</p>
+    </cell>
+    <cell>
+     <p>K</p>
+    </cell>
+    <cell>
+     <p>L</p>
+    </cell>
+    <cell>
+     <p>M</p>
+    </cell>
+    <cell>
+     <p>N</p>
+    </cell>
+    <cell>
+     <p>O</p>
+    </cell>
+    <cell>
+     <p>P</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="140.0" cellHeight="80.0" border="true" id="secondary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>i</p>
+    </cell>
+    <cell>
+     <p>j</p>
+    </cell>
+    <cell>
+     <p>k</p>
+    </cell>
+    <cell>
+     <p>l</p>
+    </cell>
+    <cell>
+     <p>m</p>
+    </cell>
+    <cell>
+     <p>n</p>
+    </cell>
+    <cell>
+     <p>o</p>
+    </cell>
+    <cell>
+     <p>p</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="relac21.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="3" border="false" image="cartel5.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="relac210.ass">
+   <messages>
+    <cell image="ordre2.gif" type="initial">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="200.0" cellHeight="90.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Tania</p>
+    </cell>
+    <cell>
+     <p>Sergio</p>
+    </cell>
+    <cell>
+     <p>Jonatan</p>
+    </cell>
+    <cell>
+     <p>Jaume</p>
+    </cell>
+    <cell>
+     <p>Meritxell</p>
+    </cell>
+    <cell>
+     <p>Natalia</p>
+    </cell>
+    <cell>
+     <p>Ferran</p>
+    </cell>
+    <cell>
+     <p>Pol</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="200.0" cellHeight="90.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>TANIA</p>
+    </cell>
+    <cell>
+     <p>SERGIO</p>
+    </cell>
+    <cell>
+     <p>JONATAN</p>
+    </cell>
+    <cell>
+     <p>JAUME</p>
+    </cell>
+    <cell>
+     <p>MERITXELL</p>
+    </cell>
+    <cell>
+     <p>NATALIA</p>
+    </cell>
+    <cell>
+     <p>FERRAN</p>
+    </cell>
+    <cell>
+     <p>POL</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="200.0" cellHeight="90.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Tania</p>
+    </cell>
+    <cell>
+     <p>Sergio</p>
+    </cell>
+    <cell>
+     <p>Jonatan</p>
+    </cell>
+    <cell>
+     <p>Jaume</p>
+    </cell>
+    <cell>
+     <p>Meritxell</p>
+    </cell>
+    <cell>
+     <p>Natalia</p>
+    </cell>
+    <cell>
+     <p>Ferran</p>
+    </cell>
+    <cell>
+     <p>Pol</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="relac211.ass">
+   <messages>
+    <cell image="ordre2.gif" type="initial">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="200.0" cellHeight="120.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Judith</p>
+    </cell>
+    <cell>
+     <p>Dulce Nombre</p>
+    </cell>
+    <cell>
+     <p>Oriol</p>
+    </cell>
+    <cell>
+     <p>Eric</p>
+    </cell>
+    <cell>
+     <p>Tamar</p>
+    </cell>
+    <cell>
+     <p>Mireia</p>
+    </cell>
+    <cell>
+     <p>Antonio</p>
+    </cell>
+    <cell>
+     <p>Victor</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="200.0" cellHeight="90.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>JUDITH</p>
+    </cell>
+    <cell>
+     <p>DULCE NOMBRE</p>
+    </cell>
+    <cell>
+     <p>ORIOL</p>
+    </cell>
+    <cell>
+     <p>ERIC</p>
+    </cell>
+    <cell>
+     <p>TAMAR</p>
+    </cell>
+    <cell>
+     <p>MIREIA</p>
+    </cell>
+    <cell>
+     <p>ANTONIO</p>
+    </cell>
+    <cell>
+     <p>VICTOR</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="200.0" cellHeight="120.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Judith</p>
+    </cell>
+    <cell>
+     <p>Dulce Nombre</p>
+    </cell>
+    <cell>
+     <p>Oriol</p>
+    </cell>
+    <cell>
+     <p>Eric</p>
+    </cell>
+    <cell>
+     <p>Tamar</p>
+    </cell>
+    <cell>
+     <p>Mireia</p>
+    </cell>
+    <cell>
+     <p>Antonio</p>
+    </cell>
+    <cell>
+     <p>Victor</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="relac212.ass">
+   <messages>
+    <cell image="ordre2.gif" type="initial">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="200.0" cellHeight="90.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Cristian</p>
+    </cell>
+    <cell>
+     <p>Jessica</p>
+    </cell>
+    <cell>
+     <p>Daniel</p>
+    </cell>
+    <cell>
+     <p>Gerard</p>
+    </cell>
+    <cell>
+     <p>Rocio</p>
+    </cell>
+    <cell>
+     <p>Adria</p>
+    </cell>
+    <cell>
+     <p>Yolanda</p>
+    </cell>
+    <cell>
+     <p>Francesc</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="200.0" cellHeight="90.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>CRISTIAN</p>
+    </cell>
+    <cell>
+     <p>JESSICA</p>
+    </cell>
+    <cell>
+     <p>DANIEL</p>
+    </cell>
+    <cell>
+     <p>GERARD</p>
+    </cell>
+    <cell>
+     <p>ROCIO</p>
+    </cell>
+    <cell>
+     <p>ADRIA</p>
+    </cell>
+    <cell>
+     <p>YOLANDA</p>
+    </cell>
+    <cell>
+     <p>FRANCESC</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="200.0" cellHeight="90.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Cristian</p>
+    </cell>
+    <cell>
+     <p>Jessica</p>
+    </cell>
+    <cell>
+     <p>Daniel</p>
+    </cell>
+    <cell>
+     <p>Gerard</p>
+    </cell>
+    <cell>
+     <p>Rocio</p>
+    </cell>
+    <cell>
+     <p>Adria</p>
+    </cell>
+    <cell>
+     <p>Yolanda</p>
+    </cell>
+    <cell>
+     <p>Francesc</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="relac213.ass">
+   <messages>
+    <cell image="ordre2.gif" type="initial">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="2" cellWidth="200.0" cellHeight="90.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Laia</p>
+    </cell>
+    <cell>
+     <p>Alejandro</p>
+    </cell>
+    <cell>
+     <p>Marta</p>
+    </cell>
+    <cell>
+     <p>Alex</p>
+    </cell>
+    <cell>
+     <p>Marina</p>
+    </cell>
+    <cell>
+     <p>Merce</p>
+    </cell>
+    <cell>
+     <p>Cristina</p>
+    </cell>
+    <cell>
+     <p>Laura</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="200.0" cellHeight="90.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>LAIA</p>
+    </cell>
+    <cell>
+     <p>ALEJANDRO</p>
+    </cell>
+    <cell>
+     <p>MARTA</p>
+    </cell>
+    <cell>
+     <p>ALEX</p>
+    </cell>
+    <cell>
+     <p>MARINA</p>
+    </cell>
+    <cell>
+     <p>MERCE</p>
+    </cell>
+    <cell>
+     <p>CRISTINA</p>
+    </cell>
+    <cell>
+     <p>LAURA</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="2" cellWidth="200.0" cellHeight="90.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell>
+     <p>Laia</p>
+    </cell>
+    <cell>
+     <p>Alejandro</p>
+    </cell>
+    <cell>
+     <p>Marta</p>
+    </cell>
+    <cell>
+     <p>Alex</p>
+    </cell>
+    <cell>
+     <p>Marina</p>
+    </cell>
+    <cell>
+     <p>Merce</p>
+    </cell>
+    <cell>
+     <p>Cristina</p>
+    </cell>
+    <cell>
+     <p>Laura</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="relac22.ass">
+   <messages>
+    <cell image="ordre2.gif" type="initial">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="1" cellWidth="200.0" cellHeight="80.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>Tania</p>
+    </cell>
+    <cell>
+     <p>Sergio</p>
+    </cell>
+    <cell>
+     <p>Jonatan</p>
+    </cell>
+    <cell>
+     <p>Jaume</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="200.0" cellHeight="80.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>TANIA</p>
+    </cell>
+    <cell>
+     <p>SERGIO</p>
+    </cell>
+    <cell>
+     <p>JONATAN</p>
+    </cell>
+    <cell>
+     <p>JAUME</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="200.0" cellHeight="80.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>Tania</p>
+    </cell>
+    <cell>
+     <p>Sergio</p>
+    </cell>
+    <cell>
+     <p>Jonatan</p>
+    </cell>
+    <cell>
+     <p>Jaume</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="relac23.ass">
+   <messages>
+    <cell image="ordre2.gif" type="initial">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="1" cellWidth="200.0" cellHeight="80.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>Meritxell</p>
+    </cell>
+    <cell>
+     <p>Natalia</p>
+    </cell>
+    <cell>
+     <p>Ferran</p>
+    </cell>
+    <cell>
+     <p>Pol</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="200.0" cellHeight="80.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>MERITXELL</p>
+    </cell>
+    <cell>
+     <p>NATALIA</p>
+    </cell>
+    <cell>
+     <p>FERRAN</p>
+    </cell>
+    <cell>
+     <p>POL</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="200.0" cellHeight="80.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>Meritxell</p>
+    </cell>
+    <cell>
+     <p>Natalia</p>
+    </cell>
+    <cell>
+     <p>Ferran</p>
+    </cell>
+    <cell>
+     <p>Pol</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="relac24.ass">
+   <messages>
+    <cell image="ordre2.gif" type="initial">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="1" cellWidth="200.0" cellHeight="121.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>Judith</p>
+    </cell>
+    <cell>
+     <p>Dulce Nombre</p>
+    </cell>
+    <cell>
+     <p>Oriol</p>
+    </cell>
+    <cell>
+     <p>Eric</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="200.0" cellHeight="121.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>JUDITH</p>
+    </cell>
+    <cell>
+     <p>DULCE NOMBRE</p>
+    </cell>
+    <cell>
+     <p>ORIOL</p>
+    </cell>
+    <cell>
+     <p>ERIC</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="200.0" cellHeight="121.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>Judith</p>
+    </cell>
+    <cell>
+     <p>Dulce Nombre</p>
+    </cell>
+    <cell>
+     <p>Oriol</p>
+    </cell>
+    <cell>
+     <p>Eric</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="relac25.ass">
+   <messages>
+    <cell image="ordre2.gif" type="initial">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="1" cellWidth="200.0" cellHeight="90.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>Tamar</p>
+    </cell>
+    <cell>
+     <p>Mireia</p>
+    </cell>
+    <cell>
+     <p>Antonio</p>
+    </cell>
+    <cell>
+     <p>Victor</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="200.0" cellHeight="90.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>TAMAR</p>
+    </cell>
+    <cell>
+     <p>MIREIA</p>
+    </cell>
+    <cell>
+     <p>ANTONIO</p>
+    </cell>
+    <cell>
+     <p>VICTOR</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="200.0" cellHeight="90.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>Tamar</p>
+    </cell>
+    <cell>
+     <p>Mireia</p>
+    </cell>
+    <cell>
+     <p>Antonio</p>
+    </cell>
+    <cell>
+     <p>Victor</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="relac26.ass">
+   <messages>
+    <cell image="ordre2.gif" type="initial">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="1" cellWidth="200.0" cellHeight="90.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>Cristian</p>
+    </cell>
+    <cell>
+     <p>Jessica</p>
+    </cell>
+    <cell>
+     <p>Daniel</p>
+    </cell>
+    <cell>
+     <p>Gerard</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="200.0" cellHeight="90.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>CRISTIAN</p>
+    </cell>
+    <cell>
+     <p>JESSICA</p>
+    </cell>
+    <cell>
+     <p>DANIEL</p>
+    </cell>
+    <cell>
+     <p>GERARD</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="200.0" cellHeight="90.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>Cristian</p>
+    </cell>
+    <cell>
+     <p>Jessica</p>
+    </cell>
+    <cell>
+     <p>Daniel</p>
+    </cell>
+    <cell>
+     <p>Gerard</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="relac27.ass">
+   <messages>
+    <cell image="ordre2.gif" type="initial">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="1" cellWidth="200.0" cellHeight="90.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>Rocio</p>
+    </cell>
+    <cell>
+     <p>Adria</p>
+    </cell>
+    <cell>
+     <p>Yolanda</p>
+    </cell>
+    <cell>
+     <p>Francesc</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="200.0" cellHeight="90.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>ROCIO</p>
+    </cell>
+    <cell>
+     <p>ADRIA</p>
+    </cell>
+    <cell>
+     <p>YOLANDA</p>
+    </cell>
+    <cell>
+     <p>FRANCESC</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="200.0" cellHeight="90.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>Rocio</p>
+    </cell>
+    <cell>
+     <p>Adria</p>
+    </cell>
+    <cell>
+     <p>Yolanda</p>
+    </cell>
+    <cell>
+     <p>Francesc</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="relac28.ass">
+   <messages>
+    <cell image="ordre2.gif" type="initial">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="1" cellWidth="200.0" cellHeight="90.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>Laia</p>
+    </cell>
+    <cell>
+     <p>Alejandro</p>
+    </cell>
+    <cell>
+     <p>Marta</p>
+    </cell>
+    <cell>
+     <p>Alex</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="200.0" cellHeight="90.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>LAIA</p>
+    </cell>
+    <cell>
+     <p>ALEJANDRO</p>
+    </cell>
+    <cell>
+     <p>MARTA</p>
+    </cell>
+    <cell>
+     <p>ALEX</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="200.0" cellHeight="90.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>Laia</p>
+    </cell>
+    <cell>
+     <p>Alejandro</p>
+    </cell>
+    <cell>
+     <p>Marta</p>
+    </cell>
+    <cell>
+     <p>Alex</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="relac29.ass">
+   <messages>
+    <cell image="ordre2.gif" type="initial">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x00FFFF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" columns="1" cellWidth="200.0" cellHeight="90.0" border="true" id="primary">
+    <style>
+     <font family="MeMima" size="53" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>Marina</p>
+    </cell>
+    <cell>
+     <p>Merce</p>
+    </cell>
+    <cell>
+     <p>Cristina</p>
+    </cell>
+    <cell>
+     <p>Laura</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="200.0" cellHeight="90.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="30" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>MARINA</p>
+    </cell>
+    <cell>
+     <p>MERCE</p>
+    </cell>
+    <cell>
+     <p>CRISTINA</p>
+    </cell>
+    <cell>
+     <p>LAURA</p>
+    </cell>
+   </cells>
+   <cells rows="4" columns="1" cellWidth="200.0" cellHeight="90.0" border="true" id="solvedPrimary">
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>Marina</p>
+    </cell>
+    <cell>
+     <p>Merce</p>
+    </cell>
+    <cell>
+     <p>Cristina</p>
+    </cell>
+    <cell>
+     <p>Laura</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="cartel1.gif" file="cartel1.gif" />
+  <media name="cartel2.gif" file="cartel2.gif" />
+  <media name="cartel3.gif" file="cartel3.gif" />
+  <media name="cartel4.gif" file="cartel4.gif" />
+  <media name="cartel5.gif" file="cartel5.gif" />
+  <media name="cartel6.gif" file="cartel6.gif" />
+  <media name="enrera.gif" file="enrera.gif" />
+  <media name="lletres.gif" file="lletres.gif" />
+  <media name="menu1.gif" file="menu1.gif" />
+  <media name="menu2.gif" file="menu2.gif" />
+  <media name="menu3.gif" file="menu3.gif" />
+  <media name="menu4.gif" file="menu4.gif" />
+  <media name="menu5.gif" file="menu5.gif" />
+  <media name="menu6.gif" file="menu6.gif" />
+  <media name="noms.gif" file="noms.gif" />
+  <media name="ordre1.gif" file="ordre1.gif" />
+  <media name="ordre2.gif" file="ordre2.gif" />
+  <media name="ordre3.gif" file="ordre3.gif" />
+  <media name="portada.gif" file="portada.gif" />
+ </mediaBag>
+</JClicProject>
+

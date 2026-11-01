@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="proporci" version="0.1.3">
+ <settings>
+  <title>Proporcionalidad</title>
+  <revision description="created" date="7/20/09" />
+  <revision description="Publicació a la zonaClic (http://clic.xtec.cat)" date="3/18/10">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Francisco Martín Garzón" mail="pacofm3@gmail.com" />
+  <organization name="IES La Pedrera Blanca" mail="11700883.averroes@juntadeandalucia.es" url="http://www.ieslapedrerablanca.es" city="Chiclana" state="Andalucía" />
+  <language>ca</language>
+  <description>
+   <p>Projecte d'activitats amb diferents exercicis sobre la proporcionalitat directa i inversa i la seva aplicació en diferents problemes d'aplicació a la vida real.</p>
+  </description>
+  <descriptors area-codes="mat" level-codes="SEC">Proporcionalitat</descriptors>
+  <skin file="@green.xml" />
+  <meta_langs>ca</meta_langs>
+  <descriptions>
+   <description language="ca">
+    <p>Projecte d'activitats amb diferents exercicis sobre la proporcionalitat directa i inversa i la seva aplicació en diferents problemes d'aplicació a la vida real.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="Inicio" name="portada">
+   <jump action="RETURN" id="back" />
+  </item>
+  <item name="definiciondirecta" />
+  <item name="defininversa" />
+  <item name="magnitudesdirectas" />
+  <item name="magnitudesinversas" />
+  <item name="videodirecta" />
+  <item name="videoinversa" />
+  <item id="enlacedirectainversa" name="enlacedirectainversa" />
+  <item name="problemasdirecta">
+   <jump tag="enlacedirectainversa" id="forward" />
+  </item>
+  <item name="problemasinversa">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@puzzles.ExchangePuzzle" name="definiciondirecta" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" border="true" image="logoies4.png" type="initial">
+     <style borderStroke="3.0" markerStroke="2.7">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFF00" background="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Ordena las siguientes celdas para que la frase que se forme tenga sentido.</p>
+    </cell>
+    <cell border="true" type="final">
+     <style borderStroke="3.0" markerStroke="2.7">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFF00" background="0x003300" border="0xFFFF00" />
+     </style>
+     <p>¡Bien!, pasa a la siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x003300">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF00" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="157.0" cellHeight="87.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell border="true">
+     <style borderStroke="2.9" markerStroke="5.0">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Dos magnitudes son</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="2.9" markerStroke="5.0">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>directamente proporcionales cuando:</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="2.9" markerStroke="5.0">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Al multiplicar una (doble, triple, ...),</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="2.9" markerStroke="5.0">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>la otra se multiplica</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="2.9" markerStroke="5.0">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>de la misma manera</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="2.9" markerStroke="5.0">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>(doble, triple, ...).</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="defininversa" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" border="true" image="logoies4.png" type="initial">
+     <style borderStroke="3.0" markerStroke="2.7">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFF00" background="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Ordena las celdas de modo que formen una frase con sentido.</p>
+    </cell>
+    <cell imgAlign="right,middle" border="true" image="logoies4.png" type="final">
+     <style borderStroke="3.1" markerStroke="2.7">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFF00" background="0x003300" border="0xFFFF00" />
+     </style>
+     <p>¡Bien!. Pasa a la siguiente actividad.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x003300">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF00" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="169.0" cellHeight="87.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell border="true">
+     <style borderStroke="3.1" markerStroke="2.7">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFF00" background="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Dos magnitudes son</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="3.1" markerStroke="2.7">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFF00" background="0x003300" border="0xFFFF00" />
+     </style>
+     <p>inversamente proporcionales cuando:</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="3.1" markerStroke="2.7">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFF00" background="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Al multiplicar una</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="3.1" markerStroke="2.7">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFF00" background="0x003300" border="0xFFFF00" />
+     </style>
+     <p>(doble, triple, ...),</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="3.1" markerStroke="2.7">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFF00" background="0x003300" border="0xFFFF00" />
+     </style>
+     <p>se divide la otra</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="3.1" markerStroke="2.7">
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFF00" background="0x003300" border="0xFFFF00" />
+     </style>
+     <p>(mitad, tercio, ...).</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="enlacedirectainversa" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" border="true" image="logoies4.png" type="initial">
+     <style borderStroke="3.1" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Elige una de las dos opciones. Cuando acabes una, elige la otra.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x003300">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF00" border="true" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="305.0" cellHeight="98.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell border="true">
+     <style borderStroke="3.1" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="problemasdirecta" />
+     <p>Problemas de proporción directa.</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="3.1" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="problemasinversa" />
+     <p>Problemas de proporción inversa.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="magnitudesdirectas" code="">
+   <description />
+   <messages>
+    <cell txtAlign="left,middle" imgAlign="right,middle" border="true" image="logoies4.png" type="initial">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Asocia las cantidades de las dos ventana, de manera que formen una proporción directa.</p>
+    </cell>
+    <cell imgAlign="right,middle" border="true" image="logoies4.png" type="final">
+     <style borderStroke="3.1" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" border="0xFFFF00" />
+     </style>
+     <p>¡Bien!. Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x003300">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF00" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="114.0" cellHeight="69.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0" txtAlign="left,middle" imgAlign="right,middle" border="true" image="mp4.jpg">
+     <style borderStroke="3.3" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>1 mp4</p>
+    </cell>
+    <cell id="1" txtAlign="left,middle" imgAlign="right,middle" border="true" image="mp4.jpg">
+     <style borderStroke="3.3" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>2 mp4</p>
+    </cell>
+    <cell id="2" txtAlign="left,middle" imgAlign="right,middle" border="true" image="mp4.jpg">
+     <style borderStroke="3.3" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>3 mp4</p>
+    </cell>
+    <cell id="3" txtAlign="left,middle" imgAlign="right,middle" border="true" image="mp4.jpg">
+     <style borderStroke="3.3" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>6 mp4</p>
+    </cell>
+    <cell id="4" txtAlign="left,middle" imgAlign="right,middle" border="true" image="mp4.jpg">
+     <style borderStroke="3.3" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>8 mp4</p>
+    </cell>
+    <cell id="5" txtAlign="left,middle" imgAlign="right,middle" border="true" image="mp4.jpg">
+     <style borderStroke="3.3" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>10 mp4</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="65.0" cellHeight="41.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell border="true">
+     <style borderStroke="3.3" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>25 €</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="3.3" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>50 €</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="3.3" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>75 €</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="3.3" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>150 €</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="3.3" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>200 €</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="3.3" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>250 €</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="magnitudesinversas" code="">
+   <description />
+   <messages>
+    <cell txtAlign="left,middle" imgAlign="right,middle" border="true" image="logoies4.png" type="initial">
+     <style borderStroke="3.1" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Asocia las cantidades de las dos ventanas, que expresan el número de tortugas y el tiempo que les dura la comida.</p>
+    </cell>
+    <cell imgAlign="right,middle" border="true" image="logoies4.png" type="final">
+     <style borderStroke="3.1" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" border="0xFFFF00" />
+     </style>
+     <p>¡Bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x003300">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF00" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="144.0" cellHeight="91.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0" txtAlign="left,middle" imgAlign="right,middle" border="true" image="tortuga.jpg">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0xFFFF00" border="0xFFFF00" />
+     </style>
+     <p>1 tortuga</p>
+    </cell>
+    <cell id="1" txtAlign="left,middle" imgAlign="right,middle" border="true" image="tortuga.jpg">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0xFFFF00" border="0xFFFF00" />
+     </style>
+     <p>2 tortugas</p>
+    </cell>
+    <cell id="2" txtAlign="left,middle" imgAlign="right,middle" border="true" image="tortuga.jpg">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0xFFFF00" border="0xFFFF00" />
+     </style>
+     <p>3 torgugas</p>
+    </cell>
+    <cell id="3" txtAlign="left,middle" imgAlign="right,middle" border="true" image="tortuga.jpg">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0xFFFF00" border="0xFFFF00" />
+     </style>
+     <p>4 tortugas</p>
+    </cell>
+    <cell id="4" txtAlign="left,middle" imgAlign="right,middle" border="true" image="tortuga.jpg">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0xFFFF00" border="0xFFFF00" />
+     </style>
+     <p>6 tortugas</p>
+    </cell>
+    <cell id="5" txtAlign="left,middle" imgAlign="right,middle" border="true" image="tortuga.jpg">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0xFFFF00" border="0xFFFF00" />
+     </style>
+     <p>10 tortugas</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="76.0" cellHeight="62.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell border="true">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" border="0xFFFF00" />
+     </style>
+     <p>60 días</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" border="0xFFFF00" />
+     </style>
+     <p>30 días</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" border="0xFFFF00" />
+     </style>
+     <p>20 días</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" border="0xFFFF00" />
+     </style>
+     <p>15 días</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" border="0xFFFF00" />
+     </style>
+     <p>10 días</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" border="0xFFFF00" />
+     </style>
+     <p>6 días</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="portada" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" border="true" image="logoies4.png" type="initial">
+     <style borderStroke="2.9" markerStroke="5.0">
+      <color foreground="0xFFFF00" background="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Actividades proporcionalidad directa e inversa. Flecha a la derecha para avanzar.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x003300">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF00" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="208.0" cellHeight="282.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell border="true" image="portada1.jpg">
+     <style borderStroke="2.9" markerStroke="5.0">
+      <color foreground="0xFFFF00" background="0x003300" border="0xFFFF00" />
+     </style>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="problemasdirecta" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" border="true" image="logoies4.png" type="initial">
+     <style borderStroke="3.0" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Primero copia, plantea y soluciona los problemas en el cuaderno, y después asocia cada problema con su solución.</p>
+    </cell>
+    <cell imgAlign="right,middle" border="true" image="logoies4.png" type="final">
+     <style borderStroke="3.0" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="enlacedirectainversa" />
+     <p>¡Bien!. "Cliquea" aquí para ir a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x003300">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF00" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="183.0" cellHeight="170.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0" border="true">
+     <style borderStroke="3.1" markerStroke="5.0">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Dos kilos de patatas cuestan 0,80 €. ¿Cuánto cuestan cinco kilos?</p>
+    </cell>
+    <cell id="1" border="true">
+     <style borderStroke="3.1" markerStroke="5.0">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Un canguro avanza 12 metros en cuatro saltos. ¿Cuánto avanza en 10 saltos?</p>
+    </cell>
+    <cell id="2" border="true">
+     <style borderStroke="3.1" markerStroke="5.0">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Tres barras de pan pesan 600 gramos. ¿Cuánto pesarán dos barras?</p>
+    </cell>
+    <cell id="3" border="true">
+     <style borderStroke="3.1" markerStroke="5.0">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Por el alquiler de una bicicleta durante dos horas pago 3€. ¿Cuánto pagaré si la alquilo durante siete horas?</p>
+    </cell>
+    <cell id="4" border="true">
+     <style borderStroke="3.1" markerStroke="5.0">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Un grifo abierto durante cinco minutos hace que el nivel de un depósito suba 20 centímetros. ¿Cuánto subirá el nivel en siete minutos?</p>
+    </cell>
+    <cell id="5">
+     <style borderStroke="3.1" markerStroke="5.0">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Por un gasto de 20 € te dan 3 cupones-descuento. ¿Cuántos cupones te darían por un gasto de 140 €?</p>
+    </cell>
+    <cell>
+     <style borderStroke="3.1" markerStroke="5.0">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Si 100 gramos de salmón ahumado cuestan 2,40 €, ¿cuánto costarán 260 gramos?</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="3.1" markerStroke="5.0">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Un trozo de queso de 400 gramos cuesta 4,60 €. ¿Cuánto costará otro pedazo del mismo queso de 320 gramos?</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="90.0" cellHeight="30.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell border="true">
+     <style borderStroke="3.1" markerStroke="5.0">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>2 €</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="3.1" markerStroke="5.0">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>30 m</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="3.1" markerStroke="5.0">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>400 g</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="3.1" markerStroke="5.0">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>10,5 €</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="3.1" markerStroke="5.0">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>28 cm</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="3.1" markerStroke="5.0">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>21 cupones</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="3.1" markerStroke="5.0">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>6,24 €</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="3.1" markerStroke="5.0">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>3,68 €</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="problemasinversa" code="">
+   <description />
+   <messages>
+    <cell txtAlign="left,middle" imgAlign="right,middle" border="true" image="logoies4.png" type="initial">
+     <style borderStroke="3.0" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Primero: lee, copia y soluciona los problemas en el cuaderno. Después asocia cada problema con su solución </p>
+    </cell>
+    <cell imgAlign="right,middle" border="true" image="logoies4.png" type="final">
+     <style borderStroke="3.1" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>¡Bien!. Si has hecho todas las actividades, has acabado.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x003300">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF00" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="182.0" cellHeight="170.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0" border="true">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Cuatro caballos consumen un saco de pienso en 6 días. ¿Cuánto duraría el saco de pienso si hubiera ocho caballos?</p>
+    </cell>
+    <cell id="1" border="true">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Cuatro caballos consumen un saco de pienso en 6 días. ¿Cuánto duraría si hubiera 12 caballos?</p>
+    </cell>
+    <cell id="2" border="true">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Tres operarios municipales limpian un parque en una hora. ¿Cuántos operarios se necesitan para hacerlo en media hora?</p>
+    </cell>
+    <cell id="3" border="true">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Tres operarios municipales limpian un parque en una hora. ¿Cuántos operarios se necesitan para hacerlo en veinte minutos?</p>
+    </cell>
+    <cell id="4" border="true">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Dos trabajadores recolectan la uva de una viña en 9 horas. ¿Cuánto tardarían en hacer lo mismo 3 trabajadores?</p>
+    </cell>
+    <cell id="5" border="true">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Un granjero tiene pienso en su almacén para alimentar a 25 vacas durante 18 días. ¿Durante cuánto tiempo podría alimentar con ese pienso a 45 vacas?</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Un ciclista que avanza a 20 km/h tarda 52 minutos en ir desde su localidad a su pueblo vecino. ¿Cuánto tardará en recorrer el mismo trayecto una motocicleta que circula a 65 km/h?</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>¿Cuatro segadores cortan un campo de heno en tres horas. ¿Cuánto tardaran seis segadores?</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="4" cellWidth="90.0" cellHeight="30.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell border="true">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>3 días</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>2 días</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>6 operarios</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>9 operarios</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>6 horas</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>10 días</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>16 minutos</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" inactive="0x003300" border="0xFFFF00" />
+     </style>
+     <p>2 horas</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="videodirecta" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" border="true" image="logoies4.png" type="initial">
+     <style borderStroke="2.9" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Observa y lee detenidamente este vídeo, te hará falta más adelante. Para ver el vídeo tienes que "cliquear" en el centro de la ventana</p>
+    </cell>
+    <cell imgAlign="right,middle" border="true" image="logoies4.png" type="final">
+     <style borderStroke="3.1" markerStroke="2.7">
+      <color foreground="0xFFFF00" background="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Pasa a la actividad siguiente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x003300">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF00" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="375.0" cellHeight="293.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell border="true">
+     <style borderStroke="2.8" markerStroke="2.7">
+      <color background="0x003300" border="0xFFFF00" />
+     </style>
+     <media type="PLAY_VIDEO" level="1" file="regladetresdirecta1.avi" stretch="false" free="false" />
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="videoinversa" code="">
+   <description />
+   <messages>
+    <cell imgAlign="right,middle" border="true" image="logoies4.png" type="initial">
+     <style borderStroke="3.1" markerStroke="5.0">
+      <color foreground="0xFFFF00" background="0x003300" border="0xFFFF00" />
+     </style>
+     <p>Observa y lee detenidamente este otro vídeo. Te hará falta más adelante. Para verlo tienes que "cliquear" en el centro de la ventana.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x003300">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF00" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="401.0" cellHeight="344.0" border="true">
+    <style borderStroke="3.1" markerStroke="2.7">
+     <color background="0x003300" inactive="0xFFFF00" border="0x003300" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <media type="PLAY_VIDEO" level="1" file="regladetresinversa1.avi" stretch="false" free="false" />
+    </cell>
+   </cells>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="regladetresdirecta1.avi" file="regladetresdirecta1.avi" />
+  <media name="regladetresinversa1.avi" file="regladetresinversa1.avi" />
+  <media name="mp4.jpg" file="mp4.jpg" />
+  <media name="portada1.jpg" file="portada1.jpg" />
+  <media name="tortuga.jpg" file="tortuga.jpg" />
+  <media name="logoies4.png" file="logoies4.png" />
+ </mediaBag>
+</JClicProject>
+

@@ -1,0 +1,1626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="victoria" version="0.1.3">
+ <settings>
+  <title>Paseo a Victoria - Entre Rios</title>
+  <revision description="created" date="9/28/10" />
+  <descriptors />
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es" />
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="victoria.pac" name="tapa.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="ubica.txa" />
+  <item name="mapaer.ass" />
+  <item name="puente.txa" />
+  <item name="puz15.puz" />
+  <item name="nompu.puz" />
+  <item name="sateli.ass" />
+  <item name="ubica2.txa" />
+  <item name="histor.txa" />
+  <item name="histo2.txa" />
+  <item name="nombre.puz" />
+  <item name="nombre2.puz" />
+  <item name="puz1.puz" />
+  <item name="nombre3.puz" />
+  <item name="lugares1.txa" />
+  <item name="puz5.puz" />
+  <item name="puz6.puz" />
+  <item name="puz8.puz" />
+  <item name="puz9.puz" />
+  <item name="puz14.puz" />
+  <item name="puz44.puz" />
+  <item name="puz444.puz" />
+  <item name="lugares2.txa" />
+  <item name="puz3.puz" />
+  <item name="puz33.puz" />
+  <item name="lugares3.txa" />
+  <item name="puz2.puz" />
+  <item name="puz10.puz" />
+  <item name="puz11.puz" />
+  <item name="puz12.puz" />
+  <item name="puz13.puz" />
+  <item name="question.ass" />
+  <item name="imag.ass" />
+  <item name="sopa.sop" />
+  <item name="fin.ass">
+   <jump action="STOP" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="fin.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <p>Esperamos que te haya gustado... nos vemos!</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="fin.gif">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFFFFFF" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@text.FillInBlanks" name="histo2.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Recuerdas lo leído anteriormente? .... Veamos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Muy bien!!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="pelicu15.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="500" height="430" />
+    </window>
+   </settings>
+   <document>
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="default" family="Arial" background="0x0080FF" size="17" bold="false" foreground="0x000000" tabWidth="16" italic="false" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0x0080FF" family="Arial" bold="false" size="17" foreground="0x000000" name="default" italic="false">
+      <text>                              UN POCO DE HISTORIA</text>
+     </p>
+     <p background="0x0080FF" family="Arial" bold="false" size="17" foreground="0x000000" name="default" italic="false" />
+     <p background="0x0080FF" family="Arial" bold="false" size="17" foreground="0x000000" name="default" italic="false">
+      <text>     Desde tiempo inmemorial en estas tierras vivían los indios </text>
+      <target>
+       <answer>minuanes</answer>
+       <optionList>
+        <option>guaraníes</option>
+        <option>minuanes</option>
+        <option>mocovíes</option>
+       </optionList>
+       <text>minuanes</text>
+      </target>
+      <text>, cuyo asentamiento se cree duró hasta mediados del      </text>
+      <target>
+       <answer>siglo XVIII</answer>
+       <optionList>
+        <option>siglo XX</option>
+        <option>siglo XVIII</option>
+        <option>siglo X</option>
+       </optionList>
+       <text>siglo XVIII</text>
+      </target>
+      <text>. Su desaparición y paralela ocupación en forma            irregular por otros grupos, en las cercanías del </text>
+     </p>
+     <p background="0x0080FF" family="Arial" bold="false" size="17" foreground="0x000000" name="default" italic="false">
+      <target>
+       <answer>Cerro La Matanza</answer>
+       <optionList>
+        <option>Cerro de la Gloria</option>
+        <option>Cerro Otto</option>
+        <option>Cerro La Matanza</option>
+       </optionList>
+       <text>Cerro La Matanza</text>
+      </target>
+      <text>, rememora la cruenta lucha por subsistir de los minuanes contra los españoles. A partir de 1870 estos</text>
+     </p>
+     <p background="0x0080FF" family="Arial" bold="false" size="17" foreground="0x000000" name="default" italic="false">
+      <text>  grupos se fueron trasladando a un sector más próximo a </text>
+     </p>
+     <p background="0x0080FF" family="Arial" bold="false" size="17" foreground="0x000000" name="default" italic="false">
+      <text>   la zona de </text>
+      <target>
+       <answer>riachos</answer>
+       <optionList>
+        <option>montañas</option>
+        <option>sierras</option>
+        <option>riachos</option>
+       </optionList>
+       <text>riachos</text>
+      </target>
+      <text>, estableciendo allí un Oratorio. </text>
+     </p>
+     <p background="0x0080FF" family="Arial" bold="false" size="17" foreground="0x000000" name="default" italic="false">
+      <text>     Ya en 1824, había sido determinado el alcance del</text>
+     </p>
+     <p background="0x0080FF" family="Arial" bold="false" size="17" foreground="0x000000" name="default" italic="false">
+      <text> éjido Municipal y en el año 1831 se promulgó el decreto que     cambiaría su nombre original La Matanza por Villa Nuestra     Señora de Aranzazú, o simplemente </text>
+      <target>
+       <answer>Victoria</answer>
+       <optionList>
+        <option>La Gloria</option>
+        <option>La Victoria</option>
+        <option>Victoria</option>
+       </optionList>
+       <text>Victoria</text>
+      </target>
+      <text>.                                   </text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="histor.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>CONOCE UN POCO DE LA HISTORIA DE VICTORIA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondop1.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <document>
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="default" background="0xFFFFFF" family="Arial" bold="false" size="17" foreground="0x000000" tabWidth="16" italic="false" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false">
+      <text>                             UN POCO DE HISTORIA</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false" />
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false">
+      <text>     Desde tiempo inmemorial en estas tierras vivían los indios minuanes, cuyo asentamiento se cree duró hasta mediados del      siglo XVIII. Su desaparición y paralela ocupación en forma            irregular por otros grupos, en las cercanías del Cerro La            Matanza, rememora la cruenta lucha por subsistir de los          minuanes contra los españoles. A partir de 1870 estos</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false">
+      <text>  grupos se fueron trasladando a un sector más próximo a </text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false">
+      <text>   la zona de riachos, estableciendo allí un Oratorio. </text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false">
+      <text>     Ya en 1824, había sido determinado el alcance del éjido               Municipal y en el año 1831 se promulgó el decreto que             cambiaría su nombre original La Matanza por Villa Nuestra               Señora de Aranzazú, o simplemente Victoria. </text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="imag.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>RELACIONA CADA IMAGEN</p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="149.0" cellHeight="124.0" border="false" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell image="001.gif" />
+    <cell image="002.gif" />
+    <cell image="003.gif" />
+    <cell image="004.gif" />
+    <cell image="005.gif" />
+    <cell image="006.gif" />
+   </cells>
+   <cells rows="3" cols="2" cellWidth="149.0" cellHeight="124.0" border="false" id="secondary">
+    <style>
+     <font family="Arial" size="24" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>ABADÍA DEL NIÑO DIOS</p>
+    </cell>
+    <cell>
+     <p>PALACIO MUNICIPAL</p>
+    </cell>
+    <cell>
+     <p>NTRA. SEÑORA DE ARANZAZÚ</p>
+    </cell>
+    <cell>
+     <p>CATEDRAL</p>
+    </cell>
+    <cell>
+     <p>PUENTE</p>
+    </cell>
+    <cell>
+     <p>PUERTO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.Identify" name="lugares1.txa" type="identifyWords">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>CONOCE UN POCO DE LA HISTORIA DE VICTORIA y señala los nombres propios</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fotos3.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="default" background="0xFFFFFF" family="Arial" bold="false" size="17" foreground="0x000000" tabWidth="16" italic="false" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false">
+      <text>                          </text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false">
+      <text>                       </text>
+      <target>VICTORIA</target>
+      <text> , CIUDAD DE LAS REJAS</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false" />
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false">
+      <text>Vascos e italianos fueron quienes iniciaron la vida criolla en esta región, dejando en su paso por este mundo y como recuerdo para generaciones futuras, el barrio de </text>
+      <target>Las</target>
+      <text> </text>
+      <target>Caleras</target>
+      <text>, </text>
+      <target>Quinto</target>
+      <text> </text>
+      <target>Cuartel</target>
+      <text> situado en las inmediaciones del </text>
+      <target>Puerto</target>
+      <text> </text>
+      <target>Viejo</target>
+      <text>. Ubicado en la planta urbana mantiene sus características originales, siendo el único ejemplo de un primitivo núcleo de poblaciones, con casonas de patios inmensos que guardan un trozo importante del pasado de </text>
+      <target>Victoria</target>
+      <text>. </text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false" />
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false" />
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.Identify" name="lugares2.txa" type="identifyWords">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>CONOCE LOS LUGARES HITÓRICOS DE VICTORIA y señala los artículos</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Sigue así!!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="iglesia.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="default" background="0xFFFFFF" family="Arial" bold="false" size="17" foreground="0x000000" tabWidth="16" italic="false" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false">
+      <text>                                         LA IGLESIA</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false" />
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false">
+      <target>La</target>
+      <text> iglesia es una pequeña joya arquitectónica que tiene </text>
+      <target>las</target>
+      <text> características del arte romántico del medioevo.  Torres macizas, sólidas, que surgen aliviadas por dos pequeñas ventanas ojivales perforadas.Un rosetón  imita al vitral clásico, simboliza </text>
+      <target>el</target>
+      <text> naciente de toda iglesia cristiana. </text>
+      <target>La</target>
+      <text> piedra fundamental se colocó en 1872. En </text>
+      <target>el</target>
+      <text> Templo se rinde especial veneración a </text>
+      <target>la</target>
+      <text> Patrona de la ciudad, </text>
+      <target>la</target>
+      <text> Virgen de Aranzazú. </text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false">
+      <text> </text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.FillInBlanks" name="lugares3.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Qué es la Abadía del Niño Dios?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x808000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="430" />
+    </window>
+   </settings>
+   <document>
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="default" background="0xFFFFFF" family="Arial" bold="false" size="17" foreground="0x000000" tabWidth="16" italic="false" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false">
+      <text>   </text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false">
+      <text>                           ABADÍA DEL NIÑO DIOS</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false" />
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false">
+      <text>En 1899 llegaron al lugar los primeros monjes benedictinos, procedentes de Francia. Forjadores de la actual Abadía los Monjes del Niño Dios tienen un voto fundado en la Oración y el Trabajo. Su tesonero trabajo a dado origen a una reconocida industria artesanal de productos naturales. </text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false" />
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false">
+      <text>La apicultura es uno de los aspectos destacados, como consecuencia de ello, se han derivado subproductos como miel, jaleas y el prestigioso licor monacal, cuya fórmula milenaria permanece en estricto secreto. </text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false">
+      <text>La abadía también posee un albergue situado en un predio donde se suceden endémicos paisajes. Allí pueden hospedarse quienes se acerquen en búsqueda de paz, meditación, descanso o retiro espiritual.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false">
+      <text> </text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.Identify" name="mapaer.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0xFF0000" />
+     </style>
+     <p>Busca en el mapa y señala VICTORIA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0xFF0000" />
+     </style>
+     <p>EXCELENTE!!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x000000">
+     <image name="fondop1.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="6" cols="6" border="false" image="mapaer1.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="6" rows="6" scaleX="6.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,6,6</shape>
+     </enclosing>
+     <shape>rectangle:0,0,1,1</shape>
+     <shape>rectangle:1,3,1,1</shape>
+    </shaper>
+    <ids>0 1</ids>
+   </cells>
+   <cells rows="6" cols="6" border="false" image="mapaer1.gif" id="solvedPrimary">
+    <shaper class="@Holes" cols="6" rows="6" scaleX="6.0" scaleY="6.0">
+     <enclosing>
+      <shape>rectangle:0,0,6,6</shape>
+     </enclosing>
+     <shape>rectangle:0,0,1,1</shape>
+     <shape>rectangle:1,3,1,1</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" primary="false" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="nombre.puz">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Ordena y descubre el primer nombre de Victoria</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Espléndido!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="fondop1.gif" tiled="true" />
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="10" cellWidth="140.0" cellHeight="100.0" border="true">
+    <style>
+     <font family="Arial Black" size="48" />
+     <color foreground="0x0000FF" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="10" rows="1" />
+    <cell>
+     <p>L</p>
+    </cell>
+    <cell>
+     <p>a</p>
+    </cell>
+    <cell />
+    <cell>
+     <p>M</p>
+    </cell>
+    <cell>
+     <p>A</p>
+    </cell>
+    <cell>
+     <p>T</p>
+    </cell>
+    <cell>
+     <p>A</p>
+    </cell>
+    <cell>
+     <p>N</p>
+    </cell>
+    <cell>
+     <p>Z</p>
+    </cell>
+    <cell>
+     <p>A</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="nombre2.puz">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Otro nombre era.... Villa Nuestra Señora de ....</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Espléndido!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x808000">
+     <image name="parroq1.gif" tiled="false" />
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0x808000" border="false">
+     <position x="0" y="230" />
+    </window>
+   </settings>
+   <cells rows="1" cols="8" cellWidth="140.0" cellHeight="84.0" border="false">
+    <style>
+     <font family="Arial Black" size="48" />
+     <color foreground="0xFFFFFF" background="0x808000" />
+    </style>
+    <shaper class="@Rectangular" cols="8" rows="1" />
+    <cell>
+     <p>A</p>
+    </cell>
+    <cell>
+     <p>r</p>
+    </cell>
+    <cell>
+     <p>a</p>
+    </cell>
+    <cell>
+     <p>n</p>
+    </cell>
+    <cell>
+     <p>z</p>
+    </cell>
+    <cell>
+     <p>a</p>
+    </cell>
+    <cell>
+     <p>z</p>
+    </cell>
+    <cell>
+     <p>ú</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="nombre3.puz" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>LOS PRIMEROS INDÍGENAS SE LLAMABAN...</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Espléndido!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x808000">
+     <image name="chanas1.gif" tiled="false" />
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0x808000" border="false">
+     <position x="0" y="460" />
+    </window>
+   </settings>
+   <cells rows="1" cols="8" cellWidth="140.0" cellHeight="84.0" border="false">
+    <style>
+     <font family="Arial Black" size="48" />
+     <color foreground="0xFFFFFF" background="0x808000" />
+    </style>
+    <shaper class="@Rectangular" cols="8" rows="1" />
+    <cell>
+     <p>M</p>
+    </cell>
+    <cell>
+     <p>I</p>
+    </cell>
+    <cell>
+     <p>N</p>
+    </cell>
+    <cell>
+     <p>U</p>
+    </cell>
+    <cell>
+     <p>A</p>
+    </cell>
+    <cell>
+     <p>N</p>
+    </cell>
+    <cell>
+     <p>E</p>
+    </cell>
+    <cell>
+     <p>S</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="nompu.puz">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Cuál es el nombre del puente ROSARIO - VICTORIA?</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>GENIAL!!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="puente01.gif" tiled="true" />
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false">
+     <position x="5" y="6" />
+    </window>
+   </settings>
+   <cells rows="2" cols="6" cellWidth="140.0" cellHeight="100.0" border="false">
+    <style>
+     <font family="Courier New" size="30" bold="true" />
+     <color foreground="0xFFFFFF" background="0x0000FF" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="2" />
+    <cell>
+     <p>Nues</p>
+    </cell>
+    <cell>
+     <p>tra</p>
+    </cell>
+    <cell />
+    <cell>
+     <p>Se</p>
+    </cell>
+    <cell>
+     <p>ño</p>
+    </cell>
+    <cell>
+     <p>ra</p>
+    </cell>
+    <cell />
+    <cell>
+     <p>del</p>
+    </cell>
+    <cell />
+    <cell>
+     <p>RO</p>
+    </cell>
+    <cell>
+     <p>SA</p>
+    </cell>
+    <cell>
+     <p>RIO</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="puente.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>QUÉ NOS UNE????</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0080FF">
+     <image name="fondop1.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="690" height="420" />
+    </window>
+   </settings>
+   <document>
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="default" background="0xFFFFFF" family="Courier New" bold="true" size="17" foreground="0x000000" tabWidth="16" italic="false" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p family="Courier New" background="0xFFFFFF" size="17" bold="true" foreground="0x000000" name="default" italic="false">
+      <text>                                                 EL PUENTE</text>
+     </p>
+     <p family="Courier New" background="0xFFFFFF" size="17" bold="true" foreground="0x000000" name="default" italic="false" />
+     <p family="Courier New" background="0xFFFFFF" size="17" bold="true" foreground="0x000000" name="default" italic="false">
+      <text>La conexión Victoria – Rosario vincula las ciudades homónimas, cruzando el valle de inundación del Río Paraná.</text>
+     </p>
+     <p family="Courier New" background="0xFFFFFF" size="17" bold="true" foreground="0x000000" name="default" italic="false" />
+     <p family="Courier New" background="0xFFFFFF" size="17" bold="true" foreground="0x000000" name="default" italic="false">
+      <text>La cabecera oeste – Rosario: </text>
+     </p>
+     <p family="Courier New" background="0xFFFFFF" size="17" bold="true" foreground="0x000000" name="default" italic="false">
+      <text>La conexión, luego de cruzar el Río Paraná, entra a territorio santafesino en viaducto, cruza la Ruta Nacional Nº 11 (Bvrd. Rondeau) con sobrenivel, y enlaza con la Av. de circunvalación de Rosario A – 008, entre la citada ruta y las vías de ferrocarril PCNCA.</text>
+     </p>
+     <p family="Courier New" background="0xFFFFFF" size="17" bold="true" foreground="0x000000" name="default" italic="false" />
+     <p family="Courier New" background="0xFFFFFF" size="17" bold="true" foreground="0x000000" name="default" italic="false">
+      <text>La cabecera este – Victoria: la conexión intercepta la Ruta Provincial Nº 11, a 760 m. al norte del Bvrd. Sarmiento.</text>
+     </p>
+     <p family="Courier New" background="0xFFFFFF" size="17" bold="true" foreground="0x000000" name="default" italic="false" />
+     <p family="Courier New" background="0xFFFFFF" size="17" bold="true" foreground="0x000000" name="default" italic="false">
+      <text>Longitud total del proyecto: 59,4 Km.</text>
+     </p>
+     <p family="Courier New" background="0xFFFFFF" size="17" bold="true" foreground="0x000000" name="default" italic="false" />
+     <p family="Courier New" background="0xFFFFFF" size="17" bold="true" foreground="0x000000" name="default" italic="false">
+      <text>Puentes: 12.282 m.</text>
+     </p>
+     <p family="Courier New" background="0xFFFFFF" size="17" bold="true" foreground="0x000000" name="default" italic="false" />
+     <p family="Courier New" background="0xFFFFFF" size="17" bold="true" foreground="0x000000" name="default" italic="false">
+      <text>Terraplenes: 47.149 m.</text>
+     </p>
+     <p family="Courier New" background="0xFFFFFF" size="17" bold="true" foreground="0x000000" name="default" italic="false" />
+     <p family="Courier New" background="0xFFFFFF" size="17" bold="true" foreground="0x000000" name="default" italic="false">
+      <text>Longitud de puentes: puente principal: 608 m.</text>
+     </p>
+     <p family="Courier New" background="0xFFFFFF" size="17" bold="true" foreground="0x000000" name="default" italic="false" />
+     <p family="Courier New" background="0xFFFFFF" size="17" bold="true" foreground="0x000000" name="default" italic="false">
+      <text>Viaducto acceso oeste (lado Rosario): 1.122 m.</text>
+     </p>
+     <p family="Courier New" background="0xFFFFFF" size="17" bold="true" foreground="0x000000" name="default" italic="false" />
+     <p family="Courier New" background="0xFFFFFF" size="17" bold="true" foreground="0x000000" name="default" italic="false">
+      <text>Viaducto acceso este (lado Victoria): 2.368 m.</text>
+     </p>
+     <p family="Courier New" background="0xFFFFFF" size="17" bold="true" foreground="0x000000" name="default" italic="false" />
+     <p family="Courier New" background="0xFFFFFF" size="17" bold="true" foreground="0x000000" name="default" italic="false">
+      <text>Puentes en zonas de islas: 8184 m. incluyendo seis cursos navegables.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puz1.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>CONOCE A LOS PRIMEROS HABITANTES DE VICTORIA... los indios minuanes</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="15" bold="true" />
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="fondop1.gif" tiled="true" />
+     <counters time="false" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="chanas1.gif">
+    <style>
+     <font family="Arial" size="16" bold="true" />
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puz10.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Visitamos en interior de la Abadía</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="interi1.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puz11.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Visitamos en interior de la Abadía - IGLESIA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="interior.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puz12.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Visitamos en interior de la Abadía - ALTAR</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="altar.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puz13.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Visitamos en interior de la Abadía - VITRAL </p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="vitral.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puz14.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>El Casino</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="casino.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puz15.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>VISTA DEL PUENTE DESDE LA ORILLA DE ROSARIO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="puente.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puz2.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>ABADÍA DEL NIÑO DIOS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="frente.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puz3.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>IGLESIA CATEDRAL</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="church.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puz33.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>IGLESIA CATEDRAL por dentro</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="img_3794.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puz44.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>El Puerto</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="puerto.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puz444.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>otra vista del Puerto</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="port2.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puz5.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>La ciudad</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="fotos3.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puz6.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Otra vista de la ciudad </p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="pelicu15.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puz8.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>La Municipalidad</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="muni.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="puz9.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>La Plaza San Martín</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="plaza.gif">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="question.ass">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>RELACIONA ESTAS PREGUNTAS CON LA OPCIÓN CORRECTA</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>BÁRBARO!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="atarde9.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFF8040" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>La ciudad que visitamos se encuentra en la provincia de... </p>
+    </cell>
+    <cell>
+     <p>Victoria está ubicada al...</p>
+    </cell>
+    <cell>
+     <p>La distancia entre ROSARIO y VICTORIA es de...</p>
+    </cell>
+    <cell>
+     <p>Los primeros indígenas se llamaban...</p>
+    </cell>
+    <cell>
+     <p>La patrona de la ciudad de Victoria es...</p>
+    </cell>
+    <cell>
+     <p>Los monjes benedictinos legaron de ...</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="2" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+    <cell>
+     <p>ENTRE RÍOS</p>
+    </cell>
+    <cell>
+     <p>SUDOESTE</p>
+    </cell>
+    <cell>
+     <p>59,4 KILÓMETROS</p>
+    </cell>
+    <cell>
+     <p>MINUANES</p>
+    </cell>
+    <cell>
+     <p>NTRA. SEÑORA DE ARANZAZÚ</p>
+    </cell>
+    <cell>
+     <p>FRANCIA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="sateli.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0xFF0000" />
+     </style>
+     <p>Este es el camino a seguir..señala los 4 puntos amarillos y observa</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0xFF0000" />
+     </style>
+     <p>EXCELENTE!!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x808080" border="true" />
+   </settings>
+   <cells rows="5" cols="5" border="false" image="sat2.gif" id="primary">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Holes" cols="5" rows="5" scaleX="5.0" scaleY="5.0">
+     <enclosing>
+      <shape>rectangle:0,0,5,5</shape>
+     </enclosing>
+     <shape>rectangle:0,2,1,1</shape>
+     <shape>rectangle:1,2,1,1</shape>
+     <shape>rectangle:3,2,1,1</shape>
+     <shape>rectangle:4,2,1,1</shape>
+    </shaper>
+    <ids>0 1 2 3</ids>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="330.0" cellHeight="280.0" border="false" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell image="r1.gif" />
+    <cell image="r2.gif" />
+    <cell image="r3.gif" />
+    <cell image="r4.gif" />
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="sopa.sop">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Encuentra 7 lugares de Victoria </p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Espectacular!!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="001.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="21" columns="9" cellWidth="30.0" cellHeight="60.0" border="true">
+    <style>
+     <font family="Arial" size="28" bold="true" />
+     <color foreground="0x0000A0" />
+    </style>
+    <text>
+     <row>*********************</row>
+     <row>***CASINO************</row>
+     <row>***********O*********</row>
+     <row>**CATEDRAL*T*********</row>
+     <row>***B*******R*********</row>
+     <row>***A**PUENTE*********</row>
+     <row>***D*******U*********</row>
+     <row>***I*MUNICIPALIDAD***</row>
+     <row>*PLAZA***************</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">CASINO</clue>
+    <clue id="1">CATEDRAL</clue>
+    <clue id="2">MUNICIPALIDAD</clue>
+    <clue id="3">ABADIA</clue>
+    <clue id="4">PUERTO</clue>
+    <clue id="5">PUENTE</clue>
+    <clue id="6">PLAZA</clue>
+   </clues>
+  </activity>
+  <activity class="@panels.InformationScreen" name="tapa.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+     <p>COMENCEMOS EL VIAJE .... CONOZCAMOS VICTORIA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color foreground="0xFFFFFF" background="0x000000" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x000000">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="false" />
+   </settings>
+   <cells rows="1" cols="1" border="false" image="tapa1.gif">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color foreground="0xFFFFFF" background="0x000000" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@text.FillInBlanks" name="ubica.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>DÓNDE ESTA VICTORIA?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x0000A0">
+     <image name="fondop1.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="500" height="250" />
+    </window>
+   </settings>
+   <document>
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="default" background="0xFFFFFF" family="Arial" bold="false" size="17" foreground="0x000000" tabWidth="16" italic="false" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false">
+      <text>                                   LA CIUDAD</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false" />
+     <p family="Arial" background="0xFFFFFF" size="17" bold="false" foreground="0x000000" name="default" italic="false">
+      <text>Está ubicada al Sudoeste de la provincia en el comienzo del imponente Delta del Paraná, en medio del juego caprichoso de lomadas y cuchillas. Estas dotes geográficas con las que cuenta la ciudad logran panorámicas pintorescas y muy particulares. Hoy Victoria es una perfecta amalgama de paisajes impregnados de la mística cultura de sus primeros habitantes, de relatos e historia de españoles, de época colonial y los vestigios de un esplendoroso pasado. </text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="ubica2.txa">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>COMPLETA LA OPCIÓN ...DÓNDE ESTA VICTORIA?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x0000FF" />
+     </style>
+     <p>Muy bien!!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <image name="pelicu15.gif" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="500" height="330" />
+    </window>
+   </settings>
+   <document>
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="default" family="Arial" background="0xFF8000" size="17" bold="false" foreground="0x000000" tabWidth="16" italic="false" />
+    <style name="targetError" base="target" background="0xFF0000" foreground="0xFFFFFF" />
+    <section>
+     <p background="0xFF8000" family="Arial" bold="false" size="17" foreground="0x000000" name="default" italic="false">
+      <text>                                   LA CIUDAD</text>
+     </p>
+     <p background="0xFF8000" family="Arial" bold="false" size="17" foreground="0x000000" name="default" italic="false" />
+     <p background="0xFF8000" family="Arial" bold="false" size="17" foreground="0x000000" name="default" italic="false">
+      <text>Está ubicada al </text>
+      <target>
+       <answer>Sudoeste</answer>
+       <optionList>
+        <option>Sudeste</option>
+        <option>Sudoeste</option>
+        <option>Noreste</option>
+       </optionList>
+       <text>Sudoeste</text>
+      </target>
+      <text> de la provincia en el comienzo del imponente Delta del </text>
+      <target>
+       <answer>Paraná</answer>
+       <optionList>
+        <option>Tigre</option>
+        <option>Paraná</option>
+        <option>Amazonas</option>
+       </optionList>
+       <text>Paraná</text>
+      </target>
+      <text>, en medio del juego caprichoso de </text>
+      <target>
+       <answer>lomadas</answer>
+       <optionList>
+        <option>montañas</option>
+        <option>cerros</option>
+        <option>lomadas</option>
+       </optionList>
+       <text>lomadas</text>
+      </target>
+      <text> y cuchillas. Estas dotes geográficas con las que cuenta la ciudad logran panorámicas pintorescas y muy particulares. Hoy Victoria es una perfecta amalgama de paisajes impregnados de la mística cultura de sus primeros habitantes, de relatos e historia de </text>
+      <target>
+       <answer>españoles</answer>
+       <optionList>
+        <option>italianos</option>
+        <option>alemanes</option>
+        <option>españoles</option>
+       </optionList>
+       <text>españoles</text>
+      </target>
+      <text>, de época colonial y los vestigios de un esplendoroso pasado. </text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="interi1.gif" file="interi1.gif" animated="false" />
+  <media name="001.gif" file="001.jpg" />
+  <media name="002.gif" file="002.jpg" />
+  <media name="003.gif" file="003.jpg" />
+  <media name="004.gif" file="004.jpg" />
+  <media name="005.gif" file="005.jpg" />
+  <media name="006.gif" file="006.jpg" />
+  <media name="altar.gif" file="altar.jpg" />
+  <media name="atarde9.gif" file="atarde9.jpg" />
+  <media name="casino.gif" file="casino.jpg" />
+  <media name="chanas1.gif" file="chanas1.jpg" />
+  <media name="church.gif" file="church.jpg" />
+  <media name="fin.gif" file="fin.jpg" />
+  <media name="fondop1.gif" file="fondop_1.jpg" />
+  <media name="fotos3.gif" file="fotos3.jpg" />
+  <media name="frente.gif" file="frente.jpg" />
+  <media name="iglesia.gif" file="iglesia.jpg" />
+  <media name="img_3794.gif" file="img_3794.jpg" />
+  <media name="interior.gif" file="interior.jpg" />
+  <media name="mapaer1.gif" file="mapaer_1.jpg" />
+  <media name="muni.gif" file="muni.jpg" />
+  <media name="parroq1.gif" file="parroq_1.jpg" />
+  <media name="pelicu15.gif" file="pelicu15.jpg" />
+  <media name="plaza.gif" file="plaza.jpg" />
+  <media name="port2.gif" file="port2.jpg" />
+  <media name="puente.gif" file="puente.jpg" />
+  <media name="puente01.gif" file="puente01.jpg" />
+  <media name="puerto.gif" file="puerto.jpg" />
+  <media name="r1.gif" file="r1.jpg" />
+  <media name="r2.gif" file="r2.jpg" />
+  <media name="r3.gif" file="r3.jpg" />
+  <media name="r4.gif" file="r4.jpg" />
+  <media name="sat2.gif" file="sat2.jpg" />
+  <media name="tapa1.gif" file="tapa1.jpg" />
+  <media name="vitral.gif" file="vitral.jpg" />
+ </mediaBag>
+</JClicProject>
+

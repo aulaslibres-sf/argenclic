@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="pueblos" version="0.1.3">
+ <settings>
+  <title>Pueblos primitivos de Chile</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="9/17/02" />
+  <revision description="Conversión de Clic3 a JClic" date="11/20/02">
+   <author name="Equip Clic" mail="clic@pie.xtec.es" organization="Subdirecció General de Tecnologies de la Informació (SGTI)" />
+  </revision>
+  <author name="Margarita Villarroel" mail="mavisan@latinmail.com" />
+  <organization name="Colegio Germán Riesco" mail="griesco@ctcinternet.cl" city="La Serena" country="Chile" />
+  <language>es</language>
+  <description>
+   <p>Paquete de actividades sobre algunos de los pueblos que vivían en Chile antes de la llegada de los españoles:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;yamanes</p>
+   <p>&lt;LI&gt;changos</p>
+   <p>&lt;LI&gt;yaganes</p>
+   <p>&lt;LI&gt;aymaras</p>
+   <p>&lt;LI&gt;mapuches</p>
+   <p>&lt;LI&gt;...</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area-codes="soc" level="Primaria, Secundaria">historia, Chile</descriptors>
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Paquete de actividades sobre algunos de los pueblos que vivían en Chile antes de la llegada de los españoles:</p>
+    <p>&lt;UL&gt;</p>
+    <p>&lt;LI&gt;yamanes</p>
+    <p>&lt;LI&gt;changos</p>
+    <p>&lt;LI&gt;yaganes</p>
+    <p>&lt;LI&gt;aymaras</p>
+    <p>&lt;LI&gt;mapuches</p>
+    <p>&lt;LI&gt;...</p>
+    <p>&lt;/UL&gt;</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="pueblos.pac" name="margarit.ass">
+   <jump action="STOP" id="back" />
+  </item>
+  <item name="prtada.txa" />
+  <item name="mapa.ass" />
+  <item name="nomsed.ass" />
+  <item name="dice.ass" />
+  <item name="sedent.ass" />
+  <item name="joyas.puz" />
+  <item name="sopita.sop" />
+  <item name="yagan.puz" />
+  <item name="complet.txa" />
+  <item name="ceramica.puz" />
+  <item name="fotos.ass" />
+  <item name="ruca.ass" />
+  <item name="changos.puz" />
+  <item name="dungun.ass" />
+  <item name="toquis.ass">
+   <jump action="RETURN" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@memory.MemoryGame" name="ceramica.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xAB260A" background="0xFFFFFF" />
+     </style>
+     <p>BUSCA LAS SEIS PAREJAS DE CERÁMICAS DIAGUITAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xAB260A" background="0xFFFFFF" />
+     </style>
+     <p>¡ERES UN EXPERTO ALFARERO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xAD2C1D">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color foreground="0xAB260A" background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="cer1.gif" />
+    <cell image="cer3.gif" />
+    <cell image="cer4.gif" />
+    <cell image="cer5.gif" />
+    <cell image="cer6.gif" />
+    <cell image="cer7.gif" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="changos.puz">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x96AEDC" />
+     </style>
+     <p>ARMA EL PUZLE Y VERÁS COMO VIVÍAN LOS CHANGOS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x96AEDC" />
+     </style>
+     <p>¡MUY BIEN!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xECEBB3">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="true" image="chango.gif">
+    <style>
+     <color background="0x96AEDC" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="complet.txa" autoJump="true">
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>COMPLETA LAS ORACIONES</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>LO LOGRASTE</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFABCE6">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="540" height="330" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" background="0xFFE6F2" foreground="0x000000" size="17" family="Arial" bold="false" italic="false" tabWidth="16" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <text>Los </text>
+      <target>
+       <answer>atacameños</answer>
+       <response fill="_" length="10" maxLength="10" />
+       <text>atacameños</text>
+      </target>
+      <text> se destacaron por el manejo de la agricultura.</text>
+     </p>
+     <p />
+     <p>
+      <text>Los </text>
+      <target>
+       <answer>changos</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>changos</text>
+      </target>
+      <text> confeccionaban sus balsas con cueros de lobos.</text>
+     </p>
+     <p />
+     <p>
+      <text>Los </text>
+      <target>
+       <answer>diaguitas</answer>
+       <response fill="_" length="9" maxLength="9" />
+       <text>diaguitas</text>
+      </target>
+      <text> era un pueblo que se dedicaba a la alfalfería.</text>
+     </p>
+     <p />
+     <p>
+      <text>Los </text>
+      <target>
+       <answer>yaganes</answer>
+       <response fill="_" length="7" maxLength="7" />
+       <text>yaganes</text>
+      </target>
+      <text> fue el pueblo más austral del mundo.</text>
+     </p>
+     <p />
+     <p>
+      <text>Los </text>
+      <target>
+       <answer>mapuches</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>mapuches</text>
+      </target>
+      <text> fueron un pueblo guerrero.</text>
+     </p>
+     <p />
+     <p>
+      <text>Los </text>
+      <target>
+       <answer>onas</answer>
+       <response fill="_" length="4" maxLength="4" />
+       <text>onas</text>
+      </target>
+      <text> y los </text>
+      <target>
+       <answer>alacalufes</answer>
+       <response fill="_" length="10" maxLength="10" />
+       <text>alacalufes</text>
+      </target>
+      <text> se pintaban el cuerpo para ciertas ceremonias.</text>
+     </p>
+     <p />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="dice.ass">
+   <description>
+    <p>¿¡Quién dice? nómde o sedentario</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFCB6F4" />
+     </style>
+     <p>¿QUIÉN DICE?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xFCB6F4" />
+     </style>
+     <p>¡PERFECTO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xCCA6DF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF0080" border="true" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color background="0xFCB6F4" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <p>¡Se nos terminó la caza!</p>
+    </cell>
+    <cell id="1">
+     <p>¡Tráeme el cántaro de greda!</p>
+    </cell>
+    <cell id="1">
+     <p>¡Qué buena cosecha!</p>
+    </cell>
+    <cell id="0">
+     <p>¡Estoy cansado de trasladarme!</p>
+    </cell>
+    <cell id="1">
+     <p>¡Qué bonito quedó mi tejido!</p>
+    </cell>
+    <cell id="0">
+     <p>¡El viento botó mi tienda!</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="25" bold="true" />
+     <color background="0xFCB6F4" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>NÓMADE</p>
+    </cell>
+    <cell>
+     <p>SEDENTARIO</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="dungun.ass">
+   <description>
+    <p>LENGUA MAPUCHE</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xF8CBF8" inactive="0x800080" alternative="0x800080" />
+     </style>
+     <p>APRENDAMOS EL MAPUDUNGUN</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0xF8CBF8" inactive="0x800080" alternative="0x800080" />
+     </style>
+     <p>¿APRENDISTE?</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="machi.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="8" cols="1" cellWidth="260.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color background="0xF8CBF8" inactive="0x800080" alternative="0x800080" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="8" />
+    <cell id="0">
+     <p>HUE</p>
+    </cell>
+    <cell id="1">
+     <p>PICHE</p>
+    </cell>
+    <cell id="2">
+     <p>ÑUQUE</p>
+    </cell>
+    <cell id="3">
+     <p>CHAU</p>
+    </cell>
+    <cell id="4">
+     <p>HUEMU</p>
+    </cell>
+    <cell id="5">
+     <p>CO</p>
+    </cell>
+    <cell id="6">
+     <p>CHE</p>
+    </cell>
+    <cell id="7">
+     <p>MAPU</p>
+    </cell>
+   </cells>
+   <cells rows="8" cols="1" cellWidth="260.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <font family="Arial" size="20" bold="true" />
+     <color background="0xF8CBF8" inactive="0x800080" alternative="0x800080" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="8" />
+    <cell>
+     <p>LUGAR</p>
+    </cell>
+    <cell>
+     <p>NIÑO</p>
+    </cell>
+    <cell>
+     <p>MAMÁ</p>
+    </cell>
+    <cell>
+     <p>PAPÁ</p>
+    </cell>
+    <cell>
+     <p>CIELO</p>
+    </cell>
+    <cell>
+     <p>AGUA</p>
+    </cell>
+    <cell>
+     <p>GENTE</p>
+    </cell>
+    <cell>
+     <p>TIERRA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="fotos.ass">
+   <description>
+    <p>identificar a través de una foto el pueblo</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color foreground="0xFFFFFF" background="0x6B3270" />
+     </style>
+     <p>ESCRIBE EL NOMBRE DE CADA PUEBLO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color foreground="0xFFFFFF" background="0x6B3270" />
+     </style>
+     <p>¡SABES MUCHO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xF4C4F7">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="4" cellWidth="350.0" cellHeight="400.0" border="true" id="primary">
+    <style>
+     <color background="0xFCDBFD" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell image="jarro1.gif" />
+    <cell image="machis2.gif" />
+    <cell image="yagan2.gif" />
+    <cell image="aymar.gif" />
+   </cells>
+   <cells rows="1" cols="4" cellWidth="140.0" cellHeight="100.0" border="true" id="answers">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="1" />
+    <cell>
+     <p>diaguitas</p>
+    </cell>
+    <cell>
+     <p>mapuches</p>
+    </cell>
+    <cell>
+     <p>yaganes</p>
+    </cell>
+    <cell>
+     <p>aymarás</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="joyas.puz">
+   <description>
+    <p>CONOCIENDO JOYAS MAPUCHES</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x96AEDC" />
+     </style>
+     <p>ARMA Y APRENDE EL NOMBRE DE LAS JOYAS MAPUCHES</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x96AEDC" />
+     </style>
+     <p>¡ QUÉ FÁCIL!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="4" border="true" image="joyasg.gif">
+    <style>
+     <color background="0x96AEDC" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="3" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="mapa.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x9EE7F1" />
+     </style>
+     <p>¿DÓNDE VIVÍAN?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x9EE7F1" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xA0D8F5">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="mapa.gif">
+    <style>
+     <color background="0x9EE7F1" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="margarit.ass">
+   <description>
+    <p>INFORMACIÓN DE LA AUTORA DEL CLIC</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xC424D0" />
+     </style>
+     <p>TE INVITO A CONOCER TUS RAÍCES</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xC424D0" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xFEC5ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="margar.gif">
+    <style>
+     <color background="0xC424D0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="nomsed.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFF80" />
+     </style>
+     <p>¿Cómo vivían?</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFF80" />
+     </style>
+     <p>¡Muy bien!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF8080" border="true" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="19" bold="true" />
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell id="1">
+     <p>Vivían en un lugar fijo para poder cultivar la tierra.</p>
+    </cell>
+    <cell id="0">
+     <p>No tenían un lugar para vivir,se trasladaban continuamente buscando su alimento.</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="1" cellWidth="140.0" cellHeight="100.0" border="true" id="secondary">
+    <style>
+     <color background="0xFFFF80" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell>
+     <p>Nómade </p>
+    </cell>
+    <cell>
+     <p>Sedentario</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="prtada.txa">
+   <description>
+    <p>INFORMACION</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="21" />
+      <color foreground="0xFFFFFF" background="0x8080FF" />
+     </style>
+     <p>CONOZCAMOS ALGUNOS DE ELLOS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="21" />
+      <color foreground="0xFFFFFF" background="0x8080FF" />
+     </style>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xFADEF1">
+     <image name="caupo.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="400" height="250" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" background="0x8080FF" foreground="0xFFFFFF" size="25" family="Arial" bold="false" italic="false" tabWidth="16" />
+    <style name="target" base="default" background="0xC0C0C0" foreground="0x0000FF" target="true" />
+    <style name="targetError" base="target" foreground="0xFFFFFF" background="0xFF0000" />
+    <section>
+     <p>
+      <text />
+     </p>
+     <p />
+     <p>
+      <text>    ANTES DELA LLEGADA          DE LOS ESPAÑOLES,</text>
+     </p>
+     <p>
+      <text>  CHILE ESTABA HABITADO         POR NUMEROSOS </text>
+     </p>
+     <p>
+      <text>     PUEBLOS INDÍGENAS.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.Identify" name="ruca.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xF0CAE6" />
+     </style>
+     <p>IDENTIFICA LO QUE NO CORRESPONDE AL PUEBLO MAPUCHE.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xF0CAE6" />
+     </style>
+     <p>¡LO LOGRASTE!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC2EFFC">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="185.0" cellHeight="185.0" border="true" id="primary">
+    <style>
+     <color background="0xF0CAE6" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="1" image="balsa.gif" />
+    <cell id="0" image="mapuch.gif" />
+    <cell id="0" image="ruca.gif" />
+    <cell id="1" image="cerac3.gif" />
+    <cell id="0" image="chuef.gif" />
+    <cell id="0" image="kult.gif" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@panels.Identify" name="sedent.ass">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xB0E6C7" />
+     </style>
+     <p>IDENTIFICA LOS PUEBLOS SEDENTARIOS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xB0E6C7" />
+     </style>
+     <p>¡ESTUPENDO!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x33886F">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xB0E6C7" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="1">
+     <p>mapuches</p>
+    </cell>
+    <cell id="1">
+     <p>atacameños</p>
+    </cell>
+    <cell id="1">
+     <p>diaguitas</p>
+    </cell>
+    <cell id="0">
+     <p>yamanes</p>
+    </cell>
+    <cell id="0">
+     <p>onas</p>
+    </cell>
+    <cell id="0">
+     <p>changos</p>
+    </cell>
+    <cell id="0">
+     <p>yaganes</p>
+    </cell>
+    <cell id="1">
+     <p>aymaras</p>
+    </cell>
+    <cell id="0">
+     <p>chonos</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="sopita.sop">
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFDD5F8" />
+     </style>
+     <p>BUSCA EL NOMBRE DE SEIS PUEBLOS INDÍGENAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFDD5F8" />
+     </style>
+     <p>¡QUÉ RAPIDEZ!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xCB36B9">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <textGrid rows="10" columns="8" cellWidth="80.0" cellHeight="80.0" border="true">
+    <style>
+     <color background="0xFDD5F8" />
+    </style>
+    <text>
+     <row>M*********</row>
+     <row>ATACAMEÑOS</row>
+     <row>P**H*****E</row>
+     <row>U**A*****N</row>
+     <row>CHONOS***A</row>
+     <row>H**G*****G</row>
+     <row>E**ONAS**A</row>
+     <row>S**S*****Y</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">MAPUCHES</clue>
+    <clue id="1">ATACAMEÑOS</clue>
+    <clue id="2">YAGANES</clue>
+    <clue id="3">ONAS     </clue>
+    <clue id="4">CHANGOS</clue>
+    <clue id="5">CHONOS</clue>
+   </clues>
+  </activity>
+  <activity class="@panels.Identify" name="toquis.ass">
+   <description>
+    <p>NOMBRES DE TOQUIS ARAUCANOS</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="49" bold="true" />
+      <color foreground="0x804000" background="0xFCFCAF" />
+     </style>
+     <p>IDENTIFICA LOS TOQUIS ARAUCANOS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="49" bold="true" />
+      <color foreground="0x804000" background="0xFCFCAF" />
+     </style>
+     <p>¡EXCELENTE!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF8000">
+     <image name="lauta.gif" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="140.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="49" bold="true" />
+     <color foreground="0x804000" background="0xFCFCAF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="1">
+     <p>GALVARINO</p>
+    </cell>
+    <cell id="1">
+     <p>LAUTARO</p>
+    </cell>
+    <cell id="1">
+     <p>CAUPOLICÁN</p>
+    </cell>
+    <cell id="1">
+     <p>COLO-COLO</p>
+    </cell>
+    <cell id="1">
+     <p>MICHIMALONCO</p>
+    </cell>
+    <cell id="0">
+     <p>O"HIGGINS</p>
+    </cell>
+    <cell id="0">
+     <p>PRAT</p>
+    </cell>
+    <cell id="0">
+     <p>COLÓN</p>
+    </cell>
+    <cell id="0">
+     <p>CARRERA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="yagan.puz">
+   <description>
+    <p>RESOLVER PUZLE YAGAN</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x2777B1" />
+     </style>
+     <p>ARMA Y APRENDE COMO VIVÍAN LOS YAGANES</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x2777B1" />
+     </style>
+     <p>¿TE GUSTARÍA HABER SIDO UN YAGÁN?</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x85C9F5">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="3" cols="2" border="true" image="yagan.gif">
+    <style>
+     <color background="0x2777B1" />
+    </style>
+    <shaper class="@Rectangular" cols="2" rows="3" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="aymar.gif" file="aymar.gif" animated="false" />
+  <media name="balsa.gif" file="balsa.gif" animated="false" />
+  <media name="caupo.gif" file="caupo.gif" animated="false" />
+  <media name="cer1.gif" file="cer1.gif" animated="false" />
+  <media name="cer3.gif" file="cer3.gif" animated="false" />
+  <media name="cer4.gif" file="cer4.gif" animated="false" />
+  <media name="cer5.gif" file="cer5.gif" animated="false" />
+  <media name="cer6.gif" file="cer6.gif" animated="false" />
+  <media name="cer7.gif" file="cer7.gif" animated="false" />
+  <media name="cerac3.gif" file="cerac3.gif" animated="false" />
+  <media name="chango.gif" file="chango.gif" animated="false" />
+  <media name="chuef.gif" file="chuef.gif" animated="false" />
+  <media name="jarro1.gif" file="jarro1.gif" animated="false" />
+  <media name="joyasg.gif" file="joyasg.gif" animated="false" />
+  <media name="kult.gif" file="kult.gif" animated="false" />
+  <media name="lauta.gif" file="lauta.gif" animated="false" />
+  <media name="machi.gif" file="machi.gif" animated="false" />
+  <media name="machis2.gif" file="machis2.gif" animated="false" />
+  <media name="mapa.gif" file="mapa.gif" animated="false" />
+  <media name="mapuch.gif" file="mapuch.gif" animated="false" />
+  <media name="margar.gif" file="margar.gif" animated="false" />
+  <media name="ruca.gif" file="ruca.gif" animated="false" />
+  <media name="yagan.gif" file="yagan.gif" animated="false" />
+  <media name="yagan2.gif" file="yagan2.gif" animated="false" />
+ </mediaBag>
+</JClicProject>
+

@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="enpunto2" version="0.1.3">
+ <settings>
+  <title>Las horas del reloj</title>
+  <revision description="Creación del paquete de actividades en Clic 3.0" date="2/15/08" />
+  <revision description="Conversión de Clic3 a JClic" date="2/15/08">
+   <author name="Equip Clic" mail="clic@xtec.net" organization="Àrea TIC - Departament d'Educació" />
+  </revision>
+  <author name="Tomás Fernández García" mail="tfernandez411@telefonica.net" />
+  <organization name="CP Ausiàs March" city="Alacant" state="País Valencià" />
+  <language>español</language>
+  <description>
+   <p>Proyecto de actividades dirigido a educación primaria  que teine como objetivo principal el aprendizaje y uso del reloj de forma práctica y sistemática. El proyecto tiene más de ciento cincuenta actividades y está dividido en seis partes:</p>
+   <p>&lt;UL&gt;</p>
+   <p>&lt;LI&gt;Historia de relojes</p>
+   <p>&lt;LI&gt;En punto</p>
+   <p>&lt;LI&gt;Y media</p>
+   <p>&lt;LI&gt;Y cuarto, menos cuarto</p>
+   <p>&lt;LI&gt;Otras horas</p>
+   <p>&lt;LI&gt;Internet</p>
+   <p>&lt;/UL&gt;</p>
+  </description>
+  <descriptors area="Matemáticas" level="Primaria (6-12)">tiempo</descriptors>
+  <skin file="@orange.xml" />
+ </settings>
+ <sequence>
+  <item id="start" name="La hora 1">
+   <jump tag="fin" project="enpunto1.jclic" id="back" />
+  </item>
+  <item name="La hora en punto" />
+  <item name="compl horas en punto" />
+  <item name="Las horas en punto1 ana" />
+  <item id="fin" name="Las horas en punto1 dig">
+   <jump project="enpunto3.jclic" id="forward" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@text.FillInBlanks" name="La hora 1" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="abre vent y comp tex.wav" />
+     <p>ABRE LAS VENTANAS Y COMPLETA EL TEXTO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bien hecho.wav" />
+     <p>BIEN  HECHO</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true">
+     <size width="478" height="266" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" italic="false" bold="false" size="18" tabWidth="12" background="0x99FFFF" family="Comic Sans MS" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xFFFFCC" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p Alignment="0" family="Arial" background="0xFFFFFF" />
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <text bold="true" size="16" foreground="0x000000" background="0x99FFFF" family="Boo">U</text>
+      <text bold="false" size="18" foreground="0x000000" background="0x99FFFF" family="Comic Sans MS">na hora es el tiempo que tarda en pasar la aguja </text>
+      <target>
+       <answer>horaria</answer>
+       <optionList>
+        <option>horaria</option>
+        <option>minutera</option>
+        <option>segundera</option>
+       </optionList>
+       <text>horaria</text>
+      </target>
+      <text bold="false" size="18" foreground="0x000000" background="0x99FFFF" family="Comic Sans MS"> (roja) de ir de un número al siguiente. Que es el mismo tiempo que tarda la aguja </text>
+      <target>
+       <answer>minutera</answer>
+       <optionList>
+        <option>horaria</option>
+        <option>minutera</option>
+        <option>segundera</option>
+       </optionList>
+       <text>minutera</text>
+      </target>
+      <text bold="false" size="18" foreground="0x000000" background="0x99FFFF" family="Comic Sans MS"> (azul) en dar una vuelta completa a la esfera del reloj.</text>
+     </p>
+     <p Alignment="0" family="Arial" background="0xFFFFFF">
+      <text bold="false" size="18" foreground="0x000000" background="0x99FFFF" family="Comic Sans MS">Una hora (aguja horaria) es lo mismo que </text>
+      <target>
+       <answer>60</answer>
+       <optionList>
+        <option>30</option>
+        <option>15</option>
+        <option>60</option>
+        <option>10</option>
+       </optionList>
+       <text>60</text>
+      </target>
+      <text bold="false" size="18" foreground="0x000000" background="0x99FFFF" family="Comic Sans MS"> minutos (una vuelta de la aguja minutera)</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="La hora en punto" code="">
+   <description>
+    <p>¿Cuándo es una hora en punto?</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="lee atent.wav" />
+     <p>LEE ATENTAMENTE</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="2" cols="1" cellWidth="368.0" cellHeight="168.0" border="true">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell txtAlign="middle,bottom" image="ana8-00.jpg">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" />
+      <color foreground="0xFF00CC" background="0xFFFFFF" />
+     </style>
+     <p>Las 8 en punto</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="28" />
+      <color background="0xFFFFCC" />
+     </style>
+     <p>Para que una hora sea "en punto" o exacta la aguja horaria (roja) debe marcar una hora determinada y la aguja minutera (la azul) señalar siempre hacia las 12.</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.Explore" name="Las horas en punto1 ana" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="senala reloj y obs hora.wav_1" />
+     <p>SEÑALA  CADA  RELOJ    Y   OBSERVA   LA    HORA</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="183.0" cellHeight="151.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="0" border="false" image="ana2-00.jpg">
+     <style borderStroke="1.6" markerStroke="2.7">
+      <color background="0xFF9900" inactive="0x0066FF" border="0x99FF00" />
+     </style>
+    </cell>
+    <cell id="1" border="false" image="ana12-00.jpg">
+     <style borderStroke="1.6" markerStroke="2.7">
+      <color background="0x99FF99" border="0x3333FF" />
+     </style>
+    </cell>
+    <cell id="2" border="false" image="ana3-00.jpg">
+     <style borderStroke="1.6" markerStroke="2.7">
+      <color background="0xFF99FF" border="0x3333FF" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="365.0" cellHeight="77.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell imgAlign="right,middle" border="false" image="DIGITA02-00.jpg">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="20" />
+      <color background="0xFF9900" border="0xFF9900" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="2-00.wav" />
+     <p>La 2 en punto </p>
+     <p> </p>
+    </cell>
+    <cell imgAlign="right,middle" border="false" image="DIGITA00-00.jpg">
+     <style borderStroke="0.0" markerStroke="2.7">
+      <font family="Arial" size="20" />
+      <color background="0x99FF99" border="0x66FF00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="12-00.wav" />
+     <p>La 12 en punto</p>
+    </cell>
+    <cell imgAlign="right,middle" border="false" image="DIGITA03-00.jpg">
+     <style borderStroke="0.0" markerStroke="2.7">
+      <font family="Arial" size="20" />
+      <color background="0xFF99FF" border="0xFF33CC" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="3-00.wav" />
+     <p>La 3 en punto</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.Explore" name="Las horas en punto1 dig" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="senala reloj y obs hora.wav_1" />
+     <p>SEÑALA CADA RELOJ   Y   OBSERVA LA HORA</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="183.0" cellHeight="151.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="0" border="false" image="DIGITA02-00.jpg">
+     <style borderStroke="1.6" markerStroke="2.7">
+      <color background="0xFF9900" inactive="0x0066FF" border="0x99FF00" />
+     </style>
+    </cell>
+    <cell id="1" border="false" image="DIGITA00-00.jpg">
+     <style borderStroke="1.6" markerStroke="2.7">
+      <color background="0x99FF99" border="0x3333FF" />
+     </style>
+    </cell>
+    <cell id="2" border="false" image="DIGITA03-00.jpg">
+     <style borderStroke="1.6" markerStroke="2.7">
+      <color background="0xFF99FF" border="0x3333FF" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="280.0" cellHeight="77.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell imgAlign="right,middle" border="false" image="ana2-00.jpg">
+     <style borderStroke="2.6" markerStroke="2.7">
+      <font family="Arial" size="20" />
+      <color background="0xFF9900" border="0xFF9900" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="2-00.wav" />
+     <p>La 2 en punto. </p>
+    </cell>
+    <cell imgAlign="right,middle" border="false" image="ana12-00.jpg">
+     <style borderStroke="0.0" markerStroke="2.7">
+      <font family="Arial" size="20" />
+      <color background="0x99FF99" border="0x66FF00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="12-00.wav" />
+     <p>La 12 en punto.</p>
+    </cell>
+    <cell imgAlign="right,middle" border="false" image="ana3-00.jpg">
+     <style borderStroke="0.0" markerStroke="2.7">
+      <font family="Arial" size="20" />
+      <color background="0xFF99FF" border="0xFF33CC" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="3-00.wav" />
+     <p>La 3 en punto.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="compl horas en punto" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xCCCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="abre vent y comp tex.wav" />
+     <p>ABRE  LAS VENTANAS  Y  COMPLETA  EL  TEXTO</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFCC00" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="bravo  cons.wav" />
+     <p>¡¡  BRAVO, LO HAS CONSEGUIDO !!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCCFFCC">
+     <image name="tiempo.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFCCCC" border="true">
+     <size width="619" height="297" />
+    </window>
+   </settings>
+   <document>
+    <style name="default" size="18" bold="false" tabWidth="12" italic="false" background="0x99FFFF" family="Comic Sans MS" />
+    <style name="target" base="default" target="true" foreground="0x0000FF" background="0xFFFFCC" />
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <section>
+     <p size="18" background="0x99FFFF" family="Comic Sans MS" />
+     <p size="18" background="0x99FFFF" family="Comic Sans MS">
+      <text size="18" bold="false" foreground="0x000000" background="0x99FFFF" family="Arial">Para que un reloj analógico marque las 7 en punto, la aguja </text>
+      <target>
+       <answer>horaria</answer>
+       <optionList>
+        <option>horaria</option>
+        <option>minutera</option>
+        <option>segundera</option>
+       </optionList>
+       <text>horaria</text>
+      </target>
+      <text size="18" bold="false" foreground="0x000000" background="0x99FFFF" family="Arial"> debe estar en las </text>
+      <target>
+       <answer>7</answer>
+       <optionList>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+       </optionList>
+       <text>7</text>
+      </target>
+      <text size="18" bold="false" foreground="0x000000" background="0x99FFFF" family="Arial"> y la aguja </text>
+      <target>
+       <answer>minutera</answer>
+       <optionList>
+        <option>horaria</option>
+        <option>minutera</option>
+        <option>segundera</option>
+       </optionList>
+       <text>minutera</text>
+      </target>
+      <text size="18" bold="false" foreground="0x000000" background="0x99FFFF" family="Arial"> en las </text>
+      <target>
+       <answer>12</answer>
+       <optionList>
+        <option>3</option>
+        <option>6</option>
+        <option>9</option>
+        <option>12</option>
+       </optionList>
+       <text>12</text>
+      </target>
+      <text size="18" bold="false" foreground="0x000000" background="0x99FFFF" family="Arial">.</text>
+     </p>
+     <p size="18" background="0x99FFFF" family="Comic Sans MS" />
+     <p size="18" background="0x99FFFF" family="Comic Sans MS">
+      <text size="18" bold="false" foreground="0x000000" background="0x99FFFF" family="Arial">Para que el reloj digital marque las 7 en punto, </text>
+      <target>
+       <answer>el número que indica las horas</answer>
+       <optionList>
+        <option>el número que indica las horas</option>
+        <option>el número que indica los minutos</option>
+       </optionList>
+       <text>el número que indica las horas</text>
+      </target>
+      <text size="18" bold="false" foreground="0x000000" background="0x99FFFF" family="Arial"> debe ser </text>
+      <target>
+       <answer>7</answer>
+       <optionList>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+       </optionList>
+       <text>7</text>
+      </target>
+      <text size="18" background="0x99FFFF" family="Comic Sans MS"> o </text>
+      <target>
+       <answer>07</answer>
+       <optionList>
+        <option>07</option>
+        <option>08</option>
+        <option>05</option>
+        <option>06</option>
+       </optionList>
+       <text>07</text>
+      </target>
+      <text size="18" bold="false" foreground="0x000000" background="0x99FFFF" family="Arial">, y </text>
+      <target>
+       <answer>el de los minutos</answer>
+       <optionList>
+        <option>el de las horas</option>
+        <option>el de los minutos</option>
+       </optionList>
+       <text>el de los minutos</text>
+      </target>
+      <text size="18" bold="false" foreground="0x000000" background="0x99FFFF" family="Arial"> </text>
+      <target>
+       <answer>siempre</answer>
+       <optionList>
+        <option>a veces</option>
+        <option>nunca</option>
+        <option>siempre</option>
+       </optionList>
+       <text>siempre</text>
+      </target>
+      <text size="18" bold="false" foreground="0x000000" background="0x99FFFF" family="Arial"> ha de ser 00.</text>
+     </p>
+     <p size="18" background="0x99FFFF" family="Comic Sans MS" />
+     <p size="18" background="0x99FFFF" family="Comic Sans MS" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="ana12-00.jpg" file="ana12_00.jpg" />
+  <media name="ana2-00.jpg" file="ana2_00.jpg" />
+  <media name="ana3-00.jpg" file="ana3_00.jpg" />
+  <media name="ana8-00.jpg" file="ana8_00.jpg" />
+  <media name="DIGITA00-00.jpg" file="digita00_00.jpg" />
+  <media name="DIGITA02-00.jpg" file="digita02_00.jpg" />
+  <media name="DIGITA03-00.jpg" file="digita03_00.jpg" />
+  <media name="tiempo.jpg" file="tiempo.jpg" />
+  <media name="12-00.wav" file="12_00.wav" />
+  <media name="2-00.wav" file="2_00.wav" />
+  <media name="3-00.wav" file="3_00.wav" />
+  <media name="abre vent y comp tex.wav" file="abre_vent_y_comp_tex.wav" />
+  <media name="bien hecho.wav" file="bien_hecho.wav" />
+  <media name="bravo  cons.wav" file="bravo__cons.wav" />
+  <media name="lee atent.wav" file="lee_atent.wav" />
+  <media name="senala reloj y obs hora.wav_1" file="senala_reloj_y_obs_hora.wav" />
+ </mediaBag>
+</JClicProject>
+
